@@ -1,4 +1,4 @@
-Recasting the PESC Transcript from XML to RDF as JSON-LD.
+Creating a machine readable, semantic PESC transcript
 
 A work in progress. 
 
