@@ -2,5 +2,6 @@ url,https://docs.google.com/spreadsheets/d/18HzS4phUl7olmUEjh0deA3vgVPdque4_iGzK
 title,PESC Transcript in JSON-LD
 description,AP for PESC transcripts
 author,Phil Barker
-date,2023-04-24
+date,2023-11-13
 lang,en
+Changes,Updated identifiers per issue #2

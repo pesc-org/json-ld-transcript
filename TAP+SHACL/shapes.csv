@@ -41,3 +41,7 @@ RAPShape,"Requirement, Attribute or Proficiency",,pesc:RequirementAttributeProfi
 AcademicAchievementShape,Academic Achievement ,,pesc:achievement,objectsof,,,,
 AcademicAchievementShape,Academic Achievement ,,pesc:hasPart,objectsof,,,,
 VerifiableCredentialShape,W3C Verifiable Credential,,pesc:verifiableCredential,objectsof,,,,
+PersonIdentificationShape,Person Identification,Normally type will be a subclass of ceds:PersonIdentification,ceds:hasPersonalIdentification,objectsof,,,,
+SchoolIdentificationShape,School Identification,,ceds:SchoolIdentification,class,,,,
+SocialSecurityNumberIdentificationShape,Social Security Number,,ceds:SocialSecurityNumberIdentification,class,,,,
+CanadianSINIdentification,Canadian SIN ,,ceds:CanadianSINIdentification,class,,,,
