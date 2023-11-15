@@ -48,13 +48,6 @@
             pesc:firstName "Testy"^^xsd:string ;
             pesc:lastName "Test"^^xsd:string ;
             pesc:nameCode pescNameCodes:Legal ] ;
-    ceds:hasPersonalIdentification [
-        a ceds:CanadianSINIdentification ;
-        ceds:StudentIdentifier "123456789"^^xsd:token ;
-    ] , [
-        a ceds:SocialSecurityNumberIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
-    ] ;
     pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
