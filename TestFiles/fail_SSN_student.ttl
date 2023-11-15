@@ -50,7 +50,7 @@
             pesc:nameCode pescNameCodes:Legal ] ;
     ceds:hasPersonalIdentification [
         a ceds:CanadianSINIdentification ;
-        ceds:StudentIdentifier "123456789"^^xsd:token ;
+        ceds:PersonIdentifier "123456789"^^xsd:token ;
     ] , [
         a ceds:SocialSecurityNumberIdentification ;
         ceds:StudentIdentifier "123456789"^^xsd:token ; #FAIL should be PersonIdentifer
