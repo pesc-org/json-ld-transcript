@@ -45,3 +45,5 @@ PersonIdentificationShape,Person Identification,Normally type will be a subclass
 SchoolIdentificationShape,School Identification,,ceds:SchoolIdentification,class,,,,
 SocialSecurityNumberIdentificationShape,Social Security Number,,ceds:SocialSecurityNumberIdentification,class,,,,
 CanadianSINIdentification,Canadian SIN ,,ceds:CanadianSINIdentification,class,,,,
+StateIdentification,State-assigned Number,,ceds:StateIdentification,class,,,,
+OtherIdentificationShape,Other Identification,,ceds:OtherIdentification,class,,,,

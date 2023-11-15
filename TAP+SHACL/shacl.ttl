@@ -149,12 +149,19 @@
     sh:name "Language Of Instruction"@en ;
     sh:targetClass pesc:LanguageOfInstruction .
 
+<OtherIdentificationShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Other Identification"@en ;
+    sh:property <otheridentificationshapeForIdentificationInRole>,
+        <otheridentificationshapeOtherIdentifier> ;
+    sh:targetClass ceds:OtherIdentification .
+
 <PersonIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:description "Normally type will be a subclass of ceds:PersonIdentification"@en ;
     sh:name "Person Identification"@en ;
     sh:property <personidentificationshapePersonIdentifier>,
-        <personidentificationshapeStaudentIdentifier>,
+        <personidentificationshapeStudentIdentifier>,
         <personidentificationshapeType> ;
     sh:targetObjectsOf ceds:hasPersonalIdentification .
 
@@ -188,6 +195,8 @@
 <SchoolIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "School Identification"@en ;
+    sh:property <schoolidentificationshapeForIdentificationInRole>,
+        <schoolidentificationshapeSchool-assignedNumber> ;
     sh:targetClass ceds:SchoolIdentification .
 
 <SocialSecurityNumberIdentificationShape> a sh:NodeShape ;
@@ -195,6 +204,12 @@
     sh:name "Social Security Number"@en ;
     sh:property <socialsecuritynumberidentificationshapeSSN> ;
     sh:targetClass ceds:SocialSecurityNumberIdentification .
+
+<StateIdentification> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "State-assigned Number"@en ;
+    sh:property <stateidentificationStateIdentification> ;
+    sh:targetClass ceds:StateIdentification .
 
 <TBDShape> a sh:NodeShape ;
     sh:closed false ;
@@ -845,7 +860,7 @@
     sh:minLength 9 ;
     sh:name "Canadian SIN"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path ceds:StudentIdentifier .
+    sh:path ceds:PersonIdentifier .
 
 <collegetranscriptshapeCreatedDateTime> a sh:PropertyShape ;
     sh:datatype xsd:dateTime ;
@@ -1754,6 +1769,19 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:noteMessage .
 
+<otheridentificationshapeForIdentificationInRole> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:name "For Identification In Role"@en-US ;
+    sh:path ceds:forIdentificationInRole .
+
+<otheridentificationshapeOtherIdentifier> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Other Identifier"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:PersonIdentifier .
+
 <personidentificationshapePersonIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
@@ -1761,15 +1789,15 @@
     sh:nodeKind sh:Literal ;
     sh:path ceds:PersonIdentifier .
 
-<personidentificationshapeStaudentIdentifier> a sh:PropertyShape ;
+<personidentificationshapeStudentIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
-    sh:name "Staudent Identifier"@en-US ;
+    sh:name "Student Identifier"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:StudentIdentifier .
 
 <personidentificationshapeType> a sh:PropertyShape ;
-    sh:in ( ceds:PersonIdentifier ceds:CanadianSINIdentification ceds:OtherIdentification ceds:SchoolIdentification ceds:SocialSecurityNumberIdentification ceds:PersonalIdentification ) ;
+    sh:in ( ceds:CanadianSINIdentification ceds:OtherIdentification ceds:PersonalIdentification ceds:PersonIdentifier ceds:SchoolIdentification ceds:SocialSecurityNumberIdentification ceds:StateIdentification ) ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -2037,12 +2065,35 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:stateProvinceCode .
 
+<schoolidentificationshapeForIdentificationInRole> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:name "For Identification In Role"@en-US ;
+    sh:path ceds:forIdentificationInRole .
+
+<schoolidentificationshapeSchool-assignedNumber> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
+    sh:maxCount 1 ;
+    sh:maxLength 20 ;
+    sh:minCount 1 ;
+    sh:name "School-assigned Number"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:StudentIdentifier .
+
 <socialsecuritynumberidentificationshapeSSN> a sh:PropertyShape ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:maxLength 9 ;
     sh:minCount 1 ;
     sh:name "SSN"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:PersonIdentifier .
+
+<stateidentificationStateIdentification> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
+    sh:maxCount 1 ;
+    sh:maxLength 30 ;
+    sh:minCount 1 ;
+    sh:name "State Identification"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:PersonIdentifier .
 

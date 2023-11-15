@@ -654,13 +654,19 @@ pescTestScoreMethods:Local",picklist,,Optional,
 367,TestShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,
 ,VerifiableCredentialShape,cred:issuer,Issuer,TRUE,FALSE,IRI BNODE,,,,,,
 ,VerifiableCredentialShape,cred:subject,Subject,TRUE,FALSE,IRI BNODE,,,,,,
-,PersonIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:PersonIdentifier
-ceds:CanadianSINIdentification
+,PersonIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:CanadianSINIdentification
 ceds:OtherIdentification
+ceds:PersonalIdentification
+ceds:PersonIdentifier
 ceds:SchoolIdentification
 ceds:SocialSecurityNumberIdentification
-ceds:PersonalIdentification",picklist,,,
+ceds:StateIdentification",picklist,,,
 ,PersonIdentificationShape,ceds:PersonIdentifier,Person Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
-,PersonIdentificationShape,ceds:StudentIdentifier,Staudent Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
-,CanadianSINIdentification,ceds:StudentIdentifier,Canadian SIN,TRUE,FALSE,Literal,xsd:token,9..9,lengthRange,,,
+,PersonIdentificationShape,ceds:StudentIdentifier,Student Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
+,CanadianSINIdentification,ceds:PersonIdentifier,Canadian SIN,TRUE,FALSE,Literal,xsd:token,9..9,lengthRange,,,
 ,SocialSecurityNumberIdentificationShape,ceds:PersonIdentifier,SSN,TRUE,FALSE,Literal,xsd:token,9,maxLength,,,
+,SchoolIdentificationShape,ceds:StudentIdentifier,School-assigned Number,TRUE,FALSE,Literal,xsd:token,20,maxLength,,,
+,SchoolIdentificationShape,ceds:forIdentificationInRole,For Identification In Role,TRUE,TRUE,,,,,,,
+,StateIdentification,ceds:PersonIdentifier,State Identification,TRUE,FALSE,Literal,xsd:token,30,maxLength,,,
+,OtherIdentificationShape,ceds:PersonIdentifier,Other Identifier,TRUE,FALSE,Literal,xsd:token,,,,,
+,OtherIdentificationShape,ceds:forIdentificationInRole,For Identification In Role,TRUE,TRUE,,,,,,,
