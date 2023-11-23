@@ -1,0 +1,10 @@
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in MinLengthConstraintComponent (http://www.w3.org/ns/shacl#MinLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:canadiansinidentificationCanadianSIN
+	Focus Node: [ ceds:PersonIdentifier Literal("12345678", datatype=xsd:token) ; rdf:type ceds:CanadianSINIdentification ]
+	Value Node: Literal("12345678", datatype=xsd:token)
+	Result Path: ceds:PersonIdentifier
+	Message: String length not >= Literal("9", datatype=xsd:integer)
