@@ -1,4 +1,5 @@
 @prefix ceds: <http://ceds.ed.gov/owl#> .
+@prefix elm:  <http://data.europa.eu/snb/model/elm/>.
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -49,7 +50,11 @@
             pesc:firstName "Testy"^^xsd:string ;
             pesc:lastName "Test"^^xsd:string ;
             pesc:nameCode pescNameCodes:Legal ] ;
-    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
+    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> ;
+    elm:additionalNote [
+        rdf:type elm:Note ;
+        elm:noteLiteral "A made up test peson" ;
+    ].
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
         pesc:AcademicAward ;
