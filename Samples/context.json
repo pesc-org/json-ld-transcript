@@ -4,6 +4,7 @@
     "@base": "http://example.edu/entities/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "ceds": "http://ceds.ed.gov/owl#",
+    "ceterms": "https://purl.org/ctdl/terms/",
     "pesc": "https://pesc.org/terms/",
     "sdo": "https://schema.org/",
     "pescAcademicSummaryLevels": "https://pesc.org/vocabs/AcademicSummaryLevels#",
@@ -42,6 +43,9 @@
     "pescSupplementalGradeCodes": "https://pesc.org/vocabs/SupplementalGradeCodes#",
     "pescTestScoreMethods": "https://pesc.org/vocabs/TestScoreMethods#",
     "pescTransmissionTypes": "https://pesc.org/vocabs/TransmissionTypes#",
+    "ContactPoint": {
+      "@id": "ceterms:ContactPoint"
+    },
     "Person": {
       "@id": "ceds:Person"
     },
@@ -445,6 +449,9 @@
     "hasPart": {
       "@type": "@id"
     },
+    "hasPersonalIdentification": {
+      "@id": "ceds:hasPersonalIdentification"
+    },
     "hasSession": {
       "@type": "@id"
     },
@@ -562,6 +569,10 @@
     },
     "partialSSN": {
       "@type": "xsd:string"
+    },
+    "personIdentifier": {
+      "@id": "ceds:PersonIdentifier",
+      "@type": "xsd:token"
     },
     "phone": {
       "@type": "@id"
@@ -694,6 +705,10 @@
     },
     "studentLevel": {
       "@type": "@id"
+    },
+    "studentIdentifier": {
+      "@id": "ceds:StudentIdentifier",
+      "@type": "xsd:token"
     },
     "subTestScore": {
       "@type": "@id"

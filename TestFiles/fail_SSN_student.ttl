@@ -1,0 +1,69 @@
+@prefix ceds: <http://ceds.ed.gov/owl#> .
+@prefix pesc: <https://pesc.org/terms/> .
+@prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
+@prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
+@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
+@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
+@prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001> a pesc:CollegeTranscript ;
+    pesc:createdDateTime "2023-05-08T14:17:29-05:00"^^xsd:dateTime ;
+    pesc:destination <https://example.edu/Desintation#id> ;
+    pesc:documentID "050330001" ;
+    pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
+    pesc:hasPart <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
+    pesc:transmissionType pescTransmissionTypes:Original .
+
+<https://example.edu/Session/001> a pesc:AcademicSession ;
+    pesc:offeredBy <https://example.edu/Source#id> ;
+    pesc:sessionDesignator "2019-09"^^xsd:gYearMonth ;
+    pesc:sessionName "Fall 2019"^^xsd:string ;
+    pesc:sessionType pescSessionTypes:Semester .
+
+<https://example.edu/Course/001> a pesc:Course ;
+    pesc:courseCreditBasis pescCreditBasis:Regular ;
+    pesc:courseCreditLevel pescCreditLevels:UpperDivision ;
+    pesc:courseCreditUnits pescCreditUnits:CarnegieUnits ;
+    pesc:courseCreditValue 15.0 ;
+    pesc:courseLevel pescCourseLevels:Honors ;
+    pesc:courseTitle "Example Course"^^xsd:string ;
+    pesc:offeredBy <https://example.edu/Source#id> .
+
+<https://example.edu/Desintation#id> a pesc:Organization ;
+    pesc:organizationName "Example Destination"@en .
+
+<https://example.edu/Program/001> a pesc:AcademicProgram ;
+    pesc:academicProgramName "Example Program"^^xsd:string ;
+    pesc:hasCourse <https://example.edu/Course/001> ;
+    pesc:offeredBy <https://example.edu/Source#id> .
+
+<https://people.pjjk.net/test> a ceds:Person ;
+    ceds:hasPersonName [ a pesc:PersonalName ;
+            pesc:firstName "Testy"^^xsd:string ;
+            pesc:lastName "Test"^^xsd:string ;
+            pesc:nameCode pescNameCodes:Legal ] ;
+    ceds:hasPersonalIdentification [
+        a ceds:CanadianSINIdentification ;
+        ceds:PersonIdentifier "123456789"^^xsd:token ;
+    ] , [
+        a ceds:SocialSecurityNumberIdentification ;
+        ceds:StudentIdentifier "123456789"^^xsd:token ; #FAIL should be PersonIdentifer
+    ] ;
+    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
+
+<file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
+        pesc:AcademicAward ;
+    pesc:academicAwardDate "1985-05-01"^^xsd:date ;
+    pesc:academicAwardTitle "Example Award"^^xsd:string ;
+    pesc:inProgram <https://example.edu/Program/001> ;
+    pesc:school <https://example.edu/Source#id> .
+
+<https://example.edu/Source#id> a pesc:Organization ;
+    pesc:organizationName "Example Source"@en .
+

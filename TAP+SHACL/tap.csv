@@ -27,7 +27,7 @@ pescStudentLevelCodes:MastersQualifying
 pescStudentLevelCodes:Masters
 pescStudentLevelCodes:Doctoral
 pescStudentLevelCodes:Postdoctoral",picklist,,Recommended,
-370,AcademicAchievementShape,pesc:noteMessage,Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Optional,
+370,AcademicAchievementShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Optional,
 199,AcademicAchievementShape,pesc:school,School,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,Optional,
 ,AcademicAchievementShape,pesc:inCourse,In Course,FALSE,TRUE,IRI BNODE,,,,CourseShape,Recommended,
 ,AcademicAchievementShape,pesc:inProgram,In Program,FALSE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
@@ -167,7 +167,7 @@ pescDeliquencyCodes:ProbationDiscipline
 pescDeliquencyCodes:SuspensionDiscipline
 pescDeliquencyCodes:Unknown
 pescDeliquencyCodes:Other",picklist,,Not Recommended,
-12,AccreditationShape,pesc:noteMessage,Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+12,AccreditationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 137,AccreditationShape,pesc:accreditationBodyCode,Accrediation Body Code,FALSE,FALSE,Literal,xsd:string,MSA NCA-HLC NCA-CASI NEASC-CIHE NEASC-CTCI NWCCU SACS WASC-ACCJC WASC-ACSCU Other,picklist,,Optional,"pesc.core.AccreditationBodyName   Keep as text, will probably change how this is modelled so that you cna point to an organization"
 138,AccreditationShape,pesc:accreditingBodyName,Accrediting Body Name,FALSE,FALSE,Literal,xsd:string,80,maxLength,,Optional,
 384,AdditionalStudentAchievmentShape,pesc:requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
@@ -189,7 +189,7 @@ pescAgencyCodes:State",picklist,,Required,
 113,AgencyIdentifierShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,"pesc:core:DomesticAddressDetailsGroup
 pesc:core:InternationalAddressDetailsGroup"
 117,AgencyIdentifierShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,pesc:core:InternationalAddressDetailsGroup
-3,CollegeTranscriptShape,pesc:noteMessage,Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+3,CollegeTranscriptShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 18,CollegeTranscriptShape,pesc:createdDateTime,Created Date Time,TRUE,FALSE,Literal,xsd:dateTime,,,,Required,
 26,CollegeTranscriptShape,pesc:requestTrackingID,Request Tracking ID,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Optional,
 22,CollegeTranscriptShape,pesc:destination,Destination,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
@@ -486,7 +486,7 @@ IX
 X",picklist,,Recommended,
 175,NameShape,pesc:nameTitle,Name Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
 177,NameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
-5,OrganizationShape,pesc:noteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+5,OrganizationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 27,OrganizationShape,pesc:opeID,OPE ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
 31,OrganizationShape,pesc:nchelpID,NCHELP ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
 35,OrganizationShape,pesc:ipedsID,IPEDS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""IPEDS ID"" instead of just ""IPEDS"""
@@ -520,14 +520,14 @@ pescSchoolLevels:Middle
 pescSchoolLevels:Other
 pescSchoolLevels:Postsecondary
 pescSchoolLevels:Secondary",picklist,,Recommended,
-8,PhoneShape,pesc:noteMessage,Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+8,PhoneShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 121,PhoneShape,pesc:expirationDate,Expiration Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 126,PhoneShape,pesc:countryPrefixCode,Country Prefix Code,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,
 128,PhoneShape,pesc:areaCityCode,Area City Code,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Recommended,
 132,PhoneShape,pesc:phoneNumberExtension,Phone Number Extension,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Optional,
 124,PhoneShape,pesc:attentionLine,Attention Line,,,,,,,,,no attention line in Phone or FAXPhone
 130,PhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,Required,
-7,PostalAddressShape,pesc:noteMessage,Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+7,PostalAddressShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 119,PostalAddressShape,pesc:effeciveDate,Effective Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 120,PostalAddressShape,pesc:expirationDate,Expiration Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 123,PostalAddressShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,xsd:string,45,maxLength,,Optional,
@@ -605,32 +605,10 @@ pescResidencyStatusCodes:NonResident
 pescResidencyStatusCodes:NotReported
 pescResidencyStatusCodes:OtherResident
 pescResidencyStatusCodes:Resident",picklist,,Optional,
-14,StudentShape,pesc:noteMessage,Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
-28,StudentShape,pesc:opeID,OPE ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
-32,StudentShape,pesc:nchelpID,NCHELP ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
-36,StudentShape,pesc:ipedsID,IPEDS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""IPEDS ID"" instead of just ""IPEDS"""
-40,StudentShape,pesc:atpID,ATP ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""ATP ID"" instead of just ""ATP"""
-44,StudentShape,pesc:ficeID,FICE ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""FICE ID"" instead of just ""FICE"""
-48,StudentShape,pesc:actID,ACT ID,FALSE,FALSE,Literal,xsd:string,4..4,lengthRange,,Recommended,"Used ""ACT ID"" instead of just ""ACT"""
-52,StudentShape,pesc:ccdID,CCD ID,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,"Used ""CCD ID"" instead of just ""CCD"""
-56,StudentShape,pesc:pssID,PSS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""PSS ID"" instead of just ""PSS"""
-60,StudentShape,pesc:ceebactID,CEEBACT ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CEEBACT ID"" instead of just ""CEEBACT"""
-64,StudentShape,pesc:csisID,CSIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CSIS ID"" instead of just ""CSIS"""
-68,StudentShape,pesc:usisID,USIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""USIS ID"" instead of just ""USIS"""
-72,StudentShape,pesc:esisID,ESIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""ESIS ID"" instead of just ""ESIS"""
-76,StudentShape,pesc:psisID,PSIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Optional,"Used ""PSIS ID"" instead of just ""PSIS"""
-80,StudentShape,pesc:dunsID,DUNS ID,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,"Used ""DUNS ID"" instead of just ""DUNS"""
-84,StudentShape,pesc:mutuallyDefinedID,Mutually Defined ID,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,"Used ""Mutually Defined ID"" instead of just ""Mutually Defined"""
-88,StudentShape,pesc:localOrganizationID,Local Organization ID,FALSE,FALSE,IRI BNODE,,,,LocalOrganizationIDShape,Optional,
+14,StudentShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 92,StudentShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
 96,StudentShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
-144,StudentShape,pesc:schoolAssignedPersonID,School Assigned Person ID,FALSE,FALSE,Literal,xsd:string,20,maxLength,,Recommended,
-145,StudentShape,pesc:sin,SIN,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,
-146,StudentShape,pesc:nsn,NSN,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
-148,StudentShape,pesc:agencyIdentifier,Agency Identifier,FALSE,TRUE,IRI BNODE,,,,AgencyIdentifierShape,Recommended,
-149,StudentShape,pesc:recipientAssignedID,Recipient Assigned ID,FALSE,FALSE,Literal,xsd:string,20,maxLength,,Recommended,
-150,StudentShape,pesc:ssn,SSN,FALSE,FALSE,Literal,xsd:string,9,maxLength,,Recommended,
-151,StudentShape,pesc:partialSSN,Partial SSN,FALSE,FALSE,Literal,xsd:string,4..4,lengthRange,,Recommended,
+,StudentShape,ceds:hasPersonalIdentification,hasPersonalIdentification,FALSE,TRUE,IRI BNODE,,,,,,
 155,StudentShape,ceds:BirthDate,Birth Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
 156,StudentShape,pesc:birthday,Birthday,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 157,StudentShape,pesc:birthYear,Birth Year,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
@@ -676,3 +654,21 @@ pescTestScoreMethods:Local",picklist,,Optional,
 367,TestShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,
 ,VerifiableCredentialShape,cred:issuer,Issuer,TRUE,FALSE,IRI BNODE,,,,,,
 ,VerifiableCredentialShape,cred:subject,Subject,TRUE,FALSE,IRI BNODE,,,,,,
+,PersonIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:CanadianSINIdentification
+ceds:OtherIdentification
+ceds:PersonalIdentification
+ceds:PersonIdentifier
+ceds:SchoolIdentification
+ceds:SocialSecurityNumberIdentification
+ceds:StateIdentification",picklist,,,
+,PersonIdentificationShape,ceds:PersonIdentifier,Person Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
+,PersonIdentificationShape,ceds:StudentIdentifier,Student Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
+,CanadianSINIdentificationShape,ceds:PersonIdentifier,Canadian SIN,TRUE,FALSE,Literal,xsd:token,9..9,lengthRange,,,
+,SocialSecurityNumberIdentificationShape,ceds:PersonIdentifier,SSN,TRUE,FALSE,Literal,xsd:token,9,maxLength,,,
+,SchoolIdentificationShape,ceds:StudentIdentifier,School-assigned Number,TRUE,FALSE,Literal,xsd:token,20,maxLength,,,
+,SchoolIdentificationShape,pesc:identifierAssignedBy,Identifier Assigned By,TRUE,TRUE,IRI BNODE,,,,OrganizationShape,,
+,StateIdentificationShape,ceds:PersonIdentifier,State Identification,TRUE,FALSE,Literal,xsd:token,30,maxLength,,,
+,OtherIdentificationShape,ceds:PersonIdentifier,Other Identifier,TRUE,FALSE,Literal,xsd:token,,,,,
+,OtherIdentificationShape,pesc:identifierAssignedBy,Identifier Assigned By,TRUE,TRUE,IRI BNODE,,,,OrganizationShape,,
+,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
+,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
