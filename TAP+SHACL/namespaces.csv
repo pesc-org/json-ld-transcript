@@ -9,6 +9,7 @@ ceds,http://ceds.ed.gov/owl#,Common Education Data Standards
 ceterms,https://purl.org/ctdl/terms/,Credential Transparency Description Language
 dc,http://purl.org/dc/elements/1.1/,"Dublin Core Metadata Element Set, Version 1.1"
 dct,http://purl.org/dc/terms/,DCMI Metadata Terms
+elm,http://data.europa.eu/snb/model/elm/,European Learning Model
 foaf,http://xmlns.com/foaf/0.1/,Friend of a Friend
 sdo,https://schema.org/,Schema.org
 skos,http://www.w3.org/2004/02/skos/core#,Simple Knowledge Organization System

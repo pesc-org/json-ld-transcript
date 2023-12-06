@@ -3,6 +3,7 @@
 @prefix ceds: <http://ceds.ed.gov/owl#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix cred: <https://www.w3.org/2018/credentials#> .
+@prefix elm: <http://data.europa.eu/snb/model/elm/> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAcademicAwardLevels: <https://pesc.org/vocabs/AcademicAwardLevels#> .
@@ -104,16 +105,17 @@
         <agencyidentifiershapeStateProvinceCode> ;
     sh:targetClass pesc:AgencyIdentifier .
 
-<CanadianSINIdentification> a sh:NodeShape ;
+<CanadianSINIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Canadian SIN "@en ;
-    sh:property <canadiansinidentificationCanadianSIN> ;
+    sh:property <canadiansinidentificationshapeCanadianSIN> ;
     sh:targetClass ceds:CanadianSINIdentification .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "College Transcript"@en ;
-    sh:property <collegetranscriptshapeCreatedDateTime>,
+    sh:property <collegetranscriptshapeAdditionalNote>,
+        <collegetranscriptshapeCreatedDateTime>,
         <collegetranscriptshapeDestination>,
         <collegetranscriptshapeDocumentCompleteCode>,
         <collegetranscriptshapeDocumentID>,
@@ -121,7 +123,6 @@
         <collegetranscriptshapeDocumentProcessCode>,
         <collegetranscriptshapeDocumenttypeCode>,
         <collegetranscriptshapeHasPart>,
-        <collegetranscriptshapeNoteMessage>,
         <collegetranscriptshapeRequestTrackingID>,
         <collegetranscriptshapeSource>,
         <collegetranscriptshapeStudent>,
@@ -152,7 +153,7 @@
 <OtherIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Other Identification"@en ;
-    sh:property <otheridentificationshapeForIdentificationInRole>,
+    sh:property <otheridentificationshapeIdentifierAssignedBy>,
         <otheridentificationshapeOtherIdentifier> ;
     sh:targetClass ceds:OtherIdentification .
 
@@ -195,7 +196,7 @@
 <SchoolIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "School Identification"@en ;
-    sh:property <schoolidentificationshapeForIdentificationInRole>,
+    sh:property <schoolidentificationshapeIdentifierAssignedBy>,
         <schoolidentificationshapeSchool-assignedNumber> ;
     sh:targetClass ceds:SchoolIdentification .
 
@@ -205,10 +206,10 @@
     sh:property <socialsecuritynumberidentificationshapeSSN> ;
     sh:targetClass ceds:SocialSecurityNumberIdentification .
 
-<StateIdentification> a sh:NodeShape ;
+<StateIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "State-assigned Number"@en ;
-    sh:property <stateidentificationStateIdentification> ;
+    sh:property <stateidentificationshapeStateIdentification> ;
     sh:targetClass ceds:StateIdentification .
 
 <TBDShape> a sh:NodeShape ;
@@ -231,7 +232,7 @@
     sh:name "Accreditation"@en ;
     sh:property <accreditationshapeAccrediationBodyCode>,
         <accreditationshapeAccreditingBodyName>,
-        <accreditationshapeNoteMessage> ;
+        <accreditationshapeAdditionalNote> ;
     sh:targetClass pesc:Accreditation .
 
 <CourseAchievementShape> a sh:NodeShape ;
@@ -287,13 +288,13 @@
 <PostalAddressShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Postal Address"@en ;
-    sh:property <postaladdressshapeAddressLine>,
+    sh:property <postaladdressshapeAdditionalNote>,
+        <postaladdressshapeAddressLine>,
         <postaladdressshapeAttentionLine>,
         <postaladdressshapeCity>,
         <postaladdressshapeCountryCode>,
         <postaladdressshapeEffectiveDate>,
         <postaladdressshapeExpirationDate>,
-        <postaladdressshapeNoteMessage>,
         <postaladdressshapePostalCode>,
         <postaladdressshapeStateProvinceCode> ;
     sh:targetClass pesc:PostalAddress .
@@ -302,6 +303,7 @@
     sh:closed false ;
     sh:name "Student"@en ;
     sh:property <studentshapeAchievement>,
+        <studentshapeAdditionalNote>,
         <studentshapeAge>,
         <studentshapeAgencyAssignedID>,
         <studentshapeAlternateName>,
@@ -318,7 +320,6 @@
         <studentshapeImmunizations>,
         <studentshapeLanguage>,
         <studentshapeName>,
-        <studentshapeNoteMessage>,
         <studentshapeOrganizationName>,
         <studentshapeResidency> ;
     sh:targetObjectsOf pesc:student .
@@ -334,6 +335,12 @@
         <testscoreshapeSubtestScore>,
         <testscoreshapeTestScoreMethod> ;
     sh:targetClass pesc:TestScores .
+
+<academicachievementshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
 
 <academicachievementshapeCohortGraduationYear> a sh:PropertyShape ;
     sh:datatype xsd:date ;
@@ -365,13 +372,6 @@
     sh:node <TestShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:inTest .
-
-<academicachievementshapeNoteMessage> a sh:PropertyShape ;
-    sh:maxLength 80 ;
-    sh:minLength 1 ;
-    sh:name "Note Message"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:noteMessage .
 
 <academicachievementshapeSchool> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -780,12 +780,11 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:accreditingBodyName .
 
-<accreditationshapeNoteMessage> a sh:PropertyShape ;
-    sh:maxLength 80 ;
-    sh:minLength 1 ;
-    sh:name "Note Message"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:noteMessage .
+<accreditationshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
 
 <additionalstudentachievmentshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
@@ -852,7 +851,7 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:stateProvinceCode .
 
-<canadiansinidentificationCanadianSIN> a sh:PropertyShape ;
+<canadiansinidentificationshapeCanadianSIN> a sh:PropertyShape ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:maxLength 9 ;
@@ -861,6 +860,12 @@
     sh:name "Canadian SIN"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:PersonIdentifier .
+
+<collegetranscriptshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
 
 <collegetranscriptshapeCreatedDateTime> a sh:PropertyShape ;
     sh:datatype xsd:dateTime ;
@@ -923,13 +928,6 @@
     sh:node <AcademicAchievementShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasPart .
-
-<collegetranscriptshapeNoteMessage> a sh:PropertyShape ;
-    sh:maxLength 80 ;
-    sh:minLength 1 ;
-    sh:name "Note Message"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:noteMessage .
 
 <collegetranscriptshapeRequestTrackingID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1587,6 +1585,19 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:nameTitle .
 
+<noteshapeNoteliteral> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:name "Note literal"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path elm:noteLiteral .
+
+<noteshapeType> a sh:PropertyShape ;
+    sh:hasValue elm:Note ;
+    sh:maxCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <organizationshapeACTID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -1604,6 +1615,12 @@
     sh:name "ATP ID"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:atpID .
+
+<organizationshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
 
 <organizationshapeCCDID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1762,17 +1779,12 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:accreditation .
 
-<organizationshape__NoteMessage> a sh:PropertyShape ;
-    sh:maxLength 80 ;
-    sh:minLength 1 ;
-    sh:name "__ Note Message"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:noteMessage .
-
-<otheridentificationshapeForIdentificationInRole> a sh:PropertyShape ;
+<otheridentificationshapeIdentifierAssignedBy> a sh:PropertyShape ;
     sh:minCount 1 ;
-    sh:name "For Identification In Role"@en-US ;
-    sh:path ceds:forIdentificationInRole .
+    sh:name "Identifier Assigned By"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:identifierAssignedBy .
 
 <otheridentificationshapeOtherIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:token ;
@@ -1803,6 +1815,12 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<phoneshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
+
 <phoneshapeAreaCityCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -1830,13 +1848,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:expirationDate .
 
-<phoneshapeNoteMessage> a sh:PropertyShape ;
-    sh:maxLength 80 ;
-    sh:minLength 1 ;
-    sh:name "Note Message"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:noteMessage .
-
 <phoneshapePhoneNumber> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -1853,6 +1864,12 @@
     sh:name "Phone Number Extension"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:phoneNumberExtension .
+
+<postaladdressshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
 
 <postaladdressshapeAddressLine> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1897,13 +1914,6 @@
     sh:name "Expiration Date"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:expirationDate .
-
-<postaladdressshapeNoteMessage> a sh:PropertyShape ;
-    sh:maxLength 80 ;
-    sh:minLength 1 ;
-    sh:name "Note Message"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:noteMessage .
 
 <postaladdressshapePostalCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -2065,10 +2075,12 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:stateProvinceCode .
 
-<schoolidentificationshapeForIdentificationInRole> a sh:PropertyShape ;
+<schoolidentificationshapeIdentifierAssignedBy> a sh:PropertyShape ;
     sh:minCount 1 ;
-    sh:name "For Identification In Role"@en-US ;
-    sh:path ceds:forIdentificationInRole .
+    sh:name "Identifier Assigned By"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:identifierAssignedBy .
 
 <schoolidentificationshapeSchool-assignedNumber> a sh:PropertyShape ;
     sh:datatype xsd:token ;
@@ -2088,7 +2100,7 @@
     sh:nodeKind sh:Literal ;
     sh:path ceds:PersonIdentifier .
 
-<stateidentificationStateIdentification> a sh:PropertyShape ;
+<stateidentificationshapeStateIdentification> a sh:PropertyShape ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:maxLength 30 ;
@@ -2103,6 +2115,12 @@
     sh:node <AcademicAchievementShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:achievement .
+
+<studentshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
 
 <studentshapeAge> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -2213,13 +2231,6 @@
     sh:node <NameShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:hasPersonName .
-
-<studentshapeNoteMessage> a sh:PropertyShape ;
-    sh:maxLength 80 ;
-    sh:minLength 1 ;
-    sh:name "Note Message"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:noteMessage .
 
 <studentshapeOrganizationName> a sh:PropertyShape ;
     sh:datatype rdf:langString ;
@@ -2354,12 +2365,12 @@
 <AcademicAchievementShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Achievement "@en ;
-    sh:property <academicachievementshapeCohortGraduationYear>,
+    sh:property <academicachievementshapeAdditionalNote>,
+        <academicachievementshapeCohortGraduationYear>,
         <academicachievementshapeInCourse>,
         <academicachievementshapeInProgram>,
         <academicachievementshapeInSession>,
         <academicachievementshapeInTest>,
-        <academicachievementshapeNoteMessage>,
         <academicachievementshapeSchool>,
         <academicachievementshapeStudentLevel>,
         <academicachievementshapeType>,
@@ -2418,11 +2429,11 @@
 <PhoneShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Phone"@en ;
-    sh:property <phoneshapeAreaCityCode>,
+    sh:property <phoneshapeAdditionalNote>,
+        <phoneshapeAreaCityCode>,
         <phoneshapeAttentionLine>,
         <phoneshapeCountryPrefixCode>,
         <phoneshapeExpirationDate>,
-        <phoneshapeNoteMessage>,
         <phoneshapePhoneNumber>,
         <phoneshapePhoneNumberExtension> ;
     sh:targetClass pesc:Phone .
@@ -2528,11 +2539,19 @@
         <rapshapeRAPSubName> ;
     sh:targetClass pesc:RequirementAttributeProficiency .
 
+<NoteShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Note"@en ;
+    sh:property <noteshapeNoteliteral>,
+        <noteshapeType> ;
+    sh:targetObjectsOf elm:additionalNote .
+
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Organization"@en ;
     sh:property <organizationshapeACTID>,
         <organizationshapeATPID>,
+        <organizationshapeAdditionalNote>,
         <organizationshapeCCDID>,
         <organizationshapeCEEBACTID>,
         <organizationshapeCSISID>,
@@ -2551,7 +2570,6 @@
         <organizationshapeSchoolLevel>,
         <organizationshapeSchoolOverrideCode>,
         <organizationshapeUSISID>,
-        <organizationshape__Accreditation>,
-        <organizationshape__NoteMessage> ;
+        <organizationshape__Accreditation> ;
     sh:targetClass pesc:Organization .
 

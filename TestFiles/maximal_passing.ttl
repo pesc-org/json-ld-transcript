@@ -58,7 +58,7 @@
     ] , [
         a ceds:SchoolIdentification ;
         ceds:StudentIdentifier "123456789"^^xsd:token ;
-        ceds:forIdentificationInRole <ex:StudentAtSourceSchool> ;
+        pesc:identifierAssignedBy <https://example.edu/Source#id> ;
     ];
     pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
