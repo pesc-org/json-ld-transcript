@@ -153,7 +153,7 @@
 <OtherIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Other Identification"@en ;
-    sh:property <otheridentificationshapeForIdentificationInRole>,
+    sh:property <otheridentificationshapeIdentifierAssignedBy>,
         <otheridentificationshapeOtherIdentifier> ;
     sh:targetClass ceds:OtherIdentification .
 
@@ -196,7 +196,7 @@
 <SchoolIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "School Identification"@en ;
-    sh:property <schoolidentificationshapeForIdentificationInRole>,
+    sh:property <schoolidentificationshapeIdentifierAssignedBy>,
         <schoolidentificationshapeSchool-assignedNumber> ;
     sh:targetClass ceds:SchoolIdentification .
 
@@ -1779,10 +1779,12 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:accreditation .
 
-<otheridentificationshapeForIdentificationInRole> a sh:PropertyShape ;
+<otheridentificationshapeIdentifierAssignedBy> a sh:PropertyShape ;
     sh:minCount 1 ;
-    sh:name "For Identification In Role"@en-US ;
-    sh:path ceds:forIdentificationInRole .
+    sh:name "Identifier Assigned By"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:identifierAssignedBy .
 
 <otheridentificationshapeOtherIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:token ;
@@ -2073,10 +2075,12 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:stateProvinceCode .
 
-<schoolidentificationshapeForIdentificationInRole> a sh:PropertyShape ;
+<schoolidentificationshapeIdentifierAssignedBy> a sh:PropertyShape ;
     sh:minCount 1 ;
-    sh:name "For Identification In Role"@en-US ;
-    sh:path ceds:forIdentificationInRole .
+    sh:name "Identifier Assigned By"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:identifierAssignedBy .
 
 <schoolidentificationshapeSchool-assignedNumber> a sh:PropertyShape ;
     sh:datatype xsd:token ;

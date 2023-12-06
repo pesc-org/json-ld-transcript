@@ -1,3 +1,6 @@
+# hand crafted from main shacl
+# for testing only
+# only contains shapes that have been aligned with CEDS
 @base <http://example.org/> .
 @prefix ceds: <http://ceds.ed.gov/owl#> .
 @prefix cred: <https://www.w3.org/2018/credentials#> .
@@ -55,6 +58,25 @@
         <studentshapeSchoolAssignedPersonID>,
         <studentshapeUSISID> ;
     sh:targetObjectsOf pesc:student .
+
+<PersonIdentificationShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be a subclass of ceds:PersonIdentification"@en ;
+    sh:name "Person Identification"@en ;
+    sh:property <personidentificationshapePersonIdentifier>,
+        <personidentificationshapeStaudentIdentifier> ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:in (
+            ceds:CanadianSINIdentification
+            ceds:OtherIdentification
+            ceds:PersonIdentifier
+            ceds:PersonalIdentification
+            ceds:SchoolIdentification 
+            ceds:SocialSecurityNumberIdentification
+        ) ;
+    ] ;
+    sh:targetObjectsOf ceds:hasPersonalIdentification .
 
 <studentshapeACTID> a sh:PropertyShape ;
     sh:datatype xsd:string ;

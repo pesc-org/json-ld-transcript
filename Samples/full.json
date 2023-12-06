@@ -1,0 +1,145 @@
+{
+    "@context": [
+      "https://raw.githubusercontent.com/philbarker/transcript_jsonld/main/Samples/context.json",
+    { 
+      "ceterms": "https://purl.org/ctdl/terms/",
+      "ContactPoint": {
+        "@id": "ceterms:ContactPoint"
+      },
+      "hasPersonalIdentification": {
+        "@id": "ceds:hasPersonalIdentification"
+      },
+      "studentIdentifier": {
+        "@id": "ceds:StudentIdentifier",
+        "@type": "xsd:token"
+      },
+      "personIdentifier": {
+        "@id": "ceds:PersonIdentifier",
+        "@type": "xsd:token"
+      }
+    }
+  
+    ],
+    "@graph": [
+      {
+        "@id": "transcripts/050330001",
+        "@type": "CollegeTranscript",
+        "createdDateTime": "2023-05-08T14:17:29-05:00",
+        "destination": "https://www.mdc.edu/#Organization",
+        "documentID": "050330001",
+        "documentTypeCode": "pescDocumentTypeCodes:RequestedRecord",
+        "hasPart": [
+          "achievement001",
+          "achievement002"
+        ],
+        "source": "https://www.utexas.edu/#Organization",
+        "student": "https://people.pjjk.net/test",
+        "transmissionType": "pescTransmissionTypes:Original"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://people.pjjk.net/test",
+        "achievement": [
+          "achievement001",
+          "achievement002"
+        ],
+        "birthDate": "1967-07-14",
+        "contact": {
+          "@type": "ContactPoint",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLine": "1223 University Dr",
+            "city": "Austin",
+            "stateProvinceCode": "TX",
+            "postalCode": "78211",
+            "expirationDate": "2009-06-15",
+            "countryCode": "US"
+          },
+          "email": "TestSpeede@aol.com"
+        },
+        "deceasedIndicator": true,
+        "genderCode": "pescGenderCodes:Female",
+        "name": {
+          "@type": "PersonalName",
+          "nameCode": "pescNameCodes:Legal",
+          "firstName": "Test",
+          "middleName": [
+            "Record",
+            "Test"
+          ],
+          "lastName": "Speede"
+        },
+        "hasPersonalIdentification": [
+          {
+            "@type": "ceds:CanadianSINIdentification" ,
+            "studentIdentifier": "123456789"
+          },
+          {
+            "@type": "ceds:SocialSecurityNumberIdentification" ,
+            "personIdentifier": "123456789"
+          }     
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.utexas.edu/#Organization",
+        "organizationName": {
+          "en": "U Texas"
+        },
+        "schoolLevel": "pescSchoolLevels:Postsecondary"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.mdc.edu/#Organization",
+        "organizationName": {
+          "en": "MD College"
+        },
+        "schoolLevel": "pescSchoolLevels:Postsecondary"
+      },
+      {
+        "@type": ["AcademicAward", "AcademicAchievement"],
+        "@id": "achievement001",
+        "academicAwardDate": "1985-05-01",
+        "academicAwardLevel": "pescAcademicAwardLevels:1.1",
+        "academicAwardTitle": "Example Award",
+        "academicCompletionIndicator": true,
+        "inProgram": "https://example.edu/Program/001",
+        "school": "https://www.utexas.edu/#Organization"
+      },
+      {
+        "@type": ["CourseAchievement", "AcademicAchievement"],
+        "@id": "achievement002",
+        "inCourse": "https://example.edu/Course/001",
+        "inSession": "https://example.edu/Session/001",
+        "courseCreditEarned": "15",
+        "courseAcademicGrade": "A",
+        "school": "https://www.utexas.edu/#Organization"
+      },
+      {
+        "@type": "AcademicProgram",
+        "@id": "https://example.edu/Program/001",
+        "academicProgramName": "Example Program",
+        "offeredBy": "https://www.utexas.edu/#Organization",
+        "hasCourse": "https://example.edu/Course/001"
+      },
+      {
+        "@id": "https://example.edu/Course/001",
+        "@type": "Course",
+        "courseTitle": "Example Course",
+        "courseCreditBasis": "pescCreditBasis:Regular",
+        "courseCreditUnits": "pescCreditUnits:CarnegieUnits",
+        "courseCreditLevel": "pescCreditLevels:UpperDivision",
+        "courseCreditValue": "15",
+        "courseLevel": "pescCourseLevels:Honors",
+        "offeredBy": "https://www.utexas.edu/#Organization"
+      },
+      {
+        "@id": "https://example.edu/Session/001",
+        "@type": "AcademicSession",
+        "sessionDesignator": "2019-09",
+        "sessionName": "Fall 2019",
+        "offeredBy": "https://www.utexas.edu/#Organization",
+        "sessionType": "pescSessionTypes:Semester"
+      }
+    ]
+  }
