@@ -1,5 +1,7 @@
 These files can be used along with a tool like pyshacl to check that changes the shacl file passes what it should and raises errors where it should. Also check that changes to the context file for JSON-LD do not invalidate the RDF output.
 
+The expected results for each file.ttl  are stored in file.rslt.  There is a python script [BatchSHACL](https://github.com/philbarker/BatchSHACL) that will compare all the .ttl files with the expected results.
+
 Examples:
 ```
 $ pyshacl -s ../TAP+SHACL/shacl.ttl minimal_passing.json 
