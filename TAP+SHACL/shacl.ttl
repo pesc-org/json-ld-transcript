@@ -162,7 +162,6 @@
     sh:description "Normally type will be a subclass of ceds:PersonIdentification"@en ;
     sh:name "Person Identification"@en ;
     sh:property <personidentificationshapePersonIdentifier>,
-        <personidentificationshapeStudentIdentifier>,
         <personidentificationshapeType> ;
     sh:targetObjectsOf ceds:hasPersonalIdentification .
 
@@ -1801,13 +1800,6 @@
     sh:nodeKind sh:Literal ;
     sh:path ceds:PersonIdentifier .
 
-<personidentificationshapeStudentIdentifier> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:name "Student Identifier"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:StudentIdentifier .
-
 <personidentificationshapeType> a sh:PropertyShape ;
     sh:in ( ceds:CanadianSINIdentification ceds:OtherIdentification ceds:PersonalIdentification ceds:PersonIdentifier ceds:SchoolIdentification ceds:SocialSecurityNumberIdentification ceds:StateIdentification ) ;
     sh:minCount 1 ;
@@ -2089,7 +2081,7 @@
     sh:minCount 1 ;
     sh:name "School-assigned Number"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path ceds:StudentIdentifier .
+    sh:path ceds:PersonIdentifier .
 
 <socialsecuritynumberidentificationshapeSSN> a sh:PropertyShape ;
     sh:datatype xsd:token ;
