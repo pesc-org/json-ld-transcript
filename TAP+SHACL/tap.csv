@@ -662,10 +662,10 @@ ceds:SchoolIdentification
 ceds:SocialSecurityNumberIdentification
 ceds:StateIdentification",picklist,,,
 ,PersonIdentificationShape,ceds:PersonIdentifier,Person Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
-,PersonIdentificationShape,ceds:StudentIdentifier,Student Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
+,PersonIdentificationShape,ceds:PersonIdentifier,Person Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
 ,CanadianSINIdentificationShape,ceds:PersonIdentifier,Canadian SIN,TRUE,FALSE,Literal,xsd:token,9..9,lengthRange,,,
 ,SocialSecurityNumberIdentificationShape,ceds:PersonIdentifier,SSN,TRUE,FALSE,Literal,xsd:token,9,maxLength,,,
-,SchoolIdentificationShape,ceds:StudentIdentifier,School-assigned Number,TRUE,FALSE,Literal,xsd:token,20,maxLength,,,
+,SchoolIdentificationShape,ceds:PersonIdentifier,School-assigned Number,TRUE,FALSE,Literal,xsd:token,20,maxLength,,,
 ,SchoolIdentificationShape,pesc:identifierAssignedBy,Identifier Assigned By,TRUE,TRUE,IRI BNODE,,,,OrganizationShape,,
 ,StateIdentificationShape,ceds:PersonIdentifier,State Identification,TRUE,FALSE,Literal,xsd:token,30,maxLength,,,
 ,OtherIdentificationShape,ceds:PersonIdentifier,Other Identifier,TRUE,FALSE,Literal,xsd:token,,,,,
