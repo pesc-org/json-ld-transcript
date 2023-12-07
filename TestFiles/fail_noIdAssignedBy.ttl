@@ -49,8 +49,9 @@
             pesc:lastName "Test"^^xsd:string ;
             pesc:nameCode pescNameCodes:Legal ] ;
     ceds:hasPersonalIdentification  [
-        a ceds:SchoolIdentification ;    #FAIL missing ceds:forIdentificationInRole
-        ceds:StudentIdentifier "123456789"^^xsd:token ;
+        a ceds:SchoolIdentification ;    
+        #FAIL missing pesc:identifierAssignedBy
+        ceds:PersonIdentifier "123456789"^^xsd:token ;
     ];
     pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 

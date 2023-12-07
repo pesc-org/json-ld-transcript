@@ -1,5 +1,5 @@
 @prefix ceds: <http://ceds.ed.gov/owl#> .
-@prefix ex: <http://example.org/> .
+@prefix elm:  <http://data.europa.eu/snb/model/elm/>.
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -9,6 +9,7 @@
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001> a pesc:CollegeTranscript ;
@@ -57,10 +58,14 @@
         ceds:PersonIdentifier "123456789"^^xsd:token ;
     ] , [
         a ceds:SchoolIdentification ;
-        ceds:StudentIdentifier "123456789"^^xsd:token ;
+        ceds:PersonIdentifier "123456789"^^xsd:token ;
         pesc:identifierAssignedBy <https://example.edu/Source#id> ;
     ];
-    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
+    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>;
+    elm:additionalNote [
+        rdf:type elm:Note ;
+        elm:noteLiteral "A made up test peson" ;
+    ].
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
         pesc:AcademicAward ;
