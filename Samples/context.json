@@ -43,735 +43,951 @@
     "pescSupplementalGradeCodes": "https://pesc.org/vocabs/SupplementalGradeCodes#",
     "pescTestScoreMethods": "https://pesc.org/vocabs/TestScoreMethods#",
     "pescTransmissionTypes": "https://pesc.org/vocabs/TransmissionTypes#",
-    "ContactPoint": {
-      "@id": "ceterms:ContactPoint"
+    "000115": {
+      "@id": "ceds:000115",
+      "@type": "xsd:string"
     },
-    "Person": {
-      "@id": "ceds:Person"
+    "000121": {
+      "@id": "ceds:000121",
+      "@type": "xsd:string"
+    },
+    "000172": {
+      "@id": "ceds:000172",
+      "@type": "xsd:string"
+    },
+    "000184": {
+      "@id": "ceds:000184",
+      "@type": "xsd:string"
+    },
+    "000212": {
+      "@id": "ceds:000212",
+      "@type": "xsd:string"
     },
     "Attribute": {
+      "@id": "pesc:Attribute",
       "@type": "@id"
     },
-    "HonorsTitle": {
-      "@type": "xsd:string"
-    },
-    "Immunizations": {
-      "@type": "@id"
-    },
-    "Proficiency": {
-      "@type": "@id"
-    },
-    "Requirement": {
-      "@type": "@id"
-    },
-    "_URLAddress": {
-      "@type": "xsd:anyURI"
-    },
-    "academicAwardDate": {
-      "@type": "xsd:date"
-    },
-    "academicAwardLevel": {
-      "@type": "@id"
-    },
-    "academicAwardTitle": {
-      "@type": "xsd:string"
-    },
-    "academicCompletionDate": {
-      "@type": "xsd:date"
-    },
-    "academicCompletionIndicator": {
-      "@type": "xsd:boolean"
-    },
-    "academicDegreeRequirement": {
-      "@type": "@id"
-    },
-    "academicHonors": {
-      "@type": "@id"
-    },
-    "academicProgramName": {
-      "@type": "xsd:string"
-    },
-    "academicProgramType": {
-      "@type": "@id"
-    },
-    "academicSummaryLevel": {
-      "@type": "@id"
-    },
-    "academicSummaryType": {
-      "@type": "@id"
-    },
-    "accreditation": {
-      "@type": "@id"
-    },
-    "accreditationBodyCode": {
-      "@type": "xsd:string"
-    },
-    "accreditingBodyName": {
-      "@type": "xsd:string"
-    },
-    "achievement": {
-      "@type": "@id"
-    },
-    "actID": {
-      "@type": "xsd:string"
-    },
-    "address": {
-      "@type": "@id"
-    },
-    "addressLine": {
-      "@type": "xsd:string"
-    },
-    "age": {
-      "@type": "xsd:string"
-    },
-    "agencyAssignedID": {
-      "@type": "xsd:string"
-    },
-    "agencyCode": {
-      "@type": "@id"
-    },
-    "agencyCourseID": {
-      "@type": "xsd:string"
-    },
-    "agencyIdentifier": {
-      "@type": "@id"
-    },
-    "agencyName": {
-      "@type": "xsd:string"
-    },
-    "alternateName": {
-      "@type": "@id"
-    },
-    "areaCityCode": {
-      "@type": "xsd:string"
-    },
-    "atpID": {
-      "@type": "xsd:string"
-    },
-    "attentionLine": {
-      "@type": "xsd:string"
-    },
-    "attribute": {
-      "@type": "@id"
-    },
-    "birthCity": {
-      "@type": "xsd:string"
-    },
-    "birthCountry": {
-      "@type": "xsd:string"
-    },
-    "birthDate": {
+    "BirthDate": {
       "@id": "ceds:BirthDate",
       "@type": "xsd:date"
     },
-    "birthStateProvinceCode": {
+    "HonorsTitle": {
+      "@id": "pesc:HonorsTitle",
       "@type": "xsd:string"
     },
-    "birthYear": {
-      "@type": "xsd:date"
-    },
-    "birthday": {
-      "@type": "xsd:date"
-    },
-    "ccdID": {
-      "@type": "xsd:string"
-    },
-    "ceebactID": {
-      "@type": "xsd:string"
-    },
-    "city": {
-      "@type": "xsd:string"
-    },
-    "classRank": {
-      "@type": "xsd:string"
-    },
-    "classRankDate": {
-      "@type": "xsd:date"
-    },
-    "classRankSessionCount": {
-      "@type": "xsd:string"
-    },
-    "classRankYear": {
-      "@type": "xsd:date"
-    },
-    "classRankYearMonth": {
-      "@type": "xsd:date"
-    },
-    "classSize": {
-      "@type": "xsd:string"
-    },
-    "cohortGraduationYear": {
-      "@type": "xsd:date"
-    },
-    "compositeName": {
-      "@type": "xsd:string"
-    },
-    "conditionsMetCode": {
+    "Immunizations": {
+      "@id": "pesc:Immunizations",
       "@type": "@id"
     },
-    "conditionsMetDate": {
-      "@type": "xsd:date"
-    },
-    "contact": {
-      "@type": "@id"
-    },
-    "contactType": {
-      "@type": "xsd:string"
-    },
-    "country": {
-      "@type": "xsd:string"
-    },
-    "countryCode": {
-      "@type": "xsd:string"
-    },
-    "countryPrefixCode": {
-      "@type": "xsd:string"
-    },
-    "county": {
-      "@type": "xsd:string"
-    },
-    "countyCode": {
-      "@type": "xsd:string"
-    },
-    "courseAcademicGrade": {
-      "@type": "xsd:string"
-    },
-    "courseAcademicGradeScaleCode": {
-      "@type": "xsd:string"
-    },
-    "courseAcademicGradeStatusCode": {
-      "@type": "@id"
-    },
-    "courseAcademicSupplementalGrade": {
-      "@type": "xsd:string"
-    },
-    "courseAcademicSupplementalGradeScaleCode": {
-      "@type": "xsd:string"
-    },
-    "courseAcademicSupplementalGradeStatusCode": {
-      "@type": "@id"
-    },
-    "courseAddDate": {
-      "@type": "xsd:date"
-    },
-    "courseApplicability": {
-      "@type": "@id"
-    },
-    "courseBeginDate": {
-      "@type": "xsd:date"
-    },
-    "courseCIPCode": {
-      "@type": "xsd:string"
-    },
-    "courseCSISCode": {
-      "@type": "xsd:string"
-    },
-    "courseCreditBasis": {
-      "@type": "@id"
-    },
-    "courseCreditEarned": {
-      "@type": "xsd:decimal"
-    },
-    "courseCreditLevel": {
-      "@type": "@id"
-    },
-    "courseCreditUnits": {
-      "@type": "@id"
-    },
-    "courseCreditValue": {
-      "@type": "xsd:decimal"
-    },
-    "courseDropDate": {
-      "@type": "xsd:date"
-    },
-    "courseEndDate": {
-      "@type": "xsd:date"
-    },
-    "courseFiveDigitSCEDCode": {
-      "@type": "xsd:string"
-    },
-    "courseGPAAplicabilityCode": {
-      "@type": "@id"
-    },
-    "courseInstructionSite": {
-      "@type": "@id"
-    },
-    "courseInstructionSiteName": {
-      "@type": "xsd:string"
-    },
-    "courseLevel": {
-      "@type": "@id"
-    },
-    "courseNCESCode": {
-      "@type": "xsd:string"
-    },
-    "courseNarrativeExplanationGrade": {
-      "@type": "xsd:string"
-    },
-    "courseNumber": {
-      "@type": "xsd:string"
-    },
-    "courseOf": {
-      "@type": "@id"
-    },
-    "courseOverrideSchool": {
-      "@type": "@id"
-    },
-    "courseQualityPointsEarned": {
-      "@type": "xsd:decimal"
-    },
-    "courseRepeatCode": {
-      "@type": "@id"
-    },
-    "courseSCEDcode": {
-      "@type": "xsd:string"
-    },
-    "courseSectionNumber": {
-      "@type": "xsd:string"
-    },
-    "courseSubjectAbbreviation": {
-      "@type": "xsd:string"
-    },
-    "courseSubjectAreaCode": {
-      "@type": "@id"
-    },
-    "courseSupplementalGrade": {
-      "@type": "@id"
-    },
-    "courseTitle": {
-      "@type": "xsd:string"
-    },
-    "courseUSISCode": {
-      "@type": "xsd:string"
-    },
-    "createdDateTime": {
-      "@type": "xsd:dateTime"
-    },
-    "creditHoursAttempted": {
-      "@type": "xsd:decimal"
-    },
-    "creditHoursDeficient": {
-      "@type": "xsd:decimal"
-    },
-    "creditHoursEarned": {
-      "@type": "xsd:decimal"
-    },
-    "creditHoursGPA": {
-      "@type": "xsd:decimal"
-    },
-    "creditHoursRequired": {
-      "@type": "xsd:decimal"
-    },
-    "creditUnit": {
-      "@type": "@id"
-    },
-    "csisID": {
-      "@type": "xsd:string"
-    },
-    "deceasedIndicator": {
-      "@type": "xsd:boolean"
-    },
-    "delinquencies": {
-      "@type": "@id"
-    },
-    "deliquencies": {
-      "@type": "@id"
-    },
-    "destination": {
-      "@type": "@id"
-    },
-    "documentCompleteCode": {
-      "@type": "@id"
-    },
-    "documentOfficialCode": {
-      "@type": "@id"
-    },
-    "documentProcessCode": {
-      "@type": "@id"
-    },
-    "documentTypeCode": {
-      "@type": "@id"
-    },
-    "dunsID": {
-      "@type": "xsd:string"
-    },
-    "educationTestCode": {
-      "@type": "xsd:string"
-    },
-    "effeciveDate": {
-      "@type": "xsd:date"
-    },
-    "email": {
-      "@type": "xsd:string"
-    },
-    "entryDate": {
-      "@type": "xsd:date"
-    },
-    "esisID": {
-      "@type": "xsd:string"
-    },
-    "exitDate": {
-      "@type": "xsd:date"
-    },
-    "exitReasonCode": {
-      "@type": "xsd:string"
-    },
-    "expirationDate": {
-      "@type": "xsd:date"
-    },
-    "faxPhone": {
-      "@type": "@id"
-    },
-    "ficeID": {
-      "@type": "xsd:string"
-    },
-    "firstName": {
-      "@type": "xsd:string"
-    },
-    "genderCode": {
-      "@type": "@id"
-    },
-    "gpaRangeMaximum": {
-      "@type": "xsd:decimal"
-    },
-    "gpaRangeMinimum": {
-      "@type": "xsd:decimal"
-    },
-    "gpaSummary": {
-      "@type": "@id"
-    },
-    "gradePointAverage": {
-      "@type": "xsd:decimal"
-    },
-    "hasCourse": {
-      "@type": "@id"
-    },
-    "hasPart": {
-      "@type": "@id"
-    },
-    "hasPersonalIdentification": {
-      "@id": "ceds:hasPersonalIdentification"
-    },
-    "hasSession": {
-      "@type": "@id"
-    },
-    "highSchoolCreditSummary": {
-      "@container": "@language"
-    },
-    "honorsLevel": {
-      "@type": "@id"
-    },
-    "immunizationCode": {
-      "@type": "xsd:string"
-    },
-    "immunizationDate": {
-      "@type": "xsd:date"
-    },
-    "immunizationStateCode": {
-      "@type": "@id"
-    },
-    "inCourse": {
-      "@type": "@id"
-    },
-    "inProgram": {
-      "@type": "@id"
-    },
-    "inSession": {
-      "@type": "@id"
-    },
-    "inTest": {
-      "@type": "@id"
-    },
-    "ipedsID": {
-      "@type": "xsd:string"
-    },
-    "isSummaryOf": {
-      "@type": "@id"
-    },
-    "issuer": {
-      "@type": "@id"
-    },
-    "language": {
-      "@type": "@id"
-    },
-    "languageCode": {
-      "@type": "xsd:string"
-    },
-    "languageProficiency": {
-      "@type": "@id"
-    },
-    "languageUsage": {
-      "@type": "@id"
-    },
-    "lastName": {
-      "@type": "xsd:string"
-    },
-    "licensure": {
-      "@type": "@id"
-    },
-    "licensureName": {
-      "@type": "xsd:string"
-    },
-    "licensurePassageDate": {
-      "@type": "xsd:date"
-    },
-    "localOrganizationID": {
-      "@type": "@id"
-    },
-    "localOrganizationIDCode": {
-      "@type": "xsd:string"
-    },
-    "localOrganizationIDQualifier": {
-      "@type": "xsd:string"
-    },
-    "middleName": {
-      "@type": "xsd:string"
-    },
-    "mutuallyDefinedID": {
-      "@type": "xsd:string"
-    },
-    "name": {
-      "@id": "ceds:hasPersonName",
-      "@type": "@id"
-    },
-    "nameCode": {
-      "@type": "@id"
-    },
-    "namePrefix": {
-      "@type": "xsd:string"
-    },
-    "nameSuffix": {
-      "@type": "xsd:string"
-    },
-    "nameTitle": {
-      "@type": "xsd:string"
-    },
-    "nchelpID": {
-      "@type": "xsd:string"
-    },
-    "nsn": {
-      "@type": "xsd:string"
-    },
-    "offeredBy": {
-      "@type": "@id"
-    },
-    "opeID": {
-      "@type": "xsd:string"
-    },
-    "organizationName": {
-      "@container": "@language"
-    },
-    "originalCourseID": {
-      "@type": "xsd:string"
-    },
-    "overrideSchoolCourseNumber": {
-      "@type": "xsd:string"
-    },
-    "partialSSN": {
-      "@type": "xsd:string"
-    },
-    "personIdentifier": {
+    "PersonIdentifier": {
       "@id": "ceds:PersonIdentifier",
       "@type": "xsd:token"
     },
+    "Proficiency": {
+      "@id": "pesc:Proficiency",
+      "@type": "@id"
+    },
+    "Requirement": {
+      "@id": "pesc:Requirement",
+      "@type": "@id"
+    },
+    "_URLAddress": {
+      "@id": "pesc:_URLAddress",
+      "@type": "xsd:anyURI"
+    },
+    "academicAwardDate": {
+      "@id": "pesc:academicAwardDate",
+      "@type": "xsd:date"
+    },
+    "academicAwardLevel": {
+      "@id": "pesc:academicAwardLevel",
+      "@type": "@id"
+    },
+    "academicAwardTitle": {
+      "@id": "pesc:academicAwardTitle",
+      "@type": "xsd:string"
+    },
+    "academicCompletionDate": {
+      "@id": "pesc:academicCompletionDate",
+      "@type": "xsd:date"
+    },
+    "academicCompletionIndicator": {
+      "@id": "pesc:academicCompletionIndicator",
+      "@type": "xsd:boolean"
+    },
+    "academicDegreeRequirement": {
+      "@id": "pesc:academicDegreeRequirement",
+      "@type": "@id"
+    },
+    "academicHonors": {
+      "@id": "pesc:academicHonors",
+      "@type": "@id"
+    },
+    "academicProgramName": {
+      "@id": "pesc:academicProgramName",
+      "@type": "xsd:string"
+    },
+    "academicProgramType": {
+      "@id": "pesc:academicProgramType",
+      "@type": "@id"
+    },
+    "academicSummaryLevel": {
+      "@id": "pesc:academicSummaryLevel",
+      "@type": "@id"
+    },
+    "academicSummaryType": {
+      "@id": "pesc:academicSummaryType",
+      "@type": "@id"
+    },
+    "accreditation": {
+      "@id": "pesc:accreditation",
+      "@type": "@id"
+    },
+    "accreditationBodyCode": {
+      "@id": "pesc:accreditationBodyCode",
+      "@type": "xsd:string"
+    },
+    "accreditingBodyName": {
+      "@id": "pesc:accreditingBodyName",
+      "@type": "xsd:string"
+    },
+    "achievement": {
+      "@id": "pesc:achievement",
+      "@type": "@id"
+    },
+    "actID": {
+      "@id": "pesc:actID",
+      "@type": "xsd:string"
+    },
+    "additionalNote": {
+      "@id": "elm:additionalNote",
+      "@type": "@id"
+    },
+    "address": {
+      "@id": "pesc:address",
+      "@type": "@id"
+    },
+    "addressLine": {
+      "@id": "pesc:addressLine",
+      "@type": "xsd:string"
+    },
+    "age": {
+      "@id": "pesc:age",
+      "@type": "xsd:string"
+    },
+    "agencyAssignedID": {
+      "@id": "pesc:agencyAssignedID",
+      "@type": "xsd:string"
+    },
+    "agencyCode": {
+      "@id": "pesc:agencyCode",
+      "@type": "@id"
+    },
+    "agencyCourseID": {
+      "@id": "pesc:agencyCourseID",
+      "@type": "xsd:string"
+    },
+    "agencyName": {
+      "@id": "pesc:agencyName",
+      "@type": "xsd:string"
+    },
+    "areaCityCode": {
+      "@id": "pesc:areaCityCode",
+      "@type": "xsd:string"
+    },
+    "atpID": {
+      "@id": "pesc:atpID",
+      "@type": "xsd:string"
+    },
+    "attentionLine": {
+      "@id": "pesc:attentionLine"
+    },
+    "attribute": {
+      "@id": "pesc:attribute",
+      "@type": "@id"
+    },
+    "birthCity": {
+      "@id": "pesc:birthCity",
+      "@type": "xsd:string"
+    },
+    "birthCountry": {
+      "@id": "pesc:birthCountry",
+      "@type": "xsd:string"
+    },
+    "birthStateProvinceCode": {
+      "@id": "pesc:birthStateProvinceCode",
+      "@type": "xsd:string"
+    },
+    "birthYear": {
+      "@id": "pesc:birthYear",
+      "@type": "xsd:date"
+    },
+    "birthday": {
+      "@id": "pesc:birthday",
+      "@type": "xsd:date"
+    },
+    "ccdID": {
+      "@id": "pesc:ccdID",
+      "@type": "xsd:string"
+    },
+    "ceebactID": {
+      "@id": "pesc:ceebactID",
+      "@type": "xsd:string"
+    },
+    "city": {
+      "@id": "pesc:city",
+      "@type": "xsd:string"
+    },
+    "classRank": {
+      "@id": "pesc:classRank",
+      "@type": "xsd:string"
+    },
+    "classRankDate": {
+      "@id": "pesc:classRankDate",
+      "@type": "xsd:date"
+    },
+    "classRankSessionCount": {
+      "@id": "pesc:classRankSessionCount",
+      "@type": "xsd:string"
+    },
+    "classRankYear": {
+      "@id": "pesc:classRankYear",
+      "@type": "xsd:date"
+    },
+    "classRankYearMonth": {
+      "@id": "pesc:classRankYearMonth",
+      "@type": "xsd:date"
+    },
+    "classSize": {
+      "@id": "pesc:classSize",
+      "@type": "xsd:string"
+    },
+    "cohortGraduationYear": {
+      "@id": "pesc:cohortGraduationYear",
+      "@type": "xsd:date"
+    },
+    "compositeName": {
+      "@id": "pesc:compositeName",
+      "@type": "xsd:string"
+    },
+    "conditionsMetCode": {
+      "@id": "pesc:conditionsMetCode",
+      "@type": "@id"
+    },
+    "conditionsMetDate": {
+      "@id": "pesc:conditionsMetDate",
+      "@type": "xsd:date"
+    },
+    "contact": {
+      "@id": "pesc:contact",
+      "@type": "@id"
+    },
+    "contactType": {
+      "@id": "ceterms:contactType",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "pesc:country",
+      "@type": "xsd:string"
+    },
+    "countryCode": {
+      "@id": "pesc:countryCode",
+      "@type": "xsd:string"
+    },
+    "countryPrefixCode": {
+      "@id": "pesc:countryPrefixCode",
+      "@type": "xsd:string"
+    },
+    "county": {
+      "@id": "pesc:county",
+      "@type": "xsd:string"
+    },
+    "countyCode": {
+      "@id": "pesc:countyCode",
+      "@type": "xsd:string"
+    },
+    "courseAcademicGrade": {
+      "@id": "pesc:courseAcademicGrade",
+      "@type": "xsd:string"
+    },
+    "courseAcademicGradeScaleCode": {
+      "@id": "pesc:courseAcademicGradeScaleCode",
+      "@type": "xsd:string"
+    },
+    "courseAcademicGradeStatusCode": {
+      "@id": "pesc:courseAcademicGradeStatusCode",
+      "@type": "@id"
+    },
+    "courseAcademicSupplementalGrade": {
+      "@id": "pesc:courseAcademicSupplementalGrade",
+      "@type": "xsd:string"
+    },
+    "courseAcademicSupplementalGradeScaleCode": {
+      "@id": "pesc:courseAcademicSupplementalGradeScaleCode",
+      "@type": "xsd:string"
+    },
+    "courseAcademicSupplementalGradeStatusCode": {
+      "@id": "pesc:courseAcademicSupplementalGradeStatusCode",
+      "@type": "@id"
+    },
+    "courseAddDate": {
+      "@id": "pesc:courseAddDate",
+      "@type": "xsd:date"
+    },
+    "courseApplicability": {
+      "@id": "pesc:courseApplicability",
+      "@type": "@id"
+    },
+    "courseBeginDate": {
+      "@id": "pesc:courseBeginDate",
+      "@type": "xsd:date"
+    },
+    "courseCIPCode": {
+      "@id": "pesc:courseCIPCode",
+      "@type": "xsd:string"
+    },
+    "courseCSISCode": {
+      "@id": "pesc:courseCSISCode",
+      "@type": "xsd:string"
+    },
+    "courseCreditBasis": {
+      "@id": "pesc:courseCreditBasis",
+      "@type": "@id"
+    },
+    "courseCreditEarned": {
+      "@id": "pesc:courseCreditEarned",
+      "@type": "xsd:decimal"
+    },
+    "courseCreditLevel": {
+      "@id": "pesc:courseCreditLevel",
+      "@type": "@id"
+    },
+    "courseCreditUnits": {
+      "@id": "pesc:courseCreditUnits",
+      "@type": "@id"
+    },
+    "courseCreditValue": {
+      "@id": "pesc:courseCreditValue",
+      "@type": "xsd:decimal"
+    },
+    "courseDropDate": {
+      "@id": "pesc:courseDropDate",
+      "@type": "xsd:date"
+    },
+    "courseEndDate": {
+      "@id": "pesc:courseEndDate",
+      "@type": "xsd:date"
+    },
+    "courseFiveDigitSCEDCode": {
+      "@id": "pesc:courseFiveDigitSCEDCode",
+      "@type": "xsd:string"
+    },
+    "courseGPAAplicabilityCode": {
+      "@id": "pesc:courseGPAAplicabilityCode",
+      "@type": "@id"
+    },
+    "courseInstructionSite": {
+      "@id": "pesc:courseInstructionSite",
+      "@type": "@id"
+    },
+    "courseInstructionSiteName": {
+      "@id": "pesc:courseInstructionSiteName",
+      "@type": "xsd:string"
+    },
+    "courseLevel": {
+      "@id": "pesc:courseLevel",
+      "@type": "@id"
+    },
+    "courseNCESCode": {
+      "@id": "pesc:courseNCESCode",
+      "@type": "xsd:string"
+    },
+    "courseNarrativeExplanationGrade": {
+      "@id": "pesc:courseNarrativeExplanationGrade",
+      "@type": "xsd:string"
+    },
+    "courseNumber": {
+      "@id": "pesc:courseNumber",
+      "@type": "xsd:string"
+    },
+    "courseOf": {
+      "@id": "pesc:courseOf",
+      "@type": "@id"
+    },
+    "courseOverrideSchool": {
+      "@id": "pesc:courseOverrideSchool",
+      "@type": "@id"
+    },
+    "courseQualityPointsEarned": {
+      "@id": "pesc:courseQualityPointsEarned",
+      "@type": "xsd:decimal"
+    },
+    "courseRepeatCode": {
+      "@id": "pesc:courseRepeatCode",
+      "@type": "@id"
+    },
+    "courseSCEDcode": {
+      "@id": "pesc:courseSCEDcode",
+      "@type": "xsd:string"
+    },
+    "courseSectionNumber": {
+      "@id": "pesc:courseSectionNumber",
+      "@type": "xsd:string"
+    },
+    "courseSubjectAbbreviation": {
+      "@id": "pesc:courseSubjectAbbreviation",
+      "@type": "xsd:string"
+    },
+    "courseSubjectAreaCode": {
+      "@id": "pesc:courseSubjectAreaCode",
+      "@type": "@id"
+    },
+    "courseSupplementalGrade": {
+      "@id": "pesc:courseSupplementalGrade",
+      "@type": "@id"
+    },
+    "courseTitle": {
+      "@id": "pesc:courseTitle",
+      "@type": "xsd:string"
+    },
+    "courseUSISCode": {
+      "@id": "pesc:courseUSISCode",
+      "@type": "xsd:string"
+    },
+    "createdDateTime": {
+      "@id": "pesc:createdDateTime",
+      "@type": "xsd:dateTime"
+    },
+    "creditHoursAttempted": {
+      "@id": "pesc:creditHoursAttempted",
+      "@type": "xsd:decimal"
+    },
+    "creditHoursDeficient": {
+      "@id": "pesc:creditHoursDeficient",
+      "@type": "xsd:decimal"
+    },
+    "creditHoursEarned": {
+      "@id": "pesc:creditHoursEarned",
+      "@type": "xsd:decimal"
+    },
+    "creditHoursGPA": {
+      "@id": "pesc:creditHoursGPA",
+      "@type": "xsd:decimal"
+    },
+    "creditHoursRequired": {
+      "@id": "pesc:creditHoursRequired",
+      "@type": "xsd:decimal"
+    },
+    "creditUnit": {
+      "@id": "pesc:creditUnit",
+      "@type": "@id"
+    },
+    "csisID": {
+      "@id": "pesc:csisID",
+      "@type": "xsd:string"
+    },
+    "deceasedIndicator": {
+      "@id": "pesc:deceasedIndicator",
+      "@type": "xsd:boolean"
+    },
+    "delinquencies": {
+      "@id": "pesc:delinquencies",
+      "@type": "@id"
+    },
+    "deliquencies": {
+      "@id": "pesc:deliquencies",
+      "@type": "@id"
+    },
+    "destination": {
+      "@id": "pesc:destination",
+      "@type": "@id"
+    },
+    "documentCompleteCode": {
+      "@id": "pesc:documentCompleteCode",
+      "@type": "@id"
+    },
+    "documentID": {
+      "@id": "pesc:documentID",
+      "@type": "xsd:string"
+    },
+    "documentOfficialCode": {
+      "@id": "pesc:documentOfficialCode",
+      "@type": "@id"
+    },
+    "documentProcessCode": {
+      "@id": "pesc:documentProcessCode",
+      "@type": "@id"
+    },
+    "documentTypeCode": {
+      "@id": "pesc:documentTypeCode",
+      "@type": "@id"
+    },
+    "dunsID": {
+      "@id": "pesc:dunsID",
+      "@type": "xsd:string"
+    },
+    "educationTestCode": {
+      "@id": "pesc:educationTestCode",
+      "@type": "xsd:string"
+    },
+    "effeciveDate": {
+      "@id": "pesc:effeciveDate",
+      "@type": "xsd:date"
+    },
+    "email": {
+      "@id": "pesc:email",
+      "@type": "xsd:string"
+    },
+    "entryDate": {
+      "@id": "pesc:entryDate",
+      "@type": "xsd:date"
+    },
+    "esisID": {
+      "@id": "pesc:esisID",
+      "@type": "xsd:string"
+    },
+    "exitDate": {
+      "@id": "pesc:exitDate",
+      "@type": "xsd:date"
+    },
+    "exitReasonCode": {
+      "@id": "pesc:exitReasonCode",
+      "@type": "xsd:string"
+    },
+    "expirationDate": {
+      "@id": "pesc:expirationDate",
+      "@type": "xsd:date"
+    },
+    "faxPhone": {
+      "@id": "pesc:faxPhone",
+      "@type": "@id"
+    },
+    "ficeID": {
+      "@id": "pesc:ficeID",
+      "@type": "xsd:string"
+    },
+    "genderCode": {
+      "@id": "pesc:genderCode",
+      "@type": "@id"
+    },
+    "gpaRangeMaximum": {
+      "@id": "pesc:gpaRangeMaximum",
+      "@type": "xsd:decimal"
+    },
+    "gpaRangeMinimum": {
+      "@id": "pesc:gpaRangeMinimum",
+      "@type": "xsd:decimal"
+    },
+    "gpaSummary": {
+      "@id": "pesc:gpaSummary",
+      "@type": "@id"
+    },
+    "gradePointAverage": {
+      "@id": "pesc:gradePointAverage",
+      "@type": "xsd:decimal"
+    },
+    "hasCourse": {
+      "@id": "pesc:hasCourse",
+      "@type": "@id"
+    },
+    "hasOtherPersonName": {
+      "@id": "ceds:hasOtherPersonName",
+      "@type": "@id"
+    },
+    "hasPart": {
+      "@id": "pesc:hasPart",
+      "@type": "@id"
+    },
+    "hasPersonName": {
+      "@id": "ceds:hasPersonName",
+      "@type": "@id"
+    },
+    "hasPersonalIdentification": {
+      "@id": "ceds:hasPersonalIdentification",
+      "@type": "@id"
+    },
+    "hasSession": {
+      "@id": "pesc:hasSession",
+      "@type": "@id"
+    },
+    "highSchoolCreditSummary": {
+      "@id": "pesc:highSchoolCreditSummary",
+      "@container": "@language"
+    },
+    "honorsLevel": {
+      "@id": "pesc:honorsLevel",
+      "@type": "@id"
+    },
+    "identifierAssignedBy": {
+      "@id": "pesc:identifierAssignedBy",
+      "@type": "@id"
+    },
+    "immunizationCode": {
+      "@id": "pesc:immunizationCode",
+      "@type": "xsd:string"
+    },
+    "immunizationDate": {
+      "@id": "pesc:immunizationDate",
+      "@type": "xsd:date"
+    },
+    "immunizationStateCode": {
+      "@id": "pesc:immunizationStateCode",
+      "@type": "@id"
+    },
+    "inCourse": {
+      "@id": "pesc:inCourse",
+      "@type": "@id"
+    },
+    "inProgram": {
+      "@id": "pesc:inProgram",
+      "@type": "@id"
+    },
+    "inSession": {
+      "@id": "pesc:inSession",
+      "@type": "@id"
+    },
+    "inTest": {
+      "@id": "pesc:inTest",
+      "@type": "@id"
+    },
+    "ipedsID": {
+      "@id": "pesc:ipedsID",
+      "@type": "xsd:string"
+    },
+    "isSummaryOf": {
+      "@id": "pesc:isSummaryOf",
+      "@type": "@id"
+    },
+    "issuer": {
+      "@id": "cred:issuer",
+      "@type": "@id"
+    },
+    "language": {
+      "@id": "pesc:language",
+      "@type": "@id"
+    },
+    "languageCode": {
+      "@id": "pesc:languageCode",
+      "@type": "xsd:string"
+    },
+    "languageProficiency": {
+      "@id": "pesc:languageProficiency",
+      "@type": "@id"
+    },
+    "languageUsage": {
+      "@id": "pesc:languageUsage",
+      "@type": "@id"
+    },
+    "licensure": {
+      "@id": "pesc:licensure",
+      "@type": "@id"
+    },
+    "licensureName": {
+      "@id": "pesc:licensureName",
+      "@type": "xsd:string"
+    },
+    "licensurePassageDate": {
+      "@id": "pesc:licensurePassageDate",
+      "@type": "xsd:date"
+    },
+    "localOrganizationID": {
+      "@id": "pesc:localOrganizationID",
+      "@type": "@id"
+    },
+    "localOrganizationIDCode": {
+      "@id": "pesc:localOrganizationIDCode",
+      "@type": "xsd:string"
+    },
+    "localOrganizationIDQualifier": {
+      "@id": "pesc:localOrganizationIDQualifier",
+      "@type": "xsd:string"
+    },
+    "mutuallyDefinedID": {
+      "@id": "pesc:mutuallyDefinedID",
+      "@type": "xsd:string"
+    },
+    "nameCode": {
+      "@id": "pesc:nameCode",
+      "@type": "@id"
+    },
+    "nameTitle": {
+      "@id": "pesc:nameTitle",
+      "@type": "xsd:string"
+    },
+    "nchelpID": {
+      "@id": "pesc:nchelpID",
+      "@type": "xsd:string"
+    },
+    "noteLiteral": {
+      "@id": "elm:noteLiteral"
+    },
+    "offeredBy": {
+      "@id": "pesc:offeredBy",
+      "@type": "@id"
+    },
+    "opeID": {
+      "@id": "pesc:opeID",
+      "@type": "xsd:string"
+    },
+    "organizationName": {
+      "@id": "pesc:organizationName",
+      "@container": "@language"
+    },
+    "originalCourseID": {
+      "@id": "pesc:originalCourseID",
+      "@type": "xsd:string"
+    },
+    "overrideSchoolCourseNumber": {
+      "@id": "pesc:overrideSchoolCourseNumber",
+      "@type": "xsd:string"
+    },
     "phone": {
+      "@id": "pesc:phone",
       "@type": "@id"
     },
     "phoneNumber": {
+      "@id": "pesc:phoneNumber",
       "@type": "xsd:string"
     },
     "phoneNumberExtension": {
+      "@id": "pesc:phoneNumberExtension",
       "@type": "xsd:string"
     },
     "postalCode": {
+      "@id": "pesc:postalCode",
       "@type": "xsd:string"
     },
     "proficiency": {
+      "@id": "pesc:proficiency",
       "@type": "@id"
     },
     "programCIPCode": {
+      "@id": "pesc:programCIPCode",
       "@type": "xsd:string"
     },
     "programCSISCode": {
+      "@id": "pesc:programCSISCode",
       "@type": "xsd:string"
     },
     "programESISCode": {
+      "@id": "pesc:programESISCode",
       "@type": "xsd:string"
     },
     "programHEGISCode": {
+      "@id": "pesc:programHEGISCode",
       "@type": "xsd:string"
     },
     "programLocalCode": {
+      "@id": "pesc:programLocalCode",
       "@type": "xsd:string"
     },
     "programSecondarySchoolCode": {
+      "@id": "pesc:programSecondarySchoolCode",
       "@type": "@id"
     },
     "programUSISCode": {
+      "@id": "pesc:programUSISCode",
       "@type": "xsd:string"
     },
     "psisID": {
+      "@id": "pesc:psisID",
       "@type": "xsd:string"
     },
     "pssID": {
+      "@id": "pesc:pssID",
       "@type": "xsd:string"
     },
     "rapCode": {
+      "@id": "pesc:rapCode",
       "@type": "xsd:string"
     },
     "rapName": {
+      "@id": "pesc:rapName",
       "@type": "xsd:string"
     },
     "rapSubName": {
-      "@type": "xsd:string"
-    },
-    "recipientAssignedID": {
+      "@id": "pesc:rapSubName",
       "@type": "xsd:string"
     },
     "requestTrackingID": {
+      "@id": "pesc:requestTrackingID",
       "@type": "xsd:string"
     },
     "requirement": {
+      "@id": "pesc:requirement",
       "@type": "@id"
     },
     "residency": {
+      "@id": "pesc:residency",
       "@type": "@id"
     },
     "residencyStatusCode": {
+      "@id": "pesc:residencyStatusCode",
       "@type": "@id"
     },
     "school": {
+      "@id": "pesc:school",
       "@type": "@id"
     },
-    "schoolAssignedPersonID": {
-      "@type": "xsd:string"
-    },
     "schoolLevel": {
+      "@id": "pesc:schoolLevel",
       "@type": "@id"
     },
     "schoolOverrideCode": {
+      "@id": "pesc:schoolOverrideCode",
       "@type": "@id"
     },
     "scoreInvalidatedIndicator": {
+      "@id": "pesc:scoreInvalidatedIndicator",
       "@type": "xsd:boolean"
     },
     "scoreRevisedIndicator": {
+      "@id": "pesc:scoreRevisedIndicator",
       "@type": "xsd:boolean"
     },
     "scoreSelfRportedIndicator": {
+      "@id": "pesc:scoreSelfRportedIndicator",
       "@type": "xsd:boolean"
     },
     "scoreValue": {
+      "@id": "pesc:scoreValue",
       "@type": "xsd:string"
     },
     "sessionBeginDate": {
+      "@id": "pesc:sessionBeginDate",
       "@type": "xsd:date"
     },
     "sessionDesignator": {
+      "@id": "pesc:sessionDesignator",
       "@type": "xsd:gYearMonth"
     },
     "sessionDesignatorSuffix": {
+      "@id": "pesc:sessionDesignatorSuffix",
       "@type": "xsd:string"
     },
     "sessionEndDate": {
+      "@id": "pesc:sessionEndDate",
       "@type": "xsd:date"
     },
     "sessionName": {
+      "@id": "pesc:sessionName",
       "@type": "xsd:string"
     },
     "sessionSchoolYear": {
+      "@id": "pesc:sessionSchoolYear",
       "@type": "xsd:date"
     },
     "sessionType": {
+      "@id": "pesc:sessionType",
       "@type": "@id"
-    },
-    "sin": {
-      "@type": "xsd:string"
     },
     "source": {
+      "@id": "pesc:source",
       "@type": "@id"
     },
-    "ssn": {
-      "@type": "xsd:string"
-    },
     "stateProvince": {
+      "@id": "pesc:stateProvince",
       "@type": "xsd:string"
     },
     "stateProvinceCode": {
+      "@id": "pesc:stateProvinceCode",
       "@type": "xsd:string"
     },
     "student": {
+      "@id": "pesc:student",
       "@type": "@id"
     },
     "studentLevel": {
+      "@id": "pesc:studentLevel",
       "@type": "@id"
     },
-    "studentIdentifier": {
-      "@id": "ceds:StudentIdentifier",
-      "@type": "xsd:token"
-    },
     "subTestScore": {
+      "@id": "pesc:subTestScore",
       "@type": "@id"
     },
     "subTests": {
+      "@id": "pesc:subTests",
       "@type": "@id"
     },
     "subject": {
+      "@id": "cred:subject",
       "@type": "@id"
     },
     "supplementalGradeCode": {
+      "@id": "pesc:supplementalGradeCode",
       "@type": "@id"
     },
     "supplementalSubSession": {
+      "@id": "pesc:supplementalSubSession",
       "@type": "xsd:string"
     },
+    "targetContactPoint": {
+      "@id": "ceterms:targetContactPoint",
+      "@type": "@id"
+    },
     "testCode": {
+      "@id": "pesc:testCode",
       "@type": "xsd:string"
     },
     "testDate": {
+      "@id": "pesc:testDate",
       "@type": "xsd:date"
     },
     "testName": {
+      "@id": "pesc:testName",
       "@type": "xsd:string"
     },
     "testScoreMethod": {
+      "@id": "pesc:testScoreMethod",
       "@type": "@id"
     },
     "testYear": {
+      "@id": "pesc:testYear",
       "@type": "xsd:date"
     },
     "testYearMonth": {
+      "@id": "pesc:testYearMonth",
       "@type": "xsd:date"
     },
     "thesisDIssertationTitle": {
+      "@id": "pesc:thesisDIssertationTitle",
       "@type": "xsd:string"
     },
     "thesisDissertationAdvisor": {
+      "@id": "pesc:thesisDissertationAdvisor",
       "@type": "xsd:string"
     },
     "totalQualityPoints": {
+      "@id": "pesc:totalQualityPoints",
       "@type": "xsd:decimal"
     },
     "transmissionType": {
+      "@id": "pesc:transmissionType",
       "@type": "@id"
     },
     "type": {
+      "@id": "rdf:type",
       "@type": "@id"
     },
     "url": {
+      "@id": "pesc:url",
       "@type": "xsd:anyURI"
     },
     "urlAddress": {
+      "@id": "pesc:urlAddress",
       "@type": "xsd:anyURI"
     },
     "usisID": {
+      "@id": "pesc:usisID",
       "@type": "xsd:string"
     },
     "verifiableCredential": {
+      "@id": "pesc:verifiableCredential",
       "@type": "@id"
     },
     "verifiedBy": {
+      "@id": "pesc:verifiedBy",
       "@type": "@id"
     }
-  }  
+  }
 }
