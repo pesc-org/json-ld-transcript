@@ -43,6 +43,9 @@
     "pescSupplementalGradeCodes": "https://pesc.org/vocabs/SupplementalGradeCodes#",
     "pescTestScoreMethods": "https://pesc.org/vocabs/TestScoreMethods#",
     "pescTransmissionTypes": "https://pesc.org/vocabs/TransmissionTypes#",
+    "ContactPoint":{
+      "@id": "ceterms:ContactPoint"
+    },
     "000115": {
       "@id": "ceds:000115",
       "@type": "xsd:string"
