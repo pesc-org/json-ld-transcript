@@ -3,7 +3,7 @@
   "@graph": [
     {
       "@id": "transcripts/050330001",
-      "@type": "pesc:CollegeTranscript",
+      "@type": "CollegeTranscript",
       "createdDateTime": "2023-05-08T14:17:29-05:00",
       "destination": "https://example.edu/Destination#id",
       "documentID": "050330001",
@@ -16,13 +16,13 @@
       "transmissionType": "pescTransmissionTypes:Original"
     },
     {
-      "@type": "ceds:Person",
+      "@type": "Person",
       "@id": "https://people.pjjk.net/test",
       "achievement": [
         "achievement001"
       ],
       "hasPersonName": {
-        "@type": "pesc:PersonalName",
+        "@type": "PersonalName",
         "nameCode": "pescNameCodes:Legal",
         "firstName": "Testy",
         "lastName": "Test"
@@ -32,17 +32,15 @@
       "@type": "Organization",
       "@id": "https://example.edu/Source#id",
       "organizationName": {
-        "en": "U Texas"
-      },
-      "schoolLevel": "pescSchoolLevels:Postsecondary"
+        "en": "Example Source"
+      }
     },
     {
       "@type": "Organization",
       "@id": "https://example.edu/Destination#id",
       "organizationName": {
-        "en": "MD College"
-      },
-      "schoolLevel": "pescSchoolLevels:Postsecondary"
+        "en": "Example Destination"
+      }
     },
     {
       "@type": [
@@ -51,9 +49,7 @@
       ],
       "@id": "achievement001",
       "academicAwardDate": "1985-05-01",
-      "academicAwardLevel": "pescAcademicAwardLevels:1.1",
       "academicAwardTitle": "Example Award",
-      "academicCompletionIndicator": true,
       "inProgram": "https://example.edu/Program/001",
       "school": "https://example.edu/Source#id"
     },
