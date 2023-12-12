@@ -1,0 +1,92 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/pesc-org/json-ld-transcript/main/Samples/context.json",
+        {
+            "transcript": {
+                "@id": "@graph"
+            },
+            "Note": {
+                "@id": "elm:Note"
+            }
+        }
+    ],
+    "transcript": {
+        "@id": "transcripts/050330001",
+        "@type": "CollegeTranscript",
+        "createdDateTime": "2023-05-08T14:17:29-05:00",
+        "destination": {
+            "@id": "https://example.edu/Desintation#id",
+            "@type": "Organization",
+            "organizationName": {
+                "en": "Example Destination"
+            }
+        },
+        "documentID": "050330001",
+        "documentTypeCode": "pescDocumentTypeCodes:RequestedRecord",
+        "hasPart": {
+            "@id": "achievement001",
+            "@type": [
+                "AcademicAchievement",
+                "AcademicAward"
+            ],
+            "academicAwardDate": "1985-05-01",
+            "academicAwardTitle": "Example Award",
+            "inProgram": {
+                "@id": "https://example.edu/Program/001",
+                "@type": "AcademicProgram",
+                "academicProgramName": "Example Program",
+                "hasCourse": {
+                    "@id": "https://example.edu/Course/001",
+                    "@type": "Course",
+                    "courseCreditBasis": "pescCreditBasis:Regular",
+                    "courseCreditLevel": "pescCreditLevels:UpperDivision",
+                    "courseCreditUnits": "pescCreditUnits:CarnegieUnits",
+                    "courseCreditValue": "15.0",
+                    "courseLevel": "pescCourseLevels:Honors",
+                    "courseTitle": "Example Course",
+                    "offeredBy": {
+                        "@id": "https://example.edu/Source#id",
+                        "@type": "Organization",
+                        "organizationName": {
+                            "en": "Example Source"
+                        }
+                    }
+                },
+                "offeredBy": "https://example.edu/Source#id"
+            },
+            "school": "https://example.edu/Source#id"
+        },
+        "source": "https://example.edu/Source#id",
+        "student": {
+            "@id": "https://people.pjjk.net/test",
+            "@type": "ceds:Person",
+            "hasPersonName": {
+                "@type": "PersonalName",
+                "firstName": "Testy",
+                "lastName": "Test",
+                "nameCode": "pescNameCodes:Legal"
+            },
+            "hasPersonalIdentification": [
+                {
+                    "@type": "ceds:CanadianSINIdentification",
+                    "PersonIdentifier": "123456789"
+                },
+                {
+                    "@type": "ceds:SocialSecurityNumberIdentification",
+                    "PersonIdentifier": "123456789"
+                },
+                {
+                    "@type": "ceds:SchoolIdentification",
+                    "PersonIdentifier": "123456789",
+                    "identifierAssignedBy": "https://example.edu/Source#id"
+                }
+            ],
+            "additionalNote": {
+                "@type": "Note",
+                "noteLiteral": "A made up test peson"
+            },
+            "achievement": "achievement001"
+        },
+        "transmissionType": "pescTransmissionTypes:Original"
+    }
+}
