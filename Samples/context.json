@@ -5,6 +5,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "ceds": "http://ceds.ed.gov/owl#",
     "ceterms": "https://purl.org/ctdl/terms/",
+    "elm": "http://data.europa.eu/snb/model/elm/",
     "pesc": "https://pesc.org/terms/",
     "sdo": "https://schema.org/",
     "pescAcademicSummaryLevels": "https://pesc.org/vocabs/AcademicSummaryLevels#",
