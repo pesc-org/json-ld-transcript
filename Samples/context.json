@@ -44,6 +44,9 @@
     "pescSupplementalGradeCodes": "https://pesc.org/vocabs/SupplementalGradeCodes#",
     "pescTestScoreMethods": "https://pesc.org/vocabs/TestScoreMethods#",
     "pescTransmissionTypes": "https://pesc.org/vocabs/TransmissionTypes#",
+    "Person": {
+      "@id": "ceds:Person"
+    },
     "ContactPoint":{
       "@id": "ceterms:ContactPoint"
     },

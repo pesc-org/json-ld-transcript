@@ -320,7 +320,8 @@
         <studentshapeLanguage>,
         <studentshapeName>,
         <studentshapeOrganizationName>,
-        <studentshapeResidency> ;
+        <studentshapeResidency>,
+        <studentshapeType> ;
     sh:targetObjectsOf pesc:student .
 
 <TestScoreShape> a sh:NodeShape ;
@@ -2236,6 +2237,13 @@
     sh:name "Residency"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:residency .
+
+<studentshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:Person ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <testscoreshapeInTest> a sh:PropertyShape ;
     sh:maxCount 1 ;
