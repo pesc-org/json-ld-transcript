@@ -1,6 +1,16 @@
 {
-  "@context": "https://raw.githubusercontent.com/pesc-org/json-ld-transcript/main/Samples/context.json",
-  "@graph": [
+  "@context": [
+    "https://raw.githubusercontent.com/pesc-org/json-ld-transcript/main/Samples/context.json",
+    {
+        "transcript": {
+            "@id": "@graph"
+        },
+        "Note": {
+            "@id": "elm:Note"
+        }
+    }
+],
+"@graph": [
     {
       "@id": "050330001",
       "@type": "CollegeTranscript",
