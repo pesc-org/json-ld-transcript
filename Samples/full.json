@@ -1,6 +1,6 @@
 {
     "@context": [
-      "https://raw.githubusercontent.com/philbarker/transcript_jsonld/main/Samples/context.json",
+      "https://raw.githubusercontent.com/pesc-org/json-ld-transcript/main/Samples/context.json",
     { 
       "ceterms": "https://purl.org/ctdl/terms/",
       "ContactPoint": {

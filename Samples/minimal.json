@@ -1,58 +1,36 @@
 {
-  "@context": "https://raw.githubusercontent.com/philbarker/transcript_jsonld/main/Samples/context.json",
+  "@context": "https://raw.githubusercontent.com/pesc-org/json-ld-transcript/main/Samples/context.json",
   "@graph": [
     {
       "@id": "transcripts/050330001",
-      "@type": "CollegeTranscript",
+      "@type": "pesc:CollegeTranscript",
       "createdDateTime": "2023-05-08T14:17:29-05:00",
-      "destination": "https://www.mdc.edu/#Organization",
+      "destination": "https://example.edu/Destination#id",
       "documentID": "050330001",
       "documentTypeCode": "pescDocumentTypeCodes:RequestedRecord",
       "hasPart": [
-        "achievement001",
-        "achievement002"
+        "achievement001"
       ],
-      "source": "https://www.utexas.edu/#Organization",
+      "source": "https://example.edu/Source#id",
       "student": "https://people.pjjk.net/test",
       "transmissionType": "pescTransmissionTypes:Original"
     },
     {
-      "@type": "Person",
+      "@type": "ceds:Person",
       "@id": "https://people.pjjk.net/test",
       "achievement": [
-        "achievement001",
-        "achievement002"
+        "achievement001"
       ],
-      "birthDate": "1967-07-14",
-      "contact": {
-        "@type": "ContactPoint",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLine": "1223 University Dr",
-          "city": "Austin",
-          "stateProvinceCode": "TX",
-          "postalCode": "78211",
-          "expirationDate": "2009-06-15",
-          "countryCode": "US"
-        },
-        "email": "TestSpeede@aol.com"
-      },
-      "deceasedIndicator": true,
-      "genderCode": "pescGenderCodes:Female",
-      "name": {
-        "@type": "PersonalName",
+      "hasPersonName": {
+        "@type": "pesc:PersonalName",
         "nameCode": "pescNameCodes:Legal",
-        "firstName": "Test",
-        "middleName": [
-          "Record",
-          "Test"
-        ],
-        "lastName": "Speede"
+        "firstName": "Testy",
+        "lastName": "Test"
       }
     },
     {
       "@type": "Organization",
-      "@id": "https://www.utexas.edu/#Organization",
+      "@id": "https://example.edu/Source#id",
       "organizationName": {
         "en": "U Texas"
       },
@@ -60,36 +38,30 @@
     },
     {
       "@type": "Organization",
-      "@id": "https://www.mdc.edu/#Organization",
+      "@id": "https://example.edu/Destination#id",
       "organizationName": {
         "en": "MD College"
       },
       "schoolLevel": "pescSchoolLevels:Postsecondary"
     },
     {
-      "@type": ["AcademicAward", "AcademicAchievement"],
+      "@type": [
+        "AcademicAward",
+        "AcademicAchievement"
+      ],
       "@id": "achievement001",
       "academicAwardDate": "1985-05-01",
       "academicAwardLevel": "pescAcademicAwardLevels:1.1",
       "academicAwardTitle": "Example Award",
       "academicCompletionIndicator": true,
       "inProgram": "https://example.edu/Program/001",
-      "school": "https://www.utexas.edu/#Organization"
-    },
-    {
-      "@type": ["CourseAchievement", "AcademicAchievement"],
-      "@id": "achievement002",
-      "inCourse": "https://example.edu/Course/001",
-      "inSession": "https://example.edu/Session/001",
-      "courseCreditEarned": "15",
-      "courseAcademicGrade": "A",
-      "school": "https://www.utexas.edu/#Organization"
+      "school": "https://example.edu/Source#id"
     },
     {
       "@type": "AcademicProgram",
       "@id": "https://example.edu/Program/001",
       "academicProgramName": "Example Program",
-      "offeredBy": "https://www.utexas.edu/#Organization",
+      "offeredBy": "https://example.edu/Source#id",
       "hasCourse": "https://example.edu/Course/001"
     },
     {
@@ -101,14 +73,14 @@
       "courseCreditLevel": "pescCreditLevels:UpperDivision",
       "courseCreditValue": "15",
       "courseLevel": "pescCourseLevels:Honors",
-      "offeredBy": "https://www.utexas.edu/#Organization"
+      "offeredBy": "https://example.edu/Source#id"
     },
     {
       "@id": "https://example.edu/Session/001",
       "@type": "AcademicSession",
       "sessionDesignator": "2019-09",
       "sessionName": "Fall 2019",
-      "offeredBy": "https://www.utexas.edu/#Organization",
+      "offeredBy": "https://example.edu/Source#id",
       "sessionType": "pescSessionTypes:Semester"
     }
   ]
