@@ -303,7 +303,6 @@
     sh:name "Student"@en ;
     sh:property <studentshapeAchievement>,
         <studentshapeAdditionalNote>,
-        <studentshapeAge>,
         <studentshapeAgencyAssignedID>,
         <studentshapeAlternateName>,
         <studentshapeBirthCity>,
@@ -2115,14 +2114,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
 
-<studentshapeAge> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxInclusive 3 ;
-    sh:name "Age"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:age .
-
 <studentshapeAgencyAssignedID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -2167,14 +2158,14 @@
     sh:path pesc:birthStateProvinceCode .
 
 <studentshapeBirthYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
+    sh:datatype xsd:gYear ;
     sh:maxCount 1 ;
     sh:name "Birth Year"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:birthYear .
 
 <studentshapeBirthday> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
+    sh:datatype xsd:gMonthDay ;
     sh:maxCount 1 ;
     sh:name "Birthday"@en-US ;
     sh:nodeKind sh:Literal ;

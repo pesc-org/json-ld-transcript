@@ -611,12 +611,11 @@ pescResidencyStatusCodes:Resident",picklist,,Optional,
 96,StudentShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
 ,StudentShape,ceds:hasPersonalIdentification,hasPersonalIdentification,FALSE,TRUE,IRI BNODE,,,,,,
 155,StudentShape,ceds:BirthDate,Birth Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
-156,StudentShape,pesc:birthday,Birthday,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-157,StudentShape,pesc:birthYear,Birth Year,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
+156,StudentShape,pesc:birthday,Birthday,FALSE,FALSE,Literal,xsd:gMonthDay,,,,Optional,
+157,StudentShape,pesc:birthYear,Birth Year,FALSE,FALSE,Literal,xsd:gYear,,,,Not Recommended,
 158,StudentShape,pesc:birthCity,Birth City,FALSE,FALSE,Literal,xsd:string,25,maxLength,,Optional,
 159,StudentShape,pesc:birthStateProvinceCode,Birth State Province Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.appendixA Keep as string for now
 160,StudentShape,pesc:birthCountry,Birth Country,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
-161,StudentShape,pesc:age,Age,FALSE,FALSE,Literal,xsd:string,3,maximum,,Not Recommended,positive integer
 181,StudentShape,pesc:residency,Residency,FALSE,FALSE,IRI BNODE,,,,,Optional,
 191,StudentShape,pesc:language,Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
 359,StudentShape,pesc:Immunizations,Immunizations,FALSE,TRUE,IRI BNODE,,,,ImmunizationsShape,Recommended,
