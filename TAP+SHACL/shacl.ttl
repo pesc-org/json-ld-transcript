@@ -287,23 +287,20 @@
 <PostalAddressShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Postal Address"@en ;
-    sh:property <postaladdressshapeAdditionalNote>,
-        <postaladdressshapeAddressLine>,
+    sh:property <postaladdressshapeAddressLocality%252Ce.g.City>,
+        <postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode>,
         <postaladdressshapeAttentionLine>,
-        <postaladdressshapeCity>,
         <postaladdressshapeCountryCode>,
-        <postaladdressshapeEffectiveDate>,
-        <postaladdressshapeExpirationDate>,
         <postaladdressshapePostalCode>,
-        <postaladdressshapeStateProvinceCode> ;
-    sh:targetClass pesc:PostalAddress .
+        <postaladdressshapeStreetAddress>,
+        <postaladdressshapeType> ;
+    sh:targetObjectsOf ceterms:address .
 
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Student"@en ;
     sh:property <studentshapeAchievement>,
         <studentshapeAdditionalNote>,
-        <studentshapeAge>,
         <studentshapeAgencyAssignedID>,
         <studentshapeAlternateName>,
         <studentshapeBirthCity>,
@@ -967,14 +964,20 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:verifiableCredential .
 
+<contactshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
+
 <contactshapeAddress> a sh:PropertyShape ;
     sh:name "Address"@en-US ;
     sh:node <PostalAddressShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:address .
+    sh:path ceterms:address .
 
 <contactshapeContactType> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype rdf:langString ;
     sh:maxLength 80 ;
     sh:minLength 1 ;
     sh:name "Contact Type"@en-US ;
@@ -998,6 +1001,20 @@
     sh:node <PhoneShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:phone .
+
+<contactshapeRecordEndDate> a sh:PropertyShape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Record End Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:RecordEndDateTime .
+
+<contactshapeRecordStartDate> a sh:PropertyShape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Record Start Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:RecordStartDateTime .
 
 <contactshapeType> a sh:PropertyShape ;
     sh:hasValue ceterms:ContactPoint ;
@@ -1858,70 +1875,58 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:phoneNumberExtension .
 
-<postaladdressshapeAdditionalNote> a sh:PropertyShape ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
-
-<postaladdressshapeAddressLine> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+<postaladdressshapeAddressLocality%252Ce.g.City> a sh:PropertyShape ;
+    sh:datatype rdf:langString ;
+    sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "Address Line"@en-US ;
+    sh:name "Address Locality, e.g. City"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:addressLine .
+    sh:path ceterms:addressLocality .
+
+<postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Address Region, e.g State or Province Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceterms:addressRegion .
 
 <postaladdressshapeAttentionLine> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype rdf:langString ;
     sh:maxLength 45 ;
     sh:name "Attention Line"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:attentionLine .
 
-<postaladdressshapeCity> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "City"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:city .
-
 <postaladdressshapeCountryCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Country Code"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:countryCode .
-
-<postaladdressshapeEffectiveDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Effective Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:effeciveDate .
-
-<postaladdressshapeExpirationDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Expiration Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:expirationDate .
+    sh:path ceterms:addressCountry .
 
 <postaladdressshapePostalCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:name "Postal Code"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:postalCode .
+    sh:path ceterms:postalCode .
 
-<postaladdressshapeStateProvinceCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+<postaladdressshapeStreetAddress> a sh:PropertyShape ;
+    sh:datatype rdf:langString ;
+    sh:minCount 1 ;
+    sh:name "Street Address"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceterms:streetAddress .
+
+<postaladdressshapeType> a sh:PropertyShape ;
+    sh:hasValue ceterms:PostalAddress ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "State Province Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:stateProvinceCode .
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <programsummaryshapeAcademicHonors> a sh:PropertyShape ;
     sh:name "Academic Honors"@en-US ;
@@ -2115,14 +2120,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
 
-<studentshapeAge> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxInclusive 3 ;
-    sh:name "Age"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:age .
-
 <studentshapeAgencyAssignedID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -2167,14 +2164,14 @@
     sh:path pesc:birthStateProvinceCode .
 
 <studentshapeBirthYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
+    sh:datatype xsd:gYear ;
     sh:maxCount 1 ;
     sh:name "Birth Year"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:birthYear .
 
 <studentshapeBirthday> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
+    sh:datatype xsd:gMonthDay ;
     sh:maxCount 1 ;
     sh:name "Birthday"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -2380,14 +2377,17 @@
 <ContactShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Contact"@en ;
-    sh:property <contactshapeAddress>,
+    sh:property <contactshapeAdditionalNote>,
+        <contactshapeAddress>,
         <contactshapeContactType>,
         <contactshapeEmailAddress>,
         <contactshapeFAXPhone>,
         <contactshapePhone>,
+        <contactshapeRecordEndDate>,
+        <contactshapeRecordStartDate>,
         <contactshapeType>,
         <contactshapeURL> ;
-    sh:targetObjectsOf pesc:contact .
+    sh:targetObjectsOf ceterms:targetContactPoint .
 
 <GPAShape> a sh:NodeShape ;
     sh:closed false ;

@@ -1,6 +1,5 @@
 @prefix ceds: <http://ceds.ed.gov/owl#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
-@prefix elm:  <http://data.europa.eu/snb/model/elm/>.
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -51,33 +50,12 @@
             pesc:firstName "Testy"^^xsd:string ;
             pesc:lastName "Test"^^xsd:string ;
             pesc:nameCode pescNameCodes:Legal ] ;
-    ceds:hasPersonalIdentification [
-        a ceds:CanadianSINIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
-    ] , [
-        a ceds:SocialSecurityNumberIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
-    ] , [
-        a ceds:SchoolIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
-        pesc:identifierAssignedBy <https://example.edu/Source#id> ;
-    ];
     ceterms:targetContactPoint [
         a ceterms:ContactPoint ;
         ceterms:contactType "Home address"@en ;
         ceterms:address <https://example.org/address/001> ;
-        ceds:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        ceds:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
-        elm:additionalNote [
-            rdf:type elm:Note ;
-            elm:noteLiteral "A made up contact." ;
-        ] ;
     ] ;
-    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>;
-    elm:additionalNote [
-        rdf:type elm:Note ;
-        elm:noteLiteral "A made up test peson" ;
-    ].
+    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
         pesc:AcademicAward ;
@@ -90,10 +68,10 @@
     pesc:organizationName "Example Source"@en .
 
 <https://example.org/address/001> a ceterms:PostalAddress ;
-    pesc:attentionLine "M. Testy Test"@en ;
-    ceterms:streetAddress "42 No Street"@en ;
-    ceterms:addressLocality "Sunnydale"@en ;
-    ceterms:addressRegion "CA"^^xsd:token ;
-    ceterms:postalCode "90299"^^xsd:token ;
-    ceterms:addressCountry "US"^^xsd:token ;
+    pesc:attentionLine "M. Testy Test" ; # not a langString
+#    ceterms:streetAddress "42 No Street"@en ; missing mandatory
+    ceterms:addressLocality "Sunnydale" ; # wrong datatype
+    ceterms:addressRegion "CA" ; # wrong datatype
+    ceterms:postalCode "90299" ; # wrong datatype
+    ceterms:addressCountry "US" ; # wrong datatype
     .
