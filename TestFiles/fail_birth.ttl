@@ -1,6 +1,4 @@
 @prefix ceds: <http://ceds.ed.gov/owl#> .
-@prefix ceterms: <https://purl.org/ctdl/terms/> .
-@prefix elm:  <http://data.europa.eu/snb/model/elm/>.
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -10,7 +8,6 @@
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
-@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -52,41 +49,13 @@
             pesc:firstName "Testy"^^xsd:string ;
             pesc:lastName "Test"^^xsd:string ;
             pesc:nameCode pescNameCodes:Legal ] ;
-    ceds:hasPersonalIdentification [
-        a ceds:CanadianSINIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
-    ] , [
-        a ceds:SocialSecurityNumberIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
-    ] , [
-        a ceds:SchoolIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
-        pesc:identifierAssignedBy <https://example.edu/Source#id> ;
-    ];
-    ceterms:targetContactPoint [
-        a ceterms:ContactPoint ;
-        ceterms:contactType "Home address"@en ;
-        ceterms:address <https://example.org/address/001> ;
-        ceds:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        ceds:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
-        elm:additionalNote [
-            rdf:type elm:Note ;
-            elm:noteLiteral "A made up contact." ;
-        ] ;
-    ] ;
-    ceds:BirthDate "2000-01-01"^^xsd:date ;
-    pesc:birthday "01-01"^^xsd:gMonthDay ;
-    pesc:birthYear "2000"^^xsd:gYear ;
-    pesc:birthCity "Sunnydale"^^xsd:string ;
-    pesc:birthStateProvinceCode "CA" ;
-    pesc:birthCountry "US" ;
-    pesc:deceasedIndicator true ;
-    pesc:genderCode pescGenderCodes:Unreported ;
-    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>;
-    elm:additionalNote [
-        rdf:type elm:Note ;
-        elm:noteLiteral "A made up test peson" ;
-    ].
+    ceds:BirthDate "January 1 2000" ;
+    pesc:birthday "January 1" ;
+    pesc:birthYear "2000"^^xsd:date ;
+    pesc:birthCity <http://example.org/geo/Sunnydale> ;
+    pesc:birthStateProvinceCode <http://example.org/geo/CA> ;
+    pesc:birthCountry <http://example.org/geo/US> ;
+    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
         pesc:AcademicAward ;
@@ -98,11 +67,3 @@
 <https://example.edu/Source#id> a pesc:Organization ;
     pesc:organizationName "Example Source"@en .
 
-<https://example.org/address/001> a ceterms:PostalAddress ;
-    pesc:attentionLine "M. Testy Test"@en ;
-    ceterms:streetAddress "42 No Street"@en ;
-    ceterms:addressLocality "Sunnydale"@en ;
-    ceterms:addressRegion "CA"^^xsd:token ;
-    ceterms:postalCode "90299"^^xsd:token ;
-    ceterms:addressCountry "US"^^xsd:token ;
-    .
