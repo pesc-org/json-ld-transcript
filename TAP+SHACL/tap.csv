@@ -219,13 +219,15 @@ pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,Required,
-6,ContactShape,ceterms:contactType,Contact Type,FALSE,TRUE,Literal,xsd:string,1..80,lengthRange,,Optional,
-104,ContactShape,pesc:address,Address,FALSE,TRUE,IRI BNODE,,,,PostalAddressShape,Recommended,
+6,ContactShape,ceterms:contactType,Contact Type,FALSE,TRUE,Literal,rdf:langString,1..80,lengthRange,,Optional,
+104,ContactShape,ceterms:address,Address,FALSE,TRUE,IRI BNODE,,,,PostalAddressShape,Recommended,
 106,ContactShape,pesc:phone,Phone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,Optional,
 107,ContactShape,pesc:faxPhone,FAX Phone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,Optional,
 108,ContactShape,pesc:email,Email Address,FALSE,TRUE,Literal,xsd:string,,,,Optional,
 109,ContactShape,pesc:url,URL,FALSE,TRUE,Literal,xsd:anyURI,,,,Optional,
 289,ContactShape,rdf:type,Type,TRUE,FALSE,IRI,,ceterms:ContactPoint,,,,
+,ContactShape,ceds:RecordStartDateTime,Record Start Date,FALSE,FALSE,Literal,xsd:dateTime,,,,Optional,
+,ContactShape,ceds:RecordEndDateTime,Record End Date,FALSE,FALSE,Literal,xsd:dateTime,,,,Optional,
 317,CourseAchievementShape,pesc:courseDropDate,Course Drop Date,FALSE,FALSE,Literal,xsd:date,,,,,
 325,CourseAchievementShape,pesc:courseSupplementalGrade,Course Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,CourseSupplementalGradeShape,Required,
 388,CourseAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,Required,
@@ -527,17 +529,16 @@ pescSchoolLevels:Secondary",picklist,,Recommended,
 132,PhoneShape,pesc:phoneNumberExtension,Phone Number Extension,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Optional,
 124,PhoneShape,pesc:attentionLine,Attention Line,,,,,,,,,no attention line in Phone or FAXPhone
 130,PhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,Required,
-7,PostalAddressShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-119,PostalAddressShape,pesc:effeciveDate,Effective Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-120,PostalAddressShape,pesc:expirationDate,Expiration Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-123,PostalAddressShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,xsd:string,45,maxLength,,Optional,
-110,PostalAddressShape,pesc:addressLine,Address Line,TRUE,TRUE,Literal,xsd:string,,,,Required,pesc:core:CommonAddressDetailsGroup
-111,PostalAddressShape,pesc:city,City,TRUE,FALSE,Literal,xsd:string,,,,Required,pesc:core:CommonAddressDetailsGroup
-116,PostalAddressShape,pesc:countryCode,Country Code,TRUE,FALSE,Literal,xsd:string,,,,Required,pesc:core:InternationalAddressDetailsGroup
-115,PostalAddressShape,pesc:postalCode,Postal Code,FALSE,FALSE,Literal,xsd:string,,,,Required,"pesc:core:DomesticAddressDetailsGroup
+7,ContactShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
+123,ContactShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,rdf:langString,45,maxLength,,Optional,
+110,PostalAddressShape,ceterms:streetAddress,Street Address,TRUE,TRUE,Literal,rdf:langString,,,,Required,pesc:core:CommonAddressDetailsGroup
+111,PostalAddressShape,ceterms:addressLocality,"Address Locality, e.g. City",TRUE,FALSE,Literal,rdf:langString,,,,Required,pesc:core:CommonAddressDetailsGroup
+116,PostalAddressShape,ceterms:addressCountry,Country Code,TRUE,FALSE,Literal,xsd:token,,,,Required,pesc:core:InternationalAddressDetailsGroup
+115,PostalAddressShape,ceterms:postalCode,Postal Code,FALSE,FALSE,Literal,xsd:token,,,,Required,"pesc:core:DomesticAddressDetailsGroup
 pesc:core:InternationalAddressDetailsGroup"
-112,PostalAddressShape,pesc:stateProvinceCode,State Province Code,TRUE,FALSE,Literal,xsd:string,,,,Required,"pesc:core:DomesticAddressDetailsGroup
+112,PostalAddressShape,ceterms:addressRegion,"Address Region, e.g State or Province Code",TRUE,FALSE,Literal,xsd:token,,,,Required,"pesc:core:DomesticAddressDetailsGroup
 pesc:core:InternationalAddressDetailsGroup"
+,PostalAddressShape,rdf:type,Type,TRUE,FALSE,IRI,,ceterms:PostalAddress,,,,
 ,ProgramSummaryShape,pesc:inProgram,In Program,TRUE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
 228,ProgramSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
 252,ProgramSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,Literal,rdf:langString,,,,Not Recommended,
