@@ -54,6 +54,7 @@
         a ceterms:ContactPoint ;
         ceterms:contactType "Home address"@en ;
         ceterms:address <https://example.org/address/001> ;
+        pesc:attentionLine "M. Testy Test" ; # not a langString
     ] ;
     pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
@@ -68,7 +69,6 @@
     pesc:organizationName "Example Source"@en .
 
 <https://example.org/address/001> a ceterms:PostalAddress ;
-    pesc:attentionLine "M. Testy Test" ; # not a langString
 #    ceterms:streetAddress "42 No Street"@en ; missing mandatory
     ceterms:addressLocality "Sunnydale" ; # wrong datatype
     ceterms:addressRegion "CA" ; # wrong datatype

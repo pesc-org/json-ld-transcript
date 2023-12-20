@@ -3,55 +3,6 @@ Conforms: False
 Results (9):
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:contactshapeAddress
-	Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; rdf:type ceterms:ContactPoint ]
-	Value Node: <https://example.org/address/001>
-	Result Path: ceterms:address
-	Message: Value does not conform to Shape ex:PostalAddressShape. See details for more information.
-	Details:
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:postaladdressshapeAddressLocality%252Ce.g.City
-			Focus Node: <https://example.org/address/001>
-			Value Node: Literal("Sunnydale")
-			Result Path: ceterms:addressLocality
-			Message: Value is not Literal with datatype rdf:langString
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode
-			Focus Node: <https://example.org/address/001>
-			Value Node: Literal("CA")
-			Result Path: ceterms:addressRegion
-			Message: Value is not Literal with datatype xsd:token
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:postaladdressshapeAttentionLine
-			Focus Node: <https://example.org/address/001>
-			Value Node: Literal("M. Testy Test")
-			Result Path: pesc:attentionLine
-			Message: Value is not Literal with datatype rdf:langString
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:postaladdressshapeCountryCode
-			Focus Node: <https://example.org/address/001>
-			Value Node: Literal("US")
-			Result Path: ceterms:addressCountry
-			Message: Value is not Literal with datatype xsd:token
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:postaladdressshapePostalCode
-			Focus Node: <https://example.org/address/001>
-			Value Node: Literal("90299")
-			Result Path: ceterms:postalCode
-			Message: Value is not Literal with datatype xsd:token
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:postaladdressshapeStreetAddress
-			Focus Node: <https://example.org/address/001>
-			Result Path: ceterms:streetAddress
-			Message: Less than 1 values on <https://example.org/address/001>->ceterms:streetAddress
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeStudent
 	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001>
 	Value Node: <https://people.pjjk.net/test>
@@ -62,14 +13,14 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Severity: sh:Violation
 			Source Shape: ex:studentshapeContact
 			Focus Node: <https://people.pjjk.net/test>
-			Value Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; rdf:type ceterms:ContactPoint ]
+			Value Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; pesc:attentionLine Literal("M. Testy Test") ; rdf:type ceterms:ContactPoint ]
 			Result Path: ceterms:targetContactPoint
 			Message: Value does not conform to Shape ex:ContactShape. See details for more information.
 			Details:
 				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:contactshapeAddress
-					Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; rdf:type ceterms:ContactPoint ]
+					Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; pesc:attentionLine Literal("M. Testy Test") ; rdf:type ceterms:ContactPoint ]
 					Value Node: <https://example.org/address/001>
 					Result Path: ceterms:address
 					Message: Value does not conform to Shape ex:PostalAddressShape. See details for more information.
@@ -90,13 +41,6 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Message: Value is not Literal with datatype xsd:token
 						Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 							Severity: sh:Violation
-							Source Shape: ex:postaladdressshapeAttentionLine
-							Focus Node: <https://example.org/address/001>
-							Value Node: Literal("M. Testy Test")
-							Result Path: pesc:attentionLine
-							Message: Value is not Literal with datatype rdf:langString
-						Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-							Severity: sh:Violation
 							Source Shape: ex:postaladdressshapeCountryCode
 							Focus Node: <https://example.org/address/001>
 							Value Node: Literal("US")
@@ -115,6 +59,62 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Focus Node: <https://example.org/address/001>
 							Result Path: ceterms:streetAddress
 							Message: Less than 1 values on <https://example.org/address/001>->ceterms:streetAddress
+				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeAttentionLine
+					Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; pesc:attentionLine Literal("M. Testy Test") ; rdf:type ceterms:ContactPoint ]
+					Value Node: Literal("M. Testy Test")
+					Result Path: pesc:attentionLine
+					Message: Value is not Literal with datatype rdf:langString
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:contactshapeAddress
+	Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; pesc:attentionLine Literal("M. Testy Test") ; rdf:type ceterms:ContactPoint ]
+	Value Node: <https://example.org/address/001>
+	Result Path: ceterms:address
+	Message: Value does not conform to Shape ex:PostalAddressShape. See details for more information.
+	Details:
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:postaladdressshapeAddressLocality%252Ce.g.City
+			Focus Node: <https://example.org/address/001>
+			Value Node: Literal("Sunnydale")
+			Result Path: ceterms:addressLocality
+			Message: Value is not Literal with datatype rdf:langString
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode
+			Focus Node: <https://example.org/address/001>
+			Value Node: Literal("CA")
+			Result Path: ceterms:addressRegion
+			Message: Value is not Literal with datatype xsd:token
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:postaladdressshapeCountryCode
+			Focus Node: <https://example.org/address/001>
+			Value Node: Literal("US")
+			Result Path: ceterms:addressCountry
+			Message: Value is not Literal with datatype xsd:token
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:postaladdressshapePostalCode
+			Focus Node: <https://example.org/address/001>
+			Value Node: Literal("90299")
+			Result Path: ceterms:postalCode
+			Message: Value is not Literal with datatype xsd:token
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:postaladdressshapeStreetAddress
+			Focus Node: <https://example.org/address/001>
+			Result Path: ceterms:streetAddress
+			Message: Less than 1 values on <https://example.org/address/001>->ceterms:streetAddress
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:contactshapeAttentionLine
+	Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; pesc:attentionLine Literal("M. Testy Test") ; rdf:type ceterms:ContactPoint ]
+	Value Node: Literal("M. Testy Test")
+	Result Path: pesc:attentionLine
+	Message: Value is not Literal with datatype rdf:langString
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:postaladdressshapeAddressLocality%252Ce.g.City
@@ -129,13 +129,6 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("CA")
 	Result Path: ceterms:addressRegion
 	Message: Value is not Literal with datatype xsd:token
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:postaladdressshapeAttentionLine
-	Focus Node: <https://example.org/address/001>
-	Value Node: Literal("M. Testy Test")
-	Result Path: pesc:attentionLine
-	Message: Value is not Literal with datatype rdf:langString
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:postaladdressshapeCountryCode
@@ -160,14 +153,14 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 	Severity: sh:Violation
 	Source Shape: ex:studentshapeContact
 	Focus Node: <https://people.pjjk.net/test>
-	Value Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; rdf:type ceterms:ContactPoint ]
+	Value Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; pesc:attentionLine Literal("M. Testy Test") ; rdf:type ceterms:ContactPoint ]
 	Result Path: ceterms:targetContactPoint
 	Message: Value does not conform to Shape ex:ContactShape. See details for more information.
 	Details:
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:contactshapeAddress
-			Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; rdf:type ceterms:ContactPoint ]
+			Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; pesc:attentionLine Literal("M. Testy Test") ; rdf:type ceterms:ContactPoint ]
 			Value Node: <https://example.org/address/001>
 			Result Path: ceterms:address
 			Message: Value does not conform to Shape ex:PostalAddressShape. See details for more information.
@@ -188,13 +181,6 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Message: Value is not Literal with datatype xsd:token
 				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 					Severity: sh:Violation
-					Source Shape: ex:postaladdressshapeAttentionLine
-					Focus Node: <https://example.org/address/001>
-					Value Node: Literal("M. Testy Test")
-					Result Path: pesc:attentionLine
-					Message: Value is not Literal with datatype rdf:langString
-				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-					Severity: sh:Violation
 					Source Shape: ex:postaladdressshapeCountryCode
 					Focus Node: <https://example.org/address/001>
 					Value Node: Literal("US")
@@ -213,3 +199,10 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Focus Node: <https://example.org/address/001>
 					Result Path: ceterms:streetAddress
 					Message: Less than 1 values on <https://example.org/address/001>->ceterms:streetAddress
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:contactshapeAttentionLine
+			Focus Node: [ ceterms:address <https://example.org/address/001> ; ceterms:contactType Literal("Home address", lang=en) ; pesc:attentionLine Literal("M. Testy Test") ; rdf:type ceterms:ContactPoint ]
+			Value Node: Literal("M. Testy Test")
+			Result Path: pesc:attentionLine
+			Message: Value is not Literal with datatype rdf:langString

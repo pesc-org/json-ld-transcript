@@ -530,7 +530,7 @@ pescSchoolLevels:Secondary",picklist,,Recommended,
 124,PhoneShape,pesc:attentionLine,Attention Line,,,,,,,,,no attention line in Phone or FAXPhone
 130,PhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,Required,
 7,ContactShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-123,PostalAddressShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,rdf:langString,45,maxLength,,Optional,
+123,ContactShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,rdf:langString,45,maxLength,,Optional,
 110,PostalAddressShape,ceterms:streetAddress,Street Address,TRUE,TRUE,Literal,rdf:langString,,,,Required,pesc:core:CommonAddressDetailsGroup
 111,PostalAddressShape,ceterms:addressLocality,"Address Locality, e.g. City",TRUE,FALSE,Literal,rdf:langString,,,,Required,pesc:core:CommonAddressDetailsGroup
 116,PostalAddressShape,ceterms:addressCountry,Country Code,TRUE,FALSE,Literal,xsd:token,,,,Required,pesc:core:InternationalAddressDetailsGroup

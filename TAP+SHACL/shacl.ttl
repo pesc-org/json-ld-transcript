@@ -289,7 +289,6 @@
     sh:name "Postal Address"@en ;
     sh:property <postaladdressshapeAddressLocality%252Ce.g.City>,
         <postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode>,
-        <postaladdressshapeAttentionLine>,
         <postaladdressshapeCountryCode>,
         <postaladdressshapePostalCode>,
         <postaladdressshapeStreetAddress>,
@@ -975,6 +974,13 @@
     sh:node <PostalAddressShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceterms:address .
+
+<contactshapeAttentionLine> a sh:PropertyShape ;
+    sh:datatype rdf:langString ;
+    sh:maxLength 45 ;
+    sh:name "Attention Line"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:attentionLine .
 
 <contactshapeContactType> a sh:PropertyShape ;
     sh:datatype rdf:langString ;
@@ -1891,13 +1897,6 @@
     sh:nodeKind sh:Literal ;
     sh:path ceterms:addressRegion .
 
-<postaladdressshapeAttentionLine> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:maxLength 45 ;
-    sh:name "Attention Line"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:attentionLine .
-
 <postaladdressshapeCountryCode> a sh:PropertyShape ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
@@ -2379,6 +2378,7 @@
     sh:name "Contact"@en ;
     sh:property <contactshapeAdditionalNote>,
         <contactshapeAddress>,
+        <contactshapeAttentionLine>,
         <contactshapeContactType>,
         <contactshapeEmailAddress>,
         <contactshapeFAXPhone>,
