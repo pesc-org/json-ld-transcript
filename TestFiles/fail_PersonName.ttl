@@ -46,11 +46,16 @@
 
 <https://people.pjjk.net/test> a ceds:Person ;
     ceds:hasPersonName [ a ceds:PersonName ;
-            ceds:FirstName "Testy"^^xsd:token ;
-            ceds:LastOrSurname "Test"^^xsd:token ;
+            ceds:PersonalTitleOfPrefix "Dr" ;
+            ceds:FirstName "Testy"^^xsd:token ; 
+            ceds:FirstName "Testy"^^xsd:token ; # error, repeated
+            ceds:MiddleName "Example" ; # error wrong type
+            ceds:LastOrSurname "Test" ;
+            ceds:GenerationCodeOrSuffix 9 ; # error not in list
             ceds:nameCode pescNameCodes:Legal ] ;
-    pesc:deceasedIndicator "Yes" ;
-    pesc:genderCode "Unreported" ;
+    ceds:hasOtherPersonName [ a ceds:WrongClass ; #error wrong class
+            ceds:FirstName 12 ; 
+            ceds:LastOrSurname 12 ] ;
     pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,

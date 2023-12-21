@@ -45,10 +45,10 @@
     pesc:offeredBy <https://example.edu/Source#id> .
 
 <https://people.pjjk.net/test> a ceds:Person ;
-    ceds:hasPersonName [ a pesc:PersonalName ;
-            pesc:firstName "Testy"^^xsd:string ;
-            pesc:lastName "Test"^^xsd:string ;
-            pesc:nameCode pescNameCodes:Legal ] ;
+    ceds:hasPersonName [ a ceds:PersonName ;
+            ceds:FirstName "Testy"^^xsd:token ;
+            ceds:LastOrSurname "Test"^^xsd:token ;
+            ceds:nameCode pescNameCodes:Legal ] ;
     ceds:BirthDate "January 1 2000" ;
     pesc:birthday "January 1" ;
     pesc:birthYear "2000"^^xsd:date ;
