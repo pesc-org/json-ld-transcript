@@ -1778,7 +1778,7 @@
     sh:path pesc:compositeName .
 
 <personnameshapeFirstName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:maxLength 35 ;
     sh:name "First Name"@en-US ;
@@ -1786,7 +1786,7 @@
     sh:path ceds:FirstName .
 
 <personnameshapeLastName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:maxLength 35 ;
     sh:name "Last Name"@en-US ;
@@ -1794,7 +1794,7 @@
     sh:path ceds:LastOrSurname .
 
 <personnameshapeMiddleName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype xsd:token ;
     sh:maxLength 35 ;
     sh:name "Middle Name"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -1808,7 +1808,7 @@
     sh:path pesc:nameCode .
 
 <personnameshapeNamePrefix> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:maxLength 30 ;
     sh:name "Name Prefix"@en-US ;
@@ -1816,7 +1816,6 @@
     sh:path ceds:PersonalTitleOrPrefix .
 
 <personnameshapeNameSuffix> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
     sh:in ( "JR" "SR" "I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X" ) ;
     sh:maxCount 1 ;
     sh:name "Name Suffix"@en-US ;

@@ -471,11 +471,11 @@ pescNameCodes:Legal
 pescNameCodes:MedicalSchoolApplicationSource
 pescNameCodes:Nickname
 pescNameCodes:Other",picklist,,Recommended,
-165,PersonNameShape,ceds:PersonalTitleOrPrefix,Name Prefix,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
-167,PersonNameShape,ceds:FirstName,First Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
-169,PersonNameShape,ceds:MiddleName,Middle Name,FALSE,TRUE,Literal,xsd:string,35,maxLength,,Recommended,
-171,PersonNameShape,ceds:LastOrSurname,Last Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
-173,PersonNameShape,ceds:GenerationCodeOrSuffix,Name Suffix,FALSE,FALSE,Literal,xsd:string,"JR
+165,PersonNameShape,ceds:PersonalTitleOrPrefix,Name Prefix,FALSE,FALSE,Literal,xsd:token,30,maxLength,,Not Recommended,
+167,PersonNameShape,ceds:FirstName,First Name,FALSE,FALSE,Literal,xsd:token,35,maxLength,,Recommended,
+169,PersonNameShape,ceds:MiddleName,Middle Name,FALSE,TRUE,Literal,xsd:token,35,maxLength,,Recommended,
+171,PersonNameShape,ceds:LastOrSurname,Last Name,FALSE,FALSE,Literal,xsd:token,35,maxLength,,Recommended,
+173,PersonNameShape,ceds:GenerationCodeOrSuffix,Name Suffix,FALSE,FALSE,Literal,,"JR
 SR
 I
 II
