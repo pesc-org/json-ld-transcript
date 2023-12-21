@@ -462,7 +462,8 @@ pescLanguageUsageCodes:WrittenCommunication",picklist,,Optional,
 351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
 100,LocalOrganizationIDShape,pesc:localOrganizationIDCode,Local Organization ID Code,TRUE,FALSE,Literal,xsd:string,35,maxLength,,Required,
 102,LocalOrganizationIDShape,pesc:localOrganizationIDQualifier,Local Organization ID Qualifier,TRUE,FALSE,Literal,xsd:string,,,,Required,pesc:LocalOrganizationIDQualifierCategory
-164,NameShape,pesc:nameCode,Name Code,FALSE,FALSE,IRI,,"pescNameCodes:Casual
+,PersonNameShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:PersonName,,,,
+164,PersonNameShape,pesc:nameCode,Name Code,FALSE,FALSE,IRI,,"pescNameCodes:Casual
 pescNameCodes:Formal
 pescNameCodes:Former
 pescNameCodes:LawSchoolApplicationSource
@@ -470,11 +471,11 @@ pescNameCodes:Legal
 pescNameCodes:MedicalSchoolApplicationSource
 pescNameCodes:Nickname
 pescNameCodes:Other",picklist,,Recommended,
-165,NameShape,ceds:000212,Name Prefix,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
-167,NameShape,ceds:000115,First Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
-169,NameShape,ceds:000184,Middle Name,FALSE,TRUE,Literal,xsd:string,35,maxLength,,Recommended,
-171,NameShape,ceds:000172,Last Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
-173,NameShape,ceds:000121,Name Suffix,FALSE,FALSE,Literal,xsd:string,"JR
+165,PersonNameShape,ceds:PersonalTitleOrPrefix,Name Prefix,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
+167,PersonNameShape,ceds:FirstName,First Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+169,PersonNameShape,ceds:MiddleName,Middle Name,FALSE,TRUE,Literal,xsd:string,35,maxLength,,Recommended,
+171,PersonNameShape,ceds:LastOrSurname,Last Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+173,PersonNameShape,ceds:GenerationCodeOrSuffix,Name Suffix,FALSE,FALSE,Literal,xsd:string,"JR
 SR
 I
 II
@@ -486,8 +487,7 @@ VII
 VIII
 IX
 X",picklist,,Recommended,
-175,NameShape,pesc:nameTitle,Name Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
-177,NameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
+177,PersonNameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
 5,OrganizationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 27,OrganizationShape,pesc:opeID,OPE ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
 31,OrganizationShape,pesc:nchelpID,NCHELP ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
@@ -622,12 +622,12 @@ pescResidencyStatusCodes:Resident",picklist,,Optional,
 359,StudentShape,pesc:Immunizations,Immunizations,FALSE,TRUE,IRI BNODE,,,,ImmunizationsShape,Recommended,
 140,StudentShape,pesc:achievement,Achievement,TRUE,TRUE,IRI BNODE,,,,AcademicAchievementShape,Required,
 147,StudentShape,pesc:agencyAssignedID,Agency Assigned ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Required,
-163,StudentShape,ceds:hasOtherPersonName,Alternate Name,FALSE,TRUE,IRI BNODE,,,,NameShape,,
+163,StudentShape,ceds:hasOtherPersonName,Alternate Name,FALSE,TRUE,IRI BNODE,,,,PersonNameShape,,
 190,StudentShape,pesc:deceasedIndicator,Deceased Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Required,true/false
 180,StudentShape,pesc:genderCode,Gender Code,FALSE,FALSE,IRI,,"pescGenderCodes:Female
 pescGenderCodes:Male
 pescGenderCodes:Unreported",picklist,,Required,
-162,StudentShape,ceds:hasPersonName,Name,TRUE,FALSE,IRI BNODE,,,,NameShape,Required,
+162,StudentShape,ceds:hasPersonName,Name,TRUE,FALSE,IRI BNODE,,,,PersonNameShape,Required,
 ,TestScoreShape,pesc:inTest,In Test,TRUE,FALSE,IRI BNODE,,,,TestShape,,
 374,TestScoreShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,Required,
 ,TestScoreShape,pesc:subTestScore,Subtest Score,FALSE,FALSE,IRI BNODE,,,,TestScoreShape,,
