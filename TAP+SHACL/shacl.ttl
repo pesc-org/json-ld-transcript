@@ -1546,68 +1546,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:localOrganizationIDQualifier .
 
-<nameshapeCompositeName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 45 ;
-    sh:name "Composite Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:compositeName .
-
-<nameshapeFirstName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 35 ;
-    sh:name "First Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:000115 .
-
-<nameshapeLastName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 35 ;
-    sh:name "Last Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:000172 .
-
-<nameshapeMiddleName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 35 ;
-    sh:name "Middle Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:000184 .
-
-<nameshapeNameCode> a sh:PropertyShape ;
-    sh:in ( pescNameCodes:Casual pescNameCodes:Formal pescNameCodes:Former pescNameCodes:LawSchoolApplicationSource pescNameCodes:Legal pescNameCodes:MedicalSchoolApplicationSource pescNameCodes:Nickname pescNameCodes:Other ) ;
-    sh:maxCount 1 ;
-    sh:name "Name Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:nameCode .
-
-<nameshapeNamePrefix> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Name Prefix"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:000212 .
-
-<nameshapeNameSuffix> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:in ( "JR" "SR" "I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X" ) ;
-    sh:maxCount 1 ;
-    sh:name "Name Suffix"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:000121 .
-
-<nameshapeNameTitle> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Name Title"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:nameTitle .
-
 <noteshapeNoteliteral> a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:name "Note literal"@en-US ;
@@ -1826,6 +1764,66 @@
 
 <personidentificationshapeType> a sh:PropertyShape ;
     sh:in ( ceds:CanadianSINIdentification ceds:OtherIdentification ceds:PersonalIdentification ceds:PersonIdentifier ceds:SchoolIdentification ceds:SocialSecurityNumberIdentification ceds:StateIdentification ) ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<personnameshapeCompositeName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 45 ;
+    sh:name "Composite Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:compositeName .
+
+<personnameshapeFirstName> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
+    sh:maxCount 1 ;
+    sh:maxLength 35 ;
+    sh:name "First Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:FirstName .
+
+<personnameshapeLastName> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
+    sh:maxCount 1 ;
+    sh:maxLength 35 ;
+    sh:name "Last Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:LastOrSurname .
+
+<personnameshapeMiddleName> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
+    sh:maxLength 35 ;
+    sh:name "Middle Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:MiddleName .
+
+<personnameshapeNameCode> a sh:PropertyShape ;
+    sh:in ( pescNameCodes:Casual pescNameCodes:Formal pescNameCodes:Former pescNameCodes:LawSchoolApplicationSource pescNameCodes:Legal pescNameCodes:MedicalSchoolApplicationSource pescNameCodes:Nickname pescNameCodes:Other ) ;
+    sh:maxCount 1 ;
+    sh:name "Name Code"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:nameCode .
+
+<personnameshapeNamePrefix> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
+    sh:maxCount 1 ;
+    sh:maxLength 30 ;
+    sh:name "Name Prefix"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:PersonalTitleOrPrefix .
+
+<personnameshapeNameSuffix> a sh:PropertyShape ;
+    sh:in ( "JR" "SR" "I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X" ) ;
+    sh:maxCount 1 ;
+    sh:name "Name Suffix"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:GenerationCodeOrSuffix .
+
+<personnameshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:PersonName ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -2129,7 +2127,7 @@
 
 <studentshapeAlternateName> a sh:PropertyShape ;
     sh:name "Alternate Name"@en-US ;
-    sh:node <NameShape> ;
+    sh:node <PersonNameShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:hasOtherPersonName .
 
@@ -2217,7 +2215,7 @@
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Name"@en-US ;
-    sh:node <NameShape> ;
+    sh:node <PersonNameShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:hasPersonName .
 
@@ -2413,18 +2411,19 @@
         <languageshapeLanguageUsage> ;
     sh:targetClass pesc:Language .
 
-<NameShape> a sh:NodeShape ;
+<PersonNameShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Name"@en ;
-    sh:property <nameshapeCompositeName>,
-        <nameshapeFirstName>,
-        <nameshapeLastName>,
-        <nameshapeMiddleName>,
-        <nameshapeNameCode>,
-        <nameshapeNamePrefix>,
-        <nameshapeNameSuffix>,
-        <nameshapeNameTitle> ;
-    sh:targetClass pesc:Name .
+    sh:property <personnameshapeCompositeName>,
+        <personnameshapeFirstName>,
+        <personnameshapeLastName>,
+        <personnameshapeMiddleName>,
+        <personnameshapeNameCode>,
+        <personnameshapeNamePrefix>,
+        <personnameshapeNameSuffix>,
+        <personnameshapeType> ;
+    sh:targetObjectsOf <http://ceds.ed.gov/owl#hasPersonName
+ceds:hasOtherPersonName> .
 
 <PhoneShape> a sh:NodeShape ;
     sh:closed false ;

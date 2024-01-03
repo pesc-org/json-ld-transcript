@@ -48,10 +48,16 @@
     pesc:offeredBy <https://example.edu/Source#id> .
 
 <https://people.pjjk.net/test> a ceds:Person ;
-    ceds:hasPersonName [ a pesc:PersonalName ;
-            pesc:firstName "Testy"^^xsd:string ;
-            pesc:lastName "Test"^^xsd:string ;
-            pesc:nameCode pescNameCodes:Legal ] ;
+    ceds:hasPersonName [ a ceds:PersonName ;
+            ceds:PersonalTitleOfPrefix "Dr"^^xsd:token ;
+            ceds:FirstName "Testy"^^xsd:token ;
+            ceds:MiddleName "Example"^^xsd:token ;
+            ceds:LastOrSurname "Test"^^xsd:token ;
+            ceds:GenerationCodeOrSuffix "IX" ;
+            ceds:nameCode pescNameCodes:Legal ] ;
+    ceds:hasOtherPersonName [ a ceds:PersonName ;
+            ceds:FirstName "Testing"^^xsd:token ;
+            ceds:LastOrSurname "Testy"^^xsd:token ] ;
     ceds:hasPersonalIdentification [
         a ceds:CanadianSINIdentification ;
         ceds:PersonIdentifier "123456789"^^xsd:token ;
