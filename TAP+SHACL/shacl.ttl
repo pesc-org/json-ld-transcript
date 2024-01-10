@@ -2422,8 +2422,8 @@
         <personnameshapeNamePrefix>,
         <personnameshapeNameSuffix>,
         <personnameshapeType> ;
-    sh:targetObjectsOf <http://ceds.ed.gov/owl#hasPersonName
-ceds:hasOtherPersonName> .
+    sh:targetObjectsOf ceds:hasPersonName,
+ceds:hasOtherPersonName .
 
 <PhoneShape> a sh:NodeShape ;
     sh:closed false ;
