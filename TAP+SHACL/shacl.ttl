@@ -2369,7 +2369,8 @@
         <academicachievementshapeStudentLevel>,
         <academicachievementshapeType>,
         <academicachievementshapeVerifiedBy> ;
-    sh:targetObjectsOf pesc:hasPart .
+    sh:targetObjectsOf pesc:achievement,
+        pesc:hasPart .
 
 <ContactShape> a sh:NodeShape ;
     sh:closed false ;
@@ -2422,8 +2423,8 @@
         <personnameshapeNamePrefix>,
         <personnameshapeNameSuffix>,
         <personnameshapeType> ;
-    sh:targetObjectsOf ceds:hasPersonName,
-ceds:hasOtherPersonName .
+    sh:targetObjectsOf ceds:hasOtherPersonName,
+        ceds:hasPersonName .
 
 <PhoneShape> a sh:NodeShape ;
     sh:closed false ;
