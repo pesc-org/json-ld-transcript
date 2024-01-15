@@ -1,55 +1,190 @@
 {
   "@context": {
-    "@vocab": "https://pesc.org/terms/",
-    "@base": "http://example.edu/entities/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "ceds": "http://ceds.ed.gov/owl#",
-    "ceterms": "https://purl.org/ctdl/terms/",
-    "elm": "http://data.europa.eu/snb/model/elm/",
-    "pesc": "https://pesc.org/terms/",
-    "sdo": "https://schema.org/",
-    "pescAcademicSummaryLevels": "https://pesc.org/vocabs/AcademicSummaryLevels#",
-    "pescAcademicSummaryTypes": "https://pesc.org/vocabs/AcademicSummaryTypes#",
-    "pescAcademicProgramTypes": "https://pesc.org/vocabs/AcademicProgramTypes#",
-    "pescAcademicAwardLevels": "https://pesc.org/vocabs/AcademicAwardLevels#",
-    "pescAgencyCodes": "https://pesc.org/vocabs/AgencyCodes#",
-    "pescConditionsMetCodes": "https://pesc.org/vocabs/ConditionsMetCodes#",
-    "pescCourseApplicabilityCodes": "https://pesc.org/vocabs/CourseApplicabilityCodes#",
-    "pescCourseLevels": "https://pesc.org/vocabs/CourseLevels#",
-    "pescCreditBasis": "https://pesc.org/vocabs/CreditBasis#",
-    "pescCreditLevels": "https://pesc.org/vocabs/CreditLevels#",
-    "pescCreditUnits": "https://pesc.org/vocabs/CreditUnits#",
-    "pescDeliquencyCodes": "https://pesc.org/vocabs/DeliinquencyCodes#",
-    "pescDocumentCompleteCodes": "https://pesc.org/vocabs/DocumentCompleteCodes#",
-    "pescDocumentOfficialCodes": "https://pesc.org/vocabs/DocumentOfficialCodes#",
-    "pescDocumentProcessCodes": "https://pesc.org/vocabs/DocumentProcessCodes#",
-    "pescDocumentTypeCodes": "https://pesc.org/vocabs/DocumentTypeCodes#",
-    "pescGenderCodes": "https://pesc.org/vocabs/Gender#",
-    "pescGPAAplicabilityCodes": "https://pesc.org/vocabs/GPAAplicabilityCodes#",
-    "pescGradeStatusCodes": "https://pesc.org/vocabs/GradeStatusCodes#",
-    "pescHonorsLevels": "https://pesc.org/vocabs/HonorsLevels#",
-    "pescImmunizationStateCodes": "https://pesc.org/vocabs/ImmunizationStateCodes#",
-    "pescInstructionSiteCodes": "https://pesc.org/vocabs/InstructionSiteCodes#",
-    "pescLanguageProficiencyCodes": "https://pesc.org/vocabs/LanguageProficiencyCodes#",
-    "pescLanguageUsageCodes": "https://pesc.org/vocabs/LanguageUsageCodes#",
-    "pescNameCodes": "https://pesc.org/vocabs/NameCodes#",
-    "pescRepeatCodes": "https://pesc.org/vocabs/RepeatCodes#",
-    "pescResidencyStatusCodes": "https://pesc.org/vocabs/ResidencyStatusCodes#",
-    "pescSchoolLevels": "https://pesc.org/vocabs/SchoolLevels#",
-    "pescSchoolOverrideCodes": "https://pesc.org/vocabs/SchoolOverrideCodes#",
-    "pescSecondarySchoolCodes": "https://pesc.org/vocabs/SecondarySchoolCodes#",
-    "pescSessionTypes": "https://pesc.org/vocabs/SessionTypes#",
-    "pescStudentLevelCodes": "https://pesc.org/vocabs/SchoolLevelCodes#",
-    "pescSubjectCodes": "https://pesc.org/vocabs/SubjectCodes#",
-    "pescSupplementalGradeCodes": "https://pesc.org/vocabs/SupplementalGradeCodes#",
-    "pescTestScoreMethods": "https://pesc.org/vocabs/TestScoreMethods#",
-    "pescTransmissionTypes": "https://pesc.org/vocabs/TransmissionTypes#",
-    "Person": {
-      "@id": "ceds:Person"
+    "@vocab":"https://pesc.org/terms/",
+    "sh":"http://www.w3.org/ns/shacl#",
+    "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs":"http://www.w3.org/2000/01/rdf-schema#",
+    "xsd":"http://www.w3.org/2001/XMLSchema#",
+    "ex":"http://example.org/",
+    "ceds":"http://ceds.ed.gov/owl#",
+    "ceterms":"https://purl.org/ctdl/terms/",
+    "dc":"http://purl.org/dc/elements/1.1/",
+    "dct":"http://purl.org/dc/terms/",
+    "elm":"http://data.europa.eu/snb/model/elm/",
+    "foaf":"http://xmlns.com/foaf/0.1/",
+    "sdo":"https://schema.org/",
+    "skos":"http://www.w3.org/2004/02/skos/core#",
+    "pesc":"https://pesc.org/terms/",
+    "cred":"https://www.w3.org/2018/credentials#",
+    "pescAcademicSummaryLevels":"https://pesc.org/vocabs/AcademicSummaryLevels#",
+    "pescAcademicSummaryTypes":"https://pesc.org/vocabs/AcademicSummaryTypes#",
+    "pescAcademicProgramTypes":"https://pesc.org/vocabs/AcademicProgramTypes#",
+    "pescAcademicAwardLevels":"https://pesc.org/vocabs/AcademicAwardLevels#",
+    "pescAgencyCodes":"https://pesc.org/vocabs/AgencyCodes#",
+    "pescConditionsMetCodes":"https://pesc.org/vocabs/ConditionsMetCodes#",
+    "pescCourseApplicabilityCodes":"https://pesc.org/vocabs/CourseApplicabilityCodes#",
+    "pescCourseLevels":"https://pesc.org/vocabs/CourseLevels#",
+    "pescCreditBasis":"https://pesc.org/vocabs/CreditBasis#",
+    "pescCreditLevels":"https://pesc.org/vocabs/CreditLevels#",
+    "pescCreditUnits":"https://pesc.org/vocabs/CreditUnits#",
+    "pescDeliquencyCodes":"https://pesc.org/vocabs/DeliinquencyCodes#",
+    "pescDocumentCompleteCodes":"https://pesc.org/vocabs/DocumentCompleteCodes#",
+    "pescDocumentOfficialCodes":"https://pesc.org/vocabs/DocumentOfficialCodes#",
+    "pescDocumentProcessCodes":"https://pesc.org/vocabs/DocumentProcessCodes#",
+    "pescDocumentTypeCodes":"https://pesc.org/vocabs/DocumentTypeCodes#",
+    "pescGenderCodes":"https://pesc.org/vocabs/Gender#",
+    "pescGPAAplicabilityCodes":"https://pesc.org/vocabs/GPAAplicabilityCodes#",
+    "pescGradeStatusCodes":"https://pesc.org/vocabs/GradeStatusCodes#",
+    "pescHonorsLevels":"https://pesc.org/vocabs/HonorsLevels#",
+    "pescImmunizationStateCodes":"https://pesc.org/vocabs/ImmunizationStateCodes#",
+    "pescInstructionSiteCodes":"https://pesc.org/vocabs/InstructionSiteCodes#",
+    "pescLanguageProficiencyCodes":"https://pesc.org/vocabs/LanguageProficiencyCodes#",
+    "pescLanguageUsageCodes":"https://pesc.org/vocabs/LanguageUsageCodes#",
+    "pescRepeatCodes":"https://pesc.org/vocabs/RepeatCodes#",
+    "pescResidencyStatusCodes":"https://pesc.org/vocabs/ResidencyStatusCodes#",
+    "pescSchoolLevels":"https://pesc.org/vocabs/SchoolLevels#",
+    "pescSchoolOverrideCodes":"https://pesc.org/vocabs/SchoolOverrideCodes#",
+    "pescSecondarySchoolCodes":"https://pesc.org/vocabs/SecondarySchoolCodes#",
+    "pescSessionTypes":"https://pesc.org/vocabs/SessionTypes#",
+    "pescStudentLevelCodes":"https://pesc.org/vocabs/SchoolLevelCodes#",
+    "pescSubjectCodes":"https://pesc.org/vocabs/SubjectCodes#",
+    "pescSupplementalGradeCodes":"https://pesc.org/vocabs/SupplementalGradeCodes#",
+    "pescTestScoreMethods":"https://pesc.org/vocabs/TestScoreMethods#",
+    "pescTransmissionTypes":"https://pesc.org/vocabs/TransmissionTypes#",
+    "pescNameCodes":"https://pesc.org/vocabs/NameCodes#",
+
+
+    "AcademicAward":{
+      "@id": "pesc:AcademicAward"
+    },
+    "AcademicProgram":{
+      "@id": "pesc:AcademicProgram"
+    },
+    "AcademicDegreeRequirement":{
+      "@id": "pesc:AcademicDegreeRequirement"
+    },
+    "AcademicHonors":{
+      "@id": "pesc:AcademicHonors"
+    },
+    "AcademicRecord":{
+      "@id": "pesc:AcademicRecord"
+    },
+    "AcademicSession":{
+      "@id": "pesc:AcademicSession"
+    },
+    "AcademicSummary":{
+      "@id": "pesc:AcademicSummary"
+    },
+    "Accreditation":{
+      "@id": "pesc:Accreditation"
+    },
+    "AgencyIdentifier":{
+      "@id": "pesc:AgencyIdentifier"
+    },
+    "CollegeTranscript":{
+      "@id": "pesc:CollegeTranscript"
+    },
+    "Concept":{
+      "@id": "skos:Concept"
+    },
+    "CourseAchievement":{
+      "@id": "pesc:CourseAchievement"
+    },
+    "Course":{
+      "@id": "pesc:Course"
+    },
+    "CourseRepeatCode":{
+      "@id": "pesc:CourseRepeatCode"
+    },
+    "CourseSupplementalGrade":{
+      "@id": "pesc:CourseSupplementalGrade"
+    },
+    "FAXPhone":{
+      "@id": "pesc:FAXPhone"
+    },
+    "GPA":{
+      "@id": "pesc:GPA"
+    },
+    "Immunizations":{
+      "@id": "pesc:Immunizations"
+    },
+    "Language":{
+      "@id": "pesc:Language"
+    },
+    "LanguageOfInstruction":{
+      "@id": "pesc:LanguageOfInstruction"
+    },
+    "Licensure":{
+      "@id": "pesc:Licensure"
+    },
+    "LocalOrganizationID":{
+      "@id": "pesc:LocalOrganizationID"
+    },
+    "Organization":{
+      "@id": "pesc:Organization"
+    },
+    "Phone":{
+      "@id": "pesc:Phone"
+    },
+    "ProgramSummary":{
+      "@id": "pesc:ProgramSummary"
+    },
+    "Residency":{
+      "@id": "pesc:Residency"
+    },
+    "Tests":{
+      "@id": "pesc:Tests"
+    },
+    "TestScores":{
+      "@id": "pesc:TestScores"
+    },
+    "TBD":{
+      "@id": "pesc:TBD"
+    },
+    "RequirementAttributeProficiency":{
+      "@id": "pesc:RequirementAttributeProficiency"
+    },
+    "CanadianSINIdentification":{
+      "@id": "ceds:CanadianSINIdentification"
+    },
+    "OtherIdentification":{
+      "@id": "ceds:OtherIdentification"
+    },
+    "SchoolIdentification":{
+      "@id": "ceds:SchoolIdentification"
+    },
+    "SocialSecurityNumberIdentification":{
+      "@id": "ceds:SocialSecurityNumberIdentification"
+    },
+    "StateIdentification":{
+      "@id": "ceds:StateIdentification"
+    },
+    "AcademicAchievement":{
+      "@id": "pesc:AcademicAchievement"
     },
     "ContactPoint":{
       "@id": "ceterms:ContactPoint"
     },
+    "PersonName":{
+      "@id": "ceds:PersonName"
+    },
+    "PostalAddress":{
+      "@id": "ceterms:PostalAddress"
+    },
+    "Person":{
+      "@id": "ceds:Person"
+    },
+    "PersonalIdentification":{
+      "@id": "ceds:PersonalIdentification"
+    },
+    "PersonIdentifier":{
+      "@id": "ceds:PersonIdentifier"
+    },
+    "Note":{
+      "@id": "elm:Note"
+    },
+
+
     "Attribute": {
       "@id": "pesc:Attribute",
       "@type": "@id"
