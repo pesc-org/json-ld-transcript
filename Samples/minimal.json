@@ -22,7 +22,7 @@
         "achievement001"
       ],
       "hasPersonName": {
-        "@type": "PersonalName",
+        "@type": "PersonName",
         "nameCode": "pescNameCodes:Legal",
         "firstName": "Testy",
         "lastName": "Test"
