@@ -50,26 +50,6 @@
     "ContactPoint":{
       "@id": "ceterms:ContactPoint"
     },
-    "000115": {
-      "@id": "ceds:000115",
-      "@type": "xsd:string"
-    },
-    "000121": {
-      "@id": "ceds:000121",
-      "@type": "xsd:string"
-    },
-    "000172": {
-      "@id": "ceds:000172",
-      "@type": "xsd:string"
-    },
-    "000184": {
-      "@id": "ceds:000184",
-      "@type": "xsd:string"
-    },
-    "000212": {
-      "@id": "ceds:000212",
-      "@type": "xsd:string"
-    },
     "Attribute": {
       "@id": "pesc:Attribute",
       "@type": "@id"
@@ -77,6 +57,13 @@
     "BirthDate": {
       "@id": "ceds:BirthDate",
       "@type": "xsd:date"
+    },
+    "FirstName": {
+      "@id": "ceds:FirstName",
+      "@type": "xsd:token"
+    },
+    "GenerationCodeOrSuffix": {
+      "@id": "ceds:GenerationCodeOrSuffix"
     },
     "HonorsTitle": {
       "@id": "pesc:HonorsTitle",
@@ -86,13 +73,33 @@
       "@id": "pesc:Immunizations",
       "@type": "@id"
     },
+    "LastOrSurname": {
+      "@id": "ceds:LastOrSurname",
+      "@type": "xsd:token"
+    },
+    "MiddleName": {
+      "@id": "ceds:MiddleName",
+      "@type": "xsd:token"
+    },
     "PersonIdentifier": {
       "@id": "ceds:PersonIdentifier",
+      "@type": "xsd:token"
+    },
+    "PersonalTitleOrPrefix": {
+      "@id": "ceds:PersonalTitleOrPrefix",
       "@type": "xsd:token"
     },
     "Proficiency": {
       "@id": "pesc:Proficiency",
       "@type": "@id"
+    },
+    "RecordEndDateTime": {
+      "@id": "ceds:RecordEndDateTime",
+      "@type": "xsd:dateTime"
+    },
+    "RecordStartDateTime": {
+      "@id": "ceds:RecordStartDateTime",
+      "@type": "xsd:dateTime"
     },
     "Requirement": {
       "@id": "pesc:Requirement",
@@ -171,16 +178,20 @@
       "@type": "@id"
     },
     "address": {
-      "@id": "pesc:address",
+      "@id": "ceterms:address",
       "@type": "@id"
     },
-    "addressLine": {
-      "@id": "pesc:addressLine",
-      "@type": "xsd:string"
+    "addressCountry": {
+      "@id": "ceterms:addressCountry",
+      "@type": "xsd:token"
     },
-    "age": {
-      "@id": "pesc:age",
-      "@type": "xsd:string"
+    "addressLocality": {
+      "@id": "ceterms:addressLocality",
+      "@container": "@language"
+    },
+    "addressRegion": {
+      "@id": "ceterms:addressRegion",
+      "@type": "xsd:token"
     },
     "agencyAssignedID": {
       "@id": "pesc:agencyAssignedID",
@@ -227,11 +238,11 @@
     },
     "birthYear": {
       "@id": "pesc:birthYear",
-      "@type": "xsd:date"
+      "@type": "xsd:gYear"
     },
     "birthday": {
       "@id": "pesc:birthday",
-      "@type": "xsd:date"
+      "@type": "xsd:gMonthDay"
     },
     "ccdID": {
       "@id": "pesc:ccdID",
@@ -239,10 +250,6 @@
     },
     "ceebactID": {
       "@id": "pesc:ceebactID",
-      "@type": "xsd:string"
-    },
-    "city": {
-      "@id": "pesc:city",
       "@type": "xsd:string"
     },
     "classRank": {
@@ -273,10 +280,6 @@
       "@id": "pesc:cohortGraduationYear",
       "@type": "xsd:date"
     },
-    "compositeName": {
-      "@id": "pesc:compositeName",
-      "@type": "xsd:string"
-    },
     "conditionsMetCode": {
       "@id": "pesc:conditionsMetCode",
       "@type": "@id"
@@ -291,7 +294,7 @@
     },
     "contactType": {
       "@id": "ceterms:contactType",
-      "@type": "xsd:string"
+      "@container": "@language"
     },
     "country": {
       "@id": "pesc:country",
@@ -537,10 +540,6 @@
       "@id": "pesc:educationTestCode",
       "@type": "xsd:string"
     },
-    "effeciveDate": {
-      "@id": "pesc:effeciveDate",
-      "@type": "xsd:date"
-    },
     "email": {
       "@id": "pesc:email",
       "@type": "xsd:string"
@@ -717,10 +716,6 @@
       "@id": "pesc:nameCode",
       "@type": "@id"
     },
-    "nameTitle": {
-      "@id": "pesc:nameTitle",
-      "@type": "xsd:string"
-    },
     "nchelpID": {
       "@id": "pesc:nchelpID",
       "@type": "xsd:string"
@@ -761,8 +756,8 @@
       "@type": "xsd:string"
     },
     "postalCode": {
-      "@id": "pesc:postalCode",
-      "@type": "xsd:string"
+      "@id": "ceterms:postalCode",
+      "@type": "xsd:token"
     },
     "proficiency": {
       "@id": "pesc:proficiency",
@@ -899,6 +894,10 @@
     "stateProvinceCode": {
       "@id": "pesc:stateProvinceCode",
       "@type": "xsd:string"
+    },
+    "streetAddress": {
+      "@id": "ceterms:streetAddress",
+      "@container": "@language"
     },
     "student": {
       "@id": "pesc:student",
