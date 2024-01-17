@@ -225,7 +225,7 @@ pescTransmissionTypes:MutuallyDefined",picklist,,Required,
 107,ContactShape,pesc:faxPhone,FAX Phone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,Optional,
 108,ContactShape,pesc:email,Email Address,FALSE,TRUE,Literal,xsd:string,,,,Optional,
 109,ContactShape,pesc:url,URL,FALSE,TRUE,Literal,xsd:anyURI,,,,Optional,
-289,ContactShape,rdf:type,Type,TRUE,FALSE,IRI,,ceterms:ContactPoint,,,,
+289,ContactShape,rdf:type,Type,TRUE,TRUE,IRI,,ceterms:ContactPoint,,,,
 ,ContactShape,ceds:RecordStartDateTime,Record Start Date,FALSE,FALSE,Literal,xsd:dateTime,,,,Optional,
 ,ContactShape,ceds:RecordEndDateTime,Record End Date,FALSE,FALSE,Literal,xsd:dateTime,,,,Optional,
 317,CourseAchievementShape,pesc:courseDropDate,Course Drop Date,FALSE,FALSE,Literal,xsd:date,,,,,
@@ -522,13 +522,10 @@ pescSchoolLevels:Middle
 pescSchoolLevels:Other
 pescSchoolLevels:Postsecondary
 pescSchoolLevels:Secondary",picklist,,Recommended,
-8,PhoneShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-121,PhoneShape,pesc:expirationDate,Expiration Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+,PhoneShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Phone,,,,
 126,PhoneShape,pesc:countryPrefixCode,Country Prefix Code,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,
-128,PhoneShape,pesc:areaCityCode,Area City Code,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Recommended,
 132,PhoneShape,pesc:phoneNumberExtension,Phone Number Extension,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Optional,
-124,PhoneShape,pesc:attentionLine,Attention Line,,,,,,,,,no attention line in Phone or FAXPhone
-130,PhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,Required,
+130,PhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,Required,"Including the area code, no spaces or other delimiters."
 7,ContactShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 123,ContactShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,rdf:langString,45,maxLength,,Optional,
 110,PostalAddressShape,ceterms:streetAddress,Street Address,TRUE,TRUE,Literal,rdf:langString,,,,Required,pesc:core:CommonAddressDetailsGroup
