@@ -1,9 +1,9 @@
 prefix,URI,Note
+,https://pesc.org/terms/,default vocab
 sh,http://www.w3.org/ns/shacl#,SHACL
 rdf,http://www.w3.org/1999/02/22-rdf-syntax-ns#,RDF
 rdfs,http://www.w3.org/2000/01/rdf-schema#,RDF Schema
 xsd,http://www.w3.org/2001/XMLSchema#,XSD: use for data types
-,http://example.org/terms#,default
 ex,http://example.org/,example
 ceds,http://ceds.ed.gov/owl#,Common Education Data Standards
 ceterms,https://purl.org/ctdl/terms/,Credential Transparency Description Language
