@@ -140,11 +140,6 @@
     sh:name "Course Repeat Code"@en ;
     sh:targetClass pesc:CourseRepeatCode .
 
-<FAXPhoneShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "FAX Phone"@en ;
-    sh:targetClass pesc:FAXPhone .
-
 <LanguageOfInstructionShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Language Of Instruction"@en ;
@@ -1024,7 +1019,6 @@
 
 <contactshapeType> a sh:PropertyShape ;
     sh:hasValue ceterms:ContactPoint ;
-    sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -1829,24 +1823,6 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<phoneshapeAdditionalNote> a sh:PropertyShape ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
-
-<phoneshapeAreaCityCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 5 ;
-    sh:name "Area City Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:areaCityCode .
-
-<phoneshapeAttentionLine> a sh:PropertyShape ;
-    sh:name "Attention Line"@en-US ;
-    sh:path pesc:attentionLine .
-
 <phoneshapeCountryPrefixCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -1854,13 +1830,6 @@
     sh:name "Country Prefix Code"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:countryPrefixCode .
-
-<phoneshapeExpirationDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Expiration Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:expirationDate .
 
 <phoneshapePhoneNumber> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1878,6 +1847,13 @@
     sh:name "Phone Number Extension"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:phoneNumberExtension .
+
+<phoneshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Phone ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <postaladdressshapeAddressLocality%252Ce.g.City> a sh:PropertyShape ;
     sh:datatype rdf:langString ;
@@ -2429,14 +2405,12 @@
 <PhoneShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Phone"@en ;
-    sh:property <phoneshapeAdditionalNote>,
-        <phoneshapeAreaCityCode>,
-        <phoneshapeAttentionLine>,
-        <phoneshapeCountryPrefixCode>,
-        <phoneshapeExpirationDate>,
+    sh:property <phoneshapeCountryPrefixCode>,
         <phoneshapePhoneNumber>,
-        <phoneshapePhoneNumberExtension> ;
-    sh:targetClass pesc:Phone .
+        <phoneshapePhoneNumberExtension>,
+        <phoneshapeType> ;
+    sh:targetObjectsOf pesc:faxPhone,
+        pesc:phone .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     sh:closed false ;
@@ -2531,6 +2505,13 @@
     sh:targetClass pesc:AcademicProgram ;
     sh:targetObjectsOf pesc:_AcademicProgram .
 
+<NoteShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Note"@en ;
+    sh:property <noteshapeNoteliteral>,
+        <noteshapeType> ;
+    sh:targetObjectsOf elm:additionalNote .
+
 <RAPShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Requirement, Attribute or Proficiency"@en ;
@@ -2538,13 +2519,6 @@
         <rapshapeRAPName>,
         <rapshapeRAPSubName> ;
     sh:targetClass pesc:RequirementAttributeProficiency .
-
-<NoteShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Note"@en ;
-    sh:property <noteshapeNoteliteral>,
-        <noteshapeType> ;
-    sh:targetObjectsOf elm:additionalNote .
 
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;
