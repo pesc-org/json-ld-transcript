@@ -34,7 +34,6 @@
 @prefix pescRepeatCodes: <https://pesc.org/vocabs/RepeatCodes#> .
 @prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
 @prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
-@prefix pescSchoolOverrideCodes: <https://pesc.org/vocabs/SchoolOverrideCodes#> .
 @prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
@@ -145,12 +144,24 @@
     sh:name "Language Of Instruction"@en ;
     sh:targetClass pesc:LanguageOfInstruction .
 
+<OPEIDOrganizationIdentificationShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "OPE Identifier"@en ;
+    sh:property <opeidorganizationidentificationshapeType> ;
+    sh:targetClass pesc:OPEid .
+
 <OtherIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Other Identification"@en ;
     sh:property <otheridentificationshapeIdentifierAssignedBy>,
         <otheridentificationshapeOtherIdentifier> ;
     sh:targetClass ceds:OtherIdentification .
+
+<PSISOrganizationIdentificationShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "PSIS Identifier"@en ;
+    sh:property <psisorganizationidentificationshapeType> ;
+    sh:targetClass pesc:PSISid .
 
 <PersonIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
@@ -272,12 +283,13 @@
         <licensureshapeLicensurePassageDate> ;
     sh:targetClass pesc:Licensure .
 
-<LocalOrganizationIDShape> a sh:NodeShape ;
+<OrganizationIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Local Organization ID"@en ;
-    sh:property <localorganizationidshapeLocalOrganizationIDCode>,
-        <localorganizationidshapeLocalOrganizationIDQualifier> ;
-    sh:targetClass pesc:LocalOrganizationID .
+    sh:description "Normally type will be a subclass of ceds:OrganizationIdentification"@en ;
+    sh:name "Organization Identification"@en ;
+    sh:property <organizationidentificationshapeOrganizationIdentification>,
+        <organizationidentificationshapeType> ;
+    sh:targetObjectsOf ceds:hasOrganizationIdentification .
 
 <PostalAddressShape> a sh:NodeShape ;
     sh:closed false ;
@@ -1523,23 +1535,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:licensurePassageDate .
 
-<localorganizationidshapeLocalOrganizationIDCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 35 ;
-    sh:minCount 1 ;
-    sh:name "Local Organization ID Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:localOrganizationIDCode .
-
-<localorganizationidshapeLocalOrganizationIDQualifier> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Local Organization ID Qualifier"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:localOrganizationIDQualifier .
-
 <noteshapeNoteliteral> a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:name "Note literal"@en-US ;
@@ -1553,23 +1548,27 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<organizationshapeACTID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:minLength 4 ;
-    sh:name "ACT ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:actID .
+<opeidorganizationidentificationshapeType> a sh:PropertyShape ;
+    sh:in ( ceds:OrganizationIdentification_Other pesc:OPEid ) ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
-<organizationshapeATPID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+<organizationidentificationshapeOrganizationIdentification> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
     sh:maxCount 1 ;
-    sh:maxLength 6 ;
-    sh:minLength 6 ;
-    sh:name "ATP ID"@en-US ;
+    sh:minCount 1 ;
+    sh:name "Organization Identification"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:atpID .
+    sh:path ceds:OrganizationIdentifier .
+
+<organizationidentificationshapeType> a sh:PropertyShape ;
+    sh:in ( ceds:OrganizationIdentification ceds:OrganizationIdentification_Other pesc:OPEid pesc:PSISid ) ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <organizationshapeAdditionalNote> a sh:PropertyShape ;
     sh:name "Additional Note"@en-US ;
@@ -1577,132 +1576,24 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
 
-<organizationshapeCCDID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 12 ;
-    sh:minLength 12 ;
-    sh:name "CCD ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:ccdID .
-
-<organizationshapeCEEBACTID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 6 ;
-    sh:minLength 6 ;
-    sh:name "CEEBACT ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:ceebactID .
-
-<organizationshapeCSISID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 6 ;
-    sh:minLength 6 ;
-    sh:name "CSIS ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:csisID .
-
 <organizationshapeContact> a sh:PropertyShape ;
     sh:name "Contact"@en-US ;
     sh:node <ContactShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:contact .
 
-<organizationshapeDUNSID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 9 ;
-    sh:minLength 9 ;
-    sh:name "DUNS ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:dunsID .
-
-<organizationshapeESISID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 8 ;
-    sh:minLength 8 ;
-    sh:name "ESIS ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:esisID .
-
-<organizationshapeFICEID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 6 ;
-    sh:minLength 6 ;
-    sh:name "FICE ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:ficeID .
-
-<organizationshapeIPEDSID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 6 ;
-    sh:minLength 6 ;
-    sh:name "IPEDS ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:ipedsID .
-
-<organizationshapeLocalOrganizationID> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "Local Organization ID"@en-US ;
-    sh:node <LocalOrganizationIDShape> ;
+<organizationshapeHasOrganizationIdentification> a sh:PropertyShape ;
+    sh:name "Has Organization Identification"@en-US ;
+    sh:node <OrganizationIdentificationShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:localOrganizationID .
-
-<organizationshapeMutuallyDefinedID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 60 ;
-    sh:name "Mutually Defined ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:mutuallyDefinedID .
-
-<organizationshapeNCHELPID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 8 ;
-    sh:minLength 3 ;
-    sh:name "NCHELP ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:nchelpID .
-
-<organizationshapeOPEID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 8 ;
-    sh:minLength 3 ;
-    sh:name "OPE ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:opeID .
+    sh:path ceds:hasOrganizationIdentification .
 
 <organizationshapeOrganizationName> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
+    sh:datatype xsd:token ;
     sh:maxLength 60 ;
     sh:name "Organization Name"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:organizationName .
-
-<organizationshapePSISID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 8 ;
-    sh:minLength 8 ;
-    sh:name "PSIS ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:psisID .
-
-<organizationshapePSSID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 8 ;
-    sh:minLength 8 ;
-    sh:name "PSS ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:pssID .
+    sh:path ceds:NameOfInstitution .
 
 <organizationshapeSchoolLevel> a sh:PropertyShape ;
     sh:in ( pescSchoolLevels:Elementary pescSchoolLevels:HighSchool pescSchoolLevels:JuniorHigh pescSchoolLevels:Middle pescSchoolLevels:Other pescSchoolLevels:Postsecondary pescSchoolLevels:Secondary ) ;
@@ -1711,21 +1602,12 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:schoolLevel .
 
-<organizationshapeSchoolOverrideCode> a sh:PropertyShape ;
-    sh:in ( pescSchoolOverrideCodes:Institutional pescSchoolOverrideCodes:Multicampus pescSchoolOverrideCodes:Transfer pescSchoolOverrideCodes:StudyAbroad pescSchoolOverrideCodes:Coop pescSchoolOverrideCodes:Reciprocal pescSchoolOverrideCodes:Internship ) ;
-    sh:maxCount 1 ;
-    sh:name "School Override Code"@en-US ;
+<organizationshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:Organization ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
-    sh:path pesc:schoolOverrideCode .
-
-<organizationshapeUSISID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 6 ;
-    sh:minLength 6 ;
-    sh:name "USIS ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:usisID .
+    sh:path rdf:type .
 
 <organizationshape__Accreditation> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -1970,6 +1852,13 @@
     sh:node <AcademicProgramShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:inProgram .
+
+<psisorganizationidentificationshapeType> a sh:PropertyShape ;
+    sh:in ( ceds:OrganizationIdentification_Other pesc:PSISid ) ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <rapshapeRAPCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -2523,27 +2412,12 @@
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Organization"@en ;
-    sh:property <organizationshapeACTID>,
-        <organizationshapeATPID>,
-        <organizationshapeAdditionalNote>,
-        <organizationshapeCCDID>,
-        <organizationshapeCEEBACTID>,
-        <organizationshapeCSISID>,
+    sh:property <organizationshapeAdditionalNote>,
         <organizationshapeContact>,
-        <organizationshapeDUNSID>,
-        <organizationshapeESISID>,
-        <organizationshapeFICEID>,
-        <organizationshapeIPEDSID>,
-        <organizationshapeLocalOrganizationID>,
-        <organizationshapeMutuallyDefinedID>,
-        <organizationshapeNCHELPID>,
-        <organizationshapeOPEID>,
+        <organizationshapeHasOrganizationIdentification>,
         <organizationshapeOrganizationName>,
-        <organizationshapePSISID>,
-        <organizationshapePSSID>,
         <organizationshapeSchoolLevel>,
-        <organizationshapeSchoolOverrideCode>,
-        <organizationshapeUSISID>,
+        <organizationshapeType>,
         <organizationshape__Accreditation> ;
     sh:targetClass pesc:Organization .
 
