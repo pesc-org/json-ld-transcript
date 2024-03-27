@@ -37,8 +37,8 @@
     pesc:courseTitle "Example Course"^^xsd:string ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://example.edu/Desintation#id> a pesc:Organization ;
-    pesc:organizationName "Example Destination"@en .
+<https://example.edu/Desintation#id> a ceds:Organization ;
+    ceds:NameOfInstitution "Example Destination"^^xsd:token .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
@@ -65,8 +65,8 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a pesc:Organization ;
-    pesc:organizationName "Example Source"@en .
+<https://example.edu/Source#id> a ceds:Organization ;
+    ceds:NameOfInstitution "Example Source"^^xsd:token .
 
 <https://example.org/address/001> a ceterms:PostalAddress ;
 #    ceterms:streetAddress "42 No Street"@en ; missing mandatory

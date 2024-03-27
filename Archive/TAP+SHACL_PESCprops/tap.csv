@@ -48,7 +48,7 @@ pescDocumentCompleteCodes:Complete",picklist,,Required,
 79,OrganizationShape,pesc:dunsID,DUNS ID,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,"Used ""DUNS ID"" instead of just ""DUNS"""
 83,OrganizationShape,pesc:mutuallyDefinedID,Mutually Defined ID,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,"Used ""Mutually Defined ID"" instead of just ""Mutually Defined"""
 87,OrganizationShape,pesc:localOrganizationID,Local Organization ID,FALSE,FALSE,IRI BNODE,,,,LocalOrganizationIDShape,Optional,
-91,OrganizationShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
+91,OrganizationShape,ceds:NameOfInstitution,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
 95,OrganizationShape,pesc:contact,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
 99,OrganizationShape,pesc:accreditation,__ Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,Recommended,
 219,OrganizationShape,pesc:schoolOverrideCode,School Override Code,FALSE,FALSE,IRI,,"pescSchoolOverrideCodes:Institutional
@@ -112,7 +112,7 @@ pesc:core:InternationalAddressDetailsGroup"
 80,StudentShape,pesc:dunsID,DUNS ID,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,"Used ""DUNS ID"" instead of just ""DUNS"""
 84,StudentShape,pesc:mutuallyDefinedID,Mutually Defined ID,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,"Used ""Mutually Defined ID"" instead of just ""Mutually Defined"""
 88,StudentShape,pesc:localOrganizationID,Local Organization ID,FALSE,FALSE,IRI BNODE,,,,LocalOrganizationIDShape,Optional,
-92,StudentShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
+92,StudentShape,ceds:NameOfInstitution,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
 96,StudentShape,pesc:contact,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
 140,StudentShape,pesc:achievement,Achievement,TRUE,TRUE,IRI BNODE,,,,AcademicAchievementShape,Required,
 144,StudentShape,pesc:schoolAssignedPersonID,School Assigned Person ID,FALSE,FALSE,Literal,xsd:string,20,maxLength,,Recommended,

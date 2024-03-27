@@ -867,7 +867,7 @@
       "@type": "xsd:string"
     },
     "organizationName": {
-      "@id": "pesc:organizationName",
+      "@id": "ceds:NameOfInstitution",
       "@container": "@language"
     },
     "originalCourseID": {

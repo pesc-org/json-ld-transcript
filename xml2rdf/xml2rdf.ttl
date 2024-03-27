@@ -117,7 +117,7 @@
     ]
   ] ;  
   rr:predicateObjectMap [
-    rr:predicate pesc:organizationName;
+    rr:predicate ceds:NameOfInstitution;
     rr:objectMap [
         rml:reference "OrganizationName";
         rr:language "en" 

@@ -1660,7 +1660,7 @@
     sh:maxLength 60 ;
     sh:name "Organization Name"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:organizationName .
+    sh:path ceds:NameOfInstitution .
 
 <organizationshapePSISID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -2231,7 +2231,7 @@
     sh:maxLength 60 ;
     sh:name "Organization Name"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:organizationName .
+    sh:path ceds:NameOfInstitution .
 
 <studentshapePSISID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
