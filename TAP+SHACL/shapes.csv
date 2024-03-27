@@ -46,6 +46,6 @@ SchoolIdentificationShape,School Identification,,ceds:SchoolIdentification,class
 SocialSecurityNumberIdentificationShape,Social Security Number,,ceds:SocialSecurityNumberIdentification,class,,,,
 StateIdentificationShape,State-assigned Number,,ceds:StateIdentification,class,,,,
 NoteShape,Note,,elm:additionalNote,objectsof,,,,
-OrganizationIdentificationShape,Organization Identification,Normally type will be a subclass of ceds:OrganizationIdentification,ceds:hasOrganizationIdentification,objectsof,FALSE,,,
+OrganizationIdentificationShape,Organization Identification,Normally type will be a subclass of ceds:OrganizationIdentification,ceds:hasOrganizationIdentification,objectsof,FALSE,,Info,
 PSISOrganizationIdentificationShape,PSIS Identifier,,pesc:PSISid,class,,,,
 OPEIDOrganizationIdentificationShape,OPE Identifier,,pesc:OPEid,class,,,,
