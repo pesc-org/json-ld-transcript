@@ -460,8 +460,6 @@ pescLanguageUsageCodes:Writing
 pescLanguageUsageCodes:WrittenCommunication",picklist,,Optional,
 350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
-100,LocalOrganizationIDShape,pesc:localOrganizationIDCode,Local Organization ID Code,TRUE,FALSE,Literal,xsd:string,35,maxLength,,Required,
-102,LocalOrganizationIDShape,pesc:localOrganizationIDQualifier,Local Organization ID Qualifier,TRUE,FALSE,Literal,xsd:string,,,,Required,pesc:LocalOrganizationIDQualifierCategory
 ,PersonNameShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:PersonName,,,,
 164,PersonNameShape,pesc:nameCode,Name Code,FALSE,FALSE,IRI,,"pescNameCodes:Casual
 pescNameCodes:Formal
@@ -489,32 +487,11 @@ IX
 X",picklist,,Recommended,
 177,PersonNameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
 5,OrganizationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-27,OrganizationShape,pesc:opeID,OPE ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
-31,OrganizationShape,pesc:nchelpID,NCHELP ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
-35,OrganizationShape,pesc:ipedsID,IPEDS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""IPEDS ID"" instead of just ""IPEDS"""
-39,OrganizationShape,pesc:atpID,ATP ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""ATP ID"" instead of just ""ATP"""
-43,OrganizationShape,pesc:ficeID,FICE ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""FICE ID"" instead of just ""FICE"""
-47,OrganizationShape,pesc:actID,ACT ID,FALSE,FALSE,Literal,xsd:string,4..4,lengthRange,,Recommended,"Used ""ACT ID"" instead of just ""ACT"""
-51,OrganizationShape,pesc:ccdID,CCD ID,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,"Used ""CCD ID"" instead of just ""CCD"""
-55,OrganizationShape,pesc:pssID,PSS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""PSS ID"" instead of just ""PSS"""
-59,OrganizationShape,pesc:ceebactID,CEEBACT ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CEEBACT ID"" instead of just ""CEEBACT"""
-63,OrganizationShape,pesc:csisID,CSIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CSIS ID"" instead of just ""CSIS"""
-67,OrganizationShape,pesc:usisID,USIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""USIS ID"" instead of just ""USIS"""
-71,OrganizationShape,pesc:esisID,ESIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""ESIS ID"" instead of just ""ESIS"""
-75,OrganizationShape,pesc:psisID,PSIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Optional,"Used ""PSIS ID"" instead of just ""PSIS"""
-79,OrganizationShape,pesc:dunsID,DUNS ID,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,"Used ""DUNS ID"" instead of just ""DUNS"""
-83,OrganizationShape,pesc:mutuallyDefinedID,Mutually Defined ID,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,"Used ""Mutually Defined ID"" instead of just ""Mutually Defined"""
-87,OrganizationShape,pesc:localOrganizationID,Local Organization ID,FALSE,FALSE,IRI BNODE,,,,LocalOrganizationIDShape,Optional,
-91,OrganizationShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
+91,OrganizationShape,ceds:NameOfInstitution,Organization Name,FALSE,TRUE,Literal,xsd:token,60,maxLength,,Recommended,
 95,OrganizationShape,pesc:contact,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
 99,OrganizationShape,pesc:accreditation,__ Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,Recommended,
-219,OrganizationShape,pesc:schoolOverrideCode,School Override Code,FALSE,FALSE,IRI,,"pescSchoolOverrideCodes:Institutional
-pescSchoolOverrideCodes:Multicampus
-pescSchoolOverrideCodes:Transfer
-pescSchoolOverrideCodes:StudyAbroad
-pescSchoolOverrideCodes:Coop
-pescSchoolOverrideCodes:Reciprocal
-pescSchoolOverrideCodes:Internship",picklist,,Recommended,
+,OrganizationShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:Organization,,,,
+,OrganizationShape,ceds:hasOrganizationIdentification,Has Organization Identification,FALSE,TRUE,IRI BNODE,,,,OrganizationIdentificationShape,,
 220,OrganizationShape,pesc:schoolLevel,School Level,FALSE,FALSE,IRI,,"pescSchoolLevels:Elementary
 pescSchoolLevels:HighSchool
 pescSchoolLevels:JuniorHigh
@@ -670,3 +647,12 @@ ceds:StateIdentification",picklist,,,
 ,OtherIdentificationShape,pesc:identifierAssignedBy,Identifier Assigned By,TRUE,TRUE,IRI BNODE,,,,OrganizationShape,,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
+,OrganizationIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:OrganizationIdentification
+ceds:OrganizationIdentification_Other
+pesc:OPEid
+pesc:PSISid",picklist,,,
+,OrganizationIdentificationShape,ceds:OrganizationIdentifier,Organization Identification,TRUE,FALSE,Literal,xsd:token,,,,,
+,PSISOrganizationIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:OrganizationIdentification_Other 
+pesc:PSISid",,,,
+,OPEIDOrganizationIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:OrganizationIdentification_Other 
+pesc:OPEid",,,,

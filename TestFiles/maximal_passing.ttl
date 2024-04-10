@@ -1,6 +1,7 @@
 @prefix ceds: <http://ceds.ed.gov/owl#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix elm:  <http://data.europa.eu/snb/model/elm/>.
+@prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -8,6 +9,7 @@
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
@@ -39,8 +41,8 @@
     pesc:courseTitle "Example Course"^^xsd:string ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://example.edu/Desintation#id> a pesc:Organization ;
-    pesc:organizationName "Example Destination"@en .
+<https://example.edu/Desintation#id> a ceds:Organization ;
+    ceds:NameOfInstitution "Example Destination"^^xsd:token .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
@@ -117,15 +119,35 @@
         elm:noteLiteral "A made up test peson" ;
     ].
 
-<file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
-        pesc:AcademicAward ;
+<file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> 
+    a pesc:AcademicAchievement, pesc:AcademicAward ;
     pesc:academicAwardDate "1985-05-01"^^xsd:date ;
     pesc:academicAwardTitle "Example Award"^^xsd:string ;
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a pesc:Organization ;
-    pesc:organizationName "Example Source"@en .
+<https://example.edu/Source#id> a ceds:Organization ;
+    ceds:NameOfInstitution "Example Source"^^xsd:token ;
+    ceds:hasOrganizationIdentification [
+        a pesc:OPEid, ceds:OrganizationIdentification_Other ;
+        ceds:OrganizationIdentifier "00-0000000"^^xsd:token
+    ] , [
+        a ceds:OrganizationIdentification_Other,  pesc:PSISid;
+        ceds:OrganizationIdentifier "example001"^^xsd:token
+    ] ;
+    pesc:schoolLevel pescSchoolLevels:Postsecondary ;
+    ceterms:targetContactPoint [
+        a ceterms:ContactPoint ;
+        ceterms:contactType "Registrar"@en ;
+        pesc:attentionLine "Ask for Rick"@en ;
+        pesc:phone [
+            a pesc:Phone ;
+            pesc:countryPrefixCode  "422" ;
+            pesc:phoneNumber  "5551234567" ;
+            pesc:phoneNumberExtension "123" ;
+        ]
+    ]
+    .
 
 <https://example.org/address/001> a ceterms:PostalAddress ;
     ceterms:streetAddress "42 No Street"@en ;
