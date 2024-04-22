@@ -26,7 +26,6 @@
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
-@prefix pescImmunizationStateCodes: <https://pesc.org/vocabs/ImmunizationStateCodes#> .
 @prefix pescInstructionSiteCodes: <https://pesc.org/vocabs/InstructionSiteCodes#> .
 @prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
 @prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
@@ -268,14 +267,6 @@
         <coursesupplementalgradeshapeSupplementalGradeSubSession> ;
     sh:targetClass pesc:CourseSupplementalGrade .
 
-<ImmunizationsShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Immunizations"@en ;
-    sh:property <immunizationsshapeImmunizationCode>,
-        <immunizationsshapeImmunizationDate>,
-        <immunizationsshapeImmunizationStatusCode> ;
-    sh:targetClass pesc:Immunizations .
-
 <LicensureShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Licensure"@en ;
@@ -319,7 +310,6 @@
         <studentshapeDeceasedIndicator>,
         <studentshapeGenderCode>,
         <studentshapeHasPersonalIdentification>,
-        <studentshapeImmunizations>,
         <studentshapeLanguage>,
         <studentshapeName>,
         <studentshapeOrganizationName>,
@@ -1479,28 +1469,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:totalQualityPoints .
 
-<immunizationsshapeImmunizationCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:name "Immunization Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:immunizationCode .
-
-<immunizationsshapeImmunizationDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Immunization Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:immunizationDate .
-
-<immunizationsshapeImmunizationStatusCode> a sh:PropertyShape ;
-    sh:in ( pescImmunizationStateCodes:FirstInnoculation pescImmunizationStateCodes:SecondInnoculation pescImmunizationStateCodes:ThirdInnoculation pescImmunizationStateCodes:FourthInnoculation pescImmunizationStateCodes:FifthInnoculation pescImmunizationStateCodes:SixthInnoculation pescImmunizationStateCodes:SeventhInnoculation pescImmunizationStateCodes:EighthInnoculation pescImmunizationStateCodes:NinthInnoculation pescImmunizationStateCodes:HadTheDisease pescImmunizationStateCodes:MedicalExemption pescImmunizationStateCodes:PersonalExemption pescImmunizationStateCodes:ReligiousExemption ) ;
-    sh:maxCount 1 ;
-    sh:name "Immunization Status Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:immunizationStateCode .
-
 <languageshapeLanguageCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -1589,7 +1557,6 @@
     sh:path ceds:hasOrganizationIdentification .
 
 <organizationshapeOrganizationName> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
     sh:maxLength 60 ;
     sh:name "Organization Name"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -2063,12 +2030,6 @@
     sh:name "hasPersonalIdentification"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:hasPersonalIdentification .
-
-<studentshapeImmunizations> a sh:PropertyShape ;
-    sh:name "Immunizations"@en-US ;
-    sh:node <ImmunizationsShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Immunizations .
 
 <studentshapeLanguage> a sh:PropertyShape ;
     sh:name "Language"@en-US ;
