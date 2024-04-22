@@ -424,21 +424,6 @@ pescCreditUnits:Other",picklist,,,
 274,GPAShape,pesc:creditHoursGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-360,ImmunizationsShape,pesc:immunizationDate,Immunization Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
-361,ImmunizationsShape,pesc:immunizationCode,Immunization Code,FALSE,FALSE,Literal,xsd:string,20,maxLength,,Recommended,
-362,ImmunizationsShape,pesc:immunizationStateCode,Immunization Status Code,FALSE,FALSE,IRI,,"pescImmunizationStateCodes:FirstInnoculation
-pescImmunizationStateCodes:SecondInnoculation
-pescImmunizationStateCodes:ThirdInnoculation
-pescImmunizationStateCodes:FourthInnoculation
-pescImmunizationStateCodes:FifthInnoculation
-pescImmunizationStateCodes:SixthInnoculation
-pescImmunizationStateCodes:SeventhInnoculation
-pescImmunizationStateCodes:EighthInnoculation
-pescImmunizationStateCodes:NinthInnoculation
-pescImmunizationStateCodes:HadTheDisease
-pescImmunizationStateCodes:MedicalExemption
-pescImmunizationStateCodes:PersonalExemption
-pescImmunizationStateCodes:ReligiousExemption",picklist,,Recommended,
 192,LanguageShape,pesc:languageCode,Language Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc:appendix C1 or pesc:appendix C2
 194,LanguageShape,pesc:languageProficiency,Language Proficiency,FALSE,FALSE,IRI,,"pescLanguageProficiencyCodes:EnglishOnly
 pescLanguageProficiencyCodes:FullyEnglishProficient
@@ -487,7 +472,7 @@ IX
 X",picklist,,Recommended,
 177,PersonNameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
 5,OrganizationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-91,OrganizationShape,ceds:NameOfInstitution,Organization Name,FALSE,TRUE,Literal,xsd:token,60,maxLength,,Recommended,
+91,OrganizationShape,ceds:NameOfInstitution,Organization Name,FALSE,TRUE,Literal,,60,maxLength,,Recommended,
 95,OrganizationShape,pesc:contact,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
 99,OrganizationShape,pesc:accreditation,__ Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,Recommended,
 ,OrganizationShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:Organization,,,,
@@ -593,7 +578,6 @@ pescResidencyStatusCodes:Resident",picklist,,Optional,
 160,StudentShape,pesc:birthCountry,Birth Country,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
 181,StudentShape,pesc:residency,Residency,FALSE,FALSE,IRI BNODE,,,,,Optional,
 191,StudentShape,pesc:language,Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
-359,StudentShape,pesc:Immunizations,Immunizations,FALSE,TRUE,IRI BNODE,,,,ImmunizationsShape,Recommended,
 140,StudentShape,pesc:achievement,Achievement,TRUE,TRUE,IRI BNODE,,,,AcademicAchievementShape,Required,
 147,StudentShape,pesc:agencyAssignedID,Agency Assigned ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Required,
 163,StudentShape,ceds:hasOtherPersonName,Alternate Name,FALSE,TRUE,IRI BNODE,,,,PersonNameShape,,
