@@ -194,7 +194,8 @@
         <residencyshapeCountyCode>,
         <residencyshapeResidencyStatusCode>,
         <residencyshapeStateProvince>,
-        <residencyshapeStateProvinceCode> ;
+        <residencyshapeStateProvinceCode>,
+        <residencyshapeType> ;
     sh:targetObjectsOf pesc:hasResidency .
 
 <SchoolIdentificationShape> a sh:NodeShape ;
@@ -1901,6 +1902,13 @@
     sh:name "State Province Code"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:stateProvinceCode .
+
+<residencyshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Residency ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <schoolidentificationshapeIdentifierAssignedBy> a sh:PropertyShape ;
     sh:minCount 1 ;

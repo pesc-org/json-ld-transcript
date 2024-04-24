@@ -565,6 +565,7 @@ pescResidencyStatusCodes:NonResident
 pescResidencyStatusCodes:NotReported
 pescResidencyStatusCodes:OtherResident
 pescResidencyStatusCodes:Resident",picklist,,Optional,
+,ResidencyShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Residency,,,,
 ,StudentShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:Person,,,,
 14,StudentShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 92,StudentShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
