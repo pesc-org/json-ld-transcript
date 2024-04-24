@@ -576,7 +576,7 @@ pescResidencyStatusCodes:Resident",picklist,,Optional,
 158,StudentShape,pesc:birthCity,Birth City,FALSE,FALSE,Literal,xsd:string,25,maxLength,,Optional,
 159,StudentShape,pesc:birthStateProvinceCode,Birth State Province Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.appendixA Keep as string for now
 160,StudentShape,pesc:birthCountry,Birth Country,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
-181,StudentShape,pesc:residency,Residency,FALSE,FALSE,IRI BNODE,,,,,Optional,
+181,StudentShape,pesc:hasResidency,Residency,FALSE,FALSE,IRI BNODE,,,,,Optional,
 191,StudentShape,pesc:language,Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
 140,StudentShape,pesc:achievement,Achievement,TRUE,TRUE,IRI BNODE,,,,AcademicAchievementShape,Required,
 147,StudentShape,pesc:agencyAssignedID,Agency Assigned ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Required,
