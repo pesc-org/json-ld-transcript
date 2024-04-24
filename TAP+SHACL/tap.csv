@@ -548,11 +548,8 @@ pescDeliquencyCodes:Other",picklist,,Not Recommended,
 379,RAPShape,pesc:rapCode,RAP Code,FALSE,TRUE,Literal,xsd:string,3,maxLength,,Recommended,
 380,RAPShape,pesc:rapName,RAP Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 381,RAPShape,pesc:rapSubName,RAP Sub Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Optional,
-114,ResidencyShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,Recommended,"pesc:core:DomesticAddressDetailsGroup
-pesc:core:InternationalAddressDetailsGroup"
-182,ResidencyShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:appendixA Keep as string for now
-118,ResidencyShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,pesc:core:InternationalAddressDetailsGroup
-186,ResidencyShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
+182,ResidencyShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,Recommended,pesc:appendixA Keep as string for now
+186,ResidencyShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
 183,ResidencyShape,pesc:stateProvince,State Province,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
 184,ResidencyShape,pesc:countyCode,County Code,FALSE,FALSE,Literal,xsd:string,3..3,lengthRange,,Optional,
 185,ResidencyShape,pesc:county,County,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
