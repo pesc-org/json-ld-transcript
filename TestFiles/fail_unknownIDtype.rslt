@@ -4,7 +4,7 @@ Results (1):
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:personidentificationshapeType
-	Focus Node: [ ceds:StudentIdentifier Literal("123456789", datatype=xsd:token) ; rdf:type ceds:GlobalStudentID ]
-	Value Node: ceds:GlobalStudentID
+	Focus Node: [ cedso:StudentIdentifier Literal("123456789", datatype=xsd:token) ; rdf:type cedso:GlobalStudentID ]
+	Value Node: cedso:GlobalStudentID
 	Result Path: rdf:type
-	Message: Value ceds:GlobalStudentID not in list ['ceds:CanadianSINIdentification', 'ceds:SchoolIdentification', 'ceds:PersonIdentifier', 'ceds:StateIdentification', 'ceds:OtherIdentification', 'ceds:SocialSecurityNumberIdentification', 'ceds:PersonalIdentification']
+	Message: Value cedso:GlobalStudentID not in list ['cedso:CanadianSINIdentification', 'cedso:SchoolIdentification', 'cedso:PersonIdentifier', 'cedso:StateIdentification', 'cedso:OtherIdentification', 'cedso:SocialSecurityNumberIdentification', 'cedso:PersonalIdentification']

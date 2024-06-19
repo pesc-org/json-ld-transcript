@@ -1,4 +1,5 @@
-@prefix ceds: <http://ceds.ed.gov/owl#> .
+@prefix cedso: <http://ceds.ed.gov/owl#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
@@ -37,19 +38,19 @@
     pesc:courseTitle "Example Course"^^xsd:string ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://example.edu/Desintation#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Destination"^^xsd:token .
+<https://example.edu/Desintation#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Destination"^^xsd:token .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:Person ;
-    ceds:hasPersonName [ a ceds:PersonName ;
-            ceds:FirstName "Testy"^^xsd:token ;
-            ceds:LastOrSurname "Test"^^xsd:token ;
-            ceds:nameCode pescNameCodes:Legal ] ;
+<https://people.pjjk.net/test> a cedso:Person ;
+    cedso:hasPersonName [ a cedso:PersonName ;
+            cedso:FirstName "Testy"^^xsd:token ;
+            cedso:LastOrSurname "Test"^^xsd:token ;
+            cedso:nameCode pescNameCodes:Legal ] ;
     ceterms:targetContactPoint [
         a ceterms:ContactPoint ;
         ceterms:contactType "Home address"@en ;
@@ -65,8 +66,8 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Source"^^xsd:token .
+<https://example.edu/Source#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Source"^^xsd:token .
 
 <https://example.org/address/001> a ceterms:PostalAddress ;
 #    ceterms:streetAddress "42 No Street"@en ; missing mandatory

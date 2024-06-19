@@ -2,7 +2,8 @@
 # for testing only
 # only contains shapes that have been aligned with CEDS
 @base <http://example.org/> .
-@prefix ceds: <http://ceds.ed.gov/owl#> .
+@prefix cedso: <http://ceds.ed.gov/owl#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix cred: <https://www.w3.org/2018/credentials#> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
@@ -61,22 +62,22 @@
 
 <PersonIdentificationShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:description "Normally type will be a subclass of ceds:PersonIdentification"@en ;
+    sh:description "Normally type will be a subclass of cedso:PersonIdentification"@en ;
     sh:name "Person Identification"@en ;
     sh:property <personidentificationshapePersonIdentifier>,
         <personidentificationshapeStaudentIdentifier> ;
     sh:property [
         sh:path rdf:type ;
         sh:in (
-            ceds:CanadianSINIdentification
-            ceds:OtherIdentification
-            ceds:PersonIdentifier
-            ceds:PersonalIdentification
-            ceds:SchoolIdentification 
-            ceds:SocialSecurityNumberIdentification
+            cedso:CanadianSINIdentification
+            cedso:OtherIdentification
+            cedso:PersonIdentifier
+            cedso:PersonalIdentification
+            cedso:SchoolIdentification 
+            cedso:SocialSecurityNumberIdentification
         ) ;
     ] ;
-    sh:targetObjectsOf ceds:hasPersonalIdentification .
+    sh:targetObjectsOf cedso:hasPersonalIdentification .
 
 <studentshapeACTID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -151,7 +152,7 @@
     sh:maxCount 1 ;
     sh:name "Birth Date"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path ceds:BirthDate .
+    sh:path cedso:BirthDate .
 
 <studentshapeBirthStateProvinceCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -307,7 +308,7 @@
     sh:name "Name"@en-US ;
     sh:node <NameShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceds:hasPersonName .
+    sh:path cedso:hasPersonName .
 
 <studentshapeNoteMessage> a sh:PropertyShape ;
     sh:maxLength 80 ;
@@ -330,7 +331,7 @@
     sh:maxLength 60 ;
     sh:name "Organization Name"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path ceds:NameOfInstitution .
+    sh:path cedso:NameOfInstitution .
 
 <studentshapePSISID> a sh:PropertyShape ;
     sh:datatype xsd:string ;

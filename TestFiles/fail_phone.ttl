@@ -1,4 +1,5 @@
-@prefix ceds: <http://ceds.ed.gov/owl#> .
+@prefix cedso: <http://ceds.ed.gov/owl#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix elm:  <http://data.europa.eu/snb/model/elm/>.
 @prefix pesc: <https://pesc.org/terms/> .
@@ -38,19 +39,19 @@
     pesc:courseTitle "Example Course"^^xsd:string ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://example.edu/Desintation#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Destination"^^xsd:token .
+<https://example.edu/Desintation#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Destination"^^xsd:token .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:Person ;
-    ceds:hasPersonName [ a ceds:PersonName ;
-            ceds:FirstName "Testy"^^xsd:token ;
-            ceds:LastOrSurname "Test"^^xsd:token ;
-            ceds:nameCode pescNameCodes:Legal ] ;
+<https://people.pjjk.net/test> a cedso:Person ;
+    cedso:hasPersonName [ a cedso:PersonName ;
+            cedso:FirstName "Testy"^^xsd:token ;
+            cedso:LastOrSurname "Test"^^xsd:token ;
+            cedso:nameCode pescNameCodes:Legal ] ;
     ceterms:targetContactPoint [
         a ceterms:ContactPoint ;
         ceterms:contactType "Home phone"@en ;
@@ -65,8 +66,8 @@
             pesc:phoneNumberExtension "1234567890" ; # too long
         ] ;
         pesc:attentionLine "Attn: Parent or Gardian of Testy Test"@en ;
-        ceds:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        ceds:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
+        cedso:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
+        cedso:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
         elm:additionalNote [
             rdf:type elm:Note ;
             elm:noteLiteral "A made up contact." ;
@@ -81,6 +82,6 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Source"^^xsd:token .
+<https://example.edu/Source#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Source"^^xsd:token .
 

@@ -34,15 +34,15 @@
       },
       "hasPersonalIdentification": [
         {
-          "@type": "ceds:CanadianSINIdentification",
+          "@type": "cedso:CanadianSINIdentification",
           "PersonIdentifier": "123456789"
         },
         {
-          "@type": "ceds:SocialSecurityNumberIdentification",
+          "@type": "cedso:SocialSecurityNumberIdentification",
           "PersonIdentifier": "123456789"
         },
         {
-          "@type": "ceds:SchoolIdentification",
+          "@type": "cedso:SchoolIdentification",
           "PersonIdentifier": "123456789",
           "identifierAssignedBy": "https://example.edu/Source#id"
         }

@@ -1,4 +1,5 @@
-@prefix ceds: <http://ceds.ed.gov/owl#> .
+@prefix cedso: <http://ceds.ed.gov/owl#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -36,26 +37,26 @@
     pesc:courseTitle "Example Course"^^xsd:string ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://example.edu/Desintation#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Destination"^^xsd:token .
+<https://example.edu/Desintation#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Destination"^^xsd:token .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:Person ;
-    ceds:hasPersonName [ a ceds:PersonName ;
-            ceds:PersonalTitleOfPrefix "Dr" ;
-            ceds:FirstName "Testy"^^xsd:token ; 
-            ceds:FirstName "Testy"^^xsd:token ; # error, repeated
-            ceds:MiddleName "Example" ; # error wrong type
-            ceds:LastOrSurname "Test" ;
-            ceds:GenerationCodeOrSuffix 9 ; # error not in list
-            ceds:nameCode pescNameCodes:Legal ] ;
-    ceds:hasOtherPersonName [ a ceds:WrongClass ; #error wrong class
-            ceds:FirstName 12 ; 
-            ceds:LastOrSurname 12 ] ;
+<https://people.pjjk.net/test> a cedso:Person ;
+    cedso:hasPersonName [ a cedso:PersonName ;
+            cedso:PersonalTitleOfPrefix "Dr" ;
+            cedso:FirstName "Testy"^^xsd:token ; 
+            cedso:FirstName "Testy"^^xsd:token ; # error, repeated
+            cedso:MiddleName "Example" ; # error wrong type
+            cedso:LastOrSurname "Test" ;
+            cedso:GenerationCodeOrSuffix 9 ; # error not in list
+            cedso:nameCode pescNameCodes:Legal ] ;
+    cedso:hasOtherPersonName [ a cedso:WrongClass ; #error wrong class
+            cedso:FirstName 12 ; 
+            cedso:LastOrSurname 12 ] ;
     pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
@@ -65,6 +66,6 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Source"^^xsd:token .
+<https://example.edu/Source#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Source"^^xsd:token .
 

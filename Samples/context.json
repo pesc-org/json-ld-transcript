@@ -145,19 +145,19 @@
       "@id": "pesc:RequirementAttributeProficiency"
     },
     "CanadianSINIdentification":{
-      "@id": "ceds:CanadianSINIdentification"
+      "@id": "cedso:CanadianSINIdentification"
     },
     "OtherIdentification":{
-      "@id": "ceds:OtherIdentification"
+      "@id": "cedso:OtherIdentification"
     },
     "SchoolIdentification":{
-      "@id": "ceds:SchoolIdentification"
+      "@id": "cedso:SchoolIdentification"
     },
     "SocialSecurityNumberIdentification":{
-      "@id": "ceds:SocialSecurityNumberIdentification"
+      "@id": "cedso:SocialSecurityNumberIdentification"
     },
     "StateIdentification":{
-      "@id": "ceds:StateIdentification"
+      "@id": "cedso:StateIdentification"
     },
     "AcademicAchievement":{
       "@id": "pesc:AcademicAchievement"
@@ -166,19 +166,19 @@
       "@id": "ceterms:ContactPoint"
     },
     "PersonName":{
-      "@id": "ceds:PersonName"
+      "@id": "cedso:PersonName"
     },
     "PostalAddress":{
       "@id": "ceterms:PostalAddress"
     },
     "Person":{
-      "@id": "ceds:Person"
+      "@id": "cedso:Person"
     },
     "PersonalIdentification":{
-      "@id": "ceds:PersonalIdentification"
+      "@id": "cedso:PersonalIdentification"
     },
     "PersonIdentifier":{
-      "@id": "ceds:PersonIdentifier"
+      "@id": "cedso:PersonIdentifier"
     },
     "Note":{
       "@id": "elm:Note"
@@ -190,15 +190,15 @@
       "@type": "@id"
     },
     "BirthDate": {
-      "@id": "ceds:BirthDate",
+      "@id": "cedso:BirthDate",
       "@type": "xsd:date"
     },
     "FirstName": {
-      "@id": "ceds:FirstName",
+      "@id": "cedso:FirstName",
       "@type": "xsd:token"
     },
     "GenerationCodeOrSuffix": {
-      "@id": "ceds:GenerationCodeOrSuffix"
+      "@id": "cedso:GenerationCodeOrSuffix"
     },
     "HonorsTitle": {
       "@id": "pesc:HonorsTitle",
@@ -209,19 +209,19 @@
       "@type": "@id"
     },
     "LastOrSurname": {
-      "@id": "ceds:LastOrSurname",
+      "@id": "cedso:LastOrSurname",
       "@type": "xsd:token"
     },
     "MiddleName": {
-      "@id": "ceds:MiddleName",
+      "@id": "cedso:MiddleName",
       "@type": "xsd:token"
     },
     "PersonIdentifier": {
-      "@id": "ceds:PersonIdentifier",
+      "@id": "cedso:PersonIdentifier",
       "@type": "xsd:token"
     },
     "PersonalTitleOrPrefix": {
-      "@id": "ceds:PersonalTitleOrPrefix",
+      "@id": "cedso:PersonalTitleOrPrefix",
       "@type": "xsd:token"
     },
     "Proficiency": {
@@ -229,11 +229,11 @@
       "@type": "@id"
     },
     "RecordEndDateTime": {
-      "@id": "ceds:RecordEndDateTime",
+      "@id": "cedso:RecordEndDateTime",
       "@type": "xsd:dateTime"
     },
     "RecordStartDateTime": {
-      "@id": "ceds:RecordStartDateTime",
+      "@id": "cedso:RecordStartDateTime",
       "@type": "xsd:dateTime"
     },
     "Requirement": {
@@ -732,7 +732,7 @@
       "@type": "@id"
     },
     "hasOtherPersonName": {
-      "@id": "ceds:hasOtherPersonName",
+      "@id": "cedso:hasOtherPersonName",
       "@type": "@id"
     },
     "hasPart": {
@@ -740,11 +740,11 @@
       "@type": "@id"
     },
     "hasPersonName": {
-      "@id": "ceds:hasPersonName",
+      "@id": "cedso:hasPersonName",
       "@type": "@id"
     },
     "hasPersonalIdentification": {
-      "@id": "ceds:hasPersonalIdentification",
+      "@id": "cedso:hasPersonalIdentification",
       "@type": "@id"
     },
     "hasSession": {
@@ -867,7 +867,7 @@
       "@type": "xsd:string"
     },
     "organizationName": {
-      "@id": "ceds:NameOfInstitution",
+      "@id": "cedso:NameOfInstitution",
       "@container": "@language"
     },
     "originalCourseID": {

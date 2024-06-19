@@ -1,4 +1,5 @@
-@prefix ceds: <http://ceds.ed.gov/owl#> .
+@prefix cedso: <http://ceds.ed.gov/owl#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix elm:  <http://data.europa.eu/snb/model/elm/>.
 @prefix ex: <http://example.org/> .
@@ -42,34 +43,34 @@
     pesc:courseTitle "Example Course"^^xsd:string ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://example.edu/Desintation#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Destination"^^xsd:token .
+<https://example.edu/Desintation#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Destination"^^xsd:token .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:Person ;
-    ceds:hasPersonName [ a ceds:PersonName ;
-            ceds:PersonalTitleOfPrefix "Dr"^^xsd:token ;
-            ceds:FirstName "Testy"^^xsd:token ;
-            ceds:MiddleName "Example"^^xsd:token ;
-            ceds:LastOrSurname "Test"^^xsd:token ;
-            ceds:GenerationCodeOrSuffix "IX" ;
-            ceds:nameCode pescNameCodes:Legal ] ;
-    ceds:hasOtherPersonName [ a ceds:PersonName ;
-            ceds:FirstName "Testing"^^xsd:token ;
-            ceds:LastOrSurname "Testy"^^xsd:token ] ;
-    ceds:hasPersonalIdentification [
-        a ceds:CanadianSINIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
+<https://people.pjjk.net/test> a cedso:Person ;
+    cedso:hasPersonName [ a cedso:PersonName ;
+            cedso:PersonalTitleOfPrefix "Dr"^^xsd:token ;
+            cedso:FirstName "Testy"^^xsd:token ;
+            cedso:MiddleName "Example"^^xsd:token ;
+            cedso:LastOrSurname "Test"^^xsd:token ;
+            cedso:GenerationCodeOrSuffix "IX" ;
+            cedso:nameCode pescNameCodes:Legal ] ;
+    cedso:hasOtherPersonName [ a cedso:PersonName ;
+            cedso:FirstName "Testing"^^xsd:token ;
+            cedso:LastOrSurname "Testy"^^xsd:token ] ;
+    cedso:hasPersonalIdentification [
+        a cedso:CanadianSINIdentification ;
+        cedso:PersonIdentifier "123456789"^^xsd:token ;
     ] , [
-        a ceds:SocialSecurityNumberIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
+        a cedso:SocialSecurityNumberIdentification ;
+        cedso:PersonIdentifier "123456789"^^xsd:token ;
     ] , [
-        a ceds:SchoolIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
+        a cedso:SchoolIdentification ;
+        cedso:PersonIdentifier "123456789"^^xsd:token ;
         pesc:identifierAssignedBy <https://example.edu/Source#id> ;
     ];
     pesc:hasResidency [
@@ -87,8 +88,8 @@
         ceterms:contactType "Home address"@en ;
         ceterms:address <https://example.org/address/001> ;
         pesc:attentionLine "Attn: Parent or Gardian of Testy Test"@en ;
-        ceds:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        ceds:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
+        cedso:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
+        cedso:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
         elm:additionalNote [
             rdf:type elm:Note ;
             elm:noteLiteral "A made up contact." ;
@@ -109,14 +110,14 @@
             pesc:phoneNumberExtension "123" ;
         ] ;
         pesc:attentionLine "Ask for Parent or Gardian of Testy Test"@en ;
-        ceds:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        ceds:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
+        cedso:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
+        cedso:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
         elm:additionalNote [
             rdf:type elm:Note ;
             elm:noteLiteral "A made up contact." ;
         ] ;
     ] ;
-    ceds:BirthDate "2000-01-01"^^xsd:date ;
+    cedso:BirthDate "2000-01-01"^^xsd:date ;
     pesc:birthday "01-01"^^xsd:gMonthDay ;
     pesc:birthYear "2000"^^xsd:gYear ;
     pesc:birthCity "Sunnydale"^^xsd:string ;
@@ -137,14 +138,14 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Source"^^xsd:token ;
-    ceds:hasOrganizationIdentification [
-        a pesc:OPEid, ceds:OrganizationIdentification_Other ;
-        ceds:OrganizationIdentifier "00-0000000"^^xsd:token
+<https://example.edu/Source#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Source"^^xsd:token ;
+    ceds:P600502 [
+        a pesc:OPEid, ceds:NI000827151968 ;
+        ceds:P000826 "00-0000000"^^xsd:token
     ] , [
-        a ceds:OrganizationIdentification_Other,  pesc:PSISid;
-        ceds:OrganizationIdentifier "example001"^^xsd:token
+        a ceds:NI000827151968,  pesc:PSISid;
+        ceds:P000826 "example001"^^xsd:token
     ] ;
     pesc:schoolLevel pescSchoolLevels:Postsecondary ;
     ceterms:targetContactPoint [
