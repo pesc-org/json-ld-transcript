@@ -188,7 +188,6 @@ pescAgencyCodes:State",picklist,,Required,
 113,AgencyIdentifierShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,"pesc:core:DomesticAddressDetailsGroup
 pesc:core:InternationalAddressDetailsGroup"
 117,AgencyIdentifierShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,pesc:core:InternationalAddressDetailsGroup
-,CanadianSINIdentificationShape,cedso:PersonIdentifier,Canadian SIN,TRUE,FALSE,Literal,xsd:token,9..9,lengthRange,,,
 3,CollegeTranscriptShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 18,CollegeTranscriptShape,pesc:createdDateTime,Created Date Time,TRUE,FALSE,Literal,xsd:dateTime,,,,Required,
 26,CollegeTranscriptShape,pesc:requestTrackingID,Request Tracking ID,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Optional,
@@ -449,19 +448,17 @@ pescLanguageUsageCodes:WrittenCommunication",picklist,,Optional,
 351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
-,OPEIDOrganizationIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:NI000827151968 
-pesc:OPEid",,,,
-,OrganizationIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:C200252
-ceds:NI000827151968
-pesc:OPEid
-pesc:PSISid",picklist,,,
-,OrganizationIdentificationShape,ceds:P000826,Organization Identification,TRUE,FALSE,Literal,xsd:token,,,,,
+,OrganizationIdentifierShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200252,,,,
+,OrganizationIdentifierShape,ceds:P000826,Organization Identifier,TRUE,FALSE,Literal,xsd:token,,,,,
+,OrganizationIdentifierShape,ceds:P000827,Has Organization Identification System,TRUE,FALSE,IRI,,"ceds:NI000827151968
+pescIdentifierTypes:OPEid
+pescIdentifierTypes:PSISid",picklist,,,
 5,OrganizationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 91,OrganizationShape,cedso:NameOfInstitution,Organization Name,FALSE,TRUE,Literal,,60,maxLength,,Recommended,
 95,OrganizationShape,pesc:contact,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
 99,OrganizationShape,pesc:accreditation,__ Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,Recommended,
 ,OrganizationShape,rdf:type,Type,TRUE,TRUE,IRI,,cedso:Organization,,,,
-,OrganizationShape,ceds:P600502,Has Organization Identification,FALSE,TRUE,IRI BNODE,,,,OrganizationIdentificationShape,,
+,OrganizationShape,ceds:P600502,Has Organization Identification,FALSE,TRUE,IRI BNODE,,,,OrganizationIdentifierShape,,
 220,OrganizationShape,pesc:schoolLevel,School Level,FALSE,FALSE,IRI,,"pescSchoolLevels:Elementary
 pescSchoolLevels:HighSchool
 pescSchoolLevels:JuniorHigh
@@ -469,17 +466,12 @@ pescSchoolLevels:Middle
 pescSchoolLevels:Other
 pescSchoolLevels:Postsecondary
 pescSchoolLevels:Secondary",picklist,,Recommended,
-,OtherIdentificationShape,cedso:PersonIdentifier,Other Identifier,TRUE,FALSE,Literal,xsd:token,,,,,
-,OtherIdentificationShape,pesc:identifierAssignedBy,Identifier Assigned By,TRUE,TRUE,IRI BNODE,,,,OrganizationShape,,
-,PersonIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"cedso:CanadianSINIdentification
-cedso:OtherIdentification
-cedso:PersonalIdentification
-cedso:PersonIdentifier
-cedso:SchoolIdentification
-cedso:SocialSecurityNumberIdentification
-cedso:StateIdentification",picklist,,,
-,PersonIdentificationShape,cedso:PersonIdentifier,Person Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
-,PersonIdentificationShape,cedso:PersonIdentifier,Person Identifier,FALSE,FALSE,Literal,xsd:token,,,,,
+,PersonIdentifierShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200291,,,,
+,PersonIdentifierShape,ceds:P001572,Person Identifier,TRUE,FALSE,Literal,xsd:string,,,,,
+,PersonIdentifierShape,ceds:P001075,hasStudentIdentificationSystem,TRUE,FALSE,IRI,,"ceds:NI001075173041
+ceds:NI001075173046
+ceds:NI001075173047
+ceds:NI001075173048",picklist,,,
 ,PersonNameShape,rdf:type,Type,TRUE,TRUE,IRI,,cedso:PersonName,,,,
 164,PersonNameShape,pesc:nameCode,Name Code,FALSE,FALSE,IRI,,"pescNameCodes:Casual
 pescNameCodes:Formal
@@ -565,8 +557,6 @@ pescDeliquencyCodes:Unknown
 pescDeliquencyCodes:Other",picklist,,Not Recommended,
 263,ProgramSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
 265,ProgramSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Optional,
-,PSISOrganizationIdentificationShape,rdf:type,Type,TRUE,TRUE,IRI,,"ceds:NI000827151968
-pesc:PSISid",,,,
 379,RAPShape,pesc:rapCode,RAP Code,FALSE,TRUE,Literal,xsd:string,3,maxLength,,Recommended,
 380,RAPShape,pesc:rapName,RAP Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 381,RAPShape,pesc:rapSubName,RAP Sub Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Optional,
@@ -585,15 +575,11 @@ pescResidencyStatusCodes:NotReported
 pescResidencyStatusCodes:OtherResident
 pescResidencyStatusCodes:Resident",picklist,,Optional,
 ,ResidencyShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Residency,,,,
-,SchoolIdentificationShape,cedso:PersonIdentifier,School-assigned Number,TRUE,FALSE,Literal,xsd:token,20,maxLength,,,
-,SchoolIdentificationShape,pesc:identifierAssignedBy,Identifier Assigned By,TRUE,TRUE,IRI BNODE,,,,OrganizationShape,,
-,SocialSecurityNumberIdentificationShape,cedso:PersonIdentifier,SSN,TRUE,FALSE,Literal,xsd:token,9,maxLength,,,
-,StateIdentificationShape,cedso:PersonIdentifier,State Identification,TRUE,FALSE,Literal,xsd:token,30,maxLength,,,
 ,StudentShape,rdf:type,Type,TRUE,TRUE,IRI,,cedso:Person,,,,
 14,StudentShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 92,StudentShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
 96,StudentShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
-,StudentShape,cedso:hasPersonalIdentification,hasPersonalIdentification,FALSE,TRUE,IRI BNODE,,,,,,
+,StudentShape,ceds:P600049,hasPersonIdentifier,FALSE,TRUE,IRI BNODE,,,,,,
 155,StudentShape,cedso:BirthDate,Birth Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
 156,StudentShape,pesc:birthday,Birthday,FALSE,FALSE,Literal,xsd:gMonthDay,,,,Optional,
 157,StudentShape,pesc:birthYear,Birth Year,FALSE,FALSE,Literal,xsd:gYear,,,,Not Recommended,

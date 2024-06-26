@@ -71,7 +71,7 @@
         sh:in (
             cedso:CanadianSINIdentification
             cedso:OtherIdentification
-            cedso:PersonIdentifier
+            ceds:P001572
             cedso:PersonalIdentification
             cedso:SchoolIdentification 
             cedso:SocialSecurityNumberIdentification

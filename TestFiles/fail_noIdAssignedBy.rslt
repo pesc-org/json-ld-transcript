@@ -1,9 +1,0 @@
-Validation Report
-Conforms: False
-Results (1):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:schoolidentificationshapeIdentifierAssignedBy
-	Focus Node: [ cedso:PersonIdentifier Literal("123456789", datatype=xsd:token) ; rdf:type cedso:SchoolIdentification ]
-	Result Path: pesc:identifierAssignedBy
-	Message: Less than 1 values on [ cedso:PersonIdentifier Literal("123456789", datatype=xsd:token) ; rdf:type cedso:SchoolIdentification ]->pesc:identifierAssignedBy

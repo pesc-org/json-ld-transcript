@@ -27,6 +27,7 @@
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
+@prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
 @prefix pescInstructionSiteCodes: <https://pesc.org/vocabs/InstructionSiteCodes#> .
 @prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
 @prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
@@ -104,12 +105,6 @@
         <agencyidentifiershapeStateProvinceCode> ;
     sh:targetClass pesc:AgencyIdentifier .
 
-<CanadianSINIdentificationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Canadian SIN "@en ;
-    sh:property <canadiansinidentificationshapeCanadianSIN> ;
-    sh:targetClass cedso:CanadianSINIdentification .
-
 <CollegeTranscriptShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "College Transcript"@en ;
@@ -144,32 +139,14 @@
     sh:name "Language Of Instruction"@en ;
     sh:targetClass pesc:LanguageOfInstruction .
 
-<OPEIDOrganizationIdentificationShape> a sh:NodeShape ;
+<PersonIdentifierShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "OPE Identifier"@en ;
-    sh:property <opeidorganizationidentificationshapeType> ;
-    sh:targetClass pesc:OPEid .
-
-<OtherIdentificationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Other Identification"@en ;
-    sh:property <otheridentificationshapeIdentifierAssignedBy>,
-        <otheridentificationshapeOtherIdentifier> ;
-    sh:targetClass cedso:OtherIdentification .
-
-<PSISOrganizationIdentificationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "PSIS Identifier"@en ;
-    sh:property <psisorganizationidentificationshapeType> ;
-    sh:targetClass pesc:PSISid .
-
-<PersonIdentificationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:description "Normally type will be a subclass of cedso:PersonIdentification"@en ;
-    sh:name "Person Identification"@en ;
-    sh:property <personidentificationshapePersonIdentifier>,
-        <personidentificationshapeType> ;
-    sh:targetObjectsOf cedso:hasPersonalIdentification .
+    sh:description "Normally type will be ceds: C200291"@en ;
+    sh:name "Person Identifier"@en ;
+    sh:property <personidentifiershapeHasStudentIdentificationSystem>,
+        <personidentifiershapePersonIdentifier>,
+        <personidentifiershapeType> ;
+    sh:targetObjectsOf ceds:P600049 .
 
 <ProgramSummaryShape> a sh:NodeShape ;
     sh:closed false ;
@@ -198,25 +175,6 @@
         <residencyshapeStateProvinceCode>,
         <residencyshapeType> ;
     sh:targetObjectsOf pesc:hasResidency .
-
-<SchoolIdentificationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "School Identification"@en ;
-    sh:property <schoolidentificationshapeIdentifierAssignedBy>,
-        <schoolidentificationshapeSchool-assignedNumber> ;
-    sh:targetClass cedso:SchoolIdentification .
-
-<SocialSecurityNumberIdentificationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Social Security Number"@en ;
-    sh:property <socialsecuritynumberidentificationshapeSSN> ;
-    sh:targetClass cedso:SocialSecurityNumberIdentification .
-
-<StateIdentificationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "State-assigned Number"@en ;
-    sh:property <stateidentificationshapeStateIdentification> ;
-    sh:targetClass cedso:StateIdentification .
 
 <TBDShape> a sh:NodeShape ;
     sh:closed false ;
@@ -276,12 +234,13 @@
         <licensureshapeLicensurePassageDate> ;
     sh:targetClass pesc:Licensure .
 
-<OrganizationIdentificationShape> a sh:NodeShape ;
+<OrganizationIdentifierShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:description "Normally type will be a subclass of ceds:C200252"@en ;
-    sh:name "Organization Identification"@en ;
-    sh:property <organizationidentificationshapeOrganizationIdentification>,
-        <organizationidentificationshapeType> ;
+    sh:description "Normally type will be ceds:C200252"@en ;
+    sh:name "Organization Identifier"@en ;
+    sh:property <organizationidentifiershapeHasOrganizationIdentificationSystem>,
+        <organizationidentifiershapeOrganizationIdentifier>,
+        <organizationidentifiershapeType> ;
     sh:targetObjectsOf ceds:P600502 .
 
 <PostalAddressShape> a sh:NodeShape ;
@@ -311,7 +270,7 @@
         <studentshapeContact>,
         <studentshapeDeceasedIndicator>,
         <studentshapeGenderCode>,
-        <studentshapeHasPersonalIdentification>,
+        <studentshapeHasPersonIdentifier>,
         <studentshapeLanguage>,
         <studentshapeName>,
         <studentshapeOrganizationName>,
@@ -838,16 +797,6 @@
     sh:name "State Province Code"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:stateProvinceCode .
-
-<canadiansinidentificationshapeCanadianSIN> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:maxLength 9 ;
-    sh:minCount 1 ;
-    sh:minLength 9 ;
-    sh:name "Canadian SIN"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path cedso:PersonIdentifier .
 
 <collegetranscriptshapeAdditionalNote> a sh:PropertyShape ;
     sh:name "Additional Note"@en-US ;
@@ -1511,23 +1460,24 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<opeidorganizationidentificationshapeType> a sh:PropertyShape ;
-    sh:in ( ceds:NI000827151968 pesc:OPEid ) ;
+<organizationidentifiershapeHasOrganizationIdentificationSystem> a sh:PropertyShape ;
+    sh:in ( ceds:NI000827151968 pescIdentifierTypes:OPEid pescIdentifierTypes:PSISid ) ;
+    sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "Type"@en-US ;
+    sh:name "Has Organization Identification System"@en-US ;
     sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
+    sh:path ceds:P000827 .
 
-<organizationidentificationshapeOrganizationIdentification> a sh:PropertyShape ;
+<organizationidentifiershapeOrganizationIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "Organization Identification"@en-US ;
+    sh:name "Organization Identifier"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:P000826 .
 
-<organizationidentificationshapeType> a sh:PropertyShape ;
-    sh:in ( ceds:C200252 ceds:NI000827151968 pesc:OPEid pesc:PSISid ) ;
+<organizationidentifiershapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200252 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -1547,7 +1497,7 @@
 
 <organizationshapeHasOrganizationIdentification> a sh:PropertyShape ;
     sh:name "Has Organization Identification"@en-US ;
-    sh:node <OrganizationIdentificationShape> ;
+    sh:node <OrganizationIdentifierShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600502 .
 
@@ -1578,30 +1528,24 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:accreditation .
 
-<otheridentificationshapeIdentifierAssignedBy> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Identifier Assigned By"@en-US ;
-    sh:node <OrganizationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:identifierAssignedBy .
-
-<otheridentificationshapeOtherIdentifier> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
+<personidentifiershapeHasStudentIdentificationSystem> a sh:PropertyShape ;
+    sh:in ( ceds:NI001075173041 ceds:NI001075173046 ceds:NI001075173047 ceds:NI001075173048 ) ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "Other Identifier"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path cedso:PersonIdentifier .
+    sh:name "hasStudentIdentificationSystem"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P001075 .
 
-<personidentificationshapePersonIdentifier> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
+<personidentifiershapePersonIdentifier> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
     sh:maxCount 1 ;
+    sh:minCount 1 ;
     sh:name "Person Identifier"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path cedso:PersonIdentifier .
+    sh:path ceds:P001572 .
 
-<personidentificationshapeType> a sh:PropertyShape ;
-    sh:in ( cedso:CanadianSINIdentification cedso:OtherIdentification cedso:PersonalIdentification cedso:PersonIdentifier cedso:SchoolIdentification cedso:SocialSecurityNumberIdentification cedso:StateIdentification ) ;
+<personidentifiershapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200291 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -1815,13 +1759,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:inProgram .
 
-<psisorganizationidentificationshapeType> a sh:PropertyShape ;
-    sh:in ( ceds:NI000827151968 pesc:PSISid ) ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
 <rapshapeRAPCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxLength 3 ;
@@ -1903,40 +1840,6 @@
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
-
-<schoolidentificationshapeIdentifierAssignedBy> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Identifier Assigned By"@en-US ;
-    sh:node <OrganizationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:identifierAssignedBy .
-
-<schoolidentificationshapeSchool-assignedNumber> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minCount 1 ;
-    sh:name "School-assigned Number"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path cedso:PersonIdentifier .
-
-<socialsecuritynumberidentificationshapeSSN> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:maxLength 9 ;
-    sh:minCount 1 ;
-    sh:name "SSN"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path cedso:PersonIdentifier .
-
-<stateidentificationshapeStateIdentification> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:minCount 1 ;
-    sh:name "State Identification"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path cedso:PersonIdentifier .
 
 <studentshapeAchievement> a sh:PropertyShape ;
     sh:minCount 1 ;
@@ -2028,10 +1931,10 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:genderCode .
 
-<studentshapeHasPersonalIdentification> a sh:PropertyShape ;
-    sh:name "hasPersonalIdentification"@en-US ;
+<studentshapeHasPersonIdentifier> a sh:PropertyShape ;
+    sh:name "hasPersonIdentifier"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path cedso:hasPersonalIdentification .
+    sh:path ceds:P600049 .
 
 <studentshapeLanguage> a sh:PropertyShape ;
     sh:name "Language"@en-US ;
@@ -2363,14 +2266,6 @@
         <noteshapeType> ;
     sh:targetObjectsOf elm:additionalNote .
 
-<RAPShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Requirement, Attribute or Proficiency"@en ;
-    sh:property <rapshapeRAPCode>,
-        <rapshapeRAPName>,
-        <rapshapeRAPSubName> ;
-    sh:targetClass pesc:RequirementAttributeProficiency .
-
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Organization"@en ;
@@ -2382,4 +2277,12 @@
         <organizationshapeType>,
         <organizationshape__Accreditation> ;
     sh:targetClass pesc:Organization .
+
+<RAPShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Requirement, Attribute or Proficiency"@en ;
+    sh:property <rapshapeRAPCode>,
+        <rapshapeRAPName>,
+        <rapshapeRAPSubName> ;
+    sh:targetClass pesc:RequirementAttributeProficiency .
 

@@ -178,7 +178,7 @@
       "@id": "cedso:PersonalIdentification"
     },
     "PersonIdentifier":{
-      "@id": "cedso:PersonIdentifier"
+      "@id": "ceds:P001572"
     },
     "Note":{
       "@id": "elm:Note"
@@ -217,7 +217,7 @@
       "@type": "xsd:token"
     },
     "PersonIdentifier": {
-      "@id": "cedso:PersonIdentifier",
+      "@id": "ceds:P001572",
       "@type": "xsd:token"
     },
     "PersonalTitleOrPrefix": {
