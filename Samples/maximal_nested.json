@@ -59,7 +59,7 @@
         "source": "https://example.edu/Source#id",
         "student": {
             "@id": "https://people.pjjk.net/test",
-            "@type": "ceds:Person",
+            "@type": "cedso:Person",
             "hasPersonName": {
                 "@type": "PersonalName",
                 "firstName": "Testy",
@@ -68,15 +68,15 @@
             },
             "hasPersonalIdentification": [
                 {
-                    "@type": "ceds:CanadianSINIdentification",
+                    "@type": "cedso:CanadianSINIdentification",
                     "PersonIdentifier": "123456789"
                 },
                 {
-                    "@type": "ceds:SocialSecurityNumberIdentification",
+                    "@type": "cedso:SocialSecurityNumberIdentification",
                     "PersonIdentifier": "123456789"
                 },
                 {
-                    "@type": "ceds:SchoolIdentification",
+                    "@type": "cedso:SchoolIdentification",
                     "PersonIdentifier": "123456789",
                     "identifierAssignedBy": "https://example.edu/Source#id"
                 }

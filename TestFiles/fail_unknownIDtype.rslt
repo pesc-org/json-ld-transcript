@@ -3,8 +3,8 @@ Conforms: False
 Results (1):
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:personidentificationshapeType
-	Focus Node: [ ceds:StudentIdentifier Literal("123456789", datatype=xsd:token) ; rdf:type ceds:GlobalStudentID ]
+	Source Shape: ex:personidentifiershapeHasStudentIdentificationSystem
+	Focus Node: [ ceds:P001075 ceds:GlobalStudentID ; ceds:P001572 Literal("123456789", datatype=xsd:string) ; rdf:type ceds:C200291 ]
 	Value Node: ceds:GlobalStudentID
-	Result Path: rdf:type
-	Message: Value ceds:GlobalStudentID not in list ['ceds:CanadianSINIdentification', 'ceds:SchoolIdentification', 'ceds:PersonIdentifier', 'ceds:StateIdentification', 'ceds:OtherIdentification', 'ceds:SocialSecurityNumberIdentification', 'ceds:PersonalIdentification']
+	Result Path: ceds:P001075
+	Message: Value ceds:GlobalStudentID not in list ['ceds:NI001075173046', 'ceds:NI001075173047', 'ceds:NI001075173048', 'ceds:NI001075173041']

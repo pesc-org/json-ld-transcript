@@ -1,4 +1,5 @@
-@prefix ceds: <http://ceds.ed.gov/owl#> .
+@prefix cedso: <http://ceds.ed.gov/owl#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -6,6 +7,7 @@
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -35,25 +37,23 @@
     pesc:courseTitle "Example Course"^^xsd:string ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://example.edu/Desintation#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Destination"^^xsd:token .
+<https://example.edu/Desintation#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Destination"^^xsd:token .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:Person ;
-    ceds:hasPersonName [ a ceds:PersonName ;
-            ceds:FirstName "Testy"^^xsd:token ;
-            ceds:LastOrSurname "Test"^^xsd:token ;
-            ceds:nameCode pescNameCodes:Legal ] ;
-    ceds:hasPersonalIdentification [
-        a ceds:CanadianSINIdentification ;
-        ceds:PersonIdentifier "123456789"^^xsd:token ;
-    ] , [
-        a ceds:SocialSecurityNumberIdentification ;
-        ceds:StudentIdentifier "123456789"^^xsd:token ; #FAIL should be PersonIdentifer
+<https://people.pjjk.net/test> a cedso:Person ;
+    cedso:hasPersonName [ a cedso:PersonName ;
+            cedso:FirstName "Testy"^^xsd:token ;
+            cedso:LastOrSurname "Test"^^xsd:token ;
+            cedso:nameCode pescNameCodes:Legal ] ;
+    ceds:P600049 [
+        a ceds:C200291  ;
+        # fail no ceds:P001572 "123456789"^^xsd:string ;
+        ceds:P001075 ceds:NI001075173047 ;
     ] ;
     pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
@@ -64,6 +64,6 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a ceds:Organization ;
-    ceds:NameOfInstitution "Example Source"^^xsd:token .
+<https://example.edu/Source#id> a cedso:Organization ;
+    cedso:NameOfInstitution "Example Source"^^xsd:token .
 

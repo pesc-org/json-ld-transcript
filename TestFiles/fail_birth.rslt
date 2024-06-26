@@ -49,7 +49,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Source Shape: ex:studentshapeBirthDate
 			Focus Node: <https://people.pjjk.net/test>
 			Value Node: Literal("January 1 2000")
-			Result Path: ceds:BirthDate
+			Result Path: cedso:BirthDate
 			Message: Value is not Literal with datatype xsd:date
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 			Severity: sh:Violation
@@ -119,7 +119,7 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Source Shape: ex:studentshapeBirthDate
 	Focus Node: <https://people.pjjk.net/test>
 	Value Node: Literal("January 1 2000")
-	Result Path: ceds:BirthDate
+	Result Path: cedso:BirthDate
 	Message: Value is not Literal with datatype xsd:date
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation

@@ -7,7 +7,7 @@
 @prefix : <http://pesc.org/transcript/xml2rdf/rules/> .
 # output term namespaces
 @prefix ex: <https://example.edu/> .
-@prefix ceds: <https://ceds.ed.gov/element/> .
+@prefix cedso: <https://ceds.ed.gov/element/> .
 @prefix pesc: <https://pesc.org/terms/> .
 # skos vocab URI prefixes
 @prefix pescAcademicAwardLevels: <https://pesc.org/vocabs/AcademicAwardLevels#> .
@@ -117,7 +117,7 @@
     ]
   ] ;  
   rr:predicateObjectMap [
-    rr:predicate ceds:NameOfInstitution;
+    rr:predicate cedso:NameOfInstitution;
     rr:objectMap [
         rml:reference "OrganizationName";
         rr:language "en" 
