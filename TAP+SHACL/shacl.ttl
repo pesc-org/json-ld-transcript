@@ -1502,10 +1502,11 @@
     sh:path ceds:P600502 .
 
 <organizationshapeOrganizationName> a sh:PropertyShape ;
+    sh:datatype rdf:langString ;
     sh:maxLength 60 ;
     sh:name "Organization Name"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path cedso:NameOfInstitution .
+    sh:path ceterms:name .
 
 <organizationshapeSchoolLevel> a sh:PropertyShape ;
     sh:in ( pescSchoolLevels:Elementary pescSchoolLevels:HighSchool pescSchoolLevels:JuniorHigh pescSchoolLevels:Middle pescSchoolLevels:Other pescSchoolLevels:Postsecondary pescSchoolLevels:Secondary ) ;
@@ -1515,7 +1516,7 @@
     sh:path pesc:schoolLevel .
 
 <organizationshapeType> a sh:PropertyShape ;
-    sh:hasValue cedso:Organization ;
+    sh:hasValue ceds:C200239 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -2276,7 +2277,7 @@
         <organizationshapeSchoolLevel>,
         <organizationshapeType>,
         <organizationshape__Accreditation> ;
-    sh:targetClass pesc:Organization .
+    sh:targetClass ceds:C200239 .
 
 <RAPShape> a sh:NodeShape ;
     sh:closed false ;

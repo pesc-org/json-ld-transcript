@@ -454,10 +454,10 @@ pescLanguageUsageCodes:WrittenCommunication",picklist,,Optional,
 pescIdentifierTypes:OPEid
 pescIdentifierTypes:PSISid",picklist,,,
 5,OrganizationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-91,OrganizationShape,cedso:NameOfInstitution,Organization Name,FALSE,TRUE,Literal,,60,maxLength,,Recommended,
-95,OrganizationShape,pesc:contact,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
+91,OrganizationShape,ceterms:name,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,
+95,OrganizationShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
 99,OrganizationShape,pesc:accreditation,__ Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,Recommended,
-,OrganizationShape,rdf:type,Type,TRUE,TRUE,IRI,,cedso:Organization,,,,
+,OrganizationShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200239,,,,
 ,OrganizationShape,ceds:P600502,Has Organization Identification,FALSE,TRUE,IRI BNODE,,,,OrganizationIdentifierShape,,
 220,OrganizationShape,pesc:schoolLevel,School Level,FALSE,FALSE,IRI,,"pescSchoolLevels:Elementary
 pescSchoolLevels:HighSchool
