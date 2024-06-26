@@ -1,5 +1,6 @@
 @prefix cedso: <http://ceds.ed.gov/owl#> .
 @prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -37,8 +38,8 @@
     pesc:courseTitle "Example Course"^^xsd:string ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://example.edu/Desintation#id> a cedso:Organization ;
-    cedso:NameOfInstitution "Example Destination"^^xsd:token .
+<https://example.edu/Desintation#id> a ceds:C200239 ;
+    ceterms:name "Example Destination"@en .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
@@ -66,6 +67,6 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a cedso:Organization ;
-    cedso:NameOfInstitution "Example Source"^^xsd:token .
+<https://example.edu/Source#id> a ceds:C200239 ;
+    ceterms:name "Example Source"@en .
 

@@ -1,8 +1,6 @@
 @prefix cedso: <http://ceds.ed.gov/owl#> .
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
-@prefix ceterms: <https://purl.org/ctdl/terms/> .
-@prefix elm:  <http://data.europa.eu/snb/model/elm/>.
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -10,6 +8,7 @@
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -53,27 +52,6 @@
             cedso:FirstName "Testy"^^xsd:token ;
             cedso:LastOrSurname "Test"^^xsd:token ;
             cedso:nameCode pescNameCodes:Legal ] ;
-    ceterms:targetContactPoint [
-        a ceterms:ContactPoint ;
-        ceterms:contactType "Home phone"@en ;
-        pesc:phone [
-            a pesc:Phone ;
-            pesc:phoneNumber  "+34 555-123-4567 ext123" ; # fail length
-        ] ;
-        pesc:faxPhone [
-            a pesc:Fax ; #wrong type
-            pesc:countryPrefixCode  34 ; # should be string
-#            pesc:phoneNumber  "5551234568" ; missing
-            pesc:phoneNumberExtension "1234567890" ; # too long
-        ] ;
-        pesc:attentionLine "Attn: Parent or Gardian of Testy Test"@en ;
-        cedso:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        cedso:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
-        elm:additionalNote [
-            rdf:type elm:Note ;
-            elm:noteLiteral "A made up contact." ;
-        ] ;
-    ] ;
     pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> .
 
 <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> a pesc:AcademicAchievement,
@@ -84,5 +62,8 @@
     pesc:school <https://example.edu/Source#id> .
 
 <https://example.edu/Source#id> a ceds:C200239 ;
-    ceterms:name "Example Source"@en .
+    ceterms:name "Example Source" ; #Fail not a langString
+    pesc:schoolLevel pescSchoolLevels:fortytwo ; #fail, not in valid set
+    ceterms:targetContactPoint "Rick" #Fail wrong should be object
+.
 
