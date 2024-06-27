@@ -573,12 +573,11 @@ pescResidencyStatusCodes:NotReported
 pescResidencyStatusCodes:OtherResident
 pescResidencyStatusCodes:Resident",picklist,,Optional,
 ,ResidencyShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Residency,,,,
-,StudentShape,rdf:type,Type,TRUE,TRUE,IRI,,cedso:Person,,,,
+,StudentShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200275,,,,
 14,StudentShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-92,StudentShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
 96,StudentShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,
 ,StudentShape,ceds:P600049,hasPersonIdentifier,FALSE,TRUE,IRI BNODE,,,,,,
-155,StudentShape,cedso:BirthDate,Birth Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
+155,StudentShape,ceds:P000033,Birth Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
 156,StudentShape,pesc:birthday,Birthday,FALSE,FALSE,Literal,xsd:gMonthDay,,,,Optional,
 157,StudentShape,pesc:birthYear,Birth Year,FALSE,FALSE,Literal,xsd:gYear,,,,Not Recommended,
 158,StudentShape,pesc:birthCity,Birth City,FALSE,FALSE,Literal,xsd:string,25,maxLength,,Optional,
@@ -588,12 +587,12 @@ pescResidencyStatusCodes:Resident",picklist,,Optional,
 191,StudentShape,pesc:language,Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
 140,StudentShape,pesc:achievement,Achievement,TRUE,TRUE,IRI BNODE,,,,AcademicAchievementShape,Required,
 147,StudentShape,pesc:agencyAssignedID,Agency Assigned ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Required,
-163,StudentShape,cedso:hasOtherPersonName,Alternate Name,FALSE,TRUE,IRI BNODE,,,,PersonNameShape,,
+163,StudentShape,ceds:P600101,Has Other Person Name,FALSE,TRUE,IRI BNODE,,,,PersonNameShape,,
 190,StudentShape,pesc:deceasedIndicator,Deceased Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Required,true/false
 180,StudentShape,pesc:genderCode,Gender Code,FALSE,FALSE,IRI,,"pescGenderCodes:Female
 pescGenderCodes:Male
 pescGenderCodes:Unreported",picklist,,Required,
-162,StudentShape,cedso:hasPersonName,Name,TRUE,FALSE,IRI BNODE,,,,PersonNameShape,Required,
+162,StudentShape,ceds:P600336,Has Person Name,TRUE,FALSE,IRI BNODE,,,,PersonNameShape,Required,
 ,TestScoreShape,pesc:inTest,In Test,TRUE,FALSE,IRI BNODE,,,,TestShape,,
 374,TestScoreShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,Required,
 ,TestScoreShape,pesc:subTestScore,Subtest Score,FALSE,FALSE,IRI BNODE,,,,TestScoreShape,,

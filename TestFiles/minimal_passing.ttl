@@ -47,8 +47,8 @@
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a cedso:Person ;
-    cedso:hasPersonName [ a cedso:PersonName ;
+<https://people.pjjk.net/test> a ceds:C200275 ;
+    ceds:P600336 [ a cedso:PersonName ;
             cedso:FirstName "Testy"^^xsd:token ;
             cedso:LastOrSurname "Test"^^xsd:token ;
             cedso:nameCode pescNameCodes:Legal ] ;

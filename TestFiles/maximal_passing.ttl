@@ -54,15 +54,15 @@
     pesc:offeredBy <https://example.edu/Offerer#id> ;
 .
 
-<https://people.pjjk.net/test> a cedso:Person ;
-    cedso:hasPersonName [ a cedso:PersonName ;
+<https://people.pjjk.net/test> a ceds:C200275 ;
+    ceds:P600336 [ a cedso:PersonName ;
             cedso:PersonalTitleOfPrefix "Dr"^^xsd:token ;
             cedso:FirstName "Testy"^^xsd:token ;
             cedso:MiddleName "Example"^^xsd:token ;
             cedso:LastOrSurname "Test"^^xsd:token ;
             cedso:GenerationCodeOrSuffix "IX" ;
             cedso:nameCode pescNameCodes:Legal ] ;
-    cedso:hasOtherPersonName [ a cedso:PersonName ;
+    ceds:P600101 [ a cedso:PersonName ;
             cedso:FirstName "Testing"^^xsd:token ;
             cedso:LastOrSurname "Testy"^^xsd:token ] ;
     ceds:P600049 [
@@ -123,7 +123,7 @@
             elm:noteLiteral "A made up contact." ;
         ] ;
     ] ;
-    cedso:BirthDate "2000-01-01"^^xsd:date ;
+    ceds:P000033 "2000-01-01"^^xsd:date ;
     pesc:birthday "01-01"^^xsd:gMonthDay ;
     pesc:birthYear "2000"^^xsd:gYear ;
     pesc:birthCity "Sunnydale"^^xsd:string ;
