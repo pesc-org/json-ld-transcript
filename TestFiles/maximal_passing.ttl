@@ -55,16 +55,16 @@
 .
 
 <https://people.pjjk.net/test> a ceds:C200275 ;
-    ceds:P600336 [ a cedso:PersonName ;
-            cedso:PersonalTitleOfPrefix "Dr"^^xsd:token ;
-            cedso:FirstName "Testy"^^xsd:token ;
-            cedso:MiddleName "Example"^^xsd:token ;
-            cedso:LastOrSurname "Test"^^xsd:token ;
-            cedso:GenerationCodeOrSuffix "IX" ;
+    ceds:P600336 [ a ceds:C200377 ;
+            ceds:P000212 "Dr"^^xsd:token ;
+            ceds:P000115 "Testy"^^xsd:token ;
+            ceds:P000184 "Example"^^xsd:token ;
+            ceds:P000172 "Test"^^xsd:token ;
+            ceds:P000121 "IX" ;
             cedso:nameCode pescNameCodes:Legal ] ;
-    ceds:P600101 [ a cedso:PersonName ;
-            cedso:FirstName "Testing"^^xsd:token ;
-            cedso:LastOrSurname "Testy"^^xsd:token ] ;
+    ceds:P600101 [ a ceds:C200377 ;
+            ceds:P000115 "Testing"^^xsd:token ;
+            ceds:P000172 "Testy"^^xsd:token ] ;
     ceds:P600049 [
         a ceds:C200291 ;
         ceds:P001572 "123456789"^^xsd:string ;

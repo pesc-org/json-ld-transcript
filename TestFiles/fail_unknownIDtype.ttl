@@ -47,9 +47,9 @@
     pesc:offeredBy <https://example.edu/Source#id> .
 
 <https://people.pjjk.net/test> a ceds:C200275 ;
-    ceds:P600336 [ a cedso:PersonName ;
-            cedso:FirstName "Testy"^^xsd:token ;
-            cedso:LastOrSurname "Test"^^xsd:token ;
+    ceds:P600336 [ a ceds:C200377 ;
+            ceds:P000115 "Testy"^^xsd:token ;
+            ceds:P000172 "Test"^^xsd:token ;
             cedso:nameCode pescNameCodes:Legal ] ;
     ceds:P600049 [
         a ceds:C200291 ;
