@@ -949,20 +949,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:phone .
 
-<contactshapeRecordEndDate> a sh:PropertyShape ;
-    sh:datatype xsd:dateTime ;
-    sh:maxCount 1 ;
-    sh:name "Record End Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path cedso:RecordEndDateTime .
-
-<contactshapeRecordStartDate> a sh:PropertyShape ;
-    sh:datatype xsd:dateTime ;
-    sh:maxCount 1 ;
-    sh:name "Record Start Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path cedso:RecordStartDateTime .
-
 <contactshapeType> a sh:PropertyShape ;
     sh:hasValue ceterms:ContactPoint ;
     sh:minCount 1 ;
@@ -1493,7 +1479,7 @@
     sh:name "Contact"@en-US ;
     sh:node <ContactShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:contact .
+    sh:path ceterms:targetContactPoint .
 
 <organizationshapeHasOrganizationIdentification> a sh:PropertyShape ;
     sh:name "Has Organization Identification"@en-US ;
@@ -2114,8 +2100,6 @@
         <contactshapeEmailAddress>,
         <contactshapeFAXPhone>,
         <contactshapePhone>,
-        <contactshapeRecordEndDate>,
-        <contactshapeRecordStartDate>,
         <contactshapeType>,
         <contactshapeURL> ;
     sh:targetObjectsOf ceterms:targetContactPoint .
