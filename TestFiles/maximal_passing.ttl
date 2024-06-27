@@ -19,12 +19,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001> a pesc:CollegeTranscript ;
+<https://example.edu/transcripts/050330001> a pesc:CollegeTranscript ;
     pesc:createdDateTime "2023-05-08T14:17:29-05:00"^^xsd:dateTime ;
     pesc:destination <https://example.edu/Desintation#id> ;
     pesc:documentID "050330001" ;
     pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
-    pesc:hasPart <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> ;
+    pesc:hasPart <https://example.edu/achievement001> ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
@@ -131,13 +131,13 @@
     pesc:birthCountry "US" ;
     pesc:deceasedIndicator true ;
     pesc:genderCode pescGenderCodes:Unreported ;
-    pesc:achievement <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>;
+    pesc:achievement <https://example.edu/achievement001>;
     elm:additionalNote [
         rdf:type elm:Note ;
         elm:noteLiteral "A made up test peson" ;
     ].
 
-<file:///home/phil/Projects/PescTranscript/TestFiles/achievement001> 
+<https://example.edu/achievement001> 
     a pesc:AcademicAchievement, pesc:AcademicAward ;
     pesc:academicAwardDate "1985-05-01"^^xsd:date ;
     pesc:academicAwardTitle "Example Award"^^xsd:string ;

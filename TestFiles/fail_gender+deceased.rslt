@@ -25,7 +25,7 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeStudent
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001>
+	Focus Node: <https://example.edu/transcripts/050330001>
 	Value Node: <https://people.pjjk.net/test>
 	Result Path: pesc:student
 	Message: Value does not conform to Shape ex:StudentShape. See details for more information.

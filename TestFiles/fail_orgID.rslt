@@ -161,14 +161,14 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 	Severity: sh:Violation
 	Source Shape: ex:studentshapeAchievement
 	Focus Node: <https://people.pjjk.net/test>
-	Value Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+	Value Node: <https://example.edu/achievement001>
 	Result Path: pesc:achievement
 	Message: Value does not conform to Shape ex:AcademicAchievementShape. See details for more information.
 	Details:
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:academicachievementshapeInProgram
-			Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+			Focus Node: <https://example.edu/achievement001>
 			Value Node: <https://example.edu/Program/001>
 			Result Path: pesc:inProgram
 			Message: Value does not conform to Shape ex:AcademicProgramShape. See details for more information.
@@ -270,7 +270,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:academicachievementshapeSchool
-			Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+			Focus Node: <https://example.edu/achievement001>
 			Value Node: <https://example.edu/Source#id>
 			Result Path: pesc:school
 			Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
@@ -313,15 +313,15 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeHasPart
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001>
-	Value Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: <https://example.edu/achievement001>
 	Result Path: pesc:hasPart
 	Message: Value does not conform to Shape ex:AcademicAchievementShape. See details for more information.
 	Details:
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:academicachievementshapeInProgram
-			Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+			Focus Node: <https://example.edu/achievement001>
 			Value Node: <https://example.edu/Program/001>
 			Result Path: pesc:inProgram
 			Message: Value does not conform to Shape ex:AcademicProgramShape. See details for more information.
@@ -423,7 +423,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:academicachievementshapeSchool
-			Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+			Focus Node: <https://example.edu/achievement001>
 			Value Node: <https://example.edu/Source#id>
 			Result Path: pesc:school
 			Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
@@ -466,7 +466,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeSource
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001>
+	Focus Node: <https://example.edu/transcripts/050330001>
 	Value Node: <https://example.edu/Source#id>
 	Result Path: pesc:source
 	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
@@ -509,7 +509,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeStudent
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001>
+	Focus Node: <https://example.edu/transcripts/050330001>
 	Value Node: <https://people.pjjk.net/test>
 	Result Path: pesc:student
 	Message: Value does not conform to Shape ex:StudentShape. See details for more information.
@@ -518,14 +518,14 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Severity: sh:Violation
 			Source Shape: ex:studentshapeAchievement
 			Focus Node: <https://people.pjjk.net/test>
-			Value Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+			Value Node: <https://example.edu/achievement001>
 			Result Path: pesc:achievement
 			Message: Value does not conform to Shape ex:AcademicAchievementShape. See details for more information.
 			Details:
 				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:academicachievementshapeInProgram
-					Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+					Focus Node: <https://example.edu/achievement001>
 					Value Node: <https://example.edu/Program/001>
 					Result Path: pesc:inProgram
 					Message: Value does not conform to Shape ex:AcademicProgramShape. See details for more information.
@@ -627,7 +627,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:academicachievementshapeSchool
-					Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+					Focus Node: <https://example.edu/achievement001>
 					Value Node: <https://example.edu/Source#id>
 					Result Path: pesc:school
 					Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
@@ -670,7 +670,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicawardshapeAcademicAwardProgram
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+	Focus Node: <https://example.edu/achievement001>
 	Value Node: <https://example.edu/Program/001>
 	Result Path: pesc:inProgram
 	Message: Value does not conform to Shape ex:AcademicProgramShape. See details for more information.
@@ -772,7 +772,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicachievementshapeInProgram
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+	Focus Node: <https://example.edu/achievement001>
 	Value Node: <https://example.edu/Program/001>
 	Result Path: pesc:inProgram
 	Message: Value does not conform to Shape ex:AcademicProgramShape. See details for more information.
@@ -874,7 +874,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicachievementshapeSchool
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+	Focus Node: <https://example.edu/achievement001>
 	Value Node: <https://example.edu/Source#id>
 	Result Path: pesc:school
 	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.

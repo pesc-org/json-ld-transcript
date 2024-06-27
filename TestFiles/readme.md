@@ -17,7 +17,7 @@ Results (1):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
         Severity: sh:Violation
         Source Shape: ex:collegetranscriptshapeDestination
-        Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001>
+        Focus Node: <https://example.edu/transcripts/050330001>
         Result Path: pesc:destination
-        Message: Less than 1 values on <file:///home/phil/Projects/PescTranscript/TestFiles/transcripts/050330001>->pesc:destination
+        Message: Less than 1 values on <https://example.edu/transcripts/050330001>->pesc:destination
 ```
