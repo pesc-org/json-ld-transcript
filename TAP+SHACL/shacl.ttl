@@ -260,7 +260,6 @@
     sh:property <studentshapeAchievement>,
         <studentshapeAdditionalNote>,
         <studentshapeAgencyAssignedID>,
-        <studentshapeAlternateName>,
         <studentshapeBirthCity>,
         <studentshapeBirthCountry>,
         <studentshapeBirthDate>,
@@ -270,10 +269,10 @@
         <studentshapeContact>,
         <studentshapeDeceasedIndicator>,
         <studentshapeGenderCode>,
+        <studentshapeHasOtherPersonName>,
         <studentshapeHasPersonIdentifier>,
+        <studentshapeHasPersonName>,
         <studentshapeLanguage>,
-        <studentshapeName>,
-        <studentshapeOrganizationName>,
         <studentshapeResidency>,
         <studentshapeType> ;
     sh:targetObjectsOf pesc:student .
@@ -1849,12 +1848,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:agencyAssignedID .
 
-<studentshapeAlternateName> a sh:PropertyShape ;
-    sh:name "Alternate Name"@en-US ;
-    sh:node <PersonNameShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path cedso:hasOtherPersonName .
-
 <studentshapeBirthCity> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -1875,7 +1868,7 @@
     sh:maxCount 1 ;
     sh:name "Birth Date"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path cedso:BirthDate .
+    sh:path ceds:P000033 .
 
 <studentshapeBirthStateProvinceCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1918,31 +1911,30 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:genderCode .
 
+<studentshapeHasOtherPersonName> a sh:PropertyShape ;
+    sh:name "Has Other Person Name"@en-US ;
+    sh:node <PersonNameShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path ceds:P600101 .
+
 <studentshapeHasPersonIdentifier> a sh:PropertyShape ;
     sh:name "hasPersonIdentifier"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600049 .
+
+<studentshapeHasPersonName> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Has Person Name"@en-US ;
+    sh:node <PersonNameShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path ceds:P600336 .
 
 <studentshapeLanguage> a sh:PropertyShape ;
     sh:name "Language"@en-US ;
     sh:node <LanguageShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:language .
-
-<studentshapeName> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Name"@en-US ;
-    sh:node <PersonNameShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path cedso:hasPersonName .
-
-<studentshapeOrganizationName> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:maxLength 60 ;
-    sh:name "Organization Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:organizationName .
 
 <studentshapeResidency> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -1951,7 +1943,7 @@
     sh:path pesc:hasResidency .
 
 <studentshapeType> a sh:PropertyShape ;
-    sh:hasValue cedso:Person ;
+    sh:hasValue ceds:C200275 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;

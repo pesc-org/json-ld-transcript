@@ -1,53 +1,12 @@
 Validation Report
 Conforms: False
-Results (9):
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:personnameshapeFirstName
-	Focus Node: [ cedso:FirstName Literal("12", datatype=xsd:integer) ; cedso:LastOrSurname Literal("12", datatype=xsd:integer) ; rdf:type cedso:WrongClass ]
-	Value Node: Literal("12", datatype=xsd:integer)
-	Result Path: cedso:FirstName
-	Message: Value is not Literal with datatype xsd:token
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:personnameshapeLastName
-	Focus Node: [ cedso:FirstName Literal("Testy", datatype=xsd:token) ; cedso:GenerationCodeOrSuffix Literal("9", datatype=xsd:integer) ; cedso:LastOrSurname Literal("Test") ; cedso:MiddleName Literal("Example") ; cedso:PersonalTitleOfPrefix Literal("Dr") ; cedso:nameCode pescNameCodes:Legal ; rdf:type cedso:PersonName ]
-	Value Node: Literal("Test")
-	Result Path: cedso:LastOrSurname
-	Message: Value is not Literal with datatype xsd:token
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:personnameshapeLastName
-	Focus Node: [ cedso:FirstName Literal("12", datatype=xsd:integer) ; cedso:LastOrSurname Literal("12", datatype=xsd:integer) ; rdf:type cedso:WrongClass ]
-	Value Node: Literal("12", datatype=xsd:integer)
-	Result Path: cedso:LastOrSurname
-	Message: Value is not Literal with datatype xsd:token
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:personnameshapeMiddleName
-	Focus Node: [ cedso:FirstName Literal("Testy", datatype=xsd:token) ; cedso:GenerationCodeOrSuffix Literal("9", datatype=xsd:integer) ; cedso:LastOrSurname Literal("Test") ; cedso:MiddleName Literal("Example") ; cedso:PersonalTitleOfPrefix Literal("Dr") ; cedso:nameCode pescNameCodes:Legal ; rdf:type cedso:PersonName ]
-	Value Node: Literal("Example")
-	Result Path: cedso:MiddleName
-	Message: Value is not Literal with datatype xsd:token
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:personnameshapeNameSuffix
-	Focus Node: [ cedso:FirstName Literal("Testy", datatype=xsd:token) ; cedso:GenerationCodeOrSuffix Literal("9", datatype=xsd:integer) ; cedso:LastOrSurname Literal("Test") ; cedso:MiddleName Literal("Example") ; cedso:PersonalTitleOfPrefix Literal("Dr") ; cedso:nameCode pescNameCodes:Legal ; rdf:type cedso:PersonName ]
-	Value Node: Literal("9", datatype=xsd:integer)
-	Result Path: cedso:GenerationCodeOrSuffix
-	Message: Value Literal("9", datatype=xsd:integer) not in list ['Literal("V")', 'Literal("IX")', 'Literal("JR")', 'Literal("IV")', 'Literal("VI")', 'Literal("VIII")', 'Literal("II")', 'Literal("III")', 'Literal("VII")', 'Literal("I")', 'Literal("X")', 'Literal("SR")']
-Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:personnameshapeType
-	Focus Node: [ cedso:FirstName Literal("12", datatype=xsd:integer) ; cedso:LastOrSurname Literal("12", datatype=xsd:integer) ; rdf:type cedso:WrongClass ]
-	Result Path: rdf:type
-	Message: Node [ cedso:FirstName Literal("12", datatype=xsd:integer) ; cedso:LastOrSurname Literal("12", datatype=xsd:integer) ; rdf:type cedso:WrongClass ]->rdf:type does not contain a value in the set: ['cedso:PersonName']
+Results (3):
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:studentshapeAlternateName
+	Source Shape: ex:studentshapeHasOtherPersonName
 	Focus Node: <https://people.pjjk.net/test>
 	Value Node: [ cedso:FirstName Literal("12", datatype=xsd:integer) ; cedso:LastOrSurname Literal("12", datatype=xsd:integer) ; rdf:type cedso:WrongClass ]
-	Result Path: cedso:hasOtherPersonName
+	Result Path: ceds:P600101
 	Message: Value does not conform to Shape ex:PersonNameShape. See details for more information.
 	Details:
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
@@ -72,10 +31,10 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Message: Node [ cedso:FirstName Literal("12", datatype=xsd:integer) ; cedso:LastOrSurname Literal("12", datatype=xsd:integer) ; rdf:type cedso:WrongClass ]->rdf:type does not contain a value in the set: ['cedso:PersonName']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:studentshapeName
+	Source Shape: ex:studentshapeHasPersonName
 	Focus Node: <https://people.pjjk.net/test>
 	Value Node: [ cedso:FirstName Literal("Testy", datatype=xsd:token) ; cedso:GenerationCodeOrSuffix Literal("9", datatype=xsd:integer) ; cedso:LastOrSurname Literal("Test") ; cedso:MiddleName Literal("Example") ; cedso:PersonalTitleOfPrefix Literal("Dr") ; cedso:nameCode pescNameCodes:Legal ; rdf:type cedso:PersonName ]
-	Result Path: cedso:hasPersonName
+	Result Path: ceds:P600336
 	Message: Value does not conform to Shape ex:PersonNameShape. See details for more information.
 	Details:
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
@@ -98,7 +57,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: [ cedso:FirstName Literal("Testy", datatype=xsd:token) ; cedso:GenerationCodeOrSuffix Literal("9", datatype=xsd:integer) ; cedso:LastOrSurname Literal("Test") ; cedso:MiddleName Literal("Example") ; cedso:PersonalTitleOfPrefix Literal("Dr") ; cedso:nameCode pescNameCodes:Legal ; rdf:type cedso:PersonName ]
 			Value Node: Literal("9", datatype=xsd:integer)
 			Result Path: cedso:GenerationCodeOrSuffix
-			Message: Value Literal("9", datatype=xsd:integer) not in list ['Literal("V")', 'Literal("IX")', 'Literal("JR")', 'Literal("IV")', 'Literal("VI")', 'Literal("VIII")', 'Literal("II")', 'Literal("III")', 'Literal("VII")', 'Literal("I")', 'Literal("X")', 'Literal("SR")']
+			Message: Value Literal("9", datatype=xsd:integer) not in list ['Literal("V")', 'Literal("II")', 'Literal("IV")', 'Literal("JR")', 'Literal("IX")', 'Literal("I")', 'Literal("III")', 'Literal("X")', 'Literal("SR")', 'Literal("VIII")', 'Literal("VI")', 'Literal("VII")']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeStudent
@@ -109,10 +68,10 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 	Details:
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:studentshapeAlternateName
+			Source Shape: ex:studentshapeHasOtherPersonName
 			Focus Node: <https://people.pjjk.net/test>
 			Value Node: [ cedso:FirstName Literal("12", datatype=xsd:integer) ; cedso:LastOrSurname Literal("12", datatype=xsd:integer) ; rdf:type cedso:WrongClass ]
-			Result Path: cedso:hasOtherPersonName
+			Result Path: ceds:P600101
 			Message: Value does not conform to Shape ex:PersonNameShape. See details for more information.
 			Details:
 				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
@@ -137,10 +96,10 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Message: Node [ cedso:FirstName Literal("12", datatype=xsd:integer) ; cedso:LastOrSurname Literal("12", datatype=xsd:integer) ; rdf:type cedso:WrongClass ]->rdf:type does not contain a value in the set: ['cedso:PersonName']
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:studentshapeName
+			Source Shape: ex:studentshapeHasPersonName
 			Focus Node: <https://people.pjjk.net/test>
 			Value Node: [ cedso:FirstName Literal("Testy", datatype=xsd:token) ; cedso:GenerationCodeOrSuffix Literal("9", datatype=xsd:integer) ; cedso:LastOrSurname Literal("Test") ; cedso:MiddleName Literal("Example") ; cedso:PersonalTitleOfPrefix Literal("Dr") ; cedso:nameCode pescNameCodes:Legal ; rdf:type cedso:PersonName ]
-			Result Path: cedso:hasPersonName
+			Result Path: ceds:P600336
 			Message: Value does not conform to Shape ex:PersonNameShape. See details for more information.
 			Details:
 				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
@@ -163,4 +122,4 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Focus Node: [ cedso:FirstName Literal("Testy", datatype=xsd:token) ; cedso:GenerationCodeOrSuffix Literal("9", datatype=xsd:integer) ; cedso:LastOrSurname Literal("Test") ; cedso:MiddleName Literal("Example") ; cedso:PersonalTitleOfPrefix Literal("Dr") ; cedso:nameCode pescNameCodes:Legal ; rdf:type cedso:PersonName ]
 					Value Node: Literal("9", datatype=xsd:integer)
 					Result Path: cedso:GenerationCodeOrSuffix
-					Message: Value Literal("9", datatype=xsd:integer) not in list ['Literal("V")', 'Literal("IX")', 'Literal("JR")', 'Literal("IV")', 'Literal("VI")', 'Literal("VIII")', 'Literal("II")', 'Literal("III")', 'Literal("VII")', 'Literal("I")', 'Literal("X")', 'Literal("SR")']
+					Message: Value Literal("9", datatype=xsd:integer) not in list ['Literal("V")', 'Literal("II")', 'Literal("IV")', 'Literal("JR")', 'Literal("IX")', 'Literal("I")', 'Literal("III")', 'Literal("X")', 'Literal("SR")', 'Literal("VIII")', 'Literal("VI")', 'Literal("VII")']

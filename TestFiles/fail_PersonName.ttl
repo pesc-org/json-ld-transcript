@@ -46,8 +46,8 @@
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a cedso:Person ;
-    cedso:hasPersonName [ a cedso:PersonName ;
+<https://people.pjjk.net/test> a ceds:C200275 ;
+    ceds:P600336 [ a cedso:PersonName ;
             cedso:PersonalTitleOfPrefix "Dr" ;
             cedso:FirstName "Testy"^^xsd:token ; 
             cedso:FirstName "Testy"^^xsd:token ; # error, repeated
@@ -55,7 +55,7 @@
             cedso:LastOrSurname "Test" ;
             cedso:GenerationCodeOrSuffix 9 ; # error not in list
             cedso:nameCode pescNameCodes:Legal ] ;
-    cedso:hasOtherPersonName [ a cedso:WrongClass ; #error wrong class
+    ceds:P600101 [ a cedso:WrongClass ; #error wrong class
             cedso:FirstName 12 ; 
             cedso:LastOrSurname 12 ] ;
     pesc:achievement <https://example.edu/achievement001> .
