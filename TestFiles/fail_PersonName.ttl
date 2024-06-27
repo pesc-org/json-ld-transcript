@@ -1,4 +1,4 @@
-@prefix cedso: <http://ceds.ed.gov/owl#> .
+
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
@@ -54,8 +54,8 @@
             ceds:P000184 "Example" ; # error wrong type
             ceds:P000172 "Test" ;
             ceds:P000121 9 ; # error not in list
-            cedso:nameCode pescNameCodes:Legal ] ;
-    ceds:P600101 [ a cedso:WrongClass ; #error wrong class
+            pesc:nameCode pescNameCodes:Legal ] ;
+    ceds:P600101 [ a ceds:WrongClass ; #error wrong class
             ceds:P000115 12 ; 
             ceds:P000172 12 ] ;
     pesc:achievement <https://example.edu/achievement001> .
