@@ -1,9 +1,9 @@
 Validation Report
 Conforms: False
-Results (14):
+Results (16):
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:academicawardshapeAcademicAwardProgram
+	Source Shape: ex:academicachievementshapeInProgram
 	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
 	Value Node: <https://example.edu/Program/001>
 	Result Path: pesc:inProgram
@@ -25,6 +25,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Result Path: pesc:offeredBy
 					Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 					Details:
+						Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+							Details:
+								Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+								Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Less than 1 values on Literal("Rick")->rdf:type
+						Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value is not of Node Kind sh:BlankNodeOrIRI
 						Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 							Severity: sh:Violation
 							Source Shape: ex:organizationshapeOrganizationName
@@ -38,7 +65,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Focus Node: <https://example.edu/Source#id>
 							Value Node: pescSchoolLevels:fortytwo
 							Result Path: pesc:schoolLevel
-							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:academicprogramshapeOfferedBy
@@ -47,6 +74,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Result Path: pesc:offeredBy
 			Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 			Details:
+				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+					Details:
+						Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+						Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Less than 1 values on Literal("Rick")->rdf:type
+				Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value is not of Node Kind sh:BlankNodeOrIRI
 				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:organizationshapeOrganizationName
@@ -60,7 +114,105 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Focus Node: <https://example.edu/Source#id>
 					Value Node: pescSchoolLevels:fortytwo
 					Result Path: pesc:schoolLevel
-					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicachievementshapeSchool
+	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+	Value Node: <https://example.edu/Source#id>
+	Result Path: pesc:school
+	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
+	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeContact
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Rick")
+			Result Path: ceterms:targetContactPoint
+			Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+			Details:
+				Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeType
+					Focus Node: Literal("Rick")
+					Result Path: rdf:type
+					Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+				Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeType
+					Focus Node: Literal("Rick")
+					Result Path: rdf:type
+					Message: Less than 1 values on Literal("Rick")->rdf:type
+		Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeContact
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Rick")
+			Result Path: ceterms:targetContactPoint
+			Message: Value is not of Node Kind sh:BlankNodeOrIRI
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeOrganizationName
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Example Source")
+			Result Path: ceterms:name
+			Message: Value is not Literal with datatype rdf:langString
+		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeSchoolLevel
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: pescSchoolLevels:fortytwo
+			Result Path: pesc:schoolLevel
+			Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeOfferedBy
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: <https://example.edu/Source#id>
+	Result Path: pesc:offeredBy
+	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
+	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeContact
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Rick")
+			Result Path: ceterms:targetContactPoint
+			Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+			Details:
+				Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeType
+					Focus Node: Literal("Rick")
+					Result Path: rdf:type
+					Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+				Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeType
+					Focus Node: Literal("Rick")
+					Result Path: rdf:type
+					Message: Less than 1 values on Literal("Rick")->rdf:type
+		Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeContact
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Rick")
+			Result Path: ceterms:targetContactPoint
+			Message: Value is not of Node Kind sh:BlankNodeOrIRI
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeOrganizationName
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Example Source")
+			Result Path: ceterms:name
+			Message: Value is not Literal with datatype rdf:langString
+		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeSchoolLevel
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: pescSchoolLevels:fortytwo
+			Result Path: pesc:schoolLevel
+			Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeHasCourse
@@ -77,6 +229,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Result Path: pesc:offeredBy
 			Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 			Details:
+				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+					Details:
+						Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+						Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Less than 1 values on Literal("Rick")->rdf:type
+				Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value is not of Node Kind sh:BlankNodeOrIRI
 				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:organizationshapeOrganizationName
@@ -90,7 +269,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Focus Node: <https://example.edu/Source#id>
 					Value Node: pescSchoolLevels:fortytwo
 					Result Path: pesc:schoolLevel
-					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeOfferedBy
@@ -99,6 +278,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 	Result Path: pesc:offeredBy
 	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeContact
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Rick")
+			Result Path: ceterms:targetContactPoint
+			Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+			Details:
+				Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeType
+					Focus Node: Literal("Rick")
+					Result Path: rdf:type
+					Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+				Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeType
+					Focus Node: Literal("Rick")
+					Result Path: rdf:type
+					Message: Less than 1 values on Literal("Rick")->rdf:type
+		Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeContact
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Rick")
+			Result Path: ceterms:targetContactPoint
+			Message: Value is not of Node Kind sh:BlankNodeOrIRI
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:organizationshapeOrganizationName
@@ -112,41 +318,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: <https://example.edu/Source#id>
 			Value Node: pescSchoolLevels:fortytwo
 			Result Path: pesc:schoolLevel
-			Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:courseshapeOfferedBy
-	Focus Node: <https://example.edu/Course/001>
-	Value Node: <https://example.edu/Source#id>
-	Result Path: pesc:offeredBy
-	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
-	Details:
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:organizationshapeOrganizationName
-			Focus Node: <https://example.edu/Source#id>
-			Value Node: Literal("Example Source")
-			Result Path: ceterms:name
-			Message: Value is not Literal with datatype rdf:langString
-		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:organizationshapeSchoolLevel
-			Focus Node: <https://example.edu/Source#id>
-			Value Node: pescSchoolLevels:fortytwo
-			Result Path: pesc:schoolLevel
-			Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
-Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:contactshapeType
-	Focus Node: Literal("Rick")
-	Result Path: rdf:type
-	Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:contactshapeType
-	Focus Node: Literal("Rick")
-	Result Path: rdf:type
-	Message: Less than 1 values on Literal("Rick")->rdf:type
+			Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeHasPart
@@ -179,6 +351,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Result Path: pesc:offeredBy
 							Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 							Details:
+								Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:organizationshapeContact
+									Focus Node: <https://example.edu/Source#id>
+									Value Node: Literal("Rick")
+									Result Path: ceterms:targetContactPoint
+									Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+									Details:
+										Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+											Severity: sh:Violation
+											Source Shape: ex:contactshapeType
+											Focus Node: Literal("Rick")
+											Result Path: rdf:type
+											Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+										Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+											Severity: sh:Violation
+											Source Shape: ex:contactshapeType
+											Focus Node: Literal("Rick")
+											Result Path: rdf:type
+											Message: Less than 1 values on Literal("Rick")->rdf:type
+								Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:organizationshapeContact
+									Focus Node: <https://example.edu/Source#id>
+									Value Node: Literal("Rick")
+									Result Path: ceterms:targetContactPoint
+									Message: Value is not of Node Kind sh:BlankNodeOrIRI
 								Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 									Severity: sh:Violation
 									Source Shape: ex:organizationshapeOrganizationName
@@ -192,7 +391,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 									Focus Node: <https://example.edu/Source#id>
 									Value Node: pescSchoolLevels:fortytwo
 									Result Path: pesc:schoolLevel
-									Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+									Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:academicprogramshapeOfferedBy
@@ -201,6 +400,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Result Path: pesc:offeredBy
 					Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 					Details:
+						Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+							Details:
+								Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+								Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Less than 1 values on Literal("Rick")->rdf:type
+						Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value is not of Node Kind sh:BlankNodeOrIRI
 						Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 							Severity: sh:Violation
 							Source Shape: ex:organizationshapeOrganizationName
@@ -214,7 +440,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Focus Node: <https://example.edu/Source#id>
 							Value Node: pescSchoolLevels:fortytwo
 							Result Path: pesc:schoolLevel
-							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:academicachievementshapeSchool
@@ -223,6 +449,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Result Path: pesc:school
 			Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 			Details:
+				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+					Details:
+						Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+						Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Less than 1 values on Literal("Rick")->rdf:type
+				Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value is not of Node Kind sh:BlankNodeOrIRI
 				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:organizationshapeOrganizationName
@@ -236,7 +489,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Focus Node: <https://example.edu/Source#id>
 					Value Node: pescSchoolLevels:fortytwo
 					Result Path: pesc:schoolLevel
-					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeSource
@@ -245,6 +498,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 	Result Path: pesc:source
 	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeContact
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Rick")
+			Result Path: ceterms:targetContactPoint
+			Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+			Details:
+				Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeType
+					Focus Node: Literal("Rick")
+					Result Path: rdf:type
+					Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+				Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:contactshapeType
+					Focus Node: Literal("Rick")
+					Result Path: rdf:type
+					Message: Less than 1 values on Literal("Rick")->rdf:type
+		Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeContact
+			Focus Node: <https://example.edu/Source#id>
+			Value Node: Literal("Rick")
+			Result Path: ceterms:targetContactPoint
+			Message: Value is not of Node Kind sh:BlankNodeOrIRI
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:organizationshapeOrganizationName
@@ -258,7 +538,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: <https://example.edu/Source#id>
 			Value Node: pescSchoolLevels:fortytwo
 			Result Path: pesc:schoolLevel
-			Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+			Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeStudent
@@ -299,6 +579,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 									Result Path: pesc:offeredBy
 									Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 									Details:
+										Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+											Severity: sh:Violation
+											Source Shape: ex:organizationshapeContact
+											Focus Node: <https://example.edu/Source#id>
+											Value Node: Literal("Rick")
+											Result Path: ceterms:targetContactPoint
+											Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+											Details:
+												Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+													Severity: sh:Violation
+													Source Shape: ex:contactshapeType
+													Focus Node: Literal("Rick")
+													Result Path: rdf:type
+													Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+												Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+													Severity: sh:Violation
+													Source Shape: ex:contactshapeType
+													Focus Node: Literal("Rick")
+													Result Path: rdf:type
+													Message: Less than 1 values on Literal("Rick")->rdf:type
+										Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+											Severity: sh:Violation
+											Source Shape: ex:organizationshapeContact
+											Focus Node: <https://example.edu/Source#id>
+											Value Node: Literal("Rick")
+											Result Path: ceterms:targetContactPoint
+											Message: Value is not of Node Kind sh:BlankNodeOrIRI
 										Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 											Severity: sh:Violation
 											Source Shape: ex:organizationshapeOrganizationName
@@ -312,7 +619,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 											Focus Node: <https://example.edu/Source#id>
 											Value Node: pescSchoolLevels:fortytwo
 											Result Path: pesc:schoolLevel
-											Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+											Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 						Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 							Severity: sh:Violation
 							Source Shape: ex:academicprogramshapeOfferedBy
@@ -321,6 +628,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Result Path: pesc:offeredBy
 							Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 							Details:
+								Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:organizationshapeContact
+									Focus Node: <https://example.edu/Source#id>
+									Value Node: Literal("Rick")
+									Result Path: ceterms:targetContactPoint
+									Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+									Details:
+										Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+											Severity: sh:Violation
+											Source Shape: ex:contactshapeType
+											Focus Node: Literal("Rick")
+											Result Path: rdf:type
+											Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+										Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+											Severity: sh:Violation
+											Source Shape: ex:contactshapeType
+											Focus Node: Literal("Rick")
+											Result Path: rdf:type
+											Message: Less than 1 values on Literal("Rick")->rdf:type
+								Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:organizationshapeContact
+									Focus Node: <https://example.edu/Source#id>
+									Value Node: Literal("Rick")
+									Result Path: ceterms:targetContactPoint
+									Message: Value is not of Node Kind sh:BlankNodeOrIRI
 								Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 									Severity: sh:Violation
 									Source Shape: ex:organizationshapeOrganizationName
@@ -334,7 +668,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 									Focus Node: <https://example.edu/Source#id>
 									Value Node: pescSchoolLevels:fortytwo
 									Result Path: pesc:schoolLevel
-									Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+									Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:academicachievementshapeSchool
@@ -343,6 +677,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Result Path: pesc:school
 					Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 					Details:
+						Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+							Details:
+								Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+								Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Less than 1 values on Literal("Rick")->rdf:type
+						Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value is not of Node Kind sh:BlankNodeOrIRI
 						Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 							Severity: sh:Violation
 							Source Shape: ex:organizationshapeOrganizationName
@@ -356,89 +717,48 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Focus Node: <https://example.edu/Source#id>
 							Value Node: pescSchoolLevels:fortytwo
 							Result Path: pesc:schoolLevel
-							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:academicachievementshapeInProgram
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
-	Value Node: <https://example.edu/Program/001>
-	Result Path: pesc:inProgram
-	Message: Value does not conform to Shape ex:AcademicProgramShape. See details for more information.
+	Source Shape: ex:organizationshapeContact
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: Literal("Rick")
+	Result Path: ceterms:targetContactPoint
+	Message: Value does not conform to Shape ex:ContactShape. See details for more information.
 	Details:
-		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:academicprogramshapeHasCourse
-			Focus Node: <https://example.edu/Program/001>
-			Value Node: <https://example.edu/Course/001>
-			Result Path: pesc:hasCourse
-			Message: Value does not conform to Shape ex:CourseShape. See details for more information.
-			Details:
-				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:courseshapeOfferedBy
-					Focus Node: <https://example.edu/Course/001>
-					Value Node: <https://example.edu/Source#id>
-					Result Path: pesc:offeredBy
-					Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
-					Details:
-						Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-							Severity: sh:Violation
-							Source Shape: ex:organizationshapeOrganizationName
-							Focus Node: <https://example.edu/Source#id>
-							Value Node: Literal("Example Source")
-							Result Path: ceterms:name
-							Message: Value is not Literal with datatype rdf:langString
-						Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-							Severity: sh:Violation
-							Source Shape: ex:organizationshapeSchoolLevel
-							Focus Node: <https://example.edu/Source#id>
-							Value Node: pescSchoolLevels:fortytwo
-							Result Path: pesc:schoolLevel
-							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
-		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Source Shape: ex:contactshapeType
+			Focus Node: Literal("Rick")
+			Result Path: rdf:type
+			Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:academicprogramshapeOfferedBy
-			Focus Node: <https://example.edu/Program/001>
-			Value Node: <https://example.edu/Source#id>
-			Result Path: pesc:offeredBy
-			Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
-			Details:
-				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:organizationshapeOrganizationName
-					Focus Node: <https://example.edu/Source#id>
-					Value Node: Literal("Example Source")
-					Result Path: ceterms:name
-					Message: Value is not Literal with datatype rdf:langString
-				Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:organizationshapeSchoolLevel
-					Focus Node: <https://example.edu/Source#id>
-					Value Node: pescSchoolLevels:fortytwo
-					Result Path: pesc:schoolLevel
-					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Source Shape: ex:contactshapeType
+			Focus Node: Literal("Rick")
+			Result Path: rdf:type
+			Message: Less than 1 values on Literal("Rick")->rdf:type
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:academicachievementshapeSchool
-	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
-	Value Node: <https://example.edu/Source#id>
-	Result Path: pesc:school
-	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
-	Details:
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:organizationshapeOrganizationName
-			Focus Node: <https://example.edu/Source#id>
-			Value Node: Literal("Example Source")
-			Result Path: ceterms:name
-			Message: Value is not Literal with datatype rdf:langString
-		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:organizationshapeSchoolLevel
-			Focus Node: <https://example.edu/Source#id>
-			Value Node: pescSchoolLevels:fortytwo
-			Result Path: pesc:schoolLevel
-			Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+	Source Shape: ex:organizationshapeContact
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: Literal("Rick")
+	Result Path: ceterms:targetContactPoint
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeOrganizationName
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: Literal("Example Source")
+	Result Path: ceterms:name
+	Message: Value is not Literal with datatype rdf:langString
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeSchoolLevel
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: pescSchoolLevels:fortytwo
+	Result Path: pesc:schoolLevel
+	Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:studentshapeAchievement
@@ -471,6 +791,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Result Path: pesc:offeredBy
 							Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 							Details:
+								Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:organizationshapeContact
+									Focus Node: <https://example.edu/Source#id>
+									Value Node: Literal("Rick")
+									Result Path: ceterms:targetContactPoint
+									Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+									Details:
+										Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+											Severity: sh:Violation
+											Source Shape: ex:contactshapeType
+											Focus Node: Literal("Rick")
+											Result Path: rdf:type
+											Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+										Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+											Severity: sh:Violation
+											Source Shape: ex:contactshapeType
+											Focus Node: Literal("Rick")
+											Result Path: rdf:type
+											Message: Less than 1 values on Literal("Rick")->rdf:type
+								Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:organizationshapeContact
+									Focus Node: <https://example.edu/Source#id>
+									Value Node: Literal("Rick")
+									Result Path: ceterms:targetContactPoint
+									Message: Value is not of Node Kind sh:BlankNodeOrIRI
 								Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 									Severity: sh:Violation
 									Source Shape: ex:organizationshapeOrganizationName
@@ -484,7 +831,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 									Focus Node: <https://example.edu/Source#id>
 									Value Node: pescSchoolLevels:fortytwo
 									Result Path: pesc:schoolLevel
-									Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+									Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:academicprogramshapeOfferedBy
@@ -493,6 +840,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Result Path: pesc:offeredBy
 					Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 					Details:
+						Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+							Details:
+								Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+								Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Less than 1 values on Literal("Rick")->rdf:type
+						Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value is not of Node Kind sh:BlankNodeOrIRI
 						Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 							Severity: sh:Violation
 							Source Shape: ex:organizationshapeOrganizationName
@@ -506,7 +880,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 							Focus Node: <https://example.edu/Source#id>
 							Value Node: pescSchoolLevels:fortytwo
 							Result Path: pesc:schoolLevel
-							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
 		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:academicachievementshapeSchool
@@ -515,6 +889,33 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Result Path: pesc:school
 			Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
 			Details:
+				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+					Details:
+						Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+						Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Less than 1 values on Literal("Rick")->rdf:type
+				Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value is not of Node Kind sh:BlankNodeOrIRI
 				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 					Severity: sh:Violation
 					Source Shape: ex:organizationshapeOrganizationName
@@ -528,18 +929,130 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 					Focus Node: <https://example.edu/Source#id>
 					Value Node: pescSchoolLevels:fortytwo
 					Result Path: pesc:schoolLevel
-					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:organizationshapeOrganizationName
-	Focus Node: <https://example.edu/Source#id>
-	Value Node: Literal("Example Source")
-	Result Path: ceterms:name
-	Message: Value is not Literal with datatype rdf:langString
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Source Shape: ex:academicawardshapeAcademicAwardProgram
+	Focus Node: <file:///home/phil/Projects/PescTranscript/TestFiles/achievement001>
+	Value Node: <https://example.edu/Program/001>
+	Result Path: pesc:inProgram
+	Message: Value does not conform to Shape ex:AcademicProgramShape. See details for more information.
+	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:academicprogramshapeHasCourse
+			Focus Node: <https://example.edu/Program/001>
+			Value Node: <https://example.edu/Course/001>
+			Result Path: pesc:hasCourse
+			Message: Value does not conform to Shape ex:CourseShape. See details for more information.
+			Details:
+				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:courseshapeOfferedBy
+					Focus Node: <https://example.edu/Course/001>
+					Value Node: <https://example.edu/Source#id>
+					Result Path: pesc:offeredBy
+					Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
+					Details:
+						Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+							Details:
+								Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+								Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+									Severity: sh:Violation
+									Source Shape: ex:contactshapeType
+									Focus Node: Literal("Rick")
+									Result Path: rdf:type
+									Message: Less than 1 values on Literal("Rick")->rdf:type
+						Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeContact
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Rick")
+							Result Path: ceterms:targetContactPoint
+							Message: Value is not of Node Kind sh:BlankNodeOrIRI
+						Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeOrganizationName
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: Literal("Example Source")
+							Result Path: ceterms:name
+							Message: Value is not Literal with datatype rdf:langString
+						Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:organizationshapeSchoolLevel
+							Focus Node: <https://example.edu/Source#id>
+							Value Node: pescSchoolLevels:fortytwo
+							Result Path: pesc:schoolLevel
+							Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:academicprogramshapeOfferedBy
+			Focus Node: <https://example.edu/Program/001>
+			Value Node: <https://example.edu/Source#id>
+			Result Path: pesc:offeredBy
+			Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
+			Details:
+				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value does not conform to Shape ex:ContactShape. See details for more information.
+					Details:
+						Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+						Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: ex:contactshapeType
+							Focus Node: Literal("Rick")
+							Result Path: rdf:type
+							Message: Less than 1 values on Literal("Rick")->rdf:type
+				Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeContact
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Rick")
+					Result Path: ceterms:targetContactPoint
+					Message: Value is not of Node Kind sh:BlankNodeOrIRI
+				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeOrganizationName
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: Literal("Example Source")
+					Result Path: ceterms:name
+					Message: Value is not Literal with datatype rdf:langString
+				Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: ex:organizationshapeSchoolLevel
+					Focus Node: <https://example.edu/Source#id>
+					Value Node: pescSchoolLevels:fortytwo
+					Result Path: pesc:schoolLevel
+					Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Postsecondary', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:HighSchool']
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:organizationshapeSchoolLevel
-	Focus Node: <https://example.edu/Source#id>
-	Value Node: pescSchoolLevels:fortytwo
-	Result Path: pesc:schoolLevel
-	Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:JuniorHigh']
+	Source Shape: ex:contactshapeType
+	Focus Node: Literal("Rick")
+	Result Path: rdf:type
+	Message: Node Literal("Rick")->rdf:type does not contain a value in the set: ['ceterms:ContactPoint']
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:contactshapeType
+	Focus Node: Literal("Rick")
+	Result Path: rdf:type
+	Message: Less than 1 values on Literal("Rick")->rdf:type

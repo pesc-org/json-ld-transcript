@@ -42,7 +42,8 @@
     pesc:courseCreditValue 15.0 ;
     pesc:courseLevel pescCourseLevels:Honors ;
     pesc:courseTitle "Example Course"^^xsd:string ;
-    pesc:offeredBy <https://example.edu/Source#id> .
+    pesc:offeredBy <https://example.edu/Offerer#id> ;
+.
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
@@ -50,7 +51,8 @@
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
     pesc:hasCourse <https://example.edu/Course/001> ;
-    pesc:offeredBy <https://example.edu/Source#id> .
+    pesc:offeredBy <https://example.edu/Offerer#id> ;
+.
 
 <https://people.pjjk.net/test> a cedso:Person ;
     cedso:hasPersonName [ a cedso:PersonName ;
@@ -140,7 +142,8 @@
     pesc:academicAwardDate "1985-05-01"^^xsd:date ;
     pesc:academicAwardTitle "Example Award"^^xsd:string ;
     pesc:inProgram <https://example.edu/Program/001> ;
-    pesc:school <https://example.edu/Source#id> .
+    pesc:school <https://example.edu/Source#id> ;
+.
 
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en ;
@@ -173,4 +176,8 @@
     ceterms:addressRegion "CA"^^xsd:token ;
     ceterms:postalCode "90299"^^xsd:token ;
     ceterms:addressCountry "US"^^xsd:token ;
+    .
+
+<https://example.edu/Offerer#id> a ceds:C200239 ;
+    ceterms:name "Example course offerer"@en ;
     .
