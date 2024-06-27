@@ -1,4 +1,4 @@
-@prefix cedso: <http://ceds.ed.gov/owl#> .
+
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
@@ -52,7 +52,7 @@
     ceds:P600336 [ a ceds:C200377 ;
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
-            cedso:nameCode pescNameCodes:Legal ] ;
+            pesc:nameCode pescNameCodes:Legal ] ;
     ceterms:targetContactPoint [
         a ceterms:ContactPoint ;
         ceterms:contactType "Home phone"@en ;
@@ -67,8 +67,8 @@
             pesc:phoneNumberExtension "1234567890" ; # too long
         ] ;
         pesc:attentionLine "Attn: Parent or Gardian of Testy Test"@en ;
-        cedso:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        cedso:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
+        pesc:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
+        pesc:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
         elm:additionalNote [
             rdf:type elm:Note ;
             elm:noteLiteral "A made up contact." ;

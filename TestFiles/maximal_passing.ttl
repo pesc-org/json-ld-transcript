@@ -1,4 +1,4 @@
-@prefix cedso: <http://ceds.ed.gov/owl#> .
+
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix elm:  <http://data.europa.eu/snb/model/elm/>.
@@ -61,7 +61,7 @@
             ceds:P000184 "Example"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             ceds:P000121 "IX" ;
-            cedso:nameCode pescNameCodes:Legal ] ;
+            pesc:nameCode pescNameCodes:Legal ] ;
     ceds:P600101 [ a ceds:C200377 ;
             ceds:P000115 "Testing"^^xsd:token ;
             ceds:P000172 "Testy"^^xsd:token ] ;
@@ -94,8 +94,8 @@
         ceterms:contactType "Home address"@en ;
         ceterms:address <https://example.org/address/001> ;
         pesc:attentionLine "Attn: Parent or Gardian of Testy Test"@en ;
-        cedso:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        cedso:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
+        pesc:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
+        pesc:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
         elm:additionalNote [
             rdf:type elm:Note ;
             elm:noteLiteral "A made up contact." ;
@@ -116,8 +116,8 @@
             pesc:phoneNumberExtension "123" ;
         ] ;
         pesc:attentionLine "Ask for Parent or Gardian of Testy Test"@en ;
-        cedso:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
-        cedso:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
+        pesc:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;
+        pesc:RecordEndDateTime "2021-01-01T00:00:00"^^xsd:dateTime ;
         elm:additionalNote [
             rdf:type elm:Note ;
             elm:noteLiteral "A made up contact." ;

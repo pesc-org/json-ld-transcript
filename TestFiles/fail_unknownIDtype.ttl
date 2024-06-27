@@ -1,4 +1,4 @@
-@prefix cedso: <http://ceds.ed.gov/owl#> .
+
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
@@ -50,7 +50,7 @@
     ceds:P600336 [ a ceds:C200377 ;
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
-            cedso:nameCode pescNameCodes:Legal ] ;
+            pesc:nameCode pescNameCodes:Legal ] ;
     ceds:P600049 [
         a ceds:C200291 ;
         ceds:P001572 "123456789"^^xsd:string ;
