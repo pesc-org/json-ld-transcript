@@ -470,7 +470,7 @@ pescSchoolLevels:Secondary",picklist,,Recommended,
 ceds:NI001075173046
 ceds:NI001075173047
 ceds:NI001075173048",picklist,,,
-,PersonNameShape,rdf:type,Type,TRUE,TRUE,IRI,,cedso:PersonName,,,,
+,PersonNameShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200377,,,,
 164,PersonNameShape,pesc:nameCode,Name Code,FALSE,FALSE,IRI,,"pescNameCodes:Casual
 pescNameCodes:Formal
 pescNameCodes:Former
@@ -479,11 +479,11 @@ pescNameCodes:Legal
 pescNameCodes:MedicalSchoolApplicationSource
 pescNameCodes:Nickname
 pescNameCodes:Other",picklist,,Recommended,
-165,PersonNameShape,cedso:PersonalTitleOrPrefix,Name Prefix,FALSE,FALSE,Literal,xsd:token,30,maxLength,,Not Recommended,
-167,PersonNameShape,cedso:FirstName,First Name,FALSE,FALSE,Literal,xsd:token,35,maxLength,,Recommended,
-169,PersonNameShape,cedso:MiddleName,Middle Name,FALSE,TRUE,Literal,xsd:token,35,maxLength,,Recommended,
-171,PersonNameShape,cedso:LastOrSurname,Last Name,FALSE,FALSE,Literal,xsd:token,35,maxLength,,Recommended,
-173,PersonNameShape,cedso:GenerationCodeOrSuffix,Name Suffix,FALSE,FALSE,Literal,,"JR
+165,PersonNameShape,ceds:P000212,Name Prefix,FALSE,FALSE,Literal,xsd:token,30,maxLength,,Not Recommended,
+167,PersonNameShape,ceds:P000115,First Name,FALSE,FALSE,Literal,xsd:token,35,maxLength,,Recommended,
+169,PersonNameShape,ceds:P000184,Middle Name,FALSE,TRUE,Literal,xsd:token,35,maxLength,,Recommended,
+171,PersonNameShape,ceds:P000172,Last Name,FALSE,FALSE,Literal,xsd:token,35,maxLength,,Recommended,
+173,PersonNameShape,ceds:P000121,Name Suffix,FALSE,FALSE,Literal,,"JR
 SR
 I
 II
