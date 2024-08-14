@@ -260,126 +260,130 @@ pescRepeatCodes:NotCountedOther",picklist,,Recommended,
 321,CourseAchievementShape,pesc:courseBeginDate,Course Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 322,CourseAchievementShape,pesc:courseEndDate,Course End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 349,CourseAchievementShape,pesc:licensure,Licensure,FALSE,TRUE,IRI BNODE,,,,LicensureShape,Optional,
-290,CourseShape,pesc:courseCreditBasis,Course Credit Basis,TRUE,FALSE,IRI,,"pescCreditBasis:Regular
-pescCreditBasis:AcademicRenewal
-pescCreditBasis:AdvancedPlacement
-pescCreditBasis:AdvancedStanding
-pescCreditBasis:ContinuingEducation
-pescCreditBasis:Correspondence
-pescCreditBasis:Exemption
-pescCreditBasis:Equivalence
-pescCreditBasis:InternationalBaccalaureate
-pescCreditBasis:Military
-pescCreditBasis:Remedial
-pescCreditBasis:CreditByExam
-pescCreditBasis:HighSchoolTransferCredit
-pescCreditBasis:HighSchoolCreditOnly
-pescCreditBasis:HighSchoolDualCredit
-pescCreditBasis:JuniorHighSchoolCredit
-pescCreditBasis:Major
-pescCreditBasis:AdultBasic",picklist,,Required,
-324,CourseShape,pesc:courseInstructionSiteName,Course Instruction Site Name,FALSE,FALSE,Literal,xsd:string,30,maxLength,,,
-,CourseShape,pesc:courseOf,Course Of,FALSE,TRUE,IRI BNODE,,,,AcademicProgramShape,,
-,CourseShape,pesc:hasSession,Has Session,FALSE,TRUE,IRI BNODE,,,,AcademicSessionShape,,
-,CourseShape,pesc:offeredBy,Offered By,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,,
-291,CourseShape,pesc:courseCreditUnits,Course Credit Units,FALSE,FALSE,IRI,,"pescCreditUnits:NoCredit
-pescCreditUnits:Quarter
-pescCreditUnits:Semester
-pescCreditUnits:Units
-pescCreditUnits:ClockHours
-pescCreditUnits:CarnegieUnits
-pescCreditUnits:ContinuingEducationUnits
-pescCreditUnits:Unreported
-pescCreditUnits:Other",picklist,,Recommended,
-292,CourseShape,pesc:courseCreditLevel,Course Credit Level,FALSE,FALSE,IRI,,"pescCreditLevels:Undergraduate
-pescCreditLevels:LowerDivision
-pescCreditLevels:UpperDivision
-pescCreditLevels:Vocational
-pescCreditLevels:TechnicalPreparatory
-pescCreditLevels:Graduate
-pescCreditLevels:Professional
-pescCreditLevels:Dual
+,CourseShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200328,,,,
+290,CourseShape,ceds:P001303,Has Course Credit Basis Type,TRUE,FALSE,IRI,,"ceds:NI001303116728
+ceds:NI001303115164
+ceds:NI001303115209
+ceds:NI001303115213
+ceds:NI001303115491
+ceds:NI001303115507
+ceds:NI001303115675
+ceds:NI001303115664
+ceds:NI001303115957
+ceds:NI001303116120
+ceds:NI001303116736
+ceds:NI001303115519
+ceds:NI001303115860
+ceds:NI001303115857
+ceds:NI001303115859
+ceds:NI001303115979
+ceds:NI001303116065
+ceds:NI001303115203",picklist,,Required,
+324,CourseShape,ceds:P001309,Course Instruction Site Name,FALSE,FALSE,Literal,xsd:string,30,maxLength,,,
+,CourseShape,ceterms:isPartOf,Is Part Of,FALSE,TRUE,IRI BNODE,,,,AcademicProgramShape,,
+,,,,,,,,,,,,
+,CourseShape,ceterms:offeredBy,Offered By,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,,
+291,CourseShape,ceds:P000057,Has Course Credit Units,FALSE,FALSE,IRI,,"ceds:NI000057116219
+ceds:NI000057116669
+ceds:NI000057116841
+ceds:NI000057117114
+ceds:NI000057115440
+ceds:NI000057115402
+ceds:NI000057115492
+ceds:NI000057117127
+ceds:NI000057116368",picklist,,Recommended,
+292,CourseShape,ceds:P001304,Has Course Credit Level Type,FALSE,FALSE,IRI,,"ceds:NI001304117105
+ceds:NI001304116050
+ceds:NI001304117129
+ceds:NI001304117161
+ceds:NI001304117014
+ceds:NI001304115808
+ceds:NI001304116619
+ceds:NI001304115600
+ceds:NI001304115810
 pescCreditLevels:Grade13
-pescCreditLevels:DualGraduateUndergraduate
-pescCreditLevels:GraduateProfessional
-pescCreditLevels:Ungraded",picklist,,Recommended,
-293,CourseShape,pesc:courseCreditValue,Course Credit Value,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-295,CourseShape,pesc:courseAcademicGradeScaleCode,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
-300,CourseShape,pesc:courseCIPCode,Course CIP Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
-301,CourseShape,pesc:courseCSISCode,Course CSIS Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
-302,CourseShape,pesc:courseUSISCode,Course USIS Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
-303,CourseShape,pesc:courseNCESCode,Course NCES Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Not Recommended,
-304,CourseShape,pesc:courseSCEDcode,Course SCED Code,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,
-305,CourseShape,pesc:courseFiveDigitSCEDCode,Course Five Digit SCED Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
-306,CourseShape,pesc:courseSubjectAreaCode,Course Subject Area Code,FALSE,FALSE,IRI,,"pescSubjectCodes:EnglishLanguageLiterature
-pescSubjectCodes:Mathematics
-pescSubjectCodes:LifePhysicalSciences
-pescSubjectCodes:SocialSciencesHistory
-pescSubjectCodes:FinePerformingArts
-pescSubjectCodes:ForeignLanguageLiterature
-pescSubjectCodes:ReligiousEducationTheology
-pescSubjectCodes:PhysicalHealthSafetyEducation
-pescSubjectCodes:MilitaryScience
-pescSubjectCodes:ComputerInformationSciences
-pescSubjectCodes:CommunicationsAudioVisualTechnology
-pescSubjectCodes:BusinessMarketing
-pescSubjectCodes:Manufacturing
-pescSubjectCodes:HealthCareSciences
-pescSubjectCodes:PublicProtectiveGovernmentService
-pescSubjectCodes:HospitalityTourism
-pescSubjectCodes:ArchitectureConstruction
-pescSubjectCodes:AgriculturefoodNaturalResources
-pescSubjectCodes:HumanServices
-pescSubjectCodes:TransportationDistributionLogistics
-pescSubjectCodes:EngineeringTechnology
-pescSubjectCodes:Miscellaneous
-pescSubjectCodes:SpecialExceptionalEducationServices",picklist,,Optional,
-308,CourseShape,pesc:courseLevel,Course Level,FALSE,FALSE,IRI,,"pescCourseLevels:Accelerated
-pescCourseLevels:AdultBasic
-pescCourseLevels:AdvancedPlacement
-pescCourseLevels:Basic
-pescCourseLevels:InternationalBaccalaureate
-pescCourseLevels:CollegeLevel
-pescCourseLevels:CollegePreparatory
-pescCourseLevels:Dual
-pescCourseLevels:GiftedTalented
-pescCourseLevels:GraduateProfessional
-pescCourseLevels:Honors
-pescCourseLevels:LowerDivision
-pescCourseLevels:NonAcademic
-pescCourseLevels:Regents
-pescCourseLevels:Remedial
-pescCourseLevels:SpecialEducation
-pescCourseLevels:TechnicalPreparatory
-pescCourseLevels:UpperDivision
-pescCourseLevels:Vocational",picklist,,Recommended,
-309,CourseShape,pesc:courseGPAAplicabilityCode,Course GPA Applicability Code,FALSE,FALSE,IRI,,"pescGPAAplicabilityCodes:Applicable
-pescGPAAplicabilityCodes:NotApplicable
-pescGPAAplicabilityCodes:Weighted",picklist,,Optional,
-310,CourseShape,pesc:courseSubjectAbbreviation,Course Subject Abbreviation,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
-311,CourseShape,pesc:courseNumber,Course Number,FALSE,FALSE,Literal,xsd:string,15,maxLength,,Recommended,
-312,CourseShape,pesc:courseSectionNumber,Course Section Number,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
-313,CourseShape,pesc:originalCourseID,Original Course ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
+pescCreditLevels:DualGraduateUndergraduate",picklist,,Recommended,
+293,CourseShape,ceds:P000058,Course Credit Value,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+295,CourseShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
+300,CourseShape,ceds:P000043,Has Classification of Instructional Program Code,FALSE,FALSE,Literal,xsd:string,^\d{2}\.\d{4}$,pattern,,Optional,
+303,CourseShape,ceds:P001414,Has NCES College Course Map Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Not Recommended,
+304,CourseShape,ceterms:sced,Course SCED Code,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,
+305,CourseShape,ceds:P001517,Course Five Digit SCED Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
+306,CourseShape,ceds:P001518,Course Subject Area Code,FALSE,FALSE,IRI,,"ceds:NI001518118404
+ceds:NI001518118405
+ceds:NI001518118406
+ceds:NI001518118407
+ceds:NI001518118408
+ceds:NI001518118409
+ceds:NI001518118410
+ceds:NI001518118411
+ceds:NI001518118412
+ceds:NI001518118413
+ceds:NI001518118414
+ceds:NI001518118415
+ceds:NI001518118416
+ceds:NI001518118417
+ceds:NI001518118418
+ceds:NI001518118419
+ceds:NI001518118420
+ceds:NI001518118421
+ceds:NI001518118422
+ceds:NI001518118423
+ceds:NI001518118424
+ceds:NI001518118425
+ceds:NI001518118426
+",picklist,,Optional,
+308,CourseShape,ceds:P001312,Has Course Level Type,FALSE,FALSE,IRI,,"ceds:NI001312127883
+ceds:NI001312127883
+ceds:NI001312127885
+ceds:NI001312127886
+ceds:NI001312127893
+ceds:NI001312127887
+ceds:NI001312127888
+ceds:NI001312127889
+ceds:NI001312127890
+ceds:NI001312127891
+ceds:NI001312127892
+ceds:NI001312127894
+ceds:NI001312127895
+ceds:NI001312127896
+ceds:NI001312127897
+ceds:NI001312127898
+ceds:NI001312127899
+ceds:NI001312127900
+ceds:NI001312127901",picklist,,Recommended,
+309,CourseShape,ceds:P000060, Has Course Grade Point Average Applicability,FALSE,FALSE,IRI,,"ceds:NI000060115254
+ceds:NI000060116257
+ceds:NI000060117182",picklist,,Optional,
+310,CourseShape,ceds:P000066,Course Subject Abbreviation,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+311,CourseShape,ceds:P001314,Course Number,FALSE,FALSE,Literal,xsd:string,15,maxLength,,Recommended,
+312,CourseShape,ceds:P001315,Course Section Number,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+313,CourseShape,ceds:P001420,Original Course Identifier,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
 314,CourseShape,pesc:agencyCourseID,Agency Course ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
-315,CourseShape,pesc:courseTitle,Course Title,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Recommended,
+315,CourseShape,ceds:P000068,Course Title,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Recommended,
 318,CourseShape,pesc:courseOverrideSchool,Course Override School,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,Optional,
 319,CourseShape,pesc:overrideSchoolCourseNumber,Override School Course Number,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Optional,
 320,CourseShape,pesc:courseApplicability,Course Applicability,FALSE,FALSE,IRI,,"pescCourseApplicabilityCodes:NotApplicable
 pescCourseApplicabilityCodes:FirstProgram
 pescCourseApplicabilityCodes:SecondProgram
 pescCourseApplicabilityCodes:BothPrograms",picklist,,Not Recommended,
-323,CourseShape,pesc:courseInstructionSite,Course Instruction Site,FALSE,FALSE,IRI,,"pescInstructionSiteCodes:OnCampus
-pescInstructionSiteCodes:OffCampus
-pescInstructionSiteCodes:Extension
-pescInstructionSiteCodes:StudyAbroad
-pescInstructionSiteCodes:Correctional
-pescInstructionSiteCodes:Millitary
-pescInstructionSiteCodes:Telecommunication
-pescInstructionSiteCodes:Auxiliary
-pescInstructionSiteCodes:ClinicHospital",picklist,,Optional,
 331,CourseShape,pesc:Requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 332,CourseShape,pesc:Attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 333,CourseShape,pesc:Proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+,CourseShape,ceds:P600267,Has Postsecondary,FALSE,TRUE,IRI BNODE,,,,PostsecondarySectionShape,Optional,
+,PostsecondarySectionShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200332,,,,
+,PostsecondarySectionShape,ceds:P600108,Has Postsecondary Section Location,TRUE,FALSE,IRI BNODE,,,,PostsecondarySectionLocationShape,,
+,PostsecondarySectionLocationShape,rdf:type,Type,TRUE,FALSE,IRI,,ceds:C200333,,,,
+,PostsecondarySectionLocationShape,ceds:P001310,Has Course Instruction Site Type,FALSE,FALSE,IRI,,"ceds:NI001310116323
+ceds:NI001310116309
+ceds:NI001310115690
+ceds:NI001310116965
+ceds:NI001310115501
+ceds:NI001310116118
+ceds:NI001310117017
+ceds:NI001310115328
+ceds:NI001310115439",picklist,,Optional,
+,PostsecondarySectionLocationShape,ceds:P001309,Course Instruction Site Name,FALSE,TRUE,Literal,xsd:string,,,,,
 326,CourseSupplementalGradeShape,pesc:supplementalGradeCode,Supplemental Grade Code,FALSE,FALSE,IRI,,"pescSupplementalGradeCodes:BiCourseGrade
 pescSupplementalGradeCodes:BlendedFinalGrade
 pescSupplementalGradeCodes:ExamGrade

@@ -1,15 +1,21 @@
 
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
+@prefix elm:  <http://data.europa.eu/snb/model/elm/>.
+@prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
+@prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
+@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -31,9 +37,13 @@
 
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
+    ceds:P001304 ceds:NI001304117129 ; # credit level: UpperDivision
+    ceds:P000057 ceds:NI000057115402 ; # Credit units Carnegie
+    ceds:P000058 15.0 ; #credit value 15.0
+    ceds:P001312 ceds:NI001312127892 ; #course level Honors
+    ceds:P000068 "Example Course"^^xsd:string ; #course title 
     ceterms:offeredBy <https://example.edu/Source#id> ;
 .
-
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
@@ -41,28 +51,35 @@
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
     pesc:hasCourse <https://example.edu/Course/001> ;
-    pesc:offeredBy <https://example.edu/Source#id> .
+    pesc:offeredBy <https://example.edu/Offerer#id> ;
+.
 
 <https://people.pjjk.net/test> a ceds:C200275 ;
     ceds:P600336 [ a ceds:C200377 ;
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
-    ceds:P000033 "January 1 2000" ;
-    pesc:birthday "January 1" ;
-    pesc:birthYear "2000"^^xsd:date ;
-    pesc:birthCity <http://example.org/geo/Sunnydale> ;
-    pesc:birthStateProvinceCode <http://example.org/geo/CA> ;
-    pesc:birthCountry <http://example.org/geo/US> ;
     pesc:achievement <https://example.edu/achievement001> .
 
-<https://example.edu/achievement001> a pesc:AcademicAchievement,
-        pesc:AcademicAward ;
+<https://example.edu/achievement001> 
+    a pesc:AcademicAchievement, pesc:AcademicAward ;
     pesc:academicAwardDate "1985-05-01"^^xsd:date ;
     pesc:academicAwardTitle "Example Award"^^xsd:string ;
     pesc:inProgram <https://example.edu/Program/001> ;
-    pesc:school <https://example.edu/Source#id> .
+    pesc:school <https://example.edu/Source#id> ;
+.
 
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
+<https://example.org/address/001> a ceterms:PostalAddress ;
+    ceterms:streetAddress "42 No Street"@en ;
+    ceterms:addressLocality "Sunnydale"@en ;
+    ceterms:addressRegion "CA"^^xsd:token ;
+    ceterms:postalCode "90299"^^xsd:token ;
+    ceterms:addressCountry "US"^^xsd:token ;
+    .
+
+<https://example.edu/Offerer#id> a ceds:C200239 ;
+    ceterms:name "Example course offerer"@en ;
+    .
