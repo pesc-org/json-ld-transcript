@@ -279,7 +279,6 @@ ceds:NI001303115859
 ceds:NI001303115979
 ceds:NI001303116065
 ceds:NI001303115203",picklist,,Required,
-324,CourseShape,ceds:P001309,Course Instruction Site Name,FALSE,FALSE,Literal,xsd:string,30,maxLength,,,
 ,CourseShape,ceterms:isPartOf,Is Part Of,FALSE,TRUE,IRI BNODE,,,,AcademicProgramShape,,
 ,,,,,,,,,,,,
 ,CourseShape,ceterms:offeredBy,Offered By,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,,
@@ -331,10 +330,9 @@ ceds:NI001518118422
 ceds:NI001518118423
 ceds:NI001518118424
 ceds:NI001518118425
-ceds:NI001518118426
-",picklist,,Optional,
+ceds:NI001518118426",picklist,,Optional,
 308,CourseShape,ceds:P001312,Has Course Level Type,FALSE,FALSE,IRI,,"ceds:NI001312127883
-ceds:NI001312127883
+ceds:NI001312127884
 ceds:NI001312127885
 ceds:NI001312127886
 ceds:NI001312127893
@@ -357,7 +355,7 @@ ceds:NI000060116257
 ceds:NI000060117182",picklist,,Optional,
 310,CourseShape,ceds:P000066,Course Subject Abbreviation,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
 311,CourseShape,ceds:P001314,Course Number,FALSE,FALSE,Literal,xsd:string,15,maxLength,,Recommended,
-312,CourseShape,ceds:P001315,Course Section Number,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+312,PostsecondarySectionShape,ceds:P001315,Course Section Number,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
 313,CourseShape,ceds:P001420,Original Course Identifier,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
 314,CourseShape,pesc:agencyCourseID,Agency Course ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
 315,CourseShape,ceds:P000068,Course Title,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Recommended,
@@ -370,7 +368,7 @@ pescCourseApplicabilityCodes:BothPrograms",picklist,,Not Recommended,
 331,CourseShape,pesc:Requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 332,CourseShape,pesc:Attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 333,CourseShape,pesc:Proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
-,CourseShape,ceds:P600267,Has Postsecondary,FALSE,TRUE,IRI BNODE,,,,PostsecondarySectionShape,Optional,
+,CourseShape,ceds:P600267,Has Postsecondary Section,FALSE,TRUE,IRI BNODE,,,,PostsecondarySectionShape,Optional,
 ,PostsecondarySectionShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200332,,,,
 ,PostsecondarySectionShape,ceds:P600108,Has Postsecondary Section Location,TRUE,FALSE,IRI BNODE,,,,PostsecondarySectionLocationShape,,
 ,PostsecondarySectionLocationShape,rdf:type,Type,TRUE,FALSE,IRI,,ceds:C200333,,,,

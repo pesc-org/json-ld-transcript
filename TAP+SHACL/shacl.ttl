@@ -259,7 +259,8 @@
     sh:closed false ;
     sh:description "Normally type will be ceds:C200332"@en ;
     sh:name "Postsecondary Location Shape"@en ;
-    sh:property <postsecondarysectionshapeHasPostsecondarySectionLocation>,
+    sh:property <postsecondarysectionshapeCourseSectionNumber>,
+        <postsecondarysectionshapeHasPostsecondarySectionLocation>,
         <postsecondarysectionshapeType> ;
     sh:targetObjectsOf ceds:P600267 .
 
@@ -1107,14 +1108,6 @@
     sh:nodeKind sh:Literal ;
     sh:path ceds:P001517 .
 
-<courseshapeCourseInstructionSiteName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Course Instruction Site Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001309 .
-
 <courseshapeCourseNumber> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -1138,14 +1131,6 @@
     sh:name "Course SCED Code"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceterms:sced .
-
-<courseshapeCourseSectionNumber> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Course Section Number"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001315 .
 
 <courseshapeCourseSubjectAbbreviation> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1208,7 +1193,7 @@
     sh:path ceds:P000060 .
 
 <courseshapeHasCourseLevelType> a sh:PropertyShape ;
-    sh:in ( ceds:NI001312127883 ceds:NI001312127885 ceds:NI001312127886 ceds:NI001312127893 ceds:NI001312127887 ceds:NI001312127888 ceds:NI001312127889 ceds:NI001312127890 ceds:NI001312127891 ceds:NI001312127892 ceds:NI001312127894 ceds:NI001312127895 ceds:NI001312127896 ceds:NI001312127897 ceds:NI001312127898 ceds:NI001312127899 ceds:NI001312127900 ceds:NI001312127901 ) ;
+    sh:in ( ceds:NI001312127883 ceds:NI001312127884 ceds:NI001312127885 ceds:NI001312127886 ceds:NI001312127893 ceds:NI001312127887 ceds:NI001312127888 ceds:NI001312127889 ceds:NI001312127890 ceds:NI001312127891 ceds:NI001312127892 ceds:NI001312127894 ceds:NI001312127895 ceds:NI001312127896 ceds:NI001312127897 ceds:NI001312127898 ceds:NI001312127899 ceds:NI001312127900 ceds:NI001312127901 ) ;
     sh:maxCount 1 ;
     sh:name "Has Course Level Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -1222,8 +1207,8 @@
     sh:nodeKind sh:Literal ;
     sh:path ceds:P001414 .
 
-<courseshapeHasPostsecondary> a sh:PropertyShape ;
-    sh:name "Has Postsecondary"@en-US ;
+<courseshapeHasPostsecondarySection> a sh:PropertyShape ;
+    sh:name "Has Postsecondary Section"@en-US ;
     sh:node <PostsecondarySectionShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600267 .
@@ -1688,6 +1673,14 @@
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
+
+<postsecondarysectionshapeCourseSectionNumber> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 10 ;
+    sh:name "Course Section Number"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P001315 .
 
 <postsecondarysectionshapeHasPostsecondarySectionLocation> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -2208,11 +2201,9 @@
         <courseshapeCourseApplicability>,
         <courseshapeCourseCreditValue>,
         <courseshapeCourseFiveDigitSCEDCode>,
-        <courseshapeCourseInstructionSiteName>,
         <courseshapeCourseNumber>,
         <courseshapeCourseOverrideSchool>,
         <courseshapeCourseSCEDCode>,
-        <courseshapeCourseSectionNumber>,
         <courseshapeCourseSubjectAbbreviation>,
         <courseshapeCourseSubjectAreaCode>,
         <courseshapeCourseTitle>,
@@ -2223,7 +2214,7 @@
         <courseshapeHasCourseGradePointAverageApplicability>,
         <courseshapeHasCourseLevelType>,
         <courseshapeHasNCESCollegeCourseMapCode>,
-        <courseshapeHasPostsecondary>,
+        <courseshapeHasPostsecondarySection>,
         <courseshapeIsPartOf>,
         <courseshapeOfferedBy>,
         <courseshapeOriginalCourseIdentifier>,
