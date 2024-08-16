@@ -1,0 +1,22 @@
+0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
+6,ContactShape,ceterms:contactType,Contact Type,FALSE,TRUE,Literal,rdf:langString,1..80,lengthRange,,Optional,
+104,ContactShape,ceterms:address,Address,FALSE,TRUE,IRI BNODE,,,,PostalAddressShape,Recommended,
+106,ContactShape,pesc:phone,Phone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,Optional,
+107,ContactShape,pesc:faxPhone,FAX Phone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,Optional,
+108,ContactShape,pesc:email,Email Address,FALSE,TRUE,Literal,xsd:string,,,,Optional,
+109,ContactShape,pesc:url,URL,FALSE,TRUE,Literal,xsd:anyURI,,,,Optional,
+289,ContactShape,rdf:type,Type,TRUE,TRUE,IRI,,ceterms:ContactPoint,,,,
+7,ContactShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
+123,ContactShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,rdf:langString,45,maxLength,,Optional,
+,PhoneShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Phone,,,,
+126,PhoneShape,pesc:countryPrefixCode,Country Prefix Code,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,
+132,PhoneShape,pesc:phoneNumberExtension,Phone Number Extension,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Optional,
+130,PhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,Required,"Including the area code, no spaces or other delimiters."
+110,PostalAddressShape,ceterms:streetAddress,Street Address,TRUE,TRUE,Literal,rdf:langString,,,,Required,pesc:core:CommonAddressDetailsGroup
+111,PostalAddressShape,ceterms:addressLocality,"Address Locality, e.g. City",TRUE,FALSE,Literal,rdf:langString,,,,Required,pesc:core:CommonAddressDetailsGroup
+116,PostalAddressShape,ceterms:addressCountry,Country Code,TRUE,FALSE,Literal,xsd:token,,,,Required,pesc:core:InternationalAddressDetailsGroup
+115,PostalAddressShape,ceterms:postalCode,Postal Code,FALSE,FALSE,Literal,xsd:token,,,,Required,"pesc:core:DomesticAddressDetailsGroup
+pesc:core:InternationalAddressDetailsGroup"
+112,PostalAddressShape,ceterms:addressRegion,"Address Region, e.g State or Province Code",TRUE,FALSE,Literal,xsd:token,,,,Required,"pesc:core:DomesticAddressDetailsGroup
+pesc:core:InternationalAddressDetailsGroup"
+,PostalAddressShape,rdf:type,Type,TRUE,FALSE,IRI,,ceterms:PostalAddress,,,,
