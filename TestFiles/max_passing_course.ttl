@@ -1,0 +1,121 @@
+
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceterms: <https://purl.org/ctdl/terms/> .
+@prefix elm:  <http://data.europa.eu/snb/model/elm/>.
+@prefix ex: <http://example.org/> .
+@prefix pesc: <https://pesc.org/terms/> .
+@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
+@prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
+@prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
+@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
+@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
+@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
+@prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
+@prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
+@prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
+@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.edu/transcripts/050330001> a pesc:CollegeTranscript ;
+    pesc:createdDateTime "2023-05-08T14:17:29-05:00"^^xsd:dateTime ;
+    pesc:destination <https://example.edu/Desintation#id> ;
+    pesc:documentID "050330001" ;
+    pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
+    pesc:hasPart <https://example.edu/achievement001> ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
+    pesc:transmissionType pescTransmissionTypes:Original .
+
+<https://example.edu/Session/001> a pesc:AcademicSession ;
+    pesc:offeredBy <https://example.edu/Source#id> ;
+    pesc:sessionDesignator "2019-09"^^xsd:gYearMonth ;
+    pesc:sessionName "Fall 2019"^^xsd:string ;
+    pesc:sessionType pescSessionTypes:Semester .
+
+<https://example.edu/Course/001> a ceds:C200328 ;  #Course
+    ceds:P000043 "12.1234"; # CIP 
+    ceds:P000057 ceds:NI000057115402 ; # Credit units Carnegie
+    ceds:P000058 15.0 ; # credit value
+    ceds:P000060 ceds:NI000060116257; # Grade point applicability
+    ceds:P000066 "abbrev" ; #Course subject abbreviation
+    ceds:P000068 "Example Course"^^xsd:string ; # course title 
+    ceds:P001298 "A-F" ; # Grade scale code; to do: valid values 
+    ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
+    ceds:P001304 ceds:NI001304117129 ; # credit level: UpperDivision
+    ceds:P001312 ceds:NI001312127892 ; #course level Honors
+    ceds:P001314 "101" ; # Course Number (as a string)
+    ceds:P001414 "0123456789" ; # NCES course map code
+    ceds:P001420 "Course101" ;  # Original course identifier
+    pesc:agencyCourseID "ABC101"; # Agency course ID
+    ceterms:sced "12345X1.0512" ; # 12 digit sced code
+    ceds:P001517 "01234" ; # 5 digiti sced code
+    ceds:P001518 ceds:NI001518118404 ; # copurse subject area code ;
+    pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram ;
+    ceterms:offeredBy <https://example.edu/Source#id> ;
+    ceterms:isPartOf <https://example.edu/Program/001> ;
+    pesc:Requirement <https://example.edu/reqs/1> ;
+    pesc:Attribute <https://example.edu/attr/1> ;
+    pesc:Proficiency <https://example.edu/prof/1> ;
+    ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
+.
+
+<https://example.edu/reqs/1> a pesc:RequirementAttributeProficiency ;
+. 
+
+<https://example.edu/attr/1>  a pesc:RequirementAttributeProficiency ;
+. 
+
+<https://example.edu/prof/1>  a pesc:RequirementAttributeProficiency ;
+. 
+
+<https://example.edu/CourseSection/001> a ceds:C200332 ;
+    ceds:P001315 "42" ; # course section number as string
+    ceds:P600108 <https://example.edu/Location/001> ; # has location
+.
+
+<https://example.edu/Location/001> a ceds:C200333 ;
+    ceds:P001309 "Site 1" ; # Instruction site name
+    ceds:P001310 ceds:NI001310116323 ; # Instruction site type
+.
+
+<https://example.edu/Desintation#id> a ceds:C200239 ;
+    ceterms:name "Example Destination"@en .
+
+<https://example.edu/Program/001> a pesc:AcademicProgram ;
+    pesc:academicProgramName "Example Program"^^xsd:string ;
+    pesc:offeredBy <https://example.edu/Offerer#id> ;
+.
+
+<https://people.pjjk.net/test> a ceds:C200275 ;
+    ceds:P600336 [ a ceds:C200377 ;
+            ceds:P000115 "Testy"^^xsd:token ;
+            ceds:P000172 "Test"^^xsd:token ;
+            pesc:nameCode pescNameCodes:Legal ] ;
+    pesc:achievement <https://example.edu/achievement001> .
+
+<https://example.edu/achievement001> 
+    a pesc:AcademicAchievement, pesc:AcademicAward ;
+    pesc:academicAwardDate "1985-05-01"^^xsd:date ;
+    pesc:academicAwardTitle "Example Award"^^xsd:string ;
+    pesc:inProgram <https://example.edu/Program/001> ;
+    pesc:school <https://example.edu/Source#id> ;
+.
+
+<https://example.edu/Source#id> a ceds:C200239 ;
+    ceterms:name "Example Source"@en .
+
+<https://example.org/address/001> a ceterms:PostalAddress ;
+    ceterms:streetAddress "42 No Street"@en ;
+    ceterms:addressLocality "Sunnydale"@en ;
+    ceterms:addressRegion "CA"^^xsd:token ;
+    ceterms:postalCode "90299"^^xsd:token ;
+    ceterms:addressCountry "US"^^xsd:token ;
+    .
+
+<https://example.edu/Offerer#id> a ceds:C200239 ;
+    ceterms:name "Example course offerer"@en ;
+    .

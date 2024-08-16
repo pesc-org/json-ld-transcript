@@ -13,21 +13,16 @@
 @prefix pescAgencyCodes: <https://pesc.org/vocabs/AgencyCodes#> .
 @prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
-@prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
-@prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
-@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
-@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
+@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescDeliquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
 @prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
-@prefix pescGPAAplicabilityCodes: <https://pesc.org/vocabs/GPAAplicabilityCodes#> .
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
 @prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
-@prefix pescInstructionSiteCodes: <https://pesc.org/vocabs/InstructionSiteCodes#> .
 @prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
 @prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
@@ -37,7 +32,6 @@
 @prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
-@prefix pescSubjectCodes: <https://pesc.org/vocabs/SubjectCodes#> .
 @prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
 @prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
@@ -252,6 +246,23 @@
         <postaladdressshapeStreetAddress>,
         <postaladdressshapeType> ;
     sh:targetObjectsOf ceterms:address .
+
+<PostsecondarySectionLocationShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Postsecondary Section Location Shape"@en ;
+    sh:property <postsecondarysectionlocationshapeCourseInstructionSiteName>,
+        <postsecondarysectionlocationshapeHasCourseInstructionSiteType>,
+        <postsecondarysectionlocationshapeType> ;
+    sh:targetObjectsOf ceds:P600108 .
+
+<PostsecondarySectionShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be ceds:C200332"@en ;
+    sh:name "Postsecondary Location Shape"@en ;
+    sh:property <postsecondarysectionshapeCourseSectionNumber>,
+        <postsecondarysectionshapeHasPostsecondarySectionLocation>,
+        <postsecondarysectionshapeType> ;
+    sh:targetObjectsOf ceds:P600267 .
 
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;
@@ -1072,7 +1083,7 @@
     sh:maxCount 1 ;
     sh:name "Course Academic Grade Scale Code"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseAcademicGradeScaleCode .
+    sh:path ceds:P001298 .
 
 <courseshapeCourseApplicability> a sh:PropertyShape ;
     sh:in ( pescCourseApplicabilityCodes:NotApplicable pescCourseApplicabilityCodes:FirstProgram pescCourseApplicabilityCodes:SecondProgram pescCourseApplicabilityCodes:BothPrograms ) ;
@@ -1081,96 +1092,20 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:courseApplicability .
 
-<courseshapeCourseCIPCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Course CIP Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:courseCIPCode .
-
-<courseshapeCourseCSISCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Course CSIS Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:courseCSISCode .
-
-<courseshapeCourseCreditBasis> a sh:PropertyShape ;
-    sh:in ( pescCreditBasis:Regular pescCreditBasis:AcademicRenewal pescCreditBasis:AdvancedPlacement pescCreditBasis:AdvancedStanding pescCreditBasis:ContinuingEducation pescCreditBasis:Correspondence pescCreditBasis:Exemption pescCreditBasis:Equivalence pescCreditBasis:InternationalBaccalaureate pescCreditBasis:Military pescCreditBasis:Remedial pescCreditBasis:CreditByExam pescCreditBasis:HighSchoolTransferCredit pescCreditBasis:HighSchoolCreditOnly pescCreditBasis:HighSchoolDualCredit pescCreditBasis:JuniorHighSchoolCredit pescCreditBasis:Major pescCreditBasis:AdultBasic ) ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Course Credit Basis"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:courseCreditBasis .
-
-<courseshapeCourseCreditLevel> a sh:PropertyShape ;
-    sh:in ( pescCreditLevels:Undergraduate pescCreditLevels:LowerDivision pescCreditLevels:UpperDivision pescCreditLevels:Vocational pescCreditLevels:TechnicalPreparatory pescCreditLevels:Graduate pescCreditLevels:Professional pescCreditLevels:Dual pescCreditLevels:Grade13 pescCreditLevels:DualGraduateUndergraduate pescCreditLevels:GraduateProfessional pescCreditLevels:Ungraded ) ;
-    sh:maxCount 1 ;
-    sh:name "Course Credit Level"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:courseCreditLevel .
-
-<courseshapeCourseCreditUnits> a sh:PropertyShape ;
-    sh:in ( pescCreditUnits:NoCredit pescCreditUnits:Quarter pescCreditUnits:Semester pescCreditUnits:Units pescCreditUnits:ClockHours pescCreditUnits:CarnegieUnits pescCreditUnits:ContinuingEducationUnits pescCreditUnits:Unreported pescCreditUnits:Other ) ;
-    sh:maxCount 1 ;
-    sh:name "Course Credit Units"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:courseCreditUnits .
-
 <courseshapeCourseCreditValue> a sh:PropertyShape ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "Course Credit Value"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseCreditValue .
+    sh:path ceds:P000058 .
 
 <courseshapeCourseFiveDigitSCEDCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
-    sh:maxLength 5 ;
-    sh:minLength 5 ;
     sh:name "Course Five Digit SCED Code"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseFiveDigitSCEDCode .
-
-<courseshapeCourseGPAApplicabilityCode> a sh:PropertyShape ;
-    sh:in ( pescGPAAplicabilityCodes:Applicable pescGPAAplicabilityCodes:NotApplicable pescGPAAplicabilityCodes:Weighted ) ;
-    sh:maxCount 1 ;
-    sh:name "Course GPA Applicability Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:courseGPAAplicabilityCode .
-
-<courseshapeCourseInstructionSite> a sh:PropertyShape ;
-    sh:in ( pescInstructionSiteCodes:OnCampus pescInstructionSiteCodes:OffCampus pescInstructionSiteCodes:Extension pescInstructionSiteCodes:StudyAbroad pescInstructionSiteCodes:Correctional pescInstructionSiteCodes:Millitary pescInstructionSiteCodes:Telecommunication pescInstructionSiteCodes:Auxiliary pescInstructionSiteCodes:ClinicHospital ) ;
-    sh:maxCount 1 ;
-    sh:name "Course Instruction Site"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:courseInstructionSite .
-
-<courseshapeCourseInstructionSiteName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Course Instruction Site Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:courseInstructionSiteName .
-
-<courseshapeCourseLevel> a sh:PropertyShape ;
-    sh:in ( pescCourseLevels:Accelerated pescCourseLevels:AdultBasic pescCourseLevels:AdvancedPlacement pescCourseLevels:Basic pescCourseLevels:InternationalBaccalaureate pescCourseLevels:CollegeLevel pescCourseLevels:CollegePreparatory pescCourseLevels:Dual pescCourseLevels:GiftedTalented pescCourseLevels:GraduateProfessional pescCourseLevels:Honors pescCourseLevels:LowerDivision pescCourseLevels:NonAcademic pescCourseLevels:Regents pescCourseLevels:Remedial pescCourseLevels:SpecialEducation pescCourseLevels:TechnicalPreparatory pescCourseLevels:UpperDivision pescCourseLevels:Vocational ) ;
-    sh:maxCount 1 ;
-    sh:name "Course Level"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:courseLevel .
-
-<courseshapeCourseNCESCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Course NCES Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:courseNCESCode .
+    sh:path ceds:P001517 ;
+    sh:pattern "^\\d{5}$" .
 
 <courseshapeCourseNumber> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1178,13 +1113,7 @@
     sh:maxLength 15 ;
     sh:name "Course Number"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseNumber .
-
-<courseshapeCourseOf> a sh:PropertyShape ;
-    sh:name "Course Of"@en-US ;
-    sh:node <AcademicProgramShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:courseOf .
+    sh:path ceds:P001314 .
 
 <courseshapeCourseOverrideSchool> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -1196,19 +1125,10 @@
 <courseshapeCourseSCEDCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
-    sh:maxLength 12 ;
-    sh:minLength 12 ;
     sh:name "Course SCED Code"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseSCEDcode .
-
-<courseshapeCourseSectionNumber> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Course Section Number"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:courseSectionNumber .
+    sh:path ceterms:sced ;
+    sh:pattern "^\\d{5}[BGEHCX]\\d[\\d|.]\\d\\d[1-9][1-9]$" .
 
 <courseshapeCourseSubjectAbbreviation> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1216,14 +1136,14 @@
     sh:maxLength 10 ;
     sh:name "Course Subject Abbreviation"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseSubjectAbbreviation .
+    sh:path ceds:P000066 .
 
 <courseshapeCourseSubjectAreaCode> a sh:PropertyShape ;
-    sh:in ( pescSubjectCodes:EnglishLanguageLiterature pescSubjectCodes:Mathematics pescSubjectCodes:LifePhysicalSciences pescSubjectCodes:SocialSciencesHistory pescSubjectCodes:FinePerformingArts pescSubjectCodes:ForeignLanguageLiterature pescSubjectCodes:ReligiousEducationTheology pescSubjectCodes:PhysicalHealthSafetyEducation pescSubjectCodes:MilitaryScience pescSubjectCodes:ComputerInformationSciences pescSubjectCodes:CommunicationsAudioVisualTechnology pescSubjectCodes:BusinessMarketing pescSubjectCodes:Manufacturing pescSubjectCodes:HealthCareSciences pescSubjectCodes:PublicProtectiveGovernmentService pescSubjectCodes:HospitalityTourism pescSubjectCodes:ArchitectureConstruction pescSubjectCodes:AgriculturefoodNaturalResources pescSubjectCodes:HumanServices pescSubjectCodes:TransportationDistributionLogistics pescSubjectCodes:EngineeringTechnology pescSubjectCodes:Miscellaneous pescSubjectCodes:SpecialExceptionalEducationServices ) ;
+    sh:in ( ceds:NI001518118404 ceds:NI001518118405 ceds:NI001518118406 ceds:NI001518118407 ceds:NI001518118408 ceds:NI001518118409 ceds:NI001518118410 ceds:NI001518118411 ceds:NI001518118412 ceds:NI001518118413 ceds:NI001518118414 ceds:NI001518118415 ceds:NI001518118416 ceds:NI001518118417 ceds:NI001518118418 ceds:NI001518118419 ceds:NI001518118420 ceds:NI001518118421 ceds:NI001518118422 ceds:NI001518118423 ceds:NI001518118424 ceds:NI001518118425 ceds:NI001518118426 ) ;
     sh:maxCount 1 ;
     sh:name "Course Subject Area Code"@en-US ;
     sh:nodeKind sh:IRI ;
-    sh:path pesc:courseSubjectAreaCode .
+    sh:path ceds:P001518 .
 
 <courseshapeCourseTitle> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1231,21 +1151,71 @@
     sh:maxLength 60 ;
     sh:name "Course Title"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseTitle .
+    sh:path ceds:P000068 .
 
-<courseshapeCourseUSISCode> a sh:PropertyShape ;
+<courseshapeHasClassificationofInstructionalProgramCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Has Classification of Instructional Program Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000043 ;
+    sh:pattern "^\\d{2}\\.\\d{4}$" .
+
+<courseshapeHasCourseCreditBasisType> a sh:PropertyShape ;
+    sh:in ( ceds:NI001303116728 ceds:NI001303115164 ceds:NI001303115209 ceds:NI001303115213 ceds:NI001303115491 ceds:NI001303115507 ceds:NI001303115675 ceds:NI001303115664 ceds:NI001303115957 ceds:NI001303116120 ceds:NI001303116736 ceds:NI001303115519 ceds:NI001303115860 ceds:NI001303115857 ceds:NI001303115859 ceds:NI001303115979 ceds:NI001303116065 ceds:NI001303115203 ) ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Has Course Credit Basis Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P001303 .
+
+<courseshapeHasCourseCreditLevelType> a sh:PropertyShape ;
+    sh:in ( ceds:NI001304117105 ceds:NI001304116050 ceds:NI001304117129 ceds:NI001304117161 ceds:NI001304117014 ceds:NI001304115808 ceds:NI001304116619 ceds:NI001304115600 ceds:NI001304115810 pescCreditUnits:Grade13 pescCreditUnits:DualGraduateUndergraduate ) ;
+    sh:maxCount 1 ;
+    sh:name "Has Course Credit Level Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P001304 .
+
+<courseshapeHasCourseCreditUnits> a sh:PropertyShape ;
+    sh:in ( ceds:NI000057116219 ceds:NI000057116669 ceds:NI000057116841 ceds:NI000057117114 ceds:NI000057115440 ceds:NI000057115402 ceds:NI000057115492 ceds:NI000057117127 ceds:NI000057116368 ) ;
+    sh:maxCount 1 ;
+    sh:name "Has Course Credit Units"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P000057 .
+
+<courseshapeHasCourseGradePointAverageApplicability> a sh:PropertyShape ;
+    sh:in ( ceds:NI000060115254 ceds:NI000060116257 ceds:NI000060117182 ) ;
+    sh:maxCount 1 ;
+    sh:name " Has Course Grade Point Average Applicability"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P000060 .
+
+<courseshapeHasCourseLevelType> a sh:PropertyShape ;
+    sh:in ( ceds:NI001312127883 ceds:NI001312127884 ceds:NI001312127885 ceds:NI001312127886 ceds:NI001312127893 ceds:NI001312127887 ceds:NI001312127888 ceds:NI001312127889 ceds:NI001312127890 ceds:NI001312127891 ceds:NI001312127892 ceds:NI001312127894 ceds:NI001312127895 ceds:NI001312127896 ceds:NI001312127897 ceds:NI001312127898 ceds:NI001312127899 ceds:NI001312127900 ceds:NI001312127901 ) ;
+    sh:maxCount 1 ;
+    sh:name "Has Course Level Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P001312 .
+
+<courseshapeHasNCESCollegeCourseMapCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:maxLength 10 ;
-    sh:name "Course USIS Code"@en-US ;
+    sh:name "Has NCES College Course Map Code"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseUSISCode .
+    sh:path ceds:P001414 .
 
-<courseshapeHasSession> a sh:PropertyShape ;
-    sh:name "Has Session"@en-US ;
-    sh:node <AcademicSessionShape> ;
+<courseshapeHasPostsecondarySection> a sh:PropertyShape ;
+    sh:name "Has Postsecondary Section"@en-US ;
+    sh:node <PostsecondarySectionShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasSession .
+    sh:path ceds:P600267 .
+
+<courseshapeIsPartOf> a sh:PropertyShape ;
+    sh:name "Is Part Of"@en-US ;
+    sh:node <AcademicProgramShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path ceterms:isPartOf .
 
 <courseshapeOfferedBy> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -1253,15 +1223,15 @@
     sh:name "Offered By"@en-US ;
     sh:node <OrganizationShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:offeredBy .
+    sh:path ceterms:offeredBy .
 
-<courseshapeOriginalCourseID> a sh:PropertyShape ;
+<courseshapeOriginalCourseIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:maxLength 30 ;
-    sh:name "Original Course ID"@en-US ;
+    sh:name "Original Course Identifier"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:originalCourseID .
+    sh:path ceds:P001420 .
 
 <courseshapeOverrideSchoolCourseNumber> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1282,6 +1252,13 @@
     sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:Requirement .
+
+<courseshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200328 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <coursesupplementalgradeshapeCourseAcademicSupplementalGrade> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1669,6 +1646,50 @@
 <postaladdressshapeType> a sh:PropertyShape ;
     sh:hasValue ceterms:PostalAddress ;
     sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<postsecondarysectionlocationshapeCourseInstructionSiteName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:name "Course Instruction Site Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P001309 .
+
+<postsecondarysectionlocationshapeHasCourseInstructionSiteType> a sh:PropertyShape ;
+    sh:in ( ceds:NI001310116323 ceds:NI001310116309 ceds:NI001310115690 ceds:NI001310116965 ceds:NI001310115501 ceds:NI001310116118 ceds:NI001310117017 ceds:NI001310115328 ceds:NI001310115439 ) ;
+    sh:maxCount 1 ;
+    sh:name "Has Course Instruction Site Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P001310 .
+
+<postsecondarysectionlocationshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200333 ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<postsecondarysectionshapeCourseSectionNumber> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 10 ;
+    sh:name "Course Section Number"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P001315 .
+
+<postsecondarysectionshapeHasPostsecondarySectionLocation> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Has Postsecondary Section Location"@en-US ;
+    sh:node <PostsecondarySectionLocationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path ceds:P600108 .
+
+<postsecondarysectionshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200332 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -2081,6 +2102,18 @@
     sh:targetObjectsOf pesc:achievement,
         pesc:hasPart .
 
+<AcademicSessionShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Session"@en ;
+    sh:property <academicsessionshapeSessionBeginDate>,
+        <academicsessionshapeSessionDesignator>,
+        <academicsessionshapeSessionDesignatorSuffix>,
+        <academicsessionshapeSessionEndDate>,
+        <academicsessionshapeSessionName>,
+        <academicsessionshapeSessionSchoolYear>,
+        <academicsessionshapeSessionType> ;
+    sh:targetClass pesc:AcademicSession .
+
 <ContactShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Contact"@en ;
@@ -2157,53 +2190,37 @@
         <academichonorsshapeHonorsTitle> ;
     sh:targetClass pesc:AcademicHonors .
 
-<AcademicSessionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Session"@en ;
-    sh:property <academicsessionshapeSessionBeginDate>,
-        <academicsessionshapeSessionDesignator>,
-        <academicsessionshapeSessionDesignatorSuffix>,
-        <academicsessionshapeSessionEndDate>,
-        <academicsessionshapeSessionName>,
-        <academicsessionshapeSessionSchoolYear>,
-        <academicsessionshapeSessionType> ;
-    sh:targetClass pesc:AcademicSession .
-
 <CourseShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Course"@en ;
+    sh:name "Post Secondary Course"@en ;
     sh:property <courseshapeAgencyCourseID>,
         <courseshapeAttribute>,
         <courseshapeCourseAcademicGradeScaleCode>,
         <courseshapeCourseApplicability>,
-        <courseshapeCourseCIPCode>,
-        <courseshapeCourseCSISCode>,
-        <courseshapeCourseCreditBasis>,
-        <courseshapeCourseCreditLevel>,
-        <courseshapeCourseCreditUnits>,
         <courseshapeCourseCreditValue>,
         <courseshapeCourseFiveDigitSCEDCode>,
-        <courseshapeCourseGPAApplicabilityCode>,
-        <courseshapeCourseInstructionSite>,
-        <courseshapeCourseInstructionSiteName>,
-        <courseshapeCourseLevel>,
-        <courseshapeCourseNCESCode>,
         <courseshapeCourseNumber>,
-        <courseshapeCourseOf>,
         <courseshapeCourseOverrideSchool>,
         <courseshapeCourseSCEDCode>,
-        <courseshapeCourseSectionNumber>,
         <courseshapeCourseSubjectAbbreviation>,
         <courseshapeCourseSubjectAreaCode>,
         <courseshapeCourseTitle>,
-        <courseshapeCourseUSISCode>,
-        <courseshapeHasSession>,
+        <courseshapeHasClassificationofInstructionalProgramCode>,
+        <courseshapeHasCourseCreditBasisType>,
+        <courseshapeHasCourseCreditLevelType>,
+        <courseshapeHasCourseCreditUnits>,
+        <courseshapeHasCourseGradePointAverageApplicability>,
+        <courseshapeHasCourseLevelType>,
+        <courseshapeHasNCESCollegeCourseMapCode>,
+        <courseshapeHasPostsecondarySection>,
+        <courseshapeIsPartOf>,
         <courseshapeOfferedBy>,
-        <courseshapeOriginalCourseID>,
+        <courseshapeOriginalCourseIdentifier>,
         <courseshapeOverrideSchoolCourseNumber>,
         <courseshapeProficiency>,
-        <courseshapeRequirement> ;
-    sh:targetClass pesc:Course .
+        <courseshapeRequirement>,
+        <courseshapeType> ;
+    sh:targetClass ceds:C200328 .
 
 <TestShape> a sh:NodeShape ;
     sh:closed false ;

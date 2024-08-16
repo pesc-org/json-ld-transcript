@@ -29,14 +29,12 @@
     pesc:sessionName "Fall 2019"^^xsd:string ;
     pesc:sessionType pescSessionTypes:Semester .
 
-<https://example.edu/Course/001> a pesc:Course ;
-    pesc:courseCreditBasis pescCreditBasis:Regular ;
-    pesc:courseCreditLevel pescCreditLevels:UpperDivision ;
-    pesc:courseCreditUnits pescCreditUnits:CarnegieUnits ;
-    pesc:courseCreditValue 15.0 ;
-    pesc:courseLevel pescCourseLevels:Honors ;
-    pesc:courseTitle "Example Course"^^xsd:string ;
-    pesc:offeredBy <https://example.edu/Source#id> .
+<https://example.edu/Course/001> a ceds:C200328 ;  #Course
+    ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
+    ceterms:offeredBy <https://example.edu/Source#id> ;
+.
+
+
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
