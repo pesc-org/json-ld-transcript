@@ -306,8 +306,8 @@ pescCreditLevels:DualGraduateUndergraduate",picklist,,Recommended,
 295,CourseShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
 300,CourseShape,ceds:P000043,Has Classification of Instructional Program Code,FALSE,FALSE,Literal,xsd:string,^\d{2}\.\d{4}$,pattern,,Optional,
 303,CourseShape,ceds:P001414,Has NCES College Course Map Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Not Recommended,
-304,CourseShape,ceterms:sced,Course SCED Code,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,
-305,CourseShape,ceds:P001517,Course Five Digit SCED Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
+304,CourseShape,ceterms:sced,Course SCED Code,FALSE,FALSE,Literal,xsd:string,^\d{5}[BGEHCX]\d[\d|.]\d\d[1-9][1-9]$,pattern,,Not Recommended,
+305,CourseShape,ceds:P001517,Course Five Digit SCED Code,FALSE,FALSE,Literal,xsd:string,^\d{5}$,pattern,,Optional,
 306,CourseShape,ceds:P001518,Course Subject Area Code,FALSE,FALSE,IRI,,"ceds:NI001518118404
 ceds:NI001518118405
 ceds:NI001518118406

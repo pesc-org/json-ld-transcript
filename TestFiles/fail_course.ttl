@@ -43,10 +43,10 @@
     ceds:P001312 ceds:NI00000 ; #course level invalid
     ceds:P001314 101 ; # Course Number (as a string)
     ceds:P001414 "12345678901" ; #NCES course map code too long
-    ceterms:sced "0123456789abc" ; # too long 12 digit sced code
+    ceterms:sced "12345S1.0512" ; # too long 12 digit sced code
     ceds:P001420 101 ;  # should be a sting Original course identifier
     pesc:agencyCourseID <http://wrong.type> ; # Agency course ID
-    ceds:P001517 "012345"; # too long 5 digit sced code
+    ceds:P001517 "abcde"; # not a 5 digit sced code
     ceds:P001518 ceds:NI0000 ; # in valid course subject area code ;
     pesc:courseApplicability pescCourseApplicabilityCodes:NotValid ;
     ceterms:offeredBy "Source ID" ; # wrong type

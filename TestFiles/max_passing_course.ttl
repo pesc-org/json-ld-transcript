@@ -51,7 +51,7 @@
     ceds:P001414 "0123456789" ; # NCES course map code
     ceds:P001420 "Course101" ;  # Original course identifier
     pesc:agencyCourseID "ABC101"; # Agency course ID
-    ceterms:sced "0123456789ab" ; # 12 digit sced code
+    ceterms:sced "12345X1.0512" ; # 12 digit sced code
     ceds:P001517 "01234" ; # 5 digiti sced code
     ceds:P001518 ceds:NI001518118404 ; # copurse subject area code ;
     pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram ;
