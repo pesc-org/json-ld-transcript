@@ -1,0 +1,24 @@
+Validation Report
+Conforms: False
+Results (3):
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeContact
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: Literal("Rick")
+	Result Path: ceterms:targetContactPoint
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeOrganizationName
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: Literal("Example Source")
+	Result Path: ceterms:name
+	Message: Value is not Literal with datatype rdf:langString
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeSchoolLevel
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: pescSchoolLevels:fortytwo
+	Result Path: pesc:schoolLevel
+	Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Elementary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Other']
