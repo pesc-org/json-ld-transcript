@@ -4,6 +4,7 @@
 @prefix elm:  <http://data.europa.eu/snb/model/elm/>.
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
+@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
@@ -36,15 +37,48 @@
     pesc:sessionType pescSessionTypes:Semester .
 
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
+    ceds:P000043 "12.1234"; # CIP 
+    ceds:P000057 ceds:NI000057115402 ; # Credit units Carnegie
+    ceds:P000058 15.0 ; # credit value
+    ceds:P000060 ceds:NI000060116257; # Grade point applicability
+    ceds:P000066 "abbrev" ; #Course subject abbreviation
+    ceds:P000068 "Example Course"^^xsd:string ; # course title 
+    ceds:P001298 "A-F" ; # Grade scale code; to do: valid values 
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
+    ceds:P001304 ceds:NI001304117129 ; # credit level: UpperDivision
+    ceds:P001312 ceds:NI001312127892 ; #course level Honors
+    ceds:P001314 "101" ; # Course Number (as a string)
+    ceds:P001414 "0123456789" ; # NCES course map code
+    ceds:P001420 "Course101" ;  # Original course identifier
+    pesc:agencyCourseID "ABC101"; # Agency course ID
+    ceterms:sced "12345X1.0512" ; # 12 digit sced code
+    ceds:P001517 "01234" ; # 5 digiti sced code
+    ceds:P001518 ceds:NI001518118404 ; # copurse subject area code ;
+    pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram ;
     ceterms:offeredBy <https://example.edu/Source#id> ;
+    ceterms:isPartOf <https://example.edu/Program/001> ;
+    pesc:Requirement <https://example.edu/reqs/1> ;
+    pesc:Attribute <https://example.edu/attr/1> ;
+    pesc:Proficiency <https://example.edu/prof/1> ;
+    ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
+.
+
+<https://example.edu/CourseSection/001> a ceds:C200332 ;
+    ceds:P001315 "42" ; # course section number as string
+    ceds:P600108 <https://example.edu/Location/001> ; # has location
+.
+
+<https://example.edu/Location/001> a ceds:C200333 ;
+    ceds:P001309 "Site 1" ; # Instruction site name
+    ceds:P001310 ceds:NI001310116323 ; # Instruction site type
 .
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 
 <https://example.edu/Program/001> a pesc:AcademicProgram ;
-    pesc:offeredBy <https://example.edu/Source#id> ;
+    pesc:academicProgramName "Example Program"^^xsd:string ;
+    pesc:offeredBy <https://example.edu/Offerer#id> ;
 .
 
 <https://people.pjjk.net/test> a ceds:C200275 ;

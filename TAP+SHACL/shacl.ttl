@@ -7,30 +7,21 @@
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAcademicAwardLevels: <https://pesc.org/vocabs/AcademicAwardLevels#> .
-@prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
 @prefix pescAcademicSummaryLevels: <https://pesc.org/vocabs/AcademicSummaryLevels#> .
 @prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescAgencyCodes: <https://pesc.org/vocabs/AgencyCodes#> .
 @prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
-@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescDeliquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
 @prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
-@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
-@prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
 @prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
 @prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
-@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescRepeatCodes: <https://pesc.org/vocabs/RepeatCodes#> .
-@prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
-@prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
-@prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
-@prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
 @prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
 @prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#> .
@@ -78,6 +69,11 @@
         <academicsummaryshapeHighSchoolCreditSummary> ;
     sh:targetClass pesc:AcademicSummary .
 
+<AccreditationShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Accreditation"@en ;
+    sh:targetClass pesc:Accreditation .
+
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "To Be Done"@en ;
@@ -122,6 +118,11 @@
     sh:name "SKOS Concept"@en ;
     sh:targetClass skos:Concept .
 
+<ContactShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Contact"@en ;
+    sh:targetObjectsOf ceterms:targetContactPoint .
+
 <CourseRepeatCodeShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Repeat Code"@en ;
@@ -132,14 +133,45 @@
     sh:name "Language Of Instruction"@en ;
     sh:targetClass pesc:LanguageOfInstruction .
 
+<OrganizationIdentifierShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be ceds:C200252"@en ;
+    sh:name "Organization Identifier"@en ;
+    sh:targetObjectsOf ceds:P600502 .
+
 <PersonIdentifierShape> a sh:NodeShape ;
     sh:closed false ;
     sh:description "Normally type will be ceds: C200291"@en ;
     sh:name "Person Identifier"@en ;
-    sh:property <personidentifiershapeHasStudentIdentificationSystem>,
-        <personidentifiershapePersonIdentifier>,
-        <personidentifiershapeType> ;
     sh:targetObjectsOf ceds:P600049 .
+
+<PersonNameShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Name"@en ;
+    sh:targetObjectsOf ceds:P600101,
+        ceds:P600336 .
+
+<PhoneShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Phone"@en ;
+    sh:targetObjectsOf pesc:faxPhone,
+        pesc:phone .
+
+<PostalAddressShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Postal Address"@en ;
+    sh:targetObjectsOf ceterms:address .
+
+<PostsecondarySectionLocationShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Postsecondary Section Location Shape"@en ;
+    sh:targetObjectsOf ceds:P600108 .
+
+<PostsecondarySectionShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be ceds:C200332"@en ;
+    sh:name "Postsecondary Location Shape"@en ;
+    sh:targetObjectsOf ceds:P600267 .
 
 <ProgramSummaryShape> a sh:NodeShape ;
     sh:closed false ;
@@ -159,14 +191,6 @@
 <ResidencyShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Residency"@en ;
-    sh:property <residencyshapeCountry>,
-        <residencyshapeCountryCode>,
-        <residencyshapeCounty>,
-        <residencyshapeCountyCode>,
-        <residencyshapeResidencyStatusCode>,
-        <residencyshapeStateProvince>,
-        <residencyshapeStateProvinceCode>,
-        <residencyshapeType> ;
     sh:targetObjectsOf pesc:hasResidency .
 
 <TBDShape> a sh:NodeShape ;
@@ -174,6 +198,22 @@
     sh:description "To Be Done"@en ;
     sh:name "To Be Done"@en ;
     sh:targetClass pesc:TBD .
+
+<AcademicAchievementShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Achievement "@en ;
+    sh:property <academicachievementshapeAdditionalNote>,
+        <academicachievementshapeCohortGraduationYear>,
+        <academicachievementshapeInCourse>,
+        <academicachievementshapeInProgram>,
+        <academicachievementshapeInSession>,
+        <academicachievementshapeInTest>,
+        <academicachievementshapeSchool>,
+        <academicachievementshapeStudentLevel>,
+        <academicachievementshapeType>,
+        <academicachievementshapeVerifiedBy> ;
+    sh:targetObjectsOf pesc:achievement,
+        pesc:hasPart .
 
 <AcademicDegreeRequirementShape> a sh:NodeShape ;
     sh:closed false ;
@@ -184,13 +224,10 @@
         <academicdegreerequirementshapeURLAddress2> ;
     sh:targetClass pesc:AcademicDegreeRequirement .
 
-<AccreditationShape> a sh:NodeShape ;
+<AcademicSessionShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Accreditation"@en ;
-    sh:property <accreditationshapeAccrediationBodyCode>,
-        <accreditationshapeAccreditingBodyName>,
-        <accreditationshapeAdditionalNote> ;
-    sh:targetClass pesc:Accreditation .
+    sh:name "Academic Session"@en ;
+    sh:targetClass pesc:AcademicSession .
 
 <CourseAchievementShape> a sh:NodeShape ;
     sh:closed false ;
@@ -220,6 +257,14 @@
         <coursesupplementalgradeshapeSupplementalGradeSubSession> ;
     sh:targetClass pesc:CourseSupplementalGrade .
 
+<LanguageShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Language"@en ;
+    sh:property <languageshapeLanguageCode>,
+        <languageshapeLanguageProficiency>,
+        <languageshapeLanguageUsage> ;
+    sh:targetClass pesc:Language .
+
 <LicensureShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Licensure"@en ;
@@ -227,64 +272,9 @@
         <licensureshapeLicensurePassageDate> ;
     sh:targetClass pesc:Licensure .
 
-<OrganizationIdentifierShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:description "Normally type will be ceds:C200252"@en ;
-    sh:name "Organization Identifier"@en ;
-    sh:property <organizationidentifiershapeHasOrganizationIdentificationSystem>,
-        <organizationidentifiershapeOrganizationIdentifier>,
-        <organizationidentifiershapeType> ;
-    sh:targetObjectsOf ceds:P600502 .
-
-<PostalAddressShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Postal Address"@en ;
-    sh:property <postaladdressshapeAddressLocality%252Ce.g.City>,
-        <postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode>,
-        <postaladdressshapeCountryCode>,
-        <postaladdressshapePostalCode>,
-        <postaladdressshapeStreetAddress>,
-        <postaladdressshapeType> ;
-    sh:targetObjectsOf ceterms:address .
-
-<PostsecondarySectionLocationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Postsecondary Section Location Shape"@en ;
-    sh:property <postsecondarysectionlocationshapeCourseInstructionSiteName>,
-        <postsecondarysectionlocationshapeHasCourseInstructionSiteType>,
-        <postsecondarysectionlocationshapeType> ;
-    sh:targetObjectsOf ceds:P600108 .
-
-<PostsecondarySectionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:description "Normally type will be ceds:C200332"@en ;
-    sh:name "Postsecondary Location Shape"@en ;
-    sh:property <postsecondarysectionshapeCourseSectionNumber>,
-        <postsecondarysectionshapeHasPostsecondarySectionLocation>,
-        <postsecondarysectionshapeType> ;
-    sh:targetObjectsOf ceds:P600267 .
-
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Student"@en ;
-    sh:property <studentshapeAchievement>,
-        <studentshapeAdditionalNote>,
-        <studentshapeAgencyAssignedID>,
-        <studentshapeBirthCity>,
-        <studentshapeBirthCountry>,
-        <studentshapeBirthDate>,
-        <studentshapeBirthStateProvinceCode>,
-        <studentshapeBirthYear>,
-        <studentshapeBirthday>,
-        <studentshapeContact>,
-        <studentshapeDeceasedIndicator>,
-        <studentshapeGenderCode>,
-        <studentshapeHasOtherPersonName>,
-        <studentshapeHasPersonIdentifier>,
-        <studentshapeHasPersonName>,
-        <studentshapeLanguage>,
-        <studentshapeResidency>,
-        <studentshapeType> ;
     sh:targetObjectsOf pesc:student .
 
 <TestScoreShape> a sh:NodeShape ;
@@ -465,154 +455,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:HonorsTitle .
 
-<academicprogramshapeAcademicProgramName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 60 ;
-    sh:name "Academic Program Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:academicProgramName .
-
-<academicprogramshapeAcademicProgramType> a sh:PropertyShape ;
-    sh:in ( pescAcademicProgramTypes:Concentration pescAcademicProgramTypes:Focus pescAcademicProgramTypes:Major pescAcademicProgramTypes:Minor pescAcademicProgramTypes:SecondMajor pescAcademicProgramTypes:Specialization ) ;
-    sh:maxCount 1 ;
-    sh:name "Academic Program Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:academicProgramType .
-
-<academicprogramshapeHasCourse> a sh:PropertyShape ;
-    sh:name "Has Course"@en-US ;
-    sh:node <CourseShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasCourse .
-
-<academicprogramshapeHasSession> a sh:PropertyShape ;
-    sh:name "Has Session"@en-US ;
-    sh:node <AcademicSessionShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasSession .
-
-<academicprogramshapeOfferedBy> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Offered By"@en-US ;
-    sh:node <OrganizationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:offeredBy .
-
-<academicprogramshapeProgramCIPCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minLength 6 ;
-    sh:name "Program CIP Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programCIPCode .
-
-<academicprogramshapeProgramCSISCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 5 ;
-    sh:minLength 5 ;
-    sh:name "Program CSIS Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programCSISCode .
-
-<academicprogramshapeProgramESISCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minLength 1 ;
-    sh:name "Program ESIS Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programESISCode .
-
-<academicprogramshapeProgramHEGISCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minLength 6 ;
-    sh:name "Program HEGIS Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programHEGISCode .
-
-<academicprogramshapeProgramLocalCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minLength 1 ;
-    sh:name "Program Local Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programLocalCode .
-
-<academicprogramshapeProgramSecondarySchoolCode> a sh:PropertyShape ;
-    sh:in ( pescSecondarySchoolCodes:CareerPrep pescSecondarySchoolCodes:CollegePrep pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep pescSecondarySchoolCodes:CollegeTechPrep pescSecondarySchoolCodes:General pescSecondarySchoolCodes:Occupational pescSecondarySchoolCodes:Vocational ) ;
-    sh:maxCount 1 ;
-    sh:name "Program Secondary School Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:programSecondarySchoolCode .
-
-<academicprogramshapeProgramUSISCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 5 ;
-    sh:minLength 5 ;
-    sh:name "Program USIS Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programUSISCode .
-
-<academicsessionshapeSessionBeginDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Session Begin Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionBeginDate .
-
-<academicsessionshapeSessionDesignator> a sh:PropertyShape ;
-    sh:datatype xsd:gYearMonth ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Session Designator"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionDesignator .
-
-<academicsessionshapeSessionDesignatorSuffix> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Session Designator Suffix"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionDesignatorSuffix .
-
-<academicsessionshapeSessionEndDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Session End Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionEndDate .
-
-<academicsessionshapeSessionName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Session Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionName .
-
-<academicsessionshapeSessionSchoolYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Session School Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionSchoolYear .
-
-<academicsessionshapeSessionType> a sh:PropertyShape ;
-    sh:in ( pescSessionTypes:FullYear pescSessionTypes:Semester pescSessionTypes:Trimester pescSessionTypes:Quarter pescSessionTypes:Quinmester pescSessionTypes:MiniTerm pescSessionTypes:SummerSession pescSessionTypes:Intersession pescSessionTypes:LongSession pescSessionTypes:FallSession pescSessionTypes:FourOneFourPlan pescSessionTypes:Continuous pescSessionTypes:DiffersByProgram pescSessionTypes:Other pescSessionTypes:TwelveMonth ) ;
-    sh:maxCount 1 ;
-    sh:name "Session Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:sessionType .
-
 <academicsummaryshapeAcademicHonors> a sh:PropertyShape ;
     sh:name "Academic Honors"@en-US ;
     sh:node <AcademicHonorsShape> ;
@@ -719,28 +561,6 @@
     sh:name "High School Credit Summary"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:highSchoolCreditSummary .
-
-<accreditationshapeAccrediationBodyCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:in ( "MSA NCA-HLC NCA-CASI NEASC-CIHE NEASC-CTCI NWCCU SACS WASC-ACCJC WASC-ACSCU Other" ) ;
-    sh:maxCount 1 ;
-    sh:name "Accrediation Body Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:accreditationBodyCode .
-
-<accreditationshapeAccreditingBodyName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 80 ;
-    sh:name "Accrediting Body Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:accreditingBodyName .
-
-<accreditationshapeAdditionalNote> a sh:PropertyShape ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
 
 <additionalstudentachievmentshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
@@ -913,64 +733,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:verifiableCredential .
 
-<contactshapeAdditionalNote> a sh:PropertyShape ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
-
-<contactshapeAddress> a sh:PropertyShape ;
-    sh:name "Address"@en-US ;
-    sh:node <PostalAddressShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceterms:address .
-
-<contactshapeAttentionLine> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:maxLength 45 ;
-    sh:name "Attention Line"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:attentionLine .
-
-<contactshapeContactType> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:maxLength 80 ;
-    sh:minLength 1 ;
-    sh:name "Contact Type"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:contactType .
-
-<contactshapeEmailAddress> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:name "Email Address"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:email .
-
-<contactshapeFAXPhone> a sh:PropertyShape ;
-    sh:name "FAX Phone"@en-US ;
-    sh:node <PhoneShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:faxPhone .
-
-<contactshapePhone> a sh:PropertyShape ;
-    sh:name "Phone"@en-US ;
-    sh:node <PhoneShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:phone .
-
-<contactshapeType> a sh:PropertyShape ;
-    sh:hasValue ceterms:ContactPoint ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<contactshapeURL> a sh:PropertyShape ;
-    sh:datatype xsd:anyURI ;
-    sh:name "URL"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:url .
-
 <courseachievementshapeCourseAcademicGrade> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -1063,202 +825,6 @@
     sh:node <LicensureShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:licensure .
-
-<courseshapeAgencyCourseID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Agency Course ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:agencyCourseID .
-
-<courseshapeAttribute> a sh:PropertyShape ;
-    sh:name "Attribute"@en-US ;
-    sh:node <RAPShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Attribute .
-
-<courseshapeCourseAcademicGradeScaleCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Course Academic Grade Scale Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001298 .
-
-<courseshapeCourseApplicability> a sh:PropertyShape ;
-    sh:in ( pescCourseApplicabilityCodes:NotApplicable pescCourseApplicabilityCodes:FirstProgram pescCourseApplicabilityCodes:SecondProgram pescCourseApplicabilityCodes:BothPrograms ) ;
-    sh:maxCount 1 ;
-    sh:name "Course Applicability"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:courseApplicability .
-
-<courseshapeCourseCreditValue> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Course Credit Value"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000058 .
-
-<courseshapeCourseFiveDigitSCEDCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Course Five Digit SCED Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001517 ;
-    sh:pattern "^\\d{5}$" .
-
-<courseshapeCourseNumber> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 15 ;
-    sh:name "Course Number"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001314 .
-
-<courseshapeCourseOverrideSchool> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "Course Override School"@en-US ;
-    sh:node <OrganizationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:courseOverrideSchool .
-
-<courseshapeCourseSCEDCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Course SCED Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:sced ;
-    sh:pattern "^\\d{5}[BGEHCX]\\d[\\d|.]\\d\\d[1-9][1-9]$" .
-
-<courseshapeCourseSubjectAbbreviation> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Course Subject Abbreviation"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000066 .
-
-<courseshapeCourseSubjectAreaCode> a sh:PropertyShape ;
-    sh:in ( ceds:NI001518118404 ceds:NI001518118405 ceds:NI001518118406 ceds:NI001518118407 ceds:NI001518118408 ceds:NI001518118409 ceds:NI001518118410 ceds:NI001518118411 ceds:NI001518118412 ceds:NI001518118413 ceds:NI001518118414 ceds:NI001518118415 ceds:NI001518118416 ceds:NI001518118417 ceds:NI001518118418 ceds:NI001518118419 ceds:NI001518118420 ceds:NI001518118421 ceds:NI001518118422 ceds:NI001518118423 ceds:NI001518118424 ceds:NI001518118425 ceds:NI001518118426 ) ;
-    sh:maxCount 1 ;
-    sh:name "Course Subject Area Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P001518 .
-
-<courseshapeCourseTitle> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 60 ;
-    sh:name "Course Title"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000068 .
-
-<courseshapeHasClassificationofInstructionalProgramCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Has Classification of Instructional Program Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000043 ;
-    sh:pattern "^\\d{2}\\.\\d{4}$" .
-
-<courseshapeHasCourseCreditBasisType> a sh:PropertyShape ;
-    sh:in ( ceds:NI001303116728 ceds:NI001303115164 ceds:NI001303115209 ceds:NI001303115213 ceds:NI001303115491 ceds:NI001303115507 ceds:NI001303115675 ceds:NI001303115664 ceds:NI001303115957 ceds:NI001303116120 ceds:NI001303116736 ceds:NI001303115519 ceds:NI001303115860 ceds:NI001303115857 ceds:NI001303115859 ceds:NI001303115979 ceds:NI001303116065 ceds:NI001303115203 ) ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Has Course Credit Basis Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P001303 .
-
-<courseshapeHasCourseCreditLevelType> a sh:PropertyShape ;
-    sh:in ( ceds:NI001304117105 ceds:NI001304116050 ceds:NI001304117129 ceds:NI001304117161 ceds:NI001304117014 ceds:NI001304115808 ceds:NI001304116619 ceds:NI001304115600 ceds:NI001304115810 pescCreditUnits:Grade13 pescCreditUnits:DualGraduateUndergraduate ) ;
-    sh:maxCount 1 ;
-    sh:name "Has Course Credit Level Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P001304 .
-
-<courseshapeHasCourseCreditUnits> a sh:PropertyShape ;
-    sh:in ( ceds:NI000057116219 ceds:NI000057116669 ceds:NI000057116841 ceds:NI000057117114 ceds:NI000057115440 ceds:NI000057115402 ceds:NI000057115492 ceds:NI000057117127 ceds:NI000057116368 ) ;
-    sh:maxCount 1 ;
-    sh:name "Has Course Credit Units"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P000057 .
-
-<courseshapeHasCourseGradePointAverageApplicability> a sh:PropertyShape ;
-    sh:in ( ceds:NI000060115254 ceds:NI000060116257 ceds:NI000060117182 ) ;
-    sh:maxCount 1 ;
-    sh:name " Has Course Grade Point Average Applicability"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P000060 .
-
-<courseshapeHasCourseLevelType> a sh:PropertyShape ;
-    sh:in ( ceds:NI001312127883 ceds:NI001312127884 ceds:NI001312127885 ceds:NI001312127886 ceds:NI001312127893 ceds:NI001312127887 ceds:NI001312127888 ceds:NI001312127889 ceds:NI001312127890 ceds:NI001312127891 ceds:NI001312127892 ceds:NI001312127894 ceds:NI001312127895 ceds:NI001312127896 ceds:NI001312127897 ceds:NI001312127898 ceds:NI001312127899 ceds:NI001312127900 ceds:NI001312127901 ) ;
-    sh:maxCount 1 ;
-    sh:name "Has Course Level Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P001312 .
-
-<courseshapeHasNCESCollegeCourseMapCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Has NCES College Course Map Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001414 .
-
-<courseshapeHasPostsecondarySection> a sh:PropertyShape ;
-    sh:name "Has Postsecondary Section"@en-US ;
-    sh:node <PostsecondarySectionShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceds:P600267 .
-
-<courseshapeIsPartOf> a sh:PropertyShape ;
-    sh:name "Is Part Of"@en-US ;
-    sh:node <AcademicProgramShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceterms:isPartOf .
-
-<courseshapeOfferedBy> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Offered By"@en-US ;
-    sh:node <OrganizationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceterms:offeredBy .
-
-<courseshapeOriginalCourseIdentifier> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Original Course Identifier"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001420 .
-
-<courseshapeOverrideSchoolCourseNumber> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 35 ;
-    sh:name "Override School Course Number"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:overrideSchoolCourseNumber .
-
-<courseshapeProficiency> a sh:PropertyShape ;
-    sh:name "Proficiency"@en-US ;
-    sh:node <RAPShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Proficiency .
-
-<courseshapeRequirement> a sh:PropertyShape ;
-    sh:name "Requirement"@en-US ;
-    sh:node <RAPShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Requirement .
-
-<courseshapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200328 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
 
 <coursesupplementalgradeshapeCourseAcademicSupplementalGrade> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -1421,280 +987,6 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<organizationidentifiershapeHasOrganizationIdentificationSystem> a sh:PropertyShape ;
-    sh:in ( ceds:NI000827151968 pescIdentifierTypes:OPEid pescIdentifierTypes:PSISid ) ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Has Organization Identification System"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P000827 .
-
-<organizationidentifiershapeOrganizationIdentifier> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Organization Identifier"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000826 .
-
-<organizationidentifiershapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200252 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<organizationshapeAdditionalNote> a sh:PropertyShape ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
-
-<organizationshapeContact> a sh:PropertyShape ;
-    sh:name "Contact"@en-US ;
-    sh:node <ContactShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceterms:targetContactPoint .
-
-<organizationshapeHasOrganizationIdentification> a sh:PropertyShape ;
-    sh:name "Has Organization Identification"@en-US ;
-    sh:node <OrganizationIdentifierShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceds:P600502 .
-
-<organizationshapeOrganizationName> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:maxLength 60 ;
-    sh:name "Organization Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:name .
-
-<organizationshapeSchoolLevel> a sh:PropertyShape ;
-    sh:in ( pescSchoolLevels:Elementary pescSchoolLevels:HighSchool pescSchoolLevels:JuniorHigh pescSchoolLevels:Middle pescSchoolLevels:Other pescSchoolLevels:Postsecondary pescSchoolLevels:Secondary ) ;
-    sh:maxCount 1 ;
-    sh:name "School Level"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:schoolLevel .
-
-<organizationshapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200239 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<organizationshape__Accreditation> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "__ Accreditation"@en-US ;
-    sh:node <AccreditationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:accreditation .
-
-<personidentifiershapeHasStudentIdentificationSystem> a sh:PropertyShape ;
-    sh:in ( ceds:NI001075173041 ceds:NI001075173046 ceds:NI001075173047 ceds:NI001075173048 ) ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "hasStudentIdentificationSystem"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P001075 .
-
-<personidentifiershapePersonIdentifier> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Person Identifier"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001572 .
-
-<personidentifiershapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200291 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<personnameshapeCompositeName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 45 ;
-    sh:name "Composite Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:compositeName .
-
-<personnameshapeFirstName> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:maxLength 35 ;
-    sh:name "First Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000115 .
-
-<personnameshapeLastName> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:maxLength 35 ;
-    sh:name "Last Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000172 .
-
-<personnameshapeMiddleName> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxLength 35 ;
-    sh:name "Middle Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000184 .
-
-<personnameshapeNameCode> a sh:PropertyShape ;
-    sh:in ( pescNameCodes:Casual pescNameCodes:Formal pescNameCodes:Former pescNameCodes:LawSchoolApplicationSource pescNameCodes:Legal pescNameCodes:MedicalSchoolApplicationSource pescNameCodes:Nickname pescNameCodes:Other ) ;
-    sh:maxCount 1 ;
-    sh:name "Name Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:nameCode .
-
-<personnameshapeNamePrefix> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Name Prefix"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000212 .
-
-<personnameshapeNameSuffix> a sh:PropertyShape ;
-    sh:in ( "JR" "SR" "I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X" ) ;
-    sh:maxCount 1 ;
-    sh:name "Name Suffix"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000121 .
-
-<personnameshapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200377 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<phoneshapeCountryPrefixCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 3 ;
-    sh:name "Country Prefix Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:countryPrefixCode .
-
-<phoneshapePhoneNumber> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 11 ;
-    sh:minCount 1 ;
-    sh:name "Phone Number"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:phoneNumber .
-
-<phoneshapePhoneNumberExtension> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 5 ;
-    sh:name "Phone Number Extension"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:phoneNumberExtension .
-
-<phoneshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Phone ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<postaladdressshapeAddressLocality%252Ce.g.City> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Address Locality, e.g. City"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:addressLocality .
-
-<postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Address Region, e.g State or Province Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:addressRegion .
-
-<postaladdressshapeCountryCode> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Country Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:addressCountry .
-
-<postaladdressshapePostalCode> a sh:PropertyShape ;
-    sh:datatype xsd:token ;
-    sh:maxCount 1 ;
-    sh:name "Postal Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:postalCode .
-
-<postaladdressshapeStreetAddress> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:minCount 1 ;
-    sh:name "Street Address"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:streetAddress .
-
-<postaladdressshapeType> a sh:PropertyShape ;
-    sh:hasValue ceterms:PostalAddress ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<postsecondarysectionlocationshapeCourseInstructionSiteName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:name "Course Instruction Site Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001309 .
-
-<postsecondarysectionlocationshapeHasCourseInstructionSiteType> a sh:PropertyShape ;
-    sh:in ( ceds:NI001310116323 ceds:NI001310116309 ceds:NI001310115690 ceds:NI001310116965 ceds:NI001310115501 ceds:NI001310116118 ceds:NI001310117017 ceds:NI001310115328 ceds:NI001310115439 ) ;
-    sh:maxCount 1 ;
-    sh:name "Has Course Instruction Site Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P001310 .
-
-<postsecondarysectionlocationshapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200333 ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<postsecondarysectionshapeCourseSectionNumber> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Course Section Number"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001315 .
-
-<postsecondarysectionshapeHasPostsecondarySectionLocation> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Has Postsecondary Section Location"@en-US ;
-    sh:node <PostsecondarySectionLocationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceds:P600108 .
-
-<postsecondarysectionshapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200332 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
 <programsummaryshapeAcademicHonors> a sh:PropertyShape ;
     sh:name "Academic Honors"@en-US ;
     sh:node <AcademicHonorsShape> ;
@@ -1786,189 +1078,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:rapSubName .
 
-<residencyshapeCountry> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Country"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:country .
-
-<residencyshapeCountryCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Country Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:countryCode .
-
-<residencyshapeCounty> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "County"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:county .
-
-<residencyshapeCountyCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 3 ;
-    sh:minLength 3 ;
-    sh:name "County Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:countyCode .
-
-<residencyshapeResidencyStatusCode> a sh:PropertyShape ;
-    sh:in ( pescResidencyStatusCodes:InCity pescResidencyStatusCodes:InCounty pescResidencyStatusCodes:InDistrict pescResidencyStatusCodes:InState pescResidencyStatusCodes:NonResident pescResidencyStatusCodes:NotReported pescResidencyStatusCodes:OtherResident pescResidencyStatusCodes:Resident ) ;
-    sh:maxCount 1 ;
-    sh:name "Residency Status Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:residencyStatusCode .
-
-<residencyshapeStateProvince> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "State Province"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:stateProvince .
-
-<residencyshapeStateProvinceCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "State Province Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:stateProvinceCode .
-
-<residencyshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Residency ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<studentshapeAchievement> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Achievement"@en-US ;
-    sh:node <AcademicAchievementShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:achievement .
-
-<studentshapeAdditionalNote> a sh:PropertyShape ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
-
-<studentshapeAgencyAssignedID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Agency Assigned ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:agencyAssignedID .
-
-<studentshapeBirthCity> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 25 ;
-    sh:name "Birth City"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthCity .
-
-<studentshapeBirthCountry> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Birth Country"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthCountry .
-
-<studentshapeBirthDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Birth Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000033 .
-
-<studentshapeBirthStateProvinceCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Birth State Province Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthStateProvinceCode .
-
-<studentshapeBirthYear> a sh:PropertyShape ;
-    sh:datatype xsd:gYear ;
-    sh:maxCount 1 ;
-    sh:name "Birth Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthYear .
-
-<studentshapeBirthday> a sh:PropertyShape ;
-    sh:datatype xsd:gMonthDay ;
-    sh:maxCount 1 ;
-    sh:name "Birthday"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthday .
-
-<studentshapeContact> a sh:PropertyShape ;
-    sh:name "Contact"@en-US ;
-    sh:node <ContactShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceterms:targetContactPoint .
-
-<studentshapeDeceasedIndicator> a sh:PropertyShape ;
-    sh:datatype xsd:boolean ;
-    sh:maxCount 1 ;
-    sh:name "Deceased Indicator"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:deceasedIndicator .
-
-<studentshapeGenderCode> a sh:PropertyShape ;
-    sh:in ( pescGenderCodes:Female pescGenderCodes:Male pescGenderCodes:Unreported ) ;
-    sh:maxCount 1 ;
-    sh:name "Gender Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:genderCode .
-
-<studentshapeHasOtherPersonName> a sh:PropertyShape ;
-    sh:name "Has Other Person Name"@en-US ;
-    sh:node <PersonNameShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceds:P600101 .
-
-<studentshapeHasPersonIdentifier> a sh:PropertyShape ;
-    sh:name "hasPersonIdentifier"@en-US ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceds:P600049 .
-
-<studentshapeHasPersonName> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Has Person Name"@en-US ;
-    sh:node <PersonNameShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceds:P600336 .
-
-<studentshapeLanguage> a sh:PropertyShape ;
-    sh:name "Language"@en-US ;
-    sh:node <LanguageShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:language .
-
-<studentshapeResidency> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "Residency"@en-US ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasResidency .
-
-<studentshapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200275 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
 <testscoreshapeInTest> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -2021,57 +1130,6 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:testScoreMethod .
 
-<testshapeEducationTestCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Education Test Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:educationTestCode .
-
-<testshapeSubTests> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Sub Tests"@en-US ;
-    sh:node <TestShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:subTests .
-
-<testshapeTestCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Test Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testCode .
-
-<testshapeTestDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testDate .
-
-<testshapeTestName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Test Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testName .
-
-<testshapeTestYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYear .
-
-<testshapeTestYearMonth> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year Month"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYearMonth .
-
 <verifiablecredentialshapeIssuer> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -2086,47 +1144,10 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path cred:subject .
 
-<AcademicAchievementShape> a sh:NodeShape ;
+<CourseShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Academic Achievement "@en ;
-    sh:property <academicachievementshapeAdditionalNote>,
-        <academicachievementshapeCohortGraduationYear>,
-        <academicachievementshapeInCourse>,
-        <academicachievementshapeInProgram>,
-        <academicachievementshapeInSession>,
-        <academicachievementshapeInTest>,
-        <academicachievementshapeSchool>,
-        <academicachievementshapeStudentLevel>,
-        <academicachievementshapeType>,
-        <academicachievementshapeVerifiedBy> ;
-    sh:targetObjectsOf pesc:achievement,
-        pesc:hasPart .
-
-<AcademicSessionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Session"@en ;
-    sh:property <academicsessionshapeSessionBeginDate>,
-        <academicsessionshapeSessionDesignator>,
-        <academicsessionshapeSessionDesignatorSuffix>,
-        <academicsessionshapeSessionEndDate>,
-        <academicsessionshapeSessionName>,
-        <academicsessionshapeSessionSchoolYear>,
-        <academicsessionshapeSessionType> ;
-    sh:targetClass pesc:AcademicSession .
-
-<ContactShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Contact"@en ;
-    sh:property <contactshapeAdditionalNote>,
-        <contactshapeAddress>,
-        <contactshapeAttentionLine>,
-        <contactshapeContactType>,
-        <contactshapeEmailAddress>,
-        <contactshapeFAXPhone>,
-        <contactshapePhone>,
-        <contactshapeType>,
-        <contactshapeURL> ;
-    sh:targetObjectsOf ceterms:targetContactPoint .
+    sh:name "Post Secondary Course"@en ;
+    sh:targetClass ceds:C200328 .
 
 <GPAShape> a sh:NodeShape ;
     sh:closed false ;
@@ -2144,37 +1165,17 @@
         <gpashapeTotalQualityPoints> ;
     sh:targetClass pesc:GPA .
 
-<LanguageShape> a sh:NodeShape ;
+<NoteShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Language"@en ;
-    sh:property <languageshapeLanguageCode>,
-        <languageshapeLanguageProficiency>,
-        <languageshapeLanguageUsage> ;
-    sh:targetClass pesc:Language .
+    sh:name "Note"@en ;
+    sh:property <noteshapeNoteliteral>,
+        <noteshapeType> ;
+    sh:targetObjectsOf elm:additionalNote .
 
-<PersonNameShape> a sh:NodeShape ;
+<TestShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Name"@en ;
-    sh:property <personnameshapeCompositeName>,
-        <personnameshapeFirstName>,
-        <personnameshapeLastName>,
-        <personnameshapeMiddleName>,
-        <personnameshapeNameCode>,
-        <personnameshapeNamePrefix>,
-        <personnameshapeNameSuffix>,
-        <personnameshapeType> ;
-    sh:targetObjectsOf ceds:P600101,
-        ceds:P600336 .
-
-<PhoneShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Phone"@en ;
-    sh:property <phoneshapeCountryPrefixCode>,
-        <phoneshapePhoneNumber>,
-        <phoneshapePhoneNumberExtension>,
-        <phoneshapeType> ;
-    sh:targetObjectsOf pesc:faxPhone,
-        pesc:phone .
+    sh:name "Tests"@en ;
+    sh:targetClass pesc:Tests .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     sh:closed false ;
@@ -2190,85 +1191,9 @@
         <academichonorsshapeHonorsTitle> ;
     sh:targetClass pesc:AcademicHonors .
 
-<CourseShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Post Secondary Course"@en ;
-    sh:property <courseshapeAgencyCourseID>,
-        <courseshapeAttribute>,
-        <courseshapeCourseAcademicGradeScaleCode>,
-        <courseshapeCourseApplicability>,
-        <courseshapeCourseCreditValue>,
-        <courseshapeCourseFiveDigitSCEDCode>,
-        <courseshapeCourseNumber>,
-        <courseshapeCourseOverrideSchool>,
-        <courseshapeCourseSCEDCode>,
-        <courseshapeCourseSubjectAbbreviation>,
-        <courseshapeCourseSubjectAreaCode>,
-        <courseshapeCourseTitle>,
-        <courseshapeHasClassificationofInstructionalProgramCode>,
-        <courseshapeHasCourseCreditBasisType>,
-        <courseshapeHasCourseCreditLevelType>,
-        <courseshapeHasCourseCreditUnits>,
-        <courseshapeHasCourseGradePointAverageApplicability>,
-        <courseshapeHasCourseLevelType>,
-        <courseshapeHasNCESCollegeCourseMapCode>,
-        <courseshapeHasPostsecondarySection>,
-        <courseshapeIsPartOf>,
-        <courseshapeOfferedBy>,
-        <courseshapeOriginalCourseIdentifier>,
-        <courseshapeOverrideSchoolCourseNumber>,
-        <courseshapeProficiency>,
-        <courseshapeRequirement>,
-        <courseshapeType> ;
-    sh:targetClass ceds:C200328 .
-
-<TestShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Tests"@en ;
-    sh:property <testshapeEducationTestCode>,
-        <testshapeSubTests>,
-        <testshapeTestCode>,
-        <testshapeTestDate>,
-        <testshapeTestName>,
-        <testshapeTestYear>,
-        <testshapeTestYearMonth> ;
-    sh:targetClass pesc:Tests .
-
-<AcademicProgramShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Program"@en ;
-    sh:property <academicprogramshapeAcademicProgramName>,
-        <academicprogramshapeAcademicProgramType>,
-        <academicprogramshapeHasCourse>,
-        <academicprogramshapeHasSession>,
-        <academicprogramshapeOfferedBy>,
-        <academicprogramshapeProgramCIPCode>,
-        <academicprogramshapeProgramCSISCode>,
-        <academicprogramshapeProgramESISCode>,
-        <academicprogramshapeProgramHEGISCode>,
-        <academicprogramshapeProgramLocalCode>,
-        <academicprogramshapeProgramSecondarySchoolCode>,
-        <academicprogramshapeProgramUSISCode> ;
-    sh:targetClass pesc:AcademicProgram ;
-    sh:targetObjectsOf pesc:_AcademicProgram .
-
-<NoteShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Note"@en ;
-    sh:property <noteshapeNoteliteral>,
-        <noteshapeType> ;
-    sh:targetObjectsOf elm:additionalNote .
-
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Organization"@en ;
-    sh:property <organizationshapeAdditionalNote>,
-        <organizationshapeContact>,
-        <organizationshapeHasOrganizationIdentification>,
-        <organizationshapeOrganizationName>,
-        <organizationshapeSchoolLevel>,
-        <organizationshapeType>,
-        <organizationshape__Accreditation> ;
     sh:targetClass ceds:C200239 .
 
 <RAPShape> a sh:NodeShape ;
@@ -2278,4 +1203,10 @@
         <rapshapeRAPName>,
         <rapshapeRAPSubName> ;
     sh:targetClass pesc:RequirementAttributeProficiency .
+
+<AcademicProgramShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Program"@en ;
+    sh:targetClass pesc:AcademicProgram ;
+    sh:targetObjectsOf pesc:_AcademicProgram .
 

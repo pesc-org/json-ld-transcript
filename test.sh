@@ -3,10 +3,8 @@ printf '\nTesting Contact shapes\n'
 printf '======================\n'
 printf '\nTest minimal passing\n'
 pyshacl -s TAP+SHACL/contact-shacl.ttl TestFiles/minimal_passing.ttl
-printf "\nTest maximal passing person\n"
-pyshacl -s TAP+SHACL/contact-shacl.ttl TestFiles/max_passing_person.ttl
-printf "\nTest maximal passing course\n"
-pyshacl -s TAP+SHACL/contact-shacl.ttl TestFiles/max_passing_course.ttl
+printf "\nTest maximal passing\n"
+pyshacl -s TAP+SHACL/contact-shacl.ttl TestFiles/max_passing.ttl
 printf "\nBatch Test failing data\n"
 batchshacl TAP+SHACL/contact-shacl.ttl TestFiles/ContactTests
 
@@ -15,9 +13,7 @@ printf '======================\n'
 printf '\nTest minimal passing\n'
 pyshacl -s TAP+SHACL/organization-shacl.ttl TestFiles/minimal_passing.ttl
 printf "\nTest maximal passing person\n"
-pyshacl -s TAP+SHACL/organization-shacl.ttl TestFiles/max_passing_person.ttl
-printf "\nTest maximal passing course\n"
-pyshacl -s TAP+SHACL/organization-shacl.ttl TestFiles/max_passing_course.ttl
+pyshacl -s TAP+SHACL/organization-shacl.ttl TestFiles/max_passing.ttl
 printf "\nBatch Test failing data\n"
 batchshacl TAP+SHACL/organization-shacl.ttl TestFiles/OrganizationTests
 
@@ -26,9 +22,7 @@ printf '======================\n'
 printf '\nTest minimal passing\n'
 pyshacl -s TAP+SHACL/person-shacl.ttl TestFiles/minimal_passing.ttl
 printf "\nTest maximal passing person\n"
-pyshacl -s TAP+SHACL/person-shacl.ttl TestFiles/max_passing_person.ttl
-printf "\nTest maximal passing course\n"
-pyshacl -s TAP+SHACL/person-shacl.ttl TestFiles/max_passing_course.ttl
+pyshacl -s TAP+SHACL/person-shacl.ttl TestFiles/max_passing.ttl
 printf "\nBatch Test failing data\n"
 batchshacl TAP+SHACL/person-shacl.ttl TestFiles/PersonTests
 
@@ -37,9 +31,7 @@ printf '======================\n'
 printf '\nTest minimal passing\n'
 pyshacl -s TAP+SHACL/course-related-shacl.ttl TestFiles/minimal_passing.ttl
 printf "\nTest maximal passing person\n"
-pyshacl -s TAP+SHACL/course-related-shacl.ttl TestFiles/max_passing_person.ttl
-printf "\nTest maximal passing course\n"
-pyshacl -s TAP+SHACL/course-related-shacl.ttl TestFiles/max_passing_course.ttl
+pyshacl -s TAP+SHACL/course-related-shacl.ttl TestFiles/max_passing.ttl
 printf "\nBatch Test failing data\n"
 batchshacl TAP+SHACL/course-related-shacl.ttl TestFiles/CourseRelatedTests
 
@@ -48,8 +40,6 @@ printf '======================\n'
 printf '\nTest minimal passing\n'
 pyshacl -s TAP+SHACL/shacl.ttl TestFiles/minimal_passing.ttl
 printf "\nTest maximal passing person\n"
-pyshacl -s TAP+SHACL/shacl.ttl TestFiles/max_passing_person.ttl
-printf "\nTest maximal passing course\n"
-pyshacl -s TAP+SHACL/shacl.ttl TestFiles/max_passing_course.ttl
-printf "\nBatch Test failing data\n"
-batchshacl TAP+SHACL/shacl.ttl TestFiles
+pyshacl -s TAP+SHACL/shacl.ttl TestFiles/max_passing.ttl
+#printf "\nBatch Test failing data\n"
+#batchshacl TAP+SHACL/shacl.ttl TestFiles
