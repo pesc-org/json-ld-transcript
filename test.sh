@@ -14,8 +14,6 @@ printf '\nTesting Organization shapes\n'
 printf '======================\n'
 printf '\nTest minimal passing\n'
 pyshacl -s TAP+SHACL/organization-shacl.ttl TestFiles/minimal_passing.ttl
-printf '\nTest minimal passing\n'
-pyshacl -s TAP+SHACL/organization-shacl.ttl TestFiles/minimal_passing.ttl
 printf "\nTest maximal passing person\n"
 pyshacl -s TAP+SHACL/organization-shacl.ttl TestFiles/max_passing_person.ttl
 printf "\nTest maximal passing course\n"
@@ -27,11 +25,31 @@ printf '\nTesting Person shapes\n'
 printf '======================\n'
 printf '\nTest minimal passing\n'
 pyshacl -s TAP+SHACL/person-shacl.ttl TestFiles/minimal_passing.ttl
-printf '\nTest minimal passing\n'
-pyshacl -s TAP+SHACL/person-shacl.ttl TestFiles/minimal_passing.ttl
 printf "\nTest maximal passing person\n"
 pyshacl -s TAP+SHACL/person-shacl.ttl TestFiles/max_passing_person.ttl
 printf "\nTest maximal passing course\n"
 pyshacl -s TAP+SHACL/person-shacl.ttl TestFiles/max_passing_course.ttl
 printf "\nBatch Test failing data\n"
 batchshacl TAP+SHACL/person-shacl.ttl TestFiles/PersonTests
+
+printf '\nTesting Course Related shapes\n'
+printf '======================\n'
+printf '\nTest minimal passing\n'
+pyshacl -s TAP+SHACL/course-related-shacl.ttl TestFiles/minimal_passing.ttl
+printf "\nTest maximal passing person\n"
+pyshacl -s TAP+SHACL/course-related-shacl.ttl TestFiles/max_passing_person.ttl
+printf "\nTest maximal passing course\n"
+pyshacl -s TAP+SHACL/course-related-shacl.ttl TestFiles/max_passing_course.ttl
+printf "\nBatch Test failing data\n"
+batchshacl TAP+SHACL/course-related-shacl.ttl TestFiles/CourseRelatedTests
+
+printf '\nTesting the remaining shapes\n'
+printf '======================\n'
+printf '\nTest minimal passing\n'
+pyshacl -s TAP+SHACL/shacl.ttl TestFiles/minimal_passing.ttl
+printf "\nTest maximal passing person\n"
+pyshacl -s TAP+SHACL/shacl.ttl TestFiles/max_passing_person.ttl
+printf "\nTest maximal passing course\n"
+pyshacl -s TAP+SHACL/shacl.ttl TestFiles/max_passing_course.ttl
+printf "\nBatch Test failing data\n"
+batchshacl TAP+SHACL/shacl.ttl TestFiles
