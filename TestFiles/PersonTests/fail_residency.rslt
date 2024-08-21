@@ -1,20 +1,6 @@
 Validation Report
 Conforms: False
-Results (11):
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:collegetranscriptshapeStudent
-	Focus Node: <https://example.edu/transcripts/050330001>
-	Value Node: <https://people.pjjk.net/test>
-	Result Path: pesc:student
-	Message: Value does not conform to Shape ex:StudentShape. See details for more information.
-	Details:
-		Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:studentshapeResidency
-			Focus Node: <https://people.pjjk.net/test>
-			Result Path: pesc:hasResidency
-			Message: More than 1 values on <https://people.pjjk.net/test>->pesc:hasResidency
+Results (10):
 Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:residencyshapeCountry

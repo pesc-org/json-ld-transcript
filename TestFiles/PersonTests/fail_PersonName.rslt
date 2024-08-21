@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (10):
+Results (9):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:personnameshapeFirstName
@@ -113,75 +113,3 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Value Node: Literal("9", datatype=xsd:integer)
 			Result Path: ceds:P000121
 			Message: Value Literal("9", datatype=xsd:integer) not in list ['Literal("I")', 'Literal("X")', 'Literal("II")', 'Literal("VII")', 'Literal("SR")', 'Literal("IV")', 'Literal("VIII")', 'Literal("IX")', 'Literal("JR")', 'Literal("III")', 'Literal("VI")', 'Literal("V")']
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:collegetranscriptshapeStudent
-	Focus Node: <https://example.edu/transcripts/050330001>
-	Value Node: <https://people.pjjk.net/test>
-	Result Path: pesc:student
-	Message: Value does not conform to Shape ex:StudentShape. See details for more information.
-	Details:
-		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:studentshapeHasOtherPersonName
-			Focus Node: <https://people.pjjk.net/test>
-			Value Node: [ ceds:P000115 Literal("12", datatype=xsd:integer) ; ceds:P000172 Literal("12", datatype=xsd:integer) ; rdf:type ceds:WrongClass ]
-			Result Path: ceds:P600101
-			Message: Value does not conform to Shape ex:PersonNameShape. See details for more information.
-			Details:
-				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:personnameshapeFirstName
-					Focus Node: [ ceds:P000115 Literal("12", datatype=xsd:integer) ; ceds:P000172 Literal("12", datatype=xsd:integer) ; rdf:type ceds:WrongClass ]
-					Value Node: Literal("12", datatype=xsd:integer)
-					Result Path: ceds:P000115
-					Message: Value is not Literal with datatype xsd:token
-				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:personnameshapeLastName
-					Focus Node: [ ceds:P000115 Literal("12", datatype=xsd:integer) ; ceds:P000172 Literal("12", datatype=xsd:integer) ; rdf:type ceds:WrongClass ]
-					Value Node: Literal("12", datatype=xsd:integer)
-					Result Path: ceds:P000172
-					Message: Value is not Literal with datatype xsd:token
-				Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:personnameshapeType
-					Focus Node: [ ceds:P000115 Literal("12", datatype=xsd:integer) ; ceds:P000172 Literal("12", datatype=xsd:integer) ; rdf:type ceds:WrongClass ]
-					Result Path: rdf:type
-					Message: Node [ ceds:P000115 Literal("12", datatype=xsd:integer) ; ceds:P000172 Literal("12", datatype=xsd:integer) ; rdf:type ceds:WrongClass ]->rdf:type does not contain a value in the set: ['ceds:C200377']
-		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:studentshapeHasPersonName
-			Focus Node: <https://people.pjjk.net/test>
-			Value Node: [ ceds:P000115 Literal("Testy", datatype=xsd:token) ; ceds:P000121 Literal("9", datatype=xsd:integer) ; ceds:P000172 Literal("Test") ; ceds:P000184 Literal("Example") ; ceds:P000212 Literal("Dr") ; pesc:nameCode pescNameCodes:Legal ; rdf:type ceds:C200377 ]
-			Result Path: ceds:P600336
-			Message: Value does not conform to Shape ex:PersonNameShape. See details for more information.
-			Details:
-				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:personnameshapeLastName
-					Focus Node: [ ceds:P000115 Literal("Testy", datatype=xsd:token) ; ceds:P000121 Literal("9", datatype=xsd:integer) ; ceds:P000172 Literal("Test") ; ceds:P000184 Literal("Example") ; ceds:P000212 Literal("Dr") ; pesc:nameCode pescNameCodes:Legal ; rdf:type ceds:C200377 ]
-					Value Node: Literal("Test")
-					Result Path: ceds:P000172
-					Message: Value is not Literal with datatype xsd:token
-				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:personnameshapeMiddleName
-					Focus Node: [ ceds:P000115 Literal("Testy", datatype=xsd:token) ; ceds:P000121 Literal("9", datatype=xsd:integer) ; ceds:P000172 Literal("Test") ; ceds:P000184 Literal("Example") ; ceds:P000212 Literal("Dr") ; pesc:nameCode pescNameCodes:Legal ; rdf:type ceds:C200377 ]
-					Value Node: Literal("Example")
-					Result Path: ceds:P000184
-					Message: Value is not Literal with datatype xsd:token
-				Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:personnameshapeNamePrefix
-					Focus Node: [ ceds:P000115 Literal("Testy", datatype=xsd:token) ; ceds:P000121 Literal("9", datatype=xsd:integer) ; ceds:P000172 Literal("Test") ; ceds:P000184 Literal("Example") ; ceds:P000212 Literal("Dr") ; pesc:nameCode pescNameCodes:Legal ; rdf:type ceds:C200377 ]
-					Value Node: Literal("Dr")
-					Result Path: ceds:P000212
-					Message: Value is not Literal with datatype xsd:token
-				Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-					Severity: sh:Violation
-					Source Shape: ex:personnameshapeNameSuffix
-					Focus Node: [ ceds:P000115 Literal("Testy", datatype=xsd:token) ; ceds:P000121 Literal("9", datatype=xsd:integer) ; ceds:P000172 Literal("Test") ; ceds:P000184 Literal("Example") ; ceds:P000212 Literal("Dr") ; pesc:nameCode pescNameCodes:Legal ; rdf:type ceds:C200377 ]
-					Value Node: Literal("9", datatype=xsd:integer)
-					Result Path: ceds:P000121
-					Message: Value Literal("9", datatype=xsd:integer) not in list ['Literal("I")', 'Literal("X")', 'Literal("II")', 'Literal("VII")', 'Literal("SR")', 'Literal("IV")', 'Literal("VIII")', 'Literal("IX")', 'Literal("JR")', 'Literal("III")', 'Literal("VI")', 'Literal("V")']
