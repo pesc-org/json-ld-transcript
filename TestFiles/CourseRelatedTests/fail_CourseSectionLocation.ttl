@@ -23,11 +23,12 @@
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
 
-<https://example.edu/Session/001> a pesc:AcademicSession ;
-    pesc:offeredBy <https://example.edu/Source#id> ;
-    pesc:sessionDesignator "2019-09"^^xsd:gYearMonth ;
-    pesc:sessionName "Fall 2019"^^xsd:string ;
-    pesc:sessionType pescSessionTypes:Semester .
+<https://example.edu/Session/001> a ceds:C200245 ; # AcademicSession 
+    ceterms:offeredBy <https://example.edu/Source#id> ;
+    ceds:P000252 "2019-09"^^xsd:gYearMonth ; # session designator
+    ceterms:name "Fall 2019"@en ;
+    ceds:P000254 ceds:NI000254115787 ; # session type
+.
 
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
@@ -47,10 +48,11 @@
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 
-<https://example.edu/Program/001> a pesc:AcademicProgram ;
-    pesc:academicProgramName "Example Program"^^xsd:string ;
-    pesc:hasCourse <https://example.edu/Course/001> ;
-    pesc:offeredBy <https://example.edu/Source#id> .
+<https://example.edu/Program/001> a ceds:C200331 ;
+    ceterms:name "Example Program"@en ;
+    ceterms:hasPart <https://example.edu/Course/001> ;
+    ceterms:offeredBy <https://example.edu/Source#id> .
+
 
 <https://people.pjjk.net/test> a ceds:C200275 ;
     ceds:P600336 [ a ceds:C200377 ;

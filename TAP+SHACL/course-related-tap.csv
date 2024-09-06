@@ -1,7 +1,7 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
-,AcademicProgramShape,pesc:hasCourse,Has Course,FALSE,TRUE,IRI BNODE,,,,CourseShape,,
-,AcademicProgramShape,pesc:hasSession,Has Session,FALSE,TRUE,IRI BNODE,,,,AcademicSessionShape,,
-,AcademicProgramShape,pesc:offeredBy,Offered By,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,,
+,AcademicProgramShape,ceterms:hasPart,Has Part,FALSE,TRUE,IRI BNODE,,,,CourseShape,,
+,AcademicProgramShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200331,,,,
+,AcademicProgramShape,ceterms:offeredBy,Offered By,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,,
 233,AcademicProgramShape,pesc:programSecondarySchoolCode,Program Secondary School Code,FALSE,FALSE,IRI,,"pescSecondarySchoolCodes:CareerPrep
 pescSecondarySchoolCodes:CollegePrep
 pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep
@@ -9,40 +9,39 @@ pescSecondarySchoolCodes:CollegeTechPrep
 pescSecondarySchoolCodes:General
 pescSecondarySchoolCodes:Occupational
 pescSecondarySchoolCodes:Vocational",picklist,,Not Recommended,
-235,AcademicProgramShape,pesc:programCIPCode,Program CIP Code,FALSE,FALSE,Literal,xsd:string,6..20,lengthRange,,Not Recommended,
+235,AcademicProgramShape,ceds:P000043,Has Classification of Instructional Program Code,FALSE,FALSE,Literal,xsd:string,^\d{2}\.\d{4}$,pattern,,Not Recommended,
 237,AcademicProgramShape,pesc:programHEGISCode,Program HEGIS Code,FALSE,FALSE,Literal,xsd:string,6..20,lengthRange,,Recommended,
-239,AcademicProgramShape,pesc:programCSISCode,Program CSIS Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
-241,AcademicProgramShape,pesc:programUSISCode,Program USIS Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
 243,AcademicProgramShape,pesc:programESISCode,Program ESIS Code,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,Optional,
-245,AcademicProgramShape,pesc:programLocalCode,Program Local Code,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,Not Recommended,
+245,AcademicProgramShape,ceterms:codedNotation,Coded Notation,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,Not Recommended,
 247,AcademicProgramShape,pesc:academicProgramType,Academic Program Type,FALSE,FALSE,IRI,,"pescAcademicProgramTypes:Concentration
 pescAcademicProgramTypes:Focus
 pescAcademicProgramTypes:Major
 pescAcademicProgramTypes:Minor
 pescAcademicProgramTypes:SecondMajor
 pescAcademicProgramTypes:Specialization",picklist,,Recommended,
-249,AcademicProgramShape,pesc:academicProgramName,Academic Program Name,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,
-283,AcademicSessionShape,pesc:sessionDesignator,Session Designator,TRUE,FALSE,Literal,xsd:gYearMonth,,,,Required,
+249,AcademicProgramShape,ceterms:name,Academic Program Name,FALSE,FALSE,Literal,rdf:langString,60,maxLength,,Optional,
+,AcademicSessionShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200245,,,,
+283,AcademicSessionShape,ceds:P000252,Session Designator,TRUE,FALSE,Literal,xsd:gYearMonth,,,,Required,
 284,AcademicSessionShape,pesc:sessionDesignatorSuffix,Session Designator Suffix,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
-285,AcademicSessionShape,pesc:sessionName,Session Name,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
-286,AcademicSessionShape,pesc:sessionType,Session Type,FALSE,FALSE,IRI,,"pescSessionTypes:FullYear
-pescSessionTypes:Semester
-pescSessionTypes:Trimester
-pescSessionTypes:Quarter
-pescSessionTypes:Quinmester
-pescSessionTypes:MiniTerm
-pescSessionTypes:SummerSession
-pescSessionTypes:Intersession
-pescSessionTypes:LongSession
+285,AcademicSessionShape,ceterms:name,Session Name,FALSE,FALSE,Literal,rdf:langString,30,maxLength,,Recommended,
+286,AcademicSessionShape,ceds:P000254,Has Session Type,FALSE,FALSE,IRI,,"ceds:NI000254115787
+ceds:NI000254116843
+ceds:NI000254117085
+ceds:NI000254116671
+ceds:NI000254116676
+ceds:NI000254116125
+ceds:NI000254116976
+ceds:NI000254115964
+ceds:NI000254116047
 pescSessionTypes:FallSession
 pescSessionTypes:FourOneFourPlan
 pescSessionTypes:Continuous
 pescSessionTypes:DiffersByProgram
 pescSessionTypes:Other
-pescSessionTypes:TwelveMonth",picklist,,Recommended,
+ceds:NI000254117090",picklist,,Recommended,
 287,AcademicSessionShape,pesc:sessionSchoolYear,Session School Year,FALSE,FALSE,Literal,xsd:date,,,,Optional,ccyy-ccyy
-288,AcademicSessionShape,pesc:sessionBeginDate,Session Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-289,AcademicSessionShape,pesc:sessionEndDate,Session End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+288,AcademicSessionShape,ceds:P000251,Session Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+289,AcademicSessionShape,ceds:P2000253,Session End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 ,CourseShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200328,,,,
 290,CourseShape,ceds:P001303,Has Course Credit Basis Type,TRUE,FALSE,IRI,,"ceds:NI001303116728
 ceds:NI001303115164
