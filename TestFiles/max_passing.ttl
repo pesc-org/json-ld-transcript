@@ -1,4 +1,3 @@
-
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix elm:  <http://data.europa.eu/snb/model/elm/>.
