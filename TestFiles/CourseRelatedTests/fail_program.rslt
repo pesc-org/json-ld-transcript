@@ -1,0 +1,91 @@
+Validation Report
+Conforms: False
+Results (9):
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeAcademicProgramName
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: Literal("Example Program")
+	Result Path: ceterms:name
+	Message: Value is not Literal with datatype rdf:langString
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeAcademicProgramType
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: pescAcademicProgramTypes:Special
+	Result Path: pesc:academicProgramType
+	Message: Value pescAcademicProgramTypes:Special not in list ['pescAcademicProgramTypes:Concentration', 'pescAcademicProgramTypes:Specialization', 'pescAcademicProgramTypes:Minor', 'pescAcademicProgramTypes:Major', 'pescAcademicProgramTypes:SecondMajor', 'pescAcademicProgramTypes:Focus']
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeCodedNotation
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: Literal("EX:P001", datatype=xsd:token)
+	Result Path: ceterms:codedNotation
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#PatternConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeHasClassificationofInstructionalProgramCode
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: Literal("12")
+	Result Path: ceds:P000043
+	Message: Value does not match pattern '^\d{2}\.\d{4}$'
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeHasPart
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: <https://example.edu/Course/002>
+	Result Path: ceterms:hasPart
+	Message: Value does not conform to Shape ex:CourseShape. See details for more information.
+	Details:
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:courseshapeHasCourseCreditBasisType
+			Focus Node: <https://example.edu/Course/002>
+			Result Path: ceds:P001303
+			Message: Less than 1 values on <https://example.edu/Course/002>->ceds:P001303
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:courseshapeOfferedBy
+			Focus Node: <https://example.edu/Course/002>
+			Result Path: ceterms:offeredBy
+			Message: Less than 1 values on <https://example.edu/Course/002>->ceterms:offeredBy
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:courseshapeType
+			Focus Node: <https://example.edu/Course/002>
+			Result Path: rdf:type
+			Message: Node <https://example.edu/Course/002>->rdf:type does not contain a value in the set: ['ceds:C200328']
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:courseshapeType
+			Focus Node: <https://example.edu/Course/002>
+			Result Path: rdf:type
+			Message: Less than 1 values on <https://example.edu/Course/002>->rdf:type
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeOfferedBy
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: Literal("Example Source")
+	Result Path: ceterms:offeredBy
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in MinLengthConstraintComponent (http://www.w3.org/ns/shacl#MinLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeProgramESISCode
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: Literal("")
+	Result Path: pesc:programESISCode
+	Message: String length not >= Literal("1", datatype=xsd:integer)
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeProgramHEGISCode
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: Literal("123456", datatype=xsd:integer)
+	Result Path: pesc:programHEGISCode
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeProgramSecondarySchoolCode
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: pescSecondarySchoolCodes:Vocation
+	Result Path: pesc:programSecondarySchoolCode
+	Message: Value pescSecondarySchoolCodes:Vocation not in list ['pescSecondarySchoolCodes:CollegePrep', 'pescSecondarySchoolCodes:Vocational', 'pescSecondarySchoolCodes:General', 'pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep', 'pescSecondarySchoolCodes:CareerPrep', 'pescSecondarySchoolCodes:Occupational', 'pescSecondarySchoolCodes:CollegeTechPrep']

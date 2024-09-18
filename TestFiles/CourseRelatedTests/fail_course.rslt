@@ -203,8 +203,20 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Severity: sh:Violation
 			Source Shape: ex:academicprogramshapeOfferedBy
 			Focus Node: Literal("Program 1")
-			Result Path: pesc:offeredBy
-			Message: Less than 1 values on Literal("Program 1")->pesc:offeredBy
+			Result Path: ceterms:offeredBy
+			Message: Less than 1 values on Literal("Program 1")->ceterms:offeredBy
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:academicprogramshapeType
+			Focus Node: Literal("Program 1")
+			Result Path: rdf:type
+			Message: Node Literal("Program 1")->rdf:type does not contain a value in the set: ['ceds:C200331']
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:academicprogramshapeType
+			Focus Node: Literal("Program 1")
+			Result Path: rdf:type
+			Message: Less than 1 values on Literal("Program 1")->rdf:type
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeIsPartOf

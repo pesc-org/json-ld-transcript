@@ -41,6 +41,19 @@
     sh:name "Academic Record"@en ;
     sh:targetClass pesc:AcademicRecord .
 
+<AcademicSessionShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Session"@en ;
+    sh:property <academicsessionshapeHasSessionType>,
+        <academicsessionshapeSessionBeginDate>,
+        <academicsessionshapeSessionDesignator>,
+        <academicsessionshapeSessionDesignatorSuffix>,
+        <academicsessionshapeSessionEndDate>,
+        <academicsessionshapeSessionName>,
+        <academicsessionshapeSessionSchoolYear>,
+        <academicsessionshapeType> ;
+    sh:targetClass ceds:C200245 .
+
 <AcademicSummaryShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Summary"@en ;
@@ -181,30 +194,15 @@
     sh:name "Academic Program"@en ;
     sh:property <academicprogramshapeAcademicProgramName>,
         <academicprogramshapeAcademicProgramType>,
-        <academicprogramshapeHasCourse>,
-        <academicprogramshapeHasSession>,
+        <academicprogramshapeCodedNotation>,
+        <academicprogramshapeHasClassificationofInstructionalProgramCode>,
+        <academicprogramshapeHasPart>,
         <academicprogramshapeOfferedBy>,
-        <academicprogramshapeProgramCIPCode>,
-        <academicprogramshapeProgramCSISCode>,
         <academicprogramshapeProgramESISCode>,
         <academicprogramshapeProgramHEGISCode>,
-        <academicprogramshapeProgramLocalCode>,
         <academicprogramshapeProgramSecondarySchoolCode>,
-        <academicprogramshapeProgramUSISCode> ;
-    sh:targetClass pesc:AcademicProgram ;
-    sh:targetObjectsOf pesc:_AcademicProgram .
-
-<AcademicSessionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Session"@en ;
-    sh:property <academicsessionshapeSessionBeginDate>,
-        <academicsessionshapeSessionDesignator>,
-        <academicsessionshapeSessionDesignatorSuffix>,
-        <academicsessionshapeSessionEndDate>,
-        <academicsessionshapeSessionName>,
-        <academicsessionshapeSessionSchoolYear>,
-        <academicsessionshapeSessionType> ;
-    sh:targetClass pesc:AcademicSession .
+        <academicprogramshapeType> ;
+    sh:targetClass ceds:C200331 .
 
 <CourseShape> a sh:NodeShape ;
     sh:closed false ;
@@ -268,12 +266,12 @@
     sh:targetClass pesc:Tests .
 
 <academicprogramshapeAcademicProgramName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype rdf:langString ;
     sh:maxCount 1 ;
     sh:maxLength 60 ;
     sh:name "Academic Program Name"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:academicProgramName .
+    sh:path ceterms:name .
 
 <academicprogramshapeAcademicProgramType> a sh:PropertyShape ;
     sh:in ( pescAcademicProgramTypes:Concentration pescAcademicProgramTypes:Focus pescAcademicProgramTypes:Major pescAcademicProgramTypes:Minor pescAcademicProgramTypes:SecondMajor pescAcademicProgramTypes:Specialization ) ;
@@ -282,17 +280,28 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:academicProgramType .
 
-<academicprogramshapeHasCourse> a sh:PropertyShape ;
-    sh:name "Has Course"@en-US ;
+<academicprogramshapeCodedNotation> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 20 ;
+    sh:minLength 1 ;
+    sh:name "Coded Notation"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceterms:codedNotation .
+
+<academicprogramshapeHasClassificationofInstructionalProgramCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Has Classification of Instructional Program Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000043 ;
+    sh:pattern "^\\d{2}\\.\\d{4}$" .
+
+<academicprogramshapeHasPart> a sh:PropertyShape ;
+    sh:name "Has Part"@en-US ;
     sh:node <CourseShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasCourse .
-
-<academicprogramshapeHasSession> a sh:PropertyShape ;
-    sh:name "Has Session"@en-US ;
-    sh:node <AcademicSessionShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasSession .
+    sh:path ceterms:hasPart .
 
 <academicprogramshapeOfferedBy> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -300,25 +309,7 @@
     sh:name "Offered By"@en-US ;
     sh:node <OrganizationShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:offeredBy .
-
-<academicprogramshapeProgramCIPCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minLength 6 ;
-    sh:name "Program CIP Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programCIPCode .
-
-<academicprogramshapeProgramCSISCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 5 ;
-    sh:minLength 5 ;
-    sh:name "Program CSIS Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programCSISCode .
+    sh:path ceterms:offeredBy .
 
 <academicprogramshapeProgramESISCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -338,15 +329,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:programHEGISCode .
 
-<academicprogramshapeProgramLocalCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minLength 1 ;
-    sh:name "Program Local Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programLocalCode .
-
 <academicprogramshapeProgramSecondarySchoolCode> a sh:PropertyShape ;
     sh:in ( pescSecondarySchoolCodes:CareerPrep pescSecondarySchoolCodes:CollegePrep pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep pescSecondarySchoolCodes:CollegeTechPrep pescSecondarySchoolCodes:General pescSecondarySchoolCodes:Occupational pescSecondarySchoolCodes:Vocational ) ;
     sh:maxCount 1 ;
@@ -354,21 +336,26 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:programSecondarySchoolCode .
 
-<academicprogramshapeProgramUSISCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+<academicprogramshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200331 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<academicsessionshapeHasSessionType> a sh:PropertyShape ;
+    sh:in ( ceds:NI000254115787 ceds:NI000254116843 ceds:NI000254117085 ceds:NI000254116671 ceds:NI000254116676 ceds:NI000254116125 ceds:NI000254116976 ceds:NI000254115964 ceds:NI000254116047 pescSessionTypes:FallSession pescSessionTypes:FourOneFourPlan pescSessionTypes:Continuous pescSessionTypes:DiffersByProgram pescSessionTypes:Other ceds:NI000254117090 ) ;
     sh:maxCount 1 ;
-    sh:maxLength 5 ;
-    sh:minLength 5 ;
-    sh:name "Program USIS Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programUSISCode .
+    sh:name "Has Session Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P000254 .
 
 <academicsessionshapeSessionBeginDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Session Begin Date"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionBeginDate .
+    sh:path ceds:P000251 .
 
 <academicsessionshapeSessionDesignator> a sh:PropertyShape ;
     sh:datatype xsd:gYearMonth ;
@@ -376,7 +363,7 @@
     sh:minCount 1 ;
     sh:name "Session Designator"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionDesignator .
+    sh:path ceds:P000252 .
 
 <academicsessionshapeSessionDesignatorSuffix> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -391,29 +378,29 @@
     sh:maxCount 1 ;
     sh:name "Session End Date"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionEndDate .
+    sh:path ceds:P000253 .
 
 <academicsessionshapeSessionName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype rdf:langString ;
     sh:maxCount 1 ;
     sh:maxLength 30 ;
     sh:name "Session Name"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionName .
+    sh:path ceterms:name .
 
 <academicsessionshapeSessionSchoolYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
+    sh:datatype xsd:gYear ;
     sh:maxCount 1 ;
     sh:name "Session School Year"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:sessionSchoolYear .
 
-<academicsessionshapeSessionType> a sh:PropertyShape ;
-    sh:in ( pescSessionTypes:FullYear pescSessionTypes:Semester pescSessionTypes:Trimester pescSessionTypes:Quarter pescSessionTypes:Quinmester pescSessionTypes:MiniTerm pescSessionTypes:SummerSession pescSessionTypes:Intersession pescSessionTypes:LongSession pescSessionTypes:FallSession pescSessionTypes:FourOneFourPlan pescSessionTypes:Continuous pescSessionTypes:DiffersByProgram pescSessionTypes:Other pescSessionTypes:TwelveMonth ) ;
-    sh:maxCount 1 ;
-    sh:name "Session Type"@en-US ;
+<academicsessionshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200245 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
-    sh:path pesc:sessionType .
+    sh:path rdf:type .
 
 <courseshapeAgencyCourseID> a sh:PropertyShape ;
     sh:datatype xsd:string ;

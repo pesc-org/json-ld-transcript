@@ -1,4 +1,3 @@
-
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
@@ -23,36 +22,28 @@
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
 
-<https://example.edu/Session/001> a ceds:C200245 ; # AcademicSession 
-    ceterms:offeredBy <https://example.edu/Source#id> ;
-    ceds:P000252 "2019-09"^^xsd:gYearMonth ; # session designator
-    ceterms:name "Fall 2019"@en ;
-    ceds:P000254 ceds:NI000254115787 ; # session type
+<https://example.edu/Session/001> a ceds:C200245 ;# AcademicSession 
+#    ceds:P000252 "2019-09"^^xsd:gYearMonth ; # missing session designator
+    pesc:sessionDesignatorSuffix "II"^^xsd:token; # wrong datatype
+    ceterms:name "Fall 2019" ; # wrong datatype
+    ceds:P000254 pescSessionTypes:Fall ; # invalid Session type
+    pesc:sessionSchoolYear "2019"^^xsd:date ; #wrong datatype
+    ceds:P000251  "2019-09-01"^^xsd:string ; # wrong datatype Session Begin date
+    ceds:P000253 "2019-12-19"^^xsd:string ; # wrong datatype Session End date
 .
 
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
 .
 
-<https://example.edu/CourseSection/001> a ceds:C200332 ;
-    ceds:P001315 42 ; # course section number should be a string
-    ceds:P600108 <https://example.edu/Location/001>, "location 2" ; # has location
-.
-
-<https://example.edu/Location/001> a ceds:C200333 ;
-    ceds:P001309 42 ; # Instruction site name should be string
-    ceds:P001310 ceds:NI0000 ; # Invalid instruction site type
-.
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 
-<https://example.edu/Program/001> a ceds:C200331 ;
-    ceterms:name "Example Program"@en ;
-    ceterms:hasPart <https://example.edu/Course/001> ;
-    ceterms:offeredBy <https://example.edu/Source#id> .
-
+<https://example.edu/Program/001> a pesc:AcademicProgram ;
+    pesc:academicProgramName "Example Program"^^xsd:string ;
+    pesc:hasCourse <https://example.edu/Course/001> ;
+    pesc:offeredBy <https://example.edu/Source#id> .
 
 <https://people.pjjk.net/test> a ceds:C200275 ;
     ceds:P600336 [ a ceds:C200377 ;
