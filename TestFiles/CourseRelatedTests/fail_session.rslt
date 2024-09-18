@@ -1,0 +1,51 @@
+Validation Report
+Conforms: False
+Results (7):
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsessionshapeHasSessionType
+	Focus Node: <https://example.edu/Session/001>
+	Value Node: pescSessionTypes:Fall
+	Result Path: ceds:P000254
+	Message: Value pescSessionTypes:Fall not in list ['ceds:NI000254117085', 'ceds:NI000254117090', 'ceds:NI000254116843', 'pescSessionTypes:FourOneFourPlan', 'pescSessionTypes:Continuous', 'pescSessionTypes:FallSession', 'ceds:NI000254116976', 'pescSessionTypes:DiffersByProgram', 'pescSessionTypes:Other', 'ceds:NI000254116125', 'ceds:NI000254116047', 'ceds:NI000254115964', 'ceds:NI000254115787', 'ceds:NI000254116676', 'ceds:NI000254116671']
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsessionshapeSessionBeginDate
+	Focus Node: <https://example.edu/Session/001>
+	Value Node: Literal("2019-09-01", datatype=xsd:string)
+	Result Path: ceds:P000251
+	Message: Value is not Literal with datatype xsd:date
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsessionshapeSessionDesignator
+	Focus Node: <https://example.edu/Session/001>
+	Result Path: ceds:P000252
+	Message: Less than 1 values on <https://example.edu/Session/001>->ceds:P000252
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsessionshapeSessionDesignatorSuffix
+	Focus Node: <https://example.edu/Session/001>
+	Value Node: Literal("II", datatype=xsd:token)
+	Result Path: pesc:sessionDesignatorSuffix
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsessionshapeSessionEndDate
+	Focus Node: <https://example.edu/Session/001>
+	Value Node: Literal("2019-12-19", datatype=xsd:string)
+	Result Path: ceds:P000253
+	Message: Value is not Literal with datatype xsd:date
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsessionshapeSessionName
+	Focus Node: <https://example.edu/Session/001>
+	Value Node: Literal("Fall 2019")
+	Result Path: ceterms:name
+	Message: Value is not Literal with datatype rdf:langString
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsessionshapeSessionSchoolYear
+	Focus Node: <https://example.edu/Session/001>
+	Value Node: Literal("2019-01-01", datatype=xsd:date)
+	Result Path: pesc:sessionSchoolYear
+	Message: Value is not Literal with datatype xsd:gYear
