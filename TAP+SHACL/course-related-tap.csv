@@ -41,7 +41,7 @@ pescSessionTypes:Other
 ceds:NI000254117090",picklist,,Recommended,
 287,AcademicSessionShape,pesc:sessionSchoolYear,Session School Year,FALSE,FALSE,Literal,xsd:gYear,,,,Optional,ccyy-ccyy
 288,AcademicSessionShape,ceds:P000251,Session Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-289,AcademicSessionShape,ceds:P2000253,Session End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+289,AcademicSessionShape,ceds:P000253,Session End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 ,CourseShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200328,,,,
 290,CourseShape,ceds:P001303,Has Course Credit Basis Type,TRUE,FALSE,IRI,,"ceds:NI001303116728
 ceds:NI001303115164

@@ -378,7 +378,7 @@
     sh:maxCount 1 ;
     sh:name "Session End Date"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path ceds:P2000253 .
+    sh:path ceds:P000253 .
 
 <academicsessionshapeSessionName> a sh:PropertyShape ;
     sh:datatype rdf:langString ;
