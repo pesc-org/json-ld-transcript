@@ -389,7 +389,7 @@
     sh:path ceterms:name .
 
 <academicsessionshapeSessionSchoolYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
+    sh:datatype xsd:gYear ;
     sh:maxCount 1 ;
     sh:name "Session School Year"@en-US ;
     sh:nodeKind sh:Literal ;

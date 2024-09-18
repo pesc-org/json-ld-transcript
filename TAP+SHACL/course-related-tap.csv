@@ -39,7 +39,7 @@ pescSessionTypes:Continuous
 pescSessionTypes:DiffersByProgram
 pescSessionTypes:Other
 ceds:NI000254117090",picklist,,Recommended,
-287,AcademicSessionShape,pesc:sessionSchoolYear,Session School Year,FALSE,FALSE,Literal,xsd:date,,,,Optional,ccyy-ccyy
+287,AcademicSessionShape,pesc:sessionSchoolYear,Session School Year,FALSE,FALSE,Literal,xsd:gYear,,,,Optional,ccyy-ccyy
 288,AcademicSessionShape,ceds:P000251,Session Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 289,AcademicSessionShape,ceds:P2000253,Session End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 ,CourseShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200328,,,,
