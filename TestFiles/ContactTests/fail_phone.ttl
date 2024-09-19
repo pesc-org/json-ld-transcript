@@ -74,7 +74,7 @@
     ] ;
     pesc:achievement <https://example.edu/achievement001> .
 
-<https://example.edu/achievement001> a pesc:AcademicAchievement,
+<https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;
     pesc:academicAwardDate "1985-05-01"^^xsd:date ;
     pesc:academicAwardTitle "Example Award"^^xsd:string ;

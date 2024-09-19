@@ -177,7 +177,7 @@
     ].
 
 <https://example.edu/achievement001> 
-    a pesc:AcademicAchievement, pesc:AcademicAward ;
+    a pesc:Achievement, pesc:AcademicAward ;
     pesc:academicAwardDate "1985-05-01"^^xsd:date ;
     pesc:academicAwardTitle "Example Award"^^xsd:string ;
     pesc:inProgram <https://example.edu/Program/001> ;
