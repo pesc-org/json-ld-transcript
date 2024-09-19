@@ -22,7 +22,6 @@
 @prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
 @prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
 @prefix pescRepeatCodes: <https://pesc.org/vocabs/RepeatCodes#> .
-@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
 @prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
 @prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
@@ -199,22 +198,6 @@
     sh:name "To Be Done"@en ;
     sh:targetClass pesc:TBD .
 
-<AcademicAchievementShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Achievement "@en ;
-    sh:property <academicachievementshapeAdditionalNote>,
-        <academicachievementshapeCohortGraduationYear>,
-        <academicachievementshapeInCourse>,
-        <academicachievementshapeInProgram>,
-        <academicachievementshapeInSession>,
-        <academicachievementshapeInTest>,
-        <academicachievementshapeSchool>,
-        <academicachievementshapeStudentLevel>,
-        <academicachievementshapeType>,
-        <academicachievementshapeVerifiedBy> ;
-    sh:targetObjectsOf pesc:achievement,
-        pesc:hasPart .
-
 <AcademicDegreeRequirementShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Degree Requirement"@en ;
@@ -227,7 +210,21 @@
 <AcademicSessionShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Session"@en ;
-    sh:targetClass pesc:AcademicSession .
+    sh:targetClass ceds:C200245 .
+
+<AchievementShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Achievement "@en ;
+    sh:property <achievementshapeAdditionalNote>,
+        <achievementshapeInCourse>,
+        <achievementshapeInProgram>,
+        <achievementshapeInSession>,
+        <achievementshapeInTest>,
+        <achievementshapeSchool>,
+        <achievementshapeType>,
+        <achievementshapeVerifiedBy> ;
+    sh:targetObjectsOf pesc:achievement,
+        pesc:hasPart .
 
 <CourseAchievementShape> a sh:NodeShape ;
     sh:closed false ;
@@ -288,70 +285,6 @@
         <testscoreshapeSubtestScore>,
         <testscoreshapeTestScoreMethod> ;
     sh:targetClass pesc:TestScores .
-
-<academicachievementshapeAdditionalNote> a sh:PropertyShape ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
-
-<academicachievementshapeCohortGraduationYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Cohort Graduation Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:cohortGraduationYear .
-
-<academicachievementshapeInCourse> a sh:PropertyShape ;
-    sh:name "In Course"@en-US ;
-    sh:node <CourseShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inCourse .
-
-<academicachievementshapeInProgram> a sh:PropertyShape ;
-    sh:name "In Program"@en-US ;
-    sh:node <AcademicProgramShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inProgram .
-
-<academicachievementshapeInSession> a sh:PropertyShape ;
-    sh:name "In Session"@en-US ;
-    sh:node <AcademicSessionShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inSession .
-
-<academicachievementshapeInTest> a sh:PropertyShape ;
-    sh:name "In Test"@en-US ;
-    sh:node <TestShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inTest .
-
-<academicachievementshapeSchool> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "School"@en-US ;
-    sh:node <OrganizationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:school .
-
-<academicachievementshapeStudentLevel> a sh:PropertyShape ;
-    sh:in ( pescStudentLevelCodes:Postsecondary pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear pescStudentLevelCodes:NonDegree pescStudentLevelCodes:Grade13 pescStudentLevelCodes:Ungraded pescStudentLevelCodes:CollegeFirstYear pescStudentLevelCodes:CollegeFirstYearAttendedBefore pescStudentLevelCodes:CollegeSophomore pescStudentLevelCodes:CollegeJunior pescStudentLevelCodes:CollegeSenior pescStudentLevelCodes:CollegeFifthYear pescStudentLevelCodes:PostBaccalaureate pescStudentLevelCodes:GraduateNonDegree pescStudentLevelCodes:GraduateFirstYear pescStudentLevelCodes:GraduateSecondYear pescStudentLevelCodes:GraduateThirdYear pescStudentLevelCodes:GraduateBeyondThirdYear pescStudentLevelCodes:Professional pescStudentLevelCodes:ProfessionalFirstYear pescStudentLevelCodes:ProfessionalSecondYear pescStudentLevelCodes:ProfessionalThirdYear pescStudentLevelCodes:ProfessionalBeyondThirdYear pescStudentLevelCodes:MastersQualifying pescStudentLevelCodes:Masters pescStudentLevelCodes:Doctoral pescStudentLevelCodes:Postdoctoral ) ;
-    sh:maxCount 1 ;
-    sh:name "Student Level"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:studentLevel .
-
-<academicachievementshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:AcademicAchievement ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<academicachievementshapeVerifiedBy> a sh:PropertyShape ;
-    sh:name "Verified By"@en-US ;
-    sh:node <VerifiableCredentialShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:verifiedBy .
 
 <academicawardshapeAcademicAwardDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
@@ -562,6 +495,56 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:highSchoolCreditSummary .
 
+<achievementshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
+
+<achievementshapeInCourse> a sh:PropertyShape ;
+    sh:name "In Course"@en-US ;
+    sh:node <CourseShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inCourse .
+
+<achievementshapeInProgram> a sh:PropertyShape ;
+    sh:name "In Program"@en-US ;
+    sh:node <AcademicProgramShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inProgram .
+
+<achievementshapeInSession> a sh:PropertyShape ;
+    sh:name "In Session"@en-US ;
+    sh:node <AcademicSessionShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inSession .
+
+<achievementshapeInTest> a sh:PropertyShape ;
+    sh:name "In Test"@en-US ;
+    sh:node <TestShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inTest .
+
+<achievementshapeSchool> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "School"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:school .
+
+<achievementshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Achievement ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<achievementshapeVerifiedBy> a sh:PropertyShape ;
+    sh:name "Verified By"@en-US ;
+    sh:node <VerifiableCredentialShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:verifiedBy .
+
 <additionalstudentachievmentshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
     sh:node <RAPShape> ;
@@ -691,7 +674,7 @@
 <collegetranscriptshapeHasPart> a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:name "Has Part"@en-US ;
-    sh:node <AcademicAchievementShape> ;
+    sh:node <AchievementShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasPart .
 
@@ -1207,6 +1190,5 @@
 <AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Program"@en ;
-    sh:targetClass pesc:AcademicProgram ;
-    sh:targetObjectsOf pesc:_AcademicProgram .
+    sh:targetClass ceds:C200331 .
 
