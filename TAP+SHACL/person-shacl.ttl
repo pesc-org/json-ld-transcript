@@ -8,6 +8,7 @@
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -31,8 +32,7 @@
 <AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Program"@en ;
-    sh:targetClass pesc:AcademicProgram ;
-    sh:targetObjectsOf pesc:_AcademicProgram .
+    sh:targetClass ceds:C200331 .
 
 <AcademicRecordShape> a sh:NodeShape ;
     sh:closed false ;
@@ -42,7 +42,7 @@
 <AcademicSessionShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Session"@en ;
-    sh:targetClass pesc:AcademicSession .
+    sh:targetClass ceds:C200245 .
 
 <AcademicSummaryShape> a sh:NodeShape ;
     sh:closed false ;
@@ -186,6 +186,7 @@
         <studentshapeBirthStateProvinceCode>,
         <studentshapeBirthYear>,
         <studentshapeBirthday>,
+        <studentshapeCohortGraduationYear>,
         <studentshapeContact>,
         <studentshapeDeceasedIndicator>,
         <studentshapeGenderCode>,
@@ -194,6 +195,7 @@
         <studentshapeHasPersonName>,
         <studentshapeLanguage>,
         <studentshapeResidency>,
+        <studentshapeStudentLevel>,
         <studentshapeType> ;
     sh:targetObjectsOf pesc:student .
 
@@ -218,9 +220,9 @@
     sh:name "W3C Verifiable Credential"@en ;
     sh:targetObjectsOf pesc:verifiableCredential .
 
-<AcademicAchievementShape> a sh:NodeShape ;
+<AchievementShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Academic Achievement "@en ;
+    sh:name "Achievement "@en ;
     sh:targetObjectsOf pesc:achievement,
         pesc:hasPart .
 
@@ -386,7 +388,7 @@
 <studentshapeAchievement> a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:name "Achievement"@en-US ;
-    sh:node <AcademicAchievementShape> ;
+    sh:node <AchievementShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:achievement .
 
@@ -447,6 +449,13 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:birthday .
 
+<studentshapeCohortGraduationYear> a sh:PropertyShape ;
+    sh:datatype xsd:gYear ;
+    sh:maxCount 1 ;
+    sh:name "Cohort Graduation Year"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:cohortGraduationYear .
+
 <studentshapeContact> a sh:PropertyShape ;
     sh:name "Contact"@en-US ;
     sh:node <ContactShape> ;
@@ -497,6 +506,13 @@
     sh:name "Residency"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasResidency .
+
+<studentshapeStudentLevel> a sh:PropertyShape ;
+    sh:in ( pescStudentLevelCodes:Postsecondary pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear pescStudentLevelCodes:NonDegree pescStudentLevelCodes:Grade13 pescStudentLevelCodes:Ungraded pescStudentLevelCodes:CollegeFirstYear pescStudentLevelCodes:CollegeFirstYearAttendedBefore pescStudentLevelCodes:CollegeSophomore pescStudentLevelCodes:CollegeJunior pescStudentLevelCodes:CollegeSenior pescStudentLevelCodes:CollegeFifthYear pescStudentLevelCodes:PostBaccalaureate pescStudentLevelCodes:GraduateNonDegree pescStudentLevelCodes:GraduateFirstYear pescStudentLevelCodes:GraduateSecondYear pescStudentLevelCodes:GraduateThirdYear pescStudentLevelCodes:GraduateBeyondThirdYear pescStudentLevelCodes:Professional pescStudentLevelCodes:ProfessionalFirstYear pescStudentLevelCodes:ProfessionalSecondYear pescStudentLevelCodes:ProfessionalThirdYear pescStudentLevelCodes:ProfessionalBeyondThirdYear pescStudentLevelCodes:MastersQualifying pescStudentLevelCodes:Masters pescStudentLevelCodes:Doctoral pescStudentLevelCodes:Postdoctoral ) ;
+    sh:maxCount 1 ;
+    sh:name "Student Level"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:studentLevel .
 
 <studentshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200275 ;

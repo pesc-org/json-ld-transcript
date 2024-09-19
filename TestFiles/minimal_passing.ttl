@@ -41,14 +41,14 @@
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:C200275 ;
+<https://people.pjjk.net/test> a ceds:C200275 ; # Person
     ceds:P600336 [ a ceds:C200377 ;
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
     pesc:achievement <https://example.edu/achievement001> .
 
-<https://example.edu/achievement001> a pesc:AcademicAchievement,
+<https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;
     pesc:academicAwardDate "1985-05-01"^^xsd:date ;
     pesc:academicAwardTitle "Example Award"^^xsd:string ;
