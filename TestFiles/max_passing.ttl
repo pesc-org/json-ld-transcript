@@ -16,6 +16,7 @@
 @prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
 @prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -168,8 +169,10 @@
     pesc:birthCity "Sunnydale"^^xsd:string ;
     pesc:birthStateProvinceCode "CA" ;
     pesc:birthCountry "US" ;
+    pesc:cohortGraduationYear "2024"^^xsd:gYear ;
     pesc:deceasedIndicator true ;
     pesc:genderCode pescGenderCodes:Unreported ;
+    pesc:studentLevel pescStudentLevelCodes:CollegeJunior ;
     pesc:achievement <https://example.edu/achievement001>;
     elm:additionalNote [
         rdf:type elm:Note ;

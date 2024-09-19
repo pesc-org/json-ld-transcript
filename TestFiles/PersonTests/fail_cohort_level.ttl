@@ -8,6 +8,7 @@
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -41,11 +42,13 @@
     pesc:hasCourse <https://example.edu/Course/001> ;
     pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:C200275 ; # Person
+<https://people.pjjk.net/test> a ceds:C200275 ;
     ceds:P600336 [ a ceds:C200377 ;
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
+    pesc:cohortGraduationYear 2024 ; #invalid type
+    pesc:studentLevel pescStudentLevelCodes:Level42 ; # invalid level
     pesc:achievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
