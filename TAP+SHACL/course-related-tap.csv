@@ -61,7 +61,6 @@ ceds:NI001303115859
 ceds:NI001303115979
 ceds:NI001303116065
 ceds:NI001303115203",picklist,,Required,
-,CourseShape,ceterms:isPartOf,Is Part Of,FALSE,TRUE,IRI BNODE,,,,AcademicProgramShape,,
 ,CourseShape,ceterms:offeredBy,Offered By,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,,
 291,CourseShape,ceds:P000057,Has Course Credit Units,FALSE,FALSE,IRI,,"ceds:NI000057116219
 ceds:NI000057116669
