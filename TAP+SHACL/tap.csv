@@ -313,3 +313,6 @@ pescTestScoreMethods:Local",picklist,,Optional,
 378,TestScoreShape,pesc:scoreSelfRportedIndicator,Score Self Reported Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
 ,VerifiableCredentialShape,cred:issuer,Issuer,TRUE,FALSE,IRI BNODE,,,,,,
 ,VerifiableCredentialShape,cred:subject,Subject,TRUE,FALSE,IRI BNODE,,,,,,
+366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
+368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:date,,,,Required,
+367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,

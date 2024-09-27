@@ -197,9 +197,6 @@
 <TestScoreShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Test Scores"@en ;
-    sh:property <testscoreshapeTestDate>,
-        <testscoreshapeTestYear>,
-        <testscoreshapeTestYearMonth> ;
     sh:targetClass pesc:TestScores .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
@@ -257,12 +254,12 @@
 
 <TestShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Tests"@en ;
-    sh:property <testshapeEducationTestCode>,
-        <testshapeSubTests>,
-        <testshapeTestCode>,
-        <testshapeTestName> ;
-    sh:targetClass pesc:Tests .
+    sh:name "Test"@en ;
+    sh:property <testshapeAssessmentIdentifier>,
+        <testshapeAssessmentTitle>,
+        <testshapeSubTest>,
+        <testshapeType> ;
+    sh:targetClass ceds:C200010 .
 
 <academicprogramshapeAcademicProgramName> a sh:PropertyShape ;
     sh:datatype rdf:langString ;
@@ -635,56 +632,33 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<testscoreshapeTestDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testDate .
-
-<testscoreshapeTestYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYear .
-
-<testscoreshapeTestYearMonth> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year Month"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYearMonth .
-
-<testshapeEducationTestCode> a sh:PropertyShape ;
+<testshapeAssessmentIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "Education Test Code"@en-US ;
+    sh:name "Assessment Identifier"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:educationTestCode .
+    sh:path ceds:P001067 .
 
-<testshapeSubTests> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Sub Tests"@en-US ;
+<testshapeAssessmentTitle> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Assessment Title"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000028 .
+
+<testshapeSubTest> a sh:PropertyShape ;
+    sh:name "Sub Test"@en-US ;
     sh:node <TestShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:subTests .
+    sh:path pesc:subTest .
 
-<testshapeTestCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
+<testshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200010 ;
     sh:minCount 1 ;
-    sh:name "Test Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testCode .
-
-<testshapeTestName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Test Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testName .
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;

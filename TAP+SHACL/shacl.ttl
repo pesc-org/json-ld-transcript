@@ -283,7 +283,10 @@
         <testscoreshapeScoreSelfReportedIndicator>,
         <testscoreshapeScoreValue>,
         <testscoreshapeSubtestScore>,
-        <testscoreshapeTestScoreMethod> ;
+        <testscoreshapeTestDate>,
+        <testscoreshapeTestScoreMethod>,
+        <testscoreshapeTestYear>,
+        <testscoreshapeTestYearMonth> ;
     sh:targetClass pesc:TestScores .
 
 <academicawardshapeAcademicAwardDate> a sh:PropertyShape ;
@@ -1106,12 +1109,33 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:subTestScore .
 
+<testscoreshapeTestDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testDate .
+
 <testscoreshapeTestScoreMethod> a sh:PropertyShape ;
     sh:in ( pescTestScoreMethods:Scaled pescTestScoreMethods:Graded pescTestScoreMethods:Standard pescTestScoreMethods:Raw pescTestScoreMethods:Percent pescTestScoreMethods:Mastery pescTestScoreMethods:Adjective pescTestScoreMethods:Stanine pescTestScoreMethods:Percentile pescTestScoreMethods:NormalCurve pescTestScoreMethods:Equated pescTestScoreMethods:Local ) ;
     sh:maxCount 1 ;
     sh:name "Test Score Method"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:testScoreMethod .
+
+<testscoreshapeTestYear> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Year"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testYear .
+
+<testscoreshapeTestYearMonth> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Year Month"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testYearMonth .
 
 <verifiablecredentialshapeIssuer> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -1157,8 +1181,8 @@
 
 <TestShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Tests"@en ;
-    sh:targetClass pesc:Tests .
+    sh:name "Test"@en ;
+    sh:targetClass ceds:200010 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     sh:closed false ;

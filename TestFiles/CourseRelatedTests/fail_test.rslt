@@ -1,0 +1,63 @@
+Validation Report
+Conforms: False
+Results (5):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testshapeAssessmentIdentifier
+	Focus Node: <https://example.edu/Test/001>
+	Result Path: ceds:P001067
+	Message: Less than 1 values on <https://example.edu/Test/001>->ceds:P001067
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testshapeAssessmentTitle
+	Focus Node: <https://example.edu/Test/001>
+	Value Node: Literal("Standard Test", lang=en)
+	Result Path: ceds:P000028
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testshapeSubTest
+	Focus Node: <https://example.edu/Test/001>
+	Value Node: Literal("STA")
+	Result Path: pesc:subTest
+	Message: Value does not conform to Shape ex:TestShape. See details for more information.
+	Details:
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:testshapeAssessmentIdentifier
+			Focus Node: Literal("STA")
+			Result Path: ceds:P001067
+			Message: Less than 1 values on Literal("STA")->ceds:P001067
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:testshapeType
+			Focus Node: Literal("STA")
+			Result Path: rdf:type
+			Message: Node Literal("STA")->rdf:type does not contain a value in the set: ['ceds:C200010']
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:testshapeType
+			Focus Node: Literal("STA")
+			Result Path: rdf:type
+			Message: Less than 1 values on Literal("STA")->rdf:type
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testshapeSubTest
+	Focus Node: <https://example.edu/Test/001>
+	Value Node: <https://example.edu/Test/001A>
+	Result Path: pesc:subTest
+	Message: Value does not conform to Shape ex:TestShape. See details for more information.
+	Details:
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:testshapeType
+			Focus Node: <https://example.edu/Test/001A>
+			Result Path: rdf:type
+			Message: Node <https://example.edu/Test/001A>->rdf:type does not contain a value in the set: ['ceds:C200010']
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testshapeSubTest
+	Focus Node: <https://example.edu/Test/001>
+	Value Node: Literal("STA")
+	Result Path: pesc:subTest
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI

@@ -162,10 +162,7 @@ ceds:NI001310115439",picklist,,Optional,
 312,PostsecondarySectionShape,ceds:P001315,Course Section Number,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
 ,PostsecondarySectionShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200332,,,,
 ,PostsecondarySectionShape,ceds:P600108,Has Postsecondary Section Location,TRUE,FALSE,IRI BNODE,,,,PostsecondarySectionLocationShape,,
-363,TestShape,pesc:testCode,Test Code,TRUE,FALSE,Literal,xsd:string,,picklist,,Not Recommended,pesc:Appendix D
-364,TestShape,pesc:educationTestCode,Education Test Code,TRUE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:Appendix E
-365,TestShape,pesc:testName,Test Name,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:Appendix D or pesc:Appendix E
-369,TestShape,pesc:subTests,Sub Tests,TRUE,TRUE,IRI BNODE,,,,TestShape,Required,
-366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
-368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:date,,,,Required,
-367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,
+364,TestShape,ceds:P001067,Assessment Identifier,TRUE,FALSE,Literal,xsd:string,,,,Recommended,
+365,TestShape,ceds:P000028,Assessment Title,FALSE,FALSE,Literal,xsd:string,,,,Recommended,pesc:Appendix D or pesc:Appendix E
+369,TestShape,pesc:subTest,Sub Test,FALSE,TRUE,IRI BNODE,,,,TestShape,Required,
+,TestShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200010,,,,
