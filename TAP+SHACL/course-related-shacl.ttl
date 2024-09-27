@@ -197,6 +197,9 @@
 <TestScoreShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Test Scores"@en ;
+    sh:property <testscoreshapeTestDate>,
+        <testscoreshapeTestYear>,
+        <testscoreshapeTestYearMonth> ;
     sh:targetClass pesc:TestScores .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
@@ -258,10 +261,7 @@
     sh:property <testshapeEducationTestCode>,
         <testshapeSubTests>,
         <testshapeTestCode>,
-        <testshapeTestDate>,
-        <testshapeTestName>,
-        <testshapeTestYear>,
-        <testshapeTestYearMonth> ;
+        <testshapeTestName> ;
     sh:targetClass pesc:Tests .
 
 <academicprogramshapeAcademicProgramName> a sh:PropertyShape ;
@@ -635,6 +635,27 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<testscoreshapeTestDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testDate .
+
+<testscoreshapeTestYear> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Year"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testYear .
+
+<testscoreshapeTestYearMonth> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Year Month"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testYearMonth .
+
 <testshapeEducationTestCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -658,33 +679,12 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:testCode .
 
-<testshapeTestDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testDate .
-
 <testshapeTestName> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:name "Test Name"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:testName .
-
-<testshapeTestYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYear .
-
-<testshapeTestYearMonth> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year Month"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYearMonth .
 
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;

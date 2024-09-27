@@ -166,6 +166,6 @@ ceds:NI001310115439",picklist,,Optional,
 364,TestShape,pesc:educationTestCode,Education Test Code,TRUE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:Appendix E
 365,TestShape,pesc:testName,Test Name,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:Appendix D or pesc:Appendix E
 369,TestShape,pesc:subTests,Sub Tests,TRUE,TRUE,IRI BNODE,,,,TestShape,Required,
-366,TestShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
-368,TestShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:date,,,,Required,
-367,TestShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,
+366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
+368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:date,,,,Required,
+367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,
