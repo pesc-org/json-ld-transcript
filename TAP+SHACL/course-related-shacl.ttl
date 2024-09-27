@@ -15,12 +15,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<AcademicAchievementShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Achievement "@en ;
-    sh:targetObjectsOf pesc:achievement,
-        pesc:hasPart .
-
 <AcademicAwardShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Award"@en ;
@@ -35,6 +29,21 @@
     sh:closed false ;
     sh:name "Academic Honors"@en ;
     sh:targetClass pesc:AcademicHonors .
+
+<AcademicProgramShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Program"@en ;
+    sh:property <academicprogramshapeAcademicProgramName>,
+        <academicprogramshapeAcademicProgramType>,
+        <academicprogramshapeCodedNotation>,
+        <academicprogramshapeHasClassificationofInstructionalProgramCode>,
+        <academicprogramshapeHasPart>,
+        <academicprogramshapeOfferedBy>,
+        <academicprogramshapeProgramESISCode>,
+        <academicprogramshapeProgramHEGISCode>,
+        <academicprogramshapeProgramSecondarySchoolCode>,
+        <academicprogramshapeType> ;
+    sh:targetClass ceds:C200331 .
 
 <AcademicRecordShape> a sh:NodeShape ;
     sh:closed false ;
@@ -63,6 +72,12 @@
     sh:closed false ;
     sh:name "Accreditation"@en ;
     sh:targetClass pesc:Accreditation .
+
+<AchievementShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Achievement "@en ;
+    sh:targetObjectsOf pesc:achievement,
+        pesc:hasPart .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
     sh:closed false ;
@@ -189,21 +204,6 @@
     sh:name "W3C Verifiable Credential"@en ;
     sh:targetObjectsOf pesc:verifiableCredential .
 
-<AcademicProgramShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Program"@en ;
-    sh:property <academicprogramshapeAcademicProgramName>,
-        <academicprogramshapeAcademicProgramType>,
-        <academicprogramshapeCodedNotation>,
-        <academicprogramshapeHasClassificationofInstructionalProgramCode>,
-        <academicprogramshapeHasPart>,
-        <academicprogramshapeOfferedBy>,
-        <academicprogramshapeProgramESISCode>,
-        <academicprogramshapeProgramHEGISCode>,
-        <academicprogramshapeProgramSecondarySchoolCode>,
-        <academicprogramshapeType> ;
-    sh:targetClass ceds:C200331 .
-
 <CourseShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Post Secondary Course"@en ;
@@ -227,7 +227,6 @@
         <courseshapeHasCourseLevelType>,
         <courseshapeHasNCESCollegeCourseMapCode>,
         <courseshapeHasPostsecondarySection>,
-        <courseshapeIsPartOf>,
         <courseshapeOfferedBy>,
         <courseshapeOriginalCourseIdentifier>,
         <courseshapeOverrideSchoolCourseNumber>,
@@ -548,12 +547,6 @@
     sh:node <PostsecondarySectionShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600267 .
-
-<courseshapeIsPartOf> a sh:PropertyShape ;
-    sh:name "Is Part Of"@en-US ;
-    sh:node <AcademicProgramShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceterms:isPartOf .
 
 <courseshapeOfferedBy> a sh:PropertyShape ;
     sh:maxCount 1 ;

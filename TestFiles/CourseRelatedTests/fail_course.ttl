@@ -51,7 +51,6 @@
     ceds:P001518 ceds:NI0000 ; # in valid course subject area code ;
     pesc:courseApplicability pescCourseApplicabilityCodes:NotValid ;
     ceterms:offeredBy "Source ID" ; # wrong type
-    ceterms:isPartOf "Program 1" ; #wrong type
     pesc:Requirement "req1" ;
     pesc:Attribute "attr1" ;
     pesc:Proficiency "prof1" ;
