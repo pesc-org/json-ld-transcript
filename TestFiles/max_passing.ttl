@@ -62,9 +62,9 @@
     ceds:P001518 ceds:NI001518118404 ; # copurse subject area code ;
     pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram ;
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:Requirement <https://example.edu/reqs/1> ;
-    pesc:Attribute <https://example.edu/attr/1> ;
-    pesc:Proficiency <https://example.edu/prof/1> ;
+    pesc:requirement <https://example.edu/reqs/1> ;
+    pesc:attribute <https://example.edu/attr/1> ;
+    pesc:proficiency <https://example.edu/prof/1> ;
     ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
 .
 

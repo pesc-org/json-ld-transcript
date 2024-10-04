@@ -51,9 +51,9 @@
     ceds:P001518 ceds:NI0000 ; # in valid course subject area code ;
     pesc:courseApplicability pescCourseApplicabilityCodes:NotValid ;
     ceterms:offeredBy "Source ID" ; # wrong type
-    pesc:Requirement "req1" ; # wrong node type
-    pesc:Attribute "attr1" ; # wrong node type
-    pesc:Proficiency "prof1" ; # wrong node type
+    pesc:requirement "req1" ; # wrong node type
+    pesc:attribute "attr1" ; # wrong node type
+    pesc:proficiency "prof1" ; # wrong node type
     ceds:P600267 "Section 1" ; # has Section should be IRI/BNode
 
 .

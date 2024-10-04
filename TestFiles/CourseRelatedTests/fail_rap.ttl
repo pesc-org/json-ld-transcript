@@ -31,9 +31,9 @@
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:Requirement <https://example.edu/reqs/1> ;
-    pesc:Attribute <https://example.edu/attr/1> ;
-    pesc:Proficiency <https://example.edu/prof/1> ;
+    pesc:requirement <https://example.edu/reqs/1> ;
+    pesc:attribute <https://example.edu/attr/1> ;
+    pesc:proficiency <https://example.edu/prof/1> ;
 .
 
 <https://example.edu/reqs/1> a ceds:C200065 ;

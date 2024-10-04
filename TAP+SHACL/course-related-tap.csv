@@ -144,9 +144,9 @@ ceds:NI000060117182",picklist,,Optional,
 pescCourseApplicabilityCodes:FirstProgram
 pescCourseApplicabilityCodes:SecondProgram
 pescCourseApplicabilityCodes:BothPrograms",picklist,,Not Recommended,
-331,CourseShape,pesc:Requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
-332,CourseShape,pesc:Attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,,Optional,
-333,CourseShape,pesc:Proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+331,CourseShape,pesc:requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+332,CourseShape,pesc:attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,,Optional,
+333,CourseShape,pesc:proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 ,CourseShape,ceds:P600267,Has Postsecondary Section,FALSE,TRUE,IRI BNODE,,,,PostsecondarySectionShape,Optional,
 ,PostsecondarySectionLocationShape,rdf:type,Type,TRUE,FALSE,IRI,,ceds:C200333,,,,
 ,PostsecondarySectionLocationShape,ceds:P001310,Has Course Instruction Site Type,FALSE,FALSE,IRI,,"ceds:NI001310116323

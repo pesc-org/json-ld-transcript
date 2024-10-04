@@ -409,7 +409,7 @@
 <courseshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Attribute .
+    sh:path pesc:attribute .
 
 <courseshapeCourseAcademicGradeScaleCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -572,13 +572,13 @@
     sh:name "Proficiency"@en-US ;
     sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Proficiency .
+    sh:path pesc:proficiency .
 
 <courseshapeRequirement> a sh:PropertyShape ;
     sh:name "Requirement"@en-US ;
     sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Requirement .
+    sh:path pesc:requirement .
 
 <courseshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200328 ;
