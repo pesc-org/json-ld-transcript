@@ -204,6 +204,15 @@
     sh:name "W3C Verifiable Credential"@en ;
     sh:targetObjectsOf pesc:verifiableCredential .
 
+<AttributeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Attribute"@en ;
+    sh:property <attributeshapeRAPCode>,
+        <attributeshapeRAPName>,
+        <attributeshapeRAPSubName>,
+        <attributeshapeType> ;
+    sh:targetClass pesc:CourseAttribute .
+
 <CourseShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Post Secondary Course"@en ;
@@ -398,6 +407,34 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<attributeshapeRAPCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 3 ;
+    sh:name "RAP Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapCode .
+
+<attributeshapeRAPName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "RAP Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapName .
+
+<attributeshapeRAPSubName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "RAP Sub Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapSubName .
+
+<attributeshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:CourseAttribute ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <courseshapeAgencyCourseID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -408,6 +445,7 @@
 
 <courseshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
+    sh:node <AttributeShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:attribute .
 

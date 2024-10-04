@@ -92,7 +92,11 @@
     pesc:rapSubName "Example proficiency subname" ;
 .
 
-<https://example.edu/attr/1> a pesc:CourseAttribute .
+<https://example.edu/attr/1> a pesc:CourseAttribute ;
+    pesc:rapCode "exA" ;
+    pesc:rapName "Example Attribute" ;
+    pesc:rapSubName "Example Attribute subname" ;
+.
 
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;

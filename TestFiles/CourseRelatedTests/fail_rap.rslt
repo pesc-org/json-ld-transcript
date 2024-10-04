@@ -1,6 +1,97 @@
 Validation Report
 Conforms: False
-Results (13):
+Results (14):
+Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPCode
+	Focus Node: <https://example.edu/reqs/1>
+	Value Node: Literal("exampleRapCode")
+	Result Path: pesc:rapCode
+	Message: String length not <= Literal("3", datatype=xsd:integer)
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPCode
+	Focus Node: <https://example.edu/prof/1>
+	Value Node: Literal("42", datatype=xsd:integer)
+	Result Path: pesc:rapCode
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPName
+	Focus Node: <https://example.edu/reqs/1>
+	Value Node: <http://example.org/name>
+	Result Path: pesc:rapName
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPName
+	Focus Node: <https://example.edu/reqs/1>
+	Value Node: <http://example.org/name>
+	Result Path: pesc:rapName
+	Message: Value is not of Node Kind sh:Literal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPName
+	Focus Node: <https://example.edu/prof/1>
+	Value Node: [ ]
+	Result Path: pesc:rapName
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPName
+	Focus Node: <https://example.edu/prof/1>
+	Value Node: [ ]
+	Result Path: pesc:rapName
+	Message: String length not <= Literal("60", datatype=xsd:integer)
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPName
+	Focus Node: <https://example.edu/prof/1>
+	Value Node: [ ]
+	Result Path: pesc:rapName
+	Message: Value is not of Node Kind sh:Literal
+Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPSubName
+	Focus Node: <https://example.edu/reqs/1>
+	Value Node: Literal("Very long example requirement subname, in fact it is too long..............")
+	Result Path: pesc:rapSubName
+	Message: String length not <= Literal("60", datatype=xsd:integer)
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPSubName
+	Focus Node: <https://example.edu/prof/1>
+	Value Node: [ ]
+	Result Path: pesc:rapSubName
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPSubName
+	Focus Node: <https://example.edu/prof/1>
+	Value Node: [ ]
+	Result Path: pesc:rapSubName
+	Message: String length not <= Literal("60", datatype=xsd:integer)
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:rapshapeRAPSubName
+	Focus Node: <https://example.edu/prof/1>
+	Value Node: [ ]
+	Result Path: pesc:rapSubName
+	Message: Value is not of Node Kind sh:Literal
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeAttribute
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: <https://example.edu/attr/1>
+	Result Path: pesc:attribute
+	Message: Value does not conform to Shape ex:AttributeShape. See details for more information.
+	Details:
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:attributeshapeType
+			Focus Node: <https://example.edu/attr/1>
+			Result Path: rdf:type
+			Message: Node <https://example.edu/attr/1>->rdf:type does not contain a value in the set: ['pesc:CourseAttribute']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeProficiency
@@ -94,80 +185,3 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Value Node: Literal("Very long example requirement subname, in fact it is too long..............")
 			Result Path: pesc:rapSubName
 			Message: String length not <= Literal("60", datatype=xsd:integer)
-Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPCode
-	Focus Node: <https://example.edu/reqs/1>
-	Value Node: Literal("exampleRapCode")
-	Result Path: pesc:rapCode
-	Message: String length not <= Literal("3", datatype=xsd:integer)
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPCode
-	Focus Node: <https://example.edu/prof/1>
-	Value Node: Literal("42", datatype=xsd:integer)
-	Result Path: pesc:rapCode
-	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPName
-	Focus Node: <https://example.edu/reqs/1>
-	Value Node: <http://example.org/name>
-	Result Path: pesc:rapName
-	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPName
-	Focus Node: <https://example.edu/reqs/1>
-	Value Node: <http://example.org/name>
-	Result Path: pesc:rapName
-	Message: Value is not of Node Kind sh:Literal
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPName
-	Focus Node: <https://example.edu/prof/1>
-	Value Node: [ ]
-	Result Path: pesc:rapName
-	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPName
-	Focus Node: <https://example.edu/prof/1>
-	Value Node: [ ]
-	Result Path: pesc:rapName
-	Message: String length not <= Literal("60", datatype=xsd:integer)
-Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPName
-	Focus Node: <https://example.edu/prof/1>
-	Value Node: [ ]
-	Result Path: pesc:rapName
-	Message: Value is not of Node Kind sh:Literal
-Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPSubName
-	Focus Node: <https://example.edu/reqs/1>
-	Value Node: Literal("Very long example requirement subname, in fact it is too long..............")
-	Result Path: pesc:rapSubName
-	Message: String length not <= Literal("60", datatype=xsd:integer)
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPSubName
-	Focus Node: <https://example.edu/prof/1>
-	Value Node: [ ]
-	Result Path: pesc:rapSubName
-	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPSubName
-	Focus Node: <https://example.edu/prof/1>
-	Value Node: [ ]
-	Result Path: pesc:rapSubName
-	Message: String length not <= Literal("60", datatype=xsd:integer)
-Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:rapshapeRAPSubName
-	Focus Node: <https://example.edu/prof/1>
-	Value Node: [ ]
-	Result Path: pesc:rapSubName
-	Message: Value is not of Node Kind sh:Literal
