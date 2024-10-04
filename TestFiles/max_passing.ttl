@@ -78,6 +78,23 @@
     ceds:P001310 ceds:NI001310116323 ; # Instruction site type
 .
 
+<https://example.edu/reqs/1> a ceds:C200065 ;
+    # a Competency Description
+    pesc:rapCode "exR" ;
+    pesc:rapName "Example requirement" ;
+    pesc:rapSubName "Example requirement subname" ;
+.
+
+<https://example.edu/prof/1>  a ceds:C200065 ;
+    # a Competency Description
+    pesc:rapCode "exP" ;
+    pesc:rapName "Example proficiency" ;
+    pesc:rapSubName "Example proficiency subname" ;
+.
+
+<https://example.edu/attr/1> a pesc:CourseAttribute .
+
+
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 

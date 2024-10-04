@@ -408,7 +408,6 @@
 
 <courseshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
-    sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:Attribute .
 
@@ -632,6 +631,34 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<rapshapeRAPCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 3 ;
+    sh:name "RAP Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapCode .
+
+<rapshapeRAPName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "RAP Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapName .
+
+<rapshapeRAPSubName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "RAP Sub Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapSubName .
+
+<rapshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200065 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <testshapeAssessmentIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -660,13 +687,17 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<RAPShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Requirement, Attribute or Proficiency"@en ;
+    sh:property <rapshapeRAPCode>,
+        <rapshapeRAPName>,
+        <rapshapeRAPSubName>,
+        <rapshapeType> ;
+    sh:targetClass ceds:C200065 .
+
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Organization"@en ;
     sh:targetClass ceds:C200239 .
-
-<RAPShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Requirement, Attribute or Proficiency"@en ;
-    sh:targetClass pesc:RequirementAttributeProficiency .
 

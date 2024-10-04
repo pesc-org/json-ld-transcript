@@ -1043,27 +1043,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:inProgram .
 
-<rapshapeRAPCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 3 ;
-    sh:name "RAP Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapCode .
-
-<rapshapeRAPName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 60 ;
-    sh:name "RAP Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapName .
-
-<rapshapeRAPSubName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 60 ;
-    sh:name "RAP Sub Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapSubName .
-
 <testscoreshapeInTest> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -1182,7 +1161,7 @@
 <TestShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Test"@en ;
-    sh:targetClass ceds:200010 .
+    sh:targetClass ceds:C200010 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     sh:closed false ;
@@ -1206,10 +1185,7 @@
 <RAPShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Requirement, Attribute or Proficiency"@en ;
-    sh:property <rapshapeRAPCode>,
-        <rapshapeRAPName>,
-        <rapshapeRAPSubName> ;
-    sh:targetClass pesc:RequirementAttributeProficiency .
+    sh:targetClass ceds:200065 .
 
 <AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
