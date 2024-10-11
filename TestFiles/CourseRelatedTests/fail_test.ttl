@@ -1,9 +1,7 @@
-
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
-@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
@@ -24,52 +22,42 @@
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
 
-<https://example.edu/Session/001> a ceds:C200245 ; # AcademicSession 
-    ceterms:offeredBy <https://example.edu/Source#id> ;
-    ceds:P000252 "2019-09"^^xsd:gYearMonth ; # session designator
-    ceterms:name "Fall 2019"@en ;
-    ceds:P000254 ceds:NI000254115787 ; # session type
-. 
+<https://example.edu/Session/001> a pesc:AcademicSession ;
+    pesc:offeredBy <https://example.edu/Source#id> ;
+    pesc:sessionDesignator "2019-09"^^xsd:gYearMonth ;
+    pesc:sessionName "Fall 2019"^^xsd:string ;
+    pesc:sessionType pescSessionTypes:Semester .
 
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
-    ceds:P000043 "123.123"; # invalid CIP format
-    ceds:P000057 ceds:NI00000 ; # Credit units invalid
-    ceds:P000058 "15.0" ; #credit value wrong type
-    ceds:P000060 ceds:NI0000; # Grade point applicability
-    ceds:P000066 "abbreviation" ; # too long Course subject abbreviation
-    ceds:P000068 101 ; #course title wrong type
-    ceds:P001298 [] ; # Grade scale code; to do: invalid type 
-#    ceds:P001303 ceds:NI001303116728 ; # missing mandatory credit basis
-    ceds:P001304 ceds:NI00000 ; # credit level: invalid
-    ceds:P001312 ceds:NI00000 ; #course level invalid
-    ceds:P001314 101 ; # Course Number (as a string)
-    ceds:P001414 "12345678901" ; #NCES course map code too long
-    ceterms:sced "12345S1.0512" ; # too long 12 digit sced code
-    ceds:P001420 101 ;  # should be a sting Original course identifier
-    pesc:agencyCourseID <http://wrong.type> ; # Agency course ID
-    ceds:P001517 "abcde"; # not a 5 digit sced code
-    ceds:P001518 ceds:NI0000 ; # in valid course subject area code ;
-    pesc:courseApplicability pescCourseApplicabilityCodes:NotValid ;
-    ceterms:offeredBy "Source ID" ; # wrong type
-    pesc:requirement "req1" ; # wrong node type
-    pesc:attribute "attr1" ; # wrong node type
-    pesc:proficiency "prof1" ; # wrong node type
-    ceds:P600267 "Section 1" ; # has Section should be IRI/BNode
-
+    ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
+    ceterms:offeredBy <https://example.edu/Source#id> ;
 .
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 
-<https://example.edu/Program/001> a ceds:C200331 ;
-    ceterms:name "Example Program"@en ;
-    ceterms:offeredBy <https://example.edu/Source#id> .
+<https://example.edu/Program/001> a pesc:AcademicProgram ;
+    pesc:academicProgramName "Example Program"^^xsd:string ;
+    pesc:hasCourse <https://example.edu/Course/001> ;
+    pesc:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:C200275 ;
+<https://example.edu/Test/001> a ceds:C200010 ; # Assessment
+    ceds:P000028 "Standard Test"@en ; # wrong data type Assessment Title
+#    ceds:P001067 "ST" ; # missing Assessment Identifier
+    pesc:subTest <https://example.edu/Test/001A>, "STA" ; # one wrong node type
+.
+
+<https://example.edu/Test/001A> a ceds:200010 ; # wrong class. 
+    ceds:P000028 "Standard Test part A" ;
+    ceds:P001067 "STA" ;
+.
+
+<https://people.pjjk.net/test> a ceds:C200275 ; # Person
     ceds:P600336 [ a ceds:C200377 ;
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
+    pesc:achievement <https://example.edu/achievement002>; # test score
     pesc:achievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
@@ -81,4 +69,10 @@
 
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
+
+<https://example.edu/achievement002> 
+    a pesc:Achievement, pesc:TestScore ;
+    pesc:scoreValue "A+" ;
+    pesc:inTest <https://example.edu/Test/001> ;
+.
 

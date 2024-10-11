@@ -19,8 +19,6 @@
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
-@prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
-@prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
 @prefix pescRepeatCodes: <https://pesc.org/vocabs/RepeatCodes#> .
 @prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
 @prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#> .
@@ -92,6 +90,11 @@
         <agencyidentifiershapeCountryCode>,
         <agencyidentifiershapeStateProvinceCode> ;
     sh:targetClass pesc:AgencyIdentifier .
+
+<AttributeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Attribute"@en ;
+    sh:targetClass pesc:CourseAttribute .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
     sh:closed false ;
@@ -256,11 +259,8 @@
 
 <LanguageShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Language"@en ;
-    sh:property <languageshapeLanguageCode>,
-        <languageshapeLanguageProficiency>,
-        <languageshapeLanguageUsage> ;
-    sh:targetClass pesc:Language .
+    sh:name "Person Language"@en ;
+    sh:targetClass ceds:C200293 .
 
 <LicensureShape> a sh:NodeShape ;
     sh:closed false ;
@@ -283,7 +283,10 @@
         <testscoreshapeScoreSelfReportedIndicator>,
         <testscoreshapeScoreValue>,
         <testscoreshapeSubtestScore>,
-        <testscoreshapeTestScoreMethod> ;
+        <testscoreshapeTestDate>,
+        <testscoreshapeTestScoreMethod>,
+        <testscoreshapeTestYear>,
+        <testscoreshapeTestYearMonth> ;
     sh:targetClass pesc:TestScores .
 
 <academicawardshapeAcademicAwardDate> a sh:PropertyShape ;
@@ -923,27 +926,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:totalQualityPoints .
 
-<languageshapeLanguageCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Language Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:languageCode .
-
-<languageshapeLanguageProficiency> a sh:PropertyShape ;
-    sh:in ( pescLanguageProficiencyCodes:EnglishOnly pescLanguageProficiencyCodes:FullyEnglishProficient pescLanguageProficiencyCodes:LimitedEnglishProficiency pescLanguageProficiencyCodes:NonEnglishSpeaking pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient pescLanguageProficiencyCodes:Excellent pescLanguageProficiencyCodes:Good pescLanguageProficiencyCodes:Fair pescLanguageProficiencyCodes:Poor pescLanguageProficiencyCodes:Unacceptable pescLanguageProficiencyCodes:Unknown ) ;
-    sh:maxCount 1 ;
-    sh:name "Language Proficiency"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:languageProficiency .
-
-<languageshapeLanguageUsage> a sh:PropertyShape ;
-    sh:in ( pescLanguageUsageCodes:FirstSpokenlanguage pescLanguageUsageCodes:Native pescLanguageUsageCodes:Reading pescLanguageUsageCodes:Speaking pescLanguageUsageCodes:SpokenAtHome pescLanguageUsageCodes:Writing pescLanguageUsageCodes:WrittenCommunication ) ;
-    sh:maxCount 1 ;
-    sh:name "Language Usage"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:languageUsage .
-
 <licensureshapeLicensureName> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxLength 60 ;
@@ -1040,27 +1022,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:inProgram .
 
-<rapshapeRAPCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 3 ;
-    sh:name "RAP Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapCode .
-
-<rapshapeRAPName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 60 ;
-    sh:name "RAP Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapName .
-
-<rapshapeRAPSubName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 60 ;
-    sh:name "RAP Sub Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapSubName .
-
 <testscoreshapeInTest> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -1106,12 +1067,33 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:subTestScore .
 
+<testscoreshapeTestDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testDate .
+
 <testscoreshapeTestScoreMethod> a sh:PropertyShape ;
     sh:in ( pescTestScoreMethods:Scaled pescTestScoreMethods:Graded pescTestScoreMethods:Standard pescTestScoreMethods:Raw pescTestScoreMethods:Percent pescTestScoreMethods:Mastery pescTestScoreMethods:Adjective pescTestScoreMethods:Stanine pescTestScoreMethods:Percentile pescTestScoreMethods:NormalCurve pescTestScoreMethods:Equated pescTestScoreMethods:Local ) ;
     sh:maxCount 1 ;
     sh:name "Test Score Method"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:testScoreMethod .
+
+<testscoreshapeTestYear> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Year"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testYear .
+
+<testscoreshapeTestYearMonth> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Year Month"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testYearMonth .
 
 <verifiablecredentialshapeIssuer> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -1157,8 +1139,8 @@
 
 <TestShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Tests"@en ;
-    sh:targetClass pesc:Tests .
+    sh:name "Test"@en ;
+    sh:targetClass ceds:C200010 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     sh:closed false ;
@@ -1182,10 +1164,7 @@
 <RAPShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Requirement, Attribute or Proficiency"@en ;
-    sh:property <rapshapeRAPCode>,
-        <rapshapeRAPName>,
-        <rapshapeRAPSubName> ;
-    sh:targetClass pesc:RequirementAttributeProficiency .
+    sh:targetClass ceds:C200065 .
 
 <AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;

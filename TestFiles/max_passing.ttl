@@ -11,6 +11,8 @@
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
+@prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
+@prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
 @prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
@@ -62,9 +64,9 @@
     ceds:P001518 ceds:NI001518118404 ; # copurse subject area code ;
     pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram ;
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:Requirement <https://example.edu/reqs/1> ;
-    pesc:Attribute <https://example.edu/attr/1> ;
-    pesc:Proficiency <https://example.edu/prof/1> ;
+    pesc:requirement <https://example.edu/reqs/1> ;
+    pesc:attribute <https://example.edu/attr/1> ;
+    pesc:proficiency <https://example.edu/prof/1> ;
     ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
 .
 
@@ -77,6 +79,27 @@
     ceds:P001309 "Site 1" ; # Instruction site name
     ceds:P001310 ceds:NI001310116323 ; # Instruction site type
 .
+
+<https://example.edu/reqs/1> a ceds:C200065 ;
+    # a Competency Description
+    pesc:rapCode "exR" ;
+    pesc:rapName "Example requirement" ;
+    pesc:rapSubName "Example requirement subname" ;
+.
+
+<https://example.edu/prof/1>  a ceds:C200065 ;
+    # a Competency Description
+    pesc:rapCode "exP" ;
+    pesc:rapName "Example proficiency" ;
+    pesc:rapSubName "Example proficiency subname" ;
+.
+
+<https://example.edu/attr/1> a pesc:CourseAttribute ;
+    pesc:rapCode "exA" ;
+    pesc:rapName "Example Attribute" ;
+    pesc:rapSubName "Example Attribute subname" ;
+.
+
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
@@ -93,7 +116,19 @@
     pesc:academicProgramType pescAcademicProgramTypes:Specialization ;
 .
 
-<https://people.pjjk.net/test> a ceds:C200275 ;
+<https://example.edu/Test/001> a ceds:C200010 ; # Assessment
+    ceds:P000028 "Standard Test" ; # Assessment Title
+    ceds:P001067 "ST" ; # Assessment Identifier
+    pesc:subtest <https://example.edu/Test/001A> ;
+.
+
+<https://example.edu/Test/001A> a ceds:C200010 ;
+    ceds:P000028 "Standard Test part A" ;
+    ceds:P001067 "STA" ;
+.
+
+
+<https://people.pjjk.net/test> a ceds:C200275 ; # Person
     ceds:P600336 [ a ceds:C200377 ;
             ceds:P000212 "Dr"^^xsd:token ;
             ceds:P000115 "Testy"^^xsd:token ;
@@ -104,6 +139,14 @@
     ceds:P600101 [ a ceds:C200377 ;
             ceds:P000115 "Testing"^^xsd:token ;
             ceds:P000172 "Testy"^^xsd:token ] ;
+    ceds:P600052 [  # has person language
+        a ceds:C200293 ; # person language
+        ceds:P000317 "eng" ; # iso 639-2 language code
+        ceds:P000316 pescLanguageUsageCodes:Writing ,
+        pescLanguageUsageCodes:Reading ,
+        ceds:NI000316151878 ; # written correspondence 
+        pesc:languageProficiency pescLanguageProficiencyCodes:EnglishOnly;
+    ] ;
     ceds:P600049 [
         a ceds:C200291 ;
         ceds:P001572 "123456789"^^xsd:string ;
@@ -173,6 +216,7 @@
     pesc:genderCode pescGenderCodes:Unreported ;
     pesc:studentLevel pescStudentLevelCodes:CollegeJunior ;
     pesc:achievement <https://example.edu/achievement001>;
+    pesc:achievement <https://example.edu/achievement002>; # test score
     elm:additionalNote [
         rdf:type elm:Note ;
         elm:noteLiteral "A made up test peson" ;
@@ -185,6 +229,13 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> ;
 .
+
+<https://example.edu/achievement002> 
+    a pesc:Achievement, pesc:TestScore ;
+    pesc:scoreValue "A+" ;
+    pesc:inTest <https://example.edu/Test/001> ;
+.
+
 
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en ;

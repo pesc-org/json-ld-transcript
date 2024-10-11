@@ -220,25 +220,10 @@ pescCreditUnits:Other",picklist,,,
 274,GPAShape,pesc:creditHoursGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-192,LanguageShape,pesc:languageCode,Language Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc:appendix C1 or pesc:appendix C2
-194,LanguageShape,pesc:languageProficiency,Language Proficiency,FALSE,FALSE,IRI,,"pescLanguageProficiencyCodes:EnglishOnly
-pescLanguageProficiencyCodes:FullyEnglishProficient
-pescLanguageProficiencyCodes:LimitedEnglishProficiency
-pescLanguageProficiencyCodes:NonEnglishSpeaking
-pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient
-pescLanguageProficiencyCodes:Excellent
-pescLanguageProficiencyCodes:Good
-pescLanguageProficiencyCodes:Fair
-pescLanguageProficiencyCodes:Poor
-pescLanguageProficiencyCodes:Unacceptable
-pescLanguageProficiencyCodes:Unknown",picklist,,Optional,
-196,LanguageShape,pesc:languageUsage,Language Usage,FALSE,FALSE,IRI,,"pescLanguageUsageCodes:FirstSpokenlanguage
-pescLanguageUsageCodes:Native
-pescLanguageUsageCodes:Reading
-pescLanguageUsageCodes:Speaking
-pescLanguageUsageCodes:SpokenAtHome
-pescLanguageUsageCodes:Writing
-pescLanguageUsageCodes:WrittenCommunication",picklist,,Optional,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
 350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
@@ -290,9 +275,9 @@ pescDeliquencyCodes:Unknown
 pescDeliquencyCodes:Other",picklist,,Not Recommended,
 263,ProgramSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
 265,ProgramSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Optional,
-379,RAPShape,pesc:rapCode,RAP Code,FALSE,TRUE,Literal,xsd:string,3,maxLength,,Recommended,
-380,RAPShape,pesc:rapName,RAP Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
-381,RAPShape,pesc:rapSubName,RAP Sub Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Optional,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
 ,TestScoreShape,pesc:inTest,In Test,TRUE,FALSE,IRI BNODE,,,,TestShape,,
 374,TestScoreShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,Required,
 ,TestScoreShape,pesc:subTestScore,Subtest Score,FALSE,FALSE,IRI BNODE,,,,TestScoreShape,,
@@ -313,3 +298,6 @@ pescTestScoreMethods:Local",picklist,,Optional,
 378,TestScoreShape,pesc:scoreSelfRportedIndicator,Score Self Reported Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
 ,VerifiableCredentialShape,cred:issuer,Issuer,TRUE,FALSE,IRI BNODE,,,,,,
 ,VerifiableCredentialShape,cred:subject,Subject,TRUE,FALSE,IRI BNODE,,,,,,
+366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
+368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:date,,,,Required,
+367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,

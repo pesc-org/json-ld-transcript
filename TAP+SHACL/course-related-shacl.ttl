@@ -204,6 +204,15 @@
     sh:name "W3C Verifiable Credential"@en ;
     sh:targetObjectsOf pesc:verifiableCredential .
 
+<AttributeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Attribute"@en ;
+    sh:property <attributeshapeRAPCode>,
+        <attributeshapeRAPName>,
+        <attributeshapeRAPSubName>,
+        <attributeshapeType> ;
+    sh:targetClass pesc:CourseAttribute .
+
 <CourseShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Post Secondary Course"@en ;
@@ -254,15 +263,12 @@
 
 <TestShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Tests"@en ;
-    sh:property <testshapeEducationTestCode>,
-        <testshapeSubTests>,
-        <testshapeTestCode>,
-        <testshapeTestDate>,
-        <testshapeTestName>,
-        <testshapeTestYear>,
-        <testshapeTestYearMonth> ;
-    sh:targetClass pesc:Tests .
+    sh:name "Test"@en ;
+    sh:property <testshapeAssessmentIdentifier>,
+        <testshapeAssessmentTitle>,
+        <testshapeSubTest>,
+        <testshapeType> ;
+    sh:targetClass ceds:C200010 .
 
 <academicprogramshapeAcademicProgramName> a sh:PropertyShape ;
     sh:datatype rdf:langString ;
@@ -401,6 +407,34 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<attributeshapeRAPCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 3 ;
+    sh:name "RAP Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapCode .
+
+<attributeshapeRAPName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "RAP Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapName .
+
+<attributeshapeRAPSubName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "RAP Sub Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapSubName .
+
+<attributeshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:CourseAttribute ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <courseshapeAgencyCourseID> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -411,9 +445,9 @@
 
 <courseshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
-    sh:node <RAPShape> ;
+    sh:node <AttributeShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Attribute .
+    sh:path pesc:attribute .
 
 <courseshapeCourseAcademicGradeScaleCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -576,13 +610,13 @@
     sh:name "Proficiency"@en-US ;
     sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Proficiency .
+    sh:path pesc:proficiency .
 
 <courseshapeRequirement> a sh:PropertyShape ;
     sh:name "Requirement"@en-US ;
     sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:Requirement .
+    sh:path pesc:requirement .
 
 <courseshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200328 ;
@@ -635,64 +669,73 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<testshapeEducationTestCode> a sh:PropertyShape ;
+<rapshapeRAPCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 3 ;
+    sh:name "RAP Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapCode .
+
+<rapshapeRAPName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "RAP Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapName .
+
+<rapshapeRAPSubName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "RAP Sub Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:rapSubName .
+
+<rapshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200065 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<testshapeAssessmentIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "Education Test Code"@en-US ;
+    sh:name "Assessment Identifier"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:educationTestCode .
+    sh:path ceds:P001067 .
 
-<testshapeSubTests> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Sub Tests"@en-US ;
+<testshapeAssessmentTitle> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Assessment Title"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000028 .
+
+<testshapeSubTest> a sh:PropertyShape ;
+    sh:name "Sub Test"@en-US ;
     sh:node <TestShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:subTests .
+    sh:path pesc:subTest .
 
-<testshapeTestCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
+<testshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200010 ;
     sh:minCount 1 ;
-    sh:name "Test Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testCode .
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
-<testshapeTestDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testDate .
-
-<testshapeTestName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Test Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testName .
-
-<testshapeTestYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYear .
-
-<testshapeTestYearMonth> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year Month"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYearMonth .
+<RAPShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Requirement, Attribute or Proficiency"@en ;
+    sh:property <rapshapeRAPCode>,
+        <rapshapeRAPName>,
+        <rapshapeRAPSubName>,
+        <rapshapeType> ;
+    sh:targetClass ceds:C200065 .
 
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Organization"@en ;
     sh:targetClass ceds:C200239 .
-
-<RAPShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Requirement, Attribute or Proficiency"@en ;
-    sh:targetClass pesc:RequirementAttributeProficiency .
 
