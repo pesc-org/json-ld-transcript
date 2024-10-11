@@ -6,6 +6,8 @@
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
+@prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
+@prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
 @prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
@@ -63,6 +65,11 @@
     sh:closed false ;
     sh:name "Agency Identifier"@en ;
     sh:targetClass pesc:AgencyIdentifier .
+
+<AttributeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Attribute"@en ;
+    sh:targetClass pesc:CourseAttribute .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
     sh:closed false ;
@@ -159,7 +166,7 @@
 <RAPShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Requirement, Attribute or Proficiency"@en ;
-    sh:targetClass pesc:RequirementAttributeProficiency .
+    sh:targetClass ceds:C200065 .
 
 <ResidencyShape> a sh:NodeShape ;
     sh:closed false ;
@@ -192,8 +199,8 @@
         <studentshapeGenderCode>,
         <studentshapeHasOtherPersonName>,
         <studentshapeHasPersonIdentifier>,
+        <studentshapeHasPersonLanguage>,
         <studentshapeHasPersonName>,
-        <studentshapeLanguage>,
         <studentshapeResidency>,
         <studentshapeStudentLevel>,
         <studentshapeType> ;
@@ -212,8 +219,8 @@
 
 <TestShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Tests"@en ;
-    sh:targetClass pesc:Tests .
+    sh:name "Test"@en ;
+    sh:targetClass ceds:C200010 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     sh:closed false ;
@@ -233,13 +240,46 @@
 
 <LanguageShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Language"@en ;
-    sh:targetClass pesc:Language .
+    sh:name "Person Language"@en ;
+    sh:property <languageshapeHasISO669-2LanguageCode>,
+        <languageshapeLanguageProficiency>,
+        <languageshapeLanguageUsage>,
+        <languageshapeType> ;
+    sh:targetClass ceds:C200293 .
 
 <NoteShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Note"@en ;
     sh:targetObjectsOf elm:additionalNote .
+
+<languageshapeHasISO669-2LanguageCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 3 ;
+    sh:minLength 3 ;
+    sh:name "Has ISO 669-2 Language Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000317 .
+
+<languageshapeLanguageProficiency> a sh:PropertyShape ;
+    sh:in ( pescLanguageProficiencyCodes:EnglishOnly pescLanguageProficiencyCodes:FullyEnglishProficient pescLanguageProficiencyCodes:LimitedEnglishProficiency pescLanguageProficiencyCodes:NonEnglishSpeaking pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient pescLanguageProficiencyCodes:Excellent pescLanguageProficiencyCodes:Good pescLanguageProficiencyCodes:Fair pescLanguageProficiencyCodes:Poor pescLanguageProficiencyCodes:Unacceptable pescLanguageProficiencyCodes:Unknown ) ;
+    sh:maxCount 1 ;
+    sh:name "Language Proficiency"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:languageProficiency .
+
+<languageshapeLanguageUsage> a sh:PropertyShape ;
+    sh:in ( ceds:NI000316151876 ceds:NI000316151874 pescLanguageUsageCodes:Reading ceds:NI000316151877 ceds:NI000316151875 pescLanguageUsageCodes:Writing ceds:NI000316151878 ) ;
+    sh:name "Language Usage"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P000316 .
+
+<languageshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200293 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <personidentifiershapeHasStudentIdentificationSystem> a sh:PropertyShape ;
     sh:in ( ceds:NI001075173041 ceds:NI001075173046 ceds:NI001075173047 ceds:NI001075173048 ) ;
@@ -487,6 +527,12 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600049 .
 
+<studentshapeHasPersonLanguage> a sh:PropertyShape ;
+    sh:name "Has Person Language"@en-US ;
+    sh:node <LanguageShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path ceds:P600052 .
+
 <studentshapeHasPersonName> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -494,12 +540,6 @@
     sh:node <PersonNameShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600336 .
-
-<studentshapeLanguage> a sh:PropertyShape ;
-    sh:name "Language"@en-US ;
-    sh:node <LanguageShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:language .
 
 <studentshapeResidency> a sh:PropertyShape ;
     sh:maxCount 1 ;

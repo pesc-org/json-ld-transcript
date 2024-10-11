@@ -220,25 +220,10 @@ pescCreditUnits:Other",picklist,,,
 274,GPAShape,pesc:creditHoursGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-192,LanguageShape,pesc:languageCode,Language Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc:appendix C1 or pesc:appendix C2
-194,LanguageShape,pesc:languageProficiency,Language Proficiency,FALSE,FALSE,IRI,,"pescLanguageProficiencyCodes:EnglishOnly
-pescLanguageProficiencyCodes:FullyEnglishProficient
-pescLanguageProficiencyCodes:LimitedEnglishProficiency
-pescLanguageProficiencyCodes:NonEnglishSpeaking
-pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient
-pescLanguageProficiencyCodes:Excellent
-pescLanguageProficiencyCodes:Good
-pescLanguageProficiencyCodes:Fair
-pescLanguageProficiencyCodes:Poor
-pescLanguageProficiencyCodes:Unacceptable
-pescLanguageProficiencyCodes:Unknown",picklist,,Optional,
-196,LanguageShape,pesc:languageUsage,Language Usage,FALSE,FALSE,IRI,,"pescLanguageUsageCodes:FirstSpokenlanguage
-pescLanguageUsageCodes:Native
-pescLanguageUsageCodes:Reading
-pescLanguageUsageCodes:Speaking
-pescLanguageUsageCodes:SpokenAtHome
-pescLanguageUsageCodes:Writing
-pescLanguageUsageCodes:WrittenCommunication",picklist,,Optional,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
 350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
