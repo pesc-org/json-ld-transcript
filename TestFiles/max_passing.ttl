@@ -68,6 +68,7 @@
     pesc:attribute <https://example.edu/attr/1> ;
     pesc:proficiency <https://example.edu/prof/1> ;
     ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
+    ceds:P000448 "eng" ; # Instruction language
 .
 
 <https://example.edu/CourseSection/001> a ceds:C200332 ;

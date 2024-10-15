@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (32):
+Results (33):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:postsecondarysectionshapeHasPostsecondarySectionLocation
@@ -171,6 +171,13 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Value Node: ceds:NI00000
 	Result Path: ceds:P001312
 	Message: Value ceds:NI00000 not in list ['ceds:NI001312127900', 'ceds:NI001312127896', 'ceds:NI001312127892', 'ceds:NI001312127888', 'ceds:NI001312127894', 'ceds:NI001312127885', 'ceds:NI001312127898', 'ceds:NI001312127889', 'ceds:NI001312127887', 'ceds:NI001312127890', 'ceds:NI001312127886', 'ceds:NI001312127883', 'ceds:NI001312127884', 'ceds:NI001312127893', 'ceds:NI001312127891', 'ceds:NI001312127901', 'ceds:NI001312127895', 'ceds:NI001312127899', 'ceds:NI001312127897']
+Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeHasInstructionLanguage
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("english")
+	Result Path: ceds:P000448
+	Message: String length not <= Literal("3", datatype=xsd:integer)
 Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeHasNCESCollegeCourseMapCode
