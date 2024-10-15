@@ -55,6 +55,7 @@
     pesc:attribute "attr1" ; # wrong node type
     pesc:proficiency "prof1" ; # wrong node type
     ceds:P600267 "Section 1" ; # has Section should be IRI/BNode
+    ceds:P000448 "english" ; # invalid ISO 639-2 Instruction language
 
 .
 

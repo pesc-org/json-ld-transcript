@@ -124,15 +124,10 @@
     sh:name "GPA"@en ;
     sh:targetClass pesc:GPA .
 
-<LanguageOfInstructionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Language Of Instruction"@en ;
-    sh:targetClass pesc:LanguageOfInstruction .
-
 <LanguageShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Language"@en ;
-    sh:targetClass pesc:Language .
+    sh:name "Person Language"@en ;
+    sh:targetClass ceds:C200293 .
 
 <LicensureShape> a sh:NodeShape ;
     sh:closed false ;
@@ -234,6 +229,7 @@
         <courseshapeHasCourseCreditUnits>,
         <courseshapeHasCourseGradePointAverageApplicability>,
         <courseshapeHasCourseLevelType>,
+        <courseshapeHasInstructionLanguage>,
         <courseshapeHasNCESCollegeCourseMapCode>,
         <courseshapeHasPostsecondarySection>,
         <courseshapeOfferedBy>,
@@ -567,6 +563,15 @@
     sh:name "Has Course Level Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path ceds:P001312 .
+
+<courseshapeHasInstructionLanguage> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 3 ;
+    sh:minLength 3 ;
+    sh:name "Has Instruction Language"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000448 .
 
 <courseshapeHasNCESCollegeCourseMapCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
