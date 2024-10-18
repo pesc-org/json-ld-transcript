@@ -1,12 +1,4 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
-,AchievementShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Achievement,,,,
-370,AchievementShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Optional,
-199,AchievementShape,pesc:school,School,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,Optional,
-,AchievementShape,pesc:inCourse,In Course,FALSE,TRUE,IRI BNODE,,,,CourseShape,Recommended,
-,AchievementShape,pesc:inProgram,In Program,FALSE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
-,AchievementShape,pesc:inSession,In Session,FALSE,TRUE,IRI BNODE,,,,AcademicSessionShape,Recommended,
-,AchievementShape,pesc:inTest,In Test,FALSE,TRUE,IRI BNODE,,,,TestShape,Recommended,
-,AchievementShape,pesc:verifiedBy,Verified By,FALSE,TRUE,IRI BNODE,,,,VerifiableCredentialShape,Recommended,
 232,AcademicAwardShape,pesc:inProgram,Academic Award Program,TRUE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
 222,AcademicAwardShape,pesc:academicAwardLevel,Academic Award Level,FALSE,FALSE,IRI,,"pescAcademicAwardLevels:1.1
 pescAcademicAwardLevels:1.2
@@ -135,7 +127,7 @@ pescDocumentTypeCodes:StudentRequest
 pescDocumentTypeCodes:TermEnroll
 pescDocumentTypeCodes:TermGrade
 pescDocumentTypeCodes:ThirdPartyRequest",picklist,,Required,
-,CollegeTranscriptShape,pesc:hasPart,Has Part,TRUE,TRUE,IRI BNODE,,,,AchievementShape,Required,
+,CollegeTranscriptShape,pesc:hasPart,Has Part,TRUE,TRUE,IRI BNODE,,,,hasAchievementShape,Required,
 21,CollegeTranscriptShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
 2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,Required,
 20,CollegeTranscriptShape,pesc:transmissionType,Transmission Type,TRUE,FALSE,IRI,,"pescTransmissionTypes:Original

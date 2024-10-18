@@ -58,7 +58,7 @@ pescResidencyStatusCodes:Resident",picklist,,Optional,
 160,StudentShape,pesc:birthCountry,Birth Country,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
 181,StudentShape,pesc:hasResidency,Residency,FALSE,FALSE,IRI BNODE,,,,,Optional,
 191,StudentShape,ceds:P600052,Has Person Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
-140,StudentShape,pesc:achievement,Achievement,TRUE,TRUE,IRI BNODE,,,,AchievementShape,Required,
+140,StudentShape,pesc:hasAchievement,Has Achievement,TRUE,TRUE,IRI BNODE,,,,hasAchievementShape,Required,
 147,StudentShape,pesc:agencyAssignedID,Agency Assigned ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Required,
 163,StudentShape,ceds:P600101,Has Other Person Name,FALSE,TRUE,IRI BNODE,,,,PersonNameShape,,
 190,StudentShape,pesc:deceasedIndicator,Deceased Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Required,true/false
@@ -113,3 +113,19 @@ ceds:NI000316151875
 pescLanguageUsageCodes:Writing
 ceds:NI000316151878",picklist,,Optional,
 ,LanguageShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200293,,,,
+,hasAchievementShape,rdf:type,Type,TRUE,TRUE,IRI,,"pesc:Achievement
+pesc:AdditionalStudentAchievement
+pesc:AcademicAward
+pesc:CourseAchievement
+pesc:Licensure
+pesc:GPA
+pesc:AcademicSummary
+pesc:ProgramSummary
+pesc:TestScore",,,,
+370,hasAchievementShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Optional,
+199,hasAchievementShape,pesc:school,School,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,Optional,
+,hasAchievementShape,pesc:inCourse,In Course,FALSE,TRUE,IRI BNODE,,,,CourseShape,Recommended,
+,hasAchievementShape,pesc:inProgram,In Program,FALSE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
+,hasAchievementShape,pesc:inSession,In Session,FALSE,TRUE,IRI BNODE,,,,AcademicSessionShape,Recommended,
+,hasAchievementShape,pesc:inTest,In Test,FALSE,TRUE,IRI BNODE,,,,TestShape,Recommended,
+,hasAchievementShape,pesc:verifiedBy,Verified By,FALSE,TRUE,IRI BNODE,,,,VerifiableCredentialShape,Recommended,

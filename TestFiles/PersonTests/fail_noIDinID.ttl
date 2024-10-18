@@ -53,7 +53,7 @@
         # fail no ceds:P001572 "123456789"^^xsd:string ;
         ceds:P001075 ceds:NI001075173047 ;
     ] ;
-    pesc:achievement <https://example.edu/achievement001> .
+    pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;

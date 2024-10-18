@@ -216,8 +216,8 @@
     pesc:deceasedIndicator true ;
     pesc:genderCode pescGenderCodes:Unreported ;
     pesc:studentLevel pescStudentLevelCodes:CollegeJunior ;
-    pesc:achievement <https://example.edu/achievement001>;
-    pesc:achievement <https://example.edu/achievement002>; # test score
+    pesc:hasAchievement <https://example.edu/achievement001>;
+    pesc:hasAchievement <https://example.edu/achievement002>; # test score
     elm:additionalNote [
         rdf:type elm:Note ;
         elm:noteLiteral "A made up test peson" ;

@@ -31,20 +31,10 @@
     sh:name "Academic Honors"@en ;
     sh:targetClass pesc:AcademicHonors .
 
-<AcademicProgramShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Program"@en ;
-    sh:targetClass ceds:C200331 .
-
 <AcademicRecordShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Record"@en ;
     sh:targetClass pesc:AcademicRecord .
-
-<AcademicSessionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Session"@en ;
-    sh:targetClass ceds:C200245 .
 
 <AcademicSummaryShape> a sh:NodeShape ;
     sh:closed false ;
@@ -91,11 +81,6 @@
     sh:name "Course Repeat Code"@en ;
     sh:targetClass pesc:CourseRepeatCode .
 
-<CourseShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Post Secondary Course"@en ;
-    sh:targetClass ceds:C200328 .
-
 <CourseSupplementalGradeShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Supplemental Grade"@en ;
@@ -105,11 +90,6 @@
     sh:closed false ;
     sh:name "GPA"@en ;
     sh:targetClass pesc:GPA .
-
-<LanguageOfInstructionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Language Of Instruction"@en ;
-    sh:targetClass pesc:LanguageOfInstruction .
 
 <LicensureShape> a sh:NodeShape ;
     sh:closed false ;
@@ -121,11 +101,6 @@
     sh:description "Normally type will be ceds:C200252"@en ;
     sh:name "Organization Identifier"@en ;
     sh:targetObjectsOf ceds:P600502 .
-
-<OrganizationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Organization"@en ;
-    sh:targetClass ceds:C200239 .
 
 <PersonIdentifierShape> a sh:NodeShape ;
     sh:closed false ;
@@ -184,8 +159,7 @@
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Student"@en ;
-    sh:property <studentshapeAchievement>,
-        <studentshapeAdditionalNote>,
+    sh:property <studentshapeAdditionalNote>,
         <studentshapeAgencyAssignedID>,
         <studentshapeBirthCity>,
         <studentshapeBirthCountry>,
@@ -197,6 +171,7 @@
         <studentshapeContact>,
         <studentshapeDeceasedIndicator>,
         <studentshapeGenderCode>,
+        <studentshapeHasAchievement>,
         <studentshapeHasOtherPersonName>,
         <studentshapeHasPersonIdentifier>,
         <studentshapeHasPersonLanguage>,
@@ -217,26 +192,25 @@
     sh:name "Test Scores"@en ;
     sh:targetClass pesc:TestScores .
 
-<TestShape> a sh:NodeShape ;
+<AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Test"@en ;
-    sh:targetClass ceds:C200010 .
+    sh:name "Academic Program"@en ;
+    sh:targetClass ceds:C200331 .
 
-<VerifiableCredentialShape> a sh:NodeShape ;
+<AcademicSessionShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "W3C Verifiable Credential"@en ;
-    sh:targetObjectsOf pesc:verifiableCredential .
-
-<AchievementShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Achievement "@en ;
-    sh:targetObjectsOf pesc:achievement,
-        pesc:hasPart .
+    sh:name "Academic Session"@en ;
+    sh:targetClass ceds:C200245 .
 
 <ContactShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Contact"@en ;
     sh:targetObjectsOf ceterms:targetContactPoint .
+
+<CourseShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Post Secondary Course"@en ;
+    sh:targetClass ceds:C200328 .
 
 <LanguageShape> a sh:NodeShape ;
     sh:closed false ;
@@ -247,10 +221,84 @@
         <languageshapeType> ;
     sh:targetClass ceds:C200293 .
 
-<NoteShape> a sh:NodeShape ;
+<OrganizationShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Note"@en ;
-    sh:targetObjectsOf elm:additionalNote .
+    sh:name "Organization"@en ;
+    sh:targetClass ceds:C200239 .
+
+<TestShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Test"@en ;
+    sh:targetClass ceds:C200010 .
+
+<VerifiableCredentialShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "W3C Verifiable Credential"@en ;
+    sh:targetObjectsOf pesc:verifiableCredential .
+
+<hasAchievementShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Achievement "@en ;
+    sh:property <hasachievementshapeAdditionalNote>,
+        <hasachievementshapeInCourse>,
+        <hasachievementshapeInProgram>,
+        <hasachievementshapeInSession>,
+        <hasachievementshapeInTest>,
+        <hasachievementshapeSchool>,
+        <hasachievementshapeType>,
+        <hasachievementshapeVerifiedBy> ;
+    sh:targetObjectsOf pesc:hasAchievement,
+        pesc:hasPart .
+
+<hasachievementshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
+
+<hasachievementshapeInCourse> a sh:PropertyShape ;
+    sh:name "In Course"@en-US ;
+    sh:node <CourseShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inCourse .
+
+<hasachievementshapeInProgram> a sh:PropertyShape ;
+    sh:name "In Program"@en-US ;
+    sh:node <AcademicProgramShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inProgram .
+
+<hasachievementshapeInSession> a sh:PropertyShape ;
+    sh:name "In Session"@en-US ;
+    sh:node <AcademicSessionShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inSession .
+
+<hasachievementshapeInTest> a sh:PropertyShape ;
+    sh:name "In Test"@en-US ;
+    sh:node <TestShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inTest .
+
+<hasachievementshapeSchool> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "School"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:school .
+
+<hasachievementshapeType> a sh:PropertyShape ;
+    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement pesc:AcademicAward pesc:CourseAchievement pesc:Licensure pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:TestScore ) ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<hasachievementshapeVerifiedBy> a sh:PropertyShape ;
+    sh:name "Verified By"@en-US ;
+    sh:node <VerifiableCredentialShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:verifiedBy .
 
 <languageshapeHasISO669-2LanguageCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -425,13 +473,6 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<studentshapeAchievement> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Achievement"@en-US ;
-    sh:node <AchievementShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:achievement .
-
 <studentshapeAdditionalNote> a sh:PropertyShape ;
     sh:name "Additional Note"@en-US ;
     sh:node <NoteShape> ;
@@ -516,6 +557,13 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:genderCode .
 
+<studentshapeHasAchievement> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:name "Has Achievement"@en-US ;
+    sh:node <hasAchievementShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:hasAchievement .
+
 <studentshapeHasOtherPersonName> a sh:PropertyShape ;
     sh:name "Has Other Person Name"@en-US ;
     sh:node <PersonNameShape> ;
@@ -560,6 +608,11 @@
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
+
+<NoteShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Note"@en ;
+    sh:targetObjectsOf elm:additionalNote .
 
 <PersonNameShape> a sh:NodeShape ;
     sh:closed false ;

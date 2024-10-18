@@ -59,7 +59,7 @@
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
-    pesc:achievement <https://example.edu/achievement001> .
+    pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;
