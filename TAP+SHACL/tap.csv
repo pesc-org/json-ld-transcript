@@ -139,7 +139,6 @@ pescTransmissionTypes:MutuallyDefined",picklist,,Required,
 317,CourseAchievementShape,pesc:courseDropDate,Course Drop Date,FALSE,FALSE,Literal,xsd:date,,,,,
 325,CourseAchievementShape,pesc:courseSupplementalGrade,Course Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,CourseSupplementalGradeShape,Required,
 388,CourseAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,Required,
-349,CourseAchievementShape,pesc:licensure,Licensure,FALSE,TRUE,IRI BNODE,,,,LicensureShape,Optional,
 294,CourseAchievementShape,pesc:courseCreditEarned,Course Credit Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 296,CourseAchievementShape,pesc:courseAcademicGrade,Course Academic Grade,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Recommended,
 297,CourseAchievementShape,pesc:courseAcademicGradeStatusCode,Course Academic Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:AuditedCourse
@@ -168,7 +167,6 @@ pescRepeatCodes:NotCountedOther",picklist,,Recommended,
 316,CourseAchievementShape,pesc:courseAddDate,Course Add Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 321,CourseAchievementShape,pesc:courseBeginDate,Course Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 322,CourseAchievementShape,pesc:courseEndDate,Course End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-349,CourseAchievementShape,pesc:licensure,Licensure,FALSE,TRUE,IRI BNODE,,,,LicensureShape,Optional,
 326,CourseSupplementalGradeShape,pesc:supplementalGradeCode,Supplemental Grade Code,FALSE,FALSE,IRI,,"pescSupplementalGradeCodes:BiCourseGrade
 pescSupplementalGradeCodes:BlendedFinalGrade
 pescSupplementalGradeCodes:ExamGrade
@@ -218,6 +216,8 @@ pescCreditUnits:Other",picklist,,,
 ,,,,,,,,,,,,
 350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
+,LicensureShape,pesc:inProgram,In Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,,
+,LicensureShape,pesc:inCourse,In Course,FALSE,FALSE,IRI BNODE,,,,CourseShape,,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
 ,ProgramSummaryShape,pesc:inProgram,In Program,TRUE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
