@@ -54,7 +54,7 @@
     pesc:birthCity <http://example.org/geo/Sunnydale> ;
     pesc:birthStateProvinceCode <http://example.org/geo/CA> ;
     pesc:birthCountry <http://example.org/geo/US> ;
-    pesc:achievement <https://example.edu/achievement001> .
+    pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;

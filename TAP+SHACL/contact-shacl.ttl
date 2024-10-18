@@ -10,12 +10,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<AcademicAchievementShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Achievement "@en ;
-    sh:targetObjectsOf pesc:achievement,
-        pesc:hasPart .
-
 <AcademicAwardShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Award"@en ;
@@ -34,8 +28,7 @@
 <AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Program"@en ;
-    sh:targetClass pesc:AcademicProgram ;
-    sh:targetObjectsOf pesc:_AcademicProgram .
+    sh:targetClass ceds:C200331 .
 
 <AcademicRecordShape> a sh:NodeShape ;
     sh:closed false ;
@@ -45,7 +38,7 @@
 <AcademicSessionShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Session"@en ;
-    sh:targetClass pesc:AcademicSession .
+    sh:targetClass ceds:C200245 .
 
 <AcademicSummaryShape> a sh:NodeShape ;
     sh:closed false ;
@@ -66,6 +59,11 @@
     sh:closed false ;
     sh:name "Agency Identifier"@en ;
     sh:targetClass pesc:AgencyIdentifier .
+
+<AttributeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Attribute"@en ;
+    sh:targetClass pesc:CourseAttribute .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
     sh:closed false ;
@@ -116,15 +114,10 @@
     sh:name "GPA"@en ;
     sh:targetClass pesc:GPA .
 
-<LanguageOfInstructionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Language Of Instruction"@en ;
-    sh:targetClass pesc:LanguageOfInstruction .
-
 <LanguageShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Language"@en ;
-    sh:targetClass pesc:Language .
+    sh:name "Person Language"@en ;
+    sh:targetClass ceds:C200293 .
 
 <LicensureShape> a sh:NodeShape ;
     sh:closed false ;
@@ -173,7 +166,7 @@
 <RAPShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Requirement, Attribute or Proficiency"@en ;
-    sh:targetClass pesc:RequirementAttributeProficiency .
+    sh:targetClass ceds:C200065 .
 
 <ResidencyShape> a sh:NodeShape ;
     sh:closed false ;
@@ -198,13 +191,19 @@
 
 <TestShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Tests"@en ;
-    sh:targetClass pesc:Tests .
+    sh:name "Test"@en ;
+    sh:targetClass ceds:C200010 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "W3C Verifiable Credential"@en ;
     sh:targetObjectsOf pesc:verifiableCredential .
+
+<hasAchievementShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Achievement "@en ;
+    sh:targetObjectsOf pesc:hasAchievement,
+        pesc:hasPart .
 
 <NoteShape> a sh:NodeShape ;
     sh:closed false ;

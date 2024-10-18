@@ -73,12 +73,6 @@
     sh:name "Accreditation"@en ;
     sh:targetClass pesc:Accreditation .
 
-<AchievementShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Achievement "@en ;
-    sh:targetObjectsOf pesc:achievement,
-        pesc:hasPart .
-
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "To Be Done"@en ;
@@ -198,6 +192,12 @@
     sh:closed false ;
     sh:name "W3C Verifiable Credential"@en ;
     sh:targetObjectsOf pesc:verifiableCredential .
+
+<hasAchievementShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Achievement "@en ;
+    sh:targetObjectsOf pesc:hasAchievement,
+        pesc:hasPart .
 
 <AttributeShape> a sh:NodeShape ;
     sh:closed false ;

@@ -56,7 +56,7 @@
         ceds:NI000316151878 ;# written correspondence
         pesc:languageProficiency "Very Good"@en; # wrong type, not in code set 
     ] ;
-    pesc:achievement <https://example.edu/achievement001> .
+    pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;

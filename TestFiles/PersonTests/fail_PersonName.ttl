@@ -55,7 +55,7 @@
     ceds:P600101 [ a ceds:WrongClass ; #error wrong class
             ceds:P000115 12 ; 
             ceds:P000172 12 ] ;
-    pesc:achievement <https://example.edu/achievement001> .
+    pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;

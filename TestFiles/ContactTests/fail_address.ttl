@@ -54,7 +54,7 @@
         ceterms:address <https://example.org/address/001> ;
         pesc:attentionLine "M. Testy Test" ; # not a langString
     ] ;
-    pesc:achievement <https://example.edu/achievement001> .
+    pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;

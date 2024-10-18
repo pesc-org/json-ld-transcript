@@ -51,7 +51,7 @@
             pesc:nameCode pescNameCodes:Legal ] ;
     pesc:deceasedIndicator "Yes" ;
     pesc:genderCode "Unreported" ;
-    pesc:achievement <https://example.edu/achievement001> .
+    pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
         pesc:AcademicAward ;
