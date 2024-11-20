@@ -472,7 +472,7 @@
     sh:name "Course Five Digit SCED Code"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:P001517 ;
-    sh:pattern "^\\d{5}$" .
+    sh:pattern "^[\\dPKG]{5}$" .
 
 <courseshapeCourseNumber> a sh:PropertyShape ;
     sh:datatype xsd:string ;
@@ -495,7 +495,7 @@
     sh:name "Course SCED Code"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceterms:sced ;
-    sh:pattern "^\\d{5}[BGEHCX]\\d[\\d|.]\\d\\d[1-9][1-9]$" .
+    sh:pattern "^[\\dPKG]{5}[BGEHCX]\\d[\\d|.]\\d\\d[1-9][1-9]$" .
 
 <courseshapeCourseSubjectAbbreviation> a sh:PropertyShape ;
     sh:datatype xsd:string ;

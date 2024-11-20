@@ -94,7 +94,7 @@ Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#P
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: Literal("abcde")
 	Result Path: ceds:P001517
-	Message: Value does not match pattern '^\d{5}$'
+	Message: Value does not match pattern '^[\dPKG]{5}$'
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseNumber
@@ -108,7 +108,7 @@ Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#P
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: Literal("12345S1.0512")
 	Result Path: ceterms:sced
-	Message: Value does not match pattern '^\d{5}[BGEHCX]\d[\d|.]\d\d[1-9][1-9]$'
+	Message: Value does not match pattern '^[\dPKG]{5}[BGEHCX]\d[\d|.]\d\d[1-9][1-9]$'
 Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseSubjectAbbreviation
