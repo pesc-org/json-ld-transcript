@@ -1,4 +1,8 @@
 #! /usr/bin/bash
+
+# Phil's script to automatically run all tests
+# requires batchshacl, https://github.com/philbarker/BatchSHACL
+
 printf '\nTesting Contact shapes\n'
 printf '======================\n'
 printf '\nTest minimal passing\n'
