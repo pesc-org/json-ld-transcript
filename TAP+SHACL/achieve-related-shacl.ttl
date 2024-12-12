@@ -233,7 +233,7 @@
     sh:maxCount 1 ;
     sh:name "Academic Award Date"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path <P000001> .
+    sh:path ceds:P000001 .
 
 <academicawardshapeAcademicAwardLevelType> a sh:PropertyShape ;
     sh:in ( ceds:NI001668151655 ceds:NI001668151657 ceds:NI001668151658 ceds:NI001668151659 ceds:NI001668151660 ceds:NI001668151661 ceds:NI001668151662 ceds:NI001668151663 ceds:NI001668151664 ceds:NI001668151665 ceds:NI001668151666 ceds:NI001668151667 ceds:NI001668151668 ceds:NI001668151669 ceds:NI001668151670 ceds:NI001668151671 ceds:NI001668151687 ceds:NI001668151686 ) ;
@@ -255,7 +255,8 @@
     sh:maxLength 400 ;
     sh:name "Academic Award Title"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path <P000003> .
+    sh:path ceds:P000003 .
+
 
 <academicawardshapeAcademicCompletionDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;

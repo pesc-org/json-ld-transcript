@@ -19,8 +19,8 @@ ceds:NI001668151670
 ceds:NI001668151671
 ceds:NI001668151687
 ceds:NI001668151686",picklist,,Recommended,
-223,AcademicAwardShape,P000001,Academic Award Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
-224,AcademicAwardShape,P000003,Academic Award Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
+223,AcademicAwardShape,ceds:P000001,Academic Award Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
+224,AcademicAwardShape,ceds:P000003,Academic Award Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
 225,AcademicAwardShape,pesc:academicCompletionIndicator,Academic Completion Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Recommended,true/false
 226,AcademicAwardShape,pesc:academicCompletionDate,Academic Completion Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
 227,AcademicAwardShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
