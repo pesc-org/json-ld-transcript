@@ -1,0 +1,35 @@
+0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
+,AcademicAwardShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200335,,,Required,
+232,AcademicAwardShape,pesc:inProgram,Academic Award Program,TRUE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
+222,AcademicAwardShape,ceds:P001668,Academic Award Level Type,FALSE,FALSE,IRI,,"ceds:NI001668151655
+ceds:NI001668151657
+ceds:NI001668151658
+ceds:NI001668151659
+ceds:NI001668151660
+ceds:NI001668151661
+ceds:NI001668151662
+ceds:NI001668151663
+ceds:NI001668151664
+ceds:NI001668151665
+ceds:NI001668151666
+ceds:NI001668151667
+ceds:NI001668151668
+ceds:NI001668151669
+ceds:NI001668151670
+ceds:NI001668151671
+ceds:NI001668151687
+ceds:NI001668151686",picklist,,Recommended,
+223,AcademicAwardShape,P000001,Academic Award Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
+224,AcademicAwardShape,P000003,Academic Award Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
+225,AcademicAwardShape,pesc:academicCompletionIndicator,Academic Completion Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Recommended,true/false
+226,AcademicAwardShape,pesc:academicCompletionDate,Academic Completion Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
+227,AcademicAwardShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
+277,AcademicAwardShape,pesc:academicDegreeRequirement,Academic Degree Requirement,FALSE,TRUE,IRI BNODE,,,,AcademicDegreeRequirementShape,Recommended,
+136,AcademicDegreeRequirementShape,pesc:urlAddress,URL Address,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,Recommended,URL of thesis / dissertation. Consider renaming this class
+278,AcademicDegreeRequirementShape,pesc:thesisDIssertationTitle,Thesis Dissertation Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
+279,AcademicDegreeRequirementShape,pesc:thesisDissertationAdvisor,Thesis Dissertation Advisor,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Optional,
+280,AcademicDegreeRequirementShape,pesc:_URLAddress,URL Address 2,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,Recommended,
+230,AcademicHonorsShape,pesc:HonorsTitle,Honors Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
+231,AcademicHonorsShape,pesc:honorsLevel,Honors Level,FALSE,FALSE,IRI,,"pescHonorsLevels:FirstHighest
+pescHonorsLevels:SecondHighest
+pescHonorsLevels:ThirdHighest",picklist,,Recommended,

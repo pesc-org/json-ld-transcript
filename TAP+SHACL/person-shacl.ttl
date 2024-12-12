@@ -18,8 +18,8 @@
 
 <AcademicAwardShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Academic Award"@en ;
-    sh:targetClass pesc:AcademicAward .
+    sh:name "Postsecondary Student Academic Award"@en ;
+    sh:targetClass ceds:C200335 .
 
 <AcademicDegreeRequirementShape> a sh:NodeShape ;
     sh:closed false ;
@@ -288,7 +288,7 @@
     sh:path pesc:school .
 
 <hasachievementshapeType> a sh:PropertyShape ;
-    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement pesc:AcademicAward pesc:CourseAchievement pesc:Licensure pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:TestScore ) ;
+    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement ceds:C200335 pesc:CourseAchievement pesc:Licensure pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:TestScore ) ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
