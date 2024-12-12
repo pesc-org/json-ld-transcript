@@ -71,9 +71,9 @@
     pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
-        pesc:AcademicAward ;
-    pesc:academicAwardDate "1985-05-01"^^xsd:date ;
-    pesc:academicAwardTitle "Example Award"^^xsd:string ;
+        ceds:C200335 ;
+    ceds:P000001 "1985-05-01"^^xsd:date ;  # Academic Award Date
+    ceds:P000003 "Example Award"^^xsd:string ; # Academic Award Title
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 

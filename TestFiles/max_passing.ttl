@@ -10,6 +10,7 @@
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
 @prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
 @prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
 @prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
@@ -223,18 +224,34 @@
         elm:noteLiteral "A made up test peson" ;
     ].
 
-<https://example.edu/achievement001> 
-    a pesc:Achievement, pesc:AcademicAward ;
-    pesc:academicAwardDate "1985-05-01"^^xsd:date ;
-    pesc:academicAwardTitle "Example Award"^^xsd:string ;
+<https://example.edu/achievement001> a pesc:Achievement, ceds:C200335 ;
+    ceds:P000001 "1985-05-01"^^xsd:date ;  # Academic Award Date
+    ceds:P000003 "Example Award"^^xsd:string ; # Academic Award Title
+    ceds:P001668  ceds:NI001668151655 ; # Has PESC Award Level Type: 1.1 Cert of Completion
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> ;
+    pesc:academicCompletionIndicator true ;
+    pesc:academicCompletionDate "1985-05-01"^^xsd:date ;
+    pesc:academicDegreeRequirement <https://example.edu/academicDegreeRequirement/001> ;
+    pesc:academicHonors <https://example.edu/academicHonors/001>
 .
 
 <https://example.edu/achievement002> 
     a pesc:Achievement, pesc:TestScore ;
     pesc:scoreValue "A+" ;
     pesc:inTest <https://example.edu/Test/001> ;
+.
+
+
+<https://example.edu/academicDegreeRequirement/001> a pesc:AcademicDegreeRequirement ;
+    pesc:thesisDIssertationTitle "Example Title" ;
+    pesc:thesisDissertationAdvisor "Example Advisor Name" ;
+    pesc:URLAddress "https://example.edu/ExampleURL/address"^^xsd:AnyURI
+.
+
+<https://example.edu/academicHonors/001> a pesc:AcademicHonors;
+    pesc:honorsTitle "Third" ;
+    pesc:honorsLevel pescHonorsLevels:ThirdHighest ;
 .
 
 

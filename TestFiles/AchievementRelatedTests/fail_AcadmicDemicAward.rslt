@@ -1,0 +1,52 @@
+Validation Report
+Conforms: False
+Results (7):
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicawardshapeAcademicAwardDate
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("1985-05-01")
+	Result Path: ceds:P000001
+	Message: Value is not Literal with datatype xsd:date
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicawardshapeAcademicAwardProgram
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("wrong")
+	Result Path: pesc:inProgram
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicawardshapeAcademicAwardTitle
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("Example Award" = None, datatype=rdf:langString)
+	Result Path: ceds:P000003
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicawardshapeAcademicCompletionDate
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("1985-05-01")
+	Result Path: pesc:academicCompletionDate
+	Message: Value is not Literal with datatype xsd:date
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicawardshapeAcademicCompletionIndicator
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("true")
+	Result Path: pesc:academicCompletionIndicator
+	Message: Value is not Literal with datatype xsd:boolean
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicawardshapeAcademicDegreeRequirement
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("still wrong")
+	Result Path: pesc:academicDegreeRequirement
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicawardshapeAcademicHonors
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("should be URI")
+	Result Path: pesc:academicHonors
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI

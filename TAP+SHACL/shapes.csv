@@ -1,5 +1,5 @@
 shapeID,label,comment,target,targetType,Closed,mandatory,severity,Note
-AcademicAwardShape,Academic Award,,pesc:AcademicAward,class,,,,
+AcademicAwardShape,Postsecondary Student Academic Award,,ceds:C200335,class,,,,
 AcademicProgramShape,Academic Program,,ceds:C200331,class,,,,
 AcademicDegreeRequirementShape,Academic Degree Requirement,,pesc:AcademicDegreeRequirement,class,,,,
 AcademicHonorsShape,Academic Honors,,pesc:AcademicHonors,class,,,,
