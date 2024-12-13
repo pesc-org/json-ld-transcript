@@ -28,8 +28,7 @@ ceds:NI001668151686",picklist,,Recommended,
 136,AcademicDegreeRequirementShape,pesc:urlAddress,URL Address,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,Recommended,URL of thesis / dissertation. Consider renaming this class
 278,AcademicDegreeRequirementShape,pesc:thesisDIssertationTitle,Thesis Dissertation Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
 279,AcademicDegreeRequirementShape,pesc:thesisDissertationAdvisor,Thesis Dissertation Advisor,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Optional,
-280,AcademicDegreeRequirementShape,pesc:_URLAddress,URL Address 2,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,Recommended,
-230,AcademicHonorsShape,pesc:HonorsTitle,Honors Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
+230,AcademicHonorsShape,pesc:honorsTitle,Honors Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
 231,AcademicHonorsShape,pesc:honorsLevel,Honors Level,FALSE,FALSE,IRI,,"pescHonorsLevels:FirstHighest
 pescHonorsLevels:SecondHighest
 pescHonorsLevels:ThirdHighest",picklist,,Recommended,

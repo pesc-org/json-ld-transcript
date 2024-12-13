@@ -212,8 +212,7 @@
     sh:name "Academic Degree Requirement"@en ;
     sh:property <academicdegreerequirementshapeThesisDissertationAdvisor>,
         <academicdegreerequirementshapeThesisDissertationTitle>,
-        <academicdegreerequirementshapeURLAddress>,
-        <academicdegreerequirementshapeURLAddress2> ;
+        <academicdegreerequirementshapeURLAddress> ;
     sh:targetClass pesc:AcademicDegreeRequirement .
 
 <AcademicHonorsShape> a sh:NodeShape ;
@@ -256,7 +255,6 @@
     sh:name "Academic Award Title"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:P000003 .
-
 
 <academicawardshapeAcademicCompletionDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
@@ -315,14 +313,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:urlAddress .
 
-<academicdegreerequirementshapeURLAddress2> a sh:PropertyShape ;
-    sh:datatype xsd:anyURI ;
-    sh:maxCount 1 ;
-    sh:maxLength 512 ;
-    sh:name "URL Address 2"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:_URLAddress .
-
 <academichonorsshapeHonorsLevel> a sh:PropertyShape ;
     sh:in ( pescHonorsLevels:FirstHighest pescHonorsLevels:SecondHighest pescHonorsLevels:ThirdHighest ) ;
     sh:maxCount 1 ;
@@ -336,5 +326,5 @@
     sh:maxLength 30 ;
     sh:name "Honors Title"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:HonorsTitle .
+    sh:path pesc:honorsTitle .
 
