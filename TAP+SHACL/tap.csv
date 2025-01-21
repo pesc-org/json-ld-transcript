@@ -1,38 +1,4 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
-232,AcademicAwardShape,pesc:inProgram,Academic Award Program,TRUE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
-222,AcademicAwardShape,pesc:academicAwardLevel,Academic Award Level,FALSE,FALSE,IRI,,"pescAcademicAwardLevels:1.1
-pescAcademicAwardLevels:1.2
-pescAcademicAwardLevels:2.0
-pescAcademicAwardLevels:2.1
-pescAcademicAwardLevels:2.2
-pescAcademicAwardLevels:2.3
-pescAcademicAwardLevels:2.4
-pescAcademicAwardLevels:2.5
-pescAcademicAwardLevels:2.6
-pescAcademicAwardLevels:2.7
-pescAcademicAwardLevels:3.1
-pescAcademicAwardLevels:3.2
-pescAcademicAwardLevels:4.1
-pescAcademicAwardLevels:4.2
-pescAcademicAwardLevels:4.3
-pescAcademicAwardLevels:4.4
-pescAcademicAwardLevels:4.5
-pescAcademicAwardLevels:FrenchBaccalaureate
-pescAcademicAwardLevels:CEGEP",picklist,,Recommended,
-223,AcademicAwardShape,pesc:academicAwardDate,Academic Award Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
-224,AcademicAwardShape,pesc:academicAwardTitle,Academic Award Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
-225,AcademicAwardShape,pesc:academicCompletionIndicator,Academic Completion Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Recommended,true/false
-226,AcademicAwardShape,pesc:academicCompletionDate,Academic Completion Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
-227,AcademicAwardShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
-277,AcademicAwardShape,pesc:academicDegreeRequirement,Academic Degree Requirement,FALSE,TRUE,IRI BNODE,,,,AcademicDegreeRequirementShape,Recommended,
-136,AcademicDegreeRequirementShape,pesc:urlAddress,URL Address,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,Recommended,URL of thesis / dissertation. Consider renaming this class
-278,AcademicDegreeRequirementShape,pesc:thesisDIssertationTitle,Thesis Dissertation Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
-279,AcademicDegreeRequirementShape,pesc:thesisDissertationAdvisor,Thesis Dissertation Advisor,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Optional,
-280,AcademicDegreeRequirementShape,pesc:_URLAddress,URL Address 2,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,Recommended,
-230,AcademicHonorsShape,pesc:HonorsTitle,Honors Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
-231,AcademicHonorsShape,pesc:honorsLevel,Honors Level,FALSE,FALSE,IRI,,"pescHonorsLevels:FirstHighest
-pescHonorsLevels:SecondHighest
-pescHonorsLevels:ThirdHighest",picklist,,Recommended,
 281,AcademicSummaryShape,pesc:inProgram,Academic Program,TRUE,FALSE,IRI BNODE,,,,AcademicProgramShape,Not Recommended,
 229,AcademicSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
 255,AcademicSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
@@ -136,61 +102,6 @@ pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,Required,
-317,CourseAchievementShape,pesc:courseDropDate,Course Drop Date,FALSE,FALSE,Literal,xsd:date,,,,,
-325,CourseAchievementShape,pesc:courseSupplementalGrade,Course Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,CourseSupplementalGradeShape,Required,
-388,CourseAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,Required,
-294,CourseAchievementShape,pesc:courseCreditEarned,Course Credit Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-296,CourseAchievementShape,pesc:courseAcademicGrade,Course Academic Grade,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Recommended,
-297,CourseAchievementShape,pesc:courseAcademicGradeStatusCode,Course Academic Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:AuditedCourse
-pescGradeStatusCodes:HonorsGrade
-pescGradeStatusCodes:Incomplete
-pescGradeStatusCodes:IncompleteNotResolvedFail
-pescGradeStatusCodes:InProgress
-pescGradeStatusCodes:NotYetReported
-pescGradeStatusCodes:OtherFail
-pescGradeStatusCodes:OtherPass
-pescGradeStatusCodes:PassFailFail
-pescGradeStatusCodes:PassFailPass
-pescGradeStatusCodes:TransferNoGrade
-pescGradeStatusCodes:Withdrew
-pescGradeStatusCodes:WithdrewFailing
-pescGradeStatusCodes:WithdrewNoPenalty
-pescGradeStatusCodes:WithdrewPassing",picklist,,Recommended,
-298,CourseAchievementShape,pesc:courseNarrativeExplanationGrade,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,Not Recommended,
-299,CourseAchievementShape,pesc:courseRepeatCode,Course Repeat Code,FALSE,FALSE,IRI,,"pescRepeatCodes:RepeatCounted
-pescRepeatCodes:RepeatNotCounted
-pescRepeatCodes:ReplacementCounted
-pescRepeatCodes:ReplacedNotCounted
-pescRepeatCodes:RepeatOtherInstitution
-pescRepeatCodes:NotCountedOther",picklist,,Recommended,
-307,CourseAchievementShape,pesc:courseQualityPointsEarned,Course Quality Points Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-316,CourseAchievementShape,pesc:courseAddDate,Course Add Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-321,CourseAchievementShape,pesc:courseBeginDate,Course Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-322,CourseAchievementShape,pesc:courseEndDate,Course End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-326,CourseSupplementalGradeShape,pesc:supplementalGradeCode,Supplemental Grade Code,FALSE,FALSE,IRI,,"pescSupplementalGradeCodes:BiCourseGrade
-pescSupplementalGradeCodes:BlendedFinalGrade
-pescSupplementalGradeCodes:ExamGrade
-pescSupplementalGradeCodes:InstructorAssignedGrade
-pescSupplementalGradeCodes:SubSessionGrade
-pescSupplementalGradeCodes:TriCourseGrade",picklist,,Recommended,
-327,CourseSupplementalGradeShape,pesc:supplementalSubSession,Supplemental Grade Sub Session,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,numeric count of the subsession of a course
-328,CourseSupplementalGradeShape,pesc:courseAcademicSupplementalGradeScaleCode,Course Academic Supplemental Grade Scale Code,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,
-329,CourseSupplementalGradeShape,pesc:courseAcademicSupplementalGradeStatusCode,Course Academic Supplemental Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:AuditedCourse
-pescGradeStatusCodes:HonorsGrade
-pescGradeStatusCodes:Incomplete
-pescGradeStatusCodes:IncompleteNotResolvedFail
-pescGradeStatusCodes:InProgress
-pescGradeStatusCodes:NotYetReported
-pescGradeStatusCodes:OtherFail
-pescGradeStatusCodes:OtherPass
-pescGradeStatusCodes:PassFailFail
-pescGradeStatusCodes:PassFailPass
-pescGradeStatusCodes:TransferNoGrade
-pescGradeStatusCodes:Withdrew
-pescGradeStatusCodes:WithdrewFailing
-pescGradeStatusCodes:WithdrewNoPenalty
-pescGradeStatusCodes:WithdrewPassing",picklist,,Optional,
-330,CourseSupplementalGradeShape,pesc:courseAcademicSupplementalGrade,Course Academic Supplemental Grade,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
 271,GPAShape,pesc:creditUnit,Credit Unit,FALSE,FALSE,IRI,,"pescCreditUnits:NoCredit
 pescCreditUnits:Quarter
 pescCreditUnits:Semester

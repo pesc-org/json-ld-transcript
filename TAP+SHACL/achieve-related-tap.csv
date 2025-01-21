@@ -32,3 +32,67 @@ ceds:NI001668151686",picklist,,Recommended,
 231,AcademicHonorsShape,pesc:honorsLevel,Honors Level,FALSE,FALSE,IRI,,"pescHonorsLevels:FirstHighest
 pescHonorsLevels:SecondHighest
 pescHonorsLevels:ThirdHighest",picklist,,Recommended,
+,CourseAchievementShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200346,,,,
+317,CourseAchievementShape,ceds:P001305,Course DropDate,FALSE,FALSE,Literal,xsd:date,,,,,
+325,CourseAchievementShape,pesc:courseSupplementalGrade,Course Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,CourseSupplementalGradeShape,Required,
+,CourseAchievementShape,pesc:inSection,In Section,FALSE,FALSE,IRI BNODE,,,,PostsecondarySectionShape,,
+,CourseAchievementShape,pesc:inSession,In Session,TRUE,FALSE,IRI BNODE,,,,AcademicSessionShape,,
+388,CourseAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,Required,
+294,CourseAchievementShape,ceds:P000200,Number of Credits Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+299,CourseAchievementShape,ceds:P000065,Has Course Repeat Code,FALSE,FALSE,IRI,,"ceds:NI000065116744
+ceds:NI000065116745
+ceds:NI000065116748
+ceds:NI000065116747
+ceds:NI000065116746
+ceds:NI000065116260",picklist,,Recommended,
+307,CourseAchievementShape,ceds:P000064,Course Quality Points Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+316,CourseAchievementShape,ceds:P001300,Course Add Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+,CourseAchievementShape,pesc:courseEquivalentGrade,Course Equivalent Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,,
+,CourseAchievementShape,pesc:courseGrade,Course Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,CourseSupplementalGradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:pesc:CourseSupplementalGrade,,,,
+326,CourseSupplementalGradeShape,pesc:supplementalGradeCode,Supplemental Grade Code,FALSE,FALSE,IRI,,"pescSupplementalGradeCodes:BiCourseGrade
+pescSupplementalGradeCodes:BlendedFinalGrade
+pescSupplementalGradeCodes:ExamGrade
+pescSupplementalGradeCodes:InstructorAssignedGrade
+pescSupplementalGradeCodes:SubSessionGrade
+pescSupplementalGradeCodes:TriCourseGrade",picklist,,Recommended,
+327,CourseSupplementalGradeShape,pesc:supplementalSubSession,Supplemental Grade Sub Session,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,numeric count of the subsession of a course
+329,CourseSupplementalGradeShape,pesc:courseAcademicSupplementalGradeStatusCode,Course Academic Supplemental Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:AuditedCourse
+pescGradeStatusCodes:HonorsGrade
+pescGradeStatusCodes:Incomplete
+pescGradeStatusCodes:IncompleteNotResolvedFail
+pescGradeStatusCodes:InProgress
+pescGradeStatusCodes:NotYetReported
+pescGradeStatusCodes:OtherFail
+pescGradeStatusCodes:OtherPass
+pescGradeStatusCodes:PassFailFail
+pescGradeStatusCodes:PassFailPass
+pescGradeStatusCodes:TransferNoGrade
+pescGradeStatusCodes:Withdrew
+pescGradeStatusCodes:WithdrewFailing
+pescGradeStatusCodes:WithdrewNoPenalty
+pescGradeStatusCodes:WithdrewPassing",picklist,,Optional,
+,CourseSupplementalGradeShape,pesc:supplementalGrade,Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,,
+,GradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Grade,,,,
+296,GradeShape,ceds:P000053,Course Academic Grade,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Recommended,
+297,GradeShape,ceds:P001299,Has Course Academic Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:Completed
+pescGradeStatusCodes:PlanningToTake
+ceds:NI001299115324
+ceds:NI001299115877         
+ceds:NI001299115916         
+ceds:NI001299115918         
+ceds:NI001299115931         
+ceds:NI001299116290         
+ceds:NI001299116438         
+ceds:NI001299116457         
+ceds:NI001299116507
+ceds:NI001299116508
+ceds:NI001299117075
+ceds:NI001299117192
+ceds:NI001299117194
+ceds:NI001299117195
+ceds:NI001299117196",picklist,,Recommended,
+298,GradeShape,ceds:P001313,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,Not Recommended,
+295,GradeShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
