@@ -12,8 +12,8 @@
 
 <AcademicAwardShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Academic Award"@en ;
-    sh:targetClass pesc:AcademicAward .
+    sh:name "Postsecondary Student Academic Award"@en ;
+    sh:targetClass ceds:C200335 .
 
 <AcademicDegreeRequirementShape> a sh:NodeShape ;
     sh:closed false ;
@@ -92,7 +92,7 @@
 <CourseAchievementShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Achievement"@en ;
-    sh:targetClass pesc:CourseAchievement .
+    sh:targetClass ceds:C200346 .
 
 <CourseRepeatCodeShape> a sh:NodeShape ;
     sh:closed false ;
@@ -113,6 +113,11 @@
     sh:closed false ;
     sh:name "GPA"@en ;
     sh:targetClass pesc:GPA .
+
+<GradeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Grade"@en ;
+    sh:targetClass pesc:Grade .
 
 <LanguageShape> a sh:NodeShape ;
     sh:closed false ;

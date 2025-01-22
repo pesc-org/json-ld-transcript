@@ -19,7 +19,7 @@
 @prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
 @prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
-@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -221,6 +221,7 @@
     pesc:studentLevel pescStudentLevelCodes:CollegeJunior ;
     pesc:hasAchievement <https://example.edu/achievement001>; # academic award
     pesc:hasAchievement <https://example.edu/achievement002>; # test score
+    pesc:hasAchievement <https://example.edu/achievement003>; # course achievement
     elm:additionalNote [
         rdf:type elm:Note ;
         elm:noteLiteral "A made up test peson" ;
@@ -293,3 +294,5 @@
 <https://example.edu/Offerer#id> a ceds:C200239 ;
     ceterms:name "Example course offerer"@en ;
     .
+
+<https://example.edu/achievement003> a ceds:C200346 .

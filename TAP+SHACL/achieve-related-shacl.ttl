@@ -87,7 +87,7 @@
         <courseachievementshapeInSession>,
         <courseachievementshapeNumberofCreditsEarned>,
         <courseachievementshapeType> ;
-    sh:targetClass pesc:CourseAchievement .
+    sh:targetClass ceds:C200346 .
 
 <CourseRepeatCodeShape> a sh:NodeShape ;
     sh:closed false ;

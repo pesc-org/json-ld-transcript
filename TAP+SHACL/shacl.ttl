@@ -215,7 +215,7 @@
 <CourseAchievementShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Achievement"@en ;
-    sh:targetClass pesc:CourseAchievement .
+    sh:targetClass ceds:C200346 .
 
 <CourseShape> a sh:NodeShape ;
     sh:closed false ;

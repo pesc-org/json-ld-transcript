@@ -10,7 +10,7 @@
 @prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
-@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/SchoolLevelCodes#> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -74,7 +74,7 @@
 <CourseAchievementShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Achievement"@en ;
-    sh:targetClass pesc:CourseAchievement .
+    sh:targetClass ceds:C200346 .
 
 <CourseRepeatCodeShape> a sh:NodeShape ;
     sh:closed false ;
@@ -90,6 +90,11 @@
     sh:closed false ;
     sh:name "GPA"@en ;
     sh:targetClass pesc:GPA .
+
+<GradeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Grade"@en ;
+    sh:targetClass pesc:Grade .
 
 <LicensureShape> a sh:NodeShape ;
     sh:closed false ;
@@ -288,7 +293,7 @@
     sh:path pesc:school .
 
 <hasachievementshapeType> a sh:PropertyShape ;
-    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement ceds:C200335 pesc:CourseAchievement pesc:Licensure pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:TestScore ) ;
+    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement ceds:C200335 ceds:C200346 pesc:Licensure pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:TestScore ) ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;

@@ -116,7 +116,7 @@ ceds:NI000316151878",picklist,,Optional,
 ,hasAchievementShape,rdf:type,Type,TRUE,TRUE,IRI,,"pesc:Achievement
 pesc:AdditionalStudentAchievement
 ceds:C200335
-pesc:CourseAchievement
+ceds:C200346
 pesc:Licensure
 pesc:GPA
 pesc:AcademicSummary
