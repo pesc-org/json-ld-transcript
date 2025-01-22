@@ -39,6 +39,8 @@
 <https://example.edu/CourseSection/001> a ceds:C200332 ;
     ceds:P001315 42 ; # course section number should be a string
     ceds:P600108 <https://example.edu/Location/001>, "location 2" ; # has location
+    ceds:P000054 "2019-09"	; # not date Course Begin Date
+    ceds:P000059 "December"	; # not date Course End Date
 .
 
 <https://example.edu/Location/001> a ceds:C200333 ;

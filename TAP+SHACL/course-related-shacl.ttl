@@ -663,14 +663,14 @@
     sh:maxCount 1 ;
     sh:name "Course Begin Date"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseBeginDate .
+    sh:path ceds:P000054 .
 
 <postsecondarysectionshapeCourseEndDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Course End Date"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:courseEndDate .
+    sh:path ceds:P000059 .
 
 <postsecondarysectionshapeCourseSectionNumber> a sh:PropertyShape ;
     sh:datatype xsd:string ;
