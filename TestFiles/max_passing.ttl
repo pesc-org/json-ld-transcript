@@ -151,19 +151,19 @@
         ceds:NI000316151878 ; # written correspondence 
         pesc:languageProficiency pescLanguageProficiencyCodes:EnglishOnly;
     ] ;
-    ceds:P600049 [
-        a ceds:C200291 ;
-        ceds:P001572 "123456789"^^xsd:string ;
+    ceds:P600049 [ # Has Person Identifier
+        a ceds:C200291 ; # a Person Identifier
+        ceds:P001572 "123456789"^^xsd:string ; # Person Identifier
         ceds:P001075 ceds:NI001075173041 ;
     ] , [
-        a ceds:C200291  ;
-        ceds:P001572 "123456789"^^xsd:string ;
-        ceds:P001075 ceds:NI001075173047 ;
+        a ceds:C200291  ;  # a Person Identifier
+        ceds:P001572 "123456789"^^xsd:string ; # Person Identifier
+        ceds:P001075 ceds:NI001075173047 ; # Has Student Identification System
     ] , [
-        a ceds:C200291  ;
-        ceds:P001572 "123456789"^^xsd:string ;
+        a ceds:C200291  ;  # a Person Identifier
+        ceds:P001572 "123456789"^^xsd:string ; # Person Identifier
         pesc:identifierAssignedBy <https://example.edu/Source#id> ;
-        ceds:P001075 ceds:NI001075173046 ;
+        ceds:P001075 ceds:NI001075173046 ; # Has Student Identification System
     ];
     pesc:hasResidency [
         a pesc:Residency ;
@@ -219,7 +219,7 @@
     pesc:deceasedIndicator true ;
     pesc:genderCode pescGenderCodes:Unreported ;
     pesc:studentLevel pescStudentLevelCodes:CollegeJunior ;
-    pesc:hasAchievement <https://example.edu/achievement001>;
+    pesc:hasAchievement <https://example.edu/achievement001>; # academic award
     pesc:hasAchievement <https://example.edu/achievement002>; # test score
     elm:additionalNote [
         rdf:type elm:Note ;
