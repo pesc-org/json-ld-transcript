@@ -51,7 +51,7 @@ ceds:NI000065116260",picklist,,Recommended,
 ,CourseAchievementShape,pesc:courseGrade,Course Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
-,CourseSupplementalGradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:pesc:CourseSupplementalGrade,,,,
+,CourseSupplementalGradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:CourseSupplementalGrade,,,,
 326,CourseSupplementalGradeShape,pesc:supplementalGradeCode,Supplemental Grade Code,FALSE,FALSE,IRI,,"pescSupplementalGradeCodes:BiCourseGrade
 pescSupplementalGradeCodes:BlendedFinalGrade
 pescSupplementalGradeCodes:ExamGrade
@@ -95,4 +95,4 @@ ceds:NI001299117194
 ceds:NI001299117195
 ceds:NI001299117196",picklist,,Recommended,
 298,GradeShape,ceds:P001313,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,Not Recommended,
-295,GradeShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
+295,GradeShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"

@@ -463,7 +463,7 @@
     sh:path pesc:supplementalSubSession .
 
 <coursesupplementalgradeshapeType> a sh:PropertyShape ;
-    sh:hasValue <https://pesc.org/terms/pesc:CourseSupplementalGrade> ;
+    sh:hasValue pesc:CourseSupplementalGrade ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
