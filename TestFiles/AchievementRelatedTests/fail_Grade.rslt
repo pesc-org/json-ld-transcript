@@ -1,0 +1,95 @@
+Validation Report
+Conforms: False
+Results (7):
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseachievementshapeCourseEquivalentGrade
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: [ ceds:P000053 Literal("B+") ; ceds:P001298 Literal("other code") ; rdf:type pesc:Mark ]
+	Result Path: pesc:courseEquivalentGrade
+	Message: Value does not conform to Shape ex:GradeShape. See details for more information.
+	Details:
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gradeshapeType
+			Focus Node: [ ceds:P000053 Literal("B+") ; ceds:P001298 Literal("other code") ; rdf:type pesc:Mark ]
+			Result Path: rdf:type
+			Message: Node [ ceds:P000053 Literal("B+") ; ceds:P001298 Literal("other code") ; rdf:type pesc:Mark ]->rdf:type does not contain a value in the set: ['pesc:Grade']
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseachievementshapeCourseGrade
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+	Result Path: pesc:courseGrade
+	Message: Value does not conform to Shape ex:GradeShape. See details for more information.
+	Details:
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gradeshapeCourseAcademicGrade
+			Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+			Value Node: Literal("42", datatype=xsd:integer)
+			Result Path: ceds:P000053
+			Message: Value is not Literal with datatype xsd:string
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gradeshapeCourseAcademicGradeScaleCode
+			Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+			Value Node: ceds:NI001299115324
+			Result Path: ceds:P001298
+			Message: Value is not Literal with datatype xsd:string
+		Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gradeshapeCourseAcademicGradeScaleCode
+			Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+			Value Node: ceds:NI001299115324
+			Result Path: ceds:P001298
+			Message: Value is not of Node Kind sh:Literal
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gradeshapeCourseNarrativeExplanationGrade
+			Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+			Value Node: Literal("invalid lang string", lang=en)
+			Result Path: ceds:P001313
+			Message: Value is not Literal with datatype xsd:string
+		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gradeshapeHasCourseAcademicGradeStatusCode
+			Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+			Value Node: ceds:NotValid
+			Result Path: ceds:P001299
+			Message: Value ceds:NotValid not in list ['ceds:NI001299115324', 'ceds:NI001299115916', 'ceds:NI001299116438', 'pescGradeStatusCodes:Completed', 'ceds:NI001299116507', 'ceds:NI001299117192', 'ceds:NI001299117195', 'ceds:NI001299115918', 'ceds:NI001299115931', 'ceds:NI001299116457', 'pescGradeStatusCodes:PlanningToTake', 'ceds:NI001299117075', 'ceds:NI001299117196', 'ceds:NI001299117194', 'ceds:NI001299115877', 'ceds:NI001299116508', 'ceds:NI001299116290']
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gradeshapeCourseAcademicGrade
+	Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+	Value Node: Literal("42", datatype=xsd:integer)
+	Result Path: ceds:P000053
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gradeshapeCourseAcademicGradeScaleCode
+	Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+	Value Node: ceds:NI001299115324
+	Result Path: ceds:P001298
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gradeshapeCourseAcademicGradeScaleCode
+	Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+	Value Node: ceds:NI001299115324
+	Result Path: ceds:P001298
+	Message: Value is not of Node Kind sh:Literal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gradeshapeCourseNarrativeExplanationGrade
+	Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+	Value Node: Literal("invalid lang string", lang=en)
+	Result Path: ceds:P001313
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gradeshapeHasCourseAcademicGradeStatusCode
+	Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
+	Value Node: ceds:NotValid
+	Result Path: ceds:P001299
+	Message: Value ceds:NotValid not in list ['ceds:NI001299115324', 'ceds:NI001299115916', 'ceds:NI001299116438', 'pescGradeStatusCodes:Completed', 'ceds:NI001299116507', 'ceds:NI001299117192', 'ceds:NI001299117195', 'ceds:NI001299115918', 'ceds:NI001299115931', 'ceds:NI001299116457', 'pescGradeStatusCodes:PlanningToTake', 'ceds:NI001299117075', 'ceds:NI001299117196', 'ceds:NI001299117194', 'ceds:NI001299115877', 'ceds:NI001299116508', 'ceds:NI001299116290']

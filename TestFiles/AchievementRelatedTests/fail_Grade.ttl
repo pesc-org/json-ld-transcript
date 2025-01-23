@@ -50,31 +50,25 @@
             pesc:nameCode pescNameCodes:Legal ] ;
     pesc:hasAchievement <https://example.edu/achievement001> .
 
-<https://example.edu/achievement003> a ceds:C200346 ;   # Postsecondary Student Section
-    pesc:inSection	<https://example.edu/CourseSection/001> ;   # In Section
+<https://example.edu/achievement001> a ceds:C200346 ;   # Postsecondary Student Section
     pesc:inSession	<https://example.edu/Session/001> ; # In Session
     pesc:inCourse	<https://example.edu/Course/001> ;  # In Course
-    ceds:P001300 "2009-09-12"^^xsd:date ;   # Course Add Date
-    ceds:P001305 "2009-12-2"^^xsd:date	;   # Course Drop Date
-    ceds:P000200 42.0 ;	# Number of Credits Earned
-    ceds:P000065 ceds:NI000065116745 ;	# Has Course Repeat Code
-    ceds:P000064 42.0 ;	# Course Quality Points Earned
     pesc:courseGrade                    # Course Grade
     [    a pesc:Grade ;
-        ceds:P000053 "B-plus" ;         # Course Academic Grade
-        ceds:P001298 "valid code" ;     # Course academic grade scale code
-        ceds:P001299 ceds:NI001299115324 ;  # Has Course Ac. Grade Status Code
-        ceds:P001313 "Tell me a story" ;    # Course Narrative Explanation Grade
+        ceds:P000053 42 ;         # Should be string for Course Academic Grade
+        ceds:P001298 ceds:NI001299115324 ;     # Invalid node type for Course academic grade scale code
+        ceds:P001299 ceds:NotValid ;  # Has Course Ac. Grade Status Code
+        ceds:P001313 "invalid lang string"@en ;    # should be string Course Narrative Explanation Grade
     ] ;
     pesc:courseEquivalentGrade	    # Course Equivalent Grade
-    [   a pesc:Grade ;
+    [   a pesc:Mark ;    # wrong class
         ceds:P000053 "B+" ;         # Course Academic Grade
         ceds:P001298 "other code" ; # Course academic grade scale code
     ] ; 
     pesc:courseSupplementalGrade	# Course Supplemental Grade
     [   a pesc:CourseSupplementalGrade ;
-        pesc:courseAcademicSupplementalGradeStatusCode pescGradeStatusCodes:HonorsGrade ;
-        pesc:supplementalGradeCode pescSupplementalGradeCodes:BlendedFinalGrade ;
+#        pesc:courseAcademicSupplementalGradeStatusCode pescGradeStatusCodes:HonorsGrade ;
+#        pesc:supplementalGradeCode pescSupplementalGradeCodes:BlendedFinalGrade ;
         pesc:courseGrade [   
             a pesc:Grade ;
             ceds:P000053 "B" ;         # Course Academic Grade
@@ -86,3 +80,5 @@
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
+<https://example.edu/Session/001> a ceds:C200245 ;# AcademicSession 
+.
