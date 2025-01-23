@@ -303,9 +303,9 @@
     pesc:inCourse	<https://example.edu/Course/001> ;  # In Course
     ceds:P001300 "2009-09-12"^^xsd:date ;   # Course Add Date
     ceds:P001305 "2009-12-2"^^xsd:date	;   # Course Drop Date
-    ceds:P000200 "42"^^xsd:decimal ;	# Number of Credits Earned
+    ceds:P000200 42.0 ;	# Number of Credits Earned
     ceds:P000065 ceds:NI000065116745 ;	# Has Course Repeat Code
-    ceds:P000064 "42"^^xsd:decimal ;	# Course Quality Points Earned
+    ceds:P000064 42.0 ;	# Course Quality Points Earned
     pesc:courseGrade                    # Course Grade
     [    a pesc:Grade ;
         ceds:P000053 "B-plus" ;         # Course Academic Grade
