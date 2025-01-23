@@ -36,10 +36,10 @@
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 
-<https://example.edu/Program/001> a pesc:AcademicProgram ;
+<https://example.edu/Program/001> a ceds:C200331 ;
     pesc:academicProgramName "Example Program"^^xsd:string ;
     pesc:hasCourse <https://example.edu/Course/001> ;
-    pesc:offeredBy <https://example.edu/Source#id> .
+    ceterms:offeredBy <https://example.edu/Source#id> .
 
 <https://people.pjjk.net/test> a ceds:C200275 ; # Person
     ceds:P600336 [ a ceds:C200377 ;
