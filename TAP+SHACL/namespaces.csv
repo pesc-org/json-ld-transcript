@@ -38,13 +38,12 @@ pescHonorsLevels,https://pesc.org/vocabs/HonorsLevels#,DOES NOT EXIST
 pescInstructionSiteCodes,https://pesc.org/vocabs/InstructionSiteCodes#,DOES NOT EXIST
 pescLanguageProficiencyCodes,https://pesc.org/vocabs/LanguageProficiencyCodes#,DOES NOT EXIST
 pescLanguageUsageCodes,https://pesc.org/vocabs/LanguageUsageCodes#,DOES NOT EXIST
-pescRepeatCodes,https://pesc.org/vocabs/RepeatCodes#,DOES NOT EXIST
 pescResidencyStatusCodes,https://pesc.org/vocabs/ResidencyStatusCodes#,DOES NOT EXIST
 pescSchoolLevels,https://pesc.org/vocabs/SchoolLevels#,DOES NOT EXIST
 pescSchoolOverrideCodes,https://pesc.org/vocabs/SchoolOverrideCodes#,DOES NOT EXIST
 pescSecondarySchoolCodes,https://pesc.org/vocabs/SecondarySchoolCodes#,DOES NOT EXIST
 pescSessionTypes,https://pesc.org/vocabs/SessionTypes#,DOES NOT EXIST
-pescStudentLevelCodes,https://pesc.org/vocabs/SchoolLevelCodes#,DOES NOT EXIST
+pescStudentLevelCodes,https://pesc.org/vocabs/StudentLevelCodes#,DOES NOT EXIST
 pescSubjectCodes,https://pesc.org/vocabs/SubjectCodes#,DOES NOT EXIST
 pescSupplementalGradeCodes,https://pesc.org/vocabs/SupplementalGradeCodes#,DOES NOT EXIST
 pescTestScoreMethods,https://pesc.org/vocabs/TestScoreMethods#,DOES NOT EXIST

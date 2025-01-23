@@ -17,8 +17,8 @@
 
 <AcademicAwardShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Academic Award"@en ;
-    sh:targetClass pesc:AcademicAward .
+    sh:name "Postsecondary Student Academic Award"@en ;
+    sh:targetClass ceds:C200335 .
 
 <AcademicDegreeRequirementShape> a sh:NodeShape ;
     sh:closed false ;
@@ -101,7 +101,7 @@
 <CourseAchievementShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Achievement"@en ;
-    sh:targetClass pesc:CourseAchievement .
+    sh:targetClass ceds:C200346 .
 
 <CourseRepeatCodeShape> a sh:NodeShape ;
     sh:closed false ;
@@ -117,6 +117,11 @@
     sh:closed false ;
     sh:name "GPA"@en ;
     sh:targetClass pesc:GPA .
+
+<GradeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Grade"@en ;
+    sh:targetClass pesc:Grade .
 
 <LanguageShape> a sh:NodeShape ;
     sh:closed false ;
@@ -252,7 +257,9 @@
     sh:closed false ;
     sh:description "Normally type will be ceds:C200332"@en ;
     sh:name "Postsecondary Location Shape"@en ;
-    sh:property <postsecondarysectionshapeCourseSectionNumber>,
+    sh:property <postsecondarysectionshapeCourseBeginDate>,
+        <postsecondarysectionshapeCourseEndDate>,
+        <postsecondarysectionshapeCourseSectionNumber>,
         <postsecondarysectionshapeHasPostsecondarySectionLocation>,
         <postsecondarysectionshapeType> ;
     sh:targetObjectsOf ceds:P600267 .
@@ -650,6 +657,20 @@
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
+
+<postsecondarysectionshapeCourseBeginDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Course Begin Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000054 .
+
+<postsecondarysectionshapeCourseEndDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Course End Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000059 .
 
 <postsecondarysectionshapeCourseSectionNumber> a sh:PropertyShape ;
     sh:datatype xsd:string ;

@@ -6,8 +6,10 @@
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescGradeStatusCodes:	<https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
+@prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -22,7 +24,7 @@
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
 
-<https://example.edu/Session/001> a ceds:C200245 ;
+<https://example.edu/Session/001> a pesc:AcademicSession ;
     pesc:offeredBy <https://example.edu/Source#id> ;
     pesc:sessionDesignator "2019-09"^^xsd:gYearMonth ;
     pesc:sessionName "Fall 2019"^^xsd:string ;
@@ -48,17 +50,35 @@
             pesc:nameCode pescNameCodes:Legal ] ;
     pesc:hasAchievement <https://example.edu/achievement001> .
 
-<https://example.edu/achievement001> a pesc:Achievement,
-        ceds:C200335 ; 
-    ceds:P000001 "1985-05-01" ;  # not a date for Academic Award Date
-    ceds:P000003 "Example Award"^^rdf:langString ; # should be string for Academic Award Title
-    pesc:inProgram "wrong" ; # should be URI
-    pesc:academicCompletionIndicator "true" ; #should be boolean
-    pesc:academicCompletionDate "1985-05-01" ; # should be date
-    pesc:academicDegreeRequirement "still wrong" ; # should be URI
-    pesc:academicHonors "should be URI" ; # should be URI
+<https://example.edu/achievement001> a ceds:C200346 ;   # Postsecondary Student Section
+    pesc:inSession	<https://example.edu/Session/001> ; # In Session
+    pesc:inCourse	<https://example.edu/Course/001> ;  # In Course
+    pesc:courseGrade                    # Course Grade
+    [    a pesc:Grade ;
+        ceds:P000053 42 ;         # Should be string for Course Academic Grade
+        ceds:P001298 ceds:NI001299115324 ;     # Invalid node type for Course academic grade scale code
+        ceds:P001299 ceds:NotValid ;  # Has Course Ac. Grade Status Code
+        ceds:P001313 "invalid lang string"@en ;    # should be string Course Narrative Explanation Grade
+    ] ;
+    pesc:courseEquivalentGrade	    # Course Equivalent Grade
+    [   a pesc:Mark ;    # wrong class
+        ceds:P000053 "B+" ;         # Course Academic Grade
+        ceds:P001298 "other code" ; # Course academic grade scale code
+    ] ; 
+    pesc:courseSupplementalGrade	# Course Supplemental Grade
+    [   a pesc:CourseSupplementalGrade ;
+#        pesc:courseAcademicSupplementalGradeStatusCode pescGradeStatusCodes:HonorsGrade ;
+#        pesc:supplementalGradeCode pescSupplementalGradeCodes:BlendedFinalGrade ;
+        pesc:courseGrade [   
+            a pesc:Grade ;
+            ceds:P000053 "B" ;         # Course Academic Grade
+            ceds:P001298 "code" ; # Course academic grade scale code
+        ] ; 
+    ]
 .
 
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
+<https://example.edu/Session/001> a ceds:C200245 ;# AcademicSession 
+.

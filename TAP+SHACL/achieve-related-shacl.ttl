@@ -5,7 +5,9 @@
 @prefix elm: <http://data.europa.eu/snb/model/elm/> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
+@prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
+@prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -29,11 +31,6 @@
     sh:closed false ;
     sh:name "Academic Record"@en ;
     sh:targetClass pesc:AcademicRecord .
-
-<AcademicSessionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Session"@en ;
-    sh:targetClass ceds:C200245 .
 
 <AcademicSummaryShape> a sh:NodeShape ;
     sh:closed false ;
@@ -78,22 +75,24 @@
 <CourseAchievementShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Achievement"@en ;
-    sh:targetClass pesc:CourseAchievement .
+    sh:property <courseachievementshapeCourseAddDate>,
+        <courseachievementshapeCourseDropDate>,
+        <courseachievementshapeCourseEquivalentGrade>,
+        <courseachievementshapeCourseGrade>,
+        <courseachievementshapeCourseQualityPointsEarned>,
+        <courseachievementshapeCourseSupplementalGrade>,
+        <courseachievementshapeHasCourseRepeatCode>,
+        <courseachievementshapeInCourse>,
+        <courseachievementshapeInSection>,
+        <courseachievementshapeInSession>,
+        <courseachievementshapeNumberofCreditsEarned>,
+        <courseachievementshapeType> ;
+    sh:targetClass ceds:C200346 .
 
 <CourseRepeatCodeShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Repeat Code"@en ;
     sh:targetClass pesc:CourseRepeatCode .
-
-<CourseShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Post Secondary Course"@en ;
-    sh:targetClass ceds:C200328 .
-
-<CourseSupplementalGradeShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Course Supplemental Grade"@en ;
-    sh:targetClass pesc:CourseSupplementalGrade .
 
 <GPAShape> a sh:NodeShape ;
     sh:closed false ;
@@ -154,12 +153,6 @@
     sh:name "Postsecondary Section Location Shape"@en ;
     sh:targetObjectsOf ceds:P600108 .
 
-<PostsecondarySectionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:description "Normally type will be ceds:C200332"@en ;
-    sh:name "Postsecondary Location Shape"@en ;
-    sh:targetObjectsOf ceds:P600267 .
-
 <ProgramSummaryShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Program Summary"@en ;
@@ -212,6 +205,7 @@
     sh:name "Academic Degree Requirement"@en ;
     sh:property <academicdegreerequirementshapeThesisDissertationAdvisor>,
         <academicdegreerequirementshapeThesisDissertationTitle>,
+        <academicdegreerequirementshapeType>,
         <academicdegreerequirementshapeURLAddress> ;
     sh:targetClass pesc:AcademicDegreeRequirement .
 
@@ -219,13 +213,44 @@
     sh:closed false ;
     sh:name "Academic Honors"@en ;
     sh:property <academichonorsshapeHonorsLevel>,
-        <academichonorsshapeHonorsTitle> ;
+        <academichonorsshapeHonorsTitle>,
+        <academichonorsshapeType> ;
     sh:targetClass pesc:AcademicHonors .
 
 <AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Program"@en ;
+    sh:property <academicprogramshapeType> ;
     sh:targetClass ceds:C200331 .
+
+<AcademicSessionShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Session"@en ;
+    sh:property <academicsessionshapeType> ;
+    sh:targetClass ceds:C200245 .
+
+<CourseShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Post Secondary Course"@en ;
+    sh:property <courseshapeType> ;
+    sh:targetClass ceds:C200328 .
+
+<CourseSupplementalGradeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Course Supplemental Grade"@en ;
+    sh:property <coursesupplementalgradeshapeCourseAcademicSupplementalGradeStatusCode>,
+        <coursesupplementalgradeshapeSupplementalGrade>,
+        <coursesupplementalgradeshapeSupplementalGradeCode>,
+        <coursesupplementalgradeshapeSupplementalGradeSubSession>,
+        <coursesupplementalgradeshapeType> ;
+    sh:targetClass pesc:CourseSupplementalGrade .
+
+<PostsecondarySectionShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be ceds:C200332"@en ;
+    sh:name "Postsecondary Location Shape"@en ;
+    sh:property <postsecondarysectionshapeType> ;
+    sh:targetObjectsOf ceds:P600267 .
 
 <academicawardshapeAcademicAwardDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
@@ -305,6 +330,13 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:thesisDIssertationTitle .
 
+<academicdegreerequirementshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:AcademicDegreeRequirement ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <academicdegreerequirementshapeURLAddress> a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -327,4 +359,208 @@
     sh:name "Honors Title"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:honorsTitle .
+
+<academichonorsshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:AcademicHonors ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<academicprogramshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200331 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<academicsessionshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200245 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<courseachievementshapeCourseAddDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Course Add Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P001300 .
+
+<courseachievementshapeCourseDropDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Course DropDate"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P001305 .
+
+<courseachievementshapeCourseEquivalentGrade> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "Course Equivalent Grade"@en-US ;
+    sh:node <GradeShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:courseEquivalentGrade .
+
+<courseachievementshapeCourseGrade> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "Course Grade"@en-US ;
+    sh:node <GradeShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:courseGrade .
+
+<courseachievementshapeCourseQualityPointsEarned> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Course Quality Points Earned"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000064 .
+
+<courseachievementshapeCourseSupplementalGrade> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "Course Supplemental Grade"@en-US ;
+    sh:node <CourseSupplementalGradeShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:courseSupplementalGrade .
+
+<courseachievementshapeHasCourseRepeatCode> a sh:PropertyShape ;
+    sh:in ( ceds:NI000065116744 ceds:NI000065116745 ceds:NI000065116748 ceds:NI000065116747 ceds:NI000065116746 ceds:NI000065116260 ) ;
+    sh:maxCount 1 ;
+    sh:name "Has Course Repeat Code"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P000065 .
+
+<courseachievementshapeInCourse> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In Course"@en-US ;
+    sh:node <CourseShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inCourse .
+
+<courseachievementshapeInSection> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "In Section"@en-US ;
+    sh:node <PostsecondarySectionShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inSection .
+
+<courseachievementshapeInSession> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In Session"@en-US ;
+    sh:node <AcademicSessionShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inSession .
+
+<courseachievementshapeNumberofCreditsEarned> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Number of Credits Earned"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000200 .
+
+<courseachievementshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200346 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<courseshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200328 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<coursesupplementalgradeshapeCourseAcademicSupplementalGradeStatusCode> a sh:PropertyShape ;
+    sh:in ( pescGradeStatusCodes:AuditedCourse pescGradeStatusCodes:HonorsGrade pescGradeStatusCodes:Incomplete pescGradeStatusCodes:IncompleteNotResolvedFail pescGradeStatusCodes:InProgress pescGradeStatusCodes:NotYetReported pescGradeStatusCodes:OtherFail pescGradeStatusCodes:OtherPass pescGradeStatusCodes:PassFailFail pescGradeStatusCodes:PassFailPass pescGradeStatusCodes:TransferNoGrade pescGradeStatusCodes:Withdrew pescGradeStatusCodes:WithdrewFailing pescGradeStatusCodes:WithdrewNoPenalty pescGradeStatusCodes:WithdrewPassing ) ;
+    sh:maxCount 1 ;
+    sh:name "Course Academic Supplemental Grade Status Code"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:courseAcademicSupplementalGradeStatusCode .
+
+<coursesupplementalgradeshapeSupplementalGrade> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "Supplemental Grade"@en-US ;
+    sh:node <GradeShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:supplementalGrade .
+
+<coursesupplementalgradeshapeSupplementalGradeCode> a sh:PropertyShape ;
+    sh:in ( pescSupplementalGradeCodes:BiCourseGrade pescSupplementalGradeCodes:BlendedFinalGrade pescSupplementalGradeCodes:ExamGrade pescSupplementalGradeCodes:InstructorAssignedGrade pescSupplementalGradeCodes:SubSessionGrade pescSupplementalGradeCodes:TriCourseGrade ) ;
+    sh:maxCount 1 ;
+    sh:name "Supplemental Grade Code"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:supplementalGradeCode .
+
+<coursesupplementalgradeshapeSupplementalGradeSubSession> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 3 ;
+    sh:name "Supplemental Grade Sub Session"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:supplementalSubSession .
+
+<coursesupplementalgradeshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:CourseSupplementalGrade ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<gradeshapeCourseAcademicGrade> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 10 ;
+    sh:name "Course Academic Grade"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000053 .
+
+<gradeshapeCourseAcademicGradeScaleCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Course Academic Grade Scale Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P001298 .
+
+<gradeshapeCourseNarrativeExplanationGrade> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 200 ;
+    sh:name "Course Narrative Explanation Grade"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P001313 .
+
+<gradeshapeHasCourseAcademicGradeStatusCode> a sh:PropertyShape ;
+    sh:in ( pescGradeStatusCodes:Completed pescGradeStatusCodes:PlanningToTake ceds:NI001299115324 ceds:NI001299115877 ceds:NI001299115916 ceds:NI001299115918 ceds:NI001299115931 ceds:NI001299116290 ceds:NI001299116438 ceds:NI001299116457 ceds:NI001299116507 ceds:NI001299116508 ceds:NI001299117075 ceds:NI001299117192 ceds:NI001299117194 ceds:NI001299117195 ceds:NI001299117196 ) ;
+    sh:maxCount 1 ;
+    sh:name "Has Course Academic Grade Status Code"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P001299 .
+
+<gradeshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Grade ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<postsecondarysectionshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200332 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<GradeShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Grade"@en ;
+    sh:property <gradeshapeCourseAcademicGrade>,
+        <gradeshapeCourseAcademicGradeScaleCode>,
+        <gradeshapeCourseNarrativeExplanationGrade>,
+        <gradeshapeHasCourseAcademicGradeStatusCode>,
+        <gradeshapeType> ;
+    sh:targetClass pesc:Grade .
 
