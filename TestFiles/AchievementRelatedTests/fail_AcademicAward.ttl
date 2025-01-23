@@ -22,7 +22,7 @@
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
 
-<https://example.edu/Session/001> a pesc:AcademicSession ;
+<https://example.edu/Session/001> a ceds:C200245 ;
     pesc:offeredBy <https://example.edu/Source#id> ;
     pesc:sessionDesignator "2019-09"^^xsd:gYearMonth ;
     pesc:sessionName "Fall 2019"^^xsd:string ;
