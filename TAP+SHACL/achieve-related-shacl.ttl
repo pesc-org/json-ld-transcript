@@ -205,6 +205,7 @@
     sh:name "Academic Degree Requirement"@en ;
     sh:property <academicdegreerequirementshapeThesisDissertationAdvisor>,
         <academicdegreerequirementshapeThesisDissertationTitle>,
+        <academicdegreerequirementshapeType>,
         <academicdegreerequirementshapeURLAddress> ;
     sh:targetClass pesc:AcademicDegreeRequirement .
 
@@ -212,22 +213,26 @@
     sh:closed false ;
     sh:name "Academic Honors"@en ;
     sh:property <academichonorsshapeHonorsLevel>,
-        <academichonorsshapeHonorsTitle> ;
+        <academichonorsshapeHonorsTitle>,
+        <academichonorsshapeType> ;
     sh:targetClass pesc:AcademicHonors .
 
 <AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Program"@en ;
+    sh:property <academicprogramshapeType> ;
     sh:targetClass ceds:C200331 .
 
 <AcademicSessionShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Session"@en ;
+    sh:property <academicsessionshapeType> ;
     sh:targetClass ceds:C200245 .
 
 <CourseShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Post Secondary Course"@en ;
+    sh:property <courseshapeType> ;
     sh:targetClass ceds:C200328 .
 
 <CourseSupplementalGradeShape> a sh:NodeShape ;
@@ -244,6 +249,7 @@
     sh:closed false ;
     sh:description "Normally type will be ceds:C200332"@en ;
     sh:name "Postsecondary Location Shape"@en ;
+    sh:property <postsecondarysectionshapeType> ;
     sh:targetObjectsOf ceds:P600267 .
 
 <academicawardshapeAcademicAwardDate> a sh:PropertyShape ;
@@ -324,6 +330,13 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:thesisDIssertationTitle .
 
+<academicdegreerequirementshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:AcademicDegreeRequirement ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <academicdegreerequirementshapeURLAddress> a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -346,6 +359,27 @@
     sh:name "Honors Title"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:honorsTitle .
+
+<academichonorsshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:AcademicHonors ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<academicprogramshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200331 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<academicsessionshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200245 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <courseachievementshapeCourseAddDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
@@ -433,6 +467,13 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<courseshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200328 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <coursesupplementalgradeshapeCourseAcademicSupplementalGradeStatusCode> a sh:PropertyShape ;
     sh:in ( pescGradeStatusCodes:AuditedCourse pescGradeStatusCodes:HonorsGrade pescGradeStatusCodes:Incomplete pescGradeStatusCodes:IncompleteNotResolvedFail pescGradeStatusCodes:InProgress pescGradeStatusCodes:NotYetReported pescGradeStatusCodes:OtherFail pescGradeStatusCodes:OtherPass pescGradeStatusCodes:PassFailFail pescGradeStatusCodes:PassFailPass pescGradeStatusCodes:TransferNoGrade pescGradeStatusCodes:Withdrew pescGradeStatusCodes:WithdrewFailing pescGradeStatusCodes:WithdrewNoPenalty pescGradeStatusCodes:WithdrewPassing ) ;
     sh:maxCount 1 ;
@@ -501,6 +542,13 @@
 
 <gradeshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:Grade ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<postsecondarysectionshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200332 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
