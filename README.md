@@ -1,6 +1,6 @@
 Creating a machine readable, semantic PESC transcript
 
-A work in progress. 
+A work in progress.
 
 
 ## Outline
