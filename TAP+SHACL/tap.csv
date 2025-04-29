@@ -121,66 +121,12 @@ pescCreditUnits:Other",picklist,,,
 274,GPAShape,pesc:creditHoursGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
 350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
 ,LicensureShape,pesc:inProgram,In Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,,
 ,LicensureShape,pesc:inCourse,In Course,FALSE,FALSE,IRI BNODE,,,,CourseShape,,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
-,ProgramSummaryShape,pesc:inProgram,In Program,TRUE,TRUE,IRI BNODE,,,,AcademicProgramShape,Recommended,
-228,ProgramSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
-252,ProgramSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,Literal,rdf:langString,,,,Not Recommended,
-254,ProgramSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
-pescAcademicSummaryTypes:SenderOnly
-pescAcademicSummaryTypes:TransferOnly
-pescAcademicSummaryTypes:AllNotRepeated
-pescAcademicSummaryTypes:SenderNotRepeated
-pescAcademicSummaryTypes:TransferNotRepeated
-pescAcademicSummaryTypes:AcademicRenewal
-pescAcademicSummaryTypes:CarryoverCredit
-pescAcademicSummaryTypes:DegreeApplicable
-pescAcademicSummaryTypes:NonDegreeApplicable
-pescAcademicSummaryTypes:ConvertedFrom
-pescAcademicSummaryTypes:ConvertedTo
-pescAcademicSummaryTypes:UserDefined
-pescAcademicSummaryTypes:Weighted
-pescAcademicSummaryTypes:NonWeighted
-pescAcademicSummaryTypes:Cumulative",picklist,,Recommended,
-256,ProgramSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
-pescAcademicSummaryLevels:DualGraduateUndergraduate
-pescAcademicSummaryLevels:Grade13
-pescAcademicSummaryLevels:Ungraded
-pescAcademicSummaryLevels:DualHighSchoolCollege
-pescAcademicSummaryLevels:Graduate
-pescAcademicSummaryLevels:GraduateProfessional
-pescAcademicSummaryLevels:LowerDivisionProfessional
-pescAcademicSummaryLevels:Secondary
-pescAcademicSummaryLevels:TechnicalPreparatory
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:UpperDivision
-pescAcademicSummaryLevels:Vocational",picklist,,Not Recommended,
-258,ProgramSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
-260,ProgramSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
-262,ProgramSummaryShape,pesc:deliquencies,Delinquencies,FALSE,TRUE,IRI,,"pescDeliquencyCodes:ExclusionAcademic
-pescDeliquencyCodes:ExclusionDiscipline
-pescDeliquencyCodes:GoodStanding
-pescDeliquencyCodes:ProbationGPA
-pescDeliquencyCodes:ProbationHours
-pescDeliquencyCodes:SuspensionGPA
-pescDeliquencyCodes:SuspensionHours
-pescDeliquencyCodes:ProbationDiscipline
-pescDeliquencyCodes:SuspensionDiscipline
-pescDeliquencyCodes:Unknown
-pescDeliquencyCodes:Other",picklist,,Not Recommended,
-263,ProgramSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
-265,ProgramSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Optional,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
 ,TestScoreShape,pesc:inTest,In Test,TRUE,FALSE,IRI BNODE,,,,TestShape,,
 374,TestScoreShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,Required,
 ,TestScoreShape,pesc:subTestScore,Subtest Score,FALSE,FALSE,IRI BNODE,,,,TestScoreShape,,
@@ -204,3 +150,5 @@ pescTestScoreMethods:Local",picklist,,Optional,
 366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
 368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:date,,,,Required,
 367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,
+,CollegeTranscriptShape,pesc:hasAwardSummary,Has Award Summary,FALSE,TRUE,IRI BNODE,,,,AwardSummaryShape,,
+,CollegeTranscriptShape,pesc:hasProgramSummary,Has Program Summary,FALSE,TRUE,IRI BNODE,,,,ProgramSummaryShape,,

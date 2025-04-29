@@ -161,8 +161,10 @@
 
 <ProgramSummaryShape> a sh:NodeShape ;
     sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
     sh:name "Program Summary"@en ;
-    sh:targetClass pesc:ProgramSummary .
+    sh:targetClass pesc:ProgramSummary ;
+    sh:targetObjectsOf pesc:hasProgramSummary .
 
 <RAPShape> a sh:NodeShape ;
     sh:closed false ;
