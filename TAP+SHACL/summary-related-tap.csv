@@ -1,0 +1,44 @@
+0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
+,AwardSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
+,AwardSummaryShape,pesc:isSummaryForAward,Is Summary For Award,TRUE,FALSE,IRI BNODE,,,,AcademicAwardShape,Required,
+,AwardSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
+pescAcademicSummaryTypes:SenderOnly
+pescAcademicSummaryTypes:TransferOnly
+pescAcademicSummaryTypes:AllNotRepeated
+pescAcademicSummaryTypes:SenderNotRepeated
+pescAcademicSummaryTypes:TransferNotRepeated
+pescAcademicSummaryTypes:AcademicRenewal
+pescAcademicSummaryTypes:CarryoverCredit
+pescAcademicSummaryTypes:DegreeApplicable
+pescAcademicSummaryTypes:NonDegreeApplicable
+pescAcademicSummaryTypes:ConvertedFrom
+pescAcademicSummaryTypes:ConvertedTo
+pescAcademicSummaryTypes:UserDefined
+pescAcademicSummaryTypes:Weighted
+pescAcademicSummaryTypes:NonWeighted
+pescAcademicSummaryTypes:Cumulative",picklist,,Recommended,
+,AwardSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
+pescAcademicSummaryLevels:DualGraduate
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:Grade13
+pescAcademicSummaryLevels:Ungraded
+pescAcademicSummaryLevels:DualHighSchoolCollege
+pescAcademicSummaryLevels:Graduate
+pescAcademicSummaryLevels:GraduateProfessional
+pescAcademicSummaryLevels:LowerDivision
+pescAcademicSummaryLevels:Professional
+pescAcademicSummaryLevels:Secondary
+pescAcademicSummaryLevels:TechnicalPreparatory
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:UpperDivision
+pescAcademicSummaryLevels:Vocational",picklist,,Recommended,
+,AwardSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Recommended,
+,AwardSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
+,AwardSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,It would be highly unusual to see class ranking and class size on a College Transcript.
+,AwardSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,It would be highly unusual to see class ranking and class size on a College Transcript.
+,AwardSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,Literal,rdf:langString,,,,Not Recommended,
+,AwardSummaryShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
+,AwardSummaryShape,pesc:isSummaryForProgram,Is Summary For Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,Not Recommended,"This would not normally be used at this point in the schema, to give detailed data about the academic program in which an award was earned."
+,GPAShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:GPA,,,,
+,AcademicProgramShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200331,,,,
+,AcademicHonorsShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:AcademicHonors,,,,

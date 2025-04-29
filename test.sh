@@ -54,8 +54,8 @@ printf '\nTest minimal passing\n'
 pyshacl -s TAP+SHACL/summary-related-shacl.ttl TestFiles/minimal_passing.ttl
 printf "\nTest maximal passing\n"
 pyshacl -s TAP+SHACL/summary-related-shacl.ttl TestFiles/max_passing.ttl
-# printf "\nBatch Test failing data\n"
-# batchshacl TAP+SHACL/summary-related-shacl.ttl TestFiles/SummaryRelatedTests
+printf "\nBatch Test failing data\n"
+batchshacl TAP+SHACL/summary-related-shacl.ttl TestFiles/SummaryRelatedTests
 
 
 

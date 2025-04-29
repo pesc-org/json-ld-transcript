@@ -43,3 +43,4 @@ PostsecondarySectionShape,Postsecondary Location Shape,Normally type will be ced
 PostsecondarySectionLocationShape,Postsecondary Section Location Shape,,ceds:P600108,objectsof,,,,
 AttributeShape,Attribute,,pesc:CourseAttribute,class,,,,
 GradeShape,Grade,,pesc:Grade,class,,,,
+AwardSummaryShape,Award Summary,Normally type will be pesc:Summary,pesc:hasAwardSummary,objectsof,,,,

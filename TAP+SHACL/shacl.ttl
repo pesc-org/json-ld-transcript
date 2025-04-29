@@ -93,6 +93,12 @@
     sh:name "Attribute"@en ;
     sh:targetClass pesc:CourseAttribute .
 
+<AwardSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
+    sh:name "Award Summary"@en ;
+    sh:targetObjectsOf pesc:hasAwardSummary .
+
 <CollegeTranscriptShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "College Transcript"@en ;

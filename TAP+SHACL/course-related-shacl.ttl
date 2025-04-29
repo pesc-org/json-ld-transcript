@@ -83,6 +83,12 @@
     sh:name "Agency Identifier"@en ;
     sh:targetClass pesc:AgencyIdentifier .
 
+<AwardSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
+    sh:name "Award Summary"@en ;
+    sh:targetObjectsOf pesc:hasAwardSummary .
+
 <CollegeTranscriptShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "College Transcript"@en ;
