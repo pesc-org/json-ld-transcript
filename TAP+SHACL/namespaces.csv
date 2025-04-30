@@ -23,9 +23,10 @@ pescAgencyCodes,https://pesc.org/vocabs/AgencyCodes#,DOES NOT EXIST
 pescConditionsMetCodes,https://pesc.org/vocabs/ConditionsMetCodes#,DOES NOT EXIST
 pescCourseApplicabilityCodes,https://pesc.org/vocabs/CourseApplicabilityCodes#,DOES NOT EXIST
 pescCourseLevels,https://pesc.org/vocabs/CourseLevels#,DOES NOT EXIST
+pescCreditBasis:,https://pesc.org/vocabs/CreditBasis#,DOES NOT EXIST
 pescCreditLevels,https://pesc.org/vocabs/CreditLevels#,DOES NOT EXIST
-pescCreditUnits,https://pesc.org/vocabs/CreditLevels#,DOES NOT EXIST
-pescDeliquencyCodes,https://pesc.org/vocabs/DeliinquencyCodes#,DOES NOT EXIST
+pescCreditUnits,https://pesc.org/vocabs/CreditUnits#,DOES NOT EXIST
+pescDelinquencyCodes,https://pesc.org/vocabs/DeliinquencyCodes#,DOES NOT EXIST
 pescDocumentCompleteCodes,https://pesc.org/vocabs/DocumentCompleteCodes#,DOES NOT EXIST
 pescDocumentOfficialCodes,https://pesc.org/vocabs/DocumentOfficialCodes#,DOES NOT EXIST
 pescDocumentProcessCodes,https://pesc.org/vocabs/DocumentProcessCodes#,DOES NOT EXIST

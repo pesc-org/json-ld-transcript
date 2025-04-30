@@ -7,7 +7,7 @@
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAcademicSummaryLevels: <https://pesc.org/vocabs/AcademicSummaryLevels#> .
 @prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#> .
-@prefix pescDeliquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
+@prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,11 +22,6 @@
     sh:closed false ;
     sh:name "Academic Record"@en ;
     sh:targetClass pesc:AcademicRecord .
-
-<AcademicSessionShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Session"@en ;
-    sh:targetClass ceds:C200245 .
 
 <AcademicSummaryShape> a sh:NodeShape ;
     sh:closed false ;
@@ -179,7 +174,8 @@
         <programsummaryshapeExitDate>,
         <programsummaryshapeGPASummary>,
         <programsummaryshapeHighSchoolCreditSummary>,
-        <programsummaryshapeIsSummaryForProgram> ;
+        <programsummaryshapeIsSummaryForProgram>,
+        <programsummaryshapeType> ;
     sh:targetClass pesc:ProgramSummary ;
     sh:targetObjectsOf pesc:hasProgramSummary .
 
@@ -192,6 +188,30 @@
     sh:closed false ;
     sh:name "Residency"@en ;
     sh:targetObjectsOf pesc:hasResidency .
+
+<SessionSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
+    sh:name "Session Summary"@en ;
+    sh:property <sessionsummaryshapeAcademicHonors>,
+        <sessionsummaryshapeAcademicSummaryLevel>,
+        <sessionsummaryshapeAcademicSummaryType>,
+        <sessionsummaryshapeAdditionalNote>,
+        <sessionsummaryshapeClassRank>,
+        <sessionsummaryshapeClassRankDate>,
+        <sessionsummaryshapeClassRankSessioncount>,
+        <sessionsummaryshapeClassRankYear>,
+        <sessionsummaryshapeClassRankYearMonth>,
+        <sessionsummaryshapeClassSize>,
+        <sessionsummaryshapeDelinquencies>,
+        <sessionsummaryshapeEntryDate>,
+        <sessionsummaryshapeExitDate>,
+        <sessionsummaryshapeExitReasonCode>,
+        <sessionsummaryshapeGPASummary>,
+        <sessionsummaryshapeHighSchoolCreditSummary>,
+        <sessionsummaryshapeIsSummaryForProgram>,
+        <sessionsummaryshapeIsSummaryForSession> ;
+    sh:targetObjectsOf pesc:hasSessionSummary .
 
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;
@@ -230,6 +250,12 @@
     sh:name "Postsecondary Student Academic Award"@en ;
     sh:targetClass ceds:C200335 .
 
+<AcademicSessionShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Session"@en ;
+    sh:property <academicsessionshapeType> ;
+    sh:targetClass ceds:C200245 .
+
 <academichonorsshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:AcademicHonors ;
     sh:minCount 1 ;
@@ -239,6 +265,13 @@
 
 <academicprogramshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200331 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<academicsessionshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200245 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -329,6 +362,12 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<noteshapeType> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <programsummaryshapeAcademicHonors> a sh:PropertyShape ;
     sh:name "Academic Honors"@en-US ;
     sh:node <AcademicHonorsShape> ;
@@ -372,10 +411,10 @@
     sh:path pesc:classSize .
 
 <programsummaryshapeDelinquencies> a sh:PropertyShape ;
-    sh:in ( pescDeliquencyCodes:ExclusionAcademic pescDeliquencyCodes:ExclusionDiscipline pescDeliquencyCodes:GoodStanding pescDeliquencyCodes:ProbationGPA pescDeliquencyCodes:ProbationHours pescDeliquencyCodes:SuspensionGPA pescDeliquencyCodes:SuspensionHours pescDeliquencyCodes:ProbationDiscipline pescDeliquencyCodes:SuspensionDiscipline pescDeliquencyCodes:Unknown pescDeliquencyCodes:Other ) ;
+    sh:in ( pescDelinquencyCodes:ExclusionAcademic pescDelinquencyCodes:ExclusionDiscipline pescDelinquencyCodes:GoodStanding pescDelinquencyCodes:ProbationGPA pescDelinquencyCodes:ProbationHours pescDelinquencyCodes:SuspensionGPA pescDelinquencyCodes:SuspensionHours pescDelinquencyCodes:ProbationDiscipline pescDelinquencyCodes:SuspensionDiscipline pescDelinquencyCodes:Unknown pescDelinquencyCodes:Other ) ;
     sh:name "Delinquencies"@en-US ;
     sh:nodeKind sh:IRI ;
-    sh:path pesc:deliquencies .
+    sh:path pesc:delinquencies .
 
 <programsummaryshapeExitDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
@@ -404,6 +443,139 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:isSummaryForProgram .
 
+<programsummaryshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Summary ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<sessionsummaryshapeAcademicHonors> a sh:PropertyShape ;
+    sh:name "Academic Honors"@en-US ;
+    sh:node <AcademicHonorsShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:academicHonors .
+
+<sessionsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
+    sh:in ( pescAcademicSummaryLevels:Dual pescAcademicSummaryLevels:DualGraduate pescAcademicSummaryLevels:Undergraduate pescAcademicSummaryLevels:Grade13 pescAcademicSummaryLevels:Ungraded pescAcademicSummaryLevels:DualHighSchoolCollege pescAcademicSummaryLevels:Graduate pescAcademicSummaryLevels:GraduateProfessional pescAcademicSummaryLevels:LowerDivision pescAcademicSummaryLevels:Professional pescAcademicSummaryLevels:Secondary pescAcademicSummaryLevels:TechnicalPreparatory pescAcademicSummaryLevels:UpperDivision pescAcademicSummaryLevels:Vocational ) ;
+    sh:maxCount 1 ;
+    sh:name "Academic Summary Level"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:academicSummaryLevel .
+
+<sessionsummaryshapeAcademicSummaryType> a sh:PropertyShape ;
+    sh:in ( pescAcademicSummaryTypes:All pescAcademicSummaryTypes:SenderOnly pescAcademicSummaryTypes:TransferOnly pescAcademicSummaryTypes:AllNotRepeated pescAcademicSummaryTypes:SenderNotRepeated pescAcademicSummaryTypes:TransferNotRepeated pescAcademicSummaryTypes:AcademicRenewal pescAcademicSummaryTypes:CarryoverCredit pescAcademicSummaryTypes:DegreeApplicable pescAcademicSummaryTypes:NonDegreeApplicable pescAcademicSummaryTypes:ConvertedFrom pescAcademicSummaryTypes:ConvertedTo pescAcademicSummaryTypes:UserDefined pescAcademicSummaryTypes:Weighted pescAcademicSummaryTypes:NonWeighted pescAcademicSummaryTypes:Cumulative ) ;
+    sh:maxCount 1 ;
+    sh:name "Academic Summary Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:academicSummaryType .
+
+<sessionsummaryshapeAdditionalNote> a sh:PropertyShape ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
+
+<sessionsummaryshapeClassRank> a sh:PropertyShape ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:maxLength 4 ;
+    sh:name "Class Rank"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:classRank .
+
+<sessionsummaryshapeClassRankDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Class Rank Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:classRankDate .
+
+<sessionsummaryshapeClassRankSessioncount> a sh:PropertyShape ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:maxLength 4 ;
+    sh:name "Class Rank Session count"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:classRankSessionCount .
+
+<sessionsummaryshapeClassRankYear> a sh:PropertyShape ;
+    sh:datatype xsd:gYear ;
+    sh:maxCount 1 ;
+    sh:name "Class Rank Year"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:classRankYear .
+
+<sessionsummaryshapeClassRankYearMonth> a sh:PropertyShape ;
+    sh:datatype xsd:gYearMonth ;
+    sh:maxCount 1 ;
+    sh:name "Class Rank Year Month"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:classRankYearMonth .
+
+<sessionsummaryshapeClassSize> a sh:PropertyShape ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:maxLength 4 ;
+    sh:name "Class Size"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:classSize .
+
+<sessionsummaryshapeDelinquencies> a sh:PropertyShape ;
+    sh:in ( pescDelinquencyCodes:ExclusionAcademic pescDelinquencyCodes:ExclusionDiscipline pescDelinquencyCodes:GoodStanding pescDelinquencyCodes:ProbationGPA pescDelinquencyCodes:ProbationHours pescDelinquencyCodes:SuspensionGPA pescDelinquencyCodes:SuspensionHours pescDelinquencyCodes:ProbationDiscipline pescDelinquencyCodes:SuspensionDiscipline pescDelinquencyCodes:Unknown pescDelinquencyCodes:Other ) ;
+    sh:name "Delinquencies"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:delinquencies .
+
+<sessionsummaryshapeEntryDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Entry Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:entryDate .
+
+<sessionsummaryshapeExitDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Exit Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:exitDate .
+
+<sessionsummaryshapeExitReasonCode> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 60 ;
+    sh:name "Exit Reason Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:exitReasonCode .
+
+<sessionsummaryshapeGPASummary> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "GPA Summary"@en-US ;
+    sh:node <GPAShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:gpaSummary .
+
+<sessionsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "High School Credit Summary"@en-US ;
+    sh:path pesc:highSchoolCreditSummary .
+
+<sessionsummaryshapeIsSummaryForProgram> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "Is Summary For Program"@en-US ;
+    sh:node <AcademicProgramShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:isSummaryForProgram .
+
+<sessionsummaryshapeIsSummaryForSession> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Is Summary For Session"@en-US ;
+    sh:node <AcademicSessionShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:isSummaryForSession .
+
 <AcademicHonorsShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Honors"@en ;
@@ -425,5 +597,6 @@
 <NoteShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Note"@en ;
+    sh:property <noteshapeType> ;
     sh:targetObjectsOf elm:additionalNote .
 

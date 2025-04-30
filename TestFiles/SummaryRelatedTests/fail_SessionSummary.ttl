@@ -21,7 +21,7 @@
     pesc:documentID "050330001" ;
     pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
     pesc:hasPart <https://example.edu/achievement001> ;
-    pesc:hasProgramSummary <https://example.edu/programSummary001> ;
+    pesc:hasSessionSummary <https://example.edu/sessionSummary001> ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
@@ -62,15 +62,26 @@
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
-<https://example.edu/programSummary001> a pesc:Summary ;
-#    pesc:isSummaryForProgram <https://example.edu/Program/001> ; # Missing required
-    pesc:academicSummaryType "DegreeApplicable" ; # Wrong node kind, not in value list
-    pesc:academicSummaryLevel "Undergraduate" ; # Wrong node kind, not in value list
-    pesc:gpaSummary <https://example.edu/gpa001> ; # wrong type as it does not exist
-    pesc:academicHonors <https://example.edu/honors001> ; # wrong type as it does not exist
-    pesc:classRank 3.0 ; # wrong type, should be integer
-    pesc:classSize 99999 ; # too big, >4 digitis
-    pesc:delinquencies pescDelinquencyCodes:SuspGPA ; # not in value list
-#    pesc:highSchoolCreditSummary do not test as not defined.
+<https://example.edu/sessionSummary001> a pesc:Summary ;
+#    pesc:isSummaryForSession <https://example.edu/Session/001> ; # Missing required
+    pesc:academicSummaryType "DegreeApplicable" ; # wrong node kind, not in list
+    pesc:academicSummaryLevel "Undergraduate" ; # wrong node kind, not in list
+    pesc:gpaSummary <https://example.edu/gpa> ; # value does not have correct type
+    pesc:academicHonors <https://example.edu/honors> ; # value does not have correct type
+    pesc:classRank 3.5 ; # wrong datatype
+    pesc:classSize 99999 ; # too large
+    pesc:delinquencies "Suspension" ;  # wrong node kind, not in list
+#    pesc:highSchoolCreditSummary
+    pesc:isSummaryForProgram <https://example.edu/Program/> ; # value does not have correct type
+    pesc:entryDate "2022-03-23" ;  # wrong datatype
+    pesc:exitDate "2024-06-23" ; # wrong datatype
+    pesc:exitReasonCode "Gave up"@en ; # wrong data type
+    pesc:classRankSessionCount 10000 ; # Too large
+    pesc:classRankDate "2024-06-23" ;  # wrong datatype
+    pesc:classRankYear  "2024" ;  # wrong datatype
+    pesc:classRankYearMonth  "2024-06" ;  # wrong datatype
 .
 
+<https://example.edu/gpa001> a pesc:GPA .
+<https://example.edu/honors001> a pesc:AcademicHonors .
+<https://example.edu/Session/001> a ceds:C200245 .

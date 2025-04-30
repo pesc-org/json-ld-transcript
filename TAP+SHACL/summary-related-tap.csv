@@ -39,8 +39,9 @@ pescAcademicSummaryLevels:Vocational",picklist,,Recommended,
 ,AwardSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,Literal,rdf:langString,,,,Not Recommended,
 ,AwardSummaryShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
 ,AwardSummaryShape,pesc:isSummaryForProgram,Is Summary For Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,Not Recommended,"This would not normally be used at this point in the schema, to give detailed data about the academic program in which an award was earned."
+,ProgramSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
 ,ProgramSummaryShape,pesc:isSummaryForProgram,Is Summary For Program,TRUE,FALSE,IRI BNODE,,,,AcademicProgramShape,Recommended,
-254,ProgramSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
+,ProgramSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
 pescAcademicSummaryTypes:SenderOnly
 pescAcademicSummaryTypes:TransferOnly
 pescAcademicSummaryTypes:AllNotRepeated
@@ -56,7 +57,7 @@ pescAcademicSummaryTypes:UserDefined
 pescAcademicSummaryTypes:Weighted
 pescAcademicSummaryTypes:NonWeighted
 pescAcademicSummaryTypes:Cumulative",picklist,,Recommended,"Since this part of the schema deals only with the academic awards earned, the only recommended value would probably be “DegreeApplicable”."
-256,ProgramSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
+,ProgramSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
 pescAcademicSummaryLevels:DualGraduateUndergraduate
 pescAcademicSummaryLevels:Grade13
 pescAcademicSummaryLevels:Ungraded
@@ -70,29 +71,82 @@ pescAcademicSummaryLevels:TechnicalPreparatory
 pescAcademicSummaryLevels:Undergraduate
 pescAcademicSummaryLevels:UpperDivision
 pescAcademicSummaryLevels:Vocational",picklist,,Not Recommended,
-265,ProgramSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Optional,Would not typically be included on a College Transcript.
-228,ProgramSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
-258,ProgramSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,"The student ranking the highest in the class would have a rank of “1”. However, this is rarely found on a postsecondary transcript."
-260,ProgramSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,This is rarely found on a postsecondary transcript.
-252,ProgramSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,,,,,,Not Recommended,This complex data element would not be included on a postsecondary transcript.
-262,ProgramSummaryShape,pesc:deliquencies,Delinquencies,FALSE,TRUE,IRI,,"pescDeliquencyCodes:ExclusionAcademic
-pescDeliquencyCodes:ExclusionDiscipline
-pescDeliquencyCodes:GoodStanding
-pescDeliquencyCodes:ProbationGPA
-pescDeliquencyCodes:ProbationHours
-pescDeliquencyCodes:SuspensionGPA
-pescDeliquencyCodes:SuspensionHours
-pescDeliquencyCodes:ProbationDiscipline
-pescDeliquencyCodes:SuspensionDiscipline
-pescDeliquencyCodes:Unknown
-pescDeliquencyCodes:Other",picklist,,Not Recommended,
-263,ProgramSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,The format for the date is ccyy-mm-dd. This would not be the appropriate place in the schema to transmit these data.
+,ProgramSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Optional,Would not typically be included on a College Transcript.
+,ProgramSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
+,ProgramSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,"The student ranking the highest in the class would have a rank of “1”. However, this is rarely found on a postsecondary transcript."
+,ProgramSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,This is rarely found on a postsecondary transcript.
+,ProgramSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,,,,,,Not Recommended,This complex data element would not be included on a postsecondary transcript.
+,ProgramSummaryShape,pesc:delinquencies,Delinquencies,FALSE,TRUE,IRI,,"pescDelinquencyCodes:ExclusionAcademic
+pescDelinquencyCodes:ExclusionDiscipline
+pescDelinquencyCodes:GoodStanding
+pescDelinquencyCodes:ProbationGPA
+pescDelinquencyCodes:ProbationHours
+pescDelinquencyCodes:SuspensionGPA
+pescDelinquencyCodes:SuspensionHours
+pescDelinquencyCodes:ProbationDiscipline
+pescDelinquencyCodes:SuspensionDiscipline
+pescDelinquencyCodes:Unknown
+pescDelinquencyCodes:Other",picklist,,Not Recommended,
+,ProgramSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,The format for the date is ccyy-mm-dd. This would not be the appropriate place in the schema to transmit these data.
 ,ProgramSummaryShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
+,SessionSummaryShape,pesc:isSummaryForSession,Is Summary For Session,TRUE,FALSE,IRI BNODE,,,,AcademicSessionShape,Required,
+,SessionSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
+pescAcademicSummaryTypes:SenderOnly
+pescAcademicSummaryTypes:TransferOnly
+pescAcademicSummaryTypes:AllNotRepeated
+pescAcademicSummaryTypes:SenderNotRepeated
+pescAcademicSummaryTypes:TransferNotRepeated
+pescAcademicSummaryTypes:AcademicRenewal
+pescAcademicSummaryTypes:CarryoverCredit
+pescAcademicSummaryTypes:DegreeApplicable
+pescAcademicSummaryTypes:NonDegreeApplicable
+pescAcademicSummaryTypes:ConvertedFrom
+pescAcademicSummaryTypes:ConvertedTo
+pescAcademicSummaryTypes:UserDefined
+pescAcademicSummaryTypes:Weighted
+pescAcademicSummaryTypes:NonWeighted
+pescAcademicSummaryTypes:Cumulative",picklist,,Recommended,
+,SessionSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
+pescAcademicSummaryLevels:DualGraduate
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:Grade13
+pescAcademicSummaryLevels:Ungraded
+pescAcademicSummaryLevels:DualHighSchoolCollege
+pescAcademicSummaryLevels:Graduate
+pescAcademicSummaryLevels:GraduateProfessional
+pescAcademicSummaryLevels:LowerDivision
+pescAcademicSummaryLevels:Professional
+pescAcademicSummaryLevels:Secondary
+pescAcademicSummaryLevels:TechnicalPreparatory
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:UpperDivision
+pescAcademicSummaryLevels:Vocational",picklist,,Optional,
+,SessionSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Recommended,This would typically be where items like Dean’s List at the end of a session are listed.
+,SessionSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Optional,
+,SessionSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,"The Workgroup that developed this PESC XML College Transcript Schema does not recommend inclusion of Class
+Rank in the College Transcript. However, if it is included, it is recommended that this is not the most appropriate place for inclusion of the student’s overall rank in class."
+,SessionSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,"If there were 753 students in the student’s class and if they were ranked by the school, then this value would be “753”."
+,SessionSummaryShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
+,SessionSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,,,,,,Not Recommended,This will not be included in a College Transcript.
+,SessionSummaryShape,pesc:isSummaryForProgram,Is Summary For Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,Not Recommended,It would be quite unusual to see this included on a college transcript at this point in the schema.
+,SessionSummaryShape,pesc:delinquencies,Delinquencies,FALSE,TRUE,IRI,,"pescDelinquencyCodes:ExclusionAcademic
+pescDelinquencyCodes:ExclusionDiscipline
+pescDelinquencyCodes:GoodStanding
+pescDelinquencyCodes:ProbationGPA
+pescDelinquencyCodes:ProbationHours
+pescDelinquencyCodes:SuspensionGPA
+pescDelinquencyCodes:SuspensionHours
+pescDelinquencyCodes:ProbationDiscipline
+pescDelinquencyCodes:SuspensionDiscipline
+pescDelinquencyCodes:Unknown
+pescDelinquencyCodes:Other",picklist,,Optional,
+,SessionSummaryShape,pesc:entryDate,Entry Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,This data element would rarely be seen on a College Transcript.
+,SessionSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,"This date would typically be the date of graduation for students who did graduate this session. If the student did not graduate, it would be the last date of known enrollment. The date format is ccyy-mm-dd. It would not typically be included on a postsecondary transcript. In rare cases, it might be included for the final session the student attended at that school."
+,SessionSummaryShape,pesc:exitReasonCode,Exit Reason Code,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Not Recommended,"This code would typically be used for a high school transcript, but would never be used for a College Transcript."
+,SessionSummaryShape,pesc:classRankSessionCount,Class Rank Session count,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,"Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."
+,SessionSummaryShape,pesc:classRankDate,Class Rank Date,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,"Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."
+,SessionSummaryShape,pesc:classRankYear,Class Rank Year,FALSE,FALSE,Literal,xsd:gYear,,,,Not Recommended,"Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."
+,SessionSummaryShape,pesc:classRankYearMonth,Class Rank Year Month,FALSE,FALSE,Literal,xsd:gYearMonth,,,,Not Recommended,"Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
@@ -102,3 +156,5 @@ pescDeliquencyCodes:Other",picklist,,Not Recommended,
 ,GPAShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:GPA,,,,
 ,AcademicProgramShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200331,,,,
 ,AcademicHonorsShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:AcademicHonors,,,,
+,AcademicSessionShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200245,,,,
+,NoteShape,rdf:type,Type,TRUE,TRUE,IRI,,,,,,

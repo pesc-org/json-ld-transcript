@@ -169,6 +169,12 @@
         <residencyshapeType> ;
     sh:targetObjectsOf pesc:hasResidency .
 
+<SessionSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
+    sh:name "Session Summary"@en ;
+    sh:targetObjectsOf pesc:hasSessionSummary .
+
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Student"@en ;

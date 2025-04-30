@@ -10,8 +10,8 @@
 @prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescAgencyCodes: <https://pesc.org/vocabs/AgencyCodes#> .
 @prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
-@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditLevels#> .
-@prefix pescDeliquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
+@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
+@prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
 @prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
@@ -107,6 +107,7 @@
         <collegetranscriptshapeHasAwardSummary>,
         <collegetranscriptshapeHasPart>,
         <collegetranscriptshapeHasProgramSummary>,
+        <collegetranscriptshapeHasSessionSummary>,
         <collegetranscriptshapeRequestTrackingID>,
         <collegetranscriptshapeSource>,
         <collegetranscriptshapeStudent>,
@@ -255,6 +256,12 @@
     sh:targetClass pesc:ProgramSummary ;
     sh:targetObjectsOf pesc:hasProgramSummary .
 
+<SessionSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
+    sh:name "Session Summary"@en ;
+    sh:targetObjectsOf pesc:hasSessionSummary .
+
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Student"@en ;
@@ -353,7 +360,7 @@
     sh:path pesc:classRankYearMonth .
 
 <academicsummaryshapeDelinquencies> a sh:PropertyShape ;
-    sh:in ( pescDeliquencyCodes:ExclusionAcademic pescDeliquencyCodes:ExclusionDiscipline pescDeliquencyCodes:GoodStanding pescDeliquencyCodes:ProbationGPA pescDeliquencyCodes:ProbationHours pescDeliquencyCodes:SuspensionGPA pescDeliquencyCodes:SuspensionHours pescDeliquencyCodes:ProbationDiscipline pescDeliquencyCodes:SuspensionDiscipline pescDeliquencyCodes:Unknown pescDeliquencyCodes:Other ) ;
+    sh:in ( pescDelinquencyCodes:ExclusionAcademic pescDelinquencyCodes:ExclusionDiscipline pescDelinquencyCodes:GoodStanding pescDelinquencyCodes:ProbationGPA pescDelinquencyCodes:ProbationHours pescDelinquencyCodes:SuspensionGPA pescDelinquencyCodes:SuspensionHours pescDelinquencyCodes:ProbationDiscipline pescDelinquencyCodes:SuspensionDiscipline pescDelinquencyCodes:Unknown pescDelinquencyCodes:Other ) ;
     sh:name "Delinquencies"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:delinquencies .
@@ -538,6 +545,12 @@
     sh:node <ProgramSummaryShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasProgramSummary .
+
+<collegetranscriptshapeHasSessionSummary> a sh:PropertyShape ;
+    sh:name "Has Session Summary"@en-US ;
+    sh:node <SessionSummaryShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:hasSessionSummary .
 
 <collegetranscriptshapeRequestTrackingID> a sh:PropertyShape ;
     sh:datatype xsd:string ;

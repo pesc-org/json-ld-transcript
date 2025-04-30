@@ -7,7 +7,7 @@
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
-@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditLevels#> .
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -184,6 +184,12 @@
     sh:closed false ;
     sh:name "Residency"@en ;
     sh:targetObjectsOf pesc:hasResidency .
+
+<SessionSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
+    sh:name "Session Summary"@en ;
+    sh:targetObjectsOf pesc:hasSessionSummary .
 
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;
@@ -552,7 +558,7 @@
     sh:path ceds:P001303 .
 
 <courseshapeHasCourseCreditLevelType> a sh:PropertyShape ;
-    sh:in ( ceds:NI001304117105 ceds:NI001304116050 ceds:NI001304117129 ceds:NI001304117161 ceds:NI001304117014 ceds:NI001304115808 ceds:NI001304116619 ceds:NI001304115600 ceds:NI001304115810 pescCreditUnits:Grade13 pescCreditUnits:DualGraduateUndergraduate ) ;
+    sh:in ( ceds:NI001304117105 ceds:NI001304116050 ceds:NI001304117129 ceds:NI001304117161 ceds:NI001304117014 ceds:NI001304115808 ceds:NI001304116619 ceds:NI001304115600 ceds:NI001304115810 pescCreditLevels:Grade13 pescCreditLevels:DualGraduateUndergraduate ) ;
     sh:maxCount 1 ;
     sh:name "Has Course Credit Level Type"@en-US ;
     sh:nodeKind sh:IRI ;
