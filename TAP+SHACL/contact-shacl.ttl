@@ -43,7 +43,7 @@
 <AcademicSummaryShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Summary"@en ;
-    sh:targetClass pesc:AcademicSummary .
+    sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AccreditationShape> a sh:NodeShape ;
     sh:closed false ;
@@ -64,6 +64,12 @@
     sh:closed false ;
     sh:name "Attribute"@en ;
     sh:targetClass pesc:CourseAttribute .
+
+<AwardSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
+    sh:name "Award Summary"@en ;
+    sh:targetObjectsOf pesc:hasAwardSummary .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
     sh:closed false ;
@@ -165,8 +171,10 @@
 
 <ProgramSummaryShape> a sh:NodeShape ;
     sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
     sh:name "Program Summary"@en ;
-    sh:targetClass pesc:ProgramSummary .
+    sh:targetClass pesc:ProgramSummary ;
+    sh:targetObjectsOf pesc:hasProgramSummary .
 
 <RAPShape> a sh:NodeShape ;
     sh:closed false ;
@@ -177,6 +185,12 @@
     sh:closed false ;
     sh:name "Residency"@en ;
     sh:targetObjectsOf pesc:hasResidency .
+
+<SessionSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Normally type will be pesc:Summary"@en ;
+    sh:name "Session Summary"@en ;
+    sh:targetObjectsOf pesc:hasSessionSummary .
 
 <StudentShape> a sh:NodeShape ;
     sh:closed false ;

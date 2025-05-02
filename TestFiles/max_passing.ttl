@@ -4,11 +4,14 @@
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
+@prefix pescAcademicSummaryLevels:	<https://pesc.org/vocabs/AcademicSummaryLevels#> .
+@prefix pescAcademicSummaryTypes:	<https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
+@prefix pescDelinquencyCodes:	<https://pesc.org/vocabs/DeliinquencyCodes#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescGradeStatusCodes:	<https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
@@ -32,6 +35,10 @@
     pesc:destination <https://example.edu/Desintation#id> ;
     pesc:documentID "050330001" ;
     pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
+    pesc:hasAcademicSummary <https://example.edu/academicSummary001> ;
+    pesc:hasAwardSummary <https://example.edu/awardSummary001> ;
+    pesc:hasProgramSummary <https://example.edu/programSummary001> ;
+    pesc:hasSessionSummary <https://example.edu/sessionSummary001> ;
     pesc:hasPart <https://example.edu/achievement001> ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:student <https://people.pjjk.net/test> ;
@@ -229,7 +236,7 @@
         elm:noteLiteral "A made up test peson" ;
     ].
 
-<https://example.edu/achievement001> a pesc:Achievement, ceds:C200335 ;
+<https://example.edu/achievement001> a pesc:Achievement, ceds:C200335 ; # Academic Award
     ceds:P000001 "1985-05-01"^^xsd:date ;  # Academic Award Date
     ceds:P000003 "Example Award"^^xsd:string ; # Academic Award Title
     ceds:P001668  ceds:NI001668151655 ; # Has PESC Award Level Type: 1.1 Cert of Completion
@@ -329,3 +336,77 @@
         ] ; 
     ]
 .
+
+<https://example.edu/awardSummary001> a pesc:Summary ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
+    pesc:isSummaryForAward <https://example.edu/achievement001> ;
+    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
+    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:gpaSummary <https://example.edu/gpa001> ;
+    pesc:academicHonors <https://example.edu/honors001> ;
+    pesc:classRank 3 ;
+    pesc:classSize 9999 ;
+#    pesc:highSchoolCreditSummary
+    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
+.
+
+<https://example.edu/programSummary001> a pesc:Summary ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
+    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
+    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
+    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:gpaSummary <https://example.edu/gpa001> ;
+    pesc:academicHonors <https://example.edu/honors001> ;
+    pesc:classRank 3 ;
+    pesc:classSize 9999 ;
+    pesc:delinquencies pescDelinquencyCodes:SuspensionGPA ;
+#    pesc:highSchoolCreditSummary
+.
+
+<https://example.edu/sessionSummary001> a pesc:Summary ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
+    pesc:isSummaryForSession <https://example.edu/Session/001> ;
+    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
+    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:gpaSummary <https://example.edu/gpa001> ;
+    pesc:academicHonors <https://example.edu/honors001> ;
+    pesc:classRank 3 ;
+    pesc:classSize 9999 ;
+#    pesc:highSchoolCreditSummary
+    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
+    pesc:delinquencies pescDelinquencyCodes:ProbationGPA ;
+    pesc:entryDate "2022-03-23"^^xsd:date ;
+    pesc:exitDate "2024-06-23"^^xsd:date ;
+    pesc:exitReasonCode "Gave up" ;
+    pesc:classRankSessionCount 1000 ;
+    pesc:classRankDate "2024-06-23"^^xsd:date ;
+    pesc:classRankYear  "2024"^^xsd:gYear ;
+    pesc:classRankYearMonth  "2024-06"^^xsd:gYearMonth ;
+.
+
+<https://example.edu/academicSummary001> a pesc:Summary ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
+    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
+    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:gpaSummary <https://example.edu/gpa001> ;
+    pesc:academicHonors <https://example.edu/honors001> ;
+    pesc:classRank 3 ;
+    pesc:classSize 9999 ;
+#    pesc:highSchoolCreditSummary
+    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
+    pesc:delinquencies pescDelinquencyCodes:ProbationGPA ;
+    pesc:entryDate "2022-03-23"^^xsd:date ;
+    pesc:exitDate "2024-06-23"^^xsd:date ;
+    pesc:exitReasonCode "Gave up" ;
+    pesc:classRankSessionCount 1000 ;
+    pesc:classRankDate "2024-06-23"^^xsd:date ;
+    pesc:classRankYear  "2024"^^xsd:gYear ;
+    pesc:classRankYearMonth  "2024-06"^^xsd:gYearMonth ;
+.
+
+<https://example.edu/gpa001> a pesc:GPA .
+<https://example.edu/honors001> a pesc:AcademicHonors .
