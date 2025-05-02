@@ -64,6 +64,8 @@
 
 <https://example.edu/sessionSummary001> a pesc:Summary ;
 #    pesc:isSummaryForSession <https://example.edu/Session/001> ; # Missing required
+    pesc:source "https://example.edu/Source#id" ; # wrong node kind, wrong shape, no type in vlaue
+    pesc:student "https://people.pjjk.net/test" ; # wrong node kind, wrong shape, no type in vlaue
     pesc:academicSummaryType "DegreeApplicable" ; # wrong node kind, not in list
     pesc:academicSummaryLevel "Undergraduate" ; # wrong node kind, not in list
     pesc:gpaSummary <https://example.edu/gpa> ; # value does not have correct type

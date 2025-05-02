@@ -1,6 +1,18 @@
 Validation Report
 Conforms: False
-Results (19):
+Results (25):
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:studentshapeType
+	Focus Node: Literal("https://people.pjjk.net/test")
+	Result Path: rdf:type
+	Message: Node Literal("https://people.pjjk.net/test")->rdf:type does not contain a value in the set: ['ceds:C200275']
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:studentshapeType
+	Focus Node: Literal("https://people.pjjk.net/test")
+	Result Path: rdf:type
+	Message: Less than 1 values on Literal("https://people.pjjk.net/test")->rdf:type
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeAcademicHonors
@@ -27,7 +39,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/sessionSummary001>
 	Value Node: Literal("Undergraduate")
 	Result Path: pesc:academicSummaryLevel
-	Message: Value Literal("Undergraduate") not in list ['pescAcademicSummaryLevels:Grade13', 'pescAcademicSummaryLevels:DualGraduate', 'pescAcademicSummaryLevels:Secondary', 'pescAcademicSummaryLevels:Vocational', 'pescAcademicSummaryLevels:Dual', 'pescAcademicSummaryLevels:GraduateProfessional', 'pescAcademicSummaryLevels:Undergraduate', 'pescAcademicSummaryLevels:Professional', 'pescAcademicSummaryLevels:DualHighSchoolCollege', 'pescAcademicSummaryLevels:TechnicalPreparatory', 'pescAcademicSummaryLevels:LowerDivision', 'pescAcademicSummaryLevels:UpperDivision', 'pescAcademicSummaryLevels:Ungraded', 'pescAcademicSummaryLevels:Graduate']
+	Message: Value Literal("Undergraduate") not in list ['pescAcademicSummaryLevels:Ungraded', 'pescAcademicSummaryLevels:Undergraduate', 'pescAcademicSummaryLevels:Grade13', 'pescAcademicSummaryLevels:TechnicalPreparatory', 'pescAcademicSummaryLevels:UpperDivision', 'pescAcademicSummaryLevels:Graduate', 'pescAcademicSummaryLevels:Dual', 'pescAcademicSummaryLevels:DualGraduate', 'pescAcademicSummaryLevels:Professional', 'pescAcademicSummaryLevels:Secondary', 'pescAcademicSummaryLevels:DualHighSchoolCollege', 'pescAcademicSummaryLevels:Vocational', 'pescAcademicSummaryLevels:LowerDivision', 'pescAcademicSummaryLevels:GraduateProfessional']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeAcademicSummaryLevel
@@ -41,7 +53,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/sessionSummary001>
 	Value Node: Literal("DegreeApplicable")
 	Result Path: pesc:academicSummaryType
-	Message: Value Literal("DegreeApplicable") not in list ['pescAcademicSummaryTypes:Weighted', 'pescAcademicSummaryTypes:NonWeighted', 'pescAcademicSummaryTypes:UserDefined', 'pescAcademicSummaryTypes:TransferNotRepeated', 'pescAcademicSummaryTypes:SenderOnly', 'pescAcademicSummaryTypes:CarryoverCredit', 'pescAcademicSummaryTypes:NonDegreeApplicable', 'pescAcademicSummaryTypes:All', 'pescAcademicSummaryTypes:AcademicRenewal', 'pescAcademicSummaryTypes:Cumulative', 'pescAcademicSummaryTypes:DegreeApplicable', 'pescAcademicSummaryTypes:ConvertedTo', 'pescAcademicSummaryTypes:ConvertedFrom', 'pescAcademicSummaryTypes:SenderNotRepeated', 'pescAcademicSummaryTypes:TransferOnly', 'pescAcademicSummaryTypes:AllNotRepeated']
+	Message: Value Literal("DegreeApplicable") not in list ['pescAcademicSummaryTypes:TransferNotRepeated', 'pescAcademicSummaryTypes:AcademicRenewal', 'pescAcademicSummaryTypes:ConvertedFrom', 'pescAcademicSummaryTypes:SenderNotRepeated', 'pescAcademicSummaryTypes:SenderOnly', 'pescAcademicSummaryTypes:TransferOnly', 'pescAcademicSummaryTypes:NonDegreeApplicable', 'pescAcademicSummaryTypes:NonWeighted', 'pescAcademicSummaryTypes:DegreeApplicable', 'pescAcademicSummaryTypes:Cumulative', 'pescAcademicSummaryTypes:Weighted', 'pescAcademicSummaryTypes:AllNotRepeated', 'pescAcademicSummaryTypes:UserDefined', 'pescAcademicSummaryTypes:All', 'pescAcademicSummaryTypes:ConvertedTo', 'pescAcademicSummaryTypes:CarryoverCredit']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeAcademicSummaryType
@@ -97,7 +109,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/sessionSummary001>
 	Value Node: Literal("Suspension")
 	Result Path: pesc:delinquencies
-	Message: Value Literal("Suspension") not in list ['pescDelinquencyCodes:SuspensionDiscipline', 'pescDelinquencyCodes:ProbationGPA', 'pescDelinquencyCodes:ExclusionAcademic', 'pescDelinquencyCodes:ProbationDiscipline', 'pescDelinquencyCodes:Other', 'pescDelinquencyCodes:SuspensionHours', 'pescDelinquencyCodes:Unknown', 'pescDelinquencyCodes:GoodStanding', 'pescDelinquencyCodes:ProbationHours', 'pescDelinquencyCodes:SuspensionGPA', 'pescDelinquencyCodes:ExclusionDiscipline']
+	Message: Value Literal("Suspension") not in list ['pescDelinquencyCodes:Other', 'pescDelinquencyCodes:ExclusionDiscipline', 'pescDelinquencyCodes:ProbationGPA', 'pescDelinquencyCodes:ExclusionAcademic', 'pescDelinquencyCodes:GoodStanding', 'pescDelinquencyCodes:ProbationHours', 'pescDelinquencyCodes:SuspensionDiscipline', 'pescDelinquencyCodes:ProbationDiscipline', 'pescDelinquencyCodes:SuspensionHours', 'pescDelinquencyCodes:Unknown', 'pescDelinquencyCodes:SuspensionGPA']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeDelinquencies
@@ -172,3 +184,57 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: <https://example.edu/sessionSummary001>
 	Result Path: pesc:isSummaryForSession
 	Message: Less than 1 values on <https://example.edu/sessionSummary001>->pesc:isSummaryForSession
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:sessionsummaryshapeSource
+	Focus Node: <https://example.edu/sessionSummary001>
+	Value Node: Literal("https://example.edu/Source#id")
+	Result Path: pesc:source
+	Message: Value does not conform to Shape ex:OrganizationShape. See details for more information.
+	Details:
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeType
+			Focus Node: Literal("https://example.edu/Source#id")
+			Result Path: rdf:type
+			Message: Node Literal("https://example.edu/Source#id")->rdf:type does not contain a value in the set: ['ceds:C200239']
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:organizationshapeType
+			Focus Node: Literal("https://example.edu/Source#id")
+			Result Path: rdf:type
+			Message: Less than 1 values on Literal("https://example.edu/Source#id")->rdf:type
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:sessionsummaryshapeSource
+	Focus Node: <https://example.edu/sessionSummary001>
+	Value Node: Literal("https://example.edu/Source#id")
+	Result Path: pesc:source
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:sessionsummaryshapeStudent
+	Focus Node: <https://example.edu/sessionSummary001>
+	Value Node: Literal("https://people.pjjk.net/test")
+	Result Path: pesc:student
+	Message: Value does not conform to Shape ex:StudentShape. See details for more information.
+	Details:
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:studentshapeType
+			Focus Node: Literal("https://people.pjjk.net/test")
+			Result Path: rdf:type
+			Message: Node Literal("https://people.pjjk.net/test")->rdf:type does not contain a value in the set: ['ceds:C200275']
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:studentshapeType
+			Focus Node: Literal("https://people.pjjk.net/test")
+			Result Path: rdf:type
+			Message: Less than 1 values on Literal("https://people.pjjk.net/test")->rdf:type
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:sessionsummaryshapeStudent
+	Focus Node: <https://example.edu/sessionSummary001>
+	Value Node: Literal("https://people.pjjk.net/test")
+	Result Path: pesc:student
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI

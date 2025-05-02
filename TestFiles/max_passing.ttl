@@ -337,6 +337,8 @@
 .
 
 <https://example.edu/awardSummary001> a pesc:Summary ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
     pesc:isSummaryForAward <https://example.edu/achievement001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
     pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
@@ -349,6 +351,8 @@
 .
 
 <https://example.edu/programSummary001> a pesc:Summary ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
     pesc:isSummaryForProgram <https://example.edu/Program/001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
     pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
@@ -361,6 +365,8 @@
 .
 
 <https://example.edu/sessionSummary001> a pesc:Summary ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
     pesc:isSummaryForSession <https://example.edu/Session/001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
     pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;

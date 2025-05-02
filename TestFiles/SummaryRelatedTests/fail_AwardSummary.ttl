@@ -62,7 +62,9 @@
     ceterms:name "Example Source"@en .
 
 <https://example.edu/awardSummary001> a pesc:Summary ;
-#    pesc:isSummaryForAward <https://example.edu/achievement001> ; missing mandatory property
+#    pesc:isSummaryForAward <https://example.edu/achievement001> ; # missing mandatory property
+    pesc:source "https://example.edu/Source#id" ; # wrong node kind, wrong shape, no type in vlaue
+    pesc:student "https://people.pjjk.net/test" ; # wrong node kind, wrong shape, no type in vlaue
     pesc:academicSummaryType pescAcademicSummaryTypes:None ; # invalid value
     pesc:academicSummaryLevel "Undergraduate" ; # invalid node kind, invalid value
     pesc:gpaSummary "Very good A-Star" ; # invalid node kind, wrong type

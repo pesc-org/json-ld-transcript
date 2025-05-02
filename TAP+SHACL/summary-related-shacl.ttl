@@ -62,6 +62,8 @@
         <awardsummaryshapeHighSchoolCreditSummary>,
         <awardsummaryshapeIsSummaryForAward>,
         <awardsummaryshapeIsSummaryForProgram>,
+        <awardsummaryshapeSource>,
+        <awardsummaryshapeStudent>,
         <awardsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAwardSummary .
 
@@ -121,11 +123,6 @@
     sh:name "Organization Identifier"@en ;
     sh:targetObjectsOf ceds:P600502 .
 
-<OrganizationShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Organization"@en ;
-    sh:targetClass ceds:C200239 .
-
 <PersonIdentifierShape> a sh:NodeShape ;
     sh:closed false ;
     sh:description "Normally type will be ceds: C200291"@en ;
@@ -175,6 +172,8 @@
         <programsummaryshapeGPASummary>,
         <programsummaryshapeHighSchoolCreditSummary>,
         <programsummaryshapeIsSummaryForProgram>,
+        <programsummaryshapeSource>,
+        <programsummaryshapeStudent>,
         <programsummaryshapeType> ;
     sh:targetClass pesc:ProgramSummary ;
     sh:targetObjectsOf pesc:hasProgramSummary .
@@ -210,13 +209,11 @@
         <sessionsummaryshapeGPASummary>,
         <sessionsummaryshapeHighSchoolCreditSummary>,
         <sessionsummaryshapeIsSummaryForProgram>,
-        <sessionsummaryshapeIsSummaryForSession> ;
+        <sessionsummaryshapeIsSummaryForSession>,
+        <sessionsummaryshapeSource>,
+        <sessionsummaryshapeStudent>,
+        <sessionsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasSessionSummary .
-
-<StudentShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Student"@en ;
-    sh:targetObjectsOf pesc:student .
 
 <TBDShape> a sh:NodeShape ;
     sh:closed false ;
@@ -348,6 +345,22 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:isSummaryForProgram .
 
+<awardsummaryshapeSource> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Source"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:source .
+
+<awardsummaryshapeStudent> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "student"@en-US ;
+    sh:node <StudentShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:student .
+
 <awardsummaryshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:Summary ;
     sh:minCount 1 ;
@@ -363,6 +376,13 @@
     sh:path rdf:type .
 
 <noteshapeType> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<organizationshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200239 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -442,6 +462,22 @@
     sh:node <AcademicProgramShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:isSummaryForProgram .
+
+<programsummaryshapeSource> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Source"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:source .
+
+<programsummaryshapeStudent> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "student"@en-US ;
+    sh:node <StudentShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:student .
 
 <programsummaryshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:Summary ;
@@ -576,6 +612,36 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:isSummaryForSession .
 
+<sessionsummaryshapeSource> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Source"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:source .
+
+<sessionsummaryshapeStudent> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "student"@en-US ;
+    sh:node <StudentShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:student .
+
+<sessionsummaryshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Summary ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<studentshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200275 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <AcademicHonorsShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Honors"@en ;
@@ -599,4 +665,16 @@
     sh:name "Note"@en ;
     sh:property <noteshapeType> ;
     sh:targetObjectsOf elm:additionalNote .
+
+<OrganizationShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Organization"@en ;
+    sh:property <organizationshapeType> ;
+    sh:targetClass ceds:C200239 .
+
+<StudentShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Student"@en ;
+    sh:property <studentshapeType> ;
+    sh:targetObjectsOf pesc:student .
 
