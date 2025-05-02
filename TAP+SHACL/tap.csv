@@ -1,58 +1,4 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
-281,AcademicSummaryShape,pesc:inProgram,Academic Program,TRUE,FALSE,IRI BNODE,,,,AcademicProgramShape,Not Recommended,
-229,AcademicSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
-255,AcademicSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
-pescAcademicSummaryTypes:SenderOnly
-pescAcademicSummaryTypes:TransferOnly
-pescAcademicSummaryTypes:AllNotRepeated
-pescAcademicSummaryTypes:SenderNotRepeated
-pescAcademicSummaryTypes:TransferNotRepeated
-pescAcademicSummaryTypes:AcademicRenewal
-pescAcademicSummaryTypes:CarryoverCredit
-pescAcademicSummaryTypes:DegreeApplicable
-pescAcademicSummaryTypes:NonDegreeApplicable
-pescAcademicSummaryTypes:ConvertedFrom
-pescAcademicSummaryTypes:ConvertedTo
-pescAcademicSummaryTypes:UserDefined
-pescAcademicSummaryTypes:Weighted
-pescAcademicSummaryTypes:NonWeighted
-pescAcademicSummaryTypes:Cumulative",picklist,,Optional,
-257,AcademicSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
-pescAcademicSummaryLevels:DualGraduate
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:Grade13
-pescAcademicSummaryLevels:Ungraded
-pescAcademicSummaryLevels:DualHighSchoolCollege
-pescAcademicSummaryLevels:Graduate
-pescAcademicSummaryLevels:GraduateProfessional
-pescAcademicSummaryLevels:LowerDivision
-pescAcademicSummaryLevels:Professional
-pescAcademicSummaryLevels:Secondary
-pescAcademicSummaryLevels:TechnicalPreparatory
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:UpperDivision
-pescAcademicSummaryLevels:Vocational",picklist,,Recommended,
-259,AcademicSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
-253,AcademicSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,Literal,rdf:langString,,,,Not Recommended,
-266,AcademicSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Recommended,
-352,AcademicSummaryShape,pesc:entryDate,Entry Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-353,AcademicSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-354,AcademicSummaryShape,pesc:exitReasonCode,Exit Reason Code,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Not Recommended,
-355,AcademicSummaryShape,pesc:classRankSessionCount,Class Rank Session count,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
-356,AcademicSummaryShape,pesc:classRankDate,Class Rank Date,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
-357,AcademicSummaryShape,pesc:classRankYear,Class Rank Year,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
-358,AcademicSummaryShape,pesc:classRankYearMonth,Class Rank Year Month,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
-,AcademicSummaryShape,pesc:delinquencies,Delinquencies,FALSE,TRUE,IRI,,"pescDelinquencyCodes:ExclusionAcademic
-pescDelinquencyCodes:ExclusionDiscipline
-pescDelinquencyCodes:GoodStanding
-pescDelinquencyCodes:ProbationGPA
-pescDelinquencyCodes:ProbationHours
-pescDelinquencyCodes:SuspensionGPA
-pescDelinquencyCodes:SuspensionHours
-pescDelinquencyCodes:ProbationDiscipline
-pescDelinquencyCodes:SuspensionDiscipline
-pescDelinquencyCodes:Unknown
-pescDelinquencyCodes:Other",picklist,,Not Recommended,
 384,AdditionalStudentAchievmentShape,pesc:requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 385,AdditionalStudentAchievmentShape,pesc:attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 386,AdditionalStudentAchievmentShape,pesc:proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
@@ -153,3 +99,9 @@ pescTestScoreMethods:Local",picklist,,Optional,
 ,CollegeTranscriptShape,pesc:hasAwardSummary,Has Award Summary,FALSE,TRUE,IRI BNODE,,,,AwardSummaryShape,,
 ,CollegeTranscriptShape,pesc:hasProgramSummary,Has Program Summary,FALSE,TRUE,IRI BNODE,,,,ProgramSummaryShape,,
 ,CollegeTranscriptShape,pesc:hasSessionSummary,Has Session Summary,FALSE,TRUE,IRI BNODE,,,,SessionSummaryShape,,
+,CollegeTranscriptShape,pesc:hasAcademicSummary,Has Academic Summary,FALSE,TRUE,IRI BNODE,,,,AcademicSummaryShape,,
+,,,,,,,,,,,,
+,AwardSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
+,ProgramSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
+,SessionSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
+,AcademicSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,

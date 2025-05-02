@@ -6,12 +6,9 @@
 @prefix elm: <http://data.europa.eu/snb/model/elm/> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
-@prefix pescAcademicSummaryLevels: <https://pesc.org/vocabs/AcademicSummaryLevels#> .
-@prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescAgencyCodes: <https://pesc.org/vocabs/AgencyCodes#> .
 @prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
-@prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
 @prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
@@ -33,6 +30,11 @@
     sh:name "Academic Degree Requirement"@en ;
     sh:targetClass pesc:AcademicDegreeRequirement .
 
+<AcademicHonorsShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Honors"@en ;
+    sh:targetClass pesc:AcademicHonors .
+
 <AcademicRecordShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Record"@en ;
@@ -42,26 +44,6 @@
     sh:closed false ;
     sh:name "Academic Session"@en ;
     sh:targetClass ceds:C200245 .
-
-<AcademicSummaryShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Summary"@en ;
-    sh:property <academicsummaryshapeAcademicHonors>,
-        <academicsummaryshapeAcademicProgram>,
-        <academicsummaryshapeAcademicSummaryLevel>,
-        <academicsummaryshapeAcademicSummaryType>,
-        <academicsummaryshapeClassRank>,
-        <academicsummaryshapeClassRankDate>,
-        <academicsummaryshapeClassRankSessioncount>,
-        <academicsummaryshapeClassRankYear>,
-        <academicsummaryshapeClassRankYearMonth>,
-        <academicsummaryshapeDelinquencies>,
-        <academicsummaryshapeEntryDate>,
-        <academicsummaryshapeExitDate>,
-        <academicsummaryshapeExitReasonCode>,
-        <academicsummaryshapeGPASummary>,
-        <academicsummaryshapeHighSchoolCreditSummary> ;
-    sh:targetClass pesc:AcademicSummary .
 
 <AccreditationShape> a sh:NodeShape ;
     sh:closed false ;
@@ -104,6 +86,7 @@
         <collegetranscriptshapeDocumentOfficialCode>,
         <collegetranscriptshapeDocumentProcessCode>,
         <collegetranscriptshapeDocumenttypeCode>,
+        <collegetranscriptshapeHasAcademicSummary>,
         <collegetranscriptshapeHasAwardSummary>,
         <collegetranscriptshapeHasPart>,
         <collegetranscriptshapeHasProgramSummary>,
@@ -134,6 +117,22 @@
     sh:closed false ;
     sh:name "Course Supplemental Grade"@en ;
     sh:targetClass pesc:CourseSupplementalGrade .
+
+<GPAShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "GPA"@en ;
+    sh:property <gpashapeCreditHoursAttempted>,
+        <gpashapeCreditHoursDeficient>,
+        <gpashapeCreditHoursEarned>,
+        <gpashapeCreditHoursGPA>,
+        <gpashapeCreditHoursRequired>,
+        <gpashapeCreditUnit>,
+        <gpashapeGPARangeMaximum>,
+        <gpashapeGPARangeMinimum>,
+        <gpashapeGradePointAverage>,
+        <gpashapeIsSummaryOf>,
+        <gpashapeTotalQualityPoints> ;
+    sh:targetClass pesc:GPA .
 
 <GradeShape> a sh:NodeShape ;
     sh:closed false ;
@@ -200,15 +199,22 @@
     sh:name "To Be Done"@en ;
     sh:targetClass pesc:TBD .
 
-<AcademicHonorsShape> a sh:NodeShape ;
+<AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
-    sh:name "Academic Honors"@en ;
-    sh:targetClass pesc:AcademicHonors .
+    sh:name "Academic Program"@en ;
+    sh:targetClass ceds:C200331 .
+
+<AcademicSummaryShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Academic Summary"@en ;
+    sh:property <academicsummaryshapeType> ;
+    sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AwardSummaryShape> a sh:NodeShape ;
     sh:closed false ;
     sh:description "Normally type will be pesc:Summary"@en ;
     sh:name "Award Summary"@en ;
+    sh:property <awardsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAwardSummary .
 
 <CourseAchievementShape> a sh:NodeShape ;
@@ -220,22 +226,6 @@
     sh:closed false ;
     sh:name "Post Secondary Course"@en ;
     sh:targetClass ceds:C200328 .
-
-<GPAShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "GPA"@en ;
-    sh:property <gpashapeCreditHoursAttempted>,
-        <gpashapeCreditHoursDeficient>,
-        <gpashapeCreditHoursEarned>,
-        <gpashapeCreditHoursGPA>,
-        <gpashapeCreditHoursRequired>,
-        <gpashapeCreditUnit>,
-        <gpashapeGPARangeMaximum>,
-        <gpashapeGPARangeMinimum>,
-        <gpashapeGradePointAverage>,
-        <gpashapeIsSummaryOf>,
-        <gpashapeTotalQualityPoints> ;
-    sh:targetClass pesc:GPA .
 
 <LanguageShape> a sh:NodeShape ;
     sh:closed false ;
@@ -253,6 +243,7 @@
     sh:closed false ;
     sh:description "Normally type will be pesc:Summary"@en ;
     sh:name "Program Summary"@en ;
+    sh:property <programsummaryshapeType> ;
     sh:targetClass pesc:ProgramSummary ;
     sh:targetObjectsOf pesc:hasProgramSummary .
 
@@ -260,6 +251,7 @@
     sh:closed false ;
     sh:description "Normally type will be pesc:Summary"@en ;
     sh:name "Session Summary"@en ;
+    sh:property <sessionsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasSessionSummary .
 
 <StudentShape> a sh:NodeShape ;
@@ -294,112 +286,12 @@
         <verifiablecredentialshapeSubject> ;
     sh:targetObjectsOf pesc:verifiableCredential .
 
-<academicsummaryshapeAcademicHonors> a sh:PropertyShape ;
-    sh:name "Academic Honors"@en-US ;
-    sh:node <AcademicHonorsShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:academicHonors .
-
-<academicsummaryshapeAcademicProgram> a sh:PropertyShape ;
-    sh:maxCount 1 ;
+<academicsummaryshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Summary ;
     sh:minCount 1 ;
-    sh:name "Academic Program"@en-US ;
-    sh:node <AcademicProgramShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inProgram .
-
-<academicsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
-    sh:in ( pescAcademicSummaryLevels:Dual pescAcademicSummaryLevels:DualGraduate pescAcademicSummaryLevels:Undergraduate pescAcademicSummaryLevels:Grade13 pescAcademicSummaryLevels:Ungraded pescAcademicSummaryLevels:DualHighSchoolCollege pescAcademicSummaryLevels:Graduate pescAcademicSummaryLevels:GraduateProfessional pescAcademicSummaryLevels:LowerDivision pescAcademicSummaryLevels:Professional pescAcademicSummaryLevels:Secondary pescAcademicSummaryLevels:TechnicalPreparatory pescAcademicSummaryLevels:UpperDivision pescAcademicSummaryLevels:Vocational ) ;
-    sh:maxCount 1 ;
-    sh:name "Academic Summary Level"@en-US ;
+    sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
-    sh:path pesc:academicSummaryLevel .
-
-<academicsummaryshapeAcademicSummaryType> a sh:PropertyShape ;
-    sh:in ( pescAcademicSummaryTypes:All pescAcademicSummaryTypes:SenderOnly pescAcademicSummaryTypes:TransferOnly pescAcademicSummaryTypes:AllNotRepeated pescAcademicSummaryTypes:SenderNotRepeated pescAcademicSummaryTypes:TransferNotRepeated pescAcademicSummaryTypes:AcademicRenewal pescAcademicSummaryTypes:CarryoverCredit pescAcademicSummaryTypes:DegreeApplicable pescAcademicSummaryTypes:NonDegreeApplicable pescAcademicSummaryTypes:ConvertedFrom pescAcademicSummaryTypes:ConvertedTo pescAcademicSummaryTypes:UserDefined pescAcademicSummaryTypes:Weighted pescAcademicSummaryTypes:NonWeighted pescAcademicSummaryTypes:Cumulative ) ;
-    sh:maxCount 1 ;
-    sh:name "Academic Summary Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:academicSummaryType .
-
-<academicsummaryshapeClassRank> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Rank"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRank .
-
-<academicsummaryshapeClassRankDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankDate .
-
-<academicsummaryshapeClassRankSessioncount> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Rank Session count"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankSessionCount .
-
-<academicsummaryshapeClassRankYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankYear .
-
-<academicsummaryshapeClassRankYearMonth> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Year Month"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankYearMonth .
-
-<academicsummaryshapeDelinquencies> a sh:PropertyShape ;
-    sh:in ( pescDelinquencyCodes:ExclusionAcademic pescDelinquencyCodes:ExclusionDiscipline pescDelinquencyCodes:GoodStanding pescDelinquencyCodes:ProbationGPA pescDelinquencyCodes:ProbationHours pescDelinquencyCodes:SuspensionGPA pescDelinquencyCodes:SuspensionHours pescDelinquencyCodes:ProbationDiscipline pescDelinquencyCodes:SuspensionDiscipline pescDelinquencyCodes:Unknown pescDelinquencyCodes:Other ) ;
-    sh:name "Delinquencies"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:delinquencies .
-
-<academicsummaryshapeEntryDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Entry Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:entryDate .
-
-<academicsummaryshapeExitDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Exit Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:exitDate .
-
-<academicsummaryshapeExitReasonCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 60 ;
-    sh:name "Exit Reason Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:exitReasonCode .
-
-<academicsummaryshapeGPASummary> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "GPA Summary"@en-US ;
-    sh:node <GPAShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:gpaSummary .
-
-<academicsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:maxCount 1 ;
-    sh:name "High School Credit Summary"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:highSchoolCreditSummary .
+    sh:path rdf:type .
 
 <additionalstudentachievmentshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
@@ -466,6 +358,13 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:stateProvinceCode .
 
+<awardsummaryshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Summary ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <collegetranscriptshapeAdditionalNote> a sh:PropertyShape ;
     sh:name "Additional Note"@en-US ;
     sh:node <NoteShape> ;
@@ -526,6 +425,12 @@
     sh:name "Document type Code"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:documentTypeCode .
+
+<collegetranscriptshapeHasAcademicSummary> a sh:PropertyShape ;
+    sh:name "Has Academic Summary"@en-US ;
+    sh:node <AcademicSummaryShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:hasAcademicSummary .
 
 <collegetranscriptshapeHasAwardSummary> a sh:PropertyShape ;
     sh:name "Has Award Summary"@en-US ;
@@ -712,6 +617,20 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<programsummaryshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Summary ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<sessionsummaryshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Summary ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <testscoreshapeInTest> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -798,11 +717,6 @@
     sh:name "Subject"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path cred:subject .
-
-<AcademicProgramShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Academic Program"@en ;
-    sh:targetClass ceds:C200331 .
 
 <OrganizationShape> a sh:NodeShape ;
     sh:closed false ;

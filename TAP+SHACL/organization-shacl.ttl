@@ -45,7 +45,7 @@
 <AcademicSummaryShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Summary"@en ;
-    sh:targetClass pesc:AcademicSummary .
+    sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
     sh:closed false ;

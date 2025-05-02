@@ -154,6 +154,70 @@ pescDelinquencyCodes:Other",picklist,,Optional,
 ,SessionSummaryShape,pesc:classRankDate,Class Rank Date,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,"Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."
 ,SessionSummaryShape,pesc:classRankYear,Class Rank Year,FALSE,FALSE,Literal,xsd:gYear,,,,Not Recommended,"Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."
 ,SessionSummaryShape,pesc:classRankYearMonth,Class Rank Year Month,FALSE,FALSE,Literal,xsd:gYearMonth,,,,Not Recommended,"Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."
+,AcademicSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
+,AcademicSummaryShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
+,AcademicSummaryShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,Required,
+255,AcademicSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
+pescAcademicSummaryTypes:SenderOnly
+pescAcademicSummaryTypes:TransferOnly
+pescAcademicSummaryTypes:AllNotRepeated
+pescAcademicSummaryTypes:SenderNotRepeated
+pescAcademicSummaryTypes:TransferNotRepeated
+pescAcademicSummaryTypes:AcademicRenewal
+pescAcademicSummaryTypes:CarryoverCredit
+pescAcademicSummaryTypes:DegreeApplicable
+pescAcademicSummaryTypes:NonDegreeApplicable
+pescAcademicSummaryTypes:ConvertedFrom
+pescAcademicSummaryTypes:ConvertedTo
+pescAcademicSummaryTypes:UserDefined
+pescAcademicSummaryTypes:Weighted
+pescAcademicSummaryTypes:NonWeighted
+pescAcademicSummaryTypes:Cumulative",picklist,,Recommended,
+257,AcademicSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
+pescAcademicSummaryLevels:DualGraduate
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:Grade13
+pescAcademicSummaryLevels:Ungraded
+pescAcademicSummaryLevels:DualHighSchoolCollege
+pescAcademicSummaryLevels:Graduate
+pescAcademicSummaryLevels:GraduateProfessional
+pescAcademicSummaryLevels:LowerDivision
+pescAcademicSummaryLevels:Professional
+pescAcademicSummaryLevels:Secondary
+pescAcademicSummaryLevels:TechnicalPreparatory
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:UpperDivision
+pescAcademicSummaryLevels:Vocational",picklist,,Recommended,
+266,AcademicSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,Recommended,
+229,AcademicSummaryShape,pesc:academicHonors,Academic Honors,FALSE,FALSE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
+259,AcademicSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,"This is the most appropriate place in the Schema to include the student’s overall rank in class, if it is to be included. The student ranking the highest in the class would have a rank of “1”. Class rank is not typically included on a College Transcript."
+,AcademicSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,Not Recommended,"If there were 753 students in the student’s class and they were ranked by the high school, then this value would be “753”. Class size is not included on a typical college transcript."
+,AcademicSummaryShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Optional,
+253,AcademicSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,,,,,,Not Recommended,Intended for use in a High School Transcript and would not be included on a College Transcript.
+,AcademicSummaryShape,pesc:isSummaryForProgram,Is Summary For Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,Optional,"This would not normally be used at this point in the schema, to give detailed data about the academic program in which an award was earned."
+,AcademicSummaryShape,pesc:delinquencies,Delinquencies,FALSE,TRUE,IRI,,"pescDelinquencyCodes:ExclusionAcademic
+pescDelinquencyCodes:ExclusionDiscipline
+pescDelinquencyCodes:GoodStanding
+pescDelinquencyCodes:ProbationGPA
+pescDelinquencyCodes:ProbationHours
+pescDelinquencyCodes:SuspensionGPA
+pescDelinquencyCodes:SuspensionHours
+pescDelinquencyCodes:ProbationDiscipline
+pescDelinquencyCodes:SuspensionDiscipline
+pescDelinquencyCodes:Unknown
+pescDelinquencyCodes:Other",picklist,,Not Recommended,"It is recommended that probation not be included on the transcript since there is no universally accepted definition of probation, and that other Delinquencies be included at the Session level."
+352,AcademicSummaryShape,pesc:entryDate,Entry Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,It would be unusual to find this date on a College Transcript. The date format is ccyy-mm-dd.
+353,AcademicSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,"This date would typically be the date of graduation for students who did graduate. If the student did not graduate, it would be the last date of known attendance unless the school has a policy on withdrawal from the school. It would be unusual to find this data element on a College Transcript. The date format is ccyy-mm-dd."
+354,AcademicSummaryShape,pesc:exitReasonCode,Exit Reason Code,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Not Recommended,"This data element is useful for the high school transcript, but is not appropriate for the College Transcript."
+355,AcademicSummaryShape,pesc:classRankSessionCount,Class Rank Session count,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,This data element would not typically be included on a College Transcript.
+356,AcademicSummaryShape,pesc:classRankDate,Class Rank Date,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,"Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."
+357,AcademicSummaryShape,pesc:classRankYear,Class Rank Year,FALSE,FALSE,Literal,xsd:gYear,,,,Not Recommended,"Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."
+358,AcademicSummaryShape,pesc:classRankYearMonth,Class Rank Year Month,FALSE,FALSE,Literal,xsd:gYearMonth,,,,Not Recommended,"Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,

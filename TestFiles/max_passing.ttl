@@ -35,6 +35,7 @@
     pesc:destination <https://example.edu/Desintation#id> ;
     pesc:documentID "050330001" ;
     pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
+    pesc:hasAcademicSummary <https://example.edu/academicSummary001> ;
     pesc:hasAwardSummary <https://example.edu/awardSummary001> ;
     pesc:hasProgramSummary <https://example.edu/programSummary001> ;
     pesc:hasSessionSummary <https://example.edu/sessionSummary001> ;
@@ -386,6 +387,26 @@
     pesc:classRankYearMonth  "2024-06"^^xsd:gYearMonth ;
 .
 
+<https://example.edu/academicSummary001> a pesc:Summary ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
+    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
+    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:gpaSummary <https://example.edu/gpa001> ;
+    pesc:academicHonors <https://example.edu/honors001> ;
+    pesc:classRank 3 ;
+    pesc:classSize 9999 ;
+#    pesc:highSchoolCreditSummary
+    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
+    pesc:delinquencies pescDelinquencyCodes:ProbationGPA ;
+    pesc:entryDate "2022-03-23"^^xsd:date ;
+    pesc:exitDate "2024-06-23"^^xsd:date ;
+    pesc:exitReasonCode "Gave up" ;
+    pesc:classRankSessionCount 1000 ;
+    pesc:classRankDate "2024-06-23"^^xsd:date ;
+    pesc:classRankYear  "2024"^^xsd:gYear ;
+    pesc:classRankYearMonth  "2024-06"^^xsd:gYearMonth ;
+.
 
 <https://example.edu/gpa001> a pesc:GPA .
 <https://example.edu/honors001> a pesc:AcademicHonors .
