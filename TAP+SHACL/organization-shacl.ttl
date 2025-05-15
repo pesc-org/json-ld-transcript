@@ -5,6 +5,7 @@
 @prefix elm: <http://data.europa.eu/snb/model/elm/> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
+@prefix pescAccreditationBodyCodes: <https://pesc.org/vocabs/AccreditationBodyCodes#> .
 @prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
 @prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -123,11 +124,11 @@
     sh:name "Organization"@en ;
     sh:property <organizationshapeAdditionalNote>,
         <organizationshapeContact>,
+        <organizationshapeHasOrganizationAccreditation>,
         <organizationshapeHasOrganizationIdentification>,
         <organizationshapeOrganizationName>,
         <organizationshapeSchoolLevel>,
-        <organizationshapeType>,
-        <organizationshape__Accreditation> ;
+        <organizationshapeType> ;
     sh:targetClass ceds:C200239 .
 
 <PersonIdentifierShape> a sh:NodeShape ;
@@ -223,8 +224,9 @@
     sh:closed false ;
     sh:name "Accreditation"@en ;
     sh:property <accreditationshapeAccrediationBodyCode>,
-        <accreditationshapeAccreditingBodyName>,
-        <accreditationshapeAdditionalNote> ;
+        <accreditationshapeAccreditationAgencyName>,
+        <accreditationshapeAdditionalNote>,
+        <accreditationshapeType> ;
     sh:targetClass pesc:Accreditation .
 
 <ContactShape> a sh:NodeShape ;
@@ -242,26 +244,32 @@
     sh:targetObjectsOf ceds:P600502 .
 
 <accreditationshapeAccrediationBodyCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:in ( "MSA NCA-HLC NCA-CASI NEASC-CIHE NEASC-CTCI NWCCU SACS WASC-ACCJC WASC-ACSCU Other" ) ;
+    sh:in ( pescAccreditationBodyCodes:MSA pescAccreditationBodyCodes:NCA-HLC pescAccreditationBodyCodes:NCA-CASI pescAccreditationBodyCodes:NEASC-CIHE pescAccreditationBodyCodes:NEASC-CTCI pescAccreditationBodyCodes:NWCCU pescAccreditationBodyCodes:SACS pescAccreditationBodyCodes:WASC-ACCJC pescAccreditationBodyCodes:WASC-ACSCU pescAccreditationBodyCodes:Other ) ;
     sh:maxCount 1 ;
     sh:name "Accrediation Body Code"@en-US ;
-    sh:nodeKind sh:Literal ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:accreditationBodyCode .
 
-<accreditationshapeAccreditingBodyName> a sh:PropertyShape ;
+<accreditationshapeAccreditationAgencyName> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:maxLength 80 ;
-    sh:name "Accrediting Body Name"@en-US ;
+    sh:name "Accreditation Agency Name"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:accreditingBodyName .
+    sh:path ceds:P001526 .
 
 <accreditationshapeAdditionalNote> a sh:PropertyShape ;
     sh:name "Additional Note"@en-US ;
     sh:node <NoteShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
+
+<accreditationshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200240 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <organizationidentifiershapeHasOrganizationIdentificationSystem> a sh:PropertyShape ;
     sh:in ( ceds:NI000827151968 pescIdentifierTypes:OPEid pescIdentifierTypes:PSISid ) ;
@@ -298,6 +306,13 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceterms:targetContactPoint .
 
+<organizationshapeHasOrganizationAccreditation> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "Has Organization Accreditation"@en-US ;
+    sh:node <AccreditationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path ceds:P600472 .
+
 <organizationshapeHasOrganizationIdentification> a sh:PropertyShape ;
     sh:name "Has Organization Identification"@en-US ;
     sh:node <OrganizationIdentifierShape> ;
@@ -324,13 +339,6 @@
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
-
-<organizationshape__Accreditation> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "__ Accreditation"@en-US ;
-    sh:node <AccreditationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:accreditation .
 
 <NoteShape> a sh:NodeShape ;
     sh:closed false ;

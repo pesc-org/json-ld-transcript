@@ -1,12 +1,19 @@
 Validation Report
 Conforms: False
-Results (3):
+Results (4):
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:organizationshapeContact
 	Focus Node: <https://example.edu/Source#id>
 	Value Node: Literal("Rick")
 	Result Path: ceterms:targetContactPoint
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeHasOrganizationAccreditation
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: Literal("Totally Accreditted")
+	Result Path: ceds:P600472
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
@@ -21,4 +28,4 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/Source#id>
 	Value Node: pescSchoolLevels:fortytwo
 	Result Path: pesc:schoolLevel
-	Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Elementary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Other']
+	Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:HighSchool', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Other', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Secondary']
