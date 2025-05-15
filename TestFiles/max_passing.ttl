@@ -39,7 +39,6 @@
     pesc:hasAwardSummary <https://example.edu/awardSummary001> ;
     pesc:hasProgramSummary <https://example.edu/programSummary001> ;
     pesc:hasSessionSummary <https://example.edu/sessionSummary001> ;
-    pesc:hasPart <https://example.edu/achievement001> ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .

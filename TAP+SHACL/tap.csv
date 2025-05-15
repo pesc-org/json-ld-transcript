@@ -39,7 +39,6 @@ pescDocumentTypeCodes:StudentRequest
 pescDocumentTypeCodes:TermEnroll
 pescDocumentTypeCodes:TermGrade
 pescDocumentTypeCodes:ThirdPartyRequest",picklist,,Required,
-,CollegeTranscriptShape,pesc:hasPart,Has Part,TRUE,TRUE,IRI BNODE,,,,hasAchievementShape,Required,
 21,CollegeTranscriptShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
 2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,Required,
 20,CollegeTranscriptShape,pesc:transmissionType,Transmission Type,TRUE,FALSE,IRI,,"pescTransmissionTypes:Original

@@ -19,7 +19,6 @@
     pesc:destination <https://example.edu/Desintation#id> ;
     pesc:documentID "050330001" ;
     pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
-    pesc:hasPart <https://example.edu/achievement001> ;
     pesc:hasAwardSummary <https://example.edu/awardSummary001> ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:student <https://people.pjjk.net/test> ;

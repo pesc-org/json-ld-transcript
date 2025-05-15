@@ -88,7 +88,6 @@
         <collegetranscriptshapeDocumenttypeCode>,
         <collegetranscriptshapeHasAcademicSummary>,
         <collegetranscriptshapeHasAwardSummary>,
-        <collegetranscriptshapeHasPart>,
         <collegetranscriptshapeHasProgramSummary>,
         <collegetranscriptshapeHasSessionSummary>,
         <collegetranscriptshapeRequestTrackingID>,
@@ -198,6 +197,12 @@
     sh:description "To Be Done"@en ;
     sh:name "To Be Done"@en ;
     sh:targetClass pesc:TBD .
+
+<hasAchievementShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Achievement "@en ;
+    sh:targetObjectsOf pesc:hasAchievement,
+        pesc:hasPart .
 
 <AcademicProgramShape> a sh:NodeShape ;
     sh:closed false ;
@@ -438,13 +443,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasAwardSummary .
 
-<collegetranscriptshapeHasPart> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Has Part"@en-US ;
-    sh:node <hasAchievementShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasPart .
-
 <collegetranscriptshapeHasProgramSummary> a sh:PropertyShape ;
     sh:name "Has Program Summary"@en-US ;
     sh:node <ProgramSummaryShape> ;
@@ -570,12 +568,6 @@
     sh:name "Total Quality Points"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:totalQualityPoints .
-
-<hasAchievementShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Achievement "@en ;
-    sh:targetObjectsOf pesc:hasAchievement,
-        pesc:hasPart .
 
 <licensureshapeInCourse> a sh:PropertyShape ;
     sh:maxCount 1 ;
