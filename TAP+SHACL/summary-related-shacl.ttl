@@ -337,7 +337,7 @@
     sh:path pesc:classRankDate .
 
 <academicsummaryshapeClassRankSessioncount> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
     sh:name "Class Rank Session count"@en-US ;
