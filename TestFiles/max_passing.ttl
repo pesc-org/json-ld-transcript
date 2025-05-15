@@ -6,6 +6,7 @@
 @prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
 @prefix pescAcademicSummaryLevels:	<https://pesc.org/vocabs/AcademicSummaryLevels#> .
 @prefix pescAcademicSummaryTypes:	<https://pesc.org/vocabs/AcademicSummaryTypes#> .
+@prefix pescAccreditationBodyCodes:	<https://pesc.org/vocabs/AccreditationBodyCodes#> .
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
@@ -288,6 +289,11 @@
             pesc:phoneNumber  "5551234567" ;
             pesc:phoneNumberExtension "123" ;
         ]
+    ] ;
+    ceds:P600472 [  # Has Organization Accreditation
+        a ceds:C200240 ; # Organization Accreditation
+        ceds:P001526 "Some name" ;
+        pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC ;
     ]
     .
 
