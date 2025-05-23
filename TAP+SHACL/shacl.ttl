@@ -8,7 +8,6 @@
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAgencyCodes: <https://pesc.org/vocabs/AgencyCodes#> .
 @prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
-@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
@@ -107,6 +106,11 @@
     sh:name "Contact"@en ;
     sh:targetObjectsOf ceterms:targetContactPoint .
 
+<CourseAchievementShape> a sh:NodeShape ;
+    sh:closed false ;
+    sh:name "Course Achievement"@en ;
+    sh:targetClass ceds:C200346 .
+
 <CourseRepeatCodeShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Course Repeat Code"@en ;
@@ -120,17 +124,6 @@
 <GPAShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "GPA"@en ;
-    sh:property <gpashapeCreditHoursAttempted>,
-        <gpashapeCreditHoursDeficient>,
-        <gpashapeCreditHoursEarned>,
-        <gpashapeCreditHoursGPA>,
-        <gpashapeCreditHoursRequired>,
-        <gpashapeCreditUnit>,
-        <gpashapeGPARangeMaximum>,
-        <gpashapeGPARangeMinimum>,
-        <gpashapeGradePointAverage>,
-        <gpashapeIsSummaryOf>,
-        <gpashapeTotalQualityPoints> ;
     sh:targetClass pesc:GPA .
 
 <GradeShape> a sh:NodeShape ;
@@ -221,11 +214,6 @@
     sh:name "Award Summary"@en ;
     sh:property <awardsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAwardSummary .
-
-<CourseAchievementShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Course Achievement"@en ;
-    sh:targetClass ceds:C200346 .
 
 <CourseShape> a sh:NodeShape ;
     sh:closed false ;
@@ -492,82 +480,6 @@
     sh:node <VerifiableCredentialShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:verifiableCredential .
-
-<gpashapeCreditHoursAttempted> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Attempted"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursAttempted .
-
-<gpashapeCreditHoursDeficient> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Deficient"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursDeficient .
-
-<gpashapeCreditHoursEarned> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Earned"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursEarned .
-
-<gpashapeCreditHoursGPA> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours GPA"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursGPA .
-
-<gpashapeCreditHoursRequired> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Required"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursRequired .
-
-<gpashapeCreditUnit> a sh:PropertyShape ;
-    sh:in ( pescCreditUnits:NoCredit pescCreditUnits:Quarter pescCreditUnits:Semester pescCreditUnits:Units pescCreditUnits:ClockHours pescCreditUnits:CarnegieUnits pescCreditUnits:ContinuingEducationUnits pescCreditUnits:Unreported pescCreditUnits:Other ) ;
-    sh:maxCount 1 ;
-    sh:name "Credit Unit"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:creditUnit .
-
-<gpashapeGPARangeMaximum> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "GPA Range Maximum"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:gpaRangeMaximum .
-
-<gpashapeGPARangeMinimum> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "GPA Range Minimum"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:gpaRangeMinimum .
-
-<gpashapeGradePointAverage> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Grade Point Average"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:gradePointAverage .
-
-<gpashapeIsSummaryOf> a sh:PropertyShape ;
-    sh:name "Is Summary Of"@en-US ;
-    sh:node <CourseAchievementShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:isSummaryOf .
-
-<gpashapeTotalQualityPoints> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Total Quality Points"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:totalQualityPoints .
 
 <licensureshapeInCourse> a sh:PropertyShape ;
     sh:maxCount 1 ;

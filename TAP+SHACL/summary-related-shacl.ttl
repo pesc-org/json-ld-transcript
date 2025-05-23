@@ -530,6 +530,76 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<gpashapeCreditHoursAttempted> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Credit Hours Attempted"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:creditHoursAttempted .
+
+<gpashapeCreditHoursDeficient> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Credit Hours Deficient"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:creditHoursDeficient .
+
+<gpashapeCreditHoursEarned> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Credit Hours Earned"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:creditHoursEarned .
+
+<gpashapeCreditHoursGPA> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Credit Hours GPA"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:creditHoursForGPA .
+
+<gpashapeCreditHoursRequired> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Credit Hours Required"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:creditHoursRequired .
+
+<gpashapeCreditUnit> a sh:PropertyShape ;
+    sh:in ( ceds:NI000057116219 ceds:NI000057116669 ceds:NI000057116841 ceds:NI000057117114 ceds:NI000057115440 ceds:NI000057115402 ceds:NI000057115492 ceds:NI000057117127 ceds:NI000057116368 ) ;
+    sh:maxCount 1 ;
+    sh:name "Credit Unit"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:creditUnit .
+
+<gpashapeGPARangeMaximum> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "GPA Range Maximum"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:gpaRangeMaximum .
+
+<gpashapeGPARangeMinimum> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "GPA Range Minimum"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:gpaRangeMinimum .
+
+<gpashapeGradePointAverage> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Grade Point Average"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:gradePointAverage .
+
+<gpashapeTotalQualityPoints> a sh:PropertyShape ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:name "Total Quality Points"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:totalQualityPoints .
+
 <gpashapeType> a sh:PropertyShape ;
     sh:hasValue pesc:GPA ;
     sh:minCount 1 ;
@@ -819,7 +889,17 @@
 <GPAShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "GPA"@en ;
-    sh:property <gpashapeType> ;
+    sh:property <gpashapeCreditHoursAttempted>,
+        <gpashapeCreditHoursDeficient>,
+        <gpashapeCreditHoursEarned>,
+        <gpashapeCreditHoursGPA>,
+        <gpashapeCreditHoursRequired>,
+        <gpashapeCreditUnit>,
+        <gpashapeGPARangeMaximum>,
+        <gpashapeGPARangeMinimum>,
+        <gpashapeGradePointAverage>,
+        <gpashapeTotalQualityPoints>,
+        <gpashapeType> ;
     sh:targetClass pesc:GPA .
 
 <NoteShape> a sh:NodeShape ;

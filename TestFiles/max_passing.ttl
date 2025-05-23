@@ -413,5 +413,17 @@
     pesc:classRankYearMonth  "2024-06"^^xsd:gYearMonth ;
 .
 
-<https://example.edu/gpa001> a pesc:GPA .
+<https://example.edu/gpa001> a pesc:GPA ;
+    pesc:creditHoursAttempted "12"^^xsd:decimal ;
+    pesc:creditHoursEarned "12"^^xsd:decimal ;
+    pesc:creditHoursRequired "12"^^xsd:decimal ;
+    pesc:creditHoursDeficient "0"^^xsd:decimal ;
+    pesc:creditUnit ceds:NI000057116841 ;
+    pesc:gradePointAverage "3.75"^^xsd:decimal ;
+    pesc:totalQualityPoints "45"^^xsd:decimal ;
+    pesc:creditHoursForGPA "12"^^xsd:decimal ;
+    pesc:gpaRangeMinimum "0"^^xsd:decimal ;
+    pesc:gpaRangeMaximum "4"^^xsd:decimal ;
+.
+
 <https://example.edu/honors001> a pesc:AcademicHonors .
