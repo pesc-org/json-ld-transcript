@@ -1,0 +1,151 @@
+Validation Report
+Conforms: False
+Results (11):
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeCreditHoursAttempted
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("12")
+	Result Path: pesc:creditHoursAttempted
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeCreditHoursDeficient
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("0")
+	Result Path: pesc:creditHoursDeficient
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeCreditHoursEarned
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("12", datatype=xsd:integer)
+	Result Path: pesc:creditHoursEarned
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeCreditHoursGPA
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("12")
+	Result Path: pesc:creditHoursForGPA
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeCreditHoursRequired
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("12")
+	Result Path: pesc:creditHoursRequired
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeCreditUnit
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: ceds:semsester
+	Result Path: pesc:creditUnit
+	Message: Value ceds:semsester not in list ['ceds:NI000057117127', 'ceds:NI000057115402', 'ceds:NI000057116219', 'ceds:NI000057116669', 'ceds:NI000057115492', 'ceds:NI000057116368', 'ceds:NI000057115440', 'ceds:NI000057117114', 'ceds:NI000057116841']
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeGPARangeMaximum
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("4")
+	Result Path: pesc:gpaRangeMaximum
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeGPARangeMinimum
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("0")
+	Result Path: pesc:gpaRangeMinimum
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeGradePointAverage
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("3.75")
+	Result Path: pesc:gradePointAverage
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:gpashapeTotalQualityPoints
+	Focus Node: <https://example.edu/gpa001>
+	Value Node: Literal("45")
+	Result Path: pesc:totalQualityPoints
+	Message: Value is not Literal with datatype xsd:decimal
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsummaryshapeGPASummary
+	Focus Node: <https://example.edu/academicSummary001>
+	Value Node: <https://example.edu/gpa001>
+	Result Path: pesc:gpaSummary
+	Message: Value does not conform to Shape ex:GPAShape. See details for more information.
+	Details:
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeCreditHoursAttempted
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("12")
+			Result Path: pesc:creditHoursAttempted
+			Message: Value is not Literal with datatype xsd:decimal
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeCreditHoursDeficient
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("0")
+			Result Path: pesc:creditHoursDeficient
+			Message: Value is not Literal with datatype xsd:decimal
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeCreditHoursEarned
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("12", datatype=xsd:integer)
+			Result Path: pesc:creditHoursEarned
+			Message: Value is not Literal with datatype xsd:decimal
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeCreditHoursGPA
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("12")
+			Result Path: pesc:creditHoursForGPA
+			Message: Value is not Literal with datatype xsd:decimal
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeCreditHoursRequired
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("12")
+			Result Path: pesc:creditHoursRequired
+			Message: Value is not Literal with datatype xsd:decimal
+		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeCreditUnit
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: ceds:semsester
+			Result Path: pesc:creditUnit
+			Message: Value ceds:semsester not in list ['ceds:NI000057117127', 'ceds:NI000057115402', 'ceds:NI000057116219', 'ceds:NI000057116669', 'ceds:NI000057115492', 'ceds:NI000057116368', 'ceds:NI000057115440', 'ceds:NI000057117114', 'ceds:NI000057116841']
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeGPARangeMaximum
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("4")
+			Result Path: pesc:gpaRangeMaximum
+			Message: Value is not Literal with datatype xsd:decimal
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeGPARangeMinimum
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("0")
+			Result Path: pesc:gpaRangeMinimum
+			Message: Value is not Literal with datatype xsd:decimal
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeGradePointAverage
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("3.75")
+			Result Path: pesc:gradePointAverage
+			Message: Value is not Literal with datatype xsd:decimal
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:gpashapeTotalQualityPoints
+			Focus Node: <https://example.edu/gpa001>
+			Value Node: Literal("45")
+			Result Path: pesc:totalQualityPoints
+			Message: Value is not Literal with datatype xsd:decimal

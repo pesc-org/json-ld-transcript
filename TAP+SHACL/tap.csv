@@ -39,7 +39,7 @@ pescDocumentTypeCodes:StudentRequest
 pescDocumentTypeCodes:TermEnroll
 pescDocumentTypeCodes:TermGrade
 pescDocumentTypeCodes:ThirdPartyRequest",picklist,,Required,
-21,CollegeTranscriptShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
+,CollegeTranscriptShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
 2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,Required,
 20,CollegeTranscriptShape,pesc:transmissionType,Transmission Type,TRUE,FALSE,IRI,,"pescTransmissionTypes:Original
 pescTransmissionTypes:Replace
@@ -47,25 +47,6 @@ pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,Required,
-271,GPAShape,pesc:creditUnit,Credit Unit,FALSE,FALSE,IRI,,"pescCreditUnits:NoCredit
-pescCreditUnits:Quarter
-pescCreditUnits:Semester
-pescCreditUnits:Units
-pescCreditUnits:ClockHours
-pescCreditUnits:CarnegieUnits
-pescCreditUnits:ContinuingEducationUnits
-pescCreditUnits:Unreported
-pescCreditUnits:Other",picklist,,,
-,GPAShape,pesc:isSummaryOf,Is Summary Of,FALSE,TRUE,IRI BNODE,,,,CourseAchievementShape,,
-267,GPAShape,pesc:creditHoursAttempted,Credit Hours Attempted,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-268,GPAShape,pesc:creditHoursEarned,Credit Hours Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-269,GPAShape,pesc:creditHoursRequired,Credit Hours Required,FALSE,FALSE,Literal,xsd:decimal,,,,Not Recommended,decimal
-270,GPAShape,pesc:creditHoursDeficient,Credit Hours Deficient,FALSE,FALSE,Literal,xsd:decimal,,,,Not Recommended,decimal
-272,GPAShape,pesc:gradePointAverage,Grade Point Average,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-273,GPAShape,pesc:totalQualityPoints,Total Quality Points,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-274,GPAShape,pesc:creditHoursGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
-276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
 350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
 ,LicensureShape,pesc:inProgram,In Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,,
