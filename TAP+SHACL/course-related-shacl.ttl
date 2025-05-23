@@ -574,7 +574,7 @@
 <courseshapeHasCourseGradePointAverageApplicability> a sh:PropertyShape ;
     sh:in ( ceds:NI000060115254 ceds:NI000060116257 ceds:NI000060117182 ) ;
     sh:maxCount 1 ;
-    sh:name " Has Course Grade Point Average Applicability"@en-US ;
+    sh:name "Has Course Grade Point Average Applicability"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path ceds:P000060 .
 
