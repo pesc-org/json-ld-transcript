@@ -8,6 +8,7 @@
 @prefix pescAcademicSummaryLevels: <https://pesc.org/vocabs/AcademicSummaryLevels#> .
 @prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
+@prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -272,6 +273,21 @@
     sh:name "Academic Session"@en ;
     sh:property <academicsessionshapeType> ;
     sh:targetClass ceds:C200245 .
+
+<academichonorsshapeHonorsLevel> a sh:PropertyShape ;
+    sh:in ( pescHonorsLevels:FirstHighest pescHonorsLevels:SecondHighest pescHonorsLevels:ThirdHighest ) ;
+    sh:maxCount 1 ;
+    sh:name "Honors Level"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:honorsLevel .
+
+<academichonorsshapeHonorsTitle> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 30 ;
+    sh:name "Honors Title"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:honorsTitle .
 
 <academichonorsshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:AcademicHonors ;
@@ -877,7 +893,9 @@
 <AcademicHonorsShape> a sh:NodeShape ;
     sh:closed false ;
     sh:name "Academic Honors"@en ;
-    sh:property <academichonorsshapeType> ;
+    sh:property <academichonorsshapeHonorsLevel>,
+        <academichonorsshapeHonorsTitle>,
+        <academichonorsshapeType> ;
     sh:targetClass pesc:AcademicHonors .
 
 <AcademicProgramShape> a sh:NodeShape ;

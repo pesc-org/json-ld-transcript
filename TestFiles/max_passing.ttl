@@ -426,4 +426,7 @@
     pesc:gpaRangeMaximum "4"^^xsd:decimal ;
 .
 
-<https://example.edu/honors001> a pesc:AcademicHonors .
+<https://example.edu/honors001> a pesc:AcademicHonors ;
+    pesc:honorsTitle "cum laude" ;
+    pesc:honorsLevel pescHonorsLevels:ThirdHighest ;
+.
