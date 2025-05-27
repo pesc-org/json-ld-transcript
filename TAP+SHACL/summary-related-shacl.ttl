@@ -10,23 +10,24 @@
 @prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <AcademicDegreeRequirementShape> a sh:NodeShape ;
+    rdfs:label "Academic Degree Requirement"@en ;
     sh:closed false ;
-    sh:name "Academic Degree Requirement"@en ;
     sh:targetClass pesc:AcademicDegreeRequirement .
 
 <AcademicRecordShape> a sh:NodeShape ;
+    rdfs:label "Academic Record"@en ;
     sh:closed false ;
-    sh:name "Academic Record"@en ;
     sh:targetClass pesc:AcademicRecord .
 
 <AcademicSummaryShape> a sh:NodeShape ;
+    rdfs:label "Academic Summary"@en ;
     sh:closed false ;
-    sh:name "Academic Summary"@en ;
     sh:property <academicsummaryshapeAcademicHonors>,
         <academicsummaryshapeAcademicSummaryLevel>,
         <academicsummaryshapeAcademicSummaryType>,
@@ -50,29 +51,29 @@
     sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AccreditationShape> a sh:NodeShape ;
+    rdfs:label "Accreditation"@en ;
     sh:closed false ;
-    sh:name "Accreditation"@en ;
     sh:targetClass pesc:Accreditation .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
+    rdfs:label "To Be Done"@en ;
     sh:closed false ;
-    sh:name "To Be Done"@en ;
     sh:targetObjectsOf pesc:additionalStudentAchievment .
 
 <AgencyIdentifierShape> a sh:NodeShape ;
+    rdfs:label "Agency Identifier"@en ;
     sh:closed false ;
-    sh:name "Agency Identifier"@en ;
     sh:targetClass pesc:AgencyIdentifier .
 
 <AttributeShape> a sh:NodeShape ;
+    rdfs:label "Attribute"@en ;
     sh:closed false ;
-    sh:name "Attribute"@en ;
     sh:targetClass pesc:CourseAttribute .
 
 <AwardSummaryShape> a sh:NodeShape ;
+    rdfs:label "Award Summary"@en ;
+    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:description "Normally type will be pesc:Summary"@en ;
-    sh:name "Award Summary"@en ;
     sh:property <awardsummaryshapeAcademicHonors>,
         <awardsummaryshapeAcademicSummaryLevel>,
         <awardsummaryshapeAcademicSummaryType>,
@@ -89,99 +90,99 @@
     sh:targetObjectsOf pesc:hasAwardSummary .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
+    rdfs:label "College Transcript"@en ;
     sh:closed false ;
-    sh:name "College Transcript"@en ;
     sh:targetClass pesc:CollegeTranscript .
 
 <ConceptShape> a sh:NodeShape ;
+    rdfs:label "SKOS Concept"@en ;
     sh:closed false ;
-    sh:name "SKOS Concept"@en ;
     sh:targetClass skos:Concept .
 
 <ContactShape> a sh:NodeShape ;
+    rdfs:label "Contact"@en ;
     sh:closed false ;
-    sh:name "Contact"@en ;
     sh:targetObjectsOf ceterms:targetContactPoint .
 
 <CourseAchievementShape> a sh:NodeShape ;
+    rdfs:label "Course Achievement"@en ;
     sh:closed false ;
-    sh:name "Course Achievement"@en ;
     sh:targetClass ceds:C200346 .
 
 <CourseRepeatCodeShape> a sh:NodeShape ;
+    rdfs:label "Course Repeat Code"@en ;
     sh:closed false ;
-    sh:name "Course Repeat Code"@en ;
     sh:targetClass pesc:CourseRepeatCode .
 
 <CourseShape> a sh:NodeShape ;
+    rdfs:label "Post Secondary Course"@en ;
     sh:closed false ;
-    sh:name "Post Secondary Course"@en ;
     sh:targetClass ceds:C200328 .
 
 <CourseSupplementalGradeShape> a sh:NodeShape ;
+    rdfs:label "Course Supplemental Grade"@en ;
     sh:closed false ;
-    sh:name "Course Supplemental Grade"@en ;
     sh:targetClass pesc:CourseSupplementalGrade .
 
 <GradeShape> a sh:NodeShape ;
+    rdfs:label "Grade"@en ;
     sh:closed false ;
-    sh:name "Grade"@en ;
     sh:targetClass pesc:Grade .
 
 <LanguageShape> a sh:NodeShape ;
+    rdfs:label "Person Language"@en ;
     sh:closed false ;
-    sh:name "Person Language"@en ;
     sh:targetClass ceds:C200293 .
 
 <LicensureShape> a sh:NodeShape ;
+    rdfs:label "Licensure"@en ;
     sh:closed false ;
-    sh:name "Licensure"@en ;
     sh:targetClass pesc:Licensure .
 
 <OrganizationIdentifierShape> a sh:NodeShape ;
+    rdfs:label "Organization Identifier"@en ;
+    rdfs:comment "Normally type will be ceds:C200252"@en ;
     sh:closed false ;
-    sh:description "Normally type will be ceds:C200252"@en ;
-    sh:name "Organization Identifier"@en ;
     sh:targetObjectsOf ceds:P600502 .
 
 <PersonIdentifierShape> a sh:NodeShape ;
+    rdfs:label "Person Identifier"@en ;
+    rdfs:comment "Normally type will be ceds: C200291"@en ;
     sh:closed false ;
-    sh:description "Normally type will be ceds: C200291"@en ;
-    sh:name "Person Identifier"@en ;
     sh:targetObjectsOf ceds:P600049 .
 
 <PersonNameShape> a sh:NodeShape ;
+    rdfs:label "Name"@en ;
     sh:closed false ;
-    sh:name "Name"@en ;
     sh:targetObjectsOf ceds:P600101,
         ceds:P600336 .
 
 <PhoneShape> a sh:NodeShape ;
+    rdfs:label "Phone"@en ;
     sh:closed false ;
-    sh:name "Phone"@en ;
     sh:targetObjectsOf pesc:faxPhone,
         pesc:phone .
 
 <PostalAddressShape> a sh:NodeShape ;
+    rdfs:label "Postal Address"@en ;
     sh:closed false ;
-    sh:name "Postal Address"@en ;
     sh:targetObjectsOf ceterms:address .
 
 <PostsecondarySectionLocationShape> a sh:NodeShape ;
+    rdfs:label "Postsecondary Section Location Shape"@en ;
     sh:closed false ;
-    sh:name "Postsecondary Section Location Shape"@en ;
     sh:targetObjectsOf ceds:P600108 .
 
 <PostsecondarySectionShape> a sh:NodeShape ;
+    rdfs:label "Postsecondary Location Shape"@en ;
+    rdfs:comment "Normally type will be ceds:C200332"@en ;
     sh:closed false ;
-    sh:description "Normally type will be ceds:C200332"@en ;
-    sh:name "Postsecondary Location Shape"@en ;
     sh:targetObjectsOf ceds:P600267 .
 
 <ProgramSummaryShape> a sh:NodeShape ;
+    rdfs:label "Program Summary"@en ;
+    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:description "Normally type will be pesc:Summary"@en ;
-    sh:name "Program Summary"@en ;
     sh:property <programsummaryshapeAcademicHonors>,
         <programsummaryshapeAcademicSummaryLevel>,
         <programsummaryshapeAcademicSummaryType>,
@@ -200,19 +201,19 @@
     sh:targetObjectsOf pesc:hasProgramSummary .
 
 <RAPShape> a sh:NodeShape ;
+    rdfs:label "Requirement, Attribute or Proficiency"@en ;
     sh:closed false ;
-    sh:name "Requirement, Attribute or Proficiency"@en ;
     sh:targetClass ceds:C200065 .
 
 <ResidencyShape> a sh:NodeShape ;
+    rdfs:label "Residency"@en ;
     sh:closed false ;
-    sh:name "Residency"@en ;
     sh:targetObjectsOf pesc:hasResidency .
 
 <SessionSummaryShape> a sh:NodeShape ;
+    rdfs:label "Session Summary"@en ;
+    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:description "Normally type will be pesc:Summary"@en ;
-    sh:name "Session Summary"@en ;
     sh:property <sessionsummaryshapeAcademicHonors>,
         <sessionsummaryshapeAcademicSummaryLevel>,
         <sessionsummaryshapeAcademicSummaryType>,
@@ -237,40 +238,40 @@
     sh:targetObjectsOf pesc:hasSessionSummary .
 
 <TBDShape> a sh:NodeShape ;
+    rdfs:label "To Be Done"@en ;
+    rdfs:comment "To Be Done"@en ;
     sh:closed false ;
-    sh:description "To Be Done"@en ;
-    sh:name "To Be Done"@en ;
     sh:targetClass pesc:TBD .
 
 <TestScoreShape> a sh:NodeShape ;
+    rdfs:label "Test Scores"@en ;
     sh:closed false ;
-    sh:name "Test Scores"@en ;
     sh:targetClass pesc:TestScores .
 
 <TestShape> a sh:NodeShape ;
+    rdfs:label "Test"@en ;
     sh:closed false ;
-    sh:name "Test"@en ;
     sh:targetClass ceds:C200010 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
+    rdfs:label "W3C Verifiable Credential"@en ;
     sh:closed false ;
-    sh:name "W3C Verifiable Credential"@en ;
     sh:targetObjectsOf pesc:verifiableCredential .
 
 <hasAchievementShape> a sh:NodeShape ;
+    rdfs:label "Achievement "@en ;
     sh:closed false ;
-    sh:name "Achievement "@en ;
     sh:targetObjectsOf pesc:hasAchievement,
         pesc:hasPart .
 
 <AcademicAwardShape> a sh:NodeShape ;
+    rdfs:label "Postsecondary Student Academic Award"@en ;
     sh:closed false ;
-    sh:name "Postsecondary Student Academic Award"@en ;
     sh:targetClass ceds:C200335 .
 
 <AcademicSessionShape> a sh:NodeShape ;
+    rdfs:label "Academic Session"@en ;
     sh:closed false ;
-    sh:name "Academic Session"@en ;
     sh:property <academicsessionshapeType> ;
     sh:targetClass ceds:C200245 .
 
@@ -338,6 +339,7 @@
     sh:path elm:additionalNote .
 
 <academicsummaryshapeClassRank> a sh:PropertyShape ;
+    rdfs:comment "This is the most appropriate place in the Schema to include the student’s overall rank in class, if it is to be included. The student ranking the highest in the class would have a rank of “1”. Class rank is not typically included on a College Transcript."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -346,6 +348,7 @@
     sh:path pesc:classRank .
 
 <academicsummaryshapeClassRankDate> a sh:PropertyShape ;
+    rdfs:comment "Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."@eng ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Class Rank Date"@en-US ;
@@ -353,6 +356,7 @@
     sh:path pesc:classRankDate .
 
 <academicsummaryshapeClassRankSessioncount> a sh:PropertyShape ;
+    rdfs:comment "This data element would not typically be included on a College Transcript."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -361,6 +365,7 @@
     sh:path pesc:classRankSessionCount .
 
 <academicsummaryshapeClassRankYear> a sh:PropertyShape ;
+    rdfs:comment "Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."@eng ;
     sh:datatype xsd:gYear ;
     sh:maxCount 1 ;
     sh:name "Class Rank Year"@en-US ;
@@ -368,6 +373,7 @@
     sh:path pesc:classRankYear .
 
 <academicsummaryshapeClassRankYearMonth> a sh:PropertyShape ;
+    rdfs:comment "Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."@eng ;
     sh:datatype xsd:gYearMonth ;
     sh:maxCount 1 ;
     sh:name "Class Rank Year Month"@en-US ;
@@ -375,6 +381,7 @@
     sh:path pesc:classRankYearMonth .
 
 <academicsummaryshapeClassSize> a sh:PropertyShape ;
+    rdfs:comment "If there were 753 students in the student’s class and they were ranked by the high school, then this value would be “753”. Class size is not included on a typical college transcript."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -383,12 +390,14 @@
     sh:path pesc:classSize .
 
 <academicsummaryshapeDelinquencies> a sh:PropertyShape ;
+    rdfs:comment "It is recommended that probation not be included on the transcript since there is no universally accepted definition of probation, and that other Delinquencies be included at the Session level."@eng ;
     sh:in ( pescDelinquencyCodes:ExclusionAcademic pescDelinquencyCodes:ExclusionDiscipline pescDelinquencyCodes:GoodStanding pescDelinquencyCodes:ProbationGPA pescDelinquencyCodes:ProbationHours pescDelinquencyCodes:SuspensionGPA pescDelinquencyCodes:SuspensionHours pescDelinquencyCodes:ProbationDiscipline pescDelinquencyCodes:SuspensionDiscipline pescDelinquencyCodes:Unknown pescDelinquencyCodes:Other ) ;
     sh:name "Delinquencies"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:delinquencies .
 
 <academicsummaryshapeEntryDate> a sh:PropertyShape ;
+    rdfs:comment "It would be unusual to find this date on a College Transcript. The date format is ccyy-mm-dd."@eng ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Entry Date"@en-US ;
@@ -396,6 +405,7 @@
     sh:path pesc:entryDate .
 
 <academicsummaryshapeExitDate> a sh:PropertyShape ;
+    rdfs:comment "This date would typically be the date of graduation for students who did graduate. If the student did not graduate, it would be the last date of known attendance unless the school has a policy on withdrawal from the school. It would be unusual to find this data element on a College Transcript. The date format is ccyy-mm-dd."@eng ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Exit Date"@en-US ;
@@ -403,6 +413,7 @@
     sh:path pesc:exitDate .
 
 <academicsummaryshapeExitReasonCode> a sh:PropertyShape ;
+    rdfs:comment "This data element is useful for the high school transcript, but is not appropriate for the College Transcript."@eng ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:maxLength 60 ;
@@ -418,11 +429,13 @@
     sh:path pesc:gpaSummary .
 
 <academicsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
+    rdfs:comment "Intended for use in a High School Transcript and would not be included on a College Transcript."@eng ;
     sh:maxCount 1 ;
     sh:name "High School Credit Summary"@en-US ;
     sh:path pesc:highSchoolCreditSummary .
 
 <academicsummaryshapeIsSummaryForProgram> a sh:PropertyShape ;
+    rdfs:comment "This would not normally be used at this point in the schema, to give detailed data about the academic program in which an award was earned."@eng ;
     sh:maxCount 1 ;
     sh:name "Is Summary For Program"@en-US ;
     sh:node <AcademicProgramShape> ;
@@ -479,6 +492,7 @@
     sh:path elm:additionalNote .
 
 <awardsummaryshapeClassRank> a sh:PropertyShape ;
+    rdfs:comment "It would be highly unusual to see class ranking and class size on a College Transcript."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -487,6 +501,7 @@
     sh:path pesc:classRank .
 
 <awardsummaryshapeClassSize> a sh:PropertyShape ;
+    rdfs:comment "It would be highly unusual to see class ranking and class size on a College Transcript."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -517,6 +532,7 @@
     sh:path pesc:isSummaryForAward .
 
 <awardsummaryshapeIsSummaryForProgram> a sh:PropertyShape ;
+    rdfs:comment "This would not normally be used at this point in the schema, to give detailed data about the academic program in which an award was earned."@eng ;
     sh:maxCount 1 ;
     sh:name "Is Summary For Program"@en-US ;
     sh:node <AcademicProgramShape> ;
@@ -547,6 +563,7 @@
     sh:path rdf:type .
 
 <gpashapeCreditHoursAttempted> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "Credit Hours Attempted"@en-US ;
@@ -554,6 +571,7 @@
     sh:path pesc:creditHoursAttempted .
 
 <gpashapeCreditHoursDeficient> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "Credit Hours Deficient"@en-US ;
@@ -561,6 +579,7 @@
     sh:path pesc:creditHoursDeficient .
 
 <gpashapeCreditHoursEarned> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "Credit Hours Earned"@en-US ;
@@ -568,6 +587,7 @@
     sh:path pesc:creditHoursEarned .
 
 <gpashapeCreditHoursGPA> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "Credit Hours GPA"@en-US ;
@@ -575,6 +595,7 @@
     sh:path pesc:creditHoursForGPA .
 
 <gpashapeCreditHoursRequired> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "Credit Hours Required"@en-US ;
@@ -589,6 +610,7 @@
     sh:path pesc:creditUnit .
 
 <gpashapeGPARangeMaximum> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "GPA Range Maximum"@en-US ;
@@ -596,6 +618,7 @@
     sh:path pesc:gpaRangeMaximum .
 
 <gpashapeGPARangeMinimum> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "GPA Range Minimum"@en-US ;
@@ -603,6 +626,7 @@
     sh:path pesc:gpaRangeMinimum .
 
 <gpashapeGradePointAverage> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "Grade Point Average"@en-US ;
@@ -610,6 +634,7 @@
     sh:path pesc:gradePointAverage .
 
 <gpashapeTotalQualityPoints> a sh:PropertyShape ;
+    rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
     sh:maxCount 1 ;
     sh:name "Total Quality Points"@en-US ;
@@ -650,6 +675,7 @@
     sh:path pesc:academicSummaryLevel .
 
 <programsummaryshapeAcademicSummaryType> a sh:PropertyShape ;
+    rdfs:comment "Since this part of the schema deals only with the academic awards earned, the only recommended value would probably be “DegreeApplicable”."@eng ;
     sh:in ( pescAcademicSummaryTypes:All pescAcademicSummaryTypes:SenderOnly pescAcademicSummaryTypes:TransferOnly pescAcademicSummaryTypes:AllNotRepeated pescAcademicSummaryTypes:SenderNotRepeated pescAcademicSummaryTypes:TransferNotRepeated pescAcademicSummaryTypes:AcademicRenewal pescAcademicSummaryTypes:CarryoverCredit pescAcademicSummaryTypes:DegreeApplicable pescAcademicSummaryTypes:NonDegreeApplicable pescAcademicSummaryTypes:ConvertedFrom pescAcademicSummaryTypes:ConvertedTo pescAcademicSummaryTypes:UserDefined pescAcademicSummaryTypes:Weighted pescAcademicSummaryTypes:NonWeighted pescAcademicSummaryTypes:Cumulative ) ;
     sh:maxCount 1 ;
     sh:name "Academic Summary Type"@en-US ;
@@ -663,6 +689,7 @@
     sh:path elm:additionalNote .
 
 <programsummaryshapeClassRank> a sh:PropertyShape ;
+    rdfs:comment "The student ranking the highest in the class would have a rank of “1”. However, this is rarely found on a postsecondary transcript."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -671,6 +698,7 @@
     sh:path pesc:classRank .
 
 <programsummaryshapeClassSize> a sh:PropertyShape ;
+    rdfs:comment "This is rarely found on a postsecondary transcript."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -685,6 +713,7 @@
     sh:path pesc:delinquencies .
 
 <programsummaryshapeExitDate> a sh:PropertyShape ;
+    rdfs:comment "The format for the date is ccyy-mm-dd. This would not be the appropriate place in the schema to transmit these data."@eng ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Exit Date"@en-US ;
@@ -692,6 +721,7 @@
     sh:path pesc:exitDate .
 
 <programsummaryshapeGPASummary> a sh:PropertyShape ;
+    rdfs:comment "Would not typically be included on a College Transcript."@eng ;
     sh:maxCount 1 ;
     sh:name "GPA Summary"@en-US ;
     sh:node <GPAShape> ;
@@ -699,6 +729,7 @@
     sh:path pesc:gpaSummary .
 
 <programsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
+    rdfs:comment "This complex data element would not be included on a postsecondary transcript."@eng ;
     sh:maxCount 1 ;
     sh:name "High School Credit Summary"@en-US ;
     sh:path pesc:highSchoolCreditSummary .
@@ -761,6 +792,8 @@
     sh:path elm:additionalNote .
 
 <sessionsummaryshapeClassRank> a sh:PropertyShape ;
+    rdfs:comment """The Workgroup that developed this PESC XML College Transcript Schema does not recommend inclusion of Class
+Rank in the College Transcript. However, if it is included, it is recommended that this is not the most appropriate place for inclusion of the student’s overall rank in class."""@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -769,6 +802,7 @@
     sh:path pesc:classRank .
 
 <sessionsummaryshapeClassRankDate> a sh:PropertyShape ;
+    rdfs:comment "Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."@eng ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Class Rank Date"@en-US ;
@@ -776,6 +810,7 @@
     sh:path pesc:classRankDate .
 
 <sessionsummaryshapeClassRankSessioncount> a sh:PropertyShape ;
+    rdfs:comment "Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -784,6 +819,7 @@
     sh:path pesc:classRankSessionCount .
 
 <sessionsummaryshapeClassRankYear> a sh:PropertyShape ;
+    rdfs:comment "Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."@eng ;
     sh:datatype xsd:gYear ;
     sh:maxCount 1 ;
     sh:name "Class Rank Year"@en-US ;
@@ -791,6 +827,7 @@
     sh:path pesc:classRankYear .
 
 <sessionsummaryshapeClassRankYearMonth> a sh:PropertyShape ;
+    rdfs:comment "Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."@eng ;
     sh:datatype xsd:gYearMonth ;
     sh:maxCount 1 ;
     sh:name "Class Rank Year Month"@en-US ;
@@ -798,6 +835,7 @@
     sh:path pesc:classRankYearMonth .
 
 <sessionsummaryshapeClassSize> a sh:PropertyShape ;
+    rdfs:comment "If there were 753 students in the student’s class and if they were ranked by the school, then this value would be “753”."@eng ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
     sh:maxLength 4 ;
@@ -812,6 +850,7 @@
     sh:path pesc:delinquencies .
 
 <sessionsummaryshapeEntryDate> a sh:PropertyShape ;
+    rdfs:comment "This data element would rarely be seen on a College Transcript."@eng ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Entry Date"@en-US ;
@@ -819,6 +858,7 @@
     sh:path pesc:entryDate .
 
 <sessionsummaryshapeExitDate> a sh:PropertyShape ;
+    rdfs:comment "This date would typically be the date of graduation for students who did graduate this session. If the student did not graduate, it would be the last date of known enrollment. The date format is ccyy-mm-dd. It would not typically be included on a postsecondary transcript. In rare cases, it might be included for the final session the student attended at that school."@eng ;
     sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:name "Exit Date"@en-US ;
@@ -826,6 +866,7 @@
     sh:path pesc:exitDate .
 
 <sessionsummaryshapeExitReasonCode> a sh:PropertyShape ;
+    rdfs:comment "This code would typically be used for a high school transcript, but would never be used for a College Transcript."@eng ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:maxLength 60 ;
@@ -834,6 +875,7 @@
     sh:path pesc:exitReasonCode .
 
 <sessionsummaryshapeGPASummary> a sh:PropertyShape ;
+    rdfs:comment "This would typically be where items like Dean’s List at the end of a session are listed."@eng ;
     sh:maxCount 1 ;
     sh:name "GPA Summary"@en-US ;
     sh:node <GPAShape> ;
@@ -841,11 +883,13 @@
     sh:path pesc:gpaSummary .
 
 <sessionsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
+    rdfs:comment "This will not be included in a College Transcript."@eng ;
     sh:maxCount 1 ;
     sh:name "High School Credit Summary"@en-US ;
     sh:path pesc:highSchoolCreditSummary .
 
 <sessionsummaryshapeIsSummaryForProgram> a sh:PropertyShape ;
+    rdfs:comment "It would be quite unusual to see this included on a college transcript at this point in the schema."@eng ;
     sh:maxCount 1 ;
     sh:name "Is Summary For Program"@en-US ;
     sh:node <AcademicProgramShape> ;
@@ -891,22 +935,22 @@
     sh:path rdf:type .
 
 <AcademicHonorsShape> a sh:NodeShape ;
+    rdfs:label "Academic Honors"@en ;
     sh:closed false ;
-    sh:name "Academic Honors"@en ;
     sh:property <academichonorsshapeHonorsLevel>,
         <academichonorsshapeHonorsTitle>,
         <academichonorsshapeType> ;
     sh:targetClass pesc:AcademicHonors .
 
 <AcademicProgramShape> a sh:NodeShape ;
+    rdfs:label "Academic Program"@en ;
     sh:closed false ;
-    sh:name "Academic Program"@en ;
     sh:property <academicprogramshapeType> ;
     sh:targetClass ceds:C200331 .
 
 <GPAShape> a sh:NodeShape ;
+    rdfs:label "GPA"@en ;
     sh:closed false ;
-    sh:name "GPA"@en ;
     sh:property <gpashapeCreditHoursAttempted>,
         <gpashapeCreditHoursDeficient>,
         <gpashapeCreditHoursEarned>,
@@ -921,20 +965,20 @@
     sh:targetClass pesc:GPA .
 
 <NoteShape> a sh:NodeShape ;
+    rdfs:label "Note"@en ;
     sh:closed false ;
-    sh:name "Note"@en ;
     sh:property <noteshapeType> ;
     sh:targetObjectsOf elm:additionalNote .
 
 <OrganizationShape> a sh:NodeShape ;
+    rdfs:label "Organization"@en ;
     sh:closed false ;
-    sh:name "Organization"@en ;
     sh:property <organizationshapeType> ;
     sh:targetClass ceds:C200239 .
 
 <StudentShape> a sh:NodeShape ;
+    rdfs:label "Student"@en ;
     sh:closed false ;
-    sh:name "Student"@en ;
     sh:property <studentshapeType> ;
     sh:targetObjectsOf pesc:student .
 
