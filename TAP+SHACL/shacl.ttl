@@ -8,7 +8,6 @@
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAgencyCodes: <https://pesc.org/vocabs/AgencyCodes#> .
 @prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
-@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
@@ -16,43 +15,44 @@
 @prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <AcademicAwardShape> a sh:NodeShape ;
+    rdfs:label "Postsecondary Student Academic Award"@en ;
     sh:closed false ;
-    sh:name "Postsecondary Student Academic Award"@en ;
     sh:targetClass ceds:C200335 .
 
 <AcademicDegreeRequirementShape> a sh:NodeShape ;
+    rdfs:label "Academic Degree Requirement"@en ;
     sh:closed false ;
-    sh:name "Academic Degree Requirement"@en ;
     sh:targetClass pesc:AcademicDegreeRequirement .
 
 <AcademicHonorsShape> a sh:NodeShape ;
+    rdfs:label "Academic Honors"@en ;
     sh:closed false ;
-    sh:name "Academic Honors"@en ;
     sh:targetClass pesc:AcademicHonors .
 
 <AcademicRecordShape> a sh:NodeShape ;
+    rdfs:label "Academic Record"@en ;
     sh:closed false ;
-    sh:name "Academic Record"@en ;
     sh:targetClass pesc:AcademicRecord .
 
 <AcademicSessionShape> a sh:NodeShape ;
+    rdfs:label "Academic Session"@en ;
     sh:closed false ;
-    sh:name "Academic Session"@en ;
     sh:targetClass ceds:C200245 .
 
 <AccreditationShape> a sh:NodeShape ;
+    rdfs:label "Accreditation"@en ;
     sh:closed false ;
-    sh:name "Accreditation"@en ;
     sh:targetClass pesc:Accreditation .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
+    rdfs:label "To Be Done"@en ;
     sh:closed false ;
-    sh:name "To Be Done"@en ;
     sh:property <additionalstudentachievmentshapeAttribute>,
         <additionalstudentachievmentshapeConditionsMetCode>,
         <additionalstudentachievmentshapeConditionsMetDate>,
@@ -62,8 +62,8 @@
     sh:targetObjectsOf pesc:additionalStudentAchievment .
 
 <AgencyIdentifierShape> a sh:NodeShape ;
+    rdfs:label "Agency Identifier"@en ;
     sh:closed false ;
-    sh:name "Agency Identifier"@en ;
     sh:property <agencyidentifiershapeAgencyCode>,
         <agencyidentifiershapeAgencyName>,
         <agencyidentifiershapeCountryCode>,
@@ -71,13 +71,13 @@
     sh:targetClass pesc:AgencyIdentifier .
 
 <AttributeShape> a sh:NodeShape ;
+    rdfs:label "Attribute"@en ;
     sh:closed false ;
-    sh:name "Attribute"@en ;
     sh:targetClass pesc:CourseAttribute .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
+    rdfs:label "College Transcript"@en ;
     sh:closed false ;
-    sh:name "College Transcript"@en ;
     sh:property <collegetranscriptshapeAdditionalNote>,
         <collegetranscriptshapeCreatedDateTime>,
         <collegetranscriptshapeDestination>,
@@ -98,49 +98,43 @@
     sh:targetClass pesc:CollegeTranscript .
 
 <ConceptShape> a sh:NodeShape ;
+    rdfs:label "SKOS Concept"@en ;
     sh:closed false ;
-    sh:name "SKOS Concept"@en ;
     sh:targetClass skos:Concept .
 
 <ContactShape> a sh:NodeShape ;
+    rdfs:label "Contact"@en ;
     sh:closed false ;
-    sh:name "Contact"@en ;
     sh:targetObjectsOf ceterms:targetContactPoint .
 
-<CourseRepeatCodeShape> a sh:NodeShape ;
+<CourseAchievementShape> a sh:NodeShape ;
+    rdfs:label "Course Achievement"@en ;
     sh:closed false ;
-    sh:name "Course Repeat Code"@en ;
+    sh:targetClass ceds:C200346 .
+
+<CourseRepeatCodeShape> a sh:NodeShape ;
+    rdfs:label "Course Repeat Code"@en ;
+    sh:closed false ;
     sh:targetClass pesc:CourseRepeatCode .
 
 <CourseSupplementalGradeShape> a sh:NodeShape ;
+    rdfs:label "Course Supplemental Grade"@en ;
     sh:closed false ;
-    sh:name "Course Supplemental Grade"@en ;
     sh:targetClass pesc:CourseSupplementalGrade .
 
 <GPAShape> a sh:NodeShape ;
+    rdfs:label "GPA"@en ;
     sh:closed false ;
-    sh:name "GPA"@en ;
-    sh:property <gpashapeCreditHoursAttempted>,
-        <gpashapeCreditHoursDeficient>,
-        <gpashapeCreditHoursEarned>,
-        <gpashapeCreditHoursGPA>,
-        <gpashapeCreditHoursRequired>,
-        <gpashapeCreditUnit>,
-        <gpashapeGPARangeMaximum>,
-        <gpashapeGPARangeMinimum>,
-        <gpashapeGradePointAverage>,
-        <gpashapeIsSummaryOf>,
-        <gpashapeTotalQualityPoints> ;
     sh:targetClass pesc:GPA .
 
 <GradeShape> a sh:NodeShape ;
+    rdfs:label "Grade"@en ;
     sh:closed false ;
-    sh:name "Grade"@en ;
     sh:targetClass pesc:Grade .
 
 <LicensureShape> a sh:NodeShape ;
+    rdfs:label "Licensure"@en ;
     sh:closed false ;
-    sh:name "Licensure"@en ;
     sh:property <licensureshapeInCourse>,
         <licensureshapeInProgram>,
         <licensureshapeLicensureName>,
@@ -148,125 +142,120 @@
     sh:targetClass pesc:Licensure .
 
 <OrganizationIdentifierShape> a sh:NodeShape ;
+    rdfs:label "Organization Identifier"@en ;
+    rdfs:comment "Normally type will be ceds:C200252"@en ;
     sh:closed false ;
-    sh:description "Normally type will be ceds:C200252"@en ;
-    sh:name "Organization Identifier"@en ;
     sh:targetObjectsOf ceds:P600502 .
 
 <PersonIdentifierShape> a sh:NodeShape ;
+    rdfs:label "Person Identifier"@en ;
+    rdfs:comment "Normally type will be ceds: C200291"@en ;
     sh:closed false ;
-    sh:description "Normally type will be ceds: C200291"@en ;
-    sh:name "Person Identifier"@en ;
     sh:targetObjectsOf ceds:P600049 .
 
 <PersonNameShape> a sh:NodeShape ;
+    rdfs:label "Name"@en ;
     sh:closed false ;
-    sh:name "Name"@en ;
     sh:targetObjectsOf ceds:P600101,
         ceds:P600336 .
 
 <PhoneShape> a sh:NodeShape ;
+    rdfs:label "Phone"@en ;
     sh:closed false ;
-    sh:name "Phone"@en ;
     sh:targetObjectsOf pesc:faxPhone,
         pesc:phone .
 
 <PostalAddressShape> a sh:NodeShape ;
+    rdfs:label "Postal Address"@en ;
     sh:closed false ;
-    sh:name "Postal Address"@en ;
     sh:targetObjectsOf ceterms:address .
 
 <PostsecondarySectionLocationShape> a sh:NodeShape ;
+    rdfs:label "Postsecondary Section Location Shape"@en ;
     sh:closed false ;
-    sh:name "Postsecondary Section Location Shape"@en ;
     sh:targetObjectsOf ceds:P600108 .
 
 <PostsecondarySectionShape> a sh:NodeShape ;
+    rdfs:label "Postsecondary Location Shape"@en ;
+    rdfs:comment "Normally type will be ceds:C200332"@en ;
     sh:closed false ;
-    sh:description "Normally type will be ceds:C200332"@en ;
-    sh:name "Postsecondary Location Shape"@en ;
     sh:targetObjectsOf ceds:P600267 .
 
 <ResidencyShape> a sh:NodeShape ;
+    rdfs:label "Residency"@en ;
     sh:closed false ;
-    sh:name "Residency"@en ;
     sh:targetObjectsOf pesc:hasResidency .
 
 <TBDShape> a sh:NodeShape ;
+    rdfs:label "To Be Done"@en ;
+    rdfs:comment "To Be Done"@en ;
     sh:closed false ;
-    sh:description "To Be Done"@en ;
-    sh:name "To Be Done"@en ;
     sh:targetClass pesc:TBD .
 
 <hasAchievementShape> a sh:NodeShape ;
+    rdfs:label "Achievement "@en ;
     sh:closed false ;
-    sh:name "Achievement "@en ;
     sh:targetObjectsOf pesc:hasAchievement,
         pesc:hasPart .
 
 <AcademicProgramShape> a sh:NodeShape ;
+    rdfs:label "Academic Program"@en ;
     sh:closed false ;
-    sh:name "Academic Program"@en ;
     sh:targetClass ceds:C200331 .
 
 <AcademicSummaryShape> a sh:NodeShape ;
+    rdfs:label "Academic Summary"@en ;
     sh:closed false ;
-    sh:name "Academic Summary"@en ;
     sh:property <academicsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AwardSummaryShape> a sh:NodeShape ;
+    rdfs:label "Award Summary"@en ;
+    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:description "Normally type will be pesc:Summary"@en ;
-    sh:name "Award Summary"@en ;
     sh:property <awardsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAwardSummary .
 
-<CourseAchievementShape> a sh:NodeShape ;
-    sh:closed false ;
-    sh:name "Course Achievement"@en ;
-    sh:targetClass ceds:C200346 .
-
 <CourseShape> a sh:NodeShape ;
+    rdfs:label "Post Secondary Course"@en ;
     sh:closed false ;
-    sh:name "Post Secondary Course"@en ;
     sh:targetClass ceds:C200328 .
 
 <LanguageShape> a sh:NodeShape ;
+    rdfs:label "Person Language"@en ;
     sh:closed false ;
-    sh:name "Person Language"@en ;
     sh:targetClass ceds:C200293 .
 
 <NoteShape> a sh:NodeShape ;
+    rdfs:label "Note"@en ;
     sh:closed false ;
-    sh:name "Note"@en ;
     sh:property <noteshapeNoteliteral>,
         <noteshapeType> ;
     sh:targetObjectsOf elm:additionalNote .
 
 <ProgramSummaryShape> a sh:NodeShape ;
+    rdfs:label "Program Summary"@en ;
+    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:description "Normally type will be pesc:Summary"@en ;
-    sh:name "Program Summary"@en ;
     sh:property <programsummaryshapeType> ;
     sh:targetClass pesc:ProgramSummary ;
     sh:targetObjectsOf pesc:hasProgramSummary .
 
 <SessionSummaryShape> a sh:NodeShape ;
+    rdfs:label "Session Summary"@en ;
+    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:description "Normally type will be pesc:Summary"@en ;
-    sh:name "Session Summary"@en ;
     sh:property <sessionsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasSessionSummary .
 
 <StudentShape> a sh:NodeShape ;
+    rdfs:label "Student"@en ;
     sh:closed false ;
-    sh:name "Student"@en ;
     sh:targetObjectsOf pesc:student .
 
 <TestScoreShape> a sh:NodeShape ;
+    rdfs:label "Test Scores"@en ;
     sh:closed false ;
-    sh:name "Test Scores"@en ;
     sh:property <testscoreshapeInTest>,
         <testscoreshapeScoreInvalidatedIndicator>,
         <testscoreshapeScoreRevisedIndicator>,
@@ -280,13 +269,13 @@
     sh:targetClass pesc:TestScores .
 
 <TestShape> a sh:NodeShape ;
+    rdfs:label "Test"@en ;
     sh:closed false ;
-    sh:name "Test"@en ;
     sh:targetClass ceds:C200010 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
+    rdfs:label "W3C Verifiable Credential"@en ;
     sh:closed false ;
-    sh:name "W3C Verifiable Credential"@en ;
     sh:property <verifiablecredentialshapeIssuer>,
         <verifiablecredentialshapeSubject> ;
     sh:targetObjectsOf pesc:verifiableCredential .
@@ -350,6 +339,7 @@
     sh:path pesc:agencyName .
 
 <agencyidentifiershapeCountryCode> a sh:PropertyShape ;
+    rdfs:comment "pesc:core:InternationalAddressDetailsGroup"@eng ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:name "Country Code"@en-US ;
@@ -357,6 +347,8 @@
     sh:path pesc:countryCode .
 
 <agencyidentifiershapeStateProvinceCode> a sh:PropertyShape ;
+    rdfs:comment """pesc:core:DomesticAddressDetailsGroup
+pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:name "State Province Code"@en-US ;
@@ -493,82 +485,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:verifiableCredential .
 
-<gpashapeCreditHoursAttempted> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Attempted"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursAttempted .
-
-<gpashapeCreditHoursDeficient> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Deficient"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursDeficient .
-
-<gpashapeCreditHoursEarned> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Earned"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursEarned .
-
-<gpashapeCreditHoursGPA> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours GPA"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursGPA .
-
-<gpashapeCreditHoursRequired> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Required"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursRequired .
-
-<gpashapeCreditUnit> a sh:PropertyShape ;
-    sh:in ( pescCreditUnits:NoCredit pescCreditUnits:Quarter pescCreditUnits:Semester pescCreditUnits:Units pescCreditUnits:ClockHours pescCreditUnits:CarnegieUnits pescCreditUnits:ContinuingEducationUnits pescCreditUnits:Unreported pescCreditUnits:Other ) ;
-    sh:maxCount 1 ;
-    sh:name "Credit Unit"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:creditUnit .
-
-<gpashapeGPARangeMaximum> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "GPA Range Maximum"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:gpaRangeMaximum .
-
-<gpashapeGPARangeMinimum> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "GPA Range Minimum"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:gpaRangeMinimum .
-
-<gpashapeGradePointAverage> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Grade Point Average"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:gradePointAverage .
-
-<gpashapeIsSummaryOf> a sh:PropertyShape ;
-    sh:name "Is Summary Of"@en-US ;
-    sh:node <CourseAchievementShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:isSummaryOf .
-
-<gpashapeTotalQualityPoints> a sh:PropertyShape ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Total Quality Points"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:totalQualityPoints .
-
 <licensureshapeInCourse> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:name "In Course"@en-US ;
@@ -632,6 +548,7 @@
     sh:path pesc:inTest .
 
 <testscoreshapeScoreInvalidatedIndicator> a sh:PropertyShape ;
+    rdfs:comment "true/false"@eng ;
     sh:datatype xsd:boolean ;
     sh:maxCount 1 ;
     sh:name "Score Invalidated Indicator"@en-US ;
@@ -639,6 +556,7 @@
     sh:path pesc:scoreInvalidatedIndicator .
 
 <testscoreshapeScoreRevisedIndicator> a sh:PropertyShape ;
+    rdfs:comment "true/false"@eng ;
     sh:datatype xsd:boolean ;
     sh:maxCount 1 ;
     sh:name "Score Revised Indicator"@en-US ;
@@ -646,6 +564,7 @@
     sh:path pesc:scoreRevisedIndicator .
 
 <testscoreshapeScoreSelfReportedIndicator> a sh:PropertyShape ;
+    rdfs:comment "true/false"@eng ;
     sh:datatype xsd:boolean ;
     sh:maxCount 1 ;
     sh:name "Score Self Reported Indicator"@en-US ;
@@ -711,12 +630,12 @@
     sh:path cred:subject .
 
 <OrganizationShape> a sh:NodeShape ;
+    rdfs:label "Organization"@en ;
     sh:closed false ;
-    sh:name "Organization"@en ;
     sh:targetClass ceds:C200239 .
 
 <RAPShape> a sh:NodeShape ;
+    rdfs:label "Requirement, Attribute or Proficiency"@en ;
     sh:closed false ;
-    sh:name "Requirement, Attribute or Proficiency"@en ;
     sh:targetClass ceds:C200065 .
 
