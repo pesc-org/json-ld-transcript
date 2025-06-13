@@ -98,10 +98,15 @@
     sh:closed false ;
     sh:targetClass pesc:Grade .
 
+<LicensureAchievementShape> a sh:NodeShape ;
+    rdfs:label "Licensure Achievement"@en ;
+    sh:closed false ;
+    sh:targetClass pesc:LicensureAchievement .
+
 <LicensureShape> a sh:NodeShape ;
     rdfs:label "Licensure"@en ;
     sh:closed false ;
-    sh:targetClass pesc:Licensure .
+    sh:targetObjectsOf pesc:licensure .
 
 <OrganizationIdentifierShape> a sh:NodeShape ;
     rdfs:label "Organization Identifier"@en ;

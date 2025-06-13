@@ -106,10 +106,15 @@
     sh:closed false ;
     sh:targetClass ceds:C200293 .
 
+<LicensureAchievementShape> a sh:NodeShape ;
+    rdfs:label "Licensure Achievement"@en ;
+    sh:closed false ;
+    sh:targetClass pesc:LicensureAchievement .
+
 <LicensureShape> a sh:NodeShape ;
     rdfs:label "Licensure"@en ;
     sh:closed false ;
-    sh:targetClass pesc:Licensure .
+    sh:targetObjectsOf pesc:licensure .
 
 <NoteShape> a sh:NodeShape ;
     rdfs:label "Note"@en ;

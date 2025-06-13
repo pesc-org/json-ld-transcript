@@ -136,10 +136,10 @@
     sh:closed false ;
     sh:targetClass ceds:C200293 .
 
-<LicensureShape> a sh:NodeShape ;
-    rdfs:label "Licensure"@en ;
+<LicensureAchievementShape> a sh:NodeShape ;
+    rdfs:label "Licensure Achievement"@en ;
     sh:closed false ;
-    sh:targetClass pesc:Licensure .
+    sh:targetClass pesc:LicensureAchievement .
 
 <NoteShape> a sh:NodeShape ;
     rdfs:label "Note"@en ;
@@ -244,6 +244,7 @@
         <courseshapeHasInstructionLanguage>,
         <courseshapeHasNCESCollegeCourseMapCode>,
         <courseshapeHasPostsecondarySection>,
+        <courseshapeLicensure>,
         <courseshapeOfferedBy>,
         <courseshapeOriginalCourseIdentifier>,
         <courseshapeOverrideSchoolCourseNumber>,
@@ -251,6 +252,13 @@
         <courseshapeRequirement>,
         <courseshapeType> ;
     sh:targetClass ceds:C200328 .
+
+<LicensureShape> a sh:NodeShape ;
+    rdfs:label "Licensure"@en ;
+    sh:closed false ;
+    sh:property <licensureshapeLicensureName>,
+        <licensureshapeType> ;
+    sh:targetObjectsOf pesc:licensure .
 
 <PostsecondarySectionLocationShape> a sh:NodeShape ;
     rdfs:label "Postsecondary Section Location Shape"@en ;
@@ -577,6 +585,12 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600267 .
 
+<courseshapeLicensure> a sh:PropertyShape ;
+    sh:name "Licensure"@en-US ;
+    sh:node <LicensureShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:licensure .
+
 <courseshapeOfferedBy> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -617,6 +631,20 @@
     sh:hasValue ceds:C200328 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<licensureshapeLicensureName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "Licensure Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:licensureName .
+
+<licensureshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Licensure ;
+    sh:minCount 1 ;
+    sh:name "type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 

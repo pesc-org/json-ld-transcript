@@ -47,10 +47,10 @@ pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,Required,
-350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
-351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
-,LicensureShape,pesc:inProgram,In Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,,
-,LicensureShape,pesc:inCourse,In Course,FALSE,FALSE,IRI BNODE,,,,CourseShape,,
+,,,,,,,,,,,,
+351,LicensureAchievementShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
+,LicensureAchievementShape,pesc:inProgram,In Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,,
+,LicensureAchievementShape,pesc:inCourse,In Course,FALSE,FALSE,IRI BNODE,,,,CourseShape,,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
 ,TestScoreShape,pesc:inTest,In Test,TRUE,FALSE,IRI BNODE,,,,TestShape,,

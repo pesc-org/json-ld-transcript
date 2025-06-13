@@ -127,14 +127,18 @@
     sh:closed false ;
     sh:targetClass pesc:Grade .
 
+<LicensureAchievementShape> a sh:NodeShape ;
+    rdfs:label "Licensure Achievement"@en ;
+    sh:closed false ;
+    sh:property <licensureachievementshapeInCourse>,
+        <licensureachievementshapeInProgram>,
+        <licensureachievementshapeLicensurePassageDate> ;
+    sh:targetClass pesc:LicensureAchievement .
+
 <LicensureShape> a sh:NodeShape ;
     rdfs:label "Licensure"@en ;
     sh:closed false ;
-    sh:property <licensureshapeInCourse>,
-        <licensureshapeInProgram>,
-        <licensureshapeLicensureName>,
-        <licensureshapeLicensurePassageDate> ;
-    sh:targetClass pesc:Licensure .
+    sh:targetObjectsOf pesc:licensure .
 
 <OrganizationIdentifierShape> a sh:NodeShape ;
     rdfs:label "Organization Identifier"@en ;
@@ -480,28 +484,21 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:verifiableCredential .
 
-<licensureshapeInCourse> a sh:PropertyShape ;
+<licensureachievementshapeInCourse> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:name "In Course"@en-US ;
     sh:node <CourseShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:inCourse .
 
-<licensureshapeInProgram> a sh:PropertyShape ;
+<licensureachievementshapeInProgram> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:name "In Program"@en-US ;
     sh:node <AcademicProgramShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:inProgram .
 
-<licensureshapeLicensureName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 60 ;
-    sh:name "Licensure Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:licensureName .
-
-<licensureshapeLicensurePassageDate> a sh:PropertyShape ;
+<licensureachievementshapeLicensurePassageDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
     sh:name "Licensure Passage Date"@en-US ;
     sh:nodeKind sh:Literal ;

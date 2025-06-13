@@ -77,6 +77,7 @@
     pesc:requirement <https://example.edu/reqs/1> ;
     pesc:attribute <https://example.edu/attr/1> ;
     pesc:proficiency <https://example.edu/prof/1> ;
+    pesc:licensure <https://example.edu/licensure/1> ;
     ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
     ceds:P000448 "eng" ; # Instruction language
 .
@@ -113,7 +114,9 @@
     pesc:rapSubName "Example Attribute subname" ;
 .
 
-
+<https://example.edu/licensure/1> a pesc:Licensure ;
+    pesc:licensureName "Test license" ;
+.
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 
