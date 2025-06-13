@@ -308,7 +308,7 @@
     sh:path pesc:school .
 
 <hasachievementshapeType> a sh:PropertyShape ;
-    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement ceds:C200335 ceds:C200346 pesc:Licensure pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:TestScore ) ;
+    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement ceds:C200335 ceds:C200346 pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:TestScore pesc:LicensureAchievement ) ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;

@@ -35,6 +35,11 @@
     sh:closed false ;
     sh:targetClass pesc:AcademicHonors .
 
+<AcademicProgramShape> a sh:NodeShape ;
+    rdfs:label "Academic Program"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200331 .
+
 <AcademicRecordShape> a sh:NodeShape ;
     rdfs:label "Academic Record"@en ;
     sh:closed false ;
@@ -112,6 +117,11 @@
     sh:closed false ;
     sh:targetClass pesc:CourseRepeatCode .
 
+<CourseShape> a sh:NodeShape ;
+    rdfs:label "Post Secondary Course"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200328 .
+
 <CourseSupplementalGradeShape> a sh:NodeShape ;
     rdfs:label "Course Supplemental Grade"@en ;
     sh:closed false ;
@@ -130,9 +140,6 @@
 <LicensureAchievementShape> a sh:NodeShape ;
     rdfs:label "Licensure Achievement"@en ;
     sh:closed false ;
-    sh:property <licensureachievementshapeInCourse>,
-        <licensureachievementshapeInProgram>,
-        <licensureachievementshapeLicensurePassageDate> ;
     sh:targetClass pesc:LicensureAchievement .
 
 <LicensureShape> a sh:NodeShape ;
@@ -197,11 +204,6 @@
     sh:targetObjectsOf pesc:hasAchievement,
         pesc:hasPart .
 
-<AcademicProgramShape> a sh:NodeShape ;
-    rdfs:label "Academic Program"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200331 .
-
 <AcademicSummaryShape> a sh:NodeShape ;
     rdfs:label "Academic Summary"@en ;
     sh:closed false ;
@@ -214,11 +216,6 @@
     sh:closed false ;
     sh:property <awardsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAwardSummary .
-
-<CourseShape> a sh:NodeShape ;
-    rdfs:label "Post Secondary Course"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200328 .
 
 <LanguageShape> a sh:NodeShape ;
     rdfs:label "Person Language"@en ;
@@ -483,26 +480,6 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:node <VerifiableCredentialShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:verifiableCredential .
-
-<licensureachievementshapeInCourse> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "In Course"@en-US ;
-    sh:node <CourseShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inCourse .
-
-<licensureachievementshapeInProgram> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "In Program"@en-US ;
-    sh:node <AcademicProgramShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inProgram .
-
-<licensureachievementshapeLicensurePassageDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:name "Licensure Passage Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:licensurePassageDate .
 
 <noteshapeNoteliteral> a sh:PropertyShape ;
     sh:minCount 1 ;

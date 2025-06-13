@@ -100,3 +100,7 @@ ceds:NI001299117196",picklist,,Recommended,
 298,GradeShape,ceds:P001313,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,Not Recommended,
 295,GradeShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
 ,PostsecondarySectionShape,rdf:type,Type,TRUE,,IRI,,ceds:C200332,,,,
+,LicensureAchievementShape,rdf:type,Type,TRUE,,IRI,,pesc:LicensureAchievement,,,,
+351,LicensureAchievementShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
+,LicensureAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,,
+,LicensureAchievementShape,pesc:licensureAchieved,Licensure Achieved,TRUE,FALSE,IRI BNODE,,,,LicensureShape,,
