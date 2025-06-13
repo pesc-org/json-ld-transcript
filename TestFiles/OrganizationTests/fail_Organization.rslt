@@ -1,6 +1,18 @@
 Validation Report
 Conforms: False
-Results (5):
+Results (7):
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:accreditationshapeType
+	Focus Node: Literal("Totally Accreditted")
+	Result Path: rdf:type
+	Message: Node Literal("Totally Accreditted")->rdf:type does not contain a value in the set: ['ceds:C200240']
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:accreditationshapeType
+	Focus Node: Literal("Totally Accreditted")
+	Result Path: rdf:type
+	Message: Less than 1 values on Literal("Totally Accreditted")->rdf:type
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:organizationshapeContact
@@ -48,4 +60,4 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/Source#id>
 	Value Node: pescSchoolLevels:fortytwo
 	Result Path: pesc:schoolLevel
-	Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Elementary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Other', 'pescSchoolLevels:Postsecondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:Secondary']
+	Message: Value pescSchoolLevels:fortytwo not in list ['pescSchoolLevels:Other', 'pescSchoolLevels:JuniorHigh', 'pescSchoolLevels:Secondary', 'pescSchoolLevels:HighSchool', 'pescSchoolLevels:Elementary', 'pescSchoolLevels:Middle', 'pescSchoolLevels:Postsecondary']
