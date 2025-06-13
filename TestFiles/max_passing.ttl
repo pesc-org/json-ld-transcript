@@ -49,7 +49,7 @@
     pesc:sessionDesignatorSuffix "II";
     ceterms:name "Fall 2019"@en ;
     ceds:P000254 pescSessionTypes:FallSession ; # Session type
-    pesc:sessionSchoolYear "2019"^^xsd:gYear ;
+    pesc:sessionSchoolYear "2019-2020" ;
     ceds:P000251  "2019-09-01"^^xsd:date ; # Session Begin date
     ceds:P000253 "2019-12-19"^^xsd:date; # Session End date
 .
@@ -107,7 +107,7 @@
     pesc:rapSubName "Example proficiency subname" ;
 .
 
-<https://example.edu/attr/1> a pesc:CourseAttribute ;
+<https://example.edu/attr/1> a ceds:C200065 ;
     pesc:rapCode "exA" ;
     pesc:rapName "Example Attribute" ;
     pesc:rapSubName "Example Attribute subname" ;

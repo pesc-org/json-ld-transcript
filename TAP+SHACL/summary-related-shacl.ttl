@@ -53,7 +53,7 @@
 <AccreditationShape> a sh:NodeShape ;
     rdfs:label "Accreditation"@en ;
     sh:closed false ;
-    sh:targetClass pesc:Accreditation .
+    sh:targetObjectsOf ceds:P600472 .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
     rdfs:label "To Be Done"@en ;
@@ -64,11 +64,6 @@
     rdfs:label "Agency Identifier"@en ;
     sh:closed false ;
     sh:targetClass pesc:AgencyIdentifier .
-
-<AttributeShape> a sh:NodeShape ;
-    rdfs:label "Attribute"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:CourseAttribute .
 
 <AwardSummaryShape> a sh:NodeShape ;
     rdfs:label "Award Summary"@en ;

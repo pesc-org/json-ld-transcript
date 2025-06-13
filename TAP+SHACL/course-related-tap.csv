@@ -39,7 +39,7 @@ pescSessionTypes:Continuous
 pescSessionTypes:DiffersByProgram
 pescSessionTypes:Other
 ceds:NI000254117090",picklist,,Recommended,
-287,AcademicSessionShape,pesc:sessionSchoolYear,Session School Year,FALSE,FALSE,Literal,xsd:gYear,,,,Optional,ccyy-ccyy
+287,AcademicSessionShape,pesc:sessionSchoolYear,Session School Year,FALSE,FALSE,Literal,xsd:string,\d{4}-\d{4},pattern,,Optional,ccyy-ccyy
 288,AcademicSessionShape,ceds:P000251,Session Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 289,AcademicSessionShape,ceds:P000253,Session End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 ,CourseShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200328,,,,
@@ -52,6 +52,7 @@ ceds:NI001303115507
 ceds:NI001303115675
 ceds:NI001303115664
 ceds:NI001303115957
+pescCreditBasis:LifeExperience
 ceds:NI001303116120
 ceds:NI001303116736
 ceds:NI001303115519
@@ -93,7 +94,7 @@ ceds:NI001518118405
 ceds:NI001518118406
 ceds:NI001518118407
 ceds:NI001518118408
-ceds:NI001518118409
+ceds:NI001518118427
 ceds:NI001518118410
 ceds:NI001518118411
 ceds:NI001518118412
@@ -145,7 +146,7 @@ pescCourseApplicabilityCodes:FirstProgram
 pescCourseApplicabilityCodes:SecondProgram
 pescCourseApplicabilityCodes:BothPrograms",picklist,,Not Recommended,
 331,CourseShape,pesc:requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
-332,CourseShape,pesc:attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,AttributeShape,Optional,
+332,CourseShape,pesc:attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 333,CourseShape,pesc:proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
 ,CourseShape,ceds:P600267,Has Postsecondary Section,FALSE,TRUE,IRI BNODE,,,,PostsecondarySectionShape,Optional,
 ,CourseShape,ceds:P000448,Has Instruction Language,FALSE,FALSE,Literal,xsd:string,3..3,lengthRange,,Optional,
@@ -171,9 +172,5 @@ ceds:NI001310115439",picklist,,Optional,
 380,RAPShape,pesc:rapName,RAP Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
 381,RAPShape,pesc:rapSubName,RAP Sub Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Optional,
 ,RAPShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200065,,,,
-,AttributeShape,pesc:rapCode,RAP Code,FALSE,TRUE,Literal,xsd:string,3,maxLength,,Recommended,
-,AttributeShape,pesc:rapName,RAP Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
-,AttributeShape,pesc:rapSubName,RAP Sub Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Optional,
-,AttributeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:CourseAttribute,,,,
 321,PostsecondarySectionShape,ceds:P000054,Course Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 322,PostsecondarySectionShape,ceds:P000059,Course End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,

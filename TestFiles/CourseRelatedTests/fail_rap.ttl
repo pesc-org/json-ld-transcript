@@ -49,7 +49,7 @@
     pesc:rapSubName [] ; # wrong node type
 .
 
-<https://example.edu/attr/1> a ceds:C200065 ; # wrong type
+<https://example.edu/attr/1> a ceds:C200066 ; # wrong type
     # a Competency Description
 .
 
