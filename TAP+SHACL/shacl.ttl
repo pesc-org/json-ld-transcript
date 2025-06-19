@@ -7,7 +7,6 @@
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAgencyCodes: <https://pesc.org/vocabs/AgencyCodes#> .
-@prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
 @prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
@@ -56,15 +55,9 @@
     sh:targetObjectsOf ceds:P600472 .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
-    rdfs:label "To Be Done"@en ;
+    rdfs:label "Additional Student Achievment"@en ;
     sh:closed false ;
-    sh:property <additionalstudentachievmentshapeAttribute>,
-        <additionalstudentachievmentshapeConditionsMetCode>,
-        <additionalstudentachievmentshapeConditionsMetDate>,
-        <additionalstudentachievmentshapeLanguage>,
-        <additionalstudentachievmentshapeProficiency>,
-        <additionalstudentachievmentshapeRequirement> ;
-    sh:targetObjectsOf pesc:additionalStudentAchievment .
+    sh:targetClass pesc:AdditionalStudentAchievement .
 
 <AgencyIdentifierShape> a sh:NodeShape ;
     rdfs:label "Agency Identifier"@en ;
@@ -137,6 +130,11 @@
     sh:closed false ;
     sh:targetClass pesc:Grade .
 
+<LanguageShape> a sh:NodeShape ;
+    rdfs:label "Person Language"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200293 .
+
 <LicensureAchievementShape> a sh:NodeShape ;
     rdfs:label "Licensure Achievement"@en ;
     sh:closed false ;
@@ -187,6 +185,11 @@
     sh:closed false ;
     sh:targetObjectsOf ceds:P600267 .
 
+<RAPShape> a sh:NodeShape ;
+    rdfs:label "Requirement, Attribute or Proficiency"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200065 .
+
 <ResidencyShape> a sh:NodeShape ;
     rdfs:label "Residency"@en ;
     sh:closed false ;
@@ -216,11 +219,6 @@
     sh:closed false ;
     sh:property <awardsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAwardSummary .
-
-<LanguageShape> a sh:NodeShape ;
-    rdfs:label "Person Language"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200293 .
 
 <NoteShape> a sh:NodeShape ;
     rdfs:label "Note"@en ;
@@ -282,42 +280,6 @@
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
-
-<additionalstudentachievmentshapeAttribute> a sh:PropertyShape ;
-    sh:name "Attribute"@en-US ;
-    sh:node <RAPShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:attribute .
-
-<additionalstudentachievmentshapeConditionsMetCode> a sh:PropertyShape ;
-    sh:in ( pescConditionsMetCodes:Yes pescConditionsMetCodes:No pescConditionsMetCodes:Conditional pescConditionsMetCodes:MutuallyDefined ) ;
-    sh:name "Conditions Met Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:conditionsMetCode .
-
-<additionalstudentachievmentshapeConditionsMetDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:name "Conditions Met Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:conditionsMetDate .
-
-<additionalstudentachievmentshapeLanguage> a sh:PropertyShape ;
-    sh:name "Language"@en-US ;
-    sh:node <LanguageShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:language .
-
-<additionalstudentachievmentshapeProficiency> a sh:PropertyShape ;
-    sh:name "Proficiency"@en-US ;
-    sh:node <RAPShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:proficiency .
-
-<additionalstudentachievmentshapeRequirement> a sh:PropertyShape ;
-    sh:name "Requirement"@en-US ;
-    sh:node <RAPShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:requirement .
 
 <agencyidentifiershapeAgencyCode> a sh:PropertyShape ;
     sh:in ( pescAgencyCodes:District pescAgencyCodes:Migrant pescAgencyCodes:MutuallyDefined pescAgencyCodes:National pescAgencyCodes:Regional pescAgencyCodes:State ) ;
@@ -602,9 +564,4 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     rdfs:label "Organization"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200239 .
-
-<RAPShape> a sh:NodeShape ;
-    rdfs:label "Requirement, Attribute or Proficiency"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200065 .
 

@@ -1,0 +1,69 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceterms: <https://purl.org/ctdl/terms/> .
+@prefix ceterms: <https://purl.org/ctdl/terms/> .
+@prefix pesc: <https://pesc.org/terms/> .
+@prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
+@prefix pescConditionsMetCodes:	<https://pesc.org/vocabs/ConditionsMetCodes#> .
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
+@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
+@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
+@prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.edu/transcripts/050330001> a pesc:CollegeTranscript ;
+    pesc:createdDateTime "2023-05-08T14:17:29-05:00"^^xsd:dateTime ;
+    pesc:destination <https://example.edu/Desintation#id> ;
+    pesc:documentID "050330001" ;
+    pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
+    pesc:source <https://example.edu/Source#id> ;
+    pesc:student <https://people.pjjk.net/test> ;
+    pesc:transmissionType pescTransmissionTypes:Original .
+
+<https://example.edu/Session/001> a pesc:AcademicSession ;
+    pesc:offeredBy <https://example.edu/Source#id> ;
+    pesc:sessionDesignator "2019-09"^^xsd:gYearMonth ;
+    pesc:sessionName "Fall 2019"^^xsd:string ;
+    pesc:sessionType pescSessionTypes:Semester .
+
+<https://example.edu/Course/001> a ceds:C200328 ;  #Course
+    ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
+    ceterms:offeredBy <https://example.edu/Source#id> ;
+.
+
+<https://example.edu/Desintation#id> a ceds:C200239 ;
+    ceterms:name "Example Destination"@en .
+
+<https://example.edu/Program/001> a ceds:C200331 ;
+    pesc:academicProgramName "Example Program"^^xsd:string ;
+    pesc:hasCourse <https://example.edu/Course/001> ;
+    ceterms:offeredBy <https://example.edu/Source#id> .
+
+<https://people.pjjk.net/test> a ceds:C200275 ; # Person
+    ceds:P600336 [ a ceds:C200377 ;
+            ceds:P000115 "Testy"^^xsd:token ;
+            ceds:P000172 "Test"^^xsd:token ;
+            pesc:nameCode pescNameCodes:Legal ] ;
+    pesc:hasAchievement <https://example.edu/achievement001> .
+
+<https://example.edu/achievement001> a pesc:Achievement,
+        ceds:C200335 ;
+    ceds:P000001 "1985-05-01"^^xsd:date ;  # Academic Award Date
+    ceds:P000003 "Example Award"^^xsd:string ; # Academic Award Title
+    pesc:inProgram <https://example.edu/Program/001> ;
+    pesc:school <https://example.edu/Source#id> .
+
+<https://example.edu/Source#id> a ceds:C200239 ;
+    ceterms:name "Example Source"@en .
+
+<https://example.edu/achievement005> a pesc:AdditionalStudentAchievement ;
+    pesc:requirementAchieved "reqs/1" ; # wrong node kind, wrong shape
+    pesc:attributeAchieved "attr/1" ; # wrong node kind, wrong shape
+    pesc:proficiencyAchieved "prof/1" ; # wrong node kind, wrong shape
+    pesc:languageAchieved "lang/1" ; # wrong node kind, wrong shape
+    pesc:inCourse "Course/001" ; # wrong node kind, wrong shape
+    pesc:conditionsMetDate "2009-09-12" ; # wrong datatype
+    pesc:conditionsMetCode true ; #wrong node kind, not in list
+.

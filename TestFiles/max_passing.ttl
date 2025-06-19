@@ -8,6 +8,7 @@
 @prefix pescAcademicSummaryTypes:	<https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescAccreditationBodyCodes:	<https://pesc.org/vocabs/AccreditationBodyCodes#> .
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
+@prefix pescConditionsMetCodes:	<https://pesc.org/vocabs/ConditionsMetCodes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
@@ -235,6 +236,7 @@
     pesc:hasAchievement <https://example.edu/achievement002>; # test score
     pesc:hasAchievement <https://example.edu/achievement003>; # course achievement
     pesc:hasAchievement  <https://example.edu/achievement004>; # licensure achievement
+    pesc:hasAchievement  <https://example.edu/achievement005>; # additional achievement
     elm:additionalNote [
         rdf:type elm:Note ;
         elm:noteLiteral "A made up test peson" ;
@@ -349,7 +351,23 @@
 <https://example.edu/achievement004> a pesc:LicensureAchievement ;
     pesc:licensureAchieved <https://example.edu/licensure/1> ;
     pesc:inCourse <https://example.edu/Course/001> ;
-    pesc:licensurePassageDate "2009-09-12"^^xsd:date ;    
+    pesc:licensurePassageDate "2009-09-12"^^xsd:date ;
+.
+
+<https://example.edu/achievement005> a pesc:AdditionalStudentAchievement ;
+    pesc:requirementAchieved <https://example.edu/reqs/1> ;
+    pesc:attributeAchieved <https://example.edu/attr/1> ;
+    pesc:proficiencyAchieved <https://example.edu/prof/1> ;
+    pesc:languageAchieved <https://example.edu/lang/1> ;
+    pesc:inCourse <https://example.edu/Course/001> ;
+    pesc:conditionsMetDate "2009-09-12"^^xsd:date ;
+    pesc:conditionsMetCode pescConditionsMetCodes:Yes ;
+.
+
+<https://example.edu/lang/1> a ceds:C200293 ; # person language 
+    ceds:P000317 "fra" ; # iso 639-2 language code
+    ceds:P000316 pescLanguageUsageCodes:Reading ;
+    pesc:languageProficiency pescLanguageProficiencyCodes:Fair ;
 .
 
 <https://example.edu/awardSummary001> a pesc:Summary ;

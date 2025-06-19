@@ -50,9 +50,9 @@
     sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
-    rdfs:label "To Be Done"@en ;
+    rdfs:label "Additional Student Achievment"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:additionalStudentAchievment .
+    sh:targetClass pesc:AdditionalStudentAchievement .
 
 <AgencyIdentifierShape> a sh:NodeShape ;
     rdfs:label "Agency Identifier"@en ;
