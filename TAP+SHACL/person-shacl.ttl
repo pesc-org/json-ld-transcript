@@ -201,6 +201,11 @@
         <studentshapeType> ;
     sh:targetObjectsOf pesc:student .
 
+<SubtestShape> a sh:NodeShape ;
+    rdfs:label "Subtest"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200051 .
+
 <TBDShape> a sh:NodeShape ;
     rdfs:label "To Be Done"@en ;
     rdfs:comment "To Be Done"@en ;
