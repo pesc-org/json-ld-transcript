@@ -43,7 +43,7 @@
 <https://example.edu/Test/001> a ceds:C200010 ; # Assessment
     ceds:P000028 "Standard Test"@en ; # wrong data type Assessment Title
 #    ceds:P001067 "ST" ; # missing Assessment Identifier
-    pesc:subTest <https://example.edu/Test/001A>, "STA" ; # one wrong node type
+    pesc:hasSubtest <https://example.edu/Test/001A>, "STA" ; # one wrong node type
 .
 
 <https://example.edu/Test/001A> a ceds:200010 ; # wrong class. 
