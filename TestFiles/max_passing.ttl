@@ -136,12 +136,12 @@
 <https://example.edu/Test/001> a ceds:C200010 ; # Assessment
     ceds:P000028 "Standard Test" ; # Assessment Title
     ceds:P001067 "ST" ; # Assessment Identifier
-    pesc:subtest <https://example.edu/Test/001A> ;
+    pesc:hasSubtest <https://example.edu/Test/001A> ;
 .
 
-<https://example.edu/Test/001A> a ceds:C200010 ;
-    ceds:P000028 "Standard Test part A" ;
-    ceds:P001067 "STA" ;
+<https://example.edu/Test/001A> a ceds:C200051 ;
+    ceds:P000367 "Standard Test part A" ;
+    ceds:P000275 "STA" ;
 .
 
 

@@ -46,9 +46,9 @@
     pesc:hasSubtest <https://example.edu/Test/001A>, "STA" ; # one wrong node type
 .
 
-<https://example.edu/Test/001A> a ceds:200010 ; # wrong class. 
-    ceds:P000028 "Standard Test part A" ;
-    ceds:P001067 "STA" ;
+<https://example.edu/Test/001A> a ceds:C200051 ; 
+    ceds:P000275 "Standard Test part A"@en ; # wrong data type  Title
+    ceds:P000367 "STA"^^xsd:token ; # wrong data type Ident; missing required property
 .
 
 <https://people.pjjk.net/test> a ceds:C200275 ; # Person
