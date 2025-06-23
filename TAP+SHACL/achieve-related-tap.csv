@@ -118,3 +118,50 @@ pescConditionsMetCodes:MutuallyDefined",picklist,,Recommended,
 ,RAPShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200065,,,,
 ,LicensureShape,rdf:type,type,TRUE,TRUE,IRI,,pesc:Licensure,,,Recommended,
 ,LanguageShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200293,,,,
+,TestScoreShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200047,,,,
+374,TestScoreShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,Required,
+375,TestScoreShape,ceds:P000369,Assessment Score Metric Type,FALSE,FALSE,IRI,,"ceds:NI000027162378
+ceds:NI000027162361
+ceds:NI000027162379
+ceds:NI000027162377
+ceds:NI000027162366
+ceds:NI000027162380
+ceds:NI000027162371
+ceds:NI000027162367
+ceds:NI000027162355
+pescTestScoreMethods:Equated
+pescTestScoreMethods:Percent",picklist,,Optional,
+376,TestScoreShape,pesc:scoreRevisedIndicator,Score Revised Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
+377,TestScoreShape,pesc:scoreInvalidatedIndicator,Score Invalidated Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
+378,TestScoreShape,pesc:scoreSelfRportedIndicator,Score Self Reported Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
+366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
+368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:gYear,,,,Required,
+367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:gYearMonth,,,,Required,
+,TestScoreShape,pesc:studentLevel,Student Level,FALSE,FALSE,IRI,,"pescStudentLevelCodes:Postsecondary
+pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear
+pescStudentLevelCodes:NonDegree
+pescStudentLevelCodes:Grade13
+pescStudentLevelCodes:Ungraded
+pescStudentLevelCodes:CollegeFirstYear
+pescStudentLevelCodes:CollegeFirstYearAttendedBefore
+pescStudentLevelCodes:CollegeSophomore
+pescStudentLevelCodes:CollegeJunior
+pescStudentLevelCodes:CollegeSenior
+pescStudentLevelCodes:CollegeFifthYear
+pescStudentLevelCodes:PostBaccalaureate
+pescStudentLevelCodes:GraduateNonDegree
+pescStudentLevelCodes:GraduateFirstYear
+pescStudentLevelCodes:GraduateSecondYear
+pescStudentLevelCodes:GraduateThirdYear
+pescStudentLevelCodes:GraduateBeyondThirdYear
+pescStudentLevelCodes:Professional
+pescStudentLevelCodes:ProfessionalFirstYear
+pescStudentLevelCodes:ProfessionalSecondYear
+pescStudentLevelCodes:ProfessionalThirdYear
+pescStudentLevelCodes:ProfessionalBeyondThirdYear
+pescStudentLevelCodes:MastersQualifying
+pescStudentLevelCodes:Masters
+pescStudentLevelCodes:Doctoral
+pescStudentLevelCodes:Postdoctoral",picklist,,Optional,
+,TestScoreShape,pesc:inTest,In Test,FALSE,FALSE,IRI BNODE,,,,TestShape,,
+,TestScoreShape,pesc:inSubtest,In Subtest,TRUE,FALSE,IRI BNODE,,,,SubtestShape,,

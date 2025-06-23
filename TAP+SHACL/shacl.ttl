@@ -2,7 +2,6 @@
 @base <http://example.org/> .
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
-@prefix cred: <https://www.w3.org/2018/credentials#> .
 @prefix elm: <http://data.europa.eu/snb/model/elm/> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
@@ -11,7 +10,6 @@
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
-@prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -206,6 +204,16 @@
     sh:closed false ;
     sh:targetClass pesc:TBD .
 
+<TestScoreShape> a sh:NodeShape ;
+    rdfs:label "Test Scores"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200047 .
+
+<TestShape> a sh:NodeShape ;
+    rdfs:label "Test"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200010 .
+
 <hasAchievementShape> a sh:NodeShape ;
     rdfs:label "Achievement "@en ;
     sh:closed false ;
@@ -252,31 +260,9 @@
     sh:closed false ;
     sh:targetObjectsOf pesc:student .
 
-<TestScoreShape> a sh:NodeShape ;
-    rdfs:label "Test Scores"@en ;
-    sh:closed false ;
-    sh:property <testscoreshapeInTest>,
-        <testscoreshapeScoreInvalidatedIndicator>,
-        <testscoreshapeScoreRevisedIndicator>,
-        <testscoreshapeScoreSelfReportedIndicator>,
-        <testscoreshapeScoreValue>,
-        <testscoreshapeSubtestScore>,
-        <testscoreshapeTestDate>,
-        <testscoreshapeTestScoreMethod>,
-        <testscoreshapeTestYear>,
-        <testscoreshapeTestYearMonth> ;
-    sh:targetClass pesc:TestScores .
-
-<TestShape> a sh:NodeShape ;
-    rdfs:label "Test"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200010 .
-
 <VerifiableCredentialShape> a sh:NodeShape ;
     rdfs:label "W3C Verifiable Credential"@en ;
     sh:closed false ;
-    sh:property <verifiablecredentialshapeIssuer>,
-        <verifiablecredentialshapeSubject> ;
     sh:targetObjectsOf pesc:verifiableCredential .
 
 <academicsummaryshapeType> a sh:PropertyShape ;
@@ -474,96 +460,6 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
-
-<testscoreshapeInTest> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "In Test"@en-US ;
-    sh:node <TestShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inTest .
-
-<testscoreshapeScoreInvalidatedIndicator> a sh:PropertyShape ;
-    rdfs:comment "true/false"@eng ;
-    sh:datatype xsd:boolean ;
-    sh:maxCount 1 ;
-    sh:name "Score Invalidated Indicator"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:scoreInvalidatedIndicator .
-
-<testscoreshapeScoreRevisedIndicator> a sh:PropertyShape ;
-    rdfs:comment "true/false"@eng ;
-    sh:datatype xsd:boolean ;
-    sh:maxCount 1 ;
-    sh:name "Score Revised Indicator"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:scoreRevisedIndicator .
-
-<testscoreshapeScoreSelfReportedIndicator> a sh:PropertyShape ;
-    rdfs:comment "true/false"@eng ;
-    sh:datatype xsd:boolean ;
-    sh:maxCount 1 ;
-    sh:name "Score Self Reported Indicator"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:scoreSelfRportedIndicator .
-
-<testscoreshapeScoreValue> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 80 ;
-    sh:minCount 1 ;
-    sh:name "Score Value"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:scoreValue .
-
-<testscoreshapeSubtestScore> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "Subtest Score"@en-US ;
-    sh:node <TestScoreShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:subTestScore .
-
-<testscoreshapeTestDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testDate .
-
-<testscoreshapeTestScoreMethod> a sh:PropertyShape ;
-    sh:in ( pescTestScoreMethods:Scaled pescTestScoreMethods:Graded pescTestScoreMethods:Standard pescTestScoreMethods:Raw pescTestScoreMethods:Percent pescTestScoreMethods:Mastery pescTestScoreMethods:Adjective pescTestScoreMethods:Stanine pescTestScoreMethods:Percentile pescTestScoreMethods:NormalCurve pescTestScoreMethods:Equated pescTestScoreMethods:Local ) ;
-    sh:maxCount 1 ;
-    sh:name "Test Score Method"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:testScoreMethod .
-
-<testscoreshapeTestYear> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYear .
-
-<testscoreshapeTestYearMonth> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Test Year Month"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:testYearMonth .
-
-<verifiablecredentialshapeIssuer> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Issuer"@en-US ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path cred:issuer .
-
-<verifiablecredentialshapeSubject> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Subject"@en-US ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path cred:subject .
 
 <OrganizationShape> a sh:NodeShape ;
     rdfs:label "Organization"@en ;

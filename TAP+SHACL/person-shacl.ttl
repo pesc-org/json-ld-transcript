@@ -215,7 +215,7 @@
 <TestScoreShape> a sh:NodeShape ;
     rdfs:label "Test Scores"@en ;
     sh:closed false ;
-    sh:targetClass pesc:TestScores .
+    sh:targetClass ceds:C200047 .
 
 <AcademicProgramShape> a sh:NodeShape ;
     rdfs:label "Academic Program"@en ;
@@ -313,7 +313,7 @@
     sh:path pesc:school .
 
 <hasachievementshapeType> a sh:PropertyShape ;
-    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement ceds:C200335 ceds:C200346 pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:TestScore pesc:LicensureAchievement ) ;
+    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement ceds:C200335 ceds:C200346 pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:LicensureAchievement ceds:C200047 ) ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;

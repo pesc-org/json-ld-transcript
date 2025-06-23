@@ -15,7 +15,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: <https://example.edu/achievement001>
 			Value Node: pesc:Failure
 			Result Path: rdf:type
-			Message: Value pesc:Failure not in list ['pesc:ProgramSummary', 'pesc:AdditionalStudentAchievement', 'pesc:GPA', 'pesc:CourseAchievement', 'pesc:Achievement', 'pesc:Licensure', 'pesc:AcademicSummary', 'pesc:TestScore', 'ceds:C200335']
+			Message: Value pesc:Failure not in list ['pesc:ProgramSummary', 'pesc:AdditionalStudentAchievement', 'pesc:GPA', 'pesc:CourseAchievement', 'pesc:Achievement', 'pesc:Licensure', 'pesc:AcademicSummary', 'ceds:C200335', 'ceds:C200047']
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:hasachievementshapeType

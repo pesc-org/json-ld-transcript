@@ -207,7 +207,7 @@
 <TestScoreShape> a sh:NodeShape ;
     rdfs:label "Test Scores"@en ;
     sh:closed false ;
-    sh:targetClass pesc:TestScores .
+    sh:targetClass ceds:C200047 .
 
 <TestShape> a sh:NodeShape ;
     rdfs:label "Test"@en ;
