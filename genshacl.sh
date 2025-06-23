@@ -12,11 +12,11 @@ C=$DIR/dctap.yml         # path to dctap config file
 
 tap2shacl  -c $C -ns $NS -a $A -s $S \
     $DIR/tap.csv                     \
-    -o $DIR/shacl.ttl 
+    $DIR/shacl.ttl 
 
 for file in contact organization person course-related achieve-related summary-related
 do
     tap2shacl  -c $C -ns $NS -a $A -s $S \
         $DIR/$file-tap.csv               \
-        -o $DIR/$file-shacl.ttl 
+        $DIR/$file-shacl.ttl 
 done
