@@ -8,7 +8,9 @@
 @prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
 @prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#> .
 @prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
+@prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -195,12 +197,19 @@
 <TestScoreShape> a sh:NodeShape ;
     rdfs:label "Test Scores"@en ;
     sh:closed false ;
-    sh:targetClass pesc:TestScores .
-
-<TestShape> a sh:NodeShape ;
-    rdfs:label "Test"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200010 .
+    sh:property <testscoreshapeAssessmentScoreMetricType>,
+        <testscoreshapeInSubtest>,
+        <testscoreshapeInTest>,
+        <testscoreshapeScoreInvalidatedIndicator>,
+        <testscoreshapeScoreRevisedIndicator>,
+        <testscoreshapeScoreSelfReportedIndicator>,
+        <testscoreshapeScoreValue>,
+        <testscoreshapeStudentLevel>,
+        <testscoreshapeTestDate>,
+        <testscoreshapeTestYear>,
+        <testscoreshapeTestYearMonth>,
+        <testscoreshapeType> ;
+    sh:targetClass ceds:C200047 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     rdfs:label "W3C Verifiable Credential"@en ;
@@ -270,6 +279,16 @@
     sh:closed false ;
     sh:property <postsecondarysectionshapeType> ;
     sh:targetObjectsOf ceds:P600267 .
+
+<SubtestShape> a sh:NodeShape ;
+    rdfs:label "Subtest"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200051 .
+
+<TestShape> a sh:NodeShape ;
+    rdfs:label "Test"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200010 .
 
 <academicawardshapeAcademicAwardDate> a sh:PropertyShape ;
     rdfs:comment "ccyy-mm-dd"@eng ;
@@ -677,6 +696,96 @@
 
 <rapshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200065 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<testscoreshapeAssessmentScoreMetricType> a sh:PropertyShape ;
+    sh:in ( ceds:NI000027162378 ceds:NI000027162361 ceds:NI000027162379 ceds:NI000027162377 ceds:NI000027162366 ceds:NI000027162380 ceds:NI000027162371 ceds:NI000027162367 ceds:NI000027162355 pescTestScoreMethods:Equated pescTestScoreMethods:Percent ) ;
+    sh:maxCount 1 ;
+    sh:name "Assessment Score Metric Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P000369 .
+
+<testscoreshapeInSubtest> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In Subtest"@en-US ;
+    sh:node <SubtestShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inSubtest .
+
+<testscoreshapeInTest> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:name "In Test"@en-US ;
+    sh:node <TestShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inTest .
+
+<testscoreshapeScoreInvalidatedIndicator> a sh:PropertyShape ;
+    rdfs:comment "true/false"@eng ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Score Invalidated Indicator"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:scoreInvalidatedIndicator .
+
+<testscoreshapeScoreRevisedIndicator> a sh:PropertyShape ;
+    rdfs:comment "true/false"@eng ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Score Revised Indicator"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:scoreRevisedIndicator .
+
+<testscoreshapeScoreSelfReportedIndicator> a sh:PropertyShape ;
+    rdfs:comment "true/false"@eng ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Score Self Reported Indicator"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:scoreSelfRportedIndicator .
+
+<testscoreshapeScoreValue> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 80 ;
+    sh:minCount 1 ;
+    sh:name "Score Value"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:scoreValue .
+
+<testscoreshapeStudentLevel> a sh:PropertyShape ;
+    sh:in ( pescStudentLevelCodes:Postsecondary pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear pescStudentLevelCodes:NonDegree pescStudentLevelCodes:Grade13 pescStudentLevelCodes:Ungraded pescStudentLevelCodes:CollegeFirstYear pescStudentLevelCodes:CollegeFirstYearAttendedBefore pescStudentLevelCodes:CollegeSophomore pescStudentLevelCodes:CollegeJunior pescStudentLevelCodes:CollegeSenior pescStudentLevelCodes:CollegeFifthYear pescStudentLevelCodes:PostBaccalaureate pescStudentLevelCodes:GraduateNonDegree pescStudentLevelCodes:GraduateFirstYear pescStudentLevelCodes:GraduateSecondYear pescStudentLevelCodes:GraduateThirdYear pescStudentLevelCodes:GraduateBeyondThirdYear pescStudentLevelCodes:Professional pescStudentLevelCodes:ProfessionalFirstYear pescStudentLevelCodes:ProfessionalSecondYear pescStudentLevelCodes:ProfessionalThirdYear pescStudentLevelCodes:ProfessionalBeyondThirdYear pescStudentLevelCodes:MastersQualifying pescStudentLevelCodes:Masters pescStudentLevelCodes:Doctoral pescStudentLevelCodes:Postdoctoral ) ;
+    sh:maxCount 1 ;
+    sh:name "Student Level"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:studentLevel .
+
+<testscoreshapeTestDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Test Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testDate .
+
+<testscoreshapeTestYear> a sh:PropertyShape ;
+    sh:datatype xsd:gYear ;
+    sh:maxCount 1 ;
+    sh:name "Test Year"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testYear .
+
+<testscoreshapeTestYearMonth> a sh:PropertyShape ;
+    sh:datatype xsd:gYearMonth ;
+    sh:maxCount 1 ;
+    sh:name "Test Year Month"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:testYearMonth .
+
+<testscoreshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200047 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;

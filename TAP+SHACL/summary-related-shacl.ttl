@@ -237,6 +237,11 @@
         <sessionsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasSessionSummary .
 
+<SubtestShape> a sh:NodeShape ;
+    rdfs:label "Subtest"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200051 .
+
 <TBDShape> a sh:NodeShape ;
     rdfs:label "To Be Done"@en ;
     rdfs:comment "To Be Done"@en ;
@@ -246,7 +251,7 @@
 <TestScoreShape> a sh:NodeShape ;
     rdfs:label "Test Scores"@en ;
     sh:closed false ;
-    sh:targetClass pesc:TestScores .
+    sh:targetClass ceds:C200047 .
 
 <TestShape> a sh:NodeShape ;
     rdfs:label "Test"@en ;

@@ -27,6 +27,7 @@
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#> .
 @prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
+@prefix pescTestScoreMethods:	<https://pesc.org/vocabs/TestScoreMethods#> .
 @prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
 @prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -136,12 +137,12 @@
 <https://example.edu/Test/001> a ceds:C200010 ; # Assessment
     ceds:P000028 "Standard Test" ; # Assessment Title
     ceds:P001067 "ST" ; # Assessment Identifier
-    pesc:subtest <https://example.edu/Test/001A> ;
+    pesc:hasSubtest <https://example.edu/Test/001A> ;
 .
 
-<https://example.edu/Test/001A> a ceds:C200010 ;
-    ceds:P000028 "Standard Test part A" ;
-    ceds:P001067 "STA" ;
+<https://example.edu/Test/001A> a ceds:C200051 ;
+    ceds:P000367 "Standard Test part A" ;
+    ceds:P000275 "STA" ;
 .
 
 
@@ -255,9 +256,18 @@
 .
 
 <https://example.edu/achievement002> 
-    a pesc:Achievement, pesc:TestScore ;
+    a pesc:Achievement, ceds:C200047 ;
     pesc:scoreValue "A+" ;
+    ceds:P000369 pescTestScoreMethods:Equated ; # Assessment Score Metric Type
+    pesc:scoreRevisedIndicator "false"^^xsd:boolean ;
+    pesc:scoreInvalidatedIndicator "false"^^xsd:boolean ;
+    pesc:scoreSelfRportedIndicator "false"^^xsd:boolean ;
+    pesc:testDate "2020-08-02"^^xsd:date ;
+    pesc:testYear "2020"^^xsd:gYear ;
+    pesc:testYearMonth "2020-08"^^xsd:gYearMonth ;
+    pesc:studentLevel pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear ;
     pesc:inTest <https://example.edu/Test/001> ;
+    pesc:inSubtest <https://example.edu/Test/001A> ;
 .
 
 

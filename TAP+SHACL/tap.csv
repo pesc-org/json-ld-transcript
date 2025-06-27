@@ -40,29 +40,6 @@ pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,Required,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
-,TestScoreShape,pesc:inTest,In Test,TRUE,FALSE,IRI BNODE,,,,TestShape,,
-374,TestScoreShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,Required,
-,TestScoreShape,pesc:subTestScore,Subtest Score,FALSE,FALSE,IRI BNODE,,,,TestScoreShape,,
-375,TestScoreShape,pesc:testScoreMethod,Test Score Method,FALSE,FALSE,IRI,,"pescTestScoreMethods:Scaled
-pescTestScoreMethods:Graded
-pescTestScoreMethods:Standard
-pescTestScoreMethods:Raw
-pescTestScoreMethods:Percent
-pescTestScoreMethods:Mastery
-pescTestScoreMethods:Adjective
-pescTestScoreMethods:Stanine
-pescTestScoreMethods:Percentile
-pescTestScoreMethods:NormalCurve
-pescTestScoreMethods:Equated
-pescTestScoreMethods:Local",picklist,,Optional,
-376,TestScoreShape,pesc:scoreRevisedIndicator,Score Revised Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
-377,TestScoreShape,pesc:scoreInvalidatedIndicator,Score Invalidated Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
-378,TestScoreShape,pesc:scoreSelfRportedIndicator,Score Self Reported Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
-,VerifiableCredentialShape,cred:issuer,Issuer,TRUE,FALSE,IRI BNODE,,,,,,
-,VerifiableCredentialShape,cred:subject,Subject,TRUE,FALSE,IRI BNODE,,,,,,
-366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
-368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:date,,,,Required,
-367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,
 ,CollegeTranscriptShape,pesc:hasAwardSummary,Has Award Summary,FALSE,TRUE,IRI BNODE,,,,AwardSummaryShape,,
 ,CollegeTranscriptShape,pesc:hasProgramSummary,Has Program Summary,FALSE,TRUE,IRI BNODE,,,,ProgramSummaryShape,,
 ,CollegeTranscriptShape,pesc:hasSessionSummary,Has Session Summary,FALSE,TRUE,IRI BNODE,,,,SessionSummaryShape,,

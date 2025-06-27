@@ -1,0 +1,92 @@
+Validation Report
+Conforms: False
+Results (13):
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeAssessmentScoreMetricType
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("Equated")
+	Result Path: ceds:P000369
+	Message: Value Literal("Equated") not in list ['ceds:NI000027162366', 'ceds:NI000027162355', 'ceds:NI000027162378', 'ceds:NI000027162379', 'ceds:NI000027162367', 'pescTestScoreMethods:Percent', 'pescTestScoreMethods:Equated', 'ceds:NI000027162377', 'ceds:NI000027162361', 'ceds:NI000027162380', 'ceds:NI000027162371']
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeAssessmentScoreMetricType
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("Equated")
+	Result Path: ceds:P000369
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeInSubtest
+	Focus Node: <https://example.edu/achievement001>
+	Result Path: pesc:inSubtest
+	Message: Less than 1 values on <https://example.edu/achievement001>->pesc:inSubtest
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeInTest
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("Test/001")
+	Result Path: pesc:inTest
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeScoreInvalidatedIndicator
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("false")
+	Result Path: pesc:scoreInvalidatedIndicator
+	Message: Value is not Literal with datatype xsd:boolean
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeScoreRevisedIndicator
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("false")
+	Result Path: pesc:scoreRevisedIndicator
+	Message: Value is not Literal with datatype xsd:boolean
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeScoreSelfReportedIndicator
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("false")
+	Result Path: pesc:scoreSelfRportedIndicator
+	Message: Value is not Literal with datatype xsd:boolean
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeScoreValue
+	Focus Node: <https://example.edu/achievement001>
+	Result Path: pesc:scoreValue
+	Message: Less than 1 values on <https://example.edu/achievement001>->pesc:scoreValue
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeStudentLevel
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("PostsecondaryBachelorPreliminaryYear")
+	Result Path: pesc:studentLevel
+	Message: Value Literal("PostsecondaryBachelorPreliminaryYear") not in list ['pescStudentLevelCodes:Doctoral', 'pescStudentLevelCodes:Postdoctoral', 'pescStudentLevelCodes:Postsecondary', 'pescStudentLevelCodes:GraduateFirstYear', 'pescStudentLevelCodes:CollegeFirstYearAttendedBefore', 'pescStudentLevelCodes:NonDegree', 'pescStudentLevelCodes:CollegeJunior', 'pescStudentLevelCodes:Professional', 'pescStudentLevelCodes:Masters', 'pescStudentLevelCodes:CollegeSophomore', 'pescStudentLevelCodes:CollegeFirstYear', 'pescStudentLevelCodes:ProfessionalSecondYear', 'pescStudentLevelCodes:GraduateNonDegree', 'pescStudentLevelCodes:ProfessionalFirstYear', 'pescStudentLevelCodes:Grade13', 'pescStudentLevelCodes:GraduateBeyondThirdYear', 'pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear', 'pescStudentLevelCodes:CollegeFifthYear', 'pescStudentLevelCodes:GraduateThirdYear', 'pescStudentLevelCodes:MastersQualifying', 'pescStudentLevelCodes:ProfessionalBeyondThirdYear', 'pescStudentLevelCodes:PostBaccalaureate', 'pescStudentLevelCodes:GraduateSecondYear', 'pescStudentLevelCodes:ProfessionalThirdYear', 'pescStudentLevelCodes:Ungraded', 'pescStudentLevelCodes:CollegeSenior']
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeStudentLevel
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("PostsecondaryBachelorPreliminaryYear")
+	Result Path: pesc:studentLevel
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeTestDate
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("2020" = 2020-08-02, datatype=xsd:gYear)
+	Result Path: pesc:testDate
+	Message: Value is not Literal with datatype xsd:date
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeTestYear
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("2020-01" = 2020-01-01, datatype=xsd:gYearMonth)
+	Result Path: pesc:testYear
+	Message: Value is not Literal with datatype xsd:gYear
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeTestYearMonth
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("2020-08-01", datatype=xsd:date)
+	Result Path: pesc:testYearMonth
+	Message: Value is not Literal with datatype xsd:gYearMonth
