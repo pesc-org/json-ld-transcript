@@ -117,11 +117,11 @@ ceds:NI000316151878",picklist,,Optional,
 pesc:AdditionalStudentAchievement
 ceds:C200335
 ceds:C200346
-pesc:Licensure
 pesc:GPA
 pesc:AcademicSummary
 pesc:ProgramSummary
-pesc:TestScore",,,,
+pesc:TestScore
+pesc:LicensureAchievement",,,,
 370,hasAchievementShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Optional,
 199,hasAchievementShape,pesc:school,School,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,Optional,
 ,hasAchievementShape,pesc:inCourse,In Course,FALSE,TRUE,IRI BNODE,,,,CourseShape,Recommended,

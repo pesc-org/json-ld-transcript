@@ -30,28 +30,14 @@
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:requirement <https://example.edu/reqs/1> ;
-    pesc:attribute <https://example.edu/attr/1> ;
-    pesc:proficiency <https://example.edu/prof/1> ;
+    pesc:licensure <https://example.edu/licensure/1> ; # fail does not conform
+    pesc:licensure "Test License" ; # fail wrong node kind, wrong type, no type, wrong shape
 .
 
-<https://example.edu/reqs/1> a ceds:C200065 ;
-    # a Competency Description
-    pesc:rapCode "exampleRapCode" ; # too long
-    pesc:rapName <http://example.org/name> ; # wrong node type
-    pesc:rapSubName "Very long example requirement subname, in fact it is too long.............." ; # too long 
+<https://example.edu/licensure/1> a pesc:License ; # fail wrong class
+    pesc:licensureName "Test license"@en ; # fail should be xsd:string
 .
 
-<https://example.edu/prof/1>  a ceds:C200065 ;
-    # a Competency Description
-    pesc:rapCode 42 ; # wrong datatype
-    pesc:rapName [] ; # wrong node type
-    pesc:rapSubName [] ; # wrong node type
-.
-
-<https://example.edu/attr/1> a ceds:C200066 ; # wrong type
-    # a Competency Description
-.
 
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;

@@ -100,3 +100,21 @@ ceds:NI001299117196",picklist,,Recommended,
 298,GradeShape,ceds:P001313,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,Not Recommended,
 295,GradeShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
 ,PostsecondarySectionShape,rdf:type,Type,TRUE,,IRI,,ceds:C200332,,,,
+,LicensureAchievementShape,rdf:type,Type,TRUE,,IRI,,pesc:LicensureAchievement,,,,
+351,LicensureAchievementShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
+,LicensureAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,,
+,LicensureAchievementShape,pesc:licensureAchieved,Licensure Achieved,TRUE,FALSE,IRI BNODE,,,,LicensureShape,,
+384,AdditionalStudentAchievmentShape,pesc:requirementAchieved,Requirement Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+385,AdditionalStudentAchievmentShape,pesc:attributeAchieved,Attribute Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+386,AdditionalStudentAchievmentShape,pesc:proficiencyAchieved,Proficiency Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+387,AdditionalStudentAchievmentShape,pesc:languageAchieved,Language Achieved,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
+382,AdditionalStudentAchievmentShape,pesc:conditionsMetCode,Conditions Met Code,FALSE,TRUE,IRI,,"pescConditionsMetCodes:Yes
+pescConditionsMetCodes:No
+pescConditionsMetCodes:Conditional
+pescConditionsMetCodes:MutuallyDefined",picklist,,Recommended,
+383,AdditionalStudentAchievmentShape,pesc:conditionsMetDate,Conditions Met Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
+,AdditionalStudentAchievmentShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,,
+,AdditionalStudentAchievmentShape,rdf:type,Type,TRUE,,IRI,,pesc:AdditionalStudentAchievement,,,,
+,RAPShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200065,,,,
+,LicensureShape,rdf:type,type,TRUE,TRUE,IRI,,pesc:Licensure,,,Recommended,
+,LanguageShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200293,,,,

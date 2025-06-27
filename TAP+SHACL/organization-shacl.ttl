@@ -50,19 +50,14 @@
     sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
-    rdfs:label "To Be Done"@en ;
+    rdfs:label "Additional Student Achievment"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:additionalStudentAchievment .
+    sh:targetClass pesc:AdditionalStudentAchievement .
 
 <AgencyIdentifierShape> a sh:NodeShape ;
     rdfs:label "Agency Identifier"@en ;
     sh:closed false ;
     sh:targetClass pesc:AgencyIdentifier .
-
-<AttributeShape> a sh:NodeShape ;
-    rdfs:label "Attribute"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:CourseAttribute .
 
 <AwardSummaryShape> a sh:NodeShape ;
     rdfs:label "Award Summary"@en ;
@@ -115,10 +110,15 @@
     sh:closed false ;
     sh:targetClass ceds:C200293 .
 
+<LicensureAchievementShape> a sh:NodeShape ;
+    rdfs:label "Licensure Achievement"@en ;
+    sh:closed false ;
+    sh:targetClass pesc:LicensureAchievement .
+
 <LicensureShape> a sh:NodeShape ;
     rdfs:label "Licensure"@en ;
     sh:closed false ;
-    sh:targetClass pesc:Licensure .
+    sh:targetObjectsOf pesc:licensure .
 
 <OrganizationShape> a sh:NodeShape ;
     rdfs:label "Organization"@en ;
@@ -228,7 +228,7 @@
         <accreditationshapeAccreditationAgencyName>,
         <accreditationshapeAdditionalNote>,
         <accreditationshapeType> ;
-    sh:targetClass pesc:Accreditation .
+    sh:targetObjectsOf ceds:P600472 .
 
 <ContactShape> a sh:NodeShape ;
     rdfs:label "Contact"@en ;

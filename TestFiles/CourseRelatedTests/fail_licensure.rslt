@@ -1,0 +1,76 @@
+Validation Report
+Conforms: False
+Results (7):
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeLicensure
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("Test License")
+	Result Path: pesc:licensure
+	Message: Value does not conform to Shape ex:LicensureShape. See details for more information.
+	Details:
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:licensureshapeType
+			Focus Node: Literal("Test License")
+			Result Path: rdf:type
+			Message: Node Literal("Test License")->rdf:type does not contain a value in the set: ['pesc:Licensure']
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:licensureshapeType
+			Focus Node: Literal("Test License")
+			Result Path: rdf:type
+			Message: Less than 1 values on Literal("Test License")->rdf:type
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeLicensure
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: <https://example.edu/licensure/1>
+	Result Path: pesc:licensure
+	Message: Value does not conform to Shape ex:LicensureShape. See details for more information.
+	Details:
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:licensureshapeLicensureName
+			Focus Node: <https://example.edu/licensure/1>
+			Value Node: Literal("Test license", lang=en)
+			Result Path: pesc:licensureName
+			Message: Value is not Literal with datatype xsd:string
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:licensureshapeType
+			Focus Node: <https://example.edu/licensure/1>
+			Result Path: rdf:type
+			Message: Node <https://example.edu/licensure/1>->rdf:type does not contain a value in the set: ['pesc:Licensure']
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeLicensure
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("Test License")
+	Result Path: pesc:licensure
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:licensureshapeLicensureName
+	Focus Node: <https://example.edu/licensure/1>
+	Value Node: Literal("Test license", lang=en)
+	Result Path: pesc:licensureName
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:licensureshapeType
+	Focus Node: Literal("Test License")
+	Result Path: rdf:type
+	Message: Node Literal("Test License")->rdf:type does not contain a value in the set: ['pesc:Licensure']
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:licensureshapeType
+	Focus Node: Literal("Test License")
+	Result Path: rdf:type
+	Message: Less than 1 values on Literal("Test License")->rdf:type
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:licensureshapeType
+	Focus Node: <https://example.edu/licensure/1>
+	Result Path: rdf:type
+	Message: Node <https://example.edu/licensure/1>->rdf:type does not contain a value in the set: ['pesc:Licensure']

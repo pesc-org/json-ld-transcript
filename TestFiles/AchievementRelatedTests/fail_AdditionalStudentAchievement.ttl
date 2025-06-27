@@ -3,6 +3,7 @@
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
+@prefix pescConditionsMetCodes:	<https://pesc.org/vocabs/ConditionsMetCodes#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
@@ -30,29 +31,7 @@
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:requirement <https://example.edu/reqs/1> ;
-    pesc:attribute <https://example.edu/attr/1> ;
-    pesc:proficiency <https://example.edu/prof/1> ;
 .
-
-<https://example.edu/reqs/1> a ceds:C200065 ;
-    # a Competency Description
-    pesc:rapCode "exampleRapCode" ; # too long
-    pesc:rapName <http://example.org/name> ; # wrong node type
-    pesc:rapSubName "Very long example requirement subname, in fact it is too long.............." ; # too long 
-.
-
-<https://example.edu/prof/1>  a ceds:C200065 ;
-    # a Competency Description
-    pesc:rapCode 42 ; # wrong datatype
-    pesc:rapName [] ; # wrong node type
-    pesc:rapSubName [] ; # wrong node type
-.
-
-<https://example.edu/attr/1> a ceds:C200066 ; # wrong type
-    # a Competency Description
-.
-
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
@@ -79,3 +58,12 @@
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
+<https://example.edu/achievement005> a pesc:AdditionalStudentAchievement ;
+    pesc:requirementAchieved "reqs/1" ; # wrong node kind, wrong shape
+    pesc:attributeAchieved "attr/1" ; # wrong node kind, wrong shape
+    pesc:proficiencyAchieved "prof/1" ; # wrong node kind, wrong shape
+    pesc:languageAchieved "lang/1" ; # wrong node kind, wrong shape
+    pesc:inCourse "Course/001" ; # wrong node kind, wrong shape
+    pesc:conditionsMetDate "2009-09-12" ; # wrong datatype
+    pesc:conditionsMetCode true ; #wrong node kind, not in list
+.

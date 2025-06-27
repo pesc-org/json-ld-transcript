@@ -7,6 +7,7 @@
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
+@prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
@@ -72,12 +73,12 @@
 <AccreditationShape> a sh:NodeShape ;
     rdfs:label "Accreditation"@en ;
     sh:closed false ;
-    sh:targetClass pesc:Accreditation .
+    sh:targetObjectsOf ceds:P600472 .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
-    rdfs:label "To Be Done"@en ;
+    rdfs:label "Additional Student Achievment"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:additionalStudentAchievment .
+    sh:targetClass pesc:AdditionalStudentAchievement .
 
 <AgencyIdentifierShape> a sh:NodeShape ;
     rdfs:label "Agency Identifier"@en ;
@@ -135,10 +136,10 @@
     sh:closed false ;
     sh:targetClass ceds:C200293 .
 
-<LicensureShape> a sh:NodeShape ;
-    rdfs:label "Licensure"@en ;
+<LicensureAchievementShape> a sh:NodeShape ;
+    rdfs:label "Licensure Achievement"@en ;
     sh:closed false ;
-    sh:targetClass pesc:Licensure .
+    sh:targetClass pesc:LicensureAchievement .
 
 <NoteShape> a sh:NodeShape ;
     rdfs:label "Note"@en ;
@@ -219,15 +220,6 @@
     sh:targetObjectsOf pesc:hasAchievement,
         pesc:hasPart .
 
-<AttributeShape> a sh:NodeShape ;
-    rdfs:label "Attribute"@en ;
-    sh:closed false ;
-    sh:property <attributeshapeRAPCode>,
-        <attributeshapeRAPName>,
-        <attributeshapeRAPSubName>,
-        <attributeshapeType> ;
-    sh:targetClass pesc:CourseAttribute .
-
 <CourseShape> a sh:NodeShape ;
     rdfs:label "Post Secondary Course"@en ;
     sh:closed false ;
@@ -252,6 +244,7 @@
         <courseshapeHasInstructionLanguage>,
         <courseshapeHasNCESCollegeCourseMapCode>,
         <courseshapeHasPostsecondarySection>,
+        <courseshapeLicensure>,
         <courseshapeOfferedBy>,
         <courseshapeOriginalCourseIdentifier>,
         <courseshapeOverrideSchoolCourseNumber>,
@@ -259,6 +252,13 @@
         <courseshapeRequirement>,
         <courseshapeType> ;
     sh:targetClass ceds:C200328 .
+
+<LicensureShape> a sh:NodeShape ;
+    rdfs:label "Licensure"@en ;
+    sh:closed false ;
+    sh:property <licensureshapeLicensureName>,
+        <licensureshapeType> ;
+    sh:targetObjectsOf pesc:licensure .
 
 <PostsecondarySectionLocationShape> a sh:NodeShape ;
     rdfs:label "Postsecondary Section Location Shape"@en ;
@@ -413,42 +413,15 @@
 
 <academicsessionshapeSessionSchoolYear> a sh:PropertyShape ;
     rdfs:comment "ccyy-ccyy"@eng ;
-    sh:datatype xsd:gYear ;
+    sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:name "Session School Year"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:sessionSchoolYear .
+    sh:path pesc:sessionSchoolYear ;
+    sh:pattern "\\d{4}-\\d{4}" .
 
 <academicsessionshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200245 ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<attributeshapeRAPCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 3 ;
-    sh:name "RAP Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapCode .
-
-<attributeshapeRAPName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 60 ;
-    sh:name "RAP Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapName .
-
-<attributeshapeRAPSubName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxLength 60 ;
-    sh:name "RAP Sub Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:rapSubName .
-
-<attributeshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:CourseAttribute ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -464,7 +437,7 @@
 
 <courseshapeAttribute> a sh:PropertyShape ;
     sh:name "Attribute"@en-US ;
-    sh:node <AttributeShape> ;
+    sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:attribute .
 
@@ -531,7 +504,7 @@
     sh:path ceds:P000066 .
 
 <courseshapeCourseSubjectAreaCode> a sh:PropertyShape ;
-    sh:in ( ceds:NI001518118404 ceds:NI001518118405 ceds:NI001518118406 ceds:NI001518118407 ceds:NI001518118408 ceds:NI001518118409 ceds:NI001518118410 ceds:NI001518118411 ceds:NI001518118412 ceds:NI001518118413 ceds:NI001518118414 ceds:NI001518118415 ceds:NI001518118416 ceds:NI001518118417 ceds:NI001518118418 ceds:NI001518118419 ceds:NI001518118420 ceds:NI001518118421 ceds:NI001518118422 ceds:NI001518118423 ceds:NI001518118424 ceds:NI001518118425 ceds:NI001518118426 ) ;
+    sh:in ( ceds:NI001518118404 ceds:NI001518118405 ceds:NI001518118406 ceds:NI001518118407 ceds:NI001518118408 ceds:NI001518118427 ceds:NI001518118410 ceds:NI001518118411 ceds:NI001518118412 ceds:NI001518118413 ceds:NI001518118414 ceds:NI001518118415 ceds:NI001518118416 ceds:NI001518118417 ceds:NI001518118418 ceds:NI001518118419 ceds:NI001518118420 ceds:NI001518118421 ceds:NI001518118422 ceds:NI001518118423 ceds:NI001518118424 ceds:NI001518118425 ceds:NI001518118426 ) ;
     sh:maxCount 1 ;
     sh:name "Course Subject Area Code"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -554,7 +527,7 @@
     sh:pattern "^\\d{2}\\.\\d{4}$" .
 
 <courseshapeHasCourseCreditBasisType> a sh:PropertyShape ;
-    sh:in ( ceds:NI001303116728 ceds:NI001303115164 ceds:NI001303115209 ceds:NI001303115213 ceds:NI001303115491 ceds:NI001303115507 ceds:NI001303115675 ceds:NI001303115664 ceds:NI001303115957 ceds:NI001303116120 ceds:NI001303116736 ceds:NI001303115519 ceds:NI001303115860 ceds:NI001303115857 ceds:NI001303115859 ceds:NI001303115979 ceds:NI001303116065 ceds:NI001303115203 ) ;
+    sh:in ( ceds:NI001303116728 ceds:NI001303115164 ceds:NI001303115209 ceds:NI001303115213 ceds:NI001303115491 ceds:NI001303115507 ceds:NI001303115675 ceds:NI001303115664 ceds:NI001303115957 pescCreditBasis:LifeExperience ceds:NI001303116120 ceds:NI001303116736 ceds:NI001303115519 ceds:NI001303115860 ceds:NI001303115857 ceds:NI001303115859 ceds:NI001303115979 ceds:NI001303116065 ceds:NI001303115203 ) ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Has Course Credit Basis Type"@en-US ;
@@ -612,6 +585,12 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600267 .
 
+<courseshapeLicensure> a sh:PropertyShape ;
+    sh:name "Licensure"@en-US ;
+    sh:node <LicensureShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:licensure .
+
 <courseshapeOfferedBy> a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -652,6 +631,20 @@
     sh:hasValue ceds:C200328 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<licensureshapeLicensureName> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxLength 60 ;
+    sh:name "Licensure Name"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:licensureName .
+
+<licensureshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Licensure ;
+    sh:minCount 1 ;
+    sh:name "type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
@@ -770,6 +763,11 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<OrganizationShape> a sh:NodeShape ;
+    rdfs:label "Organization"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200239 .
+
 <RAPShape> a sh:NodeShape ;
     rdfs:label "Requirement, Attribute or Proficiency"@en ;
     sh:closed false ;
@@ -778,9 +776,4 @@
         <rapshapeRAPSubName>,
         <rapshapeType> ;
     sh:targetClass ceds:C200065 .
-
-<OrganizationShape> a sh:NodeShape ;
-    rdfs:label "Organization"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200239 .
 

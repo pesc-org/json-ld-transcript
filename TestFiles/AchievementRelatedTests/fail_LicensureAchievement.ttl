@@ -30,29 +30,7 @@
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:requirement <https://example.edu/reqs/1> ;
-    pesc:attribute <https://example.edu/attr/1> ;
-    pesc:proficiency <https://example.edu/prof/1> ;
 .
-
-<https://example.edu/reqs/1> a ceds:C200065 ;
-    # a Competency Description
-    pesc:rapCode "exampleRapCode" ; # too long
-    pesc:rapName <http://example.org/name> ; # wrong node type
-    pesc:rapSubName "Very long example requirement subname, in fact it is too long.............." ; # too long 
-.
-
-<https://example.edu/prof/1>  a ceds:C200065 ;
-    # a Competency Description
-    pesc:rapCode 42 ; # wrong datatype
-    pesc:rapName [] ; # wrong node type
-    pesc:rapSubName [] ; # wrong node type
-.
-
-<https://example.edu/attr/1> a ceds:C200066 ; # wrong type
-    # a Competency Description
-.
-
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
@@ -64,17 +42,18 @@
 
 <https://people.pjjk.net/test> a ceds:C200275 ; # Person
     ceds:P600336 [ a ceds:C200377 ;
-            ceds:P000115 "Testy"^^xsd:token ;
-            ceds:P000172 "Test"^^xsd:token ;
-            pesc:nameCode pescNameCodes:Legal ] ;
-    pesc:hasAchievement <https://example.edu/achievement001> .
+        ceds:P000115 "Testy"^^xsd:token ;
+        ceds:P000172 "Test"^^xsd:token ;
+        pesc:nameCode pescNameCodes:Legal ] ;
+    pesc:hasAchievement  <https://example.edu/achievement004>; # fail wrong shape
+ .
 
-<https://example.edu/achievement001> a pesc:Achievement,
-        ceds:C200335 ;
-    ceds:P000001 "1985-05-01"^^xsd:date ;  # Academic Award Date
-    ceds:P000003 "Example Award"^^xsd:string ; # Academic Award Title
-    pesc:inProgram <https://example.edu/Program/001> ;
-    pesc:school <https://example.edu/Source#id> .
+<https://example.edu/achievement004> a pesc:LicensureAchievement ; 
+    pesc:licensureAchieved "Test Licensure" ; # fail wrong node kind
+    pesc:inCourse "Course 1" ; # fail wrong node kind
+    pesc:licensurePassageDate "2009-09-12" ; # fail wrong data type     
+.
+
 
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .

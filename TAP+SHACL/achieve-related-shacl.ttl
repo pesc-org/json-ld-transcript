@@ -5,6 +5,7 @@
 @prefix elm: <http://data.europa.eu/snb/model/elm/> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
+@prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
 @prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
 @prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
@@ -41,22 +42,25 @@
 <AccreditationShape> a sh:NodeShape ;
     rdfs:label "Accreditation"@en ;
     sh:closed false ;
-    sh:targetClass pesc:Accreditation .
+    sh:targetObjectsOf ceds:P600472 .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
-    rdfs:label "To Be Done"@en ;
+    rdfs:label "Additional Student Achievment"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:additionalStudentAchievment .
+    sh:property <additionalstudentachievmentshapeAttributeAchieved>,
+        <additionalstudentachievmentshapeConditionsMetCode>,
+        <additionalstudentachievmentshapeConditionsMetDate>,
+        <additionalstudentachievmentshapeInCourse>,
+        <additionalstudentachievmentshapeLanguageAchieved>,
+        <additionalstudentachievmentshapeProficiencyAchieved>,
+        <additionalstudentachievmentshapeRequirementAchieved>,
+        <additionalstudentachievmentshapeType> ;
+    sh:targetClass pesc:AdditionalStudentAchievement .
 
 <AgencyIdentifierShape> a sh:NodeShape ;
     rdfs:label "Agency Identifier"@en ;
     sh:closed false ;
     sh:targetClass pesc:AgencyIdentifier .
-
-<AttributeShape> a sh:NodeShape ;
-    rdfs:label "Attribute"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:CourseAttribute .
 
 <AwardSummaryShape> a sh:NodeShape ;
     rdfs:label "Award Summary"@en ;
@@ -106,15 +110,14 @@
     sh:closed false ;
     sh:targetClass pesc:GPA .
 
-<LanguageShape> a sh:NodeShape ;
-    rdfs:label "Person Language"@en ;
+<LicensureAchievementShape> a sh:NodeShape ;
+    rdfs:label "Licensure Achievement"@en ;
     sh:closed false ;
-    sh:targetClass ceds:C200293 .
-
-<LicensureShape> a sh:NodeShape ;
-    rdfs:label "Licensure"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:Licensure .
+    sh:property <licensureachievementshapeInCourse>,
+        <licensureachievementshapeLicensureAchieved>,
+        <licensureachievementshapeLicensurePassageDate>,
+        <licensureachievementshapeType> ;
+    sh:targetClass pesc:LicensureAchievement .
 
 <NoteShape> a sh:NodeShape ;
     rdfs:label "Note"@en ;
@@ -166,11 +169,6 @@
     sh:closed false ;
     sh:targetClass pesc:ProgramSummary ;
     sh:targetObjectsOf pesc:hasProgramSummary .
-
-<RAPShape> a sh:NodeShape ;
-    rdfs:label "Requirement, Attribute or Proficiency"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200065 .
 
 <ResidencyShape> a sh:NodeShape ;
     rdfs:label "Residency"@en ;
@@ -244,12 +242,6 @@
     sh:property <academicsessionshapeType> ;
     sh:targetClass ceds:C200245 .
 
-<CourseShape> a sh:NodeShape ;
-    rdfs:label "Post Secondary Course"@en ;
-    sh:closed false ;
-    sh:property <courseshapeType> ;
-    sh:targetClass ceds:C200328 .
-
 <CourseSupplementalGradeShape> a sh:NodeShape ;
     rdfs:label "Course Supplemental Grade"@en ;
     sh:closed false ;
@@ -259,6 +251,18 @@
         <coursesupplementalgradeshapeSupplementalGradeSubSession>,
         <coursesupplementalgradeshapeType> ;
     sh:targetClass pesc:CourseSupplementalGrade .
+
+<LanguageShape> a sh:NodeShape ;
+    rdfs:label "Person Language"@en ;
+    sh:closed false ;
+    sh:property <languageshapeType> ;
+    sh:targetClass ceds:C200293 .
+
+<LicensureShape> a sh:NodeShape ;
+    rdfs:label "Licensure"@en ;
+    sh:closed false ;
+    sh:property <licensureshapeType> ;
+    sh:targetObjectsOf pesc:licensure .
 
 <PostsecondarySectionShape> a sh:NodeShape ;
     rdfs:label "Postsecondary Location Shape"@en ;
@@ -395,6 +399,57 @@
 
 <academicsessionshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200245 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<additionalstudentachievmentshapeAttributeAchieved> a sh:PropertyShape ;
+    sh:name "Attribute Achieved"@en-US ;
+    sh:node <RAPShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:attributeAchieved .
+
+<additionalstudentachievmentshapeConditionsMetCode> a sh:PropertyShape ;
+    sh:in ( pescConditionsMetCodes:Yes pescConditionsMetCodes:No pescConditionsMetCodes:Conditional pescConditionsMetCodes:MutuallyDefined ) ;
+    sh:name "Conditions Met Code"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:conditionsMetCode .
+
+<additionalstudentachievmentshapeConditionsMetDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:name "Conditions Met Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:conditionsMetDate .
+
+<additionalstudentachievmentshapeInCourse> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In Course"@en-US ;
+    sh:node <CourseShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inCourse .
+
+<additionalstudentachievmentshapeLanguageAchieved> a sh:PropertyShape ;
+    sh:name "Language Achieved"@en-US ;
+    sh:node <LanguageShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:languageAchieved .
+
+<additionalstudentachievmentshapeProficiencyAchieved> a sh:PropertyShape ;
+    sh:name "Proficiency Achieved"@en-US ;
+    sh:node <RAPShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:proficiencyAchieved .
+
+<additionalstudentachievmentshapeRequirementAchieved> a sh:PropertyShape ;
+    sh:name "Requirement Achieved"@en-US ;
+    sh:node <RAPShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:requirementAchieved .
+
+<additionalstudentachievmentshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:AdditionalStudentAchievement ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -570,12 +625,68 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<languageshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200293 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<licensureachievementshapeInCourse> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In Course"@en-US ;
+    sh:node <CourseShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:inCourse .
+
+<licensureachievementshapeLicensureAchieved> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Licensure Achieved"@en-US ;
+    sh:node <LicensureShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:licensureAchieved .
+
+<licensureachievementshapeLicensurePassageDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:name "Licensure Passage Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:licensurePassageDate .
+
+<licensureachievementshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:LicensureAchievement ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<licensureshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:Licensure ;
+    sh:minCount 1 ;
+    sh:name "type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <postsecondarysectionshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200332 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
+
+<rapshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200065 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
+<CourseShape> a sh:NodeShape ;
+    rdfs:label "Post Secondary Course"@en ;
+    sh:closed false ;
+    sh:property <courseshapeType> ;
+    sh:targetClass ceds:C200328 .
 
 <GradeShape> a sh:NodeShape ;
     rdfs:label "Grade"@en ;
@@ -586,4 +697,10 @@
         <gradeshapeHasCourseAcademicGradeStatusCode>,
         <gradeshapeType> ;
     sh:targetClass pesc:Grade .
+
+<RAPShape> a sh:NodeShape ;
+    rdfs:label "Requirement, Attribute or Proficiency"@en ;
+    sh:closed false ;
+    sh:property <rapshapeType> ;
+    sh:targetClass ceds:C200065 .
 

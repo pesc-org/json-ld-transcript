@@ -8,6 +8,7 @@
 @prefix pescAcademicSummaryTypes:	<https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescAccreditationBodyCodes:	<https://pesc.org/vocabs/AccreditationBodyCodes#> .
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
+@prefix pescConditionsMetCodes:	<https://pesc.org/vocabs/ConditionsMetCodes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
@@ -49,7 +50,7 @@
     pesc:sessionDesignatorSuffix "II";
     ceterms:name "Fall 2019"@en ;
     ceds:P000254 pescSessionTypes:FallSession ; # Session type
-    pesc:sessionSchoolYear "2019"^^xsd:gYear ;
+    pesc:sessionSchoolYear "2019-2020" ;
     ceds:P000251  "2019-09-01"^^xsd:date ; # Session Begin date
     ceds:P000253 "2019-12-19"^^xsd:date; # Session End date
 .
@@ -77,6 +78,7 @@
     pesc:requirement <https://example.edu/reqs/1> ;
     pesc:attribute <https://example.edu/attr/1> ;
     pesc:proficiency <https://example.edu/prof/1> ;
+    pesc:licensure <https://example.edu/licensure/1> ;
     ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
     ceds:P000448 "eng" ; # Instruction language
 .
@@ -107,13 +109,15 @@
     pesc:rapSubName "Example proficiency subname" ;
 .
 
-<https://example.edu/attr/1> a pesc:CourseAttribute ;
+<https://example.edu/attr/1> a ceds:C200065 ;
     pesc:rapCode "exA" ;
     pesc:rapName "Example Attribute" ;
     pesc:rapSubName "Example Attribute subname" ;
 .
 
-
+<https://example.edu/licensure/1> a pesc:Licensure ;
+    pesc:licensureName "Test license" ;
+.
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 
@@ -231,6 +235,8 @@
     pesc:hasAchievement <https://example.edu/achievement001>; # academic award
     pesc:hasAchievement <https://example.edu/achievement002>; # test score
     pesc:hasAchievement <https://example.edu/achievement003>; # course achievement
+    pesc:hasAchievement  <https://example.edu/achievement004>; # licensure achievement
+    pesc:hasAchievement  <https://example.edu/achievement005>; # additional achievement
     elm:additionalNote [
         rdf:type elm:Note ;
         elm:noteLiteral "A made up test peson" ;
@@ -340,6 +346,28 @@
             ceds:P001298 "code" ; # Course academic grade scale code
         ] ; 
     ]
+.
+
+<https://example.edu/achievement004> a pesc:LicensureAchievement ;
+    pesc:licensureAchieved <https://example.edu/licensure/1> ;
+    pesc:inCourse <https://example.edu/Course/001> ;
+    pesc:licensurePassageDate "2009-09-12"^^xsd:date ;
+.
+
+<https://example.edu/achievement005> a pesc:AdditionalStudentAchievement ;
+    pesc:requirementAchieved <https://example.edu/reqs/1> ;
+    pesc:attributeAchieved <https://example.edu/attr/1> ;
+    pesc:proficiencyAchieved <https://example.edu/prof/1> ;
+    pesc:languageAchieved <https://example.edu/lang/1> ;
+    pesc:inCourse <https://example.edu/Course/001> ;
+    pesc:conditionsMetDate "2009-09-12"^^xsd:date ;
+    pesc:conditionsMetCode pescConditionsMetCodes:Yes ;
+.
+
+<https://example.edu/lang/1> a ceds:C200293 ; # person language 
+    ceds:P000317 "fra" ; # iso 639-2 language code
+    ceds:P000316 pescLanguageUsageCodes:Reading ;
+    pesc:languageProficiency pescLanguageProficiencyCodes:Fair ;
 .
 
 <https://example.edu/awardSummary001> a pesc:Summary ;

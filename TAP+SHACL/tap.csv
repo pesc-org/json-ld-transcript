@@ -1,13 +1,4 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
-384,AdditionalStudentAchievmentShape,pesc:requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
-385,AdditionalStudentAchievmentShape,pesc:attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
-386,AdditionalStudentAchievmentShape,pesc:proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
-387,AdditionalStudentAchievmentShape,pesc:language,Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
-382,AdditionalStudentAchievmentShape,pesc:conditionsMetCode,Conditions Met Code,FALSE,TRUE,IRI,,"pescConditionsMetCodes:Yes
-pescConditionsMetCodes:No
-pescConditionsMetCodes:Conditional
-pescConditionsMetCodes:MutuallyDefined",picklist,,Recommended,
-383,AdditionalStudentAchievmentShape,pesc:conditionsMetDate,Conditions Met Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
 152,AgencyIdentifierShape,pesc:agencyCode,Agency Code,FALSE,FALSE,IRI,,"pescAgencyCodes:District
 pescAgencyCodes:Migrant
 pescAgencyCodes:MutuallyDefined
@@ -47,10 +38,6 @@ pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,Required,
-350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
-351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
-,LicensureShape,pesc:inProgram,In Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,,
-,LicensureShape,pesc:inCourse,In Course,FALSE,FALSE,IRI BNODE,,,,CourseShape,,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
 ,TestScoreShape,pesc:inTest,In Test,TRUE,FALSE,IRI BNODE,,,,TestShape,,

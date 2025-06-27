@@ -1,13 +1,13 @@
 Validation Report
 Conforms: False
-Results (7):
+Results (8):
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicsessionshapeHasSessionType
 	Focus Node: <https://example.edu/Session/001>
 	Value Node: pescSessionTypes:Fall
 	Result Path: ceds:P000254
-	Message: Value pescSessionTypes:Fall not in list ['ceds:NI000254117085', 'ceds:NI000254117090', 'ceds:NI000254116843', 'pescSessionTypes:FourOneFourPlan', 'pescSessionTypes:Continuous', 'pescSessionTypes:FallSession', 'ceds:NI000254116976', 'pescSessionTypes:DiffersByProgram', 'pescSessionTypes:Other', 'ceds:NI000254116125', 'ceds:NI000254116047', 'ceds:NI000254115964', 'ceds:NI000254115787', 'ceds:NI000254116676', 'ceds:NI000254116671']
+	Message: Value pescSessionTypes:Fall not in list ['pescSessionTypes:Other', 'ceds:NI000254117090', 'ceds:NI000254116676', 'ceds:NI000254116976', 'pescSessionTypes:FourOneFourPlan', 'pescSessionTypes:Continuous', 'ceds:NI000254117085', 'ceds:NI000254116843', 'ceds:NI000254115964', 'ceds:NI000254115787', 'ceds:NI000254116047', 'ceds:NI000254116125', 'pescSessionTypes:DiffersByProgram', 'pescSessionTypes:FallSession', 'ceds:NI000254116671']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicsessionshapeSessionBeginDate
@@ -48,4 +48,11 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: <https://example.edu/Session/001>
 	Value Node: Literal("2019-01-01", datatype=xsd:date)
 	Result Path: pesc:sessionSchoolYear
-	Message: Value is not Literal with datatype xsd:gYear
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#PatternConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicsessionshapeSessionSchoolYear
+	Focus Node: <https://example.edu/Session/001>
+	Value Node: Literal("2019-01-01", datatype=xsd:date)
+	Result Path: pesc:sessionSchoolYear
+	Message: Value does not match pattern '\d{4}-\d{4}'

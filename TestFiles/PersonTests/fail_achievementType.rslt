@@ -22,4 +22,4 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/achievement001>
 	Value Node: pesc:Failure
 	Result Path: rdf:type
-	Message: Value pesc:Failure not in list ['pesc:Achievement', 'pesc:AdditionalStudentAchievement', 'pesc:Licensure', 'pesc:AcademicSummary', 'pesc:ProgramSummary', 'ceds:C200335', 'pesc:TestScore', 'ceds:C200346', 'pesc:GPA']
+	Message: Value pesc:Failure not in list ['pesc:Achievement', 'pesc:AdditionalStudentAchievement', 'pesc:AcademicSummary', 'pesc:ProgramSummary', 'ceds:C200335', 'pesc:TestScore', 'ceds:C200346', 'pesc:GPA', 'pesc:LicensureAchievement']

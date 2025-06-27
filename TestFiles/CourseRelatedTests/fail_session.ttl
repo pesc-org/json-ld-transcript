@@ -26,7 +26,8 @@
     pesc:sessionDesignatorSuffix "II"^^xsd:token; # wrong datatype
     ceterms:name "Fall 2019" ; # wrong datatype
     ceds:P000254 pescSessionTypes:Fall ; # invalid Session type
-    pesc:sessionSchoolYear "2019"^^xsd:date ; #wrong datatype
+    pesc:sessionSchoolYear "2019"^^xsd:date ; # wrong datatype
+                                              # does not match pattern
     ceds:P000251  "2019-09-01"^^xsd:string ; # wrong datatype Session Begin date
     ceds:P000253 "2019-12-19"^^xsd:string ; # wrong datatype Session End date
 .
