@@ -16,7 +16,8 @@ pescAccreditationBodyCodes:Other",picklist,,Optional,
 ,OrganizationIdentifierShape,ceds:P000826,Organization Identifier,TRUE,FALSE,Literal,xsd:token,,,,,
 ,OrganizationIdentifierShape,ceds:P000827,Has Organization Identification System,TRUE,FALSE,IRI,,"ceds:NI000827151968
 pescIdentifierTypes:OPEid
-pescIdentifierTypes:PSISid",picklist,,,
+pescIdentifierTypes:PSISid
+pescIdentifierTypes:GEOCode",picklist,,,
 ,OrganizationShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200239,,,,
 91,OrganizationShape,ceterms:name,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,
 95,OrganizationShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,Recommended,

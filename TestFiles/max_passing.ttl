@@ -281,16 +281,20 @@
 .
 
 
-<https://example.edu/Source#id> a ceds:C200239 ;
+<https://example.edu/Source#id> a ceds:C200239 ; # a Organization
     ceterms:name "Example Source"@en ;
-    ceds:P600502 [
-        a ceds:C200252 ;
-        ceds:P000827 pescIdentifierTypes:OPEid ;
-        ceds:P000826 "00-0000000"^^xsd:token
+    ceds:P600502 [  # Has Organization Identifier
+        a ceds:C200252 ; # a Organization Identifier
+        ceds:P000827 pescIdentifierTypes:OPEid ; # Has Organization Identification System
+        ceds:P000826 "00-0000000"^^xsd:token ; # Organization Identifier
     ] , [
-        a ceds:C200252 ;
+        a ceds:C200252 ; # a Organization Identifier
         ceds:P000827 pescIdentifierTypes:PSISid ;
         ceds:P000826 "example001"^^xsd:token
+    ] , [
+        a ceds:C200252 ; # a Organization Identifier
+        ceds:P000827 pescIdentifierTypes:GEOCode ;
+        ceds:P000826 "EX12345"^^xsd:token
     ] ;
     pesc:schoolLevel pescSchoolLevels:Postsecondary ;
     ceterms:targetContactPoint [

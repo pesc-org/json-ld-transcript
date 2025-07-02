@@ -279,7 +279,7 @@
     sh:path rdf:type .
 
 <organizationidentifiershapeHasOrganizationIdentificationSystem> a sh:PropertyShape ;
-    sh:in ( ceds:NI000827151968 pescIdentifierTypes:OPEid pescIdentifierTypes:PSISid ) ;
+    sh:in ( ceds:NI000827151968 pescIdentifierTypes:OPEid pescIdentifierTypes:PSISid pescIdentifierTypes:GEOCode ) ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Has Organization Identification System"@en-US ;
