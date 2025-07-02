@@ -82,6 +82,8 @@
     pesc:licensure <https://example.edu/licensure/1> ;
     ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
     ceds:P000448 "eng" ; # Instruction language
+    pesc:overrideSchoolCourseNumber "101" ; 
+    pesc:courseOverrideSchool  <https://example.edu/Desintation> ; 
 .
 
 <https://example.edu/CourseSection/001> a ceds:C200332 ;
