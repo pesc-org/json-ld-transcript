@@ -247,6 +247,7 @@
     sh:property <organizationidentifiershapeHasOrganizationIdentificationSystem>,
         <organizationidentifiershapeOrganizationIdentifier>,
         <organizationidentifiershapeType> ;
+    sh:severity sh:Info ;
     sh:targetObjectsOf ceds:P600502 .
 
 <accreditationshapeAccrediationBodyCode> a sh:PropertyShape ;

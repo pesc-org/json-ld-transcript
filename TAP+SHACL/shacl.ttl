@@ -147,6 +147,7 @@
     rdfs:label "Organization Identifier"@en ;
     rdfs:comment "Normally type will be ceds:C200252"@en ;
     sh:closed false ;
+    sh:severity sh:Info ;
     sh:targetObjectsOf ceds:P600502 .
 
 <PersonIdentifierShape> a sh:NodeShape ;
