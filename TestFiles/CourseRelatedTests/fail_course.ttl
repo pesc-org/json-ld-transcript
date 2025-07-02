@@ -55,7 +55,8 @@
     pesc:proficiency "prof1" ; # wrong node type
     ceds:P600267 "Section 1" ; # has Section should be IRI/BNode
     ceds:P000448 "english" ; # invalid ISO 639-2 Instruction language
-
+    pesc:overrideSchoolCourseNumber "101","123" ; # should not be repeated
+    pesc:courseOverrideSchool "Example College" ; # wrong node kind, wrong value shape
 .
 
 <https://example.edu/Desintation#id> a ceds:C200239 ;
