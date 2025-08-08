@@ -217,12 +217,14 @@
         rr:predicate ceds:P000826 ; # organizationIdentifier
         rr:objectMap [ 
             rr:template "{LocalOrganizationIDQualifier}:{LocalOrganizationIDCode}";
-            rr:datatype xsd:string ;
+            rr:datatype xsd:token ;
         ]
     ] ;
     rr:predicateObjectMap [
             rr:predicate ceds:P000827 ; # hasOrganizationIdentifierSystem
-            rr:object pesc:LocalIdentifier, ceds:NI000827151968 ; # other
+# To do: fix shacl to allow multiple Org Id systems & add pesc:LocalIdentifier
+# should be -->            rr:object pesc:LocalIdentifier, ceds:NI000827151968 ; # other
+            rr:object ceds:NI000827151968 ; # other
     ]
 .
 
@@ -241,11 +243,17 @@
     ] ;
     rr:predicateObjectMap [ 
         rr:predicate ceds:P000826 ; # organizationIdentifier
-        rr:objectMap [ rml:reference "." ; ]
+        rr:objectMap [ 
+            rml:reference "." ; 
+            rr:datatype xsd:token
+        ]
     ] ;
     rr:predicateObjectMap [
             rr:predicate ceds:P000827 ; # hasOrganizationIdentifierSystem
-            rr:object pesc:FICE, ceds:NI000827151968 ; # other
+# should be -->            rr:object pesc:FICE, ceds:NI000827151968 ; # other
+# to do: fix shacl to allow multiple Id systems and allow pesc:FICE
+        rr:object ceds:NI000827151968 ; # other
+
     ]
 .
 
@@ -269,7 +277,10 @@
      ] ;
     rr:predicateObjectMap [ 
         rr:predicate pesc:url ;
-        rr:objectMap [ rml:reference "URL/URLAddress"; ]
+        rr:objectMap [ 
+            rml:reference "URL/URLAddress";
+            rr:datatype xsd:anyURI 
+        ]
      ] ;
     rr:predicateObjectMap [
         rr:predicate pesc:phone ;
@@ -293,7 +304,11 @@
     ] ;
     rr:predicateObjectMap [
         rr:predicate pesc:attentionLine ;
-        rr:objectMap [ rml:reference "Address/AttentionLine" ]
+        rr:objectMap [ 
+            rml:reference "Address/AttentionLine" ;
+            rr:language "en-us" 
+
+        ]
     ] ;
     rr:predicateObjectMap [
         rr:predicate ceterms:address ;
@@ -356,19 +371,31 @@
     ] ;
     rr:predicateObjectMap [
         rr:predicate ceterms:streetAddress ;
-        rr:objectMap [rml:reference "AddressLine"]
+        rr:objectMap [
+            rml:reference "AddressLine" ;
+            rr:language "en-us" 
+        ]
     ] ;
     rr:predicateObjectMap [
         rr:predicate ceterms:addressLocality ;
-        rr:objectMap [rml:reference "City"]
+        rr:objectMap [
+            rml:reference "City"; 
+            rr:language "en-us" 
+        ]
     ] ;
     rr:predicateObjectMap [
         rr:predicate ceterms:addressRegion ;
-        rr:objectMap [rml:reference "StateProvinceCode"]
+        rr:objectMap [
+            rml:reference "StateProvinceCode"; 
+            rr:datatype xsd:token ;
+        ]
     ] ;
     rr:predicateObjectMap [
         rr:predicate ceterms:postalCode ;
-        rr:objectMap [rml:reference "PostalCode"]
+        rr:objectMap [
+            rml:reference "PostalCode";
+            rr:datatype xsd:token
+        ]
     ] ;
     rr:predicateObjectMap [
         rr:predicate ceterms:addressCountry ;
@@ -387,7 +414,7 @@
         rml:iterator "//Person"
     ] ;
     rr:subjectMap [
-        rr:template "https://example.edu/Person/{SSN}" ; # works in this instance, avoids BNode
+        rr:template "https://example.edu/{SSN}" ; # works in this instance, avoids BNode
         rr:class ceds:C200275 ; # PS Student
     ] ;
     rr:predicateObjectMap [ 
@@ -503,6 +530,14 @@
             rr:template "https://pesc.org/vocabs/StudentLevelCodes#{//StudentLevelCode}"
         ]
     ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:hasAchievement ;
+        rr:objectMap [
+            rr:parentTriplesMap :CourseAchievementTM ;
+       ]
+    ] ;
+
+
 
 # Age is not in new version
 
@@ -515,7 +550,18 @@
 #    «ceds:NI001075173048» (State)
 # pesc:agencyAssignedID
 # 
-# pesc:hasAchievement
+# pesc:hasAchievement for:
+# to do: 
+# Achievements
+# - Tests
+# - Licensure
+# - Additional
+# ? link to Summaries for
+# - Award
+# - Program
+# - Academic
+# - Session
+# GPA 
 # pesc:cohortGraduationYear
 # 
 .
@@ -541,7 +587,7 @@
         rr:predicate ceds:P000212 ; # Name Prefix
         rr:objectMap [
             rml:reference "NamePrefix" ;
-            rr:datatype xsd:token ;
+            rr:datatype xsd:token ;  
         ]
     ] ;
     rr:predicateObjectMap [ 
@@ -569,7 +615,7 @@
         rr:predicate ceds:P000121 ;	#Name Suffix
         rr:objectMap [
             rml:reference "NameSuffix" ;
-            rr:datatype xsd:token ;
+#            rr:datatype xsd:token ;  TO DO: fix TAP2SHACL to handle enumerations of typed literals
         ]
     ] ;
     rr:predicateObjectMap [ 

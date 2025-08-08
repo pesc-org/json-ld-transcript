@@ -28,7 +28,7 @@
 
 _:0 a ceds:C200377;
   ceds:P000115 "Test"^^xsd:token;
-  ceds:P000121 "IV"^^xsd:token;
+  ceds:P000121 "IV";
   ceds:P000172 "Speede"^^xsd:token;
   ceds:P000184 "Record"^^xsd:token, "Test"^^xsd:token;
   pesc:nameCode pescNameCodes:Legal .
@@ -58,28 +58,28 @@ _:4 a ceds:C200293;
   pesc:languageProficiency pescLanguageProficiencyCodes:Excellent .
 
 _:5 a ceterms:ContactPoint;
-  pesc:attentionLine "Jane Shaugness";
+  pesc:attentionLine "Jane Shaugness"@en-us;
   pesc:email "Registrar@mail.utexas.edu";
   pesc:faxPhone _:Phone_512_4757600;
   pesc:phone _:Phone_512_4757638;
-  pesc:url "www.utexas.edu";
+  pesc:url "www.utexas.edu"^^xsd:anyURI;
   ceterms:address _:6 .
 
 _:6 a ceterms:PostalAddress;
-  ceterms:addressLocality "Austin";
-  ceterms:addressRegion "TX";
-  ceterms:postalCode "78712";
-  ceterms:streetAddress "Office of the Registrar" .
+  ceterms:addressLocality "Austin"@en-us;
+  ceterms:addressRegion "TX"^^xsd:token;
+  ceterms:postalCode "78712"^^xsd:token;
+  ceterms:streetAddress "Office of the Registrar"@en-us .
 
 _:7 a ceterms:ContactPoint;
   pesc:email "TestSpeede@aol.com";
   ceterms:address _:8 .
 
 _:8 a ceterms:PostalAddress;
-  ceterms:addressLocality "Austin";
-  ceterms:addressRegion "TX";
-  ceterms:postalCode "78211";
-  ceterms:streetAddress "1223 University Dr" .
+  ceterms:addressLocality "Austin"@en-us;
+  ceterms:addressRegion "TX"^^xsd:token;
+  ceterms:postalCode "78211"^^xsd:token;
+  ceterms:streetAddress "1223 University Dr"@en-us .
 
 _:CS_315K_1_2005-09-01 a ceds:C200332;
   ceds:P000054 "2005-09-01"^^xsd:date;
@@ -88,16 +88,16 @@ _:CS_315K_1_2005-09-01 a ceds:C200332;
   ceds:P600108 <https://example.edu/sites/Main%20Campus> .
 
 _:FICE_001506 a ceds:C200252;
-  ceds:P000826 "001506";
-  ceds:P000827 ceds:NI000827151968, pesc:FICE .
+  ceds:P000826 "001506"^^xsd:token;
+  ceds:P000827 ceds:NI000827151968 .
 
 _:LocalID_FL_1234 a ceds:C200252;
-  ceds:P000826 "FL:1234";
-  ceds:P000827 ceds:NI000827151968, pesc:LocalIdentifier .
+  ceds:P000826 "FL:1234"^^xsd:token;
+  ceds:P000827 ceds:NI000827151968 .
 
 _:LocalID_TX_123456 a ceds:C200252;
-  ceds:P000826 "TX:123456";
-  ceds:P000827 ceds:NI000827151968, pesc:LocalIdentifier .
+  ceds:P000826 "TX:123456"^^xsd:token;
+  ceds:P000827 ceds:NI000827151968 .
 
 _:PersonID_100000000 a ceds:C200291;
   ceds:P001075 ceds:NI001075173047;
@@ -115,8 +115,31 @@ ex:050330001 a pesc:CollegeTranscript;
   pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord;
   pesc:requestTrackingID "23456778009";
   pesc:source ex:TX.123456;
-  pesc:student <https://example.edu/Person/100000000>;
+  pesc:student ex:100000000;
   pesc:transmissionType pescTransmissionTypes:Original .
+
+ex:100000000 a ceds:C200275;
+  ceds:P000033 "1967-07-14"^^xsd:date;
+  ceds:P600049 _:PersonID_100000000;
+  ceds:P600052 _:2, _:3, _:4;
+  ceds:P600336 _:0;
+  pesc:deceasedIndicator true;
+  pesc:genderCode pescGenderCodes:Female;
+  pesc:hasAchievement <https://example.edu/CourseAchievement/301M>, <https://example.edu/CourseAchievement/303C>,
+    <https://example.edu/CourseAchievement/305G>, <https://example.edu/CourseAchievement/309K>,
+    <https://example.edu/CourseAchievement/310>, <https://example.edu/CourseAchievement/310L>,
+    <https://example.edu/CourseAchievement/311>, <https://example.edu/CourseAchievement/315K>,
+    <https://example.edu/CourseAchievement/316K>, <https://example.edu/CourseAchievement/320K>,
+    <https://example.edu/CourseAchievement/321>, <https://example.edu/CourseAchievement/327L>,
+    <https://example.edu/CourseAchievement/344D>, <https://example.edu/CourseAchievement/346K>,
+    <https://example.edu/CourseAchievement/350L>, <https://example.edu/CourseAchievement/357M>,
+    <https://example.edu/CourseAchievement/358>, <https://example.edu/CourseAchievement/365N>,
+    <https://example.edu/CourseAchievement/387J>, <https://example.edu/CourseAchievement/388>,
+    <https://example.edu/CourseAchievement/388C>, <https://example.edu/CourseAchievement/389K>,
+    <https://example.edu/CourseAchievement/406>, <https://example.edu/CourseAchievement/407>;
+  pesc:hasResidency _:1;
+  pesc:studentLevel pescStudentLevelCodes:CollegeFirstYear;
+  ceterms:targetContactPoint _:7 .
 
 <https://example.edu/CourseAchievement/301M> a ceds:C200346;
   ceds:P000200 3.0;
@@ -377,17 +400,6 @@ ex:050330001 a pesc:CollegeTranscript;
 ex:FL.1234 a ceds:C200239;
   ceds:P600502 _:FICE_001506, _:LocalID_FL_1234;
   ceterms:name "Miami Dade College"@en-us .
-
-<https://example.edu/Person/100000000> a ceds:C200275;
-  ceds:P000033 "1967-07-14"^^xsd:date;
-  ceds:P600049 _:PersonID_100000000;
-  ceds:P600052 _:2, _:3, _:4;
-  ceds:P600336 _:0;
-  pesc:deceasedIndicator true;
-  pesc:genderCode pescGenderCodes:Female;
-  pesc:hasResidency _:1;
-  pesc:studentLevel pescStudentLevelCodes:CollegeFirstYear;
-  ceterms:targetContactPoint _:7 .
 
 ex:TX.123456 a ceds:C200239;
   ceds:P600502 _:LocalID_TX_123456;
