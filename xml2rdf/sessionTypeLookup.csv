@@ -1,0 +1,16 @@
+PESC,URI
+FullYear,http://ceds.ed.gov/terms#NI000254115787
+Semester,http://ceds.ed.gov/terms#NI000254116843
+Trimester,http://ceds.ed.gov/terms#NI000254117085
+Quarter,http://ceds.ed.gov/terms#NI000254116671
+Quinmester,http://ceds.ed.gov/terms#NI000254116676
+MiniTerm,http://ceds.ed.gov/terms#NI000254116125
+SummerSession,http://ceds.ed.gov/terms#NI000254116976
+Intersession,http://ceds.ed.gov/terms#NI000254115964
+LongSession,http://ceds.ed.gov/terms#NI000254116047
+FallSession,https://pesc.org/vocabs/SessionTypes#FallSession
+FourOneFourPlan,https://pesc.org/vocabs/SessionTypes#FourOneFourPlan
+Continuous,https://pesc.org/vocabs/SessionTypes#Continuous
+DiffersByProgram,https://pesc.org/vocabs/SessionTypes#DiffersByProgram
+Other,https://pesc.org/vocabs/SessionTypes#Other
+TwelveMonth,http://ceds.ed.gov/terms#NI000254117090

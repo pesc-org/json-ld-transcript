@@ -1,0 +1,7 @@
+PESC,URI
+RepeatCounted,http://ceds.ed.gov/terms#NI000065116744
+RepeatNotCounted,http://ceds.ed.gov/terms#NI000065116745
+ReplacementCounted,http://ceds.ed.gov/terms#NI000065116748
+ReplacedNotCounted,http://ceds.ed.gov/terms#NI000065116747
+RepeatOtherInstitution,http://ceds.ed.gov/terms#NI000065116746
+NotCountedOther,http://ceds.ed.gov/terms#NI000065116260

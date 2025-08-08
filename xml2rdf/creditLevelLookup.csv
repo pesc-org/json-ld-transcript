@@ -1,0 +1,12 @@
+PESC,URI
+Undergraduate,http://ceds.ed.gov/terms#NI001304117105
+LowerDivision,http://ceds.ed.gov/terms#NI001304116050
+UpperDivision,http://ceds.ed.gov/terms#NI001304117129
+Vocational,http://ceds.ed.gov/terms#NI001304117161
+TechnicalPreparatory,http://ceds.ed.gov/terms#NI001304117014
+Graduate,http://ceds.ed.gov/terms#NI001304115808
+Professional,http://ceds.ed.gov/terms#NI001304116619
+Dual,http://ceds.ed.gov/terms#NI001304115600
+Grade13,https://pesc.org/vocabs/CreditLevels#Grade13
+DualGraduateProfessional,https://pesc.org/vocabs/CreditLevels#DualGraduateUndergraduate
+GraduateProfessional,http://ceds.ed.gov/terms#NI001304115810

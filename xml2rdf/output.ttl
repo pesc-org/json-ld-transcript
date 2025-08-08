@@ -1,0 +1,796 @@
+@prefix : <https://maps.pjjk/pesc/Transcript/PESCXML2RDF#> .
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceterms: <https://purl.org/ctdl/terms/> .
+@prefix ex: <https://example.edu/> .
+@prefix owl: <http://www.w3.org/2002/07/owl> .
+@prefix pesc: <https://pesc.org/terms/> .
+@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
+@prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
+@prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
+@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
+@prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
+@prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
+@prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
+@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
+@prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
+@prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
+@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#> .
+@prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+_:0 a ceds:C200377;
+  ceds:P000115 "Test"^^xsd:token;
+  ceds:P000121 "IV"^^xsd:token;
+  ceds:P000172 "Speede"^^xsd:token;
+  ceds:P000184 "Record"^^xsd:token, "Test"^^xsd:token;
+  pesc:nameCode pescNameCodes:Legal .
+
+_:1 a pesc:Residency;
+  pesc:country "United States of America";
+  pesc:countryCode "US";
+  pesc:county "Miami-Dade";
+  pesc:countyCode "016";
+  pesc:residencyStatusCode pescResidencyStatusCodes:Resident;
+  pesc:stateProvince "Florida";
+  pesc:stateProvinceCode "FL" .
+
+_:2 a ceds:C200293;
+  ceds:P000316 ceds:NI000316151877;
+  ceds:P000317 "RUS";
+  pesc:languageProficiency pescLanguageProficiencyCodes:Excellent .
+
+_:3 a ceds:C200293;
+  ceds:P000316 ceds:NI000316151878;
+  ceds:P000317 "RUS";
+  pesc:languageProficiency pescLanguageProficiencyCodes:Poor .
+
+_:4 a ceds:C200293;
+  ceds:P000316 ceds:NI000316151874;
+  ceds:P000317 "ENG";
+  pesc:languageProficiency pescLanguageProficiencyCodes:Excellent .
+
+_:5 a ceterms:ContactPoint;
+  pesc:attentionLine "Jane Shaugness";
+  pesc:email "Registrar@mail.utexas.edu";
+  pesc:faxPhone _:Phone_512_4757600;
+  pesc:phone _:Phone_512_4757638;
+  pesc:url "www.utexas.edu";
+  ceterms:address _:6 .
+
+_:6 a ceterms:PostalAddress;
+  ceterms:addressLocality "Austin";
+  ceterms:addressRegion "TX";
+  ceterms:postalCode "78712";
+  ceterms:streetAddress "Office of the Registrar" .
+
+_:7 a ceterms:ContactPoint;
+  pesc:email "TestSpeede@aol.com";
+  ceterms:address _:8 .
+
+_:8 a ceterms:PostalAddress;
+  ceterms:addressLocality "Austin";
+  ceterms:addressRegion "TX";
+  ceterms:postalCode "78211";
+  ceterms:streetAddress "1223 University Dr" .
+
+_:CS_315K_1_2005-09-01 a ceds:C200332;
+  ceds:P000054 "2005-09-01"^^xsd:date;
+  ceds:P000059 "2005-12-07"^^xsd:date;
+  ceds:P001315 "1";
+  ceds:P600108 <https://example.edu/sites/Main%20Campus> .
+
+_:FICE_001506 a ceds:C200252;
+  ceds:P000826 "001506";
+  ceds:P000827 ceds:NI000827151968, pesc:FICE .
+
+_:LocalID_FL_1234 a ceds:C200252;
+  ceds:P000826 "FL:1234";
+  ceds:P000827 ceds:NI000827151968, pesc:LocalIdentifier .
+
+_:LocalID_TX_123456 a ceds:C200252;
+  ceds:P000826 "TX:123456";
+  ceds:P000827 ceds:NI000827151968, pesc:LocalIdentifier .
+
+_:PersonID_100000000 a ceds:C200291;
+  ceds:P001075 ceds:NI001075173047;
+  ceds:P001572 "100000000" .
+
+_:Phone_512_4757600 a pesc:Phone;
+  pesc:phoneNumber "512-4757600" .
+
+_:Phone_512_4757638 a pesc:Phone;
+  pesc:phoneNumber "512-4757638" .
+
+ex:050330001 a pesc:CollegeTranscript;
+  pesc:createdDateTime "2005-02-02T10:04:29-05:00"^^xsd:dateTime;
+  pesc:destination ex:FL.1234;
+  pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord;
+  pesc:requestTrackingID "23456778009";
+  pesc:source ex:TX.123456;
+  pesc:student <https://example.edu/Person/100000000>;
+  pesc:transmissionType pescTransmissionTypes:Original .
+
+<https://example.edu/CourseAchievement/301M> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/301M-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/301M>;
+  pesc:inSession <https://example.edu/sessions/1989-01-1> .
+
+<https://example.edu/CourseAchievement/303C> a ceds:C200346;
+  ceds:P000064 42.0;
+  ceds:P000065 ceds:NI000065116745;
+  ceds:P000200 3.0;
+  ceds:P001300 "2001-03-03"^^xsd:date;
+  ceds:P001305 "2001-05-30"^^xsd:date;
+  pesc:courseGrade <https://example.edu/CourseGrade/303C-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/303C>;
+  pesc:inSession <https://example.edu/sessions/2001-01-2> .
+
+<https://example.edu/CourseAchievement/305G> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/305G-Grade-F>;
+  pesc:inCourse <https://example.edu/courses/305G>;
+  pesc:inSession <https://example.edu/sessions/1986-09-2> .
+
+<https://example.edu/CourseAchievement/309K> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/309K-Grade-F>;
+  pesc:inCourse <https://example.edu/courses/309K>;
+  pesc:inSession <https://example.edu/sessions/1986-09-2> .
+
+<https://example.edu/CourseAchievement/310> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/310-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/310>;
+  pesc:inSession <https://example.edu/sessions/2001-01-2> .
+
+<https://example.edu/CourseAchievement/310L> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/310L-Grade-B>;
+  pesc:inCourse <https://example.edu/courses/310L>;
+  pesc:inSession <https://example.edu/sessions/1986-09-2> .
+
+<https://example.edu/CourseAchievement/311> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/311-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/311>;
+  pesc:inSession <https://example.edu/sessions/2001-01-2> .
+
+<https://example.edu/CourseAchievement/315K> a ceds:C200346;
+  ceds:P000064 12.0;
+  ceds:P000065 ceds:NI000065116744;
+  ceds:P000200 3.0;
+  ceds:P001300 "2005-09-01"^^xsd:date;
+  ceds:P001305 "2005-12-02"^^xsd:date;
+  pesc:courseGrade <https://example.edu/CourseGrade/315K-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/315K>;
+  pesc:inSection _:CS_315K_1_2005-09-01;
+  pesc:inSession <https://example.edu/sessions/1985-09-1> .
+
+<https://example.edu/CourseAchievement/316K> a ceds:C200346;
+  ceds:P000065 ceds:NI000065116260;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/316K-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/316K>;
+  pesc:inSession <https://example.edu/sessions/1988-06-2> .
+
+<https://example.edu/CourseAchievement/320K> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/320K-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/320K>;
+  pesc:inSession <https://example.edu/sessions/1988-01-2> .
+
+<https://example.edu/CourseAchievement/321> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/321-Grade-B>;
+  pesc:inCourse <https://example.edu/courses/321>;
+  pesc:inSession <https://example.edu/sessions/2001-01-2> .
+
+<https://example.edu/CourseAchievement/327L> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/327L-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/327L>;
+  pesc:inSession <https://example.edu/sessions/1989-01-1> .
+
+<https://example.edu/CourseAchievement/344D> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/344D-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/344D>;
+  pesc:inSession <https://example.edu/sessions/1989-09-1> .
+
+<https://example.edu/CourseAchievement/346K> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/346K-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/346K>;
+  pesc:inSession <https://example.edu/sessions/1988-06-1> .
+
+<https://example.edu/CourseAchievement/350L> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/350L-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/350L>;
+  pesc:inSession <https://example.edu/sessions/1989-09-1> .
+
+<https://example.edu/CourseAchievement/357M> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/357M-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/357M>;
+  pesc:inSession <https://example.edu/sessions/1989-09-1> .
+
+<https://example.edu/CourseAchievement/358> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/358-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/358>;
+  pesc:inSession <https://example.edu/sessions/1989-09-1> .
+
+<https://example.edu/CourseAchievement/365N> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/365N-Grade-B>;
+  pesc:inCourse <https://example.edu/courses/365N>;
+  pesc:inSession <https://example.edu/sessions/2001-01-2> .
+
+<https://example.edu/CourseAchievement/387J> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/387J-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/387J>;
+  pesc:inSession <https://example.edu/sessions/2001-09-1> .
+
+<https://example.edu/CourseAchievement/388> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/388-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/388>;
+  pesc:inSession <https://example.edu/sessions/2001-09-1> .
+
+<https://example.edu/CourseAchievement/388C> a ceds:C200346;
+  ceds:P000065 ceds:NI000065116260;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/388C-Grade-CR>;
+  pesc:inCourse <https://example.edu/courses/388C>;
+  pesc:inSession <https://example.edu/sessions/2001-09-1> .
+
+<https://example.edu/CourseAchievement/389K> a ceds:C200346;
+  ceds:P000200 3.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/389K-Grade-B>;
+  pesc:inCourse <https://example.edu/courses/389K>;
+  pesc:inSession <https://example.edu/sessions/2001-09-1> .
+
+<https://example.edu/CourseAchievement/406> a ceds:C200346;
+  ceds:P000065 ceds:NI000065116260;
+  ceds:P000200 4.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/406-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/406>;
+  pesc:inSession <https://example.edu/sessions/1985-09-1> .
+
+<https://example.edu/CourseAchievement/407> a ceds:C200346;
+  ceds:P000065 ceds:NI000065116260;
+  ceds:P000200 4.0;
+  pesc:courseGrade <https://example.edu/CourseGrade/407-Grade-A>;
+  pesc:inCourse <https://example.edu/courses/407>;
+  pesc:inSession <https://example.edu/sessions/1986-01-1> .
+
+<https://example.edu/CourseGrade/301M-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/303C-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/305G-Grade-F> a pesc:Grade;
+  ceds:P000053 "F";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/309K-Grade-F> a pesc:Grade;
+  ceds:P000053 "F";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/310-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/310L-Grade-B> a pesc:Grade;
+  ceds:P000053 "B";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/311-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/315K-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/316K-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/320K-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/321-Grade-B> a pesc:Grade;
+  ceds:P000053 "B";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/327L-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/344D-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/346K-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/350L-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/357M-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25";
+  ceds:P001299 <https://pesc.org/vocabs/GradeStatusCodes#Completed> .
+
+<https://example.edu/CourseGrade/358-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/365N-Grade-B> a pesc:Grade;
+  ceds:P000053 "B";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/387J-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/388-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/388C-Grade-CR> a pesc:Grade;
+  ceds:P000053 "CR";
+  ceds:P001298 "501";
+  ceds:P001299 ceds:NI001299115324;
+  ceds:P001313 "Did very well." .
+
+<https://example.edu/CourseGrade/389K-Grade-B> a pesc:Grade;
+  ceds:P000053 "B";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/406-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+<https://example.edu/CourseGrade/407-Grade-A> a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+ex:FL.1234 a ceds:C200239;
+  ceds:P600502 _:FICE_001506, _:LocalID_FL_1234;
+  ceterms:name "Miami Dade College"@en-us .
+
+<https://example.edu/Person/100000000> a ceds:C200275;
+  ceds:P000033 "1967-07-14"^^xsd:date;
+  ceds:P600049 _:PersonID_100000000;
+  ceds:P600052 _:2, _:3, _:4;
+  ceds:P600336 _:0;
+  pesc:deceasedIndicator true;
+  pesc:genderCode pescGenderCodes:Female;
+  pesc:hasResidency _:1;
+  pesc:studentLevel pescStudentLevelCodes:CollegeFirstYear;
+  ceterms:targetContactPoint _:7 .
+
+ex:TX.123456 a ceds:C200239;
+  ceds:P600502 _:LocalID_TX_123456;
+  ceterms:name "THE UNIVERSITY OF TEXAS AT AUSTIN"@en-us;
+  ceterms:targetContactPoint _:5 .
+
+<https://example.edu/courses/301M> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "BIO";
+  ceds:P000068 "ECOLOGY, EVOLUTION, & SOCIETY";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "301M";
+  pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram;
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/303C> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "T D";
+  ceds:P000068 "TRAINING SPEAKING VOICE-CXS";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "303C";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/305G> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "M";
+  ceds:P000068 "ELEM FUNCTIONS-COORD GEOMETRY";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "305G";
+  ceds:P001420 "123";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/309K> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "HIS";
+  ceds:P000068 "WESTERN CIV IN MEDIEVAL TIMES";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "309K";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/310> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "S W";
+  ceds:P000068 "INTRO TO SOCL WORK & SOCL WELF";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "310";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/310L> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "GOV";
+  ceds:P000068 "AMERICAN GOVERNMENT";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "310L";
+  ceds:P001420 "310L";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/311> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "TLC";
+  ceds:P000068 "INFORMATION IN CYBERSPACE";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "311";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/315K> a ceds:C200328;
+  ceds:P000043 "12.1203";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000060 ceds:NI000060115254;
+  ceds:P000066 "HIS";
+  ceds:P000068 "United States History 1";
+  ceds:P000448 "apa";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001312 ceds:NI001312127894;
+  ceds:P001314 "315K";
+  ceds:P001420 "HIST105";
+  ceds:P600267 _:CS_315K_1_2005-09-01;
+  pesc:agencyCourseID "FL:HIS020201";
+  pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram;
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/316K> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "E";
+  ceds:P000068 "AMERICAN LITERATURE 1";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "316K";
+  ceds:P001420 "ENG 2633";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/320K> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "GOV";
+  ceds:P000068 "AMER CONSTITUTIONAL DEVEL";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "320K";
+  ceds:P001420 "320K";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/321> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "E";
+  ceds:P000068 "SHAKESPEARE: SELECTED PLAYS";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "321";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/327L> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "GOV";
+  ceds:P000068 "PUBLIC OPINION AND AMER POL";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "327L";
+  pesc:agencyCourseID "FL:POL020201";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/344D> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "HIS";
+  ceds:P000068 "ENGLAND IN THE MIDDLE AGES";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "344D";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/346K> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "HIS";
+  ceds:P000068 "LATIN AMERICA BEFORE 1810";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303115519;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "346K";
+  ceds:P001420 " ";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/350L> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "HIS";
+  ceds:P000068 "FIRST LADIES IN THE 20TH CEN";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "350L";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/357M> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "GOV";
+  ceds:P000068 "JURISPRUDENCE";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "357M";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/358> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "GOV";
+  ceds:P000068 "INTRO TO PUBLIC ADMINISTRATION";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "358";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/365N> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "GOV";
+  ceds:P000068 "2-IMMIGRATION AND COMPAR POLIT";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304117129;
+  ceds:P001314 "365N";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/387J> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "SOC";
+  ceds:P000068 "FUNDAMENTALS OF RESEARCH METHS";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304115808;
+  ceds:P001314 "387J";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/388> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "PHL";
+  ceds:P000068 "CONFERENCE COURSE";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304115808;
+  ceds:P001314 "388";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/388C> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "PHL";
+  ceds:P000068 "CONFERENCE COURSE";
+  ceds:P001298 "501";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304115808;
+  ceds:P001314 "388C";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/389K> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 3.0;
+  ceds:P000066 "SOC";
+  ceds:P000068 "3-HUMAN MORTALITY";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304115808;
+  ceds:P001314 "389K";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/406> a ceds:C200328;
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 4.0;
+  ceds:P000066 "SPN";
+  ceds:P000068 "BEGINNING SPANISH 1";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001312 ceds:NI001312127892;
+  ceds:P001314 "406";
+  ceds:P001420 "SPAN 105";
+  ceds:P001518 ceds:NI001518118427;
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/courses/407> a ceds:C200328;
+  ceds:P000043 "12.1234";
+  ceds:P000057 ceds:NI000057116841;
+  ceds:P000058 4.0;
+  ceds:P000060 ceds:NI000060116257;
+  ceds:P000066 "SPN";
+  ceds:P000068 "BEGINNING SPANISH 2";
+  ceds:P001298 "25";
+  ceds:P001303 ceds:NI001303116728;
+  ceds:P001304 ceds:NI001304116050;
+  ceds:P001314 "407";
+  ceds:P001420 "SPAN 106";
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/programs/ENGINERING> a ceds:C200331;
+  ceterms:name "ENGINERING"@en-us;
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/programs/FINE%20ARTS> a ceds:C200331;
+  ceterms:name "FINE ARTS"@en-us;
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/programs/INTERNATIONAL%20EXCHANGE> a ceds:C200331;
+  ceterms:name "INTERNATIONAL EXCHANGE"@en-us;
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/programs/LIBERAL%20ARTS> a ceds:C200331;
+  ceterms:name "LIBERAL ARTS"@en-us;
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/programs/NATURAL%20SCIENCES> a ceds:C200331;
+  ceds:P000043 "12.3456";
+  pesc:academicProgramType <https://pesc.org/vocabs/AcademicProgramTypes#Major>;
+  ceterms:name "NATURAL SCIENCES"@en-us;
+  ceterms:offeredBy ex:TX.123456 .
+
+<https://example.edu/sessions/1985-09-1> a ceds:C200245;
+  ceds:P000252 "1985-09"^^xsd:gYearMonth;
+  pesc:sessionDesignatorSuffix "1" .
+
+<https://example.edu/sessions/1986-01-1> a ceds:C200245;
+  ceds:P000252 "1986-01"^^xsd:gYearMonth;
+  pesc:sessionDesignatorSuffix "1" .
+
+<https://example.edu/sessions/1986-09-1> a ceds:C200245;
+  ceds:P000252 "1986-09"^^xsd:gYearMonth;
+  ceds:P000254 ceds:NI000254116843;
+  pesc:sessionDesignatorSuffix "1";
+  ceterms:name "FALL SEMESTER 1986"@en-us .
+
+<https://example.edu/sessions/1986-09-2> a ceds:C200245;
+  ceds:P000252 "1986-09"^^xsd:gYearMonth;
+  ceds:P000254 ceds:NI000254116843;
+  pesc:sessionDesignatorSuffix "2";
+  ceterms:name "FALL SEMESTER 1986"@en-us .
+
+<https://example.edu/sessions/1988-01-2> a ceds:C200245;
+  ceds:P000252 "1988-01"^^xsd:gYearMonth;
+  ceds:P000254 ceds:NI000254116843;
+  pesc:sessionDesignatorSuffix "2";
+  ceterms:name "SPRING SEMESTER 1988"@en-us .
+
+<https://example.edu/sessions/1988-06-1> a ceds:C200245;
+  ceds:P000252 "1988-06"^^xsd:gYearMonth;
+  ceds:P000254 ceds:NI000254116976;
+  pesc:sessionDesignatorSuffix "1";
+  ceterms:name "SUMMER SEMESTER 1988"@en-us .
+
+<https://example.edu/sessions/1988-06-2> a ceds:C200245;
+  ceds:P000252 "1988-06"^^xsd:gYearMonth;
+  pesc:sessionDesignatorSuffix "2" .
+
+<https://example.edu/sessions/1989-01-1> a ceds:C200245;
+  ceds:P000252 "1989-01"^^xsd:gYearMonth;
+  ceds:P000254 ceds:NI000254116843;
+  pesc:sessionDesignatorSuffix "1";
+  ceterms:name "SPRING SEMESTER 1989"@en-us .
+
+<https://example.edu/sessions/1989-09-1> a ceds:C200245;
+  ceds:P000252 "1989-09"^^xsd:gYearMonth;
+  ceds:P000254 ceds:NI000254116843;
+  pesc:sessionDesignatorSuffix "1";
+  ceterms:name "FALL SEMESTER 1989"@en-us .
+
+<https://example.edu/sessions/2001-01-1> a ceds:C200245;
+  ceds:P000252 "2001-01"^^xsd:gYearMonth;
+  ceds:P000254 ceds:NI000254116843;
+  pesc:sessionDesignatorSuffix "1";
+  ceterms:name "SPRING SEMESTER 2001"@en-us .
+
+<https://example.edu/sessions/2001-01-2> a ceds:C200245;
+  ceds:P000251 "2001-03-03"^^xsd:date;
+  ceds:P000252 "2001-01"^^xsd:gYearMonth;
+  ceds:P000253 "2001-05-30"^^xsd:date;
+  ceds:P000254 ceds:NI000254116843;
+  pesc:sessionDesignatorSuffix "2";
+  pesc:sessionSchoolYear "2001-2002";
+  ceterms:name "SPRING SEMESTER 2001"@en-us .
+
+<https://example.edu/sessions/2001-09-1> a ceds:C200245;
+  ceds:P000252 "2001-09"^^xsd:gYearMonth;
+  ceds:P000254 ceds:NI000254116843;
+  pesc:sessionDesignatorSuffix "1";
+  ceterms:name "FALL SEMESTER 2001"@en-us .
+
+<https://example.edu/sites/Main%20Campus> a ceds:C200333;
+  ceds:P001309 "Main Campus";
+  ceds:P001310 ceds:NI001310116323 .

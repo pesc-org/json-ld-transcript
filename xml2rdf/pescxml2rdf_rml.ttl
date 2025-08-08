@@ -1,0 +1,1395 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://maps.pjjk/pesc/Transcript/PESCXML2RDF#> . # does not resolve
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceterms: <https://purl.org/ctdl/terms/> .
+@prefix pesc: <https://pesc.org/terms/> .
+@prefix pescCourseApplicabilityCodes:	<https://pesc.org/vocabs/CourseApplicabilityCodes#> .
+@prefix pescCourseLevels:	<https://pesc.org/vocabs/CourseLevels#> .
+@prefix pescCreditBasis:	<https://pesc.org/vocabs/CreditBasis#> .
+@prefix pescCreditLevels:	<https://pesc.org/vocabs/CreditLevels#> .
+@prefix pescCreditUnits:	<https://pesc.org/vocabs/CreditUnits#> .
+@prefix pescDocumentCompleteCodes:	<https://pesc.org/vocabs/DocumentCompleteCodes#> .
+@prefix pescDocumentOfficialCodes:	<https://pesc.org/vocabs/DocumentOfficialCodes#> .
+@prefix pescDocumentProcessCodes:	<https://pesc.org/vocabs/DocumentProcessCodes#> .
+@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescGenderCodes:	<https://pesc.org/vocabs/Gender#> .
+@prefix pescLanguageProficiencyCodes:	<https://pesc.org/vocabs/LanguageProficiencyCodes#> .
+@prefix pescLanguageUsageCodes:	<https://pesc.org/vocabs/LanguageUsageCodes#> .
+@prefix pescNameCodes:	<https://pesc.org/vocabs/NameCodes#> .
+@prefix pescResidencyStatusCodes:	<https://pesc.org/vocabs/ResidencyStatusCodes#> .
+@prefix pescStudentLevelCodes:	<https://pesc.org/vocabs/StudentLevelCodes#> .
+@prefix pescTransmissionTypes:	<https://pesc.org/vocabs/TransmissionTypes#> .
+@prefix ex: <https://example.edu/> .
+
+
+# Attempt to map from example XML in PESC College Transcript Implementation Guide to RDF using RML / R2RML
+# One Triples map for each shape / XML node, embed predicate-object maps unless they are shared.
+
+# Phil Barker, Jan-Aug 2025
+# Status: Experimental, Incomplete
+
+############################
+# College Transcript Map   #
+############################
+
+:CollegeTranscriptTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "ColTrn:CollegeTranscript"
+    ] ;
+    rr:subjectMap [    
+        rr:template "https://example.edu/{TransmissionData/DocumentID}" ;
+        rr:class pesc:CollegeTranscript
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:documentTypeCode ;
+        rr:objectMap [rr:template "https://pesc.org/vocabs/DocumentTypeCodes#{TransmissionData/DocumentTypeCode}" ]        
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:transmissionType ;
+        rr:objectMap [rr:template "https://pesc.org/vocabs/TransmissionTypes#{TransmissionData/TransmissionType}" ]        
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:createdDateTime ;
+        rr:objectMap [
+            rml:reference "TransmissionData/CreatedDateTime" ;
+            rr:datatype xsd:dateTime ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:destination ;
+        rr:objectMap [
+            rr:parentTriplesMap :DestinationOrganizationMap ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        a rr:PredicateObjectMap ;
+        rr:predicate pesc:source ;
+        rr:objectMap [
+            rr:parentTriplesMap :SourceOrganizationMap ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        a rr:PredicateObjectMap ;
+        rr:predicate pesc:documentProcessCode ;
+        rr:objectMap [ rr:template "https://pesc.org/vocabs/DocumentProcessCodes#{TransmissionData/DocumentProcessCode}" ] ;
+    ] ;
+    rr:predicateObjectMap [
+        a rr:PredicateObjectMap ;
+        rr:predicate pesc:documentOfficialCode ;
+        rr:objectMap [ rr:template "https://pesc.org/vocabs/DocumentOfficialCodes#{TransmissionData/DocumentOfficialCode}" ] ;
+    ] ;
+    rr:predicateObjectMap [
+        a rr:PredicateObjectMap ;
+        rr:predicate pesc:documentCompleteCode ;
+        rr:objectMap [ rr:template "https://pesc.org/vocabs/DocumentCompleteCodes##{TransmissionData/DocumentCompleteCode}" ] ;
+    ] ;
+    rr:predicateObjectMap [
+        a rr:PredicateObjectMap ;
+        rr:predicate pesc:requestTrackingID ;
+        rr:objectMap [ rml:reference "TransmissionData/RequestTrackingID" ] ;
+    ] ;
+    rr:predicateObjectMap [
+        a rr:PredicateObjectMap ;
+        rr:predicate pesc:student ;
+        rr:objectMap [ 
+            rr:parentTriplesMap :PersonTM ;
+            rr:joinCondition [
+                rr:child "Student/Person/*";
+                rr:parent "*";
+            ]
+         ] ;
+    ] ;
+
+# to do: 
+# 
+# pesc:noteMessage
+# hasPart
+.
+
+# The following Maps to connect source and destination
+
+:DestinationOrganizationMap a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "ColTrn:CollegeTranscript/TransmissionData/Destination/Organization" 
+    ] ;
+    rr:subjectMap [
+        rr:template "https://example.edu/{LocalOrganizationID/LocalOrganizationIDQualifier}.{LocalOrganizationID/LocalOrganizationIDCode}" ;
+        rr:class ceds:C200239 ;
+    ]
+.
+
+:SourceOrganizationMap a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "ColTrn:CollegeTranscript/TransmissionData/Source/Organization" 
+    ] ;
+    rr:subjectMap [
+        rr:template "https://example.edu/{LocalOrganizationID/LocalOrganizationIDQualifier}.{LocalOrganizationID/LocalOrganizationIDCode}" ;
+        rr:class ceds:C200239
+    ]
+.
+
+###############################
+# Organization-related Maps #
+###############################
+
+:OrganizationTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Organization" 
+    ] ;
+    rr:subjectMap [
+        rr:template "https://example.edu/{LocalOrganizationID/LocalOrganizationIDQualifier}.{LocalOrganizationID/LocalOrganizationIDCode}" ;
+        rr:class ceds:C200239 ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P600502 ; # hasOrganizationIdentification
+        rr:objectMap [
+            rr:parentTriplesMap :LocalIdentifierTP ;
+            rr:joinCondition [
+                rr:child "LocalOrganizationID/*";
+                rr:parent "*";
+            ]
+        ]
+    ] , [
+        rr:predicate ceds:P600502 ; # hasOrganizationIdentification
+        rr:objectMap [
+            rr:parentTriplesMap :FICEIdentifierTP ;
+            rr:joinCondition [
+                rr:child "FICE";
+                rr:parent ".";
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:name ;
+        rr:objectMap [
+            rml:reference "OrganizationName";
+            rr:language "en-us" ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:targetContactPoint ;
+        rr:objectMap [
+            rr:parentTriplesMap :ContactTM ;
+            rr:joinCondition [
+                rr:child "Contacts/*";
+                rr:parent "*";
+            ]
+        ]
+    ] ;
+# to do:
+# elm:additionalNote
+# pesc:accreditation
+# pesc:schoolLevel
+# several identifier types, especially
+# - OPEid
+# - PSISid
+.
+
+# Organization Identifier Map / local identifier
+
+:LocalIdentifierTP a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Organization/LocalOrganizationID"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:template "LocalID_{LocalOrganizationIDQualifier}_{LocalOrganizationIDCode}" ;
+        rr:class ceds:C200252 ; # OrganizationIdentifier
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000826 ; # organizationIdentifier
+        rr:objectMap [ 
+            rr:template "{LocalOrganizationIDQualifier}:{LocalOrganizationIDCode}";
+            rr:datatype xsd:string ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+            rr:predicate ceds:P000827 ; # hasOrganizationIdentifierSystem
+            rr:object pesc:LocalIdentifier, ceds:NI000827151968 ; # other
+    ]
+.
+
+# Organization Identifier Map / FICE
+
+:FICEIdentifierTP a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "ColTrn:CollegeTranscript/TransmissionData//Organization/FICE"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:template "FICE_{.}" ;
+        rr:class ceds:C200252 ; # OrganizationIdentifier
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P000826 ; # organizationIdentifier
+        rr:objectMap [ rml:reference "." ; ]
+    ] ;
+    rr:predicateObjectMap [
+            rr:predicate ceds:P000827 ; # hasOrganizationIdentifierSystem
+            rr:object pesc:FICE, ceds:NI000827151968 ; # other
+    ]
+.
+
+##########################
+# Contact Related Maps #
+##########################
+
+:ContactTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Contacts"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:class ceterms:ContactPoint ;
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:email ;
+        rr:objectMap [ rml:reference "Email/EmailAddress"; ]
+     ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:url ;
+        rr:objectMap [ rml:reference "URL/URLAddress"; ]
+     ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:phone ;
+        rr:objectMap [
+            rr:parentTriplesMap :PhoneTM ;
+            rr:joinCondition [
+                rr:child "Phone/PhoneNumber" ;
+                rr:parent "PhoneNumber" ;
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:faxPhone ;
+        rr:objectMap [
+            rr:parentTriplesMap :PhoneTM ;
+            rr:joinCondition [
+                rr:child "FaxPhone/PhoneNumber" ;
+                rr:parent "PhoneNumber" ;
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:attentionLine ;
+        rr:objectMap [ rml:reference "Address/AttentionLine" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:address ;
+        rr:objectMap [
+            rr:parentTriplesMap :AddressTM ;
+            rr:joinCondition [
+                rr:child "Address/*" ;
+                rr:parent "*" ;
+            ]
+        ]
+    ] ;
+
+# New - not in XML and so not mapped:
+# ceterms:contactType
+
+## To Do:
+# elm:additionalNote
+.
+
+# Phone and Fax Numbers
+
+:PhoneTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Phone|//FaxPhone"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:class pesc:Phone ;
+        rr:template "Phone_{AreaCityCode}_{PhoneNumber}" ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:phoneNumber ;
+        rr:objectMap [
+            rr:template "{AreaCityCode}-{PhoneNumber}";
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:countryPrefixCode ;
+        rr:objectMap [rml:reference "CountryPrefixCode"]
+    ] ;
+        rr:predicateObjectMap [
+        rr:predicate pesc:phoneNumberExtension ;
+        rr:objectMap [rml:reference "PhoneNumberExtension"]
+    ] ;
+.
+
+# Addresses
+:AddressTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Address"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:class ceterms:PostalAddress ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:streetAddress ;
+        rr:objectMap [rml:reference "AddressLine"]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:addressLocality ;
+        rr:objectMap [rml:reference "City"]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:addressRegion ;
+        rr:objectMap [rml:reference "StateProvinceCode"]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:postalCode ;
+        rr:objectMap [rml:reference "PostalCode"]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:addressCountry ;
+        rr:objectMap [rml:reference "CountryCode"]
+    ] ;
+.
+
+##########################
+# Person Related Maps  #
+##########################
+
+:PersonTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Person"
+    ] ;
+    rr:subjectMap [
+        rr:template "https://example.edu/Person/{SSN}" ; # works in this instance, avoids BNode
+        rr:class ceds:C200275 ; # PS Student
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceterms:targetContactPoint ;
+        rr:objectMap [ 
+            rr:parentTriplesMap :ContactTM ;
+            rr:joinCondition [
+                rr:parent "*" ;
+                rr:child "Contacts/*"
+            ]
+         ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P000033 ; # birthdate
+        rr:objectMap [
+            rml:reference "Birth/BirthDate" ;
+            rr:datatype xsd:date ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:birthday ; 
+        rr:objectMap [
+            rml:reference "Birth/Birthday" ;
+            rr:datatype xsd:gMonthDay ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:birthyear ; 
+        rr:objectMap [
+            rml:reference "Birth/BirthYear" ;
+            rr:datatype xsd:gYear ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:birthCity ; 
+        rr:objectMap [
+            rml:reference "Birth/BirthCity" ;
+            rr:datatype xsd:gYear ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:birthStateProvinceCode ; 
+        rr:objectMap [
+            rml:reference "Birth/BirthStateProvinceCode" ;
+            rr:datatype xsd:gYear ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:birthCountry ; 
+        rr:objectMap [
+            rml:reference "Birth/BirthCountry" ;
+            rr:datatype xsd:gYear ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:genderCode ; 
+        rr:objectMap [
+            rr:template "https://pesc.org/vocabs/Gender#{Gender/GenderCode}" ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:deceasedIndicator ; 
+        rr:objectMap [
+            rml:reference "Deceased" ;
+            rr:datatype xsd:boolean ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P600049 ; # hasPersonIdentifier 
+        rr:objectMap [              # SSN
+            rr:parentTriplesMap :SSNTM ;
+            rr:joinCondition [
+                rr:parent "*" ;
+                rr:child "SSN/*"
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P600336 ; # Person name
+        rr:objectMap [            
+            rr:parentTriplesMap :PersonNameTM ;
+            rr:joinCondition [
+                rr:parent "*" ;
+                rr:child "Name/*"
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P600101 ; # Other person name
+        rr:objectMap [            
+            rr:parentTriplesMap :PersonNameTM ;
+            rr:joinCondition [
+                rr:parent "*" ;
+                rr:child "AlternateName/*"
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:hasResidency ; 
+        rr:objectMap [            
+            rr:parentTriplesMap :ResidencyTM ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P600052 ; # Has Person Language
+        rr:objectMap [
+            rr:parentTriplesMap :LanguageTM ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:studentLevel ;
+        rr:objectMap [
+            rr:template "https://pesc.org/vocabs/StudentLevelCodes#{//StudentLevelCode}"
+        ]
+    ] ;
+
+# Age is not in new version
+
+
+# to do: 
+# elm:additionalNote
+# ceds:P600049 (hasPersonIdent)
+#    «ceds:NI001075173041» (CanadianSIN)
+#    «ceds:NI001075173046» (School)
+#    «ceds:NI001075173048» (State)
+# pesc:agencyAssignedID
+# 
+# pesc:hasAchievement
+# pesc:cohortGraduationYear
+# 
+.
+
+# Person Name
+:PersonNameTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Person/Name | //Person/AlternateName"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:class ceds:C200377 ; # PersonName
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:nameCode ; 
+        rr:objectMap [
+            rr:template "https://pesc.org/vocabs/NameCodes#{NameCode}" ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P000212 ; # Name Prefix
+        rr:objectMap [
+            rml:reference "NamePrefix" ;
+            rr:datatype xsd:token ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P000115 ;	# First Name
+        rr:objectMap [
+            rml:reference "FirstName" ;
+            rr:datatype xsd:token ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P000184 ; # Middle Name
+        rr:objectMap [
+            rml:reference "MiddleName" ;
+            rr:datatype xsd:token ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P000172 ;	#Last Name
+        rr:objectMap [
+            rml:reference "LastName" ;
+            rr:datatype xsd:token ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P000121 ;	#Name Suffix
+        rr:objectMap [
+            rml:reference "NameSuffix" ;
+            rr:datatype xsd:token ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate ceds:P000121 ;	#Name Suffix
+        rr:objectMap [
+            rml:reference "NameTitle" ;
+            rr:datatype xsd:token ;
+        ]
+    ] ;
+    rr:predicateObjectMap [ 
+        rr:predicate pesc:compositeName ;	
+        rr:objectMap [
+            rml:reference "CompositeName" ;
+            rr:datatype xsd:token ;
+        ]
+    ] ;
+.
+
+# Person Identifiers
+
+:SSNTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//SSN"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:class ceds:C200291 ; # PersonIdentifier
+        rr:template "PersonID_{.}" ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001572 ;
+        rr:objectMap [rml:reference "." ];
+    ] ;
+        rr:predicateObjectMap [
+        rr:predicate ceds:P001075 ;
+        rr:object ceds:NI001075173047 ;
+    ] ;
+
+.
+
+# To do:
+# identifers for other types:
+#    «ceds:NI001075173041» (CanadianSIN)
+#    «ceds:NI001075173046» (School)
+#    «ceds:NI001075173048» (State)
+
+
+# Residency
+:ResidencyTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Residency"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:class pesc:Residency ; 
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:residencyStatusCode ;
+        rr:objectMap [
+            rr:template "https://pesc.org/vocabs/ResidencyStatusCodes#{ResidencyStatusCode}" 
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:stateProvince ;
+        rr:objectMap [rml:reference "StateProvince" ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:stateProvinceCode ;
+        rr:objectMap [rml:reference "StateProvinceCode" ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:county ;
+        rr:objectMap [rml:reference "County" ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:countyCode ;
+        rr:objectMap [rml:reference "CountyCode" ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:country ;
+        rr:objectMap [rml:reference "Country" ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:countryCode ;
+        rr:objectMap [rml:reference "CountryCode" ];
+    ] ;
+.
+
+# Person Language 
+:LanguageTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Person/Language"
+    ] ;
+    rr:subjectMap [
+        rr:termType rr:BlankNode ;
+        rr:class ceds:C200293 ; # Person Language
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000317 ; # Has ISO 639-2 Language Code
+        rr:objectMap [ rml:reference "LanguageCode" ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:languageProficiency ;
+        rr:objectMap [
+            rr:template "https://pesc.org/vocabs/LanguageProficiencyCodes#{LanguageProficiency}" 
+        ];
+    ] ;
+        rr:predicateObjectMap [
+        rr:predicate ceds:P000316 ; # Has Language Type (Usage)
+        rr:objectMap [
+            rr:parentTriplesMap :LanguageUsageCodeTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "LanguageUsage"
+            ]
+        ];
+    ] ;
+
+
+.
+
+#Language Usage Code Mapping
+
+:LanguageUsageCodeTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "languageUsageLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+###############################
+# Course-related Maps       #
+###############################
+
+:CourseTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Course"
+    ] ;
+    rr:subjectMap [
+        rr:template "https://example.edu/courses/{CourseNumber}" ;
+        rr:class ceds:C200328 ; # Postsecondary Course
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001303; # Has Course Credit Basis Type
+        rr:objectMap [
+            rr:parentTriplesMap :CreditBasisTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "CourseCreditBasis"
+            ]
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000057 ; # Has Course Credit Units
+        rr:objectMap [
+            rr:parentTriplesMap :CreditUnitsTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "CourseCreditUnits"
+            ]
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001304 ; # Has Course Credit Level Type
+        rr:objectMap [
+            rr:parentTriplesMap :CreditLevelTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "CourseCreditLevel"
+            ]
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000058 ; # Course Credit Value
+        rr:objectMap [ 
+            rml:reference "CourseCreditValue" ;
+            rr:datatype xsd:decimal ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001298 ; # Course Academic Grade Scale Code
+        rr:objectMap [ 
+            rml:reference "CourseAcademicGradeScaleCode" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:sced ; # Course SCED Code
+        rr:objectMap [ 
+            rml:reference "CourseSCEDCode" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001517 ; # Course Five Digit SCED Code
+        rr:objectMap [ 
+            rml:reference "CourseFiveDigitSCEDCode" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000043 ; #	Has Classification of Instructional Program Code
+        rr:objectMap [ 
+            rml:reference "CourseCIPCode" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate  ceds:P001414; # Has NCES College Course Map Code
+        rr:objectMap [ 
+            rml:reference "CourseNCESCode" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001312 ; # Has Course Level Type
+        rr:objectMap [
+            rr:parentTriplesMap :CourseLevelTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "CourseLevel"
+            ]
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000448 ; # Has Instruction Language
+        rr:objectMap [
+            rml:reference "LanguageOfInstruction/LanguageCode" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:courseApplicability ; # Course Applicability
+        rr:objectMap [
+            rr:template "https://pesc.org/vocabs/CourseApplicabilityCodes#{CourseApplicability}" ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000068 ; # Course Title
+        rr:objectMap [
+            rml:reference "CourseTitle" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:agencyCourseID ; # Agency Course ID
+        rr:objectMap [
+            rml:reference "AgencyCourseID" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001420 ; # Original Course Identifier
+        rr:objectMap [
+            rml:reference "OriginalCourseID" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000066 ; # Course Subject Abbreviation
+        rr:objectMap [
+            rml:reference "CourseSubjectAbbreviation" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001314 ; # Course Number
+        rr:objectMap [
+            rml:reference "CourseNumber" ;
+            rr:datatype xsd:string ;
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000060 ; # Has Course Grade Point Average Applicability
+        rr:objectMap [
+            rr:parentTriplesMap :CourseGPAApplicabilityTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "CourseGPAApplicabilityCode"
+            ]
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001518 ; # Course Subject Area Code
+        rr:objectMap [
+            rr:parentTriplesMap :CourseSubjectAreaTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "CourseSubjectAreaCode"
+            ]
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P600267 ; # (hasPostsecondarySection)
+        rr:objectMap [
+            rr:parentTriplesMap :CourseSectionTM ;
+            rr:joinCondition [
+                rr:child "CourseNumber", "CourseSectionNumber", "CourseBeginDate";
+                rr:parent "CourseNumber", "CourseSectionNumber", "CourseBeginDate";
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:offeredBy ; 
+    # NB following will not be valid if there is a course over-ride school.
+                rr:objectMap [
+            rr:parentTriplesMap :SourceOrganizationMap ;
+        ]
+    ]
+.
+
+
+# To do:
+
+# Object Properties:
+
+# ceterms:offeredBy	Offered By
+# pesc:courseOverrideSchool	Course Override School
+# pesc:overrideSchoolCourseNumber	Override School Course Number
+##! Need to figure out logic of offeredBy sender if no OverrideSchool
+
+# pesc:requirement	Requirement
+# pesc:attribute	Attribute
+# pesc:proficiency	Proficiency
+
+
+
+#Credit Basis Code Mapping
+
+:CreditBasisTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "creditBasisLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+#Credit Units Code Mapping
+
+:CreditUnitsTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "creditUnitsLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+#Credit Level Code Mapping
+
+:CreditLevelTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "creditLevelLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+#Course Level Code Mapping
+
+:CourseLevelTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "courseLevelLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+#Course GPA Applicability Code Mapping
+:CourseGPAApplicabilityTM a rr:TriplesMap ;
+        rml:logicalSource [
+        rml:source "courseGPAApplicabilityLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+#Course Subject Area Code Mapping
+:CourseSubjectAreaTM a rr:TriplesMap ;
+        rml:logicalSource [
+        rml:source "courseSubjectAreaLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+###############################
+# Course-section related Maps #
+###############################
+
+:CourseSectionTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Course"
+    ] ;
+    rr:subjectMap [
+        rr:template "CS_{CourseNumber}_{CourseSectionNumber}_{CourseBeginDate}"; 
+        rr:termType rr:BlankNode;
+        rr:class ceds:C200332 ; # PostSecondary Section
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001315 ; # (CourseSectionNumber)
+        rr:objectMap [
+            rml:reference "CourseSectionNumber" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000054 ; # (CourseBeginDate)
+        rr:objectMap [
+            rml:reference "CourseBeginDate" ;
+            rr:datatype xsd:date ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000059 ; # (CourseEndDate)
+        rr:objectMap [
+            rml:reference "CourseEndDate" ;
+            rr:datatype xsd:date ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P600108; # (Has Postsecondary Section Location)
+        rr:objectMap [
+            rr:parentTriplesMap :SectionLocationTM ;
+            rr:joinCondition [
+                rr:child  "CourseInstructionSiteName";
+                rr:parent "CourseInstructionSiteName";
+            ]
+        ]
+    ] ;
+.
+
+:SectionLocationTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Course" ;
+    ] ;
+    rr:subjectMap [
+        rr:template "https://example.edu/sites/{CourseInstructionSiteName}" ;
+        rr:class ceds:C200333 ; # Postsecondary Section Location
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001309 ; # (HasCourseInstructionSiteName)
+        rr:objectMap [
+            rml:reference "CourseInstructionSiteName" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001310 ; # HasCourseInstructionSite
+        rr:objectMap [
+            rr:parentTriplesMap :InstructionSiteTypeLookupTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "CourseInstructionSite"
+            ]
+        ] ;
+    ] ;
+
+.
+
+# InstructionSiteType Mapping
+
+:InstructionSiteTypeLookupTM a rr:TriplesMap ;
+        rml:logicalSource [
+        rml:source "instructionSiteTypeLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+
+###############################
+# Program-related Maps        #
+###############################
+:ProgramTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//AcademicProgram"
+    ] ;
+    rr:subjectMap [
+        # use name for id, it is only element for most programs. Any space is made URI-safe. 
+        rr:template "https://example.edu/programs/{AcademicProgramName}" ; 
+        rr:class ceds:C200331 # Postsecondary Program
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:name ; 
+        rr:objectMap [
+            rml:reference "AcademicProgramName" ;
+            rr:language "en-us" 
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000043 ; # Has Classification of Instructional Program Code
+        rr:objectMap [
+            rml:reference "ProgramCIPCode"
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:programSecondarySchoolCode ;
+        rr:objectMap [
+            rr:template "https://pesc.org/vocabs/SecondarySchoolCodes#{ProgramSecondarySchoolCode}"
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:programHEGISCode ;
+        rr:objectMap [
+            rml:reference "ProgramHEGISCode"
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:programESISCode ;
+        rr:objectMap [
+            rml:reference "ProgramESISCode"
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:codedNotation ;
+        rr:objectMap [
+            rml:reference "ProgramLocalCode"
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:academicProgramType ;
+        rr:objectMap [
+            rr:template "https://pesc.org/vocabs/AcademicProgramTypes#{AcademicProgramType}"
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:offeredBy ; 
+    # NB following will not be valid if there is a course over-ride school.
+                rr:objectMap [
+            rr:parentTriplesMap :SourceOrganizationMap ;
+        ]
+    ]
+
+.
+# To do:
+# ceterms:hasPart   -- not in transcript model
+# ceterms:offeredBy -- cannot parse whether it is the Sending school or not.
+
+
+###############################
+# Session-related Maps        #
+###############################
+:SessionTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//AcademicSessionDetail"
+    ] ;
+    rr:subjectMap [
+        # use name for id, it is only element for most programs. Any space is made URI-safe. 
+        rr:template "https://example.edu/sessions/{SessionDesignator}-{SessionDesignatorSuffix}" ; 
+        rr:class ceds:C200245 ; # Org. Calendar Session
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceterms:name ; 
+        rr:objectMap [
+            rml:reference "SessionName" ;
+            rr:language "en-us" 
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000252 ; # Session Designator
+        rr:objectMap [
+            rml:reference "SessionDesignator" ;
+            rr:datatype xsd:gYearMonth ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:sessionDesignatorSuffix ; 
+        rr:objectMap [
+            rml:reference "SessionDesignatorSuffix" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000254 ; # Has Session Type
+        rr:objectMap [
+            rr:parentTriplesMap :SessionTypeTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "SessionType"
+            ]
+        ];
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:sessionSchoolYear ; 
+        rr:objectMap [
+            rml:reference "SessionSchoolYear" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000251	; # Session Begin Date
+        rr:objectMap [
+            rml:reference "SessionBeginDate" ;
+            rr:datatype xsd:date ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000253; # Session End Date
+        rr:objectMap [
+            rml:reference "SessionEndDate" ;
+            rr:datatype xsd:date ;
+        ] ;
+    ] ;
+.
+
+#Session Type Code Mapping
+:SessionTypeTM a rr:TriplesMap ;
+        rml:logicalSource [
+        rml:source "sessionTypeLookup.csv" ;
+    rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+
+###############################
+# Achievement-related Maps    #
+###############################
+
+# Course Achievement          #
+
+:CourseAchievementTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Course"
+    ] ;
+    rr:subjectMap [
+        # Assume only one achievement per course (probably wrong in general but avoids bnodes here)
+        rr:template "https://example.edu/CourseAchievement/{CourseNumber}" ; 
+        rr:class ceds:C200346 ; # PostsecondaryStudentSection
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:inCourse ; 
+        rr:objectMap [
+            rr:template "https://example.edu/courses/{CourseNumber}"  ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:inSession ; 
+        rr:objectMap [
+            rr:template "https://example.edu/sessions/{../AcademicSessionDetail/SessionDesignator}-{../AcademicSessionDetail/SessionDesignatorSuffix}"
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:inSection ;
+        rr:objectMap [
+            rr:parentTriplesMap :CourseSectionTM ;
+            rr:joinCondition [
+                rr:child "CourseNumber", "CourseSectionNumber", "CourseBeginDate";
+                rr:parent "CourseNumber", "CourseSectionNumber", "CourseBeginDate";
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000200 ; # (Number of Credits Earned) 
+        rr:objectMap [
+            rml:reference "CourseCreditValue" ;
+            rr:datatype xsd:decimal ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000065 ; # (Has Course Repeat Code)
+        rr:objectMap [
+            rr:parentTriplesMap :RepeatCodeTM ;
+            rr:joinCondition [
+                rr:parent "PESC" ;
+                rr:child "CourseRepeatCode" ;
+            ]
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001300 ; # Course Add Date
+        rr:objectMap [
+            rml:reference "CourseAddDate" ;
+            rr:datatype xsd:date ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001305 ; # Course Drop Date
+        rr:objectMap [
+            rml:reference "CourseDropDate" ;
+            rr:datatype xsd:date ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000064 ; # (Course Quality Points Earned)
+        rr:objectMap [
+            rml:reference "CourseQualityPointsEarned" ;
+            rr:datatype xsd:decimal ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate pesc:courseGrade ;
+        rr:objectMap [
+            rr:template "https://example.edu/CourseGrade/{CourseNumber}-Grade-{CourseAcademicGrade}"
+        ]
+    ] ;
+.
+
+# To do: 
+# Supplemental Grade
+# Equivalent Grade
+#       with their own object mappings.
+
+# Repeat Code Mapping
+:RepeatCodeTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "repeatCodeLookup.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+# Grade
+:GradeTM  a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "input.xml" ;
+        rml:referenceFormulation ql:XPath ;
+        rml:iterator "//Course"
+    ] ;
+    rr:subjectMap [
+        # Assume only one grade per course (probably OK if each is in separate CourseAchievement, 
+        # but see above where assumption only one Achievement per course)
+        rr:template "https://example.edu/CourseGrade/{CourseNumber}-Grade-{CourseAcademicGrade}" ; 
+        rr:class pesc:Grade ; 
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P000053 ; # (Course Academic Grade)
+        rr:objectMap [ 
+            rml:reference "CourseAcademicGrade" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001298 ; # (Course academic grade scale code)
+        rr:objectMap [ 
+            rml:reference "CourseAcademicGradeScaleCode" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001313 ; # (Course Narrative Explanation Grade)
+        rr:objectMap [ 
+            rml:reference "CourseNarrativeExplanationGrade" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate ceds:P001299 ; # (Has Course Ac. Grade Status Code)
+        rr:objectMap [
+            rr:parentTriplesMap :GradeStatusCodeTM ;
+            rr:joinCondition [
+                rr:child "CourseAcademicGradeStatusCode";
+                rr:parent "PESC";
+            ]
+        ]
+    ] ;
+.
+
+# Grade Status Code Mapping
+:GradeStatusCodeTM a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "gradeStatusCodeLookup.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rml:reference "URI"
+    ];
+.
+
+
+
+
+# to do:
+# Supplemental grade
+
+# Academic Award
+# - degree requirement
+# - honors
+
+# to do: 
+# Achievements
+# - Tests
+# - Licensure
+# - Additional
+
+# Summaries
+# - Award
+# - Program
+# - Academic
+# - Session
+# GPA
