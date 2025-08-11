@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-# Phil's script to automatically run all tests
+# Phil's script to automatically generate SHACL from all taps
 # requires tap2shacl, https://github.com/philbarker/TAP2SHACL/
 
 DIR='TAP+SHACL'          # path to directory with TAP & SHACL files in
