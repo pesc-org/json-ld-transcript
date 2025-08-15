@@ -32,20 +32,31 @@
     sh:closed false ;
     sh:targetClass pesc:AcademicHonors .
 
+<AcademicProgramShape> a sh:NodeShape ;
+    rdfs:label "Academic Program"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200331 .
+
 <AcademicRecordShape> a sh:NodeShape ;
     rdfs:label "Academic Record"@en ;
     sh:closed false ;
     sh:targetClass pesc:AcademicRecord .
 
+<AcademicSessionShape> a sh:NodeShape ;
+    rdfs:label "Academic Session"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200245 .
+
 <AcademicSummaryShape> a sh:NodeShape ;
     rdfs:label "Academic Summary"@en ;
+    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
     sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AccreditationShape> a sh:NodeShape ;
     rdfs:label "Accreditation"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceds:P600472 .
+    sh:targetClass ceds:C200240 .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
     rdfs:label "Additional Student Achievment"@en ;
@@ -83,6 +94,11 @@
     sh:closed false ;
     sh:targetClass pesc:CourseRepeatCode .
 
+<CourseShape> a sh:NodeShape ;
+    rdfs:label "Post Secondary Course"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200328 .
+
 <CourseSupplementalGradeShape> a sh:NodeShape ;
     rdfs:label "Course Supplemental Grade"@en ;
     sh:closed false ;
@@ -106,70 +122,49 @@
 <LicensureShape> a sh:NodeShape ;
     rdfs:label "Licensure"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:licensure .
+    sh:targetClass pesc:Licensure .
 
 <OrganizationIdentifierShape> a sh:NodeShape ;
     rdfs:label "Organization Identifier"@en ;
-    rdfs:comment "Normally type will be ceds:C200252"@en ;
     sh:closed false ;
     sh:severity sh:Info ;
-    sh:targetObjectsOf ceds:P600502 .
+    sh:targetClass ceds:C200252 .
 
-<PersonIdentifierShape> a sh:NodeShape ;
-    rdfs:label "Person Identifier"@en ;
-    rdfs:comment "Normally type will be ceds: C200291"@en ;
+<OrganizationShape> a sh:NodeShape ;
+    rdfs:label "Organization"@en ;
     sh:closed false ;
-    sh:property <personidentifiershapeHasStudentIdentificationSystem>,
-        <personidentifiershapePersonIdentifier>,
-        <personidentifiershapeType> ;
-    sh:targetObjectsOf ceds:P600049 .
+    sh:targetClass ceds:C200239 .
 
 <PhoneShape> a sh:NodeShape ;
     rdfs:label "Phone"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:faxPhone,
-        pesc:phone .
+    sh:targetClass pesc:Phone .
 
 <PostalAddressShape> a sh:NodeShape ;
     rdfs:label "Postal Address"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceterms:address .
+    sh:targetClass ceterms:PostalAddress .
 
 <PostsecondarySectionLocationShape> a sh:NodeShape ;
     rdfs:label "Postsecondary Section Location Shape"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceds:P600108 .
+    sh:targetClass ceds:C200333 .
 
 <PostsecondarySectionShape> a sh:NodeShape ;
     rdfs:label "Postsecondary Location Shape"@en ;
-    rdfs:comment "Normally type will be ceds:C200332"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceds:P600267 .
+    sh:targetClass ceds:C200332 .
 
 <ProgramSummaryShape> a sh:NodeShape ;
     rdfs:label "Program Summary"@en ;
     rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetClass pesc:ProgramSummary ;
     sh:targetObjectsOf pesc:hasProgramSummary .
 
 <RAPShape> a sh:NodeShape ;
     rdfs:label "Requirement, Attribute or Proficiency"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200065 .
-
-<ResidencyShape> a sh:NodeShape ;
-    rdfs:label "Residency"@en ;
-    sh:closed false ;
-    sh:property <residencyshapeCountry>,
-        <residencyshapeCountryCode>,
-        <residencyshapeCounty>,
-        <residencyshapeCountyCode>,
-        <residencyshapeResidencyStatusCode>,
-        <residencyshapeStateProvince>,
-        <residencyshapeStateProvinceCode>,
-        <residencyshapeType> ;
-    sh:targetObjectsOf pesc:hasResidency .
 
 <SessionSummaryShape> a sh:NodeShape ;
     rdfs:label "Session Summary"@en ;
@@ -200,57 +195,22 @@
         <studentshapeResidency>,
         <studentshapeStudentLevel>,
         <studentshapeType> ;
-    sh:targetObjectsOf pesc:student .
+    sh:targetClass ceds:C200275 .
 
 <SubtestShape> a sh:NodeShape ;
     rdfs:label "Subtest"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200051 .
 
-<TBDShape> a sh:NodeShape ;
-    rdfs:label "To Be Done"@en ;
-    rdfs:comment "To Be Done"@en ;
+<SummaryShape> a sh:NodeShape ;
+    rdfs:label "Summary"@en ;
     sh:closed false ;
-    sh:targetClass pesc:TBD .
+    sh:targetClass pesc:Summary .
 
 <TestScoreShape> a sh:NodeShape ;
     rdfs:label "Test Scores"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200047 .
-
-<AcademicProgramShape> a sh:NodeShape ;
-    rdfs:label "Academic Program"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200331 .
-
-<AcademicSessionShape> a sh:NodeShape ;
-    rdfs:label "Academic Session"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200245 .
-
-<ContactShape> a sh:NodeShape ;
-    rdfs:label "Contact"@en ;
-    sh:closed false ;
-    sh:targetObjectsOf ceterms:targetContactPoint .
-
-<CourseShape> a sh:NodeShape ;
-    rdfs:label "Post Secondary Course"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200328 .
-
-<LanguageShape> a sh:NodeShape ;
-    rdfs:label "Person Language"@en ;
-    sh:closed false ;
-    sh:property <languageshapeHasISO669-2LanguageCode>,
-        <languageshapeLanguageProficiency>,
-        <languageshapeLanguageUsage>,
-        <languageshapeType> ;
-    sh:targetClass ceds:C200293 .
-
-<OrganizationShape> a sh:NodeShape ;
-    rdfs:label "Organization"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200239 .
 
 <TestShape> a sh:NodeShape ;
     rdfs:label "Test"@en ;
@@ -262,69 +222,45 @@
     sh:closed false ;
     sh:targetObjectsOf pesc:verifiableCredential .
 
-<hasAchievementShape> a sh:NodeShape ;
-    rdfs:label "Achievement "@en ;
+<ContactShape> a sh:NodeShape ;
+    rdfs:label "Contact"@en ;
     sh:closed false ;
-    sh:property <hasachievementshapeAdditionalNote>,
-        <hasachievementshapeInCourse>,
-        <hasachievementshapeInProgram>,
-        <hasachievementshapeInSession>,
-        <hasachievementshapeInTest>,
-        <hasachievementshapeSchool>,
-        <hasachievementshapeType>,
-        <hasachievementshapeVerifiedBy> ;
-    sh:targetObjectsOf pesc:hasAchievement,
-        pesc:hasPart .
+    sh:targetClass ceterms:ContactPoint .
 
-<hasachievementshapeAdditionalNote> a sh:PropertyShape ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
+<LanguageShape> a sh:NodeShape ;
+    rdfs:label "Person Language"@en ;
+    sh:closed false ;
+    sh:property <languageshapeHasISO669-2LanguageCode>,
+        <languageshapeLanguageProficiency>,
+        <languageshapeLanguageUsage>,
+        <languageshapeType> ;
+    sh:targetClass ceds:C200293 .
 
-<hasachievementshapeInCourse> a sh:PropertyShape ;
-    sh:name "In Course"@en-US ;
-    sh:node <CourseShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inCourse .
+<NoteShape> a sh:NodeShape ;
+    rdfs:label "Note"@en ;
+    sh:closed false ;
+    sh:targetClass elm:Note .
 
-<hasachievementshapeInProgram> a sh:PropertyShape ;
-    sh:name "In Program"@en-US ;
-    sh:node <AcademicProgramShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inProgram .
+<PersonIdentifierShape> a sh:NodeShape ;
+    rdfs:label "Person Identifier"@en ;
+    sh:closed false ;
+    sh:property <personidentifiershapeHasStudentIdentificationSystem>,
+        <personidentifiershapePersonIdentifier>,
+        <personidentifiershapeType> ;
+    sh:targetClass ceds:C200291 .
 
-<hasachievementshapeInSession> a sh:PropertyShape ;
-    sh:name "In Session"@en-US ;
-    sh:node <AcademicSessionShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inSession .
-
-<hasachievementshapeInTest> a sh:PropertyShape ;
-    sh:name "In Test"@en-US ;
-    sh:node <TestShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:inTest .
-
-<hasachievementshapeSchool> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:name "School"@en-US ;
-    sh:node <OrganizationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:school .
-
-<hasachievementshapeType> a sh:PropertyShape ;
-    sh:in ( pesc:Achievement pesc:AdditionalStudentAchievement ceds:C200335 ceds:C200346 pesc:GPA pesc:AcademicSummary pesc:ProgramSummary pesc:LicensureAchievement ceds:C200047 ) ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<hasachievementshapeVerifiedBy> a sh:PropertyShape ;
-    sh:name "Verified By"@en-US ;
-    sh:node <VerifiableCredentialShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:verifiedBy .
+<ResidencyShape> a sh:NodeShape ;
+    rdfs:label "Residency"@en ;
+    sh:closed false ;
+    sh:property <residencyshapeCountry>,
+        <residencyshapeCountryCode>,
+        <residencyshapeCounty>,
+        <residencyshapeCountyCode>,
+        <residencyshapeResidencyStatusCode>,
+        <residencyshapeStateProvince>,
+        <residencyshapeStateProvinceCode>,
+        <residencyshapeType> ;
+    sh:targetClass pesc:Residency .
 
 <languageshapeHasISO669-2LanguageCode> a sh:PropertyShape ;
     rdfs:comment "pesc:appendix C1 or pesc:appendix C2"@eng ;
@@ -503,6 +439,7 @@
     sh:path rdf:type .
 
 <studentshapeAdditionalNote> a sh:PropertyShape ;
+    sh:class elm:Note ;
     sh:name "Additional Note"@en-US ;
     sh:node <NoteShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
@@ -570,6 +507,7 @@
     sh:path pesc:cohortGraduationYear .
 
 <studentshapeContact> a sh:PropertyShape ;
+    sh:class ceterms:ContactPoint ;
     sh:name "Contact"@en-US ;
     sh:node <ContactShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
@@ -593,28 +531,33 @@
 <studentshapeHasAchievement> a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:name "Has Achievement"@en-US ;
-    sh:node <hasAchievementShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:or ( [ sh:class pesc:Achievement ] [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:GPA ] [ sh:class pesc:AcademicSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
     sh:path pesc:hasAchievement .
 
 <studentshapeHasOtherPersonName> a sh:PropertyShape ;
+    sh:class ceds:C200377 ;
     sh:name "Has Other Person Name"@en-US ;
     sh:node <PersonNameShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600101 .
 
 <studentshapeHasPersonIdentifier> a sh:PropertyShape ;
+    sh:class ceds:C200291 ;
     sh:name "hasPersonIdentifier"@en-US ;
+    sh:node <PersonIdentifierShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600049 .
 
 <studentshapeHasPersonLanguage> a sh:PropertyShape ;
+    sh:class ceds:C200293 ;
     sh:name "Has Person Language"@en-US ;
     sh:node <LanguageShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600052 .
 
 <studentshapeHasPersonName> a sh:PropertyShape ;
+    sh:class ceds:C200377 ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Has Person Name"@en-US ;
@@ -623,8 +566,10 @@
     sh:path ceds:P600336 .
 
 <studentshapeResidency> a sh:PropertyShape ;
+    sh:class pesc:Residency ;
     sh:maxCount 1 ;
     sh:name "Residency"@en-US ;
+    sh:node <ResidencyShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasResidency .
 
@@ -642,11 +587,6 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<NoteShape> a sh:NodeShape ;
-    rdfs:label "Note"@en ;
-    sh:closed false ;
-    sh:targetObjectsOf elm:additionalNote .
-
 <PersonNameShape> a sh:NodeShape ;
     rdfs:label "Name"@en ;
     sh:closed false ;
@@ -658,6 +598,5 @@
         <personnameshapeNamePrefix>,
         <personnameshapeNameSuffix>,
         <personnameshapeType> ;
-    sh:targetObjectsOf ceds:P600101,
-        ceds:P600336 .
+    sh:targetClass ceds:C200377 .
 

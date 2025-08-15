@@ -62,27 +62,27 @@
     ceterms:name "Example Source"@en .
 
 <https://example.edu/sessionSummary001> a pesc:Summary ;
-#    pesc:isSummaryForSession <https://example.edu/Session/001> ; # Missing required
-    pesc:source "https://example.edu/Source#id" ; # wrong node kind, wrong shape, no type in vlaue
-    pesc:student "https://people.pjjk.net/test" ; # wrong node kind, wrong shape, no type in vlaue
-    pesc:academicSummaryType "DegreeApplicable" ; # wrong node kind, not in list
-    pesc:academicSummaryLevel "Undergraduate" ; # wrong node kind, not in list
-    pesc:gpaSummary <https://example.edu/gpa> ; # value does not have correct type
-    pesc:academicHonors <https://example.edu/honors> ; # value does not have correct type
-    pesc:classRank 3.5 ; # wrong datatype
-    pesc:classSize 99999 ; # too large
-    pesc:delinquencies "Suspension" ;  # wrong node kind, not in list
+#    pesc:isSummaryForSession <https://example.edu/Session/001> ; # 1 fail Missing required
+    pesc:source "https://example.edu/Source#id" ; # 2 fail wrong node kind, wrong class 
+    pesc:student "https://people.pjjk.net/test" ; # 2 fail wrong node kind, wrong class 
+    pesc:academicSummaryType "DegreeApplicable" ; # 2 fail wrong node kind, not in list
+    pesc:academicSummaryLevel "Undergraduate" ; # 2 fail wrong node kind, not in list
+    pesc:gpaSummary <https://example.edu/gpa> ; # 2 fail wrong class, wrong shape
+    pesc:academicHonors <https://example.edu/honors> ; # 2 fail wrong class, wrong shape
+    pesc:classRank 3.5 ; # 1 fail wrong datatype
+    pesc:classSize 99999 ; # 1 fail too large
+    pesc:delinquencies "Suspension" ;  # 2 fail, wrong node kind, not in list
 #    pesc:highSchoolCreditSummary
-    pesc:isSummaryForProgram <https://example.edu/Program/> ; # value does not have correct type
-    pesc:entryDate "2022-03-23" ;  # wrong datatype
-    pesc:exitDate "2024-06-23" ; # wrong datatype
-    pesc:exitReasonCode "Gave up"@en ; # wrong data type
-    pesc:classRankSessionCount 10000 ; # Too large
-    pesc:classRankDate "2024-06-23" ;  # wrong datatype
-    pesc:classRankYear  "2024" ;  # wrong datatype
-    pesc:classRankYearMonth  "2024-06" ;  # wrong datatype
+    pesc:isSummaryForProgram <https://example.edu/Program/> ; # 1 fail wrong class
+    pesc:entryDate "2022-03-23" ;  # 1 fail wrong datatype
+    pesc:exitDate "2024-06-23" ; # 1 fail wrong datatype
+    pesc:exitReasonCode "Gave up"@en ; # 1 fail wrong data type
+    pesc:classRankSessionCount 10000 ; # 1 fail Too large
+    pesc:classRankDate "2024-06-23" ;  # 1 fail wrong datatype
+    pesc:classRankYear  "2024" ;  # 1 fail wrong datatype
+    pesc:classRankYearMonth  "2024-06" ;  # 1 fail wrong datatype
 .
 
-<https://example.edu/gpa001> a pesc:GPA .
-<https://example.edu/honors001> a pesc:AcademicHonors .
+<https://example.edu/gpa001> a pesc:GPA . 
+<https://example.edu/honors001> a pesc:AcademicHonors . 
 <https://example.edu/Session/001> a ceds:C200245 .

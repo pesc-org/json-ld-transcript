@@ -14,6 +14,7 @@
 
 extra_statement_template_elements:
  - severity
+ - valueClass
 # - max
 
 ## This module has three built-in value node types: "iri", "literal", and "bnode".

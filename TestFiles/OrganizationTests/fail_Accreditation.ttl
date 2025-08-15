@@ -56,9 +56,13 @@
 
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en ;
-    ceds:P600472 [  # Has Organization Accreditation
-        a ceds:CNONONO ; # Wrong class
-        ceds:P001526 "Some name"@en ; # wrong data type, should be xsd:string
-        pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; # wrong code
-    ]
+    # 6 fails
+    ceds:P600472 [  # Has Organization Accreditation 2 fails wrong shape, 1 fail >1 value
+        a ceds:C200240 ; 
+        ceds:P001526 "Some name"@en ; # 1 fail wrong data type, should be xsd:string
+        pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; # 1 fail, not in list
+    ] , [  
+        a ceds:CNONONO ; # 1 fail Wrong class
+        # nothing else will be checked as shape is targetted on different class
+    ] 
     .

@@ -1,13 +1,13 @@
 Validation Report
 Conforms: False
-Results (13):
+Results (14):
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:testscoreshapeAssessmentScoreMetricType
 	Focus Node: <https://example.edu/achievement001>
 	Value Node: Literal("Equated")
 	Result Path: ceds:P000369
-	Message: Value Literal("Equated") not in list ['ceds:NI000027162366', 'ceds:NI000027162355', 'ceds:NI000027162378', 'ceds:NI000027162379', 'ceds:NI000027162367', 'pescTestScoreMethods:Percent', 'pescTestScoreMethods:Equated', 'ceds:NI000027162377', 'ceds:NI000027162361', 'ceds:NI000027162380', 'ceds:NI000027162371']
+	Message: Value Literal("Equated") not in list ['ceds:NI000027162378', 'ceds:NI000027162361', 'ceds:NI000027162371', 'ceds:NI000027162367', 'ceds:NI000027162377', 'ceds:NI000027162379', 'ceds:NI000027162355', 'ceds:NI000027162366', 'pescTestScoreMethods:Equated', 'ceds:NI000027162380', 'pescTestScoreMethods:Percent']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:testscoreshapeAssessmentScoreMetricType
@@ -21,6 +21,13 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: <https://example.edu/achievement001>
 	Result Path: pesc:inSubtest
 	Message: Less than 1 values on <https://example.edu/achievement001>->pesc:inSubtest
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testscoreshapeInTest
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: Literal("Test/001")
+	Result Path: pesc:inTest
+	Message: Value does not have class ceds:C200010
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:testscoreshapeInTest
@@ -61,7 +68,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/achievement001>
 	Value Node: Literal("PostsecondaryBachelorPreliminaryYear")
 	Result Path: pesc:studentLevel
-	Message: Value Literal("PostsecondaryBachelorPreliminaryYear") not in list ['pescStudentLevelCodes:Doctoral', 'pescStudentLevelCodes:Postdoctoral', 'pescStudentLevelCodes:Postsecondary', 'pescStudentLevelCodes:GraduateFirstYear', 'pescStudentLevelCodes:CollegeFirstYearAttendedBefore', 'pescStudentLevelCodes:NonDegree', 'pescStudentLevelCodes:CollegeJunior', 'pescStudentLevelCodes:Professional', 'pescStudentLevelCodes:Masters', 'pescStudentLevelCodes:CollegeSophomore', 'pescStudentLevelCodes:CollegeFirstYear', 'pescStudentLevelCodes:ProfessionalSecondYear', 'pescStudentLevelCodes:GraduateNonDegree', 'pescStudentLevelCodes:ProfessionalFirstYear', 'pescStudentLevelCodes:Grade13', 'pescStudentLevelCodes:GraduateBeyondThirdYear', 'pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear', 'pescStudentLevelCodes:CollegeFifthYear', 'pescStudentLevelCodes:GraduateThirdYear', 'pescStudentLevelCodes:MastersQualifying', 'pescStudentLevelCodes:ProfessionalBeyondThirdYear', 'pescStudentLevelCodes:PostBaccalaureate', 'pescStudentLevelCodes:GraduateSecondYear', 'pescStudentLevelCodes:ProfessionalThirdYear', 'pescStudentLevelCodes:Ungraded', 'pescStudentLevelCodes:CollegeSenior']
+	Message: Value Literal("PostsecondaryBachelorPreliminaryYear") not in list ['pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear', 'pescStudentLevelCodes:CollegeSenior', 'pescStudentLevelCodes:Ungraded', 'pescStudentLevelCodes:Grade13', 'pescStudentLevelCodes:NonDegree', 'pescStudentLevelCodes:ProfessionalThirdYear', 'pescStudentLevelCodes:MastersQualifying', 'pescStudentLevelCodes:Postsecondary', 'pescStudentLevelCodes:CollegeFifthYear', 'pescStudentLevelCodes:PostBaccalaureate', 'pescStudentLevelCodes:GraduateThirdYear', 'pescStudentLevelCodes:Postdoctoral', 'pescStudentLevelCodes:ProfessionalBeyondThirdYear', 'pescStudentLevelCodes:Doctoral', 'pescStudentLevelCodes:GraduateSecondYear', 'pescStudentLevelCodes:Masters', 'pescStudentLevelCodes:ProfessionalSecondYear', 'pescStudentLevelCodes:GraduateFirstYear', 'pescStudentLevelCodes:GraduateBeyondThirdYear', 'pescStudentLevelCodes:CollegeFirstYearAttendedBefore', 'pescStudentLevelCodes:CollegeFirstYear', 'pescStudentLevelCodes:Professional', 'pescStudentLevelCodes:CollegeSophomore', 'pescStudentLevelCodes:ProfessionalFirstYear', 'pescStudentLevelCodes:CollegeJunior', 'pescStudentLevelCodes:GraduateNonDegree']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:testscoreshapeStudentLevel

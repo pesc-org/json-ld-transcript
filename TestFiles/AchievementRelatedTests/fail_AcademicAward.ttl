@@ -49,13 +49,13 @@
 
 <https://example.edu/achievement001> a pesc:Achievement,
         ceds:C200335 ; 
-    ceds:P000001 "1985-05-01" ;  # not a date for Academic Award Date
-    ceds:P000003 "Example Award"^^rdf:langString ; # should be string for Academic Award Title
-    pesc:inProgram "wrong" ; # should be URI
-    pesc:academicCompletionIndicator "true" ; #should be boolean
-    pesc:academicCompletionDate "1985-05-01" ; # should be date
-    pesc:academicDegreeRequirement "still wrong" ; # should be URI
-    pesc:academicHonors "should be URI" ; # should be URI
+    ceds:P000001 "1985-05-01" ;  # 1 fail, wrong datatype for Academic Award Date
+    ceds:P000003 "Example Award"^^rdf:langString ; # 1 fail wrong datatype for Academic Award Title
+    pesc:inProgram "wrong" ; # 2 fail wrong class,  wrong node kind
+    pesc:academicCompletionIndicator "true" ; # 1 fail, wrong datatype 
+    pesc:academicCompletionDate "1985-05-01" ; # 1 fail, wrong datatype 
+    pesc:academicDegreeRequirement "still wrong" ; # 3 fail, wrong class, wrong shape, node kind
+    pesc:academicHonors "should be URI" ; # 3 fail wrong class, wrong shape, wrong node kind
 .
 
 <https://example.edu/Source#id> a ceds:C200239 ;

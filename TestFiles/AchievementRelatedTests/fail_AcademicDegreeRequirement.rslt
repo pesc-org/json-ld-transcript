@@ -1,27 +1,6 @@
 Validation Report
 Conforms: False
 Results (4):
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:academicdegreerequirementshapeThesisDissertationAdvisor
-	Focus Node: <https://example.edu/academicDegreeRequirement/001>
-	Value Node: <https://example.edu/people/Example>
-	Result Path: pesc:thesisDissertationAdvisor
-	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:academicdegreerequirementshapeThesisDissertationAdvisor
-	Focus Node: <https://example.edu/academicDegreeRequirement/001>
-	Value Node: <https://example.edu/people/Example>
-	Result Path: pesc:thesisDissertationAdvisor
-	Message: Value is not of Node Kind sh:Literal
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:academicdegreerequirementshapeThesisDissertationTitle
-	Focus Node: <https://example.edu/academicDegreeRequirement/001>
-	Value Node: Literal("42", datatype=xsd:integer)
-	Result Path: pesc:thesisDIssertationTitle
-	Message: Value is not Literal with datatype xsd:string
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicawardshapeAcademicDegreeRequirement
@@ -51,3 +30,24 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Value Node: Literal("42", datatype=xsd:integer)
 			Result Path: pesc:thesisDIssertationTitle
 			Message: Value is not Literal with datatype xsd:string
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicdegreerequirementshapeThesisDissertationAdvisor
+	Focus Node: <https://example.edu/academicDegreeRequirement/001>
+	Value Node: <https://example.edu/people/Example>
+	Result Path: pesc:thesisDissertationAdvisor
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicdegreerequirementshapeThesisDissertationAdvisor
+	Focus Node: <https://example.edu/academicDegreeRequirement/001>
+	Value Node: <https://example.edu/people/Example>
+	Result Path: pesc:thesisDissertationAdvisor
+	Message: Value is not of Node Kind sh:Literal
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicdegreerequirementshapeThesisDissertationTitle
+	Focus Node: <https://example.edu/academicDegreeRequirement/001>
+	Value Node: Literal("42", datatype=xsd:integer)
+	Result Path: pesc:thesisDIssertationTitle
+	Message: Value is not Literal with datatype xsd:string

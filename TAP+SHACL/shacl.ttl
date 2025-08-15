@@ -50,7 +50,7 @@
 <AccreditationShape> a sh:NodeShape ;
     rdfs:label "Accreditation"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceds:P600472 .
+    sh:targetClass ceds:C200240 .
 
 <AdditionalStudentAchievmentShape> a sh:NodeShape ;
     rdfs:label "Additional Student Achievment"@en ;
@@ -85,6 +85,7 @@
         <collegetranscriptshapeSource>,
         <collegetranscriptshapeStudent>,
         <collegetranscriptshapeTransmissionType>,
+        <collegetranscriptshapeType>,
         <collegetranscriptshapeVerifiableCredential> ;
     sh:targetClass pesc:CollegeTranscript .
 
@@ -96,7 +97,7 @@
 <ContactShape> a sh:NodeShape ;
     rdfs:label "Contact"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceterms:targetContactPoint .
+    sh:targetClass ceterms:ContactPoint .
 
 <CourseAchievementShape> a sh:NodeShape ;
     rdfs:label "Course Achievement"@en ;
@@ -141,48 +142,43 @@
 <LicensureShape> a sh:NodeShape ;
     rdfs:label "Licensure"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:licensure .
+    sh:targetClass pesc:Licensure .
 
 <OrganizationIdentifierShape> a sh:NodeShape ;
     rdfs:label "Organization Identifier"@en ;
-    rdfs:comment "Normally type will be ceds:C200252"@en ;
     sh:closed false ;
     sh:severity sh:Info ;
-    sh:targetObjectsOf ceds:P600502 .
+    sh:targetClass ceds:C200252 .
 
 <PersonIdentifierShape> a sh:NodeShape ;
     rdfs:label "Person Identifier"@en ;
-    rdfs:comment "Normally type will be ceds: C200291"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceds:P600049 .
+    sh:targetClass ceds:C200291 .
 
 <PersonNameShape> a sh:NodeShape ;
     rdfs:label "Name"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceds:P600101,
-        ceds:P600336 .
+    sh:targetClass ceds:C200377 .
 
 <PhoneShape> a sh:NodeShape ;
     rdfs:label "Phone"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:faxPhone,
-        pesc:phone .
+    sh:targetClass pesc:Phone .
 
 <PostalAddressShape> a sh:NodeShape ;
     rdfs:label "Postal Address"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceterms:address .
+    sh:targetClass ceterms:PostalAddress .
 
 <PostsecondarySectionLocationShape> a sh:NodeShape ;
     rdfs:label "Postsecondary Section Location Shape"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceds:P600108 .
+    sh:targetClass ceds:C200333 .
 
 <PostsecondarySectionShape> a sh:NodeShape ;
     rdfs:label "Postsecondary Location Shape"@en ;
-    rdfs:comment "Normally type will be ceds:C200332"@en ;
     sh:closed false ;
-    sh:targetObjectsOf ceds:P600267 .
+    sh:targetClass ceds:C200332 .
 
 <RAPShape> a sh:NodeShape ;
     rdfs:label "Requirement, Attribute or Proficiency"@en ;
@@ -192,18 +188,17 @@
 <ResidencyShape> a sh:NodeShape ;
     rdfs:label "Residency"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasResidency .
+    sh:targetClass pesc:Residency .
 
 <SubtestShape> a sh:NodeShape ;
     rdfs:label "Subtest"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200051 .
 
-<TBDShape> a sh:NodeShape ;
-    rdfs:label "To Be Done"@en ;
-    rdfs:comment "To Be Done"@en ;
+<SummaryShape> a sh:NodeShape ;
+    rdfs:label "Summary"@en ;
     sh:closed false ;
-    sh:targetClass pesc:TBD .
+    sh:targetClass pesc:Summary .
 
 <TestScoreShape> a sh:NodeShape ;
     rdfs:label "Test Scores"@en ;
@@ -215,23 +210,16 @@
     sh:closed false ;
     sh:targetClass ceds:C200010 .
 
-<hasAchievementShape> a sh:NodeShape ;
-    rdfs:label "Achievement "@en ;
-    sh:closed false ;
-    sh:targetObjectsOf pesc:hasAchievement,
-        pesc:hasPart .
-
 <AcademicSummaryShape> a sh:NodeShape ;
     rdfs:label "Academic Summary"@en ;
+    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:property <academicsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAcademicSummary .
 
 <AwardSummaryShape> a sh:NodeShape ;
     rdfs:label "Award Summary"@en ;
     rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:property <awardsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasAwardSummary .
 
 <NoteShape> a sh:NodeShape ;
@@ -239,39 +227,29 @@
     sh:closed false ;
     sh:property <noteshapeNoteliteral>,
         <noteshapeType> ;
-    sh:targetObjectsOf elm:additionalNote .
+    sh:targetClass elm:Note .
 
 <ProgramSummaryShape> a sh:NodeShape ;
     rdfs:label "Program Summary"@en ;
     rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:property <programsummaryshapeType> ;
-    sh:targetClass pesc:ProgramSummary ;
     sh:targetObjectsOf pesc:hasProgramSummary .
 
 <SessionSummaryShape> a sh:NodeShape ;
     rdfs:label "Session Summary"@en ;
     rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:property <sessionsummaryshapeType> ;
     sh:targetObjectsOf pesc:hasSessionSummary .
 
 <StudentShape> a sh:NodeShape ;
     rdfs:label "Student"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:student .
+    sh:targetClass ceds:C200275 .
 
 <VerifiableCredentialShape> a sh:NodeShape ;
     rdfs:label "W3C Verifiable Credential"@en ;
     sh:closed false ;
     sh:targetObjectsOf pesc:verifiableCredential .
-
-<academicsummaryshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Summary ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
 
 <agencyidentifiershapeAgencyCode> a sh:PropertyShape ;
     sh:in ( pescAgencyCodes:District pescAgencyCodes:Migrant pescAgencyCodes:MutuallyDefined pescAgencyCodes:National pescAgencyCodes:Regional pescAgencyCodes:State ) ;
@@ -305,14 +283,8 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:stateProvinceCode .
 
-<awardsummaryshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Summary ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
 <collegetranscriptshapeAdditionalNote> a sh:PropertyShape ;
+    sh:class elm:Note ;
     sh:name "Additional Note"@en-US ;
     sh:node <NoteShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
@@ -327,6 +299,7 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:path pesc:createdDateTime .
 
 <collegetranscriptshapeDestination> a sh:PropertyShape ;
+    sh:class ceds:C200239 ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Destination"@en-US ;
@@ -374,24 +347,28 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:path pesc:documentTypeCode .
 
 <collegetranscriptshapeHasAcademicSummary> a sh:PropertyShape ;
+    sh:class pesc:Summary ;
     sh:name "Has Academic Summary"@en-US ;
     sh:node <AcademicSummaryShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasAcademicSummary .
 
 <collegetranscriptshapeHasAwardSummary> a sh:PropertyShape ;
+    sh:class pesc:Summary ;
     sh:name "Has Award Summary"@en-US ;
     sh:node <AwardSummaryShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasAwardSummary .
 
 <collegetranscriptshapeHasProgramSummary> a sh:PropertyShape ;
+    sh:class pesc:Summary ;
     sh:name "Has Program Summary"@en-US ;
     sh:node <ProgramSummaryShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:hasProgramSummary .
 
 <collegetranscriptshapeHasSessionSummary> a sh:PropertyShape ;
+    sh:class pesc:Summary ;
     sh:name "Has Session Summary"@en-US ;
     sh:node <SessionSummaryShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
@@ -406,6 +383,7 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:path pesc:requestTrackingID .
 
 <collegetranscriptshapeSource> a sh:PropertyShape ;
+    sh:class ceds:C200239 ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Source"@en-US ;
@@ -414,6 +392,7 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:path pesc:source .
 
 <collegetranscriptshapeStudent> a sh:PropertyShape ;
+    sh:class ceds:C200275 ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "student"@en-US ;
@@ -428,6 +407,13 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:name "Transmission Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:transmissionType .
+
+<collegetranscriptshapeType> a sh:PropertyShape ;
+    sh:hasValue pesc:CollegeTranscript ;
+    sh:maxCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
 
 <collegetranscriptshapeVerifiableCredential> a sh:PropertyShape ;
     sh:name "Verifiable Credential"@en-US ;
@@ -444,20 +430,6 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
 <noteshapeType> a sh:PropertyShape ;
     sh:hasValue elm:Note ;
     sh:maxCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<programsummaryshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Summary ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<sessionsummaryshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Summary ;
-    sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .

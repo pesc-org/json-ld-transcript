@@ -60,13 +60,17 @@
 
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en ;
-    ceds:P600502 [
-        a ceds:C20025 ; #fail wrong class
-        # fail ceds:P000827 pescIdentifierTypes:OPEid ;
+    # 6 fails
+    ceds:P600502 [ # 3 fails all wrong shapes
+        a ceds:C20025 ; # 1 fail wrong class
         ceds:P000826 "00-0000000"^^xsd:token
     ] , [
         a ceds:C200252 ;
         ceds:P000827 pescIdentifierTypes:PSISid ;
-        ceds:P000826 "example001"^^xsd:string #fail wrong type
+        ceds:P000826 "example001"^^xsd:string # 1 fail wrong datatype
+    ] , [
+        a ceds:C200252 ;
+        # 1 fail missing identifier type
+        ceds:P000826 "example001"^^xsd:string # 1 fail wrong datatype
     ] ;
     .

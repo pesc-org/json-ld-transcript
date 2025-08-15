@@ -55,13 +55,13 @@
         ceterms:contactType "Home phone"@en ;
         pesc:phone [
             a pesc:Phone ;
+            pesc:countryPrefixCode  34 ; # should be string
             pesc:phoneNumber  "+34 555-123-4567 ext123" ; # fail length
+            pesc:phoneNumberExtension "1234567890" ; # too long
         ] ;
         pesc:faxPhone [
             a pesc:Fax ; #wrong type
-            pesc:countryPrefixCode  34 ; # should be string
 #            pesc:phoneNumber  "5551234568" ; missing
-            pesc:phoneNumberExtension "1234567890" ; # too long
         ] ;
         pesc:attentionLine "Attn: Parent or Gardian of Testy Test"@en ;
         pesc:RecordStartDateTime "2020-01-01T00:00:00"^^xsd:dateTime ;

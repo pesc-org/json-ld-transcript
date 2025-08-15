@@ -59,11 +59,11 @@
     ceterms:name "Example Source"@en .
 
 <https://example.edu/achievement005> a pesc:AdditionalStudentAchievement ;
-    pesc:requirementAchieved "reqs/1" ; # wrong node kind, wrong shape
-    pesc:attributeAchieved "attr/1" ; # wrong node kind, wrong shape
-    pesc:proficiencyAchieved "prof/1" ; # wrong node kind, wrong shape
-    pesc:languageAchieved "lang/1" ; # wrong node kind, wrong shape
-    pesc:inCourse "Course/001" ; # wrong node kind, wrong shape
-    pesc:conditionsMetDate "2009-09-12" ; # wrong datatype
-    pesc:conditionsMetCode true ; #wrong node kind, not in list
+    pesc:requirementAchieved "reqs/1" ; # 2 fails wrong class, wrong node kind
+    pesc:attributeAchieved "attr/1" ; # 2 fails wrong class, wrong node kind
+    pesc:proficiencyAchieved "prof/1" ; # 2 fails wrong class, wrong node kind
+    pesc:languageAchieved "lang/1" ; # 2 fails wrong class, wrong node kind
+    pesc:inCourse "Course/001" ; # 2 fails wrong class, wrong node kind
+    pesc:conditionsMetDate "2009-09-12" ; # 1 fail wrong datatype
+    pesc:conditionsMetCode true ; # 2 fails: wrong node kind, not in list
 .

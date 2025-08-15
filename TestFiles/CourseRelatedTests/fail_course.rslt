@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (35):
+Results (38):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeAgencyCourseID
@@ -15,6 +15,13 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: <http://wrong.type>
 	Result Path: pesc:agencyCourseID
 	Message: Value is not of Node Kind sh:Literal
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeAttribute
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("attr1")
+	Result Path: pesc:attribute
+	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeAttribute
@@ -62,7 +69,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: pescCourseApplicabilityCodes:NotValid
 	Result Path: pesc:courseApplicability
-	Message: Value pescCourseApplicabilityCodes:NotValid not in list ['pescCourseApplicabilityCodes:FirstProgram', 'pescCourseApplicabilityCodes:BothPrograms', 'pescCourseApplicabilityCodes:SecondProgram', 'pescCourseApplicabilityCodes:NotApplicable']
+	Message: Value pescCourseApplicabilityCodes:NotValid not in list ['pescCourseApplicabilityCodes:FirstProgram', 'pescCourseApplicabilityCodes:SecondProgram', 'pescCourseApplicabilityCodes:NotApplicable', 'pescCourseApplicabilityCodes:BothPrograms']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseCreditValue
@@ -84,6 +91,13 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("101", datatype=xsd:integer)
 	Result Path: ceds:P001314
 	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeCourseOverrideSchool
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("Example College")
+	Result Path: pesc:courseOverrideSchool
+	Message: Value does not have class ceds:C200239
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseOverrideSchool
@@ -111,7 +125,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: ceds:NI0000
 	Result Path: ceds:P001518
-	Message: Value ceds:NI0000 not in list ['ceds:NI001518118411', 'ceds:NI001518118408', 'ceds:NI001518118425', 'ceds:NI001518118416', 'ceds:NI001518118414', 'ceds:NI001518118424', 'ceds:NI001518118415', 'ceds:NI001518118426', 'ceds:NI001518118413', 'ceds:NI001518118420', 'ceds:NI001518118421', 'ceds:NI001518118404', 'ceds:NI001518118419', 'ceds:NI001518118410', 'ceds:NI001518118412', 'ceds:NI001518118407', 'ceds:NI001518118418', 'ceds:NI001518118423', 'ceds:NI001518118405', 'ceds:NI001518118406', 'ceds:NI001518118427', 'ceds:NI001518118417', 'ceds:NI001518118422']
+	Message: Value ceds:NI0000 not in list ['ceds:NI001518118422', 'ceds:NI001518118407', 'ceds:NI001518118408', 'ceds:NI001518118412', 'ceds:NI001518118417', 'ceds:NI001518118406', 'ceds:NI001518118423', 'ceds:NI001518118410', 'ceds:NI001518118411', 'ceds:NI001518118415', 'ceds:NI001518118421', 'ceds:NI001518118416', 'ceds:NI001518118405', 'ceds:NI001518118424', 'ceds:NI001518118426', 'ceds:NI001518118425', 'ceds:NI001518118414', 'ceds:NI001518118420', 'ceds:NI001518118427', 'ceds:NI001518118418', 'ceds:NI001518118404', 'ceds:NI001518118413', 'ceds:NI001518118419']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseTitle
@@ -138,28 +152,28 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: ceds:NI00000
 	Result Path: ceds:P001304
-	Message: Value ceds:NI00000 not in list ['ceds:NI001304116619', 'ceds:NI001304115810', 'ceds:NI001304117129', 'ceds:NI001304117014', 'pescCreditLevels:DualGraduateUndergraduate', 'pescCreditLevels:Grade13', 'ceds:NI001304116050', 'ceds:NI001304115808', 'ceds:NI001304117161', 'ceds:NI001304115600', 'ceds:NI001304117105']
+	Message: Value ceds:NI00000 not in list ['ceds:NI001304116050', 'ceds:NI001304115810', 'ceds:NI001304117129', 'ceds:NI001304115808', 'ceds:NI001304115600', 'pescCreditLevels:DualGraduateUndergraduate', 'pescCreditLevels:Grade13', 'ceds:NI001304117161', 'ceds:NI001304117105', 'ceds:NI001304116619', 'ceds:NI001304117014']
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeHasCourseCreditUnits
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: ceds:NI00000
 	Result Path: ceds:P000057
-	Message: Value ceds:NI00000 not in list ['ceds:NI000057116841', 'ceds:NI000057116219', 'ceds:NI000057117127', 'ceds:NI000057115492', 'ceds:NI000057115440', 'ceds:NI000057116368', 'ceds:NI000057116669', 'ceds:NI000057117114', 'ceds:NI000057115402']
+	Message: Value ceds:NI00000 not in list ['ceds:NI000057116219', 'ceds:NI000057116841', 'ceds:NI000057115402', 'ceds:NI000057117114', 'ceds:NI000057116669', 'ceds:NI000057117127', 'ceds:NI000057115440', 'ceds:NI000057116368', 'ceds:NI000057115492']
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeHasCourseGradePointAverageApplicability
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: ceds:NI0000
 	Result Path: ceds:P000060
-	Message: Value ceds:NI0000 not in list ['ceds:NI000060117182', 'ceds:NI000060116257', 'ceds:NI000060115254']
+	Message: Value ceds:NI0000 not in list ['ceds:NI000060115254', 'ceds:NI000060117182', 'ceds:NI000060116257']
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeHasCourseLevelType
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: ceds:NI00000
 	Result Path: ceds:P001312
-	Message: Value ceds:NI00000 not in list ['ceds:NI001312127889', 'ceds:NI001312127887', 'ceds:NI001312127896', 'ceds:NI001312127886', 'ceds:NI001312127895', 'ceds:NI001312127897', 'ceds:NI001312127885', 'ceds:NI001312127892', 'ceds:NI001312127894', 'ceds:NI001312127890', 'ceds:NI001312127900', 'ceds:NI001312127901', 'ceds:NI001312127883', 'ceds:NI001312127898', 'ceds:NI001312127893', 'ceds:NI001312127888', 'ceds:NI001312127884', 'ceds:NI001312127899', 'ceds:NI001312127891']
+	Message: Value ceds:NI00000 not in list ['ceds:NI001312127895', 'ceds:NI001312127901', 'ceds:NI001312127897', 'ceds:NI001312127884', 'ceds:NI001312127886', 'ceds:NI001312127888', 'ceds:NI001312127889', 'ceds:NI001312127883', 'ceds:NI001312127891', 'ceds:NI001312127900', 'ceds:NI001312127885', 'ceds:NI001312127892', 'ceds:NI001312127893', 'ceds:NI001312127898', 'ceds:NI001312127896', 'ceds:NI001312127899', 'ceds:NI001312127894', 'ceds:NI001312127890', 'ceds:NI001312127887']
 Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeHasInstructionLanguage
@@ -174,6 +188,13 @@ Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl
 	Value Node: Literal("12345678901")
 	Result Path: ceds:P001414
 	Message: String length not <= Literal("10", datatype=xsd:integer)
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeHasPostsecondarySection
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("Section 1")
+	Result Path: ceds:P600267
+	Message: Value does not have class ceds:C200332
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeHasPostsecondarySection
@@ -207,6 +228,13 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("Section 1")
 	Result Path: ceds:P600267
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeOfferedBy
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("Source ID")
+	Result Path: ceterms:offeredBy
+	Message: Value does not have class ceds:C200239
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeOfferedBy
@@ -227,6 +255,13 @@ Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: <https://example.edu/Course/001>
 	Result Path: pesc:overrideSchoolCourseNumber
 	Message: More than 1 values on <https://example.edu/Course/001>->pesc:overrideSchoolCourseNumber
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeProficiency
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("prof1")
+	Result Path: pesc:proficiency
+	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeProficiency
@@ -254,6 +289,13 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("prof1")
 	Result Path: pesc:proficiency
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseshapeRequirement
+	Focus Node: <https://example.edu/Course/001>
+	Value Node: Literal("req1")
+	Result Path: pesc:requirement
+	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeRequirement
@@ -281,21 +323,3 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("req1")
 	Result Path: pesc:requirement
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:postsecondarysectionshapeHasPostsecondarySectionLocation
-	Focus Node: Literal("Section 1")
-	Result Path: ceds:P600108
-	Message: Less than 1 values on Literal("Section 1")->ceds:P600108
-Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:postsecondarysectionshapeType
-	Focus Node: Literal("Section 1")
-	Result Path: rdf:type
-	Message: Node Literal("Section 1")->rdf:type does not contain a value in the set: ['ceds:C200332']
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:postsecondarysectionshapeType
-	Focus Node: Literal("Section 1")
-	Result Path: rdf:type
-	Message: Less than 1 values on Literal("Section 1")->rdf:type

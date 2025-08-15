@@ -41,14 +41,14 @@
     ceterms:offeredBy <https://example.edu/Source#id> .
 
 <https://example.edu/Test/001> a ceds:C200010 ; # Assessment
-    ceds:P000028 "Standard Test"@en ; # wrong data type Assessment Title
-#    ceds:P001067 "ST" ; # missing Assessment Identifier
-    pesc:hasSubtest <https://example.edu/Test/001A>, "STA" ; # one wrong node type
+    ceds:P000028 "Standard Test"@en ; # 1 fail: wrong data type Assessment Title
+#    ceds:P001067 "ST" ; # 1 fail: missing Assessment Identifier
+    pesc:hasSubtest <https://example.edu/Test/001A>, "STA" ; # 4 fail: wrong class, wrong node kind wrong shape x 2
 .
 
 <https://example.edu/Test/001A> a ceds:C200051 ; 
-    ceds:P000275 "Standard Test part A"@en ; # wrong data type  Title
-    ceds:P000367 "STA"^^xsd:token ; # wrong data type Ident; missing required property
+    ceds:P000275 "Standard Test part A"@en ; # 1 fail: wrong data type  Title
+    ceds:P000367 "STA"^^xsd:token ; # 1 fail wrong data type Ident
 .
 
 <https://people.pjjk.net/test> a ceds:C200275 ; # Person

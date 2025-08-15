@@ -33,8 +33,6 @@
     ceterms:offeredBy <https://example.edu/Source#id> ;
 .
 
-
-
 <https://example.edu/Desintation#id> a ceds:C200239 ;
     ceterms:name "Example Destination"@en .
 
@@ -48,7 +46,7 @@
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
-    ceds:P600049 [
+    ceds:P600049 [ # fail, wrong shape
         a ceds:C200291 ;
         ceds:P001572 "123456789"^^xsd:string ;
         ceds:P001075 ceds:GlobalStudentID ; #FAIL no such identifier type

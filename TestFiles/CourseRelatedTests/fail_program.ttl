@@ -38,15 +38,15 @@
     ceterms:name "Example Destination"@en .
 
 <https://example.edu/Program/001> a ceds:C200331; # AcademicProgram 
-    ceterms:name "Example Program" ; # not lang string
-    ceterms:offeredBy "Example Source" ; # invalid source
-    ceterms:hasPart <https://example.edu/Course/002> ; # does not have req data
-    pesc:programSecondarySchoolCode pescSecondarySchoolCodes:Vocation ; # invalid value
-    ceds:P000043 "12" ; # wrong pattern CIP code
-    pesc:programHEGISCode 123456 ; # wrong data type 
-    pesc:programESISCode "" ; # too short
-    ceterms:codedNotation "EX:P001"^^xsd:token ; # wrong data type
-    pesc:academicProgramType pescAcademicProgramTypes:Special ; # invalid value
+    ceterms:name "Example Program" ; # 1 fail: wrong datatype
+    ceterms:offeredBy "Example Source" ; # 2 fail: wrong class, wrong node kind, 
+    ceterms:hasPart <https://example.edu/Course/002> ; # 2 fail: wrong class, wrong shape
+    pesc:programSecondarySchoolCode pescSecondarySchoolCodes:Vocation ; # 1 fail: not in list
+    ceds:P000043 "12" ; # 1 fail: wrong pattern CIP code
+    pesc:programHEGISCode 123456 ; # 1 fail: wrong data type 
+    pesc:programESISCode "" ; # 1 fail: too short
+    ceterms:codedNotation "EX:P001"^^xsd:token ; # 1 fail: wrong data type
+    pesc:academicProgramType pescAcademicProgramTypes:Special ; # 1 fail: not in list
 .
 
 <https://people.pjjk.net/test> a ceds:C200275 ;

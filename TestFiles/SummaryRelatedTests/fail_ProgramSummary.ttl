@@ -62,16 +62,16 @@
     ceterms:name "Example Source"@en .
 
 <https://example.edu/programSummary001> a pesc:Summary ;
-#    pesc:isSummaryForProgram <https://example.edu/Program/001> ; # Missing required
-    pesc:source "https://example.edu/Source#id" ; # wrong node kind, wrong shape, no type in vlaue
-    pesc:student "https://people.pjjk.net/test" ; # wrong node kind, wrong shape, no type in vlaue
-    pesc:academicSummaryType "DegreeApplicable" ; # Wrong node kind, not in value list
-    pesc:academicSummaryLevel "Undergraduate" ; # Wrong node kind, not in value list
-    pesc:gpaSummary <https://example.edu/gpa001> ; # wrong type as it does not exist
-    pesc:academicHonors <https://example.edu/honors001> ; # wrong type as it does not exist
-    pesc:classRank 3.0 ; # wrong type, should be integer
-    pesc:classSize 99999 ; # too big, >4 digitis
-    pesc:delinquencies pescDelinquencyCodes:SuspGPA ; # not in value list
+#    pesc:isSummaryForProgram <https://example.edu/Program/001> ; # 1 fail Missing required
+    pesc:source "https://example.edu/Source#id" ; # 2 fail wrong node kind, wrong class
+    pesc:student "https://people.pjjk.net/test" ; # 2 fail wrong node kind, wrong class
+    pesc:academicSummaryType "DegreeApplicable" ; # 2 fail Wrong node kind, not in value list
+    pesc:academicSummaryLevel "Undergraduate" ; # 2 fail Wrong node kind, not in value list
+    pesc:gpaSummary <https://example.edu/gpa001> ; # 2 fail wrong class wrong shape as it does not exist
+    pesc:academicHonors <https://example.edu/honors001> ; # 2 fail wrong class wrong shape as it does not exist
+    pesc:classRank 3.0 ; # 1 fail wrong type, should be integer
+    pesc:classSize 99999 ; # 1 fail too big, >4 digitis
+    pesc:delinquencies pescDelinquencyCodes:SuspGPA ; # 1 fail not in value list
 #    pesc:highSchoolCreditSummary do not test as not defined.
 .
 
