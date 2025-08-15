@@ -49,8 +49,8 @@
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
     pesc:hasAchievement <https://example.edu/achievement001> ;
-        pesc:hasResidency [
-        a pesc:Residing ; # wrong class name
+        pesc:hasResidency [ # wrong shape
+        a pesc:Residency ;
         pesc:stateProvinceCode "CA" ;
         pesc:stateProvinceCode "NB" ; #not repeatable
         pesc:countryCode "US"^^xsd:token ; #not string
@@ -61,9 +61,9 @@
         pesc:country "USA, the United States of America" ; # too long
         pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ;
     ] ,
-    [   # not repeatable
-        a pesc:Residency ;
-        pesc:residencyStatusCode pescResidencyStatusCodes:NonResidING ; #wrong URI
+    [   # not repeatable,  wrong shape, wrong class
+        a pesc:Residing ; # not checked, wrong class
+        pesc:residencyStatusCode pescResidencyStatusCodes:NonResidING ; # not checked, wrong class
     ]
 .
 

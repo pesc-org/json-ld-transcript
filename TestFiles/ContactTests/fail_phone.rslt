@@ -1,85 +1,80 @@
 Validation Report
 Conforms: False
-Results (7):
+Results (6):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:contactshapeFAXPhone
+	Focus Node: [ ceterms:contactType Literal("Home phone", lang=en) ; elm:additionalNote [ elm:noteLiteral Literal("A made up contact.") ; rdf:type elm:Note ] ; pesc:RecordEndDateTime Literal("2021-01-01T00:00:00" = 2021-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:RecordStartDateTime Literal("2020-01-01T00:00:00" = 2020-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:attentionLine Literal("Attn: Parent or Gardian of Testy Test", lang=en) ; pesc:faxPhone [ rdf:type pesc:Fax ] ; pesc:phone [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ] ; rdf:type ceterms:ContactPoint ]
+	Value Node: [ rdf:type pesc:Fax ]
+	Result Path: pesc:faxPhone
+	Message: Value does not have class pesc:Phone
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:contactshapeFAXPhone
-	Focus Node: [ ceterms:contactType Literal("Home phone", lang=en) ; elm:additionalNote [ elm:noteLiteral Literal("A made up contact.") ; rdf:type elm:Note ] ; pesc:RecordEndDateTime Literal("2021-01-01T00:00:00" = 2021-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:RecordStartDateTime Literal("2020-01-01T00:00:00" = 2020-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:attentionLine Literal("Attn: Parent or Gardian of Testy Test", lang=en) ; pesc:faxPhone [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ] ; pesc:phone [ pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; rdf:type pesc:Phone ] ; rdf:type ceterms:ContactPoint ]
-	Value Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
+	Focus Node: [ ceterms:contactType Literal("Home phone", lang=en) ; elm:additionalNote [ elm:noteLiteral Literal("A made up contact.") ; rdf:type elm:Note ] ; pesc:RecordEndDateTime Literal("2021-01-01T00:00:00" = 2021-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:RecordStartDateTime Literal("2020-01-01T00:00:00" = 2020-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:attentionLine Literal("Attn: Parent or Gardian of Testy Test", lang=en) ; pesc:faxPhone [ rdf:type pesc:Fax ] ; pesc:phone [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ] ; rdf:type ceterms:ContactPoint ]
+	Value Node: [ rdf:type pesc:Fax ]
 	Result Path: pesc:faxPhone
+	Message: Value does not conform to Shape ex:PhoneShape. See details for more information.
+	Details:
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:phoneshapePhoneNumber
+			Focus Node: [ rdf:type pesc:Fax ]
+			Result Path: pesc:phoneNumber
+			Message: Less than 1 values on [ rdf:type pesc:Fax ]->pesc:phoneNumber
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:phoneshapeType
+			Focus Node: [ rdf:type pesc:Fax ]
+			Result Path: rdf:type
+			Message: Node [ rdf:type pesc:Fax ]->rdf:type does not contain a value in the set: ['pesc:Phone']
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:contactshapePhone
+	Focus Node: [ ceterms:contactType Literal("Home phone", lang=en) ; elm:additionalNote [ elm:noteLiteral Literal("A made up contact.") ; rdf:type elm:Note ] ; pesc:RecordEndDateTime Literal("2021-01-01T00:00:00" = 2021-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:RecordStartDateTime Literal("2020-01-01T00:00:00" = 2020-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:attentionLine Literal("Attn: Parent or Gardian of Testy Test", lang=en) ; pesc:faxPhone [ rdf:type pesc:Fax ] ; pesc:phone [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ] ; rdf:type ceterms:ContactPoint ]
+	Value Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ]
+	Result Path: pesc:phone
 	Message: Value does not conform to Shape ex:PhoneShape. See details for more information.
 	Details:
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:phoneshapeCountryPrefixCode
-			Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
+			Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ]
 			Value Node: Literal("34", datatype=xsd:integer)
 			Result Path: pesc:countryPrefixCode
 			Message: Value is not Literal with datatype xsd:string
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:phoneshapePhoneNumber
-			Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
-			Result Path: pesc:phoneNumber
-			Message: Less than 1 values on [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]->pesc:phoneNumber
-		Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:phoneshapePhoneNumberExtension
-			Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
-			Value Node: Literal("1234567890")
-			Result Path: pesc:phoneNumberExtension
-			Message: String length not <= Literal("5", datatype=xsd:integer)
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:phoneshapeType
-			Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
-			Result Path: rdf:type
-			Message: Node [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]->rdf:type does not contain a value in the set: ['pesc:Phone']
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:contactshapePhone
-	Focus Node: [ ceterms:contactType Literal("Home phone", lang=en) ; elm:additionalNote [ elm:noteLiteral Literal("A made up contact.") ; rdf:type elm:Note ] ; pesc:RecordEndDateTime Literal("2021-01-01T00:00:00" = 2021-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:RecordStartDateTime Literal("2020-01-01T00:00:00" = 2020-01-01 00:00:00, datatype=xsd:dateTime) ; pesc:attentionLine Literal("Attn: Parent or Gardian of Testy Test", lang=en) ; pesc:faxPhone [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ] ; pesc:phone [ pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; rdf:type pesc:Phone ] ; rdf:type ceterms:ContactPoint ]
-	Value Node: [ pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; rdf:type pesc:Phone ]
-	Result Path: pesc:phone
-	Message: Value does not conform to Shape ex:PhoneShape. See details for more information.
-	Details:
 		Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:phoneshapePhoneNumber
-			Focus Node: [ pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; rdf:type pesc:Phone ]
+			Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ]
 			Value Node: Literal("+34 555-123-4567 ext123")
 			Result Path: pesc:phoneNumber
 			Message: String length not <= Literal("11", datatype=xsd:integer)
+		Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:phoneshapePhoneNumberExtension
+			Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ]
+			Value Node: Literal("1234567890")
+			Result Path: pesc:phoneNumberExtension
+			Message: String length not <= Literal("5", datatype=xsd:integer)
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:phoneshapeCountryPrefixCode
-	Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
+	Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ]
 	Value Node: Literal("34", datatype=xsd:integer)
 	Result Path: pesc:countryPrefixCode
 	Message: Value is not Literal with datatype xsd:string
 Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:phoneshapePhoneNumber
-	Focus Node: [ pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; rdf:type pesc:Phone ]
+	Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ]
 	Value Node: Literal("+34 555-123-4567 ext123")
 	Result Path: pesc:phoneNumber
 	Message: String length not <= Literal("11", datatype=xsd:integer)
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:phoneshapePhoneNumber
-	Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
-	Result Path: pesc:phoneNumber
-	Message: Less than 1 values on [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]->pesc:phoneNumber
 Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:phoneshapePhoneNumberExtension
-	Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
+	Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumber Literal("+34 555-123-4567 ext123") ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Phone ]
 	Value Node: Literal("1234567890")
 	Result Path: pesc:phoneNumberExtension
 	Message: String length not <= Literal("5", datatype=xsd:integer)
-Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:phoneshapeType
-	Focus Node: [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]
-	Result Path: rdf:type
-	Message: Node [ pesc:countryPrefixCode Literal("34", datatype=xsd:integer) ; pesc:phoneNumberExtension Literal("1234567890") ; rdf:type pesc:Fax ]->rdf:type does not contain a value in the set: ['pesc:Phone']

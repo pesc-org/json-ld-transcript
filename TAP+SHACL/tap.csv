@@ -1,26 +1,28 @@
-0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
+0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,valueClass,Rec Usage,note
 152,AgencyIdentifierShape,pesc:agencyCode,Agency Code,FALSE,FALSE,IRI,,"pescAgencyCodes:District
 pescAgencyCodes:Migrant
 pescAgencyCodes:MutuallyDefined
 pescAgencyCodes:National
 pescAgencyCodes:Regional
-pescAgencyCodes:State",picklist,,Required,
-153,AgencyIdentifierShape,pesc:agencyName,Agency Name,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Required,
-113,AgencyIdentifierShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,"pesc:core:DomesticAddressDetailsGroup
+pescAgencyCodes:State",picklist,,,Required,
+153,AgencyIdentifierShape,pesc:agencyName,Agency Name,FALSE,FALSE,Literal,xsd:string,60,maxLength,,,Required,
+113,AgencyIdentifierShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,,Optional,"pesc:core:DomesticAddressDetailsGroup
 pesc:core:InternationalAddressDetailsGroup"
-117,AgencyIdentifierShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,pesc:core:InternationalAddressDetailsGroup
-3,CollegeTranscriptShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,Not Recommended,
-18,CollegeTranscriptShape,pesc:createdDateTime,Created Date Time,TRUE,FALSE,Literal,xsd:dateTime,,,,Required,
-26,CollegeTranscriptShape,pesc:requestTrackingID,Request Tracking ID,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Optional,
-22,CollegeTranscriptShape,pesc:destination,Destination,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
-,CollegeTranscriptShape,pesc:verifiableCredential,Verifiable Credential,FALSE,TRUE,IRI BNODE,,,,VerifiableCredentialShape,Optional,
+117,AgencyIdentifierShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,,Optional,pesc:core:InternationalAddressDetailsGroup
+,,,,,,,,,,,,,
+,CollegeTranscriptShape,rdf:type,Type,FALSE,FALSE,IRI,,pesc:CollegeTranscript,,,,,
+3,CollegeTranscriptShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,Not Recommended,
+18,CollegeTranscriptShape,pesc:createdDateTime,Created Date Time,TRUE,FALSE,Literal,xsd:dateTime,,,,,Required,
+26,CollegeTranscriptShape,pesc:requestTrackingID,Request Tracking ID,FALSE,FALSE,Literal,xsd:string,35,maxLength,,,Optional,
+22,CollegeTranscriptShape,pesc:destination,Destination,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,Required,
+,CollegeTranscriptShape,pesc:verifiableCredential,Verifiable Credential,FALSE,TRUE,IRI BNODE,,,,VerifiableCredentialShape,,Optional,
 25,CollegeTranscriptShape,pesc:documentCompleteCode,Document Complete Code,FALSE,FALSE,IRI,,"pescDocumentCompleteCodes:Partial
-pescDocumentCompleteCodes:Complete",picklist,,Required,
-17,CollegeTranscriptShape,pesc:documentID,Document ID,TRUE,FALSE,Literal,xsd:string,1..35,lengthRange,,Required,
+pescDocumentCompleteCodes:Complete",picklist,,,Required,
+17,CollegeTranscriptShape,pesc:documentID,Document ID,TRUE,FALSE,Literal,xsd:string,1..35,lengthRange,,,Required,
 24,CollegeTranscriptShape,pesc:documentOfficialCode,Document Official Code,FALSE,FALSE,IRI,,"pescDocumentOfficialCodes:Official
-pescDocumentOfficialCodes:Unofficial",picklist,,Required,
+pescDocumentOfficialCodes:Unofficial",picklist,,,Required,
 23,CollegeTranscriptShape,pesc:documentProcessCode,Document Process Code,FALSE,FALSE,IRI,,"pescDocumentProcessCodes:TEST
-pescDocumentProcessCodes:PRODUCTION",picklist,,Required,
+pescDocumentProcessCodes:PRODUCTION",picklist,,,Required,
 19,CollegeTranscriptShape,pesc:documentTypeCode,Document type Code,TRUE,FALSE,IRI,,"pescDocumentTypeCodes:Cancel
 pescDocumentTypeCodes:Change
 pescDocumentTypeCodes:InstitutionRequest
@@ -29,23 +31,19 @@ pescDocumentTypeCodes:Response
 pescDocumentTypeCodes:StudentRequest
 pescDocumentTypeCodes:TermEnroll
 pescDocumentTypeCodes:TermGrade
-pescDocumentTypeCodes:ThirdPartyRequest",picklist,,Required,
-,CollegeTranscriptShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
-2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,Required,
+pescDocumentTypeCodes:ThirdPartyRequest",picklist,,,Required,
+,CollegeTranscriptShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,Required,
+2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,ceds:C200275,Required,
 20,CollegeTranscriptShape,pesc:transmissionType,Transmission Type,TRUE,FALSE,IRI,,"pescTransmissionTypes:Original
 pescTransmissionTypes:Replace
 pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
-pescTransmissionTypes:MutuallyDefined",picklist,,Required,
-,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,
-,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,
-,CollegeTranscriptShape,pesc:hasAwardSummary,Has Award Summary,FALSE,TRUE,IRI BNODE,,,,AwardSummaryShape,,
-,CollegeTranscriptShape,pesc:hasProgramSummary,Has Program Summary,FALSE,TRUE,IRI BNODE,,,,ProgramSummaryShape,,
-,CollegeTranscriptShape,pesc:hasSessionSummary,Has Session Summary,FALSE,TRUE,IRI BNODE,,,,SessionSummaryShape,,
-,CollegeTranscriptShape,pesc:hasAcademicSummary,Has Academic Summary,FALSE,TRUE,IRI BNODE,,,,AcademicSummaryShape,,
-,,,,,,,,,,,,
-,AwardSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
-,ProgramSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
-,SessionSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
-,AcademicSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Summary,,,,
+pescTransmissionTypes:MutuallyDefined",picklist,,,Required,
+,CollegeTranscriptShape,pesc:hasAwardSummary,Has Award Summary,FALSE,TRUE,IRI BNODE,,,,AwardSummaryShape,pesc:Summary,,
+,CollegeTranscriptShape,pesc:hasProgramSummary,Has Program Summary,FALSE,TRUE,IRI BNODE,,,,ProgramSummaryShape,pesc:Summary,,
+,CollegeTranscriptShape,pesc:hasSessionSummary,Has Session Summary,FALSE,TRUE,IRI BNODE,,,,SessionSummaryShape,pesc:Summary,,
+,CollegeTranscriptShape,pesc:hasAcademicSummary,Has Academic Summary,FALSE,TRUE,IRI BNODE,,,,AcademicSummaryShape,pesc:Summary,,
+,,,,,,,,,,,,,
+,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,,
+,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,,

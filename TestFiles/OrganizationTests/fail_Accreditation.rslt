@@ -1,51 +1,66 @@
 Validation Report
 Conforms: False
-Results (4):
+Results (6):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeHasOrganizationAccreditation
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: [ rdf:type ceds:CNONONO ]
+	Result Path: ceds:P600472
+	Message: Value does not have class ceds:C200240
+Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeHasOrganizationAccreditation
+	Focus Node: <https://example.edu/Source#id>
+	Result Path: ceds:P600472
+	Message: More than 1 values on <https://example.edu/Source#id>->ceds:P600472
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:organizationshapeHasOrganizationAccreditation
 	Focus Node: <https://example.edu/Source#id>
-	Value Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]
+	Value Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:C200240 ]
 	Result Path: ceds:P600472
 	Message: Value does not conform to Shape ex:AccreditationShape. See details for more information.
 	Details:
 		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:accreditationshapeAccrediationBodyCode
-			Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]
+			Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:C200240 ]
 			Value Node: pescAccreditationBodyCodes:NCA-HLC-Nope
 			Result Path: pesc:accreditationBodyCode
-			Message: Value pescAccreditationBodyCodes:NCA-HLC-Nope not in list ['pescAccreditationBodyCodes:WASC-ACSCU', 'pescAccreditationBodyCodes:NEASC-CTCI', 'pescAccreditationBodyCodes:NWCCU', 'pescAccreditationBodyCodes:Other', 'pescAccreditationBodyCodes:NCA-CASI', 'pescAccreditationBodyCodes:NEASC-CIHE', 'pescAccreditationBodyCodes:NCA-HLC', 'pescAccreditationBodyCodes:SACS', 'pescAccreditationBodyCodes:WASC-ACCJC', 'pescAccreditationBodyCodes:MSA']
+			Message: Value pescAccreditationBodyCodes:NCA-HLC-Nope not in list ['pescAccreditationBodyCodes:NEASC-CIHE', 'pescAccreditationBodyCodes:NCA-CASI', 'pescAccreditationBodyCodes:NWCCU', 'pescAccreditationBodyCodes:MSA', 'pescAccreditationBodyCodes:NEASC-CTCI', 'pescAccreditationBodyCodes:SACS', 'pescAccreditationBodyCodes:WASC-ACCJC', 'pescAccreditationBodyCodes:Other', 'pescAccreditationBodyCodes:WASC-ACSCU', 'pescAccreditationBodyCodes:NCA-HLC']
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:accreditationshapeAccreditationAgencyName
-			Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]
+			Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:C200240 ]
 			Value Node: Literal("Some name", lang=en)
 			Result Path: ceds:P001526
 			Message: Value is not Literal with datatype xsd:string
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:organizationshapeHasOrganizationAccreditation
+	Focus Node: <https://example.edu/Source#id>
+	Value Node: [ rdf:type ceds:CNONONO ]
+	Result Path: ceds:P600472
+	Message: Value does not conform to Shape ex:AccreditationShape. See details for more information.
+	Details:
 		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:accreditationshapeType
-			Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]
+			Focus Node: [ rdf:type ceds:CNONONO ]
 			Result Path: rdf:type
-			Message: Node [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]->rdf:type does not contain a value in the set: ['ceds:C200240']
+			Message: Node [ rdf:type ceds:CNONONO ]->rdf:type does not contain a value in the set: ['ceds:C200240']
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:accreditationshapeAccrediationBodyCode
-	Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]
+	Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:C200240 ]
 	Value Node: pescAccreditationBodyCodes:NCA-HLC-Nope
 	Result Path: pesc:accreditationBodyCode
-	Message: Value pescAccreditationBodyCodes:NCA-HLC-Nope not in list ['pescAccreditationBodyCodes:WASC-ACSCU', 'pescAccreditationBodyCodes:NEASC-CTCI', 'pescAccreditationBodyCodes:NWCCU', 'pescAccreditationBodyCodes:Other', 'pescAccreditationBodyCodes:NCA-CASI', 'pescAccreditationBodyCodes:NEASC-CIHE', 'pescAccreditationBodyCodes:NCA-HLC', 'pescAccreditationBodyCodes:SACS', 'pescAccreditationBodyCodes:WASC-ACCJC', 'pescAccreditationBodyCodes:MSA']
+	Message: Value pescAccreditationBodyCodes:NCA-HLC-Nope not in list ['pescAccreditationBodyCodes:NEASC-CIHE', 'pescAccreditationBodyCodes:NCA-CASI', 'pescAccreditationBodyCodes:NWCCU', 'pescAccreditationBodyCodes:MSA', 'pescAccreditationBodyCodes:NEASC-CTCI', 'pescAccreditationBodyCodes:SACS', 'pescAccreditationBodyCodes:WASC-ACCJC', 'pescAccreditationBodyCodes:Other', 'pescAccreditationBodyCodes:WASC-ACSCU', 'pescAccreditationBodyCodes:NCA-HLC']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:accreditationshapeAccreditationAgencyName
-	Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]
+	Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:C200240 ]
 	Value Node: Literal("Some name", lang=en)
 	Result Path: ceds:P001526
 	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:accreditationshapeType
-	Focus Node: [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]
-	Result Path: rdf:type
-	Message: Node [ ceds:P001526 Literal("Some name", lang=en) ; pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC-Nope ; rdf:type ceds:CNONONO ]->rdf:type does not contain a value in the set: ['ceds:C200240']

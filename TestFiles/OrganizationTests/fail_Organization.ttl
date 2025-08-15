@@ -57,10 +57,10 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
-<https://example.edu/Source#id> a ceds:C200239 ;
-    ceterms:name "Example Source" ; #Fail not a langString
-    pesc:schoolLevel pescSchoolLevels:fortytwo ; #fail, not in valid set
-    ceterms:targetContactPoint "Rick" ; #Fail wrong should be object
-    ceds:P600472 "Totally Accreditted" ; # Wrong node kind for Has Organization Accreditation
+<https://example.edu/Source#id> a ceds:C200239 ; # 7 fails
+    ceterms:name "Example Source" ; # 1 Fail not a langString
+    pesc:schoolLevel pescSchoolLevels:fortytwo ; # (1) Fail, not in valid set
+    ceterms:targetContactPoint "Rick" ; # 2 Fails Wrong node kind & class
+    ceds:P600472 "Totally Accreditted" ; # Has Organization Accreditation. 3 Fails: Wrong node kind, shape, class
 .
 

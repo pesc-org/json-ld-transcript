@@ -28,47 +28,21 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/achievement001>
 	Value Node: ceds:repeated
 	Result Path: ceds:P000065
-	Message: Value ceds:repeated not in list ['ceds:NI000065116748', 'ceds:NI000065116745', 'ceds:NI000065116746', 'ceds:NI000065116747', 'ceds:NI000065116260', 'ceds:NI000065116744']
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Message: Value ceds:repeated not in list ['ceds:NI000065116748', 'ceds:NI000065116744', 'ceds:NI000065116745', 'ceds:NI000065116746', 'ceds:NI000065116747', 'ceds:NI000065116260']
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseachievementshapeInCourse
 	Focus Node: <https://example.edu/achievement001>
 	Value Node: <https://example.edu/Course/000>
 	Result Path: pesc:inCourse
-	Message: Value does not conform to Shape ex:CourseShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:courseshapeType
-			Focus Node: <https://example.edu/Course/000>
-			Result Path: rdf:type
-			Message: Node <https://example.edu/Course/000>->rdf:type does not contain a value in the set: ['ceds:C200328']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:courseshapeType
-			Focus Node: <https://example.edu/Course/000>
-			Result Path: rdf:type
-			Message: Less than 1 values on <https://example.edu/Course/000>->rdf:type
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Message: Value does not have class ceds:C200328
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseachievementshapeInSection
 	Focus Node: <https://example.edu/achievement001>
 	Value Node: Literal("https://example.edu/CourseSection/000")
 	Result Path: pesc:inSection
-	Message: Value does not conform to Shape ex:PostsecondarySectionShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:postsecondarysectionshapeType
-			Focus Node: Literal("https://example.edu/CourseSection/000")
-			Result Path: rdf:type
-			Message: Node Literal("https://example.edu/CourseSection/000")->rdf:type does not contain a value in the set: ['ceds:C200332']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:postsecondarysectionshapeType
-			Focus Node: Literal("https://example.edu/CourseSection/000")
-			Result Path: rdf:type
-			Message: Less than 1 values on Literal("https://example.edu/CourseSection/000")->rdf:type
+	Message: Value does not have class ceds:C200332
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseachievementshapeInSection
@@ -76,26 +50,13 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("https://example.edu/CourseSection/000")
 	Result Path: pesc:inSection
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseachievementshapeInSession
 	Focus Node: <https://example.edu/achievement001>
 	Value Node: <https://example.edu/Session/000>
 	Result Path: pesc:inSession
-	Message: Value does not conform to Shape ex:AcademicSessionShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:academicsessionshapeType
-			Focus Node: <https://example.edu/Session/000>
-			Result Path: rdf:type
-			Message: Node <https://example.edu/Session/000>->rdf:type does not contain a value in the set: ['ceds:C200245']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:academicsessionshapeType
-			Focus Node: <https://example.edu/Session/000>
-			Result Path: rdf:type
-			Message: Less than 1 values on <https://example.edu/Session/000>->rdf:type
+	Message: Value does not have class ceds:C200245
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseachievementshapeNumberofCreditsEarned

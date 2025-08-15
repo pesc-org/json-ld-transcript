@@ -1,69 +1,139 @@
 Validation Report
 Conforms: False
-Results (10):
-Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+Results (11):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:residencyshapeCountry
-	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]
-	Value Node: Literal("USA, the United States of America")
-	Result Path: pesc:country
-	Message: String length not <= Literal("30", datatype=xsd:integer)
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:residencyshapeCountryCode
-	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]
-	Value Node: Literal("US", datatype=xsd:token)
-	Result Path: pesc:countryCode
-	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:residencyshapeCounty
-	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]
-	Value Node: Literal("The one and only Orange County in California, United States of America")
-	Result Path: pesc:county
-	Message: String length not <= Literal("30", datatype=xsd:integer)
-Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:residencyshapeCountyCode
-	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]
-	Value Node: Literal("Orange")
-	Result Path: pesc:countyCode
-	Message: String length not <= Literal("3", datatype=xsd:integer)
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:residencyshapeResidencyStatusCode
-	Focus Node: [ pesc:residencyStatusCode pescResidencyStatusCodes:NonResidING ; rdf:type pesc:Residency ]
-	Value Node: pescResidencyStatusCodes:NonResidING
-	Result Path: pesc:residencyStatusCode
-	Message: Value pescResidencyStatusCodes:NonResidING not in list ['pescResidencyStatusCodes:Resident', 'pescResidencyStatusCodes:OtherResident', 'pescResidencyStatusCodes:InCounty', 'pescResidencyStatusCodes:NonResident', 'pescResidencyStatusCodes:InState', 'pescResidencyStatusCodes:InDistrict', 'pescResidencyStatusCodes:NotReported', 'pescResidencyStatusCodes:InCity']
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:residencyshapeStateProvince
-	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]
-	Value Node: Literal("California", lang=en)
-	Result Path: pesc:stateProvince
-	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:residencyshapeStateProvince
-	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]
-	Result Path: pesc:stateProvince
-	Message: More than 1 values on [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]->pesc:stateProvince
-Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:residencyshapeStateProvinceCode
-	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]
-	Result Path: pesc:stateProvinceCode
-	Message: More than 1 values on [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]->pesc:stateProvinceCode
-Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:residencyshapeType
-	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]
-	Result Path: rdf:type
-	Message: Node [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residing ]->rdf:type does not contain a value in the set: ['pesc:Residency']
+	Source Shape: ex:studentshapeResidency
+	Focus Node: <https://people.pjjk.net/test>
+	Value Node: [ pesc:residencyStatusCode pescResidencyStatusCodes:NonResidING ; rdf:type pesc:Residing ]
+	Result Path: pesc:hasResidency
+	Message: Value does not have class pesc:Residency
 Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:studentshapeResidency
 	Focus Node: <https://people.pjjk.net/test>
 	Result Path: pesc:hasResidency
 	Message: More than 1 values on <https://people.pjjk.net/test>->pesc:hasResidency
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:studentshapeResidency
+	Focus Node: <https://people.pjjk.net/test>
+	Value Node: [ pesc:residencyStatusCode pescResidencyStatusCodes:NonResidING ; rdf:type pesc:Residing ]
+	Result Path: pesc:hasResidency
+	Message: Value does not conform to Shape ex:ResidencyShape. See details for more information.
+	Details:
+		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeResidencyStatusCode
+			Focus Node: [ pesc:residencyStatusCode pescResidencyStatusCodes:NonResidING ; rdf:type pesc:Residing ]
+			Value Node: pescResidencyStatusCodes:NonResidING
+			Result Path: pesc:residencyStatusCode
+			Message: Value pescResidencyStatusCodes:NonResidING not in list ['pescResidencyStatusCodes:OtherResident', 'pescResidencyStatusCodes:InDistrict', 'pescResidencyStatusCodes:InCounty', 'pescResidencyStatusCodes:NonResident', 'pescResidencyStatusCodes:NotReported', 'pescResidencyStatusCodes:Resident', 'pescResidencyStatusCodes:InCity', 'pescResidencyStatusCodes:InState']
+		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeType
+			Focus Node: [ pesc:residencyStatusCode pescResidencyStatusCodes:NonResidING ; rdf:type pesc:Residing ]
+			Result Path: rdf:type
+			Message: Node [ pesc:residencyStatusCode pescResidencyStatusCodes:NonResidING ; rdf:type pesc:Residing ]->rdf:type does not contain a value in the set: ['pesc:Residency']
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:studentshapeResidency
+	Focus Node: <https://people.pjjk.net/test>
+	Value Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+	Result Path: pesc:hasResidency
+	Message: Value does not conform to Shape ex:ResidencyShape. See details for more information.
+	Details:
+		Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeCountry
+			Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+			Value Node: Literal("USA, the United States of America")
+			Result Path: pesc:country
+			Message: String length not <= Literal("30", datatype=xsd:integer)
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeCountryCode
+			Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+			Value Node: Literal("US", datatype=xsd:token)
+			Result Path: pesc:countryCode
+			Message: Value is not Literal with datatype xsd:string
+		Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeCounty
+			Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+			Value Node: Literal("The one and only Orange County in California, United States of America")
+			Result Path: pesc:county
+			Message: String length not <= Literal("30", datatype=xsd:integer)
+		Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeCountyCode
+			Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+			Value Node: Literal("Orange")
+			Result Path: pesc:countyCode
+			Message: String length not <= Literal("3", datatype=xsd:integer)
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeStateProvince
+			Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+			Value Node: Literal("California", lang=en)
+			Result Path: pesc:stateProvince
+			Message: Value is not Literal with datatype xsd:string
+		Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeStateProvince
+			Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+			Result Path: pesc:stateProvince
+			Message: More than 1 values on [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]->pesc:stateProvince
+		Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:residencyshapeStateProvinceCode
+			Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+			Result Path: pesc:stateProvinceCode
+			Message: More than 1 values on [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]->pesc:stateProvinceCode
+Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:residencyshapeCountry
+	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+	Value Node: Literal("USA, the United States of America")
+	Result Path: pesc:country
+	Message: String length not <= Literal("30", datatype=xsd:integer)
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:residencyshapeCountryCode
+	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+	Value Node: Literal("US", datatype=xsd:token)
+	Result Path: pesc:countryCode
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:residencyshapeCounty
+	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+	Value Node: Literal("The one and only Orange County in California, United States of America")
+	Result Path: pesc:county
+	Message: String length not <= Literal("30", datatype=xsd:integer)
+Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:residencyshapeCountyCode
+	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+	Value Node: Literal("Orange")
+	Result Path: pesc:countyCode
+	Message: String length not <= Literal("3", datatype=xsd:integer)
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:residencyshapeStateProvince
+	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+	Value Node: Literal("California", lang=en)
+	Result Path: pesc:stateProvince
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:residencyshapeStateProvince
+	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+	Result Path: pesc:stateProvince
+	Message: More than 1 values on [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]->pesc:stateProvince
+Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:residencyshapeStateProvinceCode
+	Focus Node: [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]
+	Result Path: pesc:stateProvinceCode
+	Message: More than 1 values on [ pesc:country Literal("USA, the United States of America") ; pesc:countryCode Literal("US", datatype=xsd:token) ; pesc:county Literal("The one and only Orange County in California, United States of America") ; pesc:countyCode Literal("Orange") ; pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ; pesc:stateProvince Literal("California", lang=en), Literal("New Brunswick") ; pesc:stateProvinceCode Literal("CA"), Literal("NB") ; rdf:type pesc:Residency ]->pesc:stateProvinceCode

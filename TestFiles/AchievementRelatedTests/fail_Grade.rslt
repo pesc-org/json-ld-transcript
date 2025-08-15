@@ -1,6 +1,13 @@
 Validation Report
 Conforms: False
-Results (7):
+Results (8):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:courseachievementshapeCourseEquivalentGrade
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: [ ceds:P000053 Literal("B+") ; ceds:P001298 Literal("other code") ; rdf:type pesc:Mark ]
+	Result Path: pesc:courseEquivalentGrade
+	Message: Value does not have class pesc:Grade
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseachievementshapeCourseEquivalentGrade
@@ -57,7 +64,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
 			Value Node: ceds:NotValid
 			Result Path: ceds:P001299
-			Message: Value ceds:NotValid not in list ['ceds:NI001299115324', 'ceds:NI001299115916', 'ceds:NI001299116438', 'pescGradeStatusCodes:Completed', 'ceds:NI001299116507', 'ceds:NI001299117192', 'ceds:NI001299117195', 'ceds:NI001299115918', 'ceds:NI001299115931', 'ceds:NI001299116457', 'pescGradeStatusCodes:PlanningToTake', 'ceds:NI001299117075', 'ceds:NI001299117196', 'ceds:NI001299117194', 'ceds:NI001299115877', 'ceds:NI001299116508', 'ceds:NI001299116290']
+			Message: Value ceds:NotValid not in list ['ceds:NI001299117075', 'ceds:NI001299116290', 'ceds:NI001299117194', 'ceds:NI001299115931', 'pescGradeStatusCodes:Completed', 'ceds:NI001299116508', 'ceds:NI001299116457', 'ceds:NI001299117196', 'ceds:NI001299117195', 'ceds:NI001299115916', 'ceds:NI001299117192', 'ceds:NI001299115324', 'pescGradeStatusCodes:PlanningToTake', 'ceds:NI001299115877', 'ceds:NI001299116438', 'ceds:NI001299115918', 'ceds:NI001299116507']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:gradeshapeCourseAcademicGrade
@@ -92,4 +99,4 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: [ ceds:P000053 Literal("42", datatype=xsd:integer) ; ceds:P001298 ceds:NI001299115324 ; ceds:P001299 ceds:NotValid ; ceds:P001313 Literal("invalid lang string", lang=en) ; rdf:type pesc:Grade ]
 	Value Node: ceds:NotValid
 	Result Path: ceds:P001299
-	Message: Value ceds:NotValid not in list ['ceds:NI001299115324', 'ceds:NI001299115916', 'ceds:NI001299116438', 'pescGradeStatusCodes:Completed', 'ceds:NI001299116507', 'ceds:NI001299117192', 'ceds:NI001299117195', 'ceds:NI001299115918', 'ceds:NI001299115931', 'ceds:NI001299116457', 'pescGradeStatusCodes:PlanningToTake', 'ceds:NI001299117075', 'ceds:NI001299117196', 'ceds:NI001299117194', 'ceds:NI001299115877', 'ceds:NI001299116508', 'ceds:NI001299116290']
+	Message: Value ceds:NotValid not in list ['ceds:NI001299117075', 'ceds:NI001299116290', 'ceds:NI001299117194', 'ceds:NI001299115931', 'pescGradeStatusCodes:Completed', 'ceds:NI001299116508', 'ceds:NI001299116457', 'ceds:NI001299117196', 'ceds:NI001299117195', 'ceds:NI001299115916', 'ceds:NI001299117192', 'ceds:NI001299115324', 'pescGradeStatusCodes:PlanningToTake', 'ceds:NI001299115877', 'ceds:NI001299116438', 'ceds:NI001299115918', 'ceds:NI001299116507']

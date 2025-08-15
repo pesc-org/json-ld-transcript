@@ -30,12 +30,12 @@
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:licensure <https://example.edu/licensure/1> ; # fail does not conform
-    pesc:licensure "Test License" ; # fail wrong node kind, wrong type, no type, wrong shape
+    pesc:licensure <https://example.edu/licensure/1> ; # 2 fail: wrong class, wrong shape
+    pesc:licensure "Test License" ; # 3 fail wrong class, wrong shape, wrong node kind
 .
 
-<https://example.edu/licensure/1> a pesc:License ; # fail wrong class
-    pesc:licensureName "Test license"@en ; # fail should be xsd:string
+<https://example.edu/licensure/1> a pesc:License ; # wrong class so not checked
+    pesc:licensureName "Test license"@en ; # should be xsd:string
 .
 
 

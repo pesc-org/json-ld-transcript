@@ -1,26 +1,13 @@
 Validation Report
 Conforms: False
 Results (13):
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeAttributeAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("attr/1")
 	Result Path: pesc:attributeAchieved
-	Message: Value does not conform to Shape ex:RAPShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:rapshapeType
-			Focus Node: Literal("attr/1")
-			Result Path: rdf:type
-			Message: Node Literal("attr/1")->rdf:type does not contain a value in the set: ['ceds:C200065']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:rapshapeType
-			Focus Node: Literal("attr/1")
-			Result Path: rdf:type
-			Message: Less than 1 values on Literal("attr/1")->rdf:type
+	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeAttributeAchieved
@@ -34,7 +21,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("true" = True, datatype=xsd:boolean)
 	Result Path: pesc:conditionsMetCode
-	Message: Value Literal("true" = True, datatype=xsd:boolean) not in list ['pescConditionsMetCodes:No', 'pescConditionsMetCodes:MutuallyDefined', 'pescConditionsMetCodes:Yes', 'pescConditionsMetCodes:Conditional']
+	Message: Value Literal("true" = True, datatype=xsd:boolean) not in list ['pescConditionsMetCodes:Conditional', 'pescConditionsMetCodes:MutuallyDefined', 'pescConditionsMetCodes:No', 'pescConditionsMetCodes:Yes']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeConditionsMetCode
@@ -49,26 +36,13 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("2009-09-12")
 	Result Path: pesc:conditionsMetDate
 	Message: Value is not Literal with datatype xsd:date
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeInCourse
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("Course/001")
 	Result Path: pesc:inCourse
-	Message: Value does not conform to Shape ex:CourseShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:courseshapeType
-			Focus Node: Literal("Course/001")
-			Result Path: rdf:type
-			Message: Node Literal("Course/001")->rdf:type does not contain a value in the set: ['ceds:C200328']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:courseshapeType
-			Focus Node: Literal("Course/001")
-			Result Path: rdf:type
-			Message: Less than 1 values on Literal("Course/001")->rdf:type
+	Message: Value does not have class ceds:C200328
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeInCourse
@@ -76,26 +50,6 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("Course/001")
 	Result Path: pesc:inCourse
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeLanguageAchieved
-	Focus Node: <https://example.edu/achievement005>
-	Value Node: Literal("lang/1")
-	Result Path: pesc:languageAchieved
-	Message: Value does not conform to Shape ex:LanguageShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:languageshapeType
-			Focus Node: Literal("lang/1")
-			Result Path: rdf:type
-			Message: Node Literal("lang/1")->rdf:type does not contain a value in the set: ['ceds:C200293']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:languageshapeType
-			Focus Node: Literal("lang/1")
-			Result Path: rdf:type
-			Message: Less than 1 values on Literal("lang/1")->rdf:type
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeLanguageAchieved
@@ -103,26 +57,20 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("lang/1")
 	Result Path: pesc:languageAchieved
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:additionalstudentachievmentshapeLanguageAchieved
+	Focus Node: <https://example.edu/achievement005>
+	Value Node: Literal("lang/1")
+	Result Path: pesc:languageAchieved
+	Message: Node Literal("lang/1") does not conform to one or more shapes in [ sh:class ex:class ] , [ sh:class ceds:C200293 ]
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeProficiencyAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("prof/1")
 	Result Path: pesc:proficiencyAchieved
-	Message: Value does not conform to Shape ex:RAPShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:rapshapeType
-			Focus Node: Literal("prof/1")
-			Result Path: rdf:type
-			Message: Node Literal("prof/1")->rdf:type does not contain a value in the set: ['ceds:C200065']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:rapshapeType
-			Focus Node: Literal("prof/1")
-			Result Path: rdf:type
-			Message: Less than 1 values on Literal("prof/1")->rdf:type
+	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeProficiencyAchieved
@@ -130,26 +78,13 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("prof/1")
 	Result Path: pesc:proficiencyAchieved
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeRequirementAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("reqs/1")
 	Result Path: pesc:requirementAchieved
-	Message: Value does not conform to Shape ex:RAPShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:rapshapeType
-			Focus Node: Literal("reqs/1")
-			Result Path: rdf:type
-			Message: Node Literal("reqs/1")->rdf:type does not contain a value in the set: ['ceds:C200065']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:rapshapeType
-			Focus Node: Literal("reqs/1")
-			Result Path: rdf:type
-			Message: Less than 1 values on Literal("reqs/1")->rdf:type
+	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:additionalstudentachievmentshapeRequirementAchieved

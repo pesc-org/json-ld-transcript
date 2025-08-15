@@ -42,18 +42,20 @@
     pesc:hasCourse <https://example.edu/Course/001> ;
     ceterms:offeredBy <https://example.edu/Source#id> .
 
-<https://people.pjjk.net/test> a ceds:C200275 ;
-    ceds:P600336 [ a ceds:C200377 ;
-            ceds:P000212 "Dr" ;
+<https://people.pjjk.net/test> a ceds:C200275 ; 
+    ceds:P600336 # 1 fail, wrong shape
+        [ a ceds:C200377 ; # hasPersonName
+            ceds:P000212 "Dr" ; # 1 fail wrong datatype
             ceds:P000115 "Testy"^^xsd:token ; 
-            ceds:P000115 "Testy"^^xsd:token ; # error, repeated
-            ceds:P000184 "Example" ; # error wrong type
-            ceds:P000172 "Test" ;
-            ceds:P000121 9 ; # error not in list
+            ceds:P000115 "Testier"^^xsd:token ; #  1 fail repeated
+            ceds:P000184 "Example" ; # 1 fail wrong datatype
+            ceds:P000172 "Test" ; # 1 fail, wrong datatype
+            ceds:P000121 9 ; # 1 fail not in list
             pesc:nameCode pescNameCodes:Legal ] ;
-    ceds:P600101 [ a ceds:WrongClass ; #error wrong class
-            ceds:P000115 12 ; 
-            ceds:P000172 12 ] ;
+                                       #hasOtherPersonName
+    ceds:P600101 [ a ceds:WrongClass ; # 2 fail wrong class, wrong shape
+            ceds:P000115 12 ; # error wrong datatype
+            ceds:P000172 12 ] ; # error wrong datatype
     pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,

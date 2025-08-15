@@ -30,26 +30,27 @@
 <https://example.edu/Course/001> a ceds:C200328 ;  #Course
     ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
     ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:requirement <https://example.edu/reqs/1> ;
-    pesc:attribute <https://example.edu/attr/1> ;
-    pesc:proficiency <https://example.edu/prof/1> ;
+    pesc:requirement <https://example.edu/reqs/1> ; # 1 fail: wrong shape
+    pesc:attribute <https://example.edu/attr/1> ; # 2 fail: wrong class, wrong shape
+    pesc:proficiency <https://example.edu/prof/1> ; # 1 fail: wrong shape
 .
 
 <https://example.edu/reqs/1> a ceds:C200065 ;
     # a Competency Description
-    pesc:rapCode "exampleRapCode" ; # too long
-    pesc:rapName <http://example.org/name> ; # wrong node type
-    pesc:rapSubName "Very long example requirement subname, in fact it is too long.............." ; # too long 
+    pesc:rapCode "exampleRapCode" ; # 1 fail: too long
+    pesc:rapName <http://example.org/name> ; # 2 fail wrong datatype, wrong node kind,
+    pesc:rapSubName "Very long example requirement subname, in fact it is too long.............." ; 
+                                    # 1 fail: too long 
 .
 
 <https://example.edu/prof/1>  a ceds:C200065 ;
     # a Competency Description
-    pesc:rapCode 42 ; # wrong datatype
-    pesc:rapName [] ; # wrong node type
-    pesc:rapSubName [] ; # wrong node type
+    pesc:rapCode 42 ; # 1 fail: wrong datatype
+    pesc:rapName [] ; # 3 fail: wrong datatype, wrong length, wrong node kind
+    pesc:rapSubName [] ; # 3 fail: wrong datatype, wrong node kind, wrong length
 .
 
-<https://example.edu/attr/1> a ceds:C200066 ; # wrong type
+<https://example.edu/attr/1> a ceds:C200066 ; 
     # a Competency Description
 .
 

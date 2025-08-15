@@ -1,6 +1,20 @@
 Validation Report
 Conforms: False
-Results (7):
+Results (8):
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:subtestshapeSubtestIdentifier
+	Focus Node: <https://example.edu/Test/001A>
+	Value Node: Literal("STA", datatype=xsd:token)
+	Result Path: ceds:P000367
+	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:subtestshapeSubtestTitle
+	Focus Node: <https://example.edu/Test/001A>
+	Value Node: Literal("Standard Test part A", lang=en)
+	Result Path: ceds:P000275
+	Message: Value is not Literal with datatype xsd:string
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:testshapeAssessmentIdentifier
@@ -14,6 +28,35 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("Standard Test", lang=en)
 	Result Path: ceds:P000028
 	Message: Value is not Literal with datatype xsd:string
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testshapeHasSubtest
+	Focus Node: <https://example.edu/Test/001>
+	Value Node: Literal("STA")
+	Result Path: pesc:hasSubtest
+	Message: Value does not have class ceds:C200051
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:testshapeHasSubtest
+	Focus Node: <https://example.edu/Test/001>
+	Value Node: <https://example.edu/Test/001A>
+	Result Path: pesc:hasSubtest
+	Message: Value does not conform to Shape ex:SubtestShape. See details for more information.
+	Details:
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:subtestshapeSubtestIdentifier
+			Focus Node: <https://example.edu/Test/001A>
+			Value Node: Literal("STA", datatype=xsd:token)
+			Result Path: ceds:P000367
+			Message: Value is not Literal with datatype xsd:string
+		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: ex:subtestshapeSubtestTitle
+			Focus Node: <https://example.edu/Test/001A>
+			Value Node: Literal("Standard Test part A", lang=en)
+			Result Path: ceds:P000275
+			Message: Value is not Literal with datatype xsd:string
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:testshapeHasSubtest
@@ -40,28 +83,6 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: Literal("STA")
 			Result Path: rdf:type
 			Message: Less than 1 values on Literal("STA")->rdf:type
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:testshapeHasSubtest
-	Focus Node: <https://example.edu/Test/001>
-	Value Node: <https://example.edu/Test/001A>
-	Result Path: pesc:hasSubtest
-	Message: Value does not conform to Shape ex:SubtestShape. See details for more information.
-	Details:
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:subtestshapeSubtestIdentifier
-			Focus Node: <https://example.edu/Test/001A>
-			Value Node: Literal("STA", datatype=xsd:token)
-			Result Path: ceds:P000367
-			Message: Value is not Literal with datatype xsd:string
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:subtestshapeSubtestTitle
-			Focus Node: <https://example.edu/Test/001A>
-			Value Node: Literal("Standard Test part A", lang=en)
-			Result Path: ceds:P000275
-			Message: Value is not Literal with datatype xsd:string
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:testshapeHasSubtest
@@ -69,17 +90,3 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("STA")
 	Result Path: pesc:hasSubtest
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:subtestshapeSubtestIdentifier
-	Focus Node: <https://example.edu/Test/001A>
-	Value Node: Literal("STA", datatype=xsd:token)
-	Result Path: ceds:P000367
-	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:subtestshapeSubtestTitle
-	Focus Node: <https://example.edu/Test/001A>
-	Value Node: Literal("Standard Test part A", lang=en)
-	Result Path: ceds:P000275
-	Message: Value is not Literal with datatype xsd:string

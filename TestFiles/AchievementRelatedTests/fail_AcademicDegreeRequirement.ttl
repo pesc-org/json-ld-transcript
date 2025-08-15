@@ -53,14 +53,14 @@
     ceds:P000003 "Example Award"^^xsd:string ; # Academic Award Title
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> ;
-    pesc:academicDegreeRequirement <https://example.edu/academicDegreeRequirement/001> ; 
+    pesc:academicDegreeRequirement <https://example.edu/academicDegreeRequirement/001> ; # 1 fail, wrong shape
 .
 
 
 <https://example.edu/academicDegreeRequirement/001> a pesc:AcademicDegreeRequirement ;
-    pesc:thesisDIssertationTitle 42 ; # wrong
-    pesc:thesisDissertationAdvisor <https://example.edu/people/Example> ; # not a name
-    pesc:URLAddress "https://example.edu/ExampleURL/address" # not xsd:anyURI
+    pesc:thesisDIssertationTitle 42 ; # 1 fail wrong datatype
+    pesc:thesisDissertationAdvisor <https://example.edu/people/Example> ; # 1 fail wrong node kind
+    pesc:URLAddress "https://example.edu/ExampleURL/address" # 1 fail wron datatype
 .
 
 

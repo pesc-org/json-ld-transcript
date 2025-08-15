@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (9):
+Results (11):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeAcademicProgramName
@@ -14,7 +14,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/Program/001>
 	Value Node: pescAcademicProgramTypes:Special
 	Result Path: pesc:academicProgramType
-	Message: Value pescAcademicProgramTypes:Special not in list ['pescAcademicProgramTypes:Concentration', 'pescAcademicProgramTypes:Specialization', 'pescAcademicProgramTypes:Minor', 'pescAcademicProgramTypes:Major', 'pescAcademicProgramTypes:SecondMajor', 'pescAcademicProgramTypes:Focus']
+	Message: Value pescAcademicProgramTypes:Special not in list ['pescAcademicProgramTypes:Focus', 'pescAcademicProgramTypes:Specialization', 'pescAcademicProgramTypes:Concentration', 'pescAcademicProgramTypes:Major', 'pescAcademicProgramTypes:SecondMajor', 'pescAcademicProgramTypes:Minor']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeCodedNotation
@@ -29,6 +29,13 @@ Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#P
 	Value Node: Literal("12")
 	Result Path: ceds:P000043
 	Message: Value does not match pattern '^\d{2}\.\d{4}$'
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeHasPart
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: <https://example.edu/Course/002>
+	Result Path: ceterms:hasPart
+	Message: Value does not have class ceds:C200328
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeHasPart
@@ -61,6 +68,13 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: <https://example.edu/Course/002>
 			Result Path: rdf:type
 			Message: Less than 1 values on <https://example.edu/Course/002>->rdf:type
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicprogramshapeOfferedBy
+	Focus Node: <https://example.edu/Program/001>
+	Value Node: Literal("Example Source")
+	Result Path: ceterms:offeredBy
+	Message: Value does not have class ceds:C200239
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeOfferedBy
@@ -88,4 +102,4 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/Program/001>
 	Value Node: pescSecondarySchoolCodes:Vocation
 	Result Path: pesc:programSecondarySchoolCode
-	Message: Value pescSecondarySchoolCodes:Vocation not in list ['pescSecondarySchoolCodes:CollegePrep', 'pescSecondarySchoolCodes:Vocational', 'pescSecondarySchoolCodes:General', 'pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep', 'pescSecondarySchoolCodes:CareerPrep', 'pescSecondarySchoolCodes:Occupational', 'pescSecondarySchoolCodes:CollegeTechPrep']
+	Message: Value pescSecondarySchoolCodes:Vocation not in list ['pescSecondarySchoolCodes:General', 'pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep', 'pescSecondarySchoolCodes:CollegeTechPrep', 'pescSecondarySchoolCodes:CollegePrep', 'pescSecondarySchoolCodes:Occupational', 'pescSecondarySchoolCodes:Vocational', 'pescSecondarySchoolCodes:CareerPrep']

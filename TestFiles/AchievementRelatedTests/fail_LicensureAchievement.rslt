@@ -1,26 +1,13 @@
 Validation Report
 Conforms: False
 Results (5):
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:licensureachievementshapeInCourse
 	Focus Node: <https://example.edu/achievement004>
 	Value Node: Literal("Course 1")
 	Result Path: pesc:inCourse
-	Message: Value does not conform to Shape ex:CourseShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:courseshapeType
-			Focus Node: Literal("Course 1")
-			Result Path: rdf:type
-			Message: Node Literal("Course 1")->rdf:type does not contain a value in the set: ['ceds:C200328']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:courseshapeType
-			Focus Node: Literal("Course 1")
-			Result Path: rdf:type
-			Message: Less than 1 values on Literal("Course 1")->rdf:type
+	Message: Value does not have class ceds:C200328
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:licensureachievementshapeInCourse
@@ -28,26 +15,13 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("Course 1")
 	Result Path: pesc:inCourse
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:licensureachievementshapeLicensureAchieved
 	Focus Node: <https://example.edu/achievement004>
 	Value Node: Literal("Test Licensure")
 	Result Path: pesc:licensureAchieved
-	Message: Value does not conform to Shape ex:LicensureShape. See details for more information.
-	Details:
-		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:licensureshapeType
-			Focus Node: Literal("Test Licensure")
-			Result Path: rdf:type
-			Message: Node Literal("Test Licensure")->rdf:type does not contain a value in the set: ['pesc:Licensure']
-		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:licensureshapeType
-			Focus Node: Literal("Test Licensure")
-			Result Path: rdf:type
-			Message: Less than 1 values on Literal("Test Licensure")->rdf:type
+	Message: Value does not have class pesc:Licensure
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:licensureachievementshapeLicensureAchieved

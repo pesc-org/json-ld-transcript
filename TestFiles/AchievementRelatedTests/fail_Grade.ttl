@@ -52,15 +52,15 @@
 <https://example.edu/achievement001> a ceds:C200346 ;   # Postsecondary Student Section
     pesc:inSession	<https://example.edu/Session/001> ; # In Session
     pesc:inCourse	<https://example.edu/Course/001> ;  # In Course
-    pesc:courseGrade                    # Course Grade
+    pesc:courseGrade                    # 1 fail wrong shape for Course Grade
     [    a pesc:Grade ;
-        ceds:P000053 42 ;         # Should be string for Course Academic Grade
-        ceds:P001298 ceds:NI001299115324 ;     # Invalid node type for Course academic grade scale code
-        ceds:P001299 ceds:NotValid ;  # Has Course Ac. Grade Status Code
-        ceds:P001313 "invalid lang string"@en ;    # should be string Course Narrative Explanation Grade
+        ceds:P000053 42 ;         # 1 fail wrong datatype for Course Academic Grade
+        ceds:P001298 ceds:NI001299115324 ;     # 2 fail wrong node kind, wrong datatype for Course academic grade scale code
+        ceds:P001299 ceds:NotValid ;  # 1 fail, not in list for Has Course Ac. Grade Status Code
+        ceds:P001313 "invalid lang string"@en ; # 1 fail wrong datatype should be string Course Narrative Explanation Grade
     ] ;
-    pesc:courseEquivalentGrade	    # Course Equivalent Grade
-    [   a pesc:Mark ;    # wrong class
+    pesc:courseEquivalentGrade	    # 2 fail wrong class, wrong shape 
+    [   a pesc:Mark ;    # wrong class so not checked
         ceds:P000053 "B+" ;         # Course Academic Grade
         ceds:P001298 "other code" ; # Course academic grade scale code
     ] ; 
