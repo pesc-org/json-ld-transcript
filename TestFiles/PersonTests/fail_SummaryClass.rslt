@@ -1,0 +1,10 @@
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:studentshapeHasSummary
+	Focus Node: <https://people.pjjk.net/test>
+	Value Node: <https://example.edu/summary001>
+	Result Path: pesc:hasSummary
+	Message: Node <https://example.edu/summary001> does not conform to one or more shapes in [ sh:class pesc:AcademicSummary ] , [ sh:class pesc:AwardSummary ] , [ sh:class pesc:ProgramSummary ] , [ sh:class pesc:SessionSummary ]

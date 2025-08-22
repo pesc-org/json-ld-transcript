@@ -38,10 +38,15 @@
     pesc:destination <https://example.edu/Destination#id> ;
     pesc:documentID "050330001" ;
     pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
-    pesc:hasAcademicSummary <https://example.edu/academicSummary001> ;
-    pesc:hasAwardSummary <https://example.edu/awardSummary001> ;
-    pesc:hasProgramSummary <https://example.edu/programSummary001> ;
-    pesc:hasSessionSummary <https://example.edu/sessionSummary001> ;
+    pesc:describesAchievement <https://example.edu/achievement001>, # academic award
+        <https://example.edu/achievement002>, # test score
+        <https://example.edu/achievement003>, # course achievement
+        <https://example.edu/achievement004>, # licensure achievement
+        <https://example.edu/achievement005>; # additional achievement
+    ceterms:hasPart <https://example.edu/awardSummary001>,
+        <https://example.edu/programSummary001>,
+        <https://example.edu/sessionSummary001>,
+        <https://example.edu/academicSummary001> ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
@@ -231,11 +236,15 @@
     pesc:deceasedIndicator true ;
     pesc:genderCode pescGenderCodes:Unreported ;
     pesc:studentLevel pescStudentLevelCodes:CollegeJunior ;
-    pesc:hasAchievement <https://example.edu/achievement001>; # academic award
-    pesc:hasAchievement <https://example.edu/achievement002>; # test score
-    pesc:hasAchievement <https://example.edu/achievement003>; # course achievement
-    pesc:hasAchievement  <https://example.edu/achievement004>; # licensure achievement
-    pesc:hasAchievement  <https://example.edu/achievement005>; # additional achievement
+    pesc:hasAchievement <https://example.edu/achievement001>, # academic award
+        <https://example.edu/achievement002>, # test score
+        <https://example.edu/achievement003>, # course achievement
+        <https://example.edu/achievement004>, # licensure achievement
+        <https://example.edu/achievement005>; # additional achievement
+    pesc:hasSummary <https://example.edu/awardSummary001>,
+        <https://example.edu/programSummary001>,
+        <https://example.edu/sessionSummary001>,
+        <https://example.edu/academicSummary001> ;
     elm:additionalNote [
         rdf:type elm:Note ;
         elm:noteLiteral "A made up test peson" ;
@@ -382,9 +391,8 @@
     pesc:languageProficiency pescLanguageProficiencyCodes:Fair ;
 .
 
-<https://example.edu/awardSummary001> a pesc:Summary ;
+<https://example.edu/awardSummary001> a pesc:AwardSummary ;
     pesc:source <https://example.edu/Source#id> ;
-    pesc:student <https://people.pjjk.net/test> ;
     pesc:isSummaryForAward <https://example.edu/achievement001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
     pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
@@ -396,9 +404,8 @@
     pesc:isSummaryForProgram <https://example.edu/Program/001> ;
 .
 
-<https://example.edu/programSummary001> a pesc:Summary ;
+<https://example.edu/programSummary001> a pesc:ProgramSummary ;
     pesc:source <https://example.edu/Source#id> ;
-    pesc:student <https://people.pjjk.net/test> ;
     pesc:isSummaryForProgram <https://example.edu/Program/001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
     pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
@@ -410,9 +417,8 @@
 #    pesc:highSchoolCreditSummary
 .
 
-<https://example.edu/sessionSummary001> a pesc:Summary ;
+<https://example.edu/sessionSummary001> a pesc:SessionSummary ;
     pesc:source <https://example.edu/Source#id> ;
-    pesc:student <https://people.pjjk.net/test> ;
     pesc:isSummaryForSession <https://example.edu/Session/001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
     pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
@@ -432,9 +438,8 @@
     pesc:classRankYearMonth  "2024-06"^^xsd:gYearMonth ;
 .
 
-<https://example.edu/academicSummary001> a pesc:Summary ;
+<https://example.edu/academicSummary001> a pesc:AcademicSummary ;
     pesc:source <https://example.edu/Source#id> ;
-    pesc:student <https://people.pjjk.net/test> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
     pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
     pesc:gpaSummary <https://example.edu/gpa001> ;

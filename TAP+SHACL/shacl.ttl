@@ -5,7 +5,6 @@
 @prefix elm: <http://data.europa.eu/snb/model/elm/> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
-@prefix pescAgencyCodes: <https://pesc.org/vocabs/AgencyCodes#> .
 @prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
 @prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
 @prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
@@ -47,6 +46,11 @@
     sh:closed false ;
     sh:targetClass ceds:C200245 .
 
+<AcademicSummaryShape> a sh:NodeShape ;
+    rdfs:label "Academic Summary"@en ;
+    sh:closed false ;
+    sh:targetClass pesc:AcademicSummary .
+
 <AccreditationShape> a sh:NodeShape ;
     rdfs:label "Accreditation"@en ;
     sh:closed false ;
@@ -60,27 +64,26 @@
 <AgencyIdentifierShape> a sh:NodeShape ;
     rdfs:label "Agency Identifier"@en ;
     sh:closed false ;
-    sh:property <agencyidentifiershapeAgencyCode>,
-        <agencyidentifiershapeAgencyName>,
-        <agencyidentifiershapeCountryCode>,
-        <agencyidentifiershapeStateProvinceCode> ;
     sh:targetClass pesc:AgencyIdentifier .
+
+<AwardSummaryShape> a sh:NodeShape ;
+    rdfs:label "Award Summary"@en ;
+    sh:closed false ;
+    sh:targetClass pesc:AwardSummary .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
     rdfs:label "College Transcript"@en ;
     sh:closed false ;
     sh:property <collegetranscriptshapeAdditionalNote>,
         <collegetranscriptshapeCreatedDateTime>,
+        <collegetranscriptshapeDescribesAchievement>,
         <collegetranscriptshapeDestination>,
         <collegetranscriptshapeDocumentCompleteCode>,
         <collegetranscriptshapeDocumentID>,
         <collegetranscriptshapeDocumentOfficialCode>,
         <collegetranscriptshapeDocumentProcessCode>,
         <collegetranscriptshapeDocumenttypeCode>,
-        <collegetranscriptshapeHasAcademicSummary>,
-        <collegetranscriptshapeHasAwardSummary>,
-        <collegetranscriptshapeHasProgramSummary>,
-        <collegetranscriptshapeHasSessionSummary>,
+        <collegetranscriptshapeHaspart>,
         <collegetranscriptshapeRequestTrackingID>,
         <collegetranscriptshapeSource>,
         <collegetranscriptshapeStudent>,
@@ -180,6 +183,11 @@
     sh:closed false ;
     sh:targetClass ceds:C200332 .
 
+<ProgramSummaryShape> a sh:NodeShape ;
+    rdfs:label "Program Summary"@en ;
+    sh:closed false ;
+    sh:targetClass pesc:ProgramSummary .
+
 <RAPShape> a sh:NodeShape ;
     rdfs:label "Requirement, Attribute or Proficiency"@en ;
     sh:closed false ;
@@ -189,6 +197,11 @@
     rdfs:label "Residency"@en ;
     sh:closed false ;
     sh:targetClass pesc:Residency .
+
+<SessionSummaryShape> a sh:NodeShape ;
+    rdfs:label "Session Summary"@en ;
+    sh:closed false ;
+    sh:targetClass pesc:SessionSummary .
 
 <SubtestShape> a sh:NodeShape ;
     rdfs:label "Subtest"@en ;
@@ -210,36 +223,12 @@
     sh:closed false ;
     sh:targetClass ceds:C200010 .
 
-<AcademicSummaryShape> a sh:NodeShape ;
-    rdfs:label "Academic Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
-    sh:closed false ;
-    sh:targetObjectsOf pesc:hasAcademicSummary .
-
-<AwardSummaryShape> a sh:NodeShape ;
-    rdfs:label "Award Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
-    sh:closed false ;
-    sh:targetObjectsOf pesc:hasAwardSummary .
-
 <NoteShape> a sh:NodeShape ;
     rdfs:label "Note"@en ;
     sh:closed false ;
     sh:property <noteshapeNoteliteral>,
         <noteshapeType> ;
     sh:targetClass elm:Note .
-
-<ProgramSummaryShape> a sh:NodeShape ;
-    rdfs:label "Program Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
-    sh:closed false ;
-    sh:targetObjectsOf pesc:hasProgramSummary .
-
-<SessionSummaryShape> a sh:NodeShape ;
-    rdfs:label "Session Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
-    sh:closed false ;
-    sh:targetObjectsOf pesc:hasSessionSummary .
 
 <StudentShape> a sh:NodeShape ;
     rdfs:label "Student"@en ;
@@ -250,38 +239,6 @@
     rdfs:label "W3C Verifiable Credential"@en ;
     sh:closed false ;
     sh:targetObjectsOf pesc:verifiableCredential .
-
-<agencyidentifiershapeAgencyCode> a sh:PropertyShape ;
-    sh:in ( pescAgencyCodes:District pescAgencyCodes:Migrant pescAgencyCodes:MutuallyDefined pescAgencyCodes:National pescAgencyCodes:Regional pescAgencyCodes:State ) ;
-    sh:maxCount 1 ;
-    sh:name "Agency Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:agencyCode .
-
-<agencyidentifiershapeAgencyName> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 60 ;
-    sh:name "Agency Name"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:agencyName .
-
-<agencyidentifiershapeCountryCode> a sh:PropertyShape ;
-    rdfs:comment "pesc:core:InternationalAddressDetailsGroup"@eng ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Country Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:countryCode .
-
-<agencyidentifiershapeStateProvinceCode> a sh:PropertyShape ;
-    rdfs:comment """pesc:core:DomesticAddressDetailsGroup
-pesc:core:InternationalAddressDetailsGroup"""@eng ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "State Province Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:stateProvinceCode .
 
 <collegetranscriptshapeAdditionalNote> a sh:PropertyShape ;
     sh:class elm:Note ;
@@ -297,6 +254,12 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:name "Created Date Time"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:createdDateTime .
+
+<collegetranscriptshapeDescribesAchievement> a sh:PropertyShape ;
+    sh:name "Describes Achievement"@en-US ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:or ( [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:GPA ] [ sh:class pesc:AcademicSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
+    sh:path pesc:describesAchievement .
 
 <collegetranscriptshapeDestination> a sh:PropertyShape ;
     sh:class ceds:C200239 ;
@@ -346,33 +309,11 @@ pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:documentTypeCode .
 
-<collegetranscriptshapeHasAcademicSummary> a sh:PropertyShape ;
-    sh:class pesc:Summary ;
-    sh:name "Has Academic Summary"@en-US ;
-    sh:node <AcademicSummaryShape> ;
+<collegetranscriptshapeHaspart> a sh:PropertyShape ;
+    sh:name "Has part"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasAcademicSummary .
-
-<collegetranscriptshapeHasAwardSummary> a sh:PropertyShape ;
-    sh:class pesc:Summary ;
-    sh:name "Has Award Summary"@en-US ;
-    sh:node <AwardSummaryShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasAwardSummary .
-
-<collegetranscriptshapeHasProgramSummary> a sh:PropertyShape ;
-    sh:class pesc:Summary ;
-    sh:name "Has Program Summary"@en-US ;
-    sh:node <ProgramSummaryShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasProgramSummary .
-
-<collegetranscriptshapeHasSessionSummary> a sh:PropertyShape ;
-    sh:class pesc:Summary ;
-    sh:name "Has Session Summary"@en-US ;
-    sh:node <SessionSummaryShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:hasSessionSummary .
+    sh:or ( [ sh:class pesc:AcademicSummary ] [ sh:class pesc:AwardSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:SessionSummary ] ) ;
+    sh:path ceterms:hasPart .
 
 <collegetranscriptshapeRequestTrackingID> a sh:PropertyShape ;
     sh:datatype xsd:string ;

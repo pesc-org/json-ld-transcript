@@ -1,13 +1,20 @@
 Validation Report
 Conforms: False
 Results (4):
+Validation Result in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Warning
+	Source Shape: ex:studentshapeHasSummary
+	Focus Node: <https://people.pjjk.net/test>
+	Value Node: <https://example.edu/academicSummary001>
+	Result Path: pesc:hasSummary
+	Message: Node <https://example.edu/academicSummary001> does not conform to one or more shapes in [ sh:class pesc:AcademicSummary ] , [ sh:class pesc:AwardSummary ] , [ sh:class pesc:ProgramSummary ] , [ sh:class pesc:SessionSummary ]
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academichonorsshapeHonorsLevel
 	Focus Node: <https://example.edu/honors001>
 	Value Node: Literal("ThirdHighest")
 	Result Path: pesc:honorsLevel
-	Message: Value Literal("ThirdHighest") not in list ['pescHonorsLevels:FirstHighest', 'pescHonorsLevels:SecondHighest', 'pescHonorsLevels:ThirdHighest']
+	Message: Value Literal("ThirdHighest") not in list ['pescHonorsLevels:SecondHighest', 'pescHonorsLevels:FirstHighest', 'pescHonorsLevels:ThirdHighest']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academichonorsshapeHonorsLevel
@@ -22,32 +29,3 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("cum laude", lang=la)
 	Result Path: pesc:honorsTitle
 	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:academicsummaryshapeAcademicHonors
-	Focus Node: <https://example.edu/academicSummary001>
-	Value Node: <https://example.edu/honors001>
-	Result Path: pesc:academicHonors
-	Message: Value does not conform to Shape ex:AcademicHonorsShape. See details for more information.
-	Details:
-		Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:academichonorsshapeHonorsLevel
-			Focus Node: <https://example.edu/honors001>
-			Value Node: Literal("ThirdHighest")
-			Result Path: pesc:honorsLevel
-			Message: Value Literal("ThirdHighest") not in list ['pescHonorsLevels:FirstHighest', 'pescHonorsLevels:SecondHighest', 'pescHonorsLevels:ThirdHighest']
-		Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:academichonorsshapeHonorsLevel
-			Focus Node: <https://example.edu/honors001>
-			Value Node: Literal("ThirdHighest")
-			Result Path: pesc:honorsLevel
-			Message: Value is not of Node Kind sh:IRI
-		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-			Severity: sh:Violation
-			Source Shape: ex:academichonorsshapeHonorsTitle
-			Focus Node: <https://example.edu/honors001>
-			Value Node: Literal("cum laude", lang=la)
-			Result Path: pesc:honorsTitle
-			Message: Value is not Literal with datatype xsd:string

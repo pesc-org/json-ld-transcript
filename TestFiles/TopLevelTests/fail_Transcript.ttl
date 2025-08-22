@@ -2,12 +2,9 @@
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
-@prefix pescAcademicSummaryLevels:	<https://pesc.org/vocabs/AcademicSummaryLevels#> .
-@prefix pescAcademicSummaryTypes:	<https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
-@prefix pescDelinquencyCodes:	<https://pesc.org/vocabs/DeliinquencyCodes#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
@@ -16,14 +13,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.edu/transcripts/050330001> a pesc:CollegeTranscript ;
-    pesc:createdDateTime "2023-05-08T14:17:29-05:00"^^xsd:dateTime ;
-    pesc:destination <https://example.edu/Desintation#id> ;
-    pesc:documentID "050330001" ;
-    pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
-    pesc:hasSessionSummary <https://example.edu/sessionSummary001> ;
-    pesc:source <https://example.edu/Source#id> ;
-    pesc:student <https://people.pjjk.net/test> ;
-    pesc:transmissionType pescTransmissionTypes:Original .
+    pesc:createdDateTime "2023-05-08T14:17:29-05:00" ; # 1 fail wrong datatype 
+    pesc:destination <https://example.edu/None> ; # 1 fail wrong class, 
+#    pesc:documentID "050330001" ; # 1 fail, missing required
+    pesc:documentTypeCode "RequestedRecord" ; # 2 fail wrong node kind, not in list
+    pesc:source <https://example.edu/Fail> ; # 1 fail, wrong class
+    pesc:student "Testy" ; # 2 fail wrong node type, wrong class
+    pesc:transmissionType "Original" ; #2 fail wrong node kind, not in list
+    ceterms:hasPart "Session/001" ;  #2 fail wrong node kind wrong class
+    pesc:describesAchievement "Achievement/001" ;  #2 fail wrong node kind wrong class
+.
 
 <https://example.edu/Session/001> a pesc:AcademicSession ;
     pesc:offeredBy <https://example.edu/Source#id> ;
@@ -49,6 +48,7 @@
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
+    pesc:hasSummary <https://example.edu/awardSummary001> ;
     pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
@@ -58,30 +58,11 @@
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> .
 
+<https://example.edu/awardSummary001> a pesc:AwardSummary ;
+    pesc:isSummaryForAward <https://example.edu/achievement001> ;
+.
+
+
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
-<https://example.edu/sessionSummary001> a pesc:SessionSummary ;
-#    pesc:isSummaryForSession <https://example.edu/Session/001> ; # 1 fail Missing required
-    pesc:source "https://example.edu/Source#id" ; # 2 fail wrong node kind, wrong class 
-    pesc:academicSummaryType "DegreeApplicable" ; # 2 fail wrong node kind, not in list
-    pesc:academicSummaryLevel "Undergraduate" ; # 2 fail wrong node kind, not in list
-    pesc:gpaSummary <https://example.edu/gpa> ; # 2 fail wrong class, wrong shape
-    pesc:academicHonors <https://example.edu/honors> ; # 2 fail wrong class, wrong shape
-    pesc:classRank 3.5 ; # 1 fail wrong datatype
-    pesc:classSize 99999 ; # 1 fail too large
-    pesc:delinquencies "Suspension" ;  # 2 fail, wrong node kind, not in list
-#    pesc:highSchoolCreditSummary
-    pesc:isSummaryForProgram <https://example.edu/Program/> ; # 1 fail wrong class
-    pesc:entryDate "2022-03-23" ;  # 1 fail wrong datatype
-    pesc:exitDate "2024-06-23" ; # 1 fail wrong datatype
-    pesc:exitReasonCode "Gave up"@en ; # 1 fail wrong data type
-    pesc:classRankSessionCount 10000 ; # 1 fail Too large
-    pesc:classRankDate "2024-06-23" ;  # 1 fail wrong datatype
-    pesc:classRankYear  "2024" ;  # 1 fail wrong datatype
-    pesc:classRankYearMonth  "2024-06" ;  # 1 fail wrong datatype
-.
-
-<https://example.edu/gpa001> a pesc:GPA . 
-<https://example.edu/honors001> a pesc:AcademicHonors . 
-<https://example.edu/Session/001> a ceds:C200245 .

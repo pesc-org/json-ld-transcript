@@ -27,7 +27,6 @@
 
 <AcademicSummaryShape> a sh:NodeShape ;
     rdfs:label "Academic Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
     sh:property <academicsummaryshapeAcademicHonors>,
         <academicsummaryshapeAcademicSummaryLevel>,
@@ -47,9 +46,8 @@
         <academicsummaryshapeHighSchoolCreditSummary>,
         <academicsummaryshapeIsSummaryForProgram>,
         <academicsummaryshapeSource>,
-        <academicsummaryshapeStudent>,
         <academicsummaryshapeType> ;
-    sh:targetObjectsOf pesc:hasAcademicSummary .
+    sh:targetClass pesc:AcademicSummary .
 
 <AccreditationShape> a sh:NodeShape ;
     rdfs:label "Accreditation"@en ;
@@ -68,7 +66,6 @@
 
 <AwardSummaryShape> a sh:NodeShape ;
     rdfs:label "Award Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
     sh:property <awardsummaryshapeAcademicHonors>,
         <awardsummaryshapeAcademicSummaryLevel>,
@@ -81,9 +78,8 @@
         <awardsummaryshapeIsSummaryForAward>,
         <awardsummaryshapeIsSummaryForProgram>,
         <awardsummaryshapeSource>,
-        <awardsummaryshapeStudent>,
         <awardsummaryshapeType> ;
-    sh:targetObjectsOf pesc:hasAwardSummary .
+    sh:targetClass pesc:AwardSummary .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
     rdfs:label "College Transcript"@en ;
@@ -178,7 +174,6 @@
 
 <ProgramSummaryShape> a sh:NodeShape ;
     rdfs:label "Program Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
     sh:property <programsummaryshapeAcademicHonors>,
         <programsummaryshapeAcademicSummaryLevel>,
@@ -192,9 +187,8 @@
         <programsummaryshapeHighSchoolCreditSummary>,
         <programsummaryshapeIsSummaryForProgram>,
         <programsummaryshapeSource>,
-        <programsummaryshapeStudent>,
         <programsummaryshapeType> ;
-    sh:targetObjectsOf pesc:hasProgramSummary .
+    sh:targetClass pesc:ProgramSummary .
 
 <RAPShape> a sh:NodeShape ;
     rdfs:label "Requirement, Attribute or Proficiency"@en ;
@@ -208,7 +202,6 @@
 
 <SessionSummaryShape> a sh:NodeShape ;
     rdfs:label "Session Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
     sh:property <sessionsummaryshapeAcademicHonors>,
         <sessionsummaryshapeAcademicSummaryLevel>,
@@ -229,9 +222,14 @@
         <sessionsummaryshapeIsSummaryForProgram>,
         <sessionsummaryshapeIsSummaryForSession>,
         <sessionsummaryshapeSource>,
-        <sessionsummaryshapeStudent>,
         <sessionsummaryshapeType> ;
-    sh:targetObjectsOf pesc:hasSessionSummary .
+    sh:targetClass pesc:SessionSummary .
+
+<StudentShape> a sh:NodeShape ;
+    rdfs:label "Student"@en ;
+    sh:closed false ;
+    sh:property <studentshapeHasSummary> ;
+    sh:targetClass ceds:C200275 .
 
 <SubtestShape> a sh:NodeShape ;
     rdfs:label "Subtest"@en ;
@@ -428,23 +426,13 @@
 <academicsummaryshapeSource> a sh:PropertyShape ;
     sh:class ceds:C200239 ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Source"@en-US ;
     sh:node <OrganizationShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:source .
 
-<academicsummaryshapeStudent> a sh:PropertyShape ;
-    sh:class ceds:C200275 ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "student"@en-US ;
-    sh:node <StudentShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:student .
-
 <academicsummaryshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Summary ;
+    sh:hasValue pesc:AcademicSummary ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -532,23 +520,13 @@
 <awardsummaryshapeSource> a sh:PropertyShape ;
     sh:class ceds:C200239 ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Source"@en-US ;
     sh:node <OrganizationShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:source .
 
-<awardsummaryshapeStudent> a sh:PropertyShape ;
-    sh:class ceds:C200275 ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "student"@en-US ;
-    sh:node <StudentShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:student .
-
 <awardsummaryshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Summary ;
+    sh:hasValue pesc:AwardSummary ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -728,23 +706,13 @@
 <programsummaryshapeSource> a sh:PropertyShape ;
     sh:class ceds:C200239 ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Source"@en-US ;
     sh:node <OrganizationShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:source .
 
-<programsummaryshapeStudent> a sh:PropertyShape ;
-    sh:class ceds:C200275 ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "student"@en-US ;
-    sh:node <StudentShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:student .
-
 <programsummaryshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Summary ;
+    sh:hasValue pesc:ProgramSummary ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -897,27 +865,25 @@ Rank in the College Transcript. However, if it is included, it is recommended th
 <sessionsummaryshapeSource> a sh:PropertyShape ;
     sh:class ceds:C200239 ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:name "Source"@en-US ;
     sh:node <OrganizationShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:source .
 
-<sessionsummaryshapeStudent> a sh:PropertyShape ;
-    sh:class ceds:C200275 ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "student"@en-US ;
-    sh:node <StudentShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:student .
-
 <sessionsummaryshapeType> a sh:PropertyShape ;
-    sh:hasValue pesc:Summary ;
+    sh:hasValue pesc:SessionSummary ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
+
+<studentshapeHasSummary> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:name "Has Summary"@en-US ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:or ( [ sh:class pesc:AcademicSummary ] [ sh:class pesc:AwardSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:SessionSummary ] ) ;
+    sh:path pesc:hasSummary ;
+    sh:severity sh:Warning .
 
 <AcademicHonorsShape> a sh:NodeShape ;
     rdfs:label "Academic Honors"@en ;
@@ -957,9 +923,4 @@ Rank in the College Transcript. However, if it is included, it is recommended th
     rdfs:label "Organization"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200239 .
-
-<StudentShape> a sh:NodeShape ;
-    rdfs:label "Student"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200275 .
 

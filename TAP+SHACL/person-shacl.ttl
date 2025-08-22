@@ -49,9 +49,8 @@
 
 <AcademicSummaryShape> a sh:NodeShape ;
     rdfs:label "Academic Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasAcademicSummary .
+    sh:targetClass pesc:AcademicSummary .
 
 <AccreditationShape> a sh:NodeShape ;
     rdfs:label "Accreditation"@en ;
@@ -70,9 +69,8 @@
 
 <AwardSummaryShape> a sh:NodeShape ;
     rdfs:label "Award Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasAwardSummary .
+    sh:targetClass pesc:AwardSummary .
 
 <CollegeTranscriptShape> a sh:NodeShape ;
     rdfs:label "College Transcript"@en ;
@@ -157,9 +155,8 @@
 
 <ProgramSummaryShape> a sh:NodeShape ;
     rdfs:label "Program Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasProgramSummary .
+    sh:targetClass pesc:ProgramSummary .
 
 <RAPShape> a sh:NodeShape ;
     rdfs:label "Requirement, Attribute or Proficiency"@en ;
@@ -168,9 +165,8 @@
 
 <SessionSummaryShape> a sh:NodeShape ;
     rdfs:label "Session Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasSessionSummary .
+    sh:targetClass pesc:SessionSummary .
 
 <StudentShape> a sh:NodeShape ;
     rdfs:label "Student"@en ;
@@ -192,6 +188,7 @@
         <studentshapeHasPersonIdentifier>,
         <studentshapeHasPersonLanguage>,
         <studentshapeHasPersonName>,
+        <studentshapeHasSummary>,
         <studentshapeResidency>,
         <studentshapeStudentLevel>,
         <studentshapeType> ;
@@ -529,7 +526,6 @@
     sh:path pesc:genderCode .
 
 <studentshapeHasAchievement> a sh:PropertyShape ;
-    sh:minCount 1 ;
     sh:name "Has Achievement"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:or ( [ sh:class pesc:Achievement ] [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:GPA ] [ sh:class pesc:AcademicSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
@@ -564,6 +560,12 @@
     sh:node <PersonNameShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceds:P600336 .
+
+<studentshapeHasSummary> a sh:PropertyShape ;
+    sh:name "Has Summary"@en-US ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:or ( [ sh:class pesc:AcademicSummary ] [ sh:class pesc:AwardSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:SessionSummary ] ) ;
+    sh:path pesc:hasSummary .
 
 <studentshapeResidency> a sh:PropertyShape ;
     sh:class pesc:Residency ;
