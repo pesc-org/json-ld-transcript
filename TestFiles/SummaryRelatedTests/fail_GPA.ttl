@@ -62,7 +62,6 @@
 
 <https://example.edu/academicSummary001> a pesc:Summary ;
     pesc:source <https://example.edu/Source#id> ;
-    pesc:student <https://people.pjjk.net/test> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
     pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
     pesc:gpaSummary <https://example.edu/gpa001> ;

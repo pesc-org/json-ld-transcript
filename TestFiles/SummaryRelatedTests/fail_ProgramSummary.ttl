@@ -61,10 +61,9 @@
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
-<https://example.edu/programSummary001> a pesc:Summary ;
+<https://example.edu/programSummary001> a pesc:ProgramSummary ;
 #    pesc:isSummaryForProgram <https://example.edu/Program/001> ; # 1 fail Missing required
     pesc:source "https://example.edu/Source#id" ; # 2 fail wrong node kind, wrong class
-    pesc:student "https://people.pjjk.net/test" ; # 2 fail wrong node kind, wrong class
     pesc:academicSummaryType "DegreeApplicable" ; # 2 fail Wrong node kind, not in value list
     pesc:academicSummaryLevel "Undergraduate" ; # 2 fail Wrong node kind, not in value list
     pesc:gpaSummary <https://example.edu/gpa001> ; # 2 fail wrong class wrong shape as it does not exist

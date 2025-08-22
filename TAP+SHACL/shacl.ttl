@@ -212,15 +212,13 @@
 
 <AcademicSummaryShape> a sh:NodeShape ;
     rdfs:label "Academic Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasAcademicSummary .
+    sh:targetClass pesc:AcademicSummary .
 
 <AwardSummaryShape> a sh:NodeShape ;
     rdfs:label "Award Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasAwardSummary .
+    sh:targetClass pesc:AwardSummary .
 
 <NoteShape> a sh:NodeShape ;
     rdfs:label "Note"@en ;
@@ -231,15 +229,13 @@
 
 <ProgramSummaryShape> a sh:NodeShape ;
     rdfs:label "Program Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasProgramSummary .
+    sh:targetClass pesc:ProgramSummary .
 
 <SessionSummaryShape> a sh:NodeShape ;
     rdfs:label "Session Summary"@en ;
-    rdfs:comment "Normally type will be pesc:Summary"@en ;
     sh:closed false ;
-    sh:targetObjectsOf pesc:hasSessionSummary .
+    sh:targetClass pesc:SessionSummary .
 
 <StudentShape> a sh:NodeShape ;
     rdfs:label "Student"@en ;

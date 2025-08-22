@@ -60,10 +60,9 @@
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
-<https://example.edu/awardSummary001> a pesc:Summary ;
+<https://example.edu/awardSummary001> a pesc:AwardSummary ;
 #    pesc:isSummaryForAward <https://example.edu/achievement001> ; # 1 fail missing mandatory property
     pesc:source "https://example.edu/Source#id" ; # 2 fail wrong node kind, wrong class
-    pesc:student "https://people.pjjk.net/test" ; # 2 fail wrong node kind, wrong class
     pesc:academicSummaryType pescAcademicSummaryTypes:None ; # 1 fail not in list
     pesc:academicSummaryLevel "Undergraduate" ; # 2 fail invalid node kind, invalid value
     pesc:gpaSummary "Very good A-Star" ; # 3 fail invalid node kind, wrong class, wrong shape
