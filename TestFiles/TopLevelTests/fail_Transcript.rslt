@@ -1,0 +1,100 @@
+Validation Report
+Conforms: False
+Results (14):
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeCreatedDateTime
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("2023-05-08T14:17:29-05:00")
+	Result Path: pesc:createdDateTime
+	Message: Value is not Literal with datatype xsd:dateTime
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeDescribesAchievement
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("Achievement/001")
+	Result Path: pesc:describesAchievement
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeDescribesAchievement
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("Achievement/001")
+	Result Path: pesc:describesAchievement
+	Message: Node Literal("Achievement/001") does not conform to one or more shapes in [ sh:class pesc:AdditionalStudentAchievement ] , [ sh:class ceds:C200335 ] , [ sh:class ceds:C200346 ] , [ sh:class pesc:GPA ] , [ sh:class pesc:AcademicSummary ] , [ sh:class pesc:ProgramSummary ] , [ sh:class pesc:LicensureAchievement ] , [ sh:class ceds:C200047 ]
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeDestination
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: <https://example.edu/None>
+	Result Path: pesc:destination
+	Message: Value does not have class ceds:C200239
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeDocumentID
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Result Path: pesc:documentID
+	Message: Less than 1 values on <https://example.edu/transcripts/050330001>->pesc:documentID
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeDocumenttypeCode
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("RequestedRecord")
+	Result Path: pesc:documentTypeCode
+	Message: Value Literal("RequestedRecord") not in list ['pescDocumentTypeCodes:ThirdPartyRequest', 'pescDocumentTypeCodes:Response', 'pescDocumentTypeCodes:TermEnroll', 'pescDocumentTypeCodes:Change', 'pescDocumentTypeCodes:StudentRequest', 'pescDocumentTypeCodes:InstitutionRequest', 'pescDocumentTypeCodes:TermGrade', 'pescDocumentTypeCodes:Cancel', 'pescDocumentTypeCodes:RequestedRecord']
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeDocumenttypeCode
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("RequestedRecord")
+	Result Path: pesc:documentTypeCode
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeHaspart
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("Session/001")
+	Result Path: ceterms:hasPart
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeHaspart
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("Session/001")
+	Result Path: ceterms:hasPart
+	Message: Node Literal("Session/001") does not conform to one or more shapes in [ sh:class pesc:AcademicSummary ] , [ sh:class pesc:AwardSummary ] , [ sh:class pesc:ProgramSummary ] , [ sh:class pesc:SessionSummary ]
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeSource
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: <https://example.edu/Fail>
+	Result Path: pesc:source
+	Message: Value does not have class ceds:C200239
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeStudent
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("Testy")
+	Result Path: pesc:student
+	Message: Value does not have class ceds:C200275
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeStudent
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("Testy")
+	Result Path: pesc:student
+	Message: Value is not of Node Kind sh:BlankNodeOrIRI
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeTransmissionType
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("Original")
+	Result Path: pesc:transmissionType
+	Message: Value Literal("Original") not in list ['pescTransmissionTypes:MutuallyDefined', 'pescTransmissionTypes:Resubmission', 'pescTransmissionTypes:Replace', 'pescTransmissionTypes:Original', 'pescTransmissionTypes:Duplicate', 'pescTransmissionTypes:Reissue']
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:collegetranscriptshapeTransmissionType
+	Focus Node: <https://example.edu/transcripts/050330001>
+	Value Node: Literal("Original")
+	Result Path: pesc:transmissionType
+	Message: Value is not of Node Kind sh:IRI

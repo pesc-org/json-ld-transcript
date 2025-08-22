@@ -38,10 +38,15 @@
     pesc:destination <https://example.edu/Destination#id> ;
     pesc:documentID "050330001" ;
     pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
-    pesc:hasPart <https://example.edu/academicSummary001> ,
-        <https://example.edu/awardSummary001> ,
-        <https://example.edu/programSummary001> ,
-        <https://example.edu/sessionSummary001> ;
+    pesc:describesAchievement <https://example.edu/achievement001>, # academic award
+        <https://example.edu/achievement002>, # test score
+        <https://example.edu/achievement003>, # course achievement
+        <https://example.edu/achievement004>, # licensure achievement
+        <https://example.edu/achievement005>; # additional achievement
+    ceterms:hasPart <https://example.edu/awardSummary001>,
+        <https://example.edu/programSummary001>,
+        <https://example.edu/sessionSummary001>,
+        <https://example.edu/academicSummary001> ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:student <https://people.pjjk.net/test> ;
     pesc:transmissionType pescTransmissionTypes:Original .
