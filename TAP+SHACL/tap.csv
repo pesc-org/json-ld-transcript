@@ -1,15 +1,4 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,valueClass,Rec Usage,note
-152,AgencyIdentifierShape,pesc:agencyCode,Agency Code,FALSE,FALSE,IRI,,"pescAgencyCodes:District
-pescAgencyCodes:Migrant
-pescAgencyCodes:MutuallyDefined
-pescAgencyCodes:National
-pescAgencyCodes:Regional
-pescAgencyCodes:State",picklist,,,Required,
-153,AgencyIdentifierShape,pesc:agencyName,Agency Name,FALSE,FALSE,Literal,xsd:string,60,maxLength,,,Required,
-113,AgencyIdentifierShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,,Optional,"pesc:core:DomesticAddressDetailsGroup
-pesc:core:InternationalAddressDetailsGroup"
-117,AgencyIdentifierShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,,Optional,pesc:core:InternationalAddressDetailsGroup
-,,,,,,,,,,,,,
 ,CollegeTranscriptShape,rdf:type,Type,FALSE,FALSE,IRI,,pesc:CollegeTranscript,,,,,
 3,CollegeTranscriptShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,Not Recommended,
 18,CollegeTranscriptShape,pesc:createdDateTime,Created Date Time,TRUE,FALSE,Literal,xsd:dateTime,,,,,Required,
@@ -40,10 +29,20 @@ pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,,Required,
-,CollegeTranscriptShape,pesc:hasAwardSummary,Has Award Summary,FALSE,TRUE,IRI BNODE,,,,AwardSummaryShape,pesc:Summary,,
-,CollegeTranscriptShape,pesc:hasProgramSummary,Has Program Summary,FALSE,TRUE,IRI BNODE,,,,ProgramSummaryShape,pesc:Summary,,
-,CollegeTranscriptShape,pesc:hasSessionSummary,Has Session Summary,FALSE,TRUE,IRI BNODE,,,,SessionSummaryShape,pesc:Summary,,
-,CollegeTranscriptShape,pesc:hasAcademicSummary,Has Academic Summary,FALSE,TRUE,IRI BNODE,,,,AcademicSummaryShape,pesc:Summary,,
+,CollegeTranscriptShape,ceterms:hasPart,Has part,FALSE,TRUE,IRI BNODE,,,,,"pesc:AcademicSummary
+pesc:AwardSummary
+pesc:ProgramSummary
+pesc:SessionSummary",,
+,CollegeTranscriptShape,pesc:describesAchievement,Describes Achievement,FALSE,TRUE,IRI BNODE,,,,,"pesc:AdditionalStudentAchievement
+ceds:C200335
+ceds:C200346
+pesc:GPA
+pesc:AcademicSummary
+pesc:ProgramSummary
+pesc:LicensureAchievement
+ceds:C200047",,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,,
