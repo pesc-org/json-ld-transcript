@@ -227,7 +227,7 @@
         ] ;
     ] ;
     ceds:P000033 "2000-01-01"^^xsd:date ;
-    pesc:birthday "01-01"^^xsd:gMonthDay ;
+    pesc:birthday "--01-01"^^xsd:gMonthDay ;
     pesc:birthYear "2000"^^xsd:gYear ;
     pesc:birthCity "Sunnydale"^^xsd:string ;
     pesc:birthStateProvinceCode "CA" ;
@@ -341,7 +341,7 @@
     pesc:inSession	<https://example.edu/Session/001> ; # In Session
     pesc:inCourse	<https://example.edu/Course/001> ;  # In Course
     ceds:P001300 "2009-09-12"^^xsd:date ;   # Course Add Date
-    ceds:P001305 "2009-12-2"^^xsd:date	;   # Course Drop Date
+    ceds:P001305 "2009-12-02"^^xsd:date	;   # Course Drop Date
     ceds:P000200 42.0 ;	# Number of Credits Earned
     ceds:P000065 ceds:NI000065116745 ;	# Has Course Repeat Code
     ceds:P000064 42.0 ;	# Course Quality Points Earned
