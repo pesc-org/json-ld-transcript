@@ -1,8 +1,6 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,valueClass,Rec Usage,note
-,AcademicAwardShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200335,,,,Required,
-277,AcademicAwardShape,pesc:academicDegreeRequirement,Academic Degree Requirement,FALSE,TRUE,IRI BNODE,,,,AcademicDegreeRequirementShape,pesc:AcademicDegreeRequirement,Recommended,
-227,AcademicAwardShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,Recommended,
-232,AcademicAwardShape,pesc:inProgram,Academic Award Program,TRUE,TRUE,IRI BNODE,,,,AcademicProgramShape,ceds:C200331,Recommended,
+223,AcademicAwardShape,ceds:P000001,Academic Award Date,FALSE,FALSE,Literal,xsd:date,,,,,Recommended,ccyy-mm-dd
+224,AcademicAwardShape,ceds:P000003,Academic Award Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,,Recommended,
 222,AcademicAwardShape,ceds:P001668,Academic Award Level Type,FALSE,FALSE,IRI,,"ceds:NI001668151655
 ceds:NI001668151657
 ceds:NI001668151658
@@ -21,49 +19,49 @@ ceds:NI001668151670
 ceds:NI001668151671
 ceds:NI001668151687
 ceds:NI001668151686",picklist,,,Recommended,
-223,AcademicAwardShape,ceds:P000001,Academic Award Date,FALSE,FALSE,Literal,xsd:date,,,,,Recommended,ccyy-mm-dd
-224,AcademicAwardShape,ceds:P000003,Academic Award Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,,Recommended,
-225,AcademicAwardShape,pesc:academicCompletionIndicator,Academic Completion Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,,Recommended,true/false
 226,AcademicAwardShape,pesc:academicCompletionDate,Academic Completion Date,FALSE,FALSE,Literal,xsd:date,,,,,Recommended,ccyy-mm-dd
-,,,,,,,,,,,,,
-,AcademicDegreeRequirementShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:AcademicDegreeRequirement,,,,,
-136,AcademicDegreeRequirementShape,pesc:urlAddress,URL Address,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,,Recommended,URL of thesis / dissertation. Consider renaming this class
-278,AcademicDegreeRequirementShape,pesc:thesisDIssertationTitle,Thesis Dissertation Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,,Recommended,
+225,AcademicAwardShape,pesc:academicCompletionIndicator,Academic Completion Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,,Recommended,true/false
+277,AcademicAwardShape,pesc:academicDegreeRequirement,Academic Degree Requirement,FALSE,TRUE,IRI BNODE,,,,AcademicDegreeRequirementShape,pesc:AcademicDegreeRequirement,Recommended,
+227,AcademicAwardShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,Recommended,
+232,AcademicAwardShape,pesc:inProgram,Academic Award Program,TRUE,TRUE,IRI BNODE,,,,AcademicProgramShape,ceds:C200331,Recommended,
+,AcademicAwardShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200335,,,,Required,
 279,AcademicDegreeRequirementShape,pesc:thesisDissertationAdvisor,Thesis Dissertation Advisor,FALSE,FALSE,Literal,xsd:string,45,maxLength,,,Optional,
-,,,,,,,,,,,,,
-,AcademicHonorsShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:AcademicHonors,,,,,
-230,AcademicHonorsShape,pesc:honorsTitle,Honors Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,,Recommended,
+278,AcademicDegreeRequirementShape,pesc:thesisDIssertationTitle,Thesis Dissertation Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,,Recommended,
+136,AcademicDegreeRequirementShape,pesc:urlAddress,URL Address,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,,Recommended,URL of thesis / dissertation. Consider renaming this class
+,AcademicDegreeRequirementShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:AcademicDegreeRequirement,,,,,
 231,AcademicHonorsShape,pesc:honorsLevel,Honors Level,FALSE,FALSE,IRI,,"pescHonorsLevels:FirstHighest
 pescHonorsLevels:SecondHighest
 pescHonorsLevels:ThirdHighest",picklist,,,Recommended,
-,,,,,,,,,,,,,
-,CourseAchievementShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200346,,,,,
-,CourseAchievementShape,pesc:inSession,In Session,TRUE,FALSE,IRI BNODE,,,,AcademicSessionShape,ceds:C200245,,
-388,CourseAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,Required,
-325,CourseAchievementShape,pesc:courseSupplementalGrade,Course Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,CourseSupplementalGradeShape,pesc:CourseSupplementalGrade,Required,
-,CourseAchievementShape,pesc:courseEquivalentGrade,Course Equivalent Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,pesc:Grade,,
-,CourseAchievementShape,pesc:courseGrade,Course Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,pesc:Grade,,
-,CourseAchievementShape,pesc:inSection,In Section,FALSE,FALSE,IRI BNODE,,,,PostsecondarySectionShape,ceds:C200332,,
-317,CourseAchievementShape,ceds:P001305,Course DropDate,FALSE,FALSE,Literal,xsd:date,,,,,,
-294,CourseAchievementShape,ceds:P000200,Number of Credits Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
+230,AcademicHonorsShape,pesc:honorsTitle,Honors Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,,Recommended,
+,AcademicHonorsShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:AcademicHonors,,,,,
+385,AdditionalStudentAchievmentShape,pesc:attributeAchieved,Attribute Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
+382,AdditionalStudentAchievmentShape,pesc:conditionsMetCode,Conditions Met Code,FALSE,TRUE,IRI,,"pescConditionsMetCodes:Yes
+pescConditionsMetCodes:No
+pescConditionsMetCodes:Conditional
+pescConditionsMetCodes:MutuallyDefined",picklist,,,Recommended,
+383,AdditionalStudentAchievmentShape,pesc:conditionsMetDate,Conditions Met Date,FALSE,TRUE,Literal,xsd:date,,,,,Optional,
+,AdditionalStudentAchievmentShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,,
+387,AdditionalStudentAchievmentShape,pesc:languageAchieved,Language Achieved,FALSE,TRUE,IRI BNODE,,,,LanguageShape,class ceds:C200293,Optional,
+386,AdditionalStudentAchievmentShape,pesc:proficiencyAchieved,Proficiency Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
+384,AdditionalStudentAchievmentShape,pesc:requirementAchieved,Requirement Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
+,AdditionalStudentAchievmentShape,rdf:type,Type,TRUE,,IRI,,pesc:AdditionalStudentAchievement,,,,,
+307,CourseAchievementShape,ceds:P000064,Course Quality Points Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
 299,CourseAchievementShape,ceds:P000065,Has Course Repeat Code,FALSE,FALSE,IRI,,"ceds:NI000065116744
 ceds:NI000065116745
 ceds:NI000065116748
 ceds:NI000065116747
 ceds:NI000065116746
 ceds:NI000065116260",picklist,,,Recommended,
-307,CourseAchievementShape,ceds:P000064,Course Quality Points Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
+294,CourseAchievementShape,ceds:P000200,Number of Credits Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
 316,CourseAchievementShape,ceds:P001300,Course Add Date,FALSE,FALSE,Literal,xsd:date,,,,,Optional,
-,,,,,,,,,,,,,
-,CourseSupplementalGradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:CourseSupplementalGrade,,,,,
-,CourseSupplementalGradeShape,pesc:supplementalGrade,Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,pesc:Grade,,
-326,CourseSupplementalGradeShape,pesc:supplementalGradeCode,Supplemental Grade Code,FALSE,FALSE,IRI,,"pescSupplementalGradeCodes:BiCourseGrade
-pescSupplementalGradeCodes:BlendedFinalGrade
-pescSupplementalGradeCodes:ExamGrade
-pescSupplementalGradeCodes:InstructorAssignedGrade
-pescSupplementalGradeCodes:SubSessionGrade
-pescSupplementalGradeCodes:TriCourseGrade",picklist,,,Recommended,
-327,CourseSupplementalGradeShape,pesc:supplementalSubSession,Supplemental Grade Sub Session,FALSE,FALSE,Literal,xsd:string,3,maxLength,,,Optional,numeric count of the subsession of a course
+317,CourseAchievementShape,ceds:P001305,Course DropDate,FALSE,FALSE,Literal,xsd:date,,,,,,
+,CourseAchievementShape,pesc:courseEquivalentGrade,Course Equivalent Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,pesc:Grade,,
+,CourseAchievementShape,pesc:courseGrade,Course Grade,FALSE,FALSE,IRI BNODE,,,,GradeShape,pesc:Grade,,
+325,CourseAchievementShape,pesc:courseSupplementalGrade,Course Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,CourseSupplementalGradeShape,pesc:CourseSupplementalGrade,Required,
+388,CourseAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,Required,
+,CourseAchievementShape,pesc:inSection,In Section,FALSE,FALSE,IRI BNODE,,,,PostsecondarySectionShape,ceds:C200332,,
+,CourseAchievementShape,pesc:inSession,In Session,TRUE,FALSE,IRI BNODE,,,,AcademicSessionShape,ceds:C200245,,
+,CourseAchievementShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200346,,,,,
 329,CourseSupplementalGradeShape,pesc:courseAcademicSupplementalGradeStatusCode,Course Academic Supplemental Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:AuditedCourse
 pescGradeStatusCodes:HonorsGrade
 pescGradeStatusCodes:Incomplete
@@ -79,9 +77,16 @@ pescGradeStatusCodes:Withdrew
 pescGradeStatusCodes:WithdrewFailing
 pescGradeStatusCodes:WithdrewNoPenalty
 pescGradeStatusCodes:WithdrewPassing",picklist,,,Optional,
-,,,,,,,,,,,,,
-,GradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Grade,,,,,
+326,CourseSupplementalGradeShape,pesc:supplementalGradeCode,Supplemental Grade Code,FALSE,FALSE,IRI,,"pescSupplementalGradeCodes:BiCourseGrade
+pescSupplementalGradeCodes:BlendedFinalGrade
+pescSupplementalGradeCodes:ExamGrade
+pescSupplementalGradeCodes:InstructorAssignedGrade
+pescSupplementalGradeCodes:SubSessionGrade
+pescSupplementalGradeCodes:TriCourseGrade",picklist,,,Recommended,
+327,CourseSupplementalGradeShape,pesc:supplementalGradeSubSession,Supplemental Grade Sub Session,FALSE,FALSE,Literal,xsd:string,3,maxLength,,,Optional,numeric count of the subsession of a course
+,CourseSupplementalGradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:CourseSupplementalGrade,,,,,
 296,GradeShape,ceds:P000053,Course Academic Grade,FALSE,FALSE,Literal,xsd:string,10,maxLength,,,Recommended,
+295,GradeShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,,,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
 297,GradeShape,ceds:P001299,Has Course Academic Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:Completed
 pescGradeStatusCodes:PlanningToTake
 ceds:NI001299115324
@@ -100,27 +105,12 @@ ceds:NI001299117194
 ceds:NI001299117195
 ceds:NI001299117196",picklist,,,Recommended,
 298,GradeShape,ceds:P001313,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,,Not Recommended,
-295,GradeShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,,,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
-,,,,,,,,,,,,,
-,LicensureAchievementShape,rdf:type,Type,TRUE,,IRI,,pesc:LicensureAchievement,,,,,
-351,LicensureAchievementShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,,Optional,
+,GradeShape,pesc:supplementalGrade,Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,CourseSupplementalGradeShape,pesc:Grade,,
+,GradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Grade,,,,,
 ,LicensureAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,,
 ,LicensureAchievementShape,pesc:licensureAchieved,Licensure Achieved,TRUE,FALSE,IRI BNODE,,,,LicensureShape,pesc:Licensure,,
-,,,,,,,,,,,,,
-,AdditionalStudentAchievmentShape,rdf:type,Type,TRUE,,IRI,,pesc:AdditionalStudentAchievement,,,,,
-384,AdditionalStudentAchievmentShape,pesc:requirementAchieved,Requirement Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
-385,AdditionalStudentAchievmentShape,pesc:attributeAchieved,Attribute Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
-386,AdditionalStudentAchievmentShape,pesc:proficiencyAchieved,Proficiency Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
-387,AdditionalStudentAchievmentShape,pesc:languageAchieved,Language Achieved,FALSE,TRUE,IRI BNODE,,,,LanguageShape,class ceds:C200293,Optional,
-382,AdditionalStudentAchievmentShape,pesc:conditionsMetCode,Conditions Met Code,FALSE,TRUE,IRI,,"pescConditionsMetCodes:Yes
-pescConditionsMetCodes:No
-pescConditionsMetCodes:Conditional
-pescConditionsMetCodes:MutuallyDefined",picklist,,,Recommended,
-383,AdditionalStudentAchievmentShape,pesc:conditionsMetDate,Conditions Met Date,FALSE,TRUE,Literal,xsd:date,,,,,Optional,
-,AdditionalStudentAchievmentShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,,
-,,,,,,,,,,,,,
-,TestScoreShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200047,,,,,
-374,TestScoreShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,,Required,
+351,LicensureAchievementShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,,Optional,
+,LicensureAchievementShape,rdf:type,Type,TRUE,,IRI,,pesc:LicensureAchievement,,,,,
 375,TestScoreShape,ceds:P000369,Assessment Score Metric Type,FALSE,FALSE,IRI,,"ceds:NI000027162378
 ceds:NI000027162361
 ceds:NI000027162379
@@ -132,12 +122,12 @@ ceds:NI000027162367
 ceds:NI000027162355
 pescTestScoreMethods:Equated
 pescTestScoreMethods:Percent",picklist,,,Optional,
-376,TestScoreShape,pesc:scoreRevisedIndicator,Score Revised Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,,Optional,true/false
+,TestScoreShape,pesc:inSubtest,In Subtest,TRUE,FALSE,IRI BNODE,,,,SubtestShape,ceds:C200051,,
+,TestScoreShape,pesc:inTest,In Test,FALSE,FALSE,IRI BNODE,,,,TestShape,ceds:C200010,,
 377,TestScoreShape,pesc:scoreInvalidatedIndicator,Score Invalidated Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,,Optional,true/false
+376,TestScoreShape,pesc:scoreRevisedIndicator,Score Revised Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,,Optional,true/false
 378,TestScoreShape,pesc:scoreSelfRportedIndicator,Score Self Reported Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,,Optional,true/false
-366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,,Required,
-368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:gYear,,,,,Required,
-367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:gYearMonth,,,,,Required,
+374,TestScoreShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,,Required,
 ,TestScoreShape,pesc:studentLevel,Student Level,FALSE,FALSE,IRI,,"pescStudentLevelCodes:Postsecondary
 pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear
 pescStudentLevelCodes:NonDegree
@@ -164,5 +154,7 @@ pescStudentLevelCodes:MastersQualifying
 pescStudentLevelCodes:Masters
 pescStudentLevelCodes:Doctoral
 pescStudentLevelCodes:Postdoctoral",picklist,,,Optional,
-,TestScoreShape,pesc:inTest,In Test,FALSE,FALSE,IRI BNODE,,,,TestShape,ceds:C200010,,
-,TestScoreShape,pesc:inSubtest,In Subtest,TRUE,FALSE,IRI BNODE,,,,SubtestShape,ceds:C200051,,
+366,TestScoreShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,,Required,
+368,TestScoreShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:gYear,,,,,Required,
+367,TestScoreShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:gYearMonth,,,,,Required,
+,TestScoreShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200047,,,,,
