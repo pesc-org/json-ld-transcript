@@ -1,6 +1,16 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,valueClass,Rec Usage,note
-,AccreditationShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200240,,,,,
+,OrganizationIdentifierShape,ceds:P000826,Organization Identifier,TRUE,FALSE,Literal,xsd:token,,,,,,
+,OrganizationIdentifierShape,ceds:P000827,Has Organization Identification System,TRUE,FALSE,IRI,,"ceds:NI000827151968
+pescIdentifierTypes:OPEid
+pescIdentifierTypes:PSISid
+pescIdentifierTypes:GEOCode",picklist,,,,
+138,AccreditationShape,ceds:P001526,Accreditation Agency Name,FALSE,FALSE,Literal,xsd:string,80,maxLength,,,Optional,
+99,OrganizationShape,ceds:P600472,Has Organization Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,ceds:C200240,Recommended,
+,OrganizationShape,ceds:P600502,Has Organization Identification,FALSE,TRUE,IRI BNODE,,,,OrganizationIdentifierShape,ceds:C200252,,
+91,OrganizationShape,ceterms:name,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,,Recommended,
+95,OrganizationShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,ceterms:ContactPoint,Recommended,
 12,AccreditationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,Not Recommended,
+5,OrganizationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,Not Recommended,
 137,AccreditationShape,pesc:accreditationBodyCode,Accrediation Body Code,FALSE,FALSE,IRI BNODE,,"pescAccreditationBodyCodes:MSA
 pescAccreditationBodyCodes:NCA-HLC
 pescAccreditationBodyCodes:NCA-CASI
@@ -11,18 +21,6 @@ pescAccreditationBodyCodes:SACS
 pescAccreditationBodyCodes:WASC-ACCJC
 pescAccreditationBodyCodes:WASC-ACSCU
 pescAccreditationBodyCodes:Other",picklist,,,Optional,
-138,AccreditationShape,ceds:P001526,Accreditation Agency Name,FALSE,FALSE,Literal,xsd:string,80,maxLength,,,Optional,
-,OrganizationIdentifierShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200252,,,,,
-,OrganizationIdentifierShape,ceds:P000826,Organization Identifier,TRUE,FALSE,Literal,xsd:token,,,,,,
-,OrganizationIdentifierShape,ceds:P000827,Has Organization Identification System,TRUE,FALSE,IRI,,"ceds:NI000827151968
-pescIdentifierTypes:OPEid
-pescIdentifierTypes:PSISid
-pescIdentifierTypes:GEOCode",picklist,,,,
-,OrganizationShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200239,,,,,
-91,OrganizationShape,ceterms:name,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,,Recommended,
-95,OrganizationShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,ceterms:ContactPoint,Recommended,
-99,OrganizationShape,ceds:P600472,Has Organization Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,ceds:C200240,Recommended,
-,OrganizationShape,ceds:P600502,Has Organization Identification,FALSE,TRUE,IRI BNODE,,,,OrganizationIdentifierShape,ceds:C200252,,
 220,OrganizationShape,pesc:schoolLevel,School Level,FALSE,FALSE,IRI,,"pescSchoolLevels:Elementary
 pescSchoolLevels:HighSchool
 pescSchoolLevels:JuniorHigh
@@ -30,4 +28,6 @@ pescSchoolLevels:Middle
 pescSchoolLevels:Other
 pescSchoolLevels:Postsecondary
 pescSchoolLevels:Secondary",picklist,,,Recommended,
-5,OrganizationShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,Not Recommended,
+,AccreditationShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200240,,,,,
+,OrganizationIdentifierShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200252,,,,,
+,OrganizationShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200239,,,,,

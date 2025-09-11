@@ -235,16 +235,6 @@
     sh:closed false ;
     sh:targetClass ceds:C200245 .
 
-<CourseSupplementalGradeShape> a sh:NodeShape ;
-    rdfs:label "Course Supplemental Grade"@en ;
-    sh:closed false ;
-    sh:property <coursesupplementalgradeshapeCourseAcademicSupplementalGradeStatusCode>,
-        <coursesupplementalgradeshapeSupplementalGrade>,
-        <coursesupplementalgradeshapeSupplementalGradeCode>,
-        <coursesupplementalgradeshapeSupplementalGradeSubSession>,
-        <coursesupplementalgradeshapeType> ;
-    sh:targetClass pesc:CourseSupplementalGrade .
-
 <LanguageShape> a sh:NodeShape ;
     rdfs:label "Person Language"@en ;
     sh:closed false ;
@@ -549,14 +539,6 @@
     sh:nodeKind sh:IRI ;
     sh:path pesc:courseAcademicSupplementalGradeStatusCode .
 
-<coursesupplementalgradeshapeSupplementalGrade> a sh:PropertyShape ;
-    sh:class pesc:Grade ;
-    sh:maxCount 1 ;
-    sh:name "Supplemental Grade"@en-US ;
-    sh:node <GradeShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:supplementalGrade .
-
 <coursesupplementalgradeshapeSupplementalGradeCode> a sh:PropertyShape ;
     sh:in ( pescSupplementalGradeCodes:BiCourseGrade pescSupplementalGradeCodes:BlendedFinalGrade pescSupplementalGradeCodes:ExamGrade pescSupplementalGradeCodes:InstructorAssignedGrade pescSupplementalGradeCodes:SubSessionGrade pescSupplementalGradeCodes:TriCourseGrade ) ;
     sh:maxCount 1 ;
@@ -571,7 +553,7 @@
     sh:maxLength 3 ;
     sh:name "Supplemental Grade Sub Session"@en-US ;
     sh:nodeKind sh:Literal ;
-    sh:path pesc:supplementalSubSession .
+    sh:path pesc:supplementalGradeSubSession .
 
 <coursesupplementalgradeshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:CourseSupplementalGrade ;
@@ -610,6 +592,14 @@
     sh:name "Has Course Academic Grade Status Code"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path ceds:P001299 .
+
+<gradeshapeSupplementalGrade> a sh:PropertyShape ;
+    sh:class pesc:Grade ;
+    sh:maxCount 1 ;
+    sh:name "Supplemental Grade"@en-US ;
+    sh:node <CourseSupplementalGradeShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:supplementalGrade .
 
 <gradeshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:Grade ;
@@ -741,10 +731,14 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<CourseShape> a sh:NodeShape ;
-    rdfs:label "Post Secondary Course"@en ;
+<CourseSupplementalGradeShape> a sh:NodeShape ;
+    rdfs:label "Course Supplemental Grade"@en ;
     sh:closed false ;
-    sh:targetClass ceds:C200328 .
+    sh:property <coursesupplementalgradeshapeCourseAcademicSupplementalGradeStatusCode>,
+        <coursesupplementalgradeshapeSupplementalGradeCode>,
+        <coursesupplementalgradeshapeSupplementalGradeSubSession>,
+        <coursesupplementalgradeshapeType> ;
+    sh:targetClass pesc:CourseSupplementalGrade .
 
 <GradeShape> a sh:NodeShape ;
     rdfs:label "Grade"@en ;
@@ -753,8 +747,14 @@
         <gradeshapeCourseAcademicGradeScaleCode>,
         <gradeshapeCourseNarrativeExplanationGrade>,
         <gradeshapeHasCourseAcademicGradeStatusCode>,
+        <gradeshapeSupplementalGrade>,
         <gradeshapeType> ;
     sh:targetClass pesc:Grade .
+
+<CourseShape> a sh:NodeShape ;
+    rdfs:label "Post Secondary Course"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200328 .
 
 <RAPShape> a sh:NodeShape ;
     rdfs:label "Requirement, Attribute or Proficiency"@en ;

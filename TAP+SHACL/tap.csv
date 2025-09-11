@@ -1,10 +1,19 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,valueClass,Rec Usage,note
-,CollegeTranscriptShape,rdf:type,Type,FALSE,FALSE,IRI,,pesc:CollegeTranscript,,,,,
+,CollegeTranscriptShape,ceterms:hasPart,Has part,FALSE,TRUE,IRI BNODE,,,,,"pesc:AcademicSummary
+pesc:AwardSummary
+pesc:ProgramSummary
+pesc:SessionSummary",,
 3,CollegeTranscriptShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,Not Recommended,
 18,CollegeTranscriptShape,pesc:createdDateTime,Created Date Time,TRUE,FALSE,Literal,xsd:dateTime,,,,,Required,
-26,CollegeTranscriptShape,pesc:requestTrackingID,Request Tracking ID,FALSE,FALSE,Literal,xsd:string,35,maxLength,,,Optional,
+,CollegeTranscriptShape,pesc:describesAchievement,Describes Achievement,FALSE,TRUE,IRI BNODE,,,,,"pesc:AdditionalStudentAchievement
+ceds:C200335
+ceds:C200346
+pesc:GPA
+pesc:AcademicSummary
+pesc:ProgramSummary
+pesc:LicensureAchievement
+ceds:C200047",,
 22,CollegeTranscriptShape,pesc:destination,Destination,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,Required,
-,CollegeTranscriptShape,pesc:verifiableCredential,Verifiable Credential,FALSE,TRUE,IRI BNODE,,,,VerifiableCredentialShape,,Optional,
 25,CollegeTranscriptShape,pesc:documentCompleteCode,Document Complete Code,FALSE,FALSE,IRI,,"pescDocumentCompleteCodes:Partial
 pescDocumentCompleteCodes:Complete",picklist,,,Required,
 17,CollegeTranscriptShape,pesc:documentID,Document ID,TRUE,FALSE,Literal,xsd:string,1..35,lengthRange,,,Required,
@@ -21,6 +30,7 @@ pescDocumentTypeCodes:StudentRequest
 pescDocumentTypeCodes:TermEnroll
 pescDocumentTypeCodes:TermGrade
 pescDocumentTypeCodes:ThirdPartyRequest",picklist,,,Required,
+26,CollegeTranscriptShape,pesc:requestTrackingID,Request Tracking ID,FALSE,FALSE,Literal,xsd:string,35,maxLength,,,Optional,
 ,CollegeTranscriptShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,Required,
 2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,ceds:C200275,Required,
 20,CollegeTranscriptShape,pesc:transmissionType,Transmission Type,TRUE,FALSE,IRI,,"pescTransmissionTypes:Original
@@ -29,20 +39,7 @@ pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,,Required,
-,CollegeTranscriptShape,ceterms:hasPart,Has part,FALSE,TRUE,IRI BNODE,,,,,"pesc:AcademicSummary
-pesc:AwardSummary
-pesc:ProgramSummary
-pesc:SessionSummary",,
-,CollegeTranscriptShape,pesc:describesAchievement,Describes Achievement,FALSE,TRUE,IRI BNODE,,,,,"pesc:AdditionalStudentAchievement
-ceds:C200335
-ceds:C200346
-pesc:GPA
-pesc:AcademicSummary
-pesc:ProgramSummary
-pesc:LicensureAchievement
-ceds:C200047",,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,,
+,CollegeTranscriptShape,pesc:verifiableCredential,Verifiable Credential,FALSE,TRUE,IRI BNODE,,,,VerifiableCredentialShape,,Optional,
+,CollegeTranscriptShape,rdf:type,Type,FALSE,FALSE,IRI,,pesc:CollegeTranscript,,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,,
+,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,,
