@@ -1,0 +1,52 @@
+prefix,URI,Note
+,https://pesc.org/terms/,default vocab
+rdf,http://www.w3.org/1999/02/22-rdf-syntax-ns#,RDF
+rdfs,http://www.w3.org/2000/01/rdf-schema#,RDF Schema
+xsd,http://www.w3.org/2001/XMLSchema#,XSD: use for data types
+ex,http://example.org/,example
+ceds,http://ceds.ed.gov/terms#,Common Education Data Standards 12 (RDF/S vocabulary) 
+ceterms,https://purl.org/ctdl/terms/,Credential Transparency Description Language
+dc,http://purl.org/dc/elements/1.1/,"Dublin Core Metadata Element Set, Version 1.1"
+dct,http://purl.org/dc/terms/,DCMI Metadata Terms
+elm,http://data.europa.eu/snb/model/elm/,European Learning Model
+foaf,http://xmlns.com/foaf/0.1/,Friend of a Friend
+sdo,https://schema.org/,Schema.org
+skos,http://www.w3.org/2004/02/skos/core#,Simple Knowledge Organization System
+pesc,https://pesc.org/terms/,DOES NOT EXIST
+cred,https://www.w3.org/2018/credentials#,W3C Verifiable Credentials
+pescAcademicSummaryLevels,https://pesc.org/vocabs/AcademicSummaryLevels#,DOES NOT EXIST
+pescAcademicSummaryTypes,https://pesc.org/vocabs/AcademicSummaryTypes#,DOES NOT EXIST
+pescAcademicProgramTypes,https://pesc.org/vocabs/AcademicProgramTypes#,DOES NOT EXIST
+pescAcademicAwardLevels,https://pesc.org/vocabs/AcademicAwardLevels#,DOES NOT EXIST
+pescAccreditationBodyCodes,https://pesc.org/vocabs/AccreditationBodyCodes#,DOES NOT EXIST
+pescAgencyCodes,https://pesc.org/vocabs/AgencyCodes#,DOES NOT EXIST
+pescConditionsMetCodes,https://pesc.org/vocabs/ConditionsMetCodes#,DOES NOT EXIST
+pescCourseApplicabilityCodes,https://pesc.org/vocabs/CourseApplicabilityCodes#,DOES NOT EXIST
+pescCourseLevels,https://pesc.org/vocabs/CourseLevels#,DOES NOT EXIST
+pescCreditBasis:,https://pesc.org/vocabs/CreditBasis#,DOES NOT EXIST
+pescCreditLevels,https://pesc.org/vocabs/CreditLevels#,DOES NOT EXIST
+pescCreditUnits,https://pesc.org/vocabs/CreditUnits#,DOES NOT EXIST
+pescDelinquencyCodes,https://pesc.org/vocabs/DeliinquencyCodes#,DOES NOT EXIST
+pescDocumentCompleteCodes,https://pesc.org/vocabs/DocumentCompleteCodes#,DOES NOT EXIST
+pescDocumentOfficialCodes,https://pesc.org/vocabs/DocumentOfficialCodes#,DOES NOT EXIST
+pescDocumentProcessCodes,https://pesc.org/vocabs/DocumentProcessCodes#,DOES NOT EXIST
+pescDocumentTypeCodes,https://pesc.org/vocabs/DocumentTypeCodes#,DOES NOT EXIST
+pescGenderCodes,https://pesc.org/vocabs/Gender#,DOES NOT EXIST
+pescGPAAplicabilityCodes,https://pesc.org/vocabs/GPAAplicabilityCodes#,DOES NOT EXIST
+pescGradeStatusCodes,https://pesc.org/vocabs/GradeStatusCodes#,DOES NOT EXIST
+pescHonorsLevels,https://pesc.org/vocabs/HonorsLevels#,DOES NOT EXIST
+pescInstructionSiteCodes,https://pesc.org/vocabs/InstructionSiteCodes#,DOES NOT EXIST
+pescLanguageProficiencyCodes,https://pesc.org/vocabs/LanguageProficiencyCodes#,DOES NOT EXIST
+pescLanguageUsageCodes,https://pesc.org/vocabs/LanguageUsageCodes#,DOES NOT EXIST
+pescResidencyStatusCodes,https://pesc.org/vocabs/ResidencyStatusCodes#,DOES NOT EXIST
+pescSchoolLevels,https://pesc.org/vocabs/SchoolLevels#,DOES NOT EXIST
+pescSchoolOverrideCodes,https://pesc.org/vocabs/SchoolOverrideCodes#,DOES NOT EXIST
+pescSecondarySchoolCodes,https://pesc.org/vocabs/SecondarySchoolCodes#,DOES NOT EXIST
+pescSessionTypes,https://pesc.org/vocabs/SessionTypes#,DOES NOT EXIST
+pescStudentLevelCodes,https://pesc.org/vocabs/StudentLevelCodes#,DOES NOT EXIST
+pescSubjectCodes,https://pesc.org/vocabs/SubjectCodes#,DOES NOT EXIST
+pescSupplementalGradeCodes,https://pesc.org/vocabs/SupplementalGradeCodes#,DOES NOT EXIST
+pescTestScoreMethods,https://pesc.org/vocabs/TestScoreMethods#,DOES NOT EXIST
+pescTransmissionTypes,https://pesc.org/vocabs/TransmissionTypes#,DOES NOT EXIST
+pescNameCodes,https://pesc.org/vocabs/NameCodes#,DOES NOT EXIST
+pescIdentifierTypes,https://pesc.org/vocabs/IdentifierTypes#,DOES NOT EXIST
