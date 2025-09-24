@@ -8,66 +8,84 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 pesc:AcademicDegreeRequirement a rdfs:Class ;
-    rdfs:label "Academic Degree Requirement" .
+    rdfs:label "Academic Degree Requirement" ;
+    rdfs:comment "Thesis or dissertation information." .
 
 pesc:AcademicHonors a rdfs:Class ;
-    rdfs:label "Academic Honors" .
+    rdfs:label "Academic Honors" ;
+    rdfs:comment "Honors information for an academic award." .
 
 pesc:AcademicRecord a rdfs:Class ;
-    rdfs:label "Academic Record" .
+    rdfs:label "Academic Record" ;
+    rdfs:comment "Information concerning the academic achievement or status of a student." .
 
 pesc:AcademicSummary a rdfs:Class ;
-    rdfs:label "Academic Summary" .
+    rdfs:label "Academic Summary" ;
+    rdfs:comment "Summary of a student's activity at a certain academic level." .
 
 pesc:Achievement a rdfs:Class ;
     rdfs:label "Achievement" ;
-    rdfs:comment "An achievement of any type." ;
-    skos:note "Not used in data that conforms to PESC Transcript. Instead use the more granular types of achievement." .
+    rdfs:comment "Any type of student achievement." ;
+    skos:note "This class exists to facilitate the definition of the schema. When publishing data more specific subclasses of Achievement should normally be used." .
 
 pesc:AdditionalStudentAchievement a rdfs:Class ;
-    rdfs:label "Additional Student Achievment" .
+    rdfs:label "Additional Student Achievment" ;
+    rdfs:comment "Achievements not tied to a specific course, session or award." .
 
 pesc:AgencyIdentifier a rdfs:Class ;
-    rdfs:label "Agency Identifier" .
+    rdfs:label "Agency Identifier" ;
+    rdfs:comment "ID assigned by an agency, state, province, etc." .
 
 pesc:AwardSummary a rdfs:Class ;
-    rdfs:label "Award Summary" .
+    rdfs:label "Award Summary" ;
+    rdfs:comment "Summary of a student's activity relating to an academic award." .
 
 pesc:CollegeTranscript a rdfs:Class ;
-    rdfs:label "College Transcript" .
+    rdfs:label "College Transcript" ;
+    rdfs:comment "Record of a student's activity and achievements. " .
 
 pesc:CourseRepeatCode a rdfs:Class ;
     rdfs:label "Course Repeat Code" .
 
 pesc:CourseSupplementalGrade a rdfs:Class ;
-    rdfs:label "Course Supplemental Grade" .
+    rdfs:label "Course Supplemental Grade" ;
+    rdfs:comment "Grades that are reported, which combine to make the final grade in a course." .
 
 pesc:GPA a rdfs:Class ;
-    rdfs:label "GPA" .
+    rdfs:label "GPA" ;
+    rdfs:comment "Grade Point Average for a student." .
 
 pesc:Grade a rdfs:Class ;
-    rdfs:label "Grade" .
+    rdfs:label "Grade" ;
+    rdfs:comment "Grade awarded to a student." .
 
 pesc:Licensure a rdfs:Class ;
-    rdfs:label "Licensure" .
+    rdfs:label "Licensure" ;
+    rdfs:comment "Licensure requirements." .
 
 pesc:LicensureAchievement a rdfs:Class ;
-    rdfs:label "Licensure Achievement" .
+    rdfs:label "Licensure Achievement" ;
+    rdfs:comment "Information about a students achievement of a licensure." .
 
 pesc:Phone a rdfs:Class ;
-    rdfs:label "Phone" .
+    rdfs:label "Phone" ;
+    rdfs:comment "Information about a phone number." .
 
 pesc:ProgramSummary a rdfs:Class ;
-    rdfs:label "Program Summary" .
+    rdfs:label "Program Summary" ;
+    rdfs:comment "Summary of a student's activity in a program of learning." .
 
 pesc:Residency a rdfs:Class ;
     rdfs:label "Residency" .
 
 pesc:SessionSummary a rdfs:Class ;
-    rdfs:label "Session Summary" .
+    rdfs:label "Session Summary" ;
+    rdfs:comment "Summary of a student's activity during a specific academic session." .
 
 pesc:Summary a rdfs:Class ;
-    rdfs:label "Summary" .
+    rdfs:label "Summary" ;
+    rdfs:comment "Any summary of a student's activity." ;
+    skos:note "This class exists to facilitate the definition of the schema. When publishing data more specific subclasses of Summary should normally be used." .
 
 pesc: a owl:Ontology ;
     rdfs:label "PESC College Transcript Terms" ;
@@ -85,7 +103,7 @@ pesc:academicCompletionIndicator a rdf:Property ;
 
 pesc:academicDegreeRequirement a rdf:Property ;
     rdfs:label "Academic Degree Requirement" ;
-    rdfs:comment "Thesis or dissertation information if required for the award." .
+    rdfs:comment "Indicates the thesis or dissertation information, if required for the award." .
 
 pesc:academicHonors a rdf:Property ;
     rdfs:label "Academic Honors" ;
@@ -282,7 +300,9 @@ pesc:delinquencies a rdf:Property ;
     rdfs:comment "The academic standing of the student upon transfer to the institution." .
 
 pesc:describesAchievement a rdf:Property ;
-    rdfs:label "Describes Achievement" .
+    rdfs:label "Describes Achievement" ;
+    rdfs:comment "A student's achievement described by this resource." ;
+    schema:rangeIncludes pesc:Achievement .
 
 pesc:destination a rdf:Property ;
     rdfs:label "Destination" ;
