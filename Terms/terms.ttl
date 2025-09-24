@@ -7,6 +7,68 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+pesc:AcademicDegreeRequirement a rdfs:Class ;
+    rdfs:label "Academic Degree Requirement" .
+
+pesc:AcademicHonors a rdfs:Class ;
+    rdfs:label "Academic Honors" .
+
+pesc:AcademicRecord a rdfs:Class ;
+    rdfs:label "Academic Record" .
+
+pesc:AcademicSummary a rdfs:Class ;
+    rdfs:label "Academic Summary" .
+
+pesc:Achievement a rdfs:Class ;
+    rdfs:label "Achievement" ;
+    rdfs:comment "An achievement of any type." ;
+    skos:note "Not used in data that conforms to PESC Transcript. Instead use the more granular types of achievement." .
+
+pesc:AdditionalStudentAchievement a rdfs:Class ;
+    rdfs:label "Additional Student Achievment" .
+
+pesc:AgencyIdentifier a rdfs:Class ;
+    rdfs:label "Agency Identifier" .
+
+pesc:AwardSummary a rdfs:Class ;
+    rdfs:label "Award Summary" .
+
+pesc:CollegeTranscript a rdfs:Class ;
+    rdfs:label "College Transcript" .
+
+pesc:CourseRepeatCode a rdfs:Class ;
+    rdfs:label "Course Repeat Code" .
+
+pesc:CourseSupplementalGrade a rdfs:Class ;
+    rdfs:label "Course Supplemental Grade" .
+
+pesc:GPA a rdfs:Class ;
+    rdfs:label "GPA" .
+
+pesc:Grade a rdfs:Class ;
+    rdfs:label "Grade" .
+
+pesc:Licensure a rdfs:Class ;
+    rdfs:label "Licensure" .
+
+pesc:LicensureAchievement a rdfs:Class ;
+    rdfs:label "Licensure Achievement" .
+
+pesc:Phone a rdfs:Class ;
+    rdfs:label "Phone" .
+
+pesc:ProgramSummary a rdfs:Class ;
+    rdfs:label "Program Summary" .
+
+pesc:Residency a rdfs:Class ;
+    rdfs:label "Residency" .
+
+pesc:SessionSummary a rdfs:Class ;
+    rdfs:label "Session Summary" .
+
+pesc:Summary a rdfs:Class ;
+    rdfs:label "Summary" .
+
 pesc: a owl:Ontology ;
     rdfs:label "PESC College Transcript Terms" ;
     rdfs:comment "RDF terms defined by PESC for College Transcripts." .

@@ -1,111 +1,131 @@
-Type,URI,Label,Comment,Usage Note,Domain Includes,Range Includes
-Ontology,pesc:,PESC College Transcript Terms,RDF terms defined by PESC for College Transcripts.,,,
-Property,pesc:createdDateTime,Created Date Time,The date and Time stamp when the document was created.,,,xsd:dateTime
-Property,pesc:describesAchievement,Describes Achievement,,,,
-Property,pesc:destination,Destination,The destination or recipient of the transcript being sent.,,,
-Property,pesc:documentCompleteCode,Document Complete Code,Indicates whether the document conveys a complete record,,,skos:Concept
-Property,pesc:documentID,Document ID,Identifier for this document.,The general practice is that the identifier includes the date and time plus other identifying data.,,xsd:string
-Property,pesc:documentOfficialCode,Document Official Code,Indicates if the document is unofficial.,,,skos:Concept
-Property,pesc:documentProcessCode,Document Process Code,Indicates a TEST or PRODUCTION document.,,,skos:Concept
-Property,pesc:documentTypeCode,Document type Code,The type and purpose of document being transmitted.,,,skos:Concept
-Property,pesc:requestTrackingID,Request Tracking ID,The Unique ID associated with a request action that is returned to the requestor for document matching and tracking.,,,xsd:string
-Property,pesc:source,Source,Indicates the source of the Transcript being sent.  It is normally the sending school where the student enrolled for courses.,,,
-Property,pesc:student,student,The person who is the subject of this transcript.,,,
-Property,pesc:transmissionType,Transmission Type,The nature of the transmission.,,,skos:Concept
-Property,pesc:academicHonors,Academic Honors,Honors information for an academic award.,,,
-Property,pesc:academicSummaryLevel,Academic Summary Level,The level of credit associated with the credit hours earned for the course.,,,
-Property,pesc:academicSummaryType,Academic Summary Type,Indication of what is being summarized over which period of time.,,,skos:Concept
-Property,pesc:classRank,Class Rank,The student's class rank relative to other students in their academic cohort (e.g. class).,,,xsd:integer
-Property,pesc:classRankDate,Class Rank Date,The date on which the student was included in the class ranking and the class was ranked.,,,xsd:date
-Property,pesc:classRankSessionCount,Class Rank Session count,The number of sessions of coursework included in the ranking of the student in the class.,,,xsd:integer
-Property,pesc:classRankYear,Class Rank Year,The year on which the student was included in the class ranking and the class was ranked.,,,xsd:gYear
-Property,pesc:classRankYearMonth,Class Rank Year Month,The year and month in which the student was included in the class ranking and the class was ranked.,,,xsd:gYearMonth
-Property,pesc:classSize,Class Size,The numeric size of the academic cohort (e.g. class).,,,xsd:integer
-Property,pesc:creditHoursAttempted,Credit Hours Attempted,The total value of credit hours attempted whether or not included in the hours for GPA or hours earned.,,,xsd:decimal
-Property,pesc:creditHoursDeficient,Credit Hours Deficient,"The total value of credit hours the student is lacking in order to successfully complete requirements for an award, diploma or certificate.",,,xsd:decimal
-Property,pesc:creditHoursEarned,Credit Hours Earned,The total value of credit hours successfully completed or earned.,,,xsd:decimal
-Property,pesc:creditHoursForGPA,Credit Hours For GPA,The total value of credit hours used to calculate the Grade Point Average.,,,xsd:decimal
-Property,pesc:creditHoursRequired,Credit Hours Required,The total value of credit hours that are required for the award or diploma for which the student is pursuing.,,,xsd:decimal
-Property,pesc:creditUnit,Credit Unit,"The type of credit (unit, semester, or quarter) associated with the credit hours earned for the course.",,,
-Property,pesc:delinquencies,Delinquencies,The academic standing of the student upon transfer to the institution.,,,
-Property,pesc:entryDate,Entry Date,The date on which the student officially was admitted to the school or when the student first attended the school.,,,xsd:date
-Property,pesc:exitDate,Exit Date,"The date on which the student officially withdrew, was withdrawn, or graduated.",,,xsd:date
-Property,pesc:exitReasonCode,Exit Reason Code,The reason the student stopped attending.  It is a code set approved by the US Department of Education's National Center for Education Statistics and is included in the NCES Handbook.,,,xsd:string
-Property,pesc:gpaRangeMaximum,GPA Range Maximum,The maximum possible GPA.,,,xsd:decimal
-Property,pesc:gpaRangeMinimum,GPA Range Minimum,The minimum possible GPA.,,,xsd:decimal
-Property,pesc:gpaSummary,GPA Summary,,,,
-Property,pesc:gradePointAverage,Grade Point Average,The value of the total quality points divided by the Credit Hours for Grade Point Average.,,,xsd:decimal
-Property,pesc:hasSummary,Has Summary,,,,
-Property,pesc:highSchoolCreditSummary,High School Credit Summary,A summary of credits taken at a secondary school,,,rdf:langString
-Property,pesc:honorsLevel,Honors Level,"A code value representing 1st highest honor, 2nd highest and 3rd highest.",,,
-Property,pesc:honorsTitle,Honors Title,e descriptive title for the honors received.,,,xsd:string
-Property,pesc:isSummaryForAward,Is Summary For Award,,,,
-Property,pesc:isSummaryForProgram,Is Summary For Program,,,,
-Property,pesc:isSummaryForSession,Is Summary For Session,,,,
-Property,pesc:totalQualityPoints,Total Quality Points,The total value of quality points used for the calculation of the Grade Point Average.,,,xsd:decimal
-Property,pesc:academicCompletionDate,Academic Completion Date,The date on which the student's requirements for the degree or diploma were met or completed.,,,xsd:date
-Property,pesc:academicCompletionIndicator,Academic Completion Indicator,An indication that the degree-seeking student completed all of the requirements for his or her academic program.  Not used for Non-Degree programs.,,,xsd:boolean
-Property,pesc:academicDegreeRequirement,Academic Degree Requirement,Thesis or dissertation information if required for the award.,,,
-Property,pesc:attributeAchieved,Attribute Achieved,,,,
-Property,pesc:conditionsMetCode,Conditions Met Code,Indicates whether and how conditions for the requirement have been attained.,,,skos:Concept
-Property,pesc:conditionsMetDate,Conditions Met Date,Date requirement was met.,,,xsd:date
-Property,pesc:courseAcademicSupplementalGradeStatusCode,Course Academic Supplemental Grade Status Code,Special enrollment or completion status of this course,,,skos:Concept
-Property,pesc:courseEquivalentGrade,Course Equivalent Grade,The alternate grade including the grade and its scale.,,,
-Property,pesc:courseGrade,Course Grade,Grade for the course.,,,
-Property,pesc:courseSupplementalGrade,Course Supplemental Grade,"Grades that are reported, which combine to make the final grade in a course.",,,
-Property,pesc:inCourse,In Course,,,,
-Property,pesc:inProgram,Academic Award Program,,,,
-Property,pesc:inSection,In Section,,,,
-Property,pesc:inSession,In Session,,,,
-Property,pesc:inSubtest,In Subtest,,,,
-Property,pesc:inTest,In Test,,,,
-Property,pesc:languageAchieved,Language Achieved,,,,
-Property,pesc:licensureAchieved,Licensure Achieved,,,,
-Property,pesc:licensurePassageDate,Licensure Passage Date,,,,xsd:date
-Property,pesc:proficiencyAchieved,Proficiency Achieved,,,,
-Property,pesc:requirementAchieved,Requirement Achieved,,,,
-Property,pesc:scoreInvalidatedIndicator,Score Invalidated Indicator,"Indicates if the score has been invalidated.  If true, score previously reported for this test and test date is not valid.",,,xsd:boolean
-Property,pesc:scoreRevisedIndicator,Score Revised Indicator,"Indicates if the score report has been revised.  If true, score may differ from score previously reported for this test and test date",,,xsd:boolean
-Property,pesc:scoreSelfRportedIndicator,Score Self Reported Indicator,Indicates if the score has been self-reported by the student.,,,xsd:boolean
-Property,pesc:scoreValue,Score Value,The actual value of the score received on the test,,,xsd:string
-Property,pesc:studentLevel,Student Level,"Used to indicate the classification or grade level of the student at the time the transcript is being sent, or the last classification or grade level of the student.",,,
-Property,pesc:supplementalGrade,Supplemental Grade,"Grades that are reported, which combine to make the final grade in a course.",,,
-Property,pesc:supplementalGradeCode,Supplemental Grade Code,The type of component grade that is being included for an education course.,,,skos:Concept
-Property,pesc:supplementalGradeSubSession,Supplemental Grade Sub Session,This is the numeric count of the subsession of a course.,"The earliest subsession would have the value of ""1"".  The next would be ""2"", etc.  Each would be a positive whole number.",,xsd:string
-Property,pesc:testDate,Test Date,Date of the test.,,,xsd:date
-Property,pesc:testYear,Test Year,Date of the test when only the year is available.,,,xsd:gYear
-Property,pesc:testYearMonth,Test Year Month,Date of the test when only the month and year are available.,,,xsd:gYearMonth
-Property,pesc:thesisDissertationAdvisor,Thesis Dissertation Advisor,The advisor (Major Professor) supervising the Thesis or Dissertation on behalf of the student earning the degree.,,,xsd:string
-Property,pesc:thesisDIssertationTitle,Thesis Dissertation Title,The title of the thesis or dissertation.,,,xsd:string
-Property,pesc:urlAddress,URL Address,The Internet web address where a copy of the thesis or dissertation may be obtained,,,xsd:anyURI
-Property,pesc:agencyAssignedID,Agency Assigned ID,"The ID assigned by the state or province or an agency, to the person (student).",,,xsd:string
-Property,pesc:birthCity,Birth City,The city in which the person was born.,,,xsd:string
-Property,pesc:birthCountry,Birth Country,The name of the country in which the person was born.,Use ISO 3 155-1 alpha-2 standard.,,xsd:string
-Property,pesc:birthday,Birthday,Month and Day of Birth.,,,xsd:gMonthDay
-Property,pesc:birthStateProvinceCode,Birth State Province Code,"The state, province, or extra-state jurisdiction in which the person was born.",,,xsd:string
-Property,pesc:birthYear,Birth Year,Year of Birth.,,,xsd:gYear
-Property,pesc:cohortGraduationYear,Cohort Graduation Year,"The school year in which the student entered the baseline group used for computing completion rates, e.g., high school year and program.",,,xsd:gYear
-Property,pesc:compositeName,Composite Name,"The full name of the person in Last NameSuffix, First Middle order; comma after last name or NameSuffix.",,,xsd:string
-Property,pesc:country,Country,Name of the country which the claimant states as the country of permanent residence.,,,xsd:string
-Property,pesc:countryCode,Country Code,Code indicating Country.,Use ISO 3166-1 alpha-2 standard.,,xsd:string
-Property,pesc:county,County,Name of the county which the claimant states as the county of permanent residence.,,,xsd:string
-Property,pesc:countyCode,County Code,A code identifying the county which the applicant claims as the permanent residence.,This is a 5-digit code which includes state (2 digits) and county within a state (3 digits).,,xsd:string
-Property,pesc:deceasedIndicator,Deceased Indicator,Indicates the person is deceased.,,,xsd:boolean
-Property,pesc:genderCode,Gender Code,The gender of the Student,,,skos:Concept
-Property,pesc:hasAchievement,Has Achievement,,,,
-Property,pesc:hasResidency,Residency,A code indicating where the student currently resides.,,,
-Property,pesc:languageProficiency,Language Proficiency,Adeptness in comprehending and using the language.,,,
-Property,pesc:nameCode,Name Code,The type of name.,,,skos:Concept
-Property,pesc:residencyStatusCode,Residency Status Code,Declaration made by the claimant as to his or her permanent residency.,,,skos:Concept
-Property,pesc:stateProvince,State Province,"The literal name of the state, province or territory of a postal address of the source of this document.",Use for addresses outside US or Canada.,,xsd:string
-Property,pesc:stateProvinceCode,State Province Code,"The state, province, or extra-state jurisdiction in which the person was born.",,,xsd:string
-Property,pesc:accreditationBodyCode,Accrediation Body Code,The acronym for the regional or other accrediting body that has given accreditation to the school sending the high school transcript.,,,skos:Concept
-Property,pesc:schoolLevel,School Level,Indicates level of school.,,,
-Property,pesc:attentionLine,Attention Line,The individual or office name within the postal address where inquiries should be directed.,,,rdf:langString
-Property,pesc:countryPrefixCode,Country Prefix Code,International dialing code.,,,xsd:string
-Property,pesc:email,Email Address,Email address of the contact.,,,xsd:string
-Property,pesc:faxPhone,FAX Phone,Fax phone number of the contact.,,,
-Property,pesc:phone,Phone,Phone contact details.,,,
-Property,pesc:phoneNumber,Phone Number,The phone number of the contact without contry prefix code or extension.,,,xsd:string
-Property,pesc:phoneNumberExtension,Phone Number Extension,"The extended telephone addressing information used in addition to phone number such as a PBX extension, a pager PIN, or FAX sub-address.",,,xsd:string
-Property,pesc:url,URL,The Uniform Resource Locator of the contact.,,,xsd:anyURI
+URI,Type,Label,Comment,Usage Note,Domain Includes,Range Includes,Sub-of
+pesc:,Ontology,PESC College Transcript Terms,RDF terms defined by PESC for College Transcripts.,,,,
+pesc:AcademicDegreeRequirement,Class,Academic Degree Requirement,,,,,
+pesc:AcademicHonors,Class,Academic Honors,,,,,
+pesc:AcademicRecord,Class,Academic Record,,,,,
+pesc:AcademicSummary,Class,Academic Summary,,,,,
+pesc:Achievement,Class,Achievement,An achievement of any type.,Not used in data that conforms to PESC Transcript. Instead use the more granular types of achievement.,,,
+pesc:AdditionalStudentAchievement,Class,Additional Student Achievment,,,,,
+pesc:AgencyIdentifier,Class,Agency Identifier,,,,,
+pesc:AwardSummary,Class,Award Summary,,,,,
+pesc:CollegeTranscript,Class,College Transcript,,,,,
+pesc:CourseRepeatCode,Class,Course Repeat Code,,,,,
+pesc:CourseSupplementalGrade,Class,Course Supplemental Grade,,,,,
+pesc:GPA,Class,GPA,,,,,
+pesc:Grade,Class,Grade,,,,,
+pesc:Licensure,Class,Licensure,,,,,
+pesc:LicensureAchievement,Class,Licensure Achievement,,,,,
+pesc:Phone,Class,Phone,,,,,
+pesc:ProgramSummary,Class,Program Summary,,,,,
+pesc:Residency,Class,Residency,,,,,
+pesc:SessionSummary,Class,Session Summary,,,,,
+pesc:Summary,Class,Summary,,,,,
+pesc:createdDateTime,Property,Created Date Time,The date and Time stamp when the document was created.,,,xsd:dateTime,
+pesc:describesAchievement,Property,Describes Achievement,,,,,
+pesc:destination,Property,Destination,The destination or recipient of the transcript being sent.,,,,
+pesc:documentCompleteCode,Property,Document Complete Code,Indicates whether the document conveys a complete record,,,skos:Concept,
+pesc:documentID,Property,Document ID,Identifier for this document.,The general practice is that the identifier includes the date and time plus other identifying data.,,xsd:string,
+pesc:documentOfficialCode,Property,Document Official Code,Indicates if the document is unofficial.,,,skos:Concept,
+pesc:documentProcessCode,Property,Document Process Code,Indicates a TEST or PRODUCTION document.,,,skos:Concept,
+pesc:documentTypeCode,Property,Document type Code,The type and purpose of document being transmitted.,,,skos:Concept,
+pesc:requestTrackingID,Property,Request Tracking ID,The Unique ID associated with a request action that is returned to the requestor for document matching and tracking.,,,xsd:string,
+pesc:source,Property,Source,Indicates the source of the Transcript being sent.  It is normally the sending school where the student enrolled for courses.,,,,
+pesc:student,Property,student,The person who is the subject of this transcript.,,,,
+pesc:transmissionType,Property,Transmission Type,The nature of the transmission.,,,skos:Concept,
+pesc:academicHonors,Property,Academic Honors,Honors information for an academic award.,,,,
+pesc:academicSummaryLevel,Property,Academic Summary Level,The level of credit associated with the credit hours earned for the course.,,,,
+pesc:academicSummaryType,Property,Academic Summary Type,Indication of what is being summarized over which period of time.,,,skos:Concept,
+pesc:classRank,Property,Class Rank,The student's class rank relative to other students in their academic cohort (e.g. class).,,,xsd:integer,
+pesc:classRankDate,Property,Class Rank Date,The date on which the student was included in the class ranking and the class was ranked.,,,xsd:date,
+pesc:classRankSessionCount,Property,Class Rank Session count,The number of sessions of coursework included in the ranking of the student in the class.,,,xsd:integer,
+pesc:classRankYear,Property,Class Rank Year,The year on which the student was included in the class ranking and the class was ranked.,,,xsd:gYear,
+pesc:classRankYearMonth,Property,Class Rank Year Month,The year and month in which the student was included in the class ranking and the class was ranked.,,,xsd:gYearMonth,
+pesc:classSize,Property,Class Size,The numeric size of the academic cohort (e.g. class).,,,xsd:integer,
+pesc:creditHoursAttempted,Property,Credit Hours Attempted,The total value of credit hours attempted whether or not included in the hours for GPA or hours earned.,,,xsd:decimal,
+pesc:creditHoursDeficient,Property,Credit Hours Deficient,"The total value of credit hours the student is lacking in order to successfully complete requirements for an award, diploma or certificate.",,,xsd:decimal,
+pesc:creditHoursEarned,Property,Credit Hours Earned,The total value of credit hours successfully completed or earned.,,,xsd:decimal,
+pesc:creditHoursForGPA,Property,Credit Hours For GPA,The total value of credit hours used to calculate the Grade Point Average.,,,xsd:decimal,
+pesc:creditHoursRequired,Property,Credit Hours Required,The total value of credit hours that are required for the award or diploma for which the student is pursuing.,,,xsd:decimal,
+pesc:creditUnit,Property,Credit Unit,"The type of credit (unit, semester, or quarter) associated with the credit hours earned for the course.",,,,
+pesc:delinquencies,Property,Delinquencies,The academic standing of the student upon transfer to the institution.,,,,
+pesc:entryDate,Property,Entry Date,The date on which the student officially was admitted to the school or when the student first attended the school.,,,xsd:date,
+pesc:exitDate,Property,Exit Date,"The date on which the student officially withdrew, was withdrawn, or graduated.",,,xsd:date,
+pesc:exitReasonCode,Property,Exit Reason Code,The reason the student stopped attending.  It is a code set approved by the US Department of Education's National Center for Education Statistics and is included in the NCES Handbook.,,,xsd:string,
+pesc:gpaRangeMaximum,Property,GPA Range Maximum,The maximum possible GPA.,,,xsd:decimal,
+pesc:gpaRangeMinimum,Property,GPA Range Minimum,The minimum possible GPA.,,,xsd:decimal,
+pesc:gpaSummary,Property,GPA Summary,,,,,
+pesc:gradePointAverage,Property,Grade Point Average,The value of the total quality points divided by the Credit Hours for Grade Point Average.,,,xsd:decimal,
+pesc:hasSummary,Property,Has Summary,,,,,
+pesc:highSchoolCreditSummary,Property,High School Credit Summary,A summary of credits taken at a secondary school,,,rdf:langString,
+pesc:honorsLevel,Property,Honors Level,"A code value representing 1st highest honor, 2nd highest and 3rd highest.",,,,
+pesc:honorsTitle,Property,Honors Title,e descriptive title for the honors received.,,,xsd:string,
+pesc:isSummaryForAward,Property,Is Summary For Award,,,,,
+pesc:isSummaryForProgram,Property,Is Summary For Program,,,,,
+pesc:isSummaryForSession,Property,Is Summary For Session,,,,,
+pesc:totalQualityPoints,Property,Total Quality Points,The total value of quality points used for the calculation of the Grade Point Average.,,,xsd:decimal,
+pesc:academicCompletionDate,Property,Academic Completion Date,The date on which the student's requirements for the degree or diploma were met or completed.,,,xsd:date,
+pesc:academicCompletionIndicator,Property,Academic Completion Indicator,An indication that the degree-seeking student completed all of the requirements for his or her academic program.  Not used for Non-Degree programs.,,,xsd:boolean,
+pesc:academicDegreeRequirement,Property,Academic Degree Requirement,Thesis or dissertation information if required for the award.,,,,
+pesc:attributeAchieved,Property,Attribute Achieved,,,,,
+pesc:conditionsMetCode,Property,Conditions Met Code,Indicates whether and how conditions for the requirement have been attained.,,,skos:Concept,
+pesc:conditionsMetDate,Property,Conditions Met Date,Date requirement was met.,,,xsd:date,
+pesc:courseAcademicSupplementalGradeStatusCode,Property,Course Academic Supplemental Grade Status Code,Special enrollment or completion status of this course,,,skos:Concept,
+pesc:courseEquivalentGrade,Property,Course Equivalent Grade,The alternate grade including the grade and its scale.,,,,
+pesc:courseGrade,Property,Course Grade,Grade for the course.,,,,
+pesc:courseSupplementalGrade,Property,Course Supplemental Grade,"Grades that are reported, which combine to make the final grade in a course.",,,,
+pesc:inCourse,Property,In Course,,,,,
+pesc:inProgram,Property,Academic Award Program,,,,,
+pesc:inSection,Property,In Section,,,,,
+pesc:inSession,Property,In Session,,,,,
+pesc:inSubtest,Property,In Subtest,,,,,
+pesc:inTest,Property,In Test,,,,,
+pesc:languageAchieved,Property,Language Achieved,,,,,
+pesc:licensureAchieved,Property,Licensure Achieved,,,,,
+pesc:licensurePassageDate,Property,Licensure Passage Date,,,,xsd:date,
+pesc:proficiencyAchieved,Property,Proficiency Achieved,,,,,
+pesc:requirementAchieved,Property,Requirement Achieved,,,,,
+pesc:scoreInvalidatedIndicator,Property,Score Invalidated Indicator,"Indicates if the score has been invalidated.  If true, score previously reported for this test and test date is not valid.",,,xsd:boolean,
+pesc:scoreRevisedIndicator,Property,Score Revised Indicator,"Indicates if the score report has been revised.  If true, score may differ from score previously reported for this test and test date",,,xsd:boolean,
+pesc:scoreSelfRportedIndicator,Property,Score Self Reported Indicator,Indicates if the score has been self-reported by the student.,,,xsd:boolean,
+pesc:scoreValue,Property,Score Value,The actual value of the score received on the test,,,xsd:string,
+pesc:studentLevel,Property,Student Level,"Used to indicate the classification or grade level of the student at the time the transcript is being sent, or the last classification or grade level of the student.",,,,
+pesc:supplementalGrade,Property,Supplemental Grade,"Grades that are reported, which combine to make the final grade in a course.",,,,
+pesc:supplementalGradeCode,Property,Supplemental Grade Code,The type of component grade that is being included for an education course.,,,skos:Concept,
+pesc:supplementalGradeSubSession,Property,Supplemental Grade Sub Session,This is the numeric count of the subsession of a course.,"The earliest subsession would have the value of ""1"".  The next would be ""2"", etc.  Each would be a positive whole number.",,xsd:string,
+pesc:testDate,Property,Test Date,Date of the test.,,,xsd:date,
+pesc:testYear,Property,Test Year,Date of the test when only the year is available.,,,xsd:gYear,
+pesc:testYearMonth,Property,Test Year Month,Date of the test when only the month and year are available.,,,xsd:gYearMonth,
+pesc:thesisDissertationAdvisor,Property,Thesis Dissertation Advisor,The advisor (Major Professor) supervising the Thesis or Dissertation on behalf of the student earning the degree.,,,xsd:string,
+pesc:thesisDIssertationTitle,Property,Thesis Dissertation Title,The title of the thesis or dissertation.,,,xsd:string,
+pesc:urlAddress,Property,URL Address,The Internet web address where a copy of the thesis or dissertation may be obtained,,,xsd:anyURI,
+pesc:agencyAssignedID,Property,Agency Assigned ID,"The ID assigned by the state or province or an agency, to the person (student).",,,xsd:string,
+pesc:birthCity,Property,Birth City,The city in which the person was born.,,,xsd:string,
+pesc:birthCountry,Property,Birth Country,The name of the country in which the person was born.,Use ISO 3 155-1 alpha-2 standard.,,xsd:string,
+pesc:birthday,Property,Birthday,Month and Day of Birth.,,,xsd:gMonthDay,
+pesc:birthStateProvinceCode,Property,Birth State Province Code,"The state, province, or extra-state jurisdiction in which the person was born.",,,xsd:string,
+pesc:birthYear,Property,Birth Year,Year of Birth.,,,xsd:gYear,
+pesc:cohortGraduationYear,Property,Cohort Graduation Year,"The school year in which the student entered the baseline group used for computing completion rates, e.g., high school year and program.",,,xsd:gYear,
+pesc:compositeName,Property,Composite Name,"The full name of the person in Last NameSuffix, First Middle order; comma after last name or NameSuffix.",,,xsd:string,
+pesc:country,Property,Country,Name of the country which the claimant states as the country of permanent residence.,,,xsd:string,
+pesc:countryCode,Property,Country Code,Code indicating Country.,Use ISO 3166-1 alpha-2 standard.,,xsd:string,
+pesc:county,Property,County,Name of the county which the claimant states as the county of permanent residence.,,,xsd:string,
+pesc:countyCode,Property,County Code,A code identifying the county which the applicant claims as the permanent residence.,This is a 5-digit code which includes state (2 digits) and county within a state (3 digits).,,xsd:string,
+pesc:deceasedIndicator,Property,Deceased Indicator,Indicates the person is deceased.,,,xsd:boolean,
+pesc:genderCode,Property,Gender Code,The gender of the Student,,,skos:Concept,
+pesc:hasAchievement,Property,Has Achievement,,,,,
+pesc:hasResidency,Property,Residency,A code indicating where the student currently resides.,,,,
+pesc:languageProficiency,Property,Language Proficiency,Adeptness in comprehending and using the language.,,,,
+pesc:nameCode,Property,Name Code,The type of name.,,,skos:Concept,
+pesc:residencyStatusCode,Property,Residency Status Code,Declaration made by the claimant as to his or her permanent residency.,,,skos:Concept,
+pesc:stateProvince,Property,State Province,"The literal name of the state, province or territory of a postal address of the source of this document.",Use for addresses outside US or Canada.,,xsd:string,
+pesc:stateProvinceCode,Property,State Province Code,"The state, province, or extra-state jurisdiction in which the person was born.",,,xsd:string,
+pesc:accreditationBodyCode,Property,Accrediation Body Code,The acronym for the regional or other accrediting body that has given accreditation to the school sending the high school transcript.,,,skos:Concept,
+pesc:schoolLevel,Property,School Level,Indicates level of school.,,,,
+pesc:attentionLine,Property,Attention Line,The individual or office name within the postal address where inquiries should be directed.,,,rdf:langString,
+pesc:countryPrefixCode,Property,Country Prefix Code,International dialing code.,,,xsd:string,
+pesc:email,Property,Email Address,Email address of the contact.,,,xsd:string,
+pesc:faxPhone,Property,FAX Phone,Fax phone number of the contact.,,,,
+pesc:phone,Property,Phone,Phone contact details.,,,,
+pesc:phoneNumber,Property,Phone Number,The phone number of the contact without contry prefix code or extension.,,,xsd:string,
+pesc:phoneNumberExtension,Property,Phone Number Extension,"The extended telephone addressing information used in addition to phone number such as a PBX extension, a pager PIN, or FAX sub-address.",,,xsd:string,
+pesc:url,Property,URL,The Uniform Resource Locator of the contact.,,,xsd:anyURI,
