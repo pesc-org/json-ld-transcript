@@ -463,7 +463,7 @@
     pesc:creditHoursEarned "12"^^xsd:decimal ;
     pesc:creditHoursRequired "12"^^xsd:decimal ;
     pesc:creditHoursDeficient "0"^^xsd:decimal ;
-    pesc:creditUnit ceds:NI000057116841 ;
+    ceds:P000057 ceds:NI000057116841 ;
     pesc:gradePointAverage "3.75"^^xsd:decimal ;
     pesc:totalQualityPoints "45"^^xsd:decimal ;
     pesc:creditHoursForGPA "12"^^xsd:decimal ;

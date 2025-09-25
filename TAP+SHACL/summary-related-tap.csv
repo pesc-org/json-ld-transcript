@@ -152,7 +152,7 @@ Rank in the College Transcript. However, if it is included, it is recommended th
 268,GPAShape,pesc:creditHoursEarned,Credit Hours Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
 274,GPAShape,pesc:creditHoursForGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
 269,GPAShape,pesc:creditHoursRequired,Credit Hours Required,FALSE,FALSE,Literal,xsd:decimal,,,,,,Not Recommended,decimal
-271,GPAShape,pesc:creditUnit,Credit Unit,FALSE,FALSE,IRI,,"ceds:NI000057116219
+271,GPAShape,ceds:P000057,Has Course Credit Units,FALSE,FALSE,IRI,,"ceds:NI000057116219
 ceds:NI000057116669
 ceds:NI000057116841 
 ceds:NI000057117114

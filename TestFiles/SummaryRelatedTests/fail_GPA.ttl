@@ -65,7 +65,7 @@
     pesc:creditHoursEarned 12 ; # fail wrong data type (3)
     pesc:creditHoursRequired "12" ; # fail wrong data type (4)
     pesc:creditHoursDeficient "0" ; # fail wrong data type (5)
-    pesc:creditUnit ceds:semsester ; # fail not in allowed value list (6) 
+    ceds:P000057 ceds:semsester ; # fail not in allowed value list (6) 
     pesc:gradePointAverage "3.75" ; # fail wrong data type (7)
     pesc:totalQualityPoints "45" ; # fail wrong data type (8)
     pesc:creditHoursForGPA "12" ; # fail wrong data type (9)

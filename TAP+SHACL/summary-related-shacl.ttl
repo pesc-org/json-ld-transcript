@@ -562,13 +562,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:creditHoursRequired .
 
-<gpashapeCreditUnit> a sh:PropertyShape ;
-    sh:in ( ceds:NI000057116219 ceds:NI000057116669 ceds:NI000057116841 ceds:NI000057117114 ceds:NI000057115440 ceds:NI000057115402 ceds:NI000057115492 ceds:NI000057117127 ceds:NI000057116368 ) ;
-    sh:maxCount 1 ;
-    sh:name "Credit Unit"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:creditUnit .
-
 <gpashapeGPARangeMaximum> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
@@ -592,6 +585,13 @@
     sh:name "Grade Point Average"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:gradePointAverage .
+
+<gpashapeHasCourseCreditUnits> a sh:PropertyShape ;
+    sh:in ( ceds:NI000057116219 ceds:NI000057116669 ceds:NI000057116841 ceds:NI000057117114 ceds:NI000057115440 ceds:NI000057115402 ceds:NI000057115492 ceds:NI000057117127 ceds:NI000057116368 ) ;
+    sh:maxCount 1 ;
+    sh:name "Has Course Credit Units"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path ceds:P000057 .
 
 <gpashapeTotalQualityPoints> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
@@ -896,10 +896,10 @@ Rank in the College Transcript. However, if it is included, it is recommended th
         <gpashapeCreditHoursEarned>,
         <gpashapeCreditHoursGPA>,
         <gpashapeCreditHoursRequired>,
-        <gpashapeCreditUnit>,
         <gpashapeGPARangeMaximum>,
         <gpashapeGPARangeMinimum>,
         <gpashapeGradePointAverage>,
+        <gpashapeHasCourseCreditUnits>,
         <gpashapeTotalQualityPoints>,
         <gpashapeType> ;
     sh:targetClass pesc:GPA .

@@ -38,10 +38,10 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Message: Value is not Literal with datatype xsd:decimal
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:gpashapeCreditUnit
+	Source Shape: ex:gpashapeHasCourseCreditUnits
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: ceds:semsester
-	Result Path: pesc:creditUnit
+	Result Path: ceds:P000057
 	Message: Value ceds:semsester not in list ['ceds:NI000057116219', 'ceds:NI000057116669', 'ceds:NI000057117114', 'ceds:NI000057115492', 'ceds:NI000057116368', 'ceds:NI000057116841', 'ceds:NI000057117127', 'ceds:NI000057115402', 'ceds:NI000057115440']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
