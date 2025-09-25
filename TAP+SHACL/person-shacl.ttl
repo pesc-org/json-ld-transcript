@@ -167,7 +167,6 @@
     rdfs:label "Student"@en ;
     sh:closed false ;
     sh:property <studentshapeAdditionalNote>,
-        <studentshapeAgencyAssignedID>,
         <studentshapeBirthCity>,
         <studentshapeBirthCountry>,
         <studentshapeBirthDate>,
@@ -431,14 +430,6 @@
     sh:node <NoteShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
-
-<studentshapeAgencyAssignedID> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 30 ;
-    sh:name "Agency Assigned ID"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:agencyAssignedID .
 
 <studentshapeBirthCity> a sh:PropertyShape ;
     sh:datatype xsd:string ;

@@ -35,7 +35,6 @@ ceds:NI001075173048",picklist,,,,
 162,StudentShape,ceds:P600336,Has Person Name,TRUE,FALSE,IRI BNODE,,,,PersonNameShape,ceds:C200377,Required,
 96,StudentShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,ceterms:ContactPoint,Recommended,
 14,StudentShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,Not Recommended,
-147,StudentShape,pesc:agencyAssignedID,Agency Assigned ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,,Required,
 158,StudentShape,pesc:birthCity,Birth City,FALSE,FALSE,Literal,xsd:string,25,maxLength,,,Optional,
 160,StudentShape,pesc:birthCountry,Birth Country,FALSE,FALSE,Literal,xsd:string,,picklist,,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
 156,StudentShape,pesc:birthday,Birthday,FALSE,FALSE,Literal,xsd:gMonthDay,,,,,Optional,
