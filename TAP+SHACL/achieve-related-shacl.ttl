@@ -101,11 +101,6 @@
         <courseachievementshapeType> ;
     sh:targetClass ceds:C200346 .
 
-<CourseRepeatCodeShape> a sh:NodeShape ;
-    rdfs:label "Course Repeat Code"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:CourseRepeatCode .
-
 <GPAShape> a sh:NodeShape ;
     rdfs:label "GPA"@en ;
     sh:closed false ;
@@ -202,11 +197,6 @@
         <testscoreshapeTestYearMonth>,
         <testscoreshapeType> ;
     sh:targetClass ceds:C200047 .
-
-<VerifiableCredentialShape> a sh:NodeShape ;
-    rdfs:label "W3C Verifiable Credential"@en ;
-    sh:closed false ;
-    sh:targetObjectsOf pesc:verifiableCredential .
 
 <AcademicDegreeRequirementShape> a sh:NodeShape ;
     rdfs:label "Academic Degree Requirement"@en ;

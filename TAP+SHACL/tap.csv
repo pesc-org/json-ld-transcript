@@ -39,7 +39,6 @@ pescTransmissionTypes:Duplicate
 pescTransmissionTypes:Resubmission
 pescTransmissionTypes:Reissue
 pescTransmissionTypes:MutuallyDefined",picklist,,,Required,
-,CollegeTranscriptShape,pesc:verifiableCredential,Verifiable Credential,FALSE,TRUE,IRI BNODE,,,,VerifiableCredentialShape,,Optional,
 ,CollegeTranscriptShape,rdf:type,Type,FALSE,FALSE,IRI,,pesc:CollegeTranscript,,,,,
 ,NoteShape,elm:noteLiteral,Note literal,TRUE,TRUE,Literal,,,,,,,
 ,NoteShape,rdf:type,Type,FALSE,FALSE,IRI,,elm:Note,,,,,

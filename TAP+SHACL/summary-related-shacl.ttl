@@ -101,11 +101,6 @@
     sh:closed false ;
     sh:targetClass ceds:C200346 .
 
-<CourseRepeatCodeShape> a sh:NodeShape ;
-    rdfs:label "Course Repeat Code"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:CourseRepeatCode .
-
 <CourseShape> a sh:NodeShape ;
     rdfs:label "Post Secondary Course"@en ;
     sh:closed false ;
@@ -250,11 +245,6 @@
     rdfs:label "Test"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200010 .
-
-<VerifiableCredentialShape> a sh:NodeShape ;
-    rdfs:label "W3C Verifiable Credential"@en ;
-    sh:closed false ;
-    sh:targetObjectsOf pesc:verifiableCredential .
 
 <AcademicAwardShape> a sh:NodeShape ;
     rdfs:label "Postsecondary Student Academic Award"@en ;
