@@ -1,0 +1,9 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescCourseApplicabilityCodes:NotApplicable","Not Applicable","Not Applicable","NotApplicable","pescCourseApplicabilityCodes:","inScheme, topConceptOf"
+"Concept","pescCourseApplicabilityCodes:FirstProgram","First Program","First Program","FirstProgram","pescCourseApplicabilityCodes:","inScheme, topConceptOf"
+"Concept","pescCourseApplicabilityCodes:SecondProgram","Second Program","Second Program","SecondProgram","pescCourseApplicabilityCodes:","inScheme, topConceptOf"
+"Concept","pescCourseApplicabilityCodes:BothPrograms","Both Programs","Both Programs","BothPrograms","pescCourseApplicabilityCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescCourseApplicabilityCodes:","Course Applicability Codes","The academic program to which this academic course applies toward graduation.","","pescCourseApplicabilityCodes:NotApplicable,
+pescCourseApplicabilityCodes:FirstProgram,
+pescCourseApplicabilityCodes:SecondProgram,
+pescCourseApplicabilityCodes:BothPrograms","hasTopConcept"

@@ -1,0 +1,87 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescStudentLevelCodes:Infant","Infant","Infant (0 to age 2)","Infant","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:PreKindergarten","Pre Kindergarten","Pre Kindergarten","PreKindergarten","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:HalfDayKindergarten","Half Day Kindergarten","Half Day Kindergarten","HalfDayKindergarten","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:Kindergarten","Kindergarten","Kindergarten","Kindergarten","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:FirstGrade","First Grade","First Grade","FirstGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:SecondGrade","Second Grade","Second Grade","SecondGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:ThirdGrade","Third Grade","Third Grade","ThirdGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:FourthGrade","Fourth Grade","Fourth Grade","FourthGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:FifthGrade","Fifth Grade","Fifth Grade","FifthGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:SixthGrade","Sixth Grade","Sixth Grade","SixthGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:SeventhGrade","Seventh Grade","Seventh Grade","SeventhGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:EighthGrade","Eighth Grade","Eighth Grade","EighthGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:NinthGrade","Ninth Grade","Ninth Grade","NinthGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:TenthGrade","Tenth Grade","Tenth Grade","TenthGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:EleventhGrade","Eleventh Grade","Eleventh Grade","EleventhGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:TwelfthGrade","Twelfth Grade","Twelfth Grade","TwelfthGrade","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:Grade13","Grade13","Grade13","Grade13","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:Postsecondary","Postsecondary","Postsecondary","Postsecondary","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear","Postsecondary Bachelor Preliminary Year","Postsecondary Bachelor Preliminary Year","PostsecondaryBachelorPreliminaryYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:NonDegree","Non Degree","Non-Degree or Transient Student","NonDegree","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:CollegeFirstYear","College First Year","First-year, never attended college before","CollegeFirstYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:CollegeFirstYearAttendedBefore","College First Year Attended Before","First-year, attended college before","CollegeFirstYearAttendedBefore","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:CollegeSophomore","College Sophomore","College Sophomore","CollegeSophomore","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:CollegeJunior","College Junior","College Junior","CollegeJunior","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:CollegeSenior","College Senior","College Senior","CollegeSenior","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:CollegeFifthYear","College Fifth Year","College Fifth Year","CollegeFifthYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:PostBaccalaureate","Post Baccalaureate","Post Baccalaureate","PostBaccalaureate","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:GraduateNonDegree","Graduate Non Degree","Graduate Non Degree","GraduateNonDegree","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:GraduateFirstYear","Graduate First Year","Graduate First Year","GraduateFirstYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:GraduateSecondYear","Graduate Second Year","Graduate Second Year","GraduateSecondYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:GraduateThirdYear","Graduate Third Year","Graduate Third Year","GraduateThirdYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:GraduateBeyondThirdYear","Graduate Beyond Third Year","Graduate Beyond Third Year","GraduateBeyondThirdYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:Professional","Professional","Professional","Professional","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:ProfessionalFirstYear","Professional First Year","Professional First Year","ProfessionalFirstYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:ProfessionalSecondYear","Professional Second Year","Professional Second Year","ProfessionalSecondYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:ProfessionalThirdYear","Professional Third Year","Professional Third Year","ProfessionalThirdYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:ProfessionalBeyondThirdYear","Professional Beyond Third Year","Professional Beyond Third Year","ProfessionalBeyondThirdYear","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:MastersQualifying","Masters Qualifying","Masters Qualifying","MastersQualifying","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:Masters","Masters","Masters","Masters","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:Doctoral","Doctoral","Doctoral","Doctoral","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:Postdoctoral","Postdoctoral","Postdoctoral","Postdoctoral","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:Ungraded","Ungraded","Ungraded","Ungraded","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept","pescStudentLevelCodes:NoFormalSchool","No Formal School","No Formal School","NoFormalSchool","pescStudentLevelCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescStudentLevelCodes:","Student Level Codes","The current grade level of the student or the highest grade level attained by the student at the time the record was created.","","pescStudentLevelCodes:Infant,
+pescStudentLevelCodes:PreKindergarten,
+pescStudentLevelCodes:HalfDayKindergarten,
+pescStudentLevelCodes:Kindergarten,
+pescStudentLevelCodes:FirstGrade,
+pescStudentLevelCodes:SecondGrade,
+pescStudentLevelCodes:ThirdGrade,
+pescStudentLevelCodes:FourthGrade,
+pescStudentLevelCodes:FifthGrade,
+pescStudentLevelCodes:SixthGrade,
+pescStudentLevelCodes:SeventhGrade,
+pescStudentLevelCodes:EighthGrade,
+pescStudentLevelCodes:NinthGrade,
+pescStudentLevelCodes:TenthGrade,
+pescStudentLevelCodes:EleventhGrade,
+pescStudentLevelCodes:TwelfthGrade,
+pescStudentLevelCodes:Grade13,
+pescStudentLevelCodes:Postsecondary,
+pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear,
+pescStudentLevelCodes:NonDegree,
+pescStudentLevelCodes:CollegeFirstYear,
+pescStudentLevelCodes:CollegeFirstYearAttendedBefore,
+pescStudentLevelCodes:CollegeSophomore,
+pescStudentLevelCodes:CollegeJunior,
+pescStudentLevelCodes:CollegeSenior,
+pescStudentLevelCodes:CollegeFifthYear,
+pescStudentLevelCodes:PostBaccalaureate,
+pescStudentLevelCodes:GraduateNonDegree,
+pescStudentLevelCodes:GraduateFirstYear,
+pescStudentLevelCodes:GraduateSecondYear,
+pescStudentLevelCodes:GraduateThirdYear,
+pescStudentLevelCodes:GraduateBeyondThirdYear,
+pescStudentLevelCodes:Professional,
+pescStudentLevelCodes:ProfessionalFirstYear,
+pescStudentLevelCodes:ProfessionalSecondYear,
+pescStudentLevelCodes:ProfessionalThirdYear,
+pescStudentLevelCodes:ProfessionalBeyondThirdYear,
+pescStudentLevelCodes:MastersQualifying,
+pescStudentLevelCodes:Masters,
+pescStudentLevelCodes:Doctoral,
+pescStudentLevelCodes:Postdoctoral,
+pescStudentLevelCodes:Ungraded,
+pescStudentLevelCodes:NoFormalSchool","hasTopConcept"

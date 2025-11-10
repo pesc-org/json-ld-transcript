@@ -1,0 +1,15 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescAgencyCodes:District","District","District","District","pescAgencyCodes:","inScheme, topConceptOf"
+"Concept","pescAgencyCodes:Migrant","Migrant","Migrant","Migrant","pescAgencyCodes:","inScheme, topConceptOf"
+"Concept","pescAgencyCodes:MutuallyDefined","Mutually Defined","Mutually Defined","MutuallyDefined","pescAgencyCodes:","inScheme, topConceptOf"
+"Concept","pescAgencyCodes:National","National","National","National","pescAgencyCodes:","inScheme, topConceptOf"
+"Concept","pescAgencyCodes:Province","Province","Province","Province","pescAgencyCodes:","inScheme, topConceptOf"
+"Concept","pescAgencyCodes:Regional","Regional","Regional","Regional","pescAgencyCodes:","inScheme, topConceptOf"
+"Concept","pescAgencyCodes:State","State","State","State","pescAgencyCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescAgencyCodes:","Agency Codes","A code that describes the type of agency that assigned the student's identification number","","pescAgencyCodes:District,
+pescAgencyCodes:Migrant,
+pescAgencyCodes:MutuallyDefined,
+pescAgencyCodes:National,
+pescAgencyCodes:Province,
+pescAgencyCodes:Regional,
+pescAgencyCodes:State","hasTopConcept"

@@ -1,0 +1,5 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescDocumentProcessCodes:TEST","Test","TEST","TEST","pescDocumentProcessCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentProcessCodes:PRODUCTION","Production","PRODUCTION","PRODUCTION","pescDocumentProcessCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescDocumentProcessCodes:","Document Process Codes","This element indicates a TEST or PRODUCTION document","","pescDocumentProcessCodes:TEST,
+pescDocumentProcessCodes:PRODUCTION","hasTopConcept"

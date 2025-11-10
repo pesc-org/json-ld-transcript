@@ -1,0 +1,33 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescAcademicSummaryTypes:All","All","Summary of all courses regardless of institution","All","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:SenderOnly","Sender Only","Summary of all courses at sending institution (or recorded as if they were taken at the","SenderOnly","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:TransferOnly","Transfer Only","Summary of transfer work (courses taken at other than the sending institution)","TransferOnly","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:AllNotRepeated","All Not Repeated","Summary of all courses except for repeated or forgiven courses/credits","AllNotRepeated","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:SenderNotRepeated","Sender Not Repeated","Summary of all courses at sending institution except for repeated or forgiven courses/credits","SenderNotRepeated","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:TransferNotRepeated","Transfer Not Repeated","Summary of transfer work except for repeated or forgiven courses/credits","TransferNotRepeated","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:AcademicRenewal","Academic Renewal","Subset of forgiven courses","AcademicRenewal","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:CarryoverCredit","Carryover Credit","Summary from offline records and used as the intitial point for cumulatives and averages","CarryoverCredit","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:DegreeApplicable","Degree Applicable","Summary of course that apply to degree","DegreeApplicable","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:NonDegreeApplicable","Non Degree Applicable","Summary of courses that do not apply toward degree","NonDegreeApplicable","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:ConvertedFrom","Converted From","Summary of credits before an institutional term-basis conversion, such as from quarters to semesters","ConvertedFrom","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:ConvertedTo","Converted To","Summary of credits after an institutional term-basis conversion, such as from quarters to semesters","ConvertedTo","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:Weighted","Weighted","Summary that gives additional (higher) value to specific courses taken by a student, such as honors courses, International Baccalaureate, Advanced Placement, high school /college dual enrollment.","Weighted","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:NonWeighted","Non Weighted","Summary that does not give additional value to courses, regardless of special characteristics of the courses. For example, if the grading scale is from 0 to 4.00, then it is not possible to have a summary higher than 4.00.","NonWeighted","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:UserDefined","User Defined","see NoteMessage for explanation.","UserDefined","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicSummaryTypes:Cumulative","Cumulative","Cumulative","Cumulative","pescAcademicSummaryTypes:","inScheme, topConceptOf"
+"Concept Scheme","pescAcademicSummaryTypes:","Academic Summary Types","Summary Type is an indication of what is being summarized over which period of time.","","pescAcademicSummaryTypes:All,
+pescAcademicSummaryTypes:SenderOnly,
+pescAcademicSummaryTypes:TransferOnly,
+pescAcademicSummaryTypes:AllNotRepeated,
+pescAcademicSummaryTypes:SenderNotRepeated,
+pescAcademicSummaryTypes:TransferNotRepeated,
+pescAcademicSummaryTypes:AcademicRenewal,
+pescAcademicSummaryTypes:CarryoverCredit,
+pescAcademicSummaryTypes:DegreeApplicable,
+pescAcademicSummaryTypes:NonDegreeApplicable,
+pescAcademicSummaryTypes:ConvertedFrom,
+pescAcademicSummaryTypes:ConvertedTo,
+pescAcademicSummaryTypes:Weighted,
+pescAcademicSummaryTypes:NonWeighted,
+pescAcademicSummaryTypes:UserDefined,
+pescAcademicSummaryTypes:Cumulative","hasTopConcept"

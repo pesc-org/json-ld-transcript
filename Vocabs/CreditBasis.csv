@@ -1,0 +1,39 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescCreditBasis:Regular","Regular","Regular/general enrollment","Regular","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:AcademicRenewal","Academic Renewal","Academic Renewal","AcademicRenewal","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:AdvancedPlacement","Advanced Placement","Advanced Placement","AdvancedPlacement","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:AdvancedStanding","Advanced Standing","Advanced Standing","AdvancedStanding","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:ContinuingEducation","Continuing Education","Continuing Education","ContinuingEducation","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:Correspondence","Correspondence","Correspondence","Correspondence","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:Exemption","Exemption","Exemption","Exemption","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:Equivalence","Equivalence","Equivalence","Equivalence","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:InternationalBaccalaureate","International Baccalaureate","International Baccalaureate","InternationalBaccalaureate","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:Military","Military","Military","Military","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:Remedial","Remedial","Remedial/developmental","Remedial","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:CreditByExam","Credit By Exam","Credit granted from successful score on a standardized test of comprehension or proficiency.","CreditByExam","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:HighSchoolTransferCredit","High School Transfer Credit","Credit from a high school course is transferred to the college.","HighSchoolTransferCredit","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:HighSchoolCreditOnly","High School Credit Only","Credit from a college course is transferred back to high school and not counted by the college.","HighSchoolCreditOnly","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:HighSchoolDualCredit","High School Dual Credit","Credit from a college course is counted at both the college and high school.","HighSchoolDualCredit","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:JuniorHighSchoolCredit","Junior High School Credit","Credit from a junior high school course is counted at the high school.","JuniorHighSchoolCredit","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:LifeExperience","Life Experience","Life Experience","LifeExperience","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:Major","Major","Credit associated with the student's major AcademicRenewal AdultBasic AdvancedPlacement AdvancedStanding Correspondence ContinuingEducation Exemption Equivalence InternationalBaccalaureate Military","Major","pescCreditBasis:","inScheme, topConceptOf"
+"Concept","pescCreditBasis:AdultBasic","Adult Basic","Deprecated","AdultBasic","pescCreditBasis:","inScheme, topConceptOf"
+"Concept Scheme","pescCreditBasis:","Credit Basis","The type of enrollment associated with the credit hours for the course.","","pescCreditBasis:Regular,
+pescCreditBasis:AcademicRenewal,
+pescCreditBasis:AdvancedPlacement,
+pescCreditBasis:AdvancedStanding,
+pescCreditBasis:ContinuingEducation,
+pescCreditBasis:Correspondence,
+pescCreditBasis:Exemption,
+pescCreditBasis:Equivalence,
+pescCreditBasis:InternationalBaccalaureate,
+pescCreditBasis:Military,
+pescCreditBasis:Remedial,
+pescCreditBasis:CreditByExam,
+pescCreditBasis:HighSchoolTransferCredit,
+pescCreditBasis:HighSchoolCreditOnly,
+pescCreditBasis:HighSchoolDualCredit,
+pescCreditBasis:JuniorHighSchoolCredit,
+pescCreditBasis:LifeExperience,
+pescCreditBasis:Major,
+pescCreditBasis:AdultBasic","hasTopConcept"

@@ -1,0 +1,17 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescNameCodes:Casual","Casual","Casual","Casual","pescNameCodes:","inScheme, topConceptOf"
+"Concept","pescNameCodes:Formal","Formal","Formal","Formal","pescNameCodes:","inScheme, topConceptOf"
+"Concept","pescNameCodes:Former","Former","Former","Former","pescNameCodes:","inScheme, topConceptOf"
+"Concept","pescNameCodes:LawSchoolApplicationSource","Law School Application Source","Law School Application Source","LawSchoolApplicationSource","pescNameCodes:","inScheme, topConceptOf"
+"Concept","pescNameCodes:Legal","Legal","Legal","Legal","pescNameCodes:","inScheme, topConceptOf"
+"Concept","pescNameCodes:MedicalSchoolApplicationSource","Medical School Application Source","Medical School Application Source","MedicalSchoolApplicationSource","pescNameCodes:","inScheme, topConceptOf"
+"Concept","pescNameCodes:Nickname","Nickname","Nickname","Nickname","pescNameCodes:","inScheme, topConceptOf"
+"Concept","pescNameCodes:Other","Other","Other","Other","pescNameCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescNameCodes:","Name Codes","This data element is used to describe the type of name included in this complex data element","","pescNameCodes:Casual,
+pescNameCodes:Formal,
+pescNameCodes:Former,
+pescNameCodes:LawSchoolApplicationSource,
+pescNameCodes:Legal,
+pescNameCodes:MedicalSchoolApplicationSource,
+pescNameCodes:Nickname,
+pescNameCodes:Other","hasTopConcept"

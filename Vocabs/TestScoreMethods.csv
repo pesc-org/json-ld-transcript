@@ -1,0 +1,25 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescTestScoreMethods:Scaled","Scaled","Scaled Score","Scaled","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Graded","Graded","Grade Equivalent or Grade Level Indicator","Graded","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Standard","Standard","Standard Score","Standard","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Raw","Raw","Raw Score","Raw","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Percent","Percent","Percent of Items Correct","Percent","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Mastery","Mastery","Mastery Score","Mastery","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Adjective","Adjective","Adjective Classification or Locally Defined Score Stanine Percentile","Adjective","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Stanine","Stanine","Stanine","Stanine","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Percentile","Percentile","Percentile","Percentile","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:NormalCurve","Normal Curve","Normal Curve Equivalent","NormalCurve","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Equated","Equated","Equated Score (pre-test and post-test were different)","Equated","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept","pescTestScoreMethods:Local","Local","Locally Defined.","Local","pescTestScoreMethods:","inScheme, topConceptOf"
+"Concept Scheme","pescTestScoreMethods:","Test Score Methods","Code identifying the method used to measure and report the test scores","","pescTestScoreMethods:Scaled,
+pescTestScoreMethods:Graded,
+pescTestScoreMethods:Standard,
+pescTestScoreMethods:Raw,
+pescTestScoreMethods:Percent,
+pescTestScoreMethods:Mastery,
+pescTestScoreMethods:Adjective,
+pescTestScoreMethods:Stanine,
+pescTestScoreMethods:Percentile,
+pescTestScoreMethods:NormalCurve,
+pescTestScoreMethods:Equated,
+pescTestScoreMethods:Local","hasTopConcept"

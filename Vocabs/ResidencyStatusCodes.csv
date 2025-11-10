@@ -1,0 +1,17 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescResidencyStatusCodes:InCity","In City","In City","InCity","pescResidencyStatusCodes:","inScheme, topConceptOf"
+"Concept","pescResidencyStatusCodes:InCounty","In County","In County","InCounty","pescResidencyStatusCodes:","inScheme, topConceptOf"
+"Concept","pescResidencyStatusCodes:InDistrict","In District","In District","InDistrict","pescResidencyStatusCodes:","inScheme, topConceptOf"
+"Concept","pescResidencyStatusCodes:InState","In State","In State","InState","pescResidencyStatusCodes:","inScheme, topConceptOf"
+"Concept","pescResidencyStatusCodes:NonResident","Non Resident","Non Resident","NonResident","pescResidencyStatusCodes:","inScheme, topConceptOf"
+"Concept","pescResidencyStatusCodes:NotReported","Not Reported","Not Reported","NotReported","pescResidencyStatusCodes:","inScheme, topConceptOf"
+"Concept","pescResidencyStatusCodes:OtherResident","Other Resident","Other Resident","OtherResident","pescResidencyStatusCodes:","inScheme, topConceptOf"
+"Concept","pescResidencyStatusCodes:Resident","Resident","Resident","Resident","pescResidencyStatusCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescResidencyStatusCodes:","Residency Status Codes","Declaration made by the claimant as to his or her permanent residency","","pescResidencyStatusCodes:InCity,
+pescResidencyStatusCodes:InCounty,
+pescResidencyStatusCodes:InDistrict,
+pescResidencyStatusCodes:InState,
+pescResidencyStatusCodes:NonResident,
+pescResidencyStatusCodes:NotReported,
+pescResidencyStatusCodes:OtherResident,
+pescResidencyStatusCodes:Resident","hasTopConcept"

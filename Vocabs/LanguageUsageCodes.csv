@@ -1,0 +1,21 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescLanguageUsageCodes:Always","Always","Always","Always","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:FirstSpokenLanguage","First Spoken Language","First Spoken Language","FirstSpokenLanguage","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:Native","Native","Native","Native","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:Reading","Reading","Reading","Reading","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:SomeSections","Some Sections","Some Sections","SomeSections","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:Sometimes","Sometimes","Sometimes","Sometimes","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:Speaking","Speaking","Speaking","Speaking","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:SpokenAtHome","Spoken At Home","Spoken At Home","SpokenAtHome","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:Writing","Writing","Writing","Writing","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageUsageCodes:WrittenCommunication","Written Communication","Written Communication","WrittenCommunication","pescLanguageUsageCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescLanguageUsageCodes:","Language Usage Codes","Indication of person's use of the language","","pescLanguageUsageCodes:Always,
+pescLanguageUsageCodes:FirstSpokenLanguage,
+pescLanguageUsageCodes:Native,
+pescLanguageUsageCodes:Reading,
+pescLanguageUsageCodes:SomeSections,
+pescLanguageUsageCodes:Sometimes,
+pescLanguageUsageCodes:Speaking,
+pescLanguageUsageCodes:SpokenAtHome,
+pescLanguageUsageCodes:Writing,
+pescLanguageUsageCodes:WrittenCommunication","hasTopConcept"

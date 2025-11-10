@@ -1,0 +1,13 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescTransmissionTypes:Duplicate","Duplicate","Duplicate","Duplicate","pescTransmissionTypes:","inScheme, topConceptOf"
+"Concept","pescTransmissionTypes:MutuallyDefined","Mutually Defined","Mutually Defined","MutuallyDefined","pescTransmissionTypes:","inScheme, topConceptOf"
+"Concept","pescTransmissionTypes:Original","Original","Original","Original","pescTransmissionTypes:","inScheme, topConceptOf"
+"Concept","pescTransmissionTypes:Reissue","Reissue","Reissue","Reissue","pescTransmissionTypes:","inScheme, topConceptOf"
+"Concept","pescTransmissionTypes:Replace","Replace","Replace","Replace","pescTransmissionTypes:","inScheme, topConceptOf"
+"Concept","pescTransmissionTypes:Resubmission","Resubmission","Resubmission","Resubmission","pescTransmissionTypes:","inScheme, topConceptOf"
+"Concept Scheme","pescTransmissionTypes:","Transmission Types","The nature of the transmission","","pescTransmissionTypes:Duplicate,
+pescTransmissionTypes:MutuallyDefined,
+pescTransmissionTypes:Original,
+pescTransmissionTypes:Reissue,
+pescTransmissionTypes:Replace,
+pescTransmissionTypes:Resubmission","hasTopConcept"

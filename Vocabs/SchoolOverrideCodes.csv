@@ -1,0 +1,15 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescSchoolOverrideCodes:Institutional","Institutional","Institutional Agreement","Institutional","pescSchoolOverrideCodes:","inScheme, topConceptOf"
+"Concept","pescSchoolOverrideCodes:Multicampus","Multicampus","Multiple Campus Course Offering","Multicampus","pescSchoolOverrideCodes:","inScheme, topConceptOf"
+"Concept","pescSchoolOverrideCodes:Transfer","Transfer","Transfer Credit","Transfer","pescSchoolOverrideCodes:","inScheme, topConceptOf"
+"Concept","pescSchoolOverrideCodes:StudyAbroad","Study Abroad","Study Abroad","StudyAbroad","pescSchoolOverrideCodes:","inScheme, topConceptOf"
+"Concept","pescSchoolOverrideCodes:Coop","Coop","Cooperative Program","Coop","pescSchoolOverrideCodes:","inScheme, topConceptOf"
+"Concept","pescSchoolOverrideCodes:Reciprocal","Reciprocal","Reciprocal Exchange","Reciprocal","pescSchoolOverrideCodes:","inScheme, topConceptOf"
+"Concept","pescSchoolOverrideCodes:Internship","Internship","Internship.","Internship","pescSchoolOverrideCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescSchoolOverrideCodes:","School Override Codes","The source of the academic credit if not awarded by the home or parent institution.Institutional - Institutional AgreementMulticampus - Multiple Campus         Course OfferingTransfer - Transfer CreditStudyAbroad - Study AbroadCoop - Cooperative ProgramReciprocal - Reciprocal ExchangeInternship - Internship","","pescSchoolOverrideCodes:Institutional,
+pescSchoolOverrideCodes:Multicampus,
+pescSchoolOverrideCodes:Transfer,
+pescSchoolOverrideCodes:StudyAbroad,
+pescSchoolOverrideCodes:Coop,
+pescSchoolOverrideCodes:Reciprocal,
+pescSchoolOverrideCodes:Internship","hasTopConcept"

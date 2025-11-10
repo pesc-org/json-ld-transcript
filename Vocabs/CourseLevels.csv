@@ -1,0 +1,43 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescCourseLevels:Accelerated","Accelerated","Accelerated","Accelerated","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:AdultBasic","Adult Basic","Adult Basic","AdultBasic","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:AdvancedPlacement","Advanced Placement","Advanced Placement","AdvancedPlacement","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:Basic","Basic","Basic","Basic","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:CollegeLevel","College Level","College Level","CollegeLevel","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:CollegePreparatory","College Preparatory","College Preparatory","CollegePreparatory","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:Dual","Dual","Dual level","Dual","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:Dual Grad/Upper","Dual Grad/Upper","Dual  Grad/ Upper","Dual Grad/Upper","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:Dual HS/Undergrad","Dual Hs/Undergrad","Dual  H S/ Undergrad","Dual HS/Undergrad","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:GiftedTalented","Gifted Talented","Gifted and Talented","GiftedTalented","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:GraduateProfessional","Graduate Professional","Graduate/Professional","GraduateProfessional","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:Honors","Honors","Honors","Honors","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:InternationalBaccalaureate","International Baccalaureate","International Baccalaureate","InternationalBaccalaureate","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:LowerDivision","Lower Division","Lower division","LowerDivision","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:NonAcademic","Non Academic","Non-Academic","NonAcademic","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:Regents","Regents","Regents","Regents","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:Remedial","Remedial","Remedial/Developmental","Remedial","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:SpecialEducation","Special Education","Special Education Technical","SpecialEducation","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:TechnicalPreparatory","Technical Preparatory","Technical Preparatory","TechnicalPreparatory","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:UpperDivision","Upper Division","Upper division","UpperDivision","pescCourseLevels:","inScheme, topConceptOf"
+"Concept","pescCourseLevels:Vocational","Vocational","Vocational","Vocational","pescCourseLevels:","inScheme, topConceptOf"
+"Concept Scheme","pescCourseLevels:","Course Levels","The level of work demonstrated by successful completion of  the academic course being described","","pescCourseLevels:Accelerated,
+pescCourseLevels:AdultBasic,
+pescCourseLevels:AdvancedPlacement,
+pescCourseLevels:Basic,
+pescCourseLevels:CollegeLevel,
+pescCourseLevels:CollegePreparatory,
+pescCourseLevels:Dual,
+pescCourseLevels:Dual Grad/Upper,
+pescCourseLevels:Dual HS/Undergrad,
+pescCourseLevels:GiftedTalented,
+pescCourseLevels:GraduateProfessional,
+pescCourseLevels:Honors,
+pescCourseLevels:InternationalBaccalaureate,
+pescCourseLevels:LowerDivision,
+pescCourseLevels:NonAcademic,
+pescCourseLevels:Regents,
+pescCourseLevels:Remedial,
+pescCourseLevels:SpecialEducation,
+pescCourseLevels:TechnicalPreparatory,
+pescCourseLevels:UpperDivision,
+pescCourseLevels:Vocational","hasTopConcept"
