@@ -1,0 +1,9 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescGenderCodes:Female","Female","Female","Female","pescGenderCodes:","inScheme, topConceptOf"
+"Concept","pescGenderCodes:Male","Male","Male","Male","pescGenderCodes:","inScheme, topConceptOf"
+"Concept","pescGenderCodes:Unreported","Unreported","Unreported","Unreported","pescGenderCodes:","inScheme, topConceptOf"
+"Concept","pescGenderCodes:Unspecified","Unspecified","Unspecified","Unspecified","pescGenderCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescGenderCodes:","Gender Codes","The gender of the Student","","pescGenderCodes:Female,
+pescGenderCodes:Male,
+pescGenderCodes:Unreported,
+pescGenderCodes:Unspecified","hasTopConcept"

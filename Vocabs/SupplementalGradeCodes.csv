@@ -1,0 +1,13 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescSupplementalGradeCodes:BiCourseGrade","Bi Course Grade","Bi Course Grade","BiCourseGrade","pescSupplementalGradeCodes:","inScheme, topConceptOf"
+"Concept","pescSupplementalGradeCodes:BlendedFinalGrade","Blended Final Grade","Blended Final Grade","BlendedFinalGrade","pescSupplementalGradeCodes:","inScheme, topConceptOf"
+"Concept","pescSupplementalGradeCodes:ExamGrade","Exam Grade","Exam Grade","ExamGrade","pescSupplementalGradeCodes:","inScheme, topConceptOf"
+"Concept","pescSupplementalGradeCodes:InstructorAssignedGrade","Instructor Assigned Grade","Instructor Assigned Grade","InstructorAssignedGrade","pescSupplementalGradeCodes:","inScheme, topConceptOf"
+"Concept","pescSupplementalGradeCodes:SubSessionGrade","Sub Session Grade","Sub Session Grade","SubSessionGrade","pescSupplementalGradeCodes:","inScheme, topConceptOf"
+"Concept","pescSupplementalGradeCodes:TriCourseGrade","Tri Course Grade","Tri Course Grade","TriCourseGrade","pescSupplementalGradeCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescSupplementalGradeCodes:","Supplemental Grade Codes","The type of component grade that is being included for an education course","","pescSupplementalGradeCodes:BiCourseGrade,
+pescSupplementalGradeCodes:BlendedFinalGrade,
+pescSupplementalGradeCodes:ExamGrade,
+pescSupplementalGradeCodes:InstructorAssignedGrade,
+pescSupplementalGradeCodes:SubSessionGrade,
+pescSupplementalGradeCodes:TriCourseGrade","hasTopConcept"
