@@ -2,7 +2,7 @@
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
-@prefix pescAcademicSummaryLevels:	<https://pesc.org/vocabs/AcademicSummaryLevels#> .
+@prefix pescCreditLevels:	<https://pesc.org/vocabs/AcademicSummaryLevels#> .
 @prefix pescAcademicSummaryTypes:	<https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
@@ -58,7 +58,7 @@
 <https://example.edu/academicSummary001> a pesc:Summary ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
     pesc:gpaSummary <https://example.edu/gpa001> ;
     pesc:academicHonors <https://example.edu/honors001> ;
 .

@@ -4,7 +4,7 @@
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
-@prefix pescAcademicSummaryLevels:	<https://pesc.org/vocabs/AcademicSummaryLevels#> .
+@prefix pescCreditLevels:	<https://pesc.org/vocabs/AcademicSummaryLevels#> .
 @prefix pescAcademicSummaryTypes:	<https://pesc.org/vocabs/AcademicSummaryTypes#> .
 @prefix pescAccreditationBodyCodes:	<https://pesc.org/vocabs/AccreditationBodyCodes#> .
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
@@ -13,7 +13,7 @@
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
-@prefix pescDelinquencyCodes:	<https://pesc.org/vocabs/DeliinquencyCodes#> .
+@prefix pescDelinquencyCodes:	<https://pesc.org/vocabs/DelinquencyCodes#> .
 @prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
 @prefix pescGradeStatusCodes:	<https://pesc.org/vocabs/GradeStatusCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
@@ -395,7 +395,7 @@
     pesc:source <https://example.edu/Source#id> ;
     pesc:isSummaryForAward <https://example.edu/achievement001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
     pesc:gpaSummary <https://example.edu/gpa001> ;
     pesc:academicHonors <https://example.edu/honors001> ;
     pesc:classRank 3 ;
@@ -408,7 +408,7 @@
     pesc:source <https://example.edu/Source#id> ;
     pesc:isSummaryForProgram <https://example.edu/Program/001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
     pesc:gpaSummary <https://example.edu/gpa001> ;
     pesc:academicHonors <https://example.edu/honors001> ;
     pesc:classRank 3 ;
@@ -421,7 +421,7 @@
     pesc:source <https://example.edu/Source#id> ;
     pesc:isSummaryForSession <https://example.edu/Session/001> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
     pesc:gpaSummary <https://example.edu/gpa001> ;
     pesc:academicHonors <https://example.edu/honors001> ;
     pesc:classRank 3 ;
@@ -441,7 +441,7 @@
 <https://example.edu/academicSummary001> a pesc:AcademicSummary ;
     pesc:source <https://example.edu/Source#id> ;
     pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescAcademicSummaryLevels:Undergraduate ;
+    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
     pesc:gpaSummary <https://example.edu/gpa001> ;
     pesc:academicHonors <https://example.edu/honors001> ;
     pesc:classRank 3 ;

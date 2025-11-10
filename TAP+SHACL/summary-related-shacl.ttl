@@ -5,9 +5,9 @@
 @prefix elm: <http://data.europa.eu/snb/model/elm/> .
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
-@prefix pescAcademicSummaryLevels: <https://pesc.org/vocabs/AcademicSummaryLevels#> .
 @prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#> .
-@prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DeliinquencyCodes#> .
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
+@prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DelinquencyCodes#> .
 @prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -287,7 +287,7 @@
     sh:path pesc:academicHonors .
 
 <academicsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
-    sh:in ( pescAcademicSummaryLevels:Dual pescAcademicSummaryLevels:DualGraduate pescAcademicSummaryLevels:Undergraduate pescAcademicSummaryLevels:Grade13 pescAcademicSummaryLevels:Ungraded pescAcademicSummaryLevels:DualHighSchoolCollege pescAcademicSummaryLevels:Graduate pescAcademicSummaryLevels:GraduateProfessional pescAcademicSummaryLevels:LowerDivision pescAcademicSummaryLevels:Professional pescAcademicSummaryLevels:Secondary pescAcademicSummaryLevels:TechnicalPreparatory pescAcademicSummaryLevels:UpperDivision pescAcademicSummaryLevels:Vocational ) ;
+    sh:in ( pescCreditLevels:Dual pescCreditLevels:DualGraduate pescCreditLevels:Undergraduate pescCreditLevels:Grade13 pescCreditLevels:Ungraded pescCreditLevels:DualHighSchoolCollege pescCreditLevels:Graduate pescCreditLevels:GraduateProfessional pescCreditLevels:LowerDivision pescCreditLevels:Professional pescCreditLevels:Secondary pescCreditLevels:TechnicalPreparatory pescCreditLevels:UpperDivision pescCreditLevels:Vocational ) ;
     sh:maxCount 1 ;
     sh:name "Academic Summary Level"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -436,7 +436,7 @@
     sh:path pesc:academicHonors .
 
 <awardsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
-    sh:in ( pescAcademicSummaryLevels:Dual pescAcademicSummaryLevels:DualGraduate pescAcademicSummaryLevels:Undergraduate pescAcademicSummaryLevels:Grade13 pescAcademicSummaryLevels:Ungraded pescAcademicSummaryLevels:DualHighSchoolCollege pescAcademicSummaryLevels:Graduate pescAcademicSummaryLevels:GraduateProfessional pescAcademicSummaryLevels:LowerDivision pescAcademicSummaryLevels:Professional pescAcademicSummaryLevels:Secondary pescAcademicSummaryLevels:TechnicalPreparatory pescAcademicSummaryLevels:UpperDivision pescAcademicSummaryLevels:Vocational ) ;
+    sh:in ( pescCreditLevels:Dual pescCreditLevels:DualGraduate pescCreditLevels:Undergraduate pescCreditLevels:Grade13 pescCreditLevels:Ungraded pescCreditLevels:DualHighSchoolCollege pescCreditLevels:Graduate pescCreditLevels:GraduateProfessional pescCreditLevels:LowerDivision pescCreditLevels:Professional pescCreditLevels:Secondary pescCreditLevels:TechnicalPreparatory pescCreditLevels:UpperDivision pescCreditLevels:Vocational ) ;
     sh:maxCount 1 ;
     sh:name "Academic Summary Level"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -616,7 +616,7 @@
     sh:path pesc:academicHonors .
 
 <programsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
-    sh:in ( pescAcademicSummaryLevels:Dual pescAcademicSummaryLevels:DualGraduateUndergraduate pescAcademicSummaryLevels:Grade13 pescAcademicSummaryLevels:Ungraded pescAcademicSummaryLevels:DualHighSchoolCollege pescAcademicSummaryLevels:Graduate pescAcademicSummaryLevels:GraduateProfessional pescAcademicSummaryLevels:LowerDivision pescAcademicSummaryLevels:Professional pescAcademicSummaryLevels:Secondary pescAcademicSummaryLevels:TechnicalPreparatory pescAcademicSummaryLevels:Undergraduate pescAcademicSummaryLevels:UpperDivision pescAcademicSummaryLevels:Vocational ) ;
+    sh:in ( pescCreditLevels:Dual pescCreditLevels:DualGraduateUndergraduate pescCreditLevels:Grade13 pescCreditLevels:Ungraded pescCreditLevels:DualHighSchoolCollege pescCreditLevels:Graduate pescCreditLevels:GraduateProfessional pescCreditLevels:LowerDivision pescCreditLevels:Professional pescCreditLevels:Secondary pescCreditLevels:TechnicalPreparatory pescCreditLevels:Undergraduate pescCreditLevels:UpperDivision pescCreditLevels:Vocational ) ;
     sh:maxCount 1 ;
     sh:name "Academic Summary Level"@en-US ;
     sh:nodeKind sh:IRI ;
@@ -716,7 +716,7 @@
     sh:path pesc:academicHonors .
 
 <sessionsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
-    sh:in ( pescAcademicSummaryLevels:Dual pescAcademicSummaryLevels:DualGraduate pescAcademicSummaryLevels:Undergraduate pescAcademicSummaryLevels:Grade13 pescAcademicSummaryLevels:Ungraded pescAcademicSummaryLevels:DualHighSchoolCollege pescAcademicSummaryLevels:Graduate pescAcademicSummaryLevels:GraduateProfessional pescAcademicSummaryLevels:LowerDivision pescAcademicSummaryLevels:Professional pescAcademicSummaryLevels:Secondary pescAcademicSummaryLevels:TechnicalPreparatory pescAcademicSummaryLevels:UpperDivision pescAcademicSummaryLevels:Vocational ) ;
+    sh:in ( pescCreditLevels:Dual pescCreditLevels:DualGraduate pescCreditLevels:Undergraduate pescCreditLevels:Grade13 pescCreditLevels:Ungraded pescCreditLevels:DualHighSchoolCollege pescCreditLevels:Graduate pescCreditLevels:GraduateProfessional pescCreditLevels:LowerDivision pescCreditLevels:Professional pescCreditLevels:Secondary pescCreditLevels:TechnicalPreparatory pescCreditLevels:UpperDivision pescCreditLevels:Vocational ) ;
     sh:maxCount 1 ;
     sh:name "Academic Summary Level"@en-US ;
     sh:nodeKind sh:IRI ;

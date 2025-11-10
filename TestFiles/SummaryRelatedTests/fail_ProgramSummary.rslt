@@ -40,7 +40,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/programSummary001>
 	Value Node: Literal("Undergraduate")
 	Result Path: pesc:academicSummaryLevel
-	Message: Value Literal("Undergraduate") not in list ['pescAcademicSummaryLevels:Ungraded', 'pescAcademicSummaryLevels:Grade13', 'pescAcademicSummaryLevels:Graduate', 'pescAcademicSummaryLevels:Secondary', 'pescAcademicSummaryLevels:DualGraduateUndergraduate', 'pescAcademicSummaryLevels:Undergraduate', 'pescAcademicSummaryLevels:GraduateProfessional', 'pescAcademicSummaryLevels:LowerDivision', 'pescAcademicSummaryLevels:Professional', 'pescAcademicSummaryLevels:TechnicalPreparatory', 'pescAcademicSummaryLevels:Vocational', 'pescAcademicSummaryLevels:DualHighSchoolCollege', 'pescAcademicSummaryLevels:Dual', 'pescAcademicSummaryLevels:UpperDivision']
+	Message: Value Literal("Undergraduate") not in list ['pescCreditLevels:Ungraded', 'pescCreditLevels:Grade13', 'pescCreditLevels:Graduate', 'pescCreditLevels:Secondary', 'pescCreditLevels:DualGraduateUndergraduate', 'pescCreditLevels:Undergraduate', 'pescCreditLevels:GraduateProfessional', 'pescCreditLevels:LowerDivision', 'pescCreditLevels:Professional', 'pescCreditLevels:TechnicalPreparatory', 'pescCreditLevels:Vocational', 'pescCreditLevels:DualHighSchoolCollege', 'pescCreditLevels:Dual', 'pescCreditLevels:UpperDivision']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:programsummaryshapeAcademicSummaryLevel
