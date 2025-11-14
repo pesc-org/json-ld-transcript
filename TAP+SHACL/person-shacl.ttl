@@ -509,7 +509,7 @@
 <studentshapeHasAchievement> a sh:PropertyShape ;
     sh:name "Has Achievement"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:or ( [ sh:class pesc:Achievement ] [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:GPA ] [ sh:class pesc:AcademicSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
+    sh:or ( [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:GPA ] [ sh:class pesc:AcademicSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
     sh:path pesc:hasAchievement .
 
 <studentshapeHasOtherPersonName> a sh:PropertyShape ;

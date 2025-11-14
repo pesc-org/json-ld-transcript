@@ -50,8 +50,7 @@ ceds:NI001075173048",picklist,,,,
 180,StudentShape,pesc:genderCode,Gender Code,FALSE,FALSE,IRI,,"pescGenderCodes:Female
 pescGenderCodes:Male
 pescGenderCodes:Unreported",picklist,,,Required,
-140,StudentShape,pesc:hasAchievement,Has Achievement,FALSE,TRUE,IRI BNODE,,,,,"pesc:Achievement
-pesc:AdditionalStudentAchievement
+140,StudentShape,pesc:hasAchievement,Has Achievement,FALSE,TRUE,IRI BNODE,,,,,"pesc:AdditionalStudentAchievement
 ceds:C200335
 ceds:C200346
 pesc:GPA

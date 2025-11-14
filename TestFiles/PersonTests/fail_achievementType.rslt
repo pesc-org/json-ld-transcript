@@ -7,4 +7,4 @@ Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrCons
 	Focus Node: <https://people.pjjk.net/test>
 	Value Node: <https://example.edu/achievement001>
 	Result Path: pesc:hasAchievement
-	Message: Node <https://example.edu/achievement001> does not conform to one or more shapes in [ sh:class pesc:Achievement ] , [ sh:class pesc:AdditionalStudentAchievement ] , [ sh:class ceds:C200335 ] , [ sh:class ceds:C200346 ] , [ sh:class pesc:GPA ] , [ sh:class pesc:AcademicSummary ] , [ sh:class pesc:ProgramSummary ] , [ sh:class pesc:LicensureAchievement ] , [ sh:class ceds:C200047 ]
+	Message: Node <https://example.edu/achievement001> does not conform to one or more shapes in [ sh:class pesc:AdditionalStudentAchievement ] , [ sh:class ceds:C200335 ] , [ sh:class ceds:C200346 ] , [ sh:class pesc:GPA ] , [ sh:class pesc:AcademicSummary ] , [ sh:class pesc:ProgramSummary ] , [ sh:class pesc:LicensureAchievement ] , [ sh:class ceds:C200047 ]
