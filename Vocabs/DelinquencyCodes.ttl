@@ -1,0 +1,97 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DelinquencyCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescDelinquencyCodes:ExclusionAcademic a skos:Concept ;
+    skos:definition "Exclusion Academic" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "ExclusionAcademic" ;
+    skos:prefLabel "Exclusion Academic" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:ExclusionDiscipline a skos:Concept ;
+    skos:definition "Exclusion Discipline" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "ExclusionDiscipline" ;
+    skos:prefLabel "Exclusion Discipline" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:GoodStanding a skos:Concept ;
+    skos:definition "Student was in good standing ProbationGPA=Student was on academic probation (because of low GPA)" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "GoodStanding" ;
+    skos:prefLabel "Good Standing" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:Other a skos:Concept ;
+    skos:definition "Other" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "Other" ;
+    skos:prefLabel "Other" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:ProbationDiscipline a skos:Concept ;
+    skos:definition "Student was on disciplinary probation" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "ProbationDiscipline" ;
+    skos:prefLabel "Probation Discipline" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:ProbationGPA a skos:Concept ;
+    skos:definition "Probation GPA" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "ProbationGPA" ;
+    skos:prefLabel "Probation Gpa" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:ProbationHours a skos:Concept ;
+    skos:definition "Student was on academic probation (deficiency in credit hours)" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "ProbationHours" ;
+    skos:prefLabel "Probation Hours" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:SuspensionDiscipline a skos:Concept ;
+    skos:definition "Student was on disciplinary suspension Unknown Other." ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "SuspensionDiscipline" ;
+    skos:prefLabel "Suspension Discipline" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:SuspensionGPA a skos:Concept ;
+    skos:definition "Student was on academic suspension (because of low GPA)" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "SuspensionGPA" ;
+    skos:prefLabel "Suspension Gpa" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:SuspensionHours a skos:Concept ;
+    skos:definition "Student was on academic suspension (deficiency in credit hours)" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "SuspensionHours" ;
+    skos:prefLabel "Suspension Hours" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes:Unknown a skos:Concept ;
+    skos:definition "Unknown" ;
+    skos:inScheme pescDelinquencyCodes: ;
+    skos:notation "Unknown" ;
+    skos:prefLabel "Unknown" ;
+    skos:topConceptOf pescDelinquencyCodes: .
+
+pescDelinquencyCodes: a skos:ConceptScheme ;
+    dcterms:description "The academic standing of the student upon transfer to the institution" ;
+    dcterms:title "Delinquency Codes" ;
+    skos:hasTopConcept pescDelinquencyCodes:ExclusionAcademic,
+        pescDelinquencyCodes:ExclusionDiscipline,
+        pescDelinquencyCodes:GoodStanding,
+        pescDelinquencyCodes:Other,
+        pescDelinquencyCodes:ProbationDiscipline,
+        pescDelinquencyCodes:ProbationGPA,
+        pescDelinquencyCodes:ProbationHours,
+        pescDelinquencyCodes:SuspensionDiscipline,
+        pescDelinquencyCodes:SuspensionGPA,
+        pescDelinquencyCodes:SuspensionHours,
+        pescDelinquencyCodes:Unknown .
+

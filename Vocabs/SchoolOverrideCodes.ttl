@@ -1,0 +1,65 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescSchoolOverrideCodes: <https://pesc.org/vocabs/SchoolOverrideCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescSchoolOverrideCodes:Coop a skos:Concept ;
+    skos:definition "Cooperative Program" ;
+    skos:inScheme pescSchoolOverrideCodes: ;
+    skos:notation "Coop" ;
+    skos:prefLabel "Coop" ;
+    skos:topConceptOf pescSchoolOverrideCodes: .
+
+pescSchoolOverrideCodes:Institutional a skos:Concept ;
+    skos:definition "Institutional Agreement" ;
+    skos:inScheme pescSchoolOverrideCodes: ;
+    skos:notation "Institutional" ;
+    skos:prefLabel "Institutional" ;
+    skos:topConceptOf pescSchoolOverrideCodes: .
+
+pescSchoolOverrideCodes:Internship a skos:Concept ;
+    skos:definition "Internship." ;
+    skos:inScheme pescSchoolOverrideCodes: ;
+    skos:notation "Internship" ;
+    skos:prefLabel "Internship" ;
+    skos:topConceptOf pescSchoolOverrideCodes: .
+
+pescSchoolOverrideCodes:Multicampus a skos:Concept ;
+    skos:definition "Multiple Campus Course Offering" ;
+    skos:inScheme pescSchoolOverrideCodes: ;
+    skos:notation "Multicampus" ;
+    skos:prefLabel "Multicampus" ;
+    skos:topConceptOf pescSchoolOverrideCodes: .
+
+pescSchoolOverrideCodes:Reciprocal a skos:Concept ;
+    skos:definition "Reciprocal Exchange" ;
+    skos:inScheme pescSchoolOverrideCodes: ;
+    skos:notation "Reciprocal" ;
+    skos:prefLabel "Reciprocal" ;
+    skos:topConceptOf pescSchoolOverrideCodes: .
+
+pescSchoolOverrideCodes:StudyAbroad a skos:Concept ;
+    skos:definition "Study Abroad" ;
+    skos:inScheme pescSchoolOverrideCodes: ;
+    skos:notation "StudyAbroad" ;
+    skos:prefLabel "Study Abroad" ;
+    skos:topConceptOf pescSchoolOverrideCodes: .
+
+pescSchoolOverrideCodes:Transfer a skos:Concept ;
+    skos:definition "Transfer Credit" ;
+    skos:inScheme pescSchoolOverrideCodes: ;
+    skos:notation "Transfer" ;
+    skos:prefLabel "Transfer" ;
+    skos:topConceptOf pescSchoolOverrideCodes: .
+
+pescSchoolOverrideCodes: a skos:ConceptScheme ;
+    dcterms:description "The source of the academic credit if not awarded by the home or parent institution.Institutional - Institutional AgreementMulticampus - Multiple Campus         Course OfferingTransfer - Transfer CreditStudyAbroad - Study AbroadCoop - Cooperative ProgramReciprocal - Reciprocal ExchangeInternship - Internship" ;
+    dcterms:title "School Override Codes" ;
+    skos:hasTopConcept pescSchoolOverrideCodes:Coop,
+        pescSchoolOverrideCodes:Institutional,
+        pescSchoolOverrideCodes:Internship,
+        pescSchoolOverrideCodes:Multicampus,
+        pescSchoolOverrideCodes:Reciprocal,
+        pescSchoolOverrideCodes:StudyAbroad,
+        pescSchoolOverrideCodes:Transfer .
+

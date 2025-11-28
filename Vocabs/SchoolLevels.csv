@@ -1,0 +1,17 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescSchoolLevels:BacheloriateCollege","Bacheloriate College","Bacheloriate College","BacheloriateCollege","pescSchoolLevels:","inScheme, topConceptOf"
+"Concept","pescSchoolLevels:CommunityCollege","Community College","Community College","CommunityCollege","pescSchoolLevels:","inScheme, topConceptOf"
+"Concept","pescSchoolLevels:GraduateSchool","Graduate School","Graduate School","GraduateSchool","pescSchoolLevels:","inScheme, topConceptOf"
+"Concept","pescSchoolLevels:MBA","Mba","MBA","MBA","pescSchoolLevels:","inScheme, topConceptOf"
+"Concept","pescSchoolLevels:MBAAccelerated","Mbaaccelerated","MBA Accelerated","MBAAccelerated","pescSchoolLevels:","inScheme, topConceptOf"
+"Concept","pescSchoolLevels:Professional","Professional","Professional","Professional","pescSchoolLevels:","inScheme, topConceptOf"
+"Concept","pescSchoolLevels:Undergraduate","Undergraduate","Undergraduate","Undergraduate","pescSchoolLevels:","inScheme, topConceptOf"
+"Concept","pescSchoolLevels:VocationalTechnical","Vocational Technical","Vocational Technical","VocationalTechnical","pescSchoolLevels:","inScheme, topConceptOf"
+"Concept Scheme","pescSchoolLevels:","School Levels","Indicates level of Override School","","pescSchoolLevels:BacheloriateCollege,
+pescSchoolLevels:CommunityCollege,
+pescSchoolLevels:GraduateSchool,
+pescSchoolLevels:MBA,
+pescSchoolLevels:MBAAccelerated,
+pescSchoolLevels:Professional,
+pescSchoolLevels:Undergraduate,
+pescSchoolLevels:VocationalTechnical","hasTopConcept"

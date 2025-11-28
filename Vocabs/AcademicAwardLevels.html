@@ -1,0 +1,2933 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Academic Award Levels</title>
+    <style>
+        #pylode {
+            position: fixed;
+            top: 205px;
+            left: -150px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+        #pylode #p {
+            color: #329545;
+        }
+        #pylode #y {
+            color: #f9cb33;
+        }
+        #pylode #version {
+            font-size: 1.0em;
+        }
+
+        #profile {
+            font-style: italic;
+            font-size: 1.25em;
+            color: darkred!important;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dl {
+            /*border: 1px solid navy;*/
+            /*padding:5px;*/
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 0;
+        }
+
+        dd {
+            margin-bottom: 10px;
+            padding-top: 7px;
+        }
+
+        #metadata ul,
+        #classes ul {
+            list-style-type: none;
+        }
+
+        #metadata ul li,
+        #classes ul li {
+            margin-left: -40px;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: left;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        sup {
+            margin-left: -3px;
+        }
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+
+#toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    border: solid 1px navy;
+    font-size: small;
+    width: 180px;
+}
+#toc h3 {
+    margin-top: 5px;
+}
+
+#toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#toc .first > li {
+    margin-top: 5px;
+}
+
+#toc .second,
+#toc .third {
+    padding-left: 10px;
+}
+
+#content {
+    width: calc(100% - 150px);
+}
+
+.hover_property {
+    cursor: help;
+    text-decoration: none;
+    border-bottom: dashed 1px;
+}
+
+.setclass {
+    list-style-type: none;
+}
+
+code{
+    word-wrap: break-word;
+  }
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+td {
+    word-wrap: break-word;
+}
+#legend table.entity {
+    width: 25%;
+}
+	</style>
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <script id="schema.org" type="application/ld+json">
+[
+  {
+    "@id": "https://pesc.org/vocabs/AcademicAwardLevels#",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "The level of the degree, certificate, or award granted for the successful completion of requirements of an academic program.B17 Did not complete secondary schoolB18 Standard High School Diploma which may or may not include an exit testB19 Advanced or honors diplomaB20 Vocational diplomaB21 Special Education Diploma normally for students with a disabilityB22 Certificate of completion or attendanceB23 Special certificate of completion or attendanceB24 General Education Development (GED) DiplomaB25 Other high school equivalency diplomaB26 International diploma or certificate such as International Baccalaureate B27 Standard High School Diploma with only 3 year curriculumB28 Met all graduation requirements except for required exit testFrenchBaccalaureate is an award made to high school students who complete a rigorous program of student including foreign languages.  It allows French and international students to obtain a standardized qualification, typically at the age of 18. This then qualifies holders to work in certain areas, or go on to tertiary education or acquire some other professional qualification or training.CEGEP is an award made by Canadian secondary schools that is typically equivalent to a high school diploma plus one year of college level courses"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Academic Award Levels"
+      }
+    ]
+  }
+]
+	</script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section" id="metadata">
+        <h1>Academic Award Levels</h1>
+        <h2>Metadata</h2>
+        <dl>
+          <div>
+            <dt>
+              <strong>IRI</strong>
+            </dt>
+            <dd>
+              <code>https://pesc.org/vocabs/AcademicAwardLevels#</code>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/title" title="None. Defined in None">Title</a>
+            </dt>
+            <dd><p>Academic Award Levels</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+            </dt>
+            <dd><p>The level of the degree, certificate, or award granted for the successful completion of requirements of an academic program.B17 Did not complete secondary schoolB18 Standard High School Diploma which may or may not include an exit testB19 Advanced or honors diplomaB20 Vocational diplomaB21 Special Education Diploma normally for students with a disabilityB22 Certificate of completion or attendanceB23 Special certificate of completion or attendanceB24 General Education Development (GED) DiplomaB25 Other high school equivalency diplomaB26 International diploma or certificate such as International Baccalaureate B27 Standard High School Diploma with only 3 year curriculumB28 Met all graduation requirements except for required exit testFrenchBaccalaureate is an award made to high school students who complete a rigorous program of student including foreign languages.  It allows French and international students to obtain a standardized qualification, typically at the age of 18. This then qualifies holders to work in certain areas, or go on to tertiary education or acquire some other professional qualification or training.CEGEP is an award made by Canadian secondary schools that is typically equivalent to a high school diploma plus one year of college level courses</p></dd>
+          </div>
+        </dl>
+      </div>
+      <div class="section" id="conceptschemes">
+        <h2>Concept Scheme</h2>
+        <div class="property entity" id="AcademicAwardLevels">
+          <h3>Academic Award Levels
+            <sup class="sup-cs" title="SKOS Concept Scheme">cs</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>The level of the degree, certificate, or award granted for the successful completion of requirements of an academic program.B17 Did not complete secondary schoolB18 Standard High School Diploma which may or may not include an exit testB19 Advanced or honors diplomaB20 Vocational diplomaB21 Special Education Diploma normally for students with a disabilityB22 Certificate of completion or attendanceB23 Special certificate of completion or attendanceB24 General Education Development (GED) DiplomaB25 Other high school equivalency diplomaB26 International diploma or certificate such as International Baccalaureate B27 Standard High School Diploma with only 3 year curriculumB28 Met all graduation requirements except for required exit testFrenchBaccalaureate is an award made to high school students who complete a rigorous program of student including foreign languages.  It allows French and international students to obtain a standardized qualification, typically at the age of 18. This then qualifies holders to work in certain areas, or go on to tertiary education or acquire some other professional qualification or training.CEGEP is an award made by Canadian secondary schools that is typically equivalent to a high school diploma plus one year of college level courses</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#hasTopConcept" title="None. Defined in None">Has Top Concept</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <a href="#0.0">0.0</a>
+                  </li>
+                  <li>
+                    <a href="#1">1</a>
+                  </li>
+                  <li>
+                    <a href="#1.1">1.1</a>
+                  </li>
+                  <li>
+                    <a href="#1.2">1.2</a>
+                  </li>
+                  <li>
+                    <a href="#1.3">1.3</a>
+                  </li>
+                  <li>
+                    <a href="#1.4">1.4</a>
+                  </li>
+                  <li>
+                    <a href="#1.5">1.5</a>
+                  </li>
+                  <li>
+                    <a href="#10">10</a>
+                  </li>
+                  <li>
+                    <a href="#11">11</a>
+                  </li>
+                  <li>
+                    <a href="#17">17</a>
+                  </li>
+                  <li>
+                    <a href="#18">18</a>
+                  </li>
+                  <li>
+                    <a href="#19">19</a>
+                  </li>
+                  <li>
+                    <a href="#2">2</a>
+                  </li>
+                  <li>
+                    <a href="#2.0">2.0</a>
+                  </li>
+                  <li>
+                    <a href="#2.1">2.1</a>
+                  </li>
+                  <li>
+                    <a href="#2.2">2.2</a>
+                  </li>
+                  <li>
+                    <a href="#2.3">2.3</a>
+                  </li>
+                  <li>
+                    <a href="#2.4">2.4</a>
+                  </li>
+                  <li>
+                    <a href="#2.5">2.5</a>
+                  </li>
+                  <li>
+                    <a href="#2.6">2.6</a>
+                  </li>
+                  <li>
+                    <a href="#2.7">2.7</a>
+                  </li>
+                  <li>
+                    <a href="#2.8">2.8</a>
+                  </li>
+                  <li>
+                    <a href="#3">3</a>
+                  </li>
+                  <li>
+                    <a href="#3.1">3.1</a>
+                  </li>
+                  <li>
+                    <a href="#3.2">3.2</a>
+                  </li>
+                  <li>
+                    <a href="#3.3">3.3</a>
+                  </li>
+                  <li>
+                    <a href="#4">4</a>
+                  </li>
+                  <li>
+                    <a href="#4.0">4.0</a>
+                  </li>
+                  <li>
+                    <a href="#4.1">4.1</a>
+                  </li>
+                  <li>
+                    <a href="#4.2">4.2</a>
+                  </li>
+                  <li>
+                    <a href="#4.3">4.3</a>
+                  </li>
+                  <li>
+                    <a href="#4.4">4.4</a>
+                  </li>
+                  <li>
+                    <a href="#4.5">4.5</a>
+                  </li>
+                  <li>
+                    <a href="#5">5</a>
+                  </li>
+                  <li>
+                    <a href="#6">6</a>
+                  </li>
+                  <li>
+                    <a href="#7">7</a>
+                  </li>
+                  <li>
+                    <a href="#8">8</a>
+                  </li>
+                  <li>
+                    <a href="#9">9</a>
+                  </li>
+                  <li>
+                    <a href="#B17">B17</a>
+                  </li>
+                  <li>
+                    <a href="#B18">B18</a>
+                  </li>
+                  <li>
+                    <a href="#B19">B19</a>
+                  </li>
+                  <li>
+                    <a href="#B20">B20</a>
+                  </li>
+                  <li>
+                    <a href="#B21">B21</a>
+                  </li>
+                  <li>
+                    <a href="#B22">B22</a>
+                  </li>
+                  <li>
+                    <a href="#B23">B23</a>
+                  </li>
+                  <li>
+                    <a href="#B24">B24</a>
+                  </li>
+                  <li>
+                    <a href="#B25">B25</a>
+                  </li>
+                  <li>
+                    <a href="#B26">B26</a>
+                  </li>
+                  <li>
+                    <a href="#B27">B27</a>
+                  </li>
+                  <li>
+                    <a href="#B28">B28</a>
+                  </li>
+                  <li>
+                    <a href="#B58">B58</a>
+                  </li>
+                  <li>
+                    <a href="#B59">B59</a>
+                  </li>
+                  <li>
+                    <a href="#B60">B60</a>
+                  </li>
+                  <li>
+                    <a href="#CEGEP">Cegep</a>
+                  </li>
+                  <li>
+                    <a href="#FrenchBaccalaureate">French Baccalaureate</a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="concepts">
+        <h2>Concepts</h2>
+        <div class="property entity" id="0.0">
+          <h3>0.0
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#0.0</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>0.0</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>0.0</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>"Other" - value to represent an award that does not otherwise fit existing enumerations</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="1">
+          <h3>1
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#1</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postsecondary award, certificate or diploma of less than one academic year (less than 900 contact or clock hours)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="1.1">
+          <h3>1.1
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#1.1</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>1.1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>1.1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Certificate of completion,</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="1.2">
+          <h3>1.2
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#1.2</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>1.2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>1.2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Certificate of proficiency</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="1.3">
+          <h3>1.3
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#1.3</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>1.3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>1.3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Statement of participation</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="1.4">
+          <h3>1.4
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#1.4</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>1.4</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>1.4</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Statement of completion</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="1.5">
+          <h3>1.5
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#1.5</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>1.5</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>1.5</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Statement of achievement</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="10">
+          <h3>10
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#10</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>10</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>10</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>First-Professional Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="11">
+          <h3>11
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#11</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>11</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>11</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>First-Professional Certificate (Post-Degree)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="17">
+          <h3>17
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#17</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>17</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>17</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Doctor's degree - research/scholarship</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="18">
+          <h3>18
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#18</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>18</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>18</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Doctor's degree - professional practice</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="19">
+          <h3>19
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#19</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>19</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>19</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Doctor's degree - otherAward Levels.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2">
+          <h3>2
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Certificate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.0">
+          <h3>2.0
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.0</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.0</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.0</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Certificate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.1">
+          <h3>2.1
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.1</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postsecondary Certificate Or Diploma (less than one year)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.2">
+          <h3>2.2
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.2</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postsecondary Certificate Or Diploma (one year or more but less than four years)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.3">
+          <h3>2.3
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.3</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Associate Degree (e.g., Associate In Arts, Associate In Science)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.4">
+          <h3>2.4
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.4</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.4</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.4</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Baccalaureate Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.5">
+          <h3>2.5
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.5</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.5</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.5</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Baccalaureate (Honors) Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.6">
+          <h3>2.6
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.6</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.6</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.6</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postsecondary Certificate Or Diploma (one year or more but less than two years)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.7">
+          <h3>2.7
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.7</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.7</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.7</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postsecondary Certificate Or Diploma (two years or more but less than four years)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="2.8">
+          <h3>2.8
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#2.8</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>2.8</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>2.8</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>"Undergraduate non-degree" - value to represent an award from undergraduate coursework that is not a certificate or degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="3">
+          <h3>3
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#3</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Associate's Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="3.1">
+          <h3>3.1
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#3.1</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>3.1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>3.1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>First Professional Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="3.2">
+          <h3>3.2
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#3.2</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>3.2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>3.2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Post-Professional Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="3.3">
+          <h3>3.3
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#3.3</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>3.3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>3.3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>"Graduate Professional" - value to represent an award from graduate coursework in a professional program</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="4">
+          <h3>4
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#4</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>4</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>4</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postsecondary award, certificate, or diploma of at least two but less than four academic years (at least 1800 contact or clock hours)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="4.0">
+          <h3>4.0
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#4.0</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>4.0</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>4.0</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>"Graduate non-degree" - value to represent an award from graduate coursework that is not a certificate or degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="4.1">
+          <h3>4.1
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#4.1</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>4.1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>4.1</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Graduate Certificate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="4.2">
+          <h3>4.2
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#4.2</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>4.2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>4.2</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Master's Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="4.3">
+          <h3>4.3
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#4.3</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>4.3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>4.3</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Intermediate Graduate Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="4.4">
+          <h3>4.4
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#4.4</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>4.4</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>4.4</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Doctoral Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="4.5">
+          <h3>4.5
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#4.5</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>4.5</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>4.5</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Post-doctoral Award</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="5">
+          <h3>5
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#5</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>5</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>5</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Bachelor's Degree or equivalent</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="6">
+          <h3>6
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#6</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>6</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>6</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postbaccalaureate Certificate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="7">
+          <h3>7
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#7</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>7</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>7</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Master's Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="8">
+          <h3>8
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#8</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>8</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>8</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Post Masters Certificate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="9">
+          <h3>9
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#9</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>9</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>9</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Doctor's Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B17">
+          <h3>B17
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B17</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B17</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B17</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Did not complete secondary school</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B18">
+          <h3>B18
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B18</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B18</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B18</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Standard High School Diploma which may or may not include an exit test</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B19">
+          <h3>B19
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B19</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B19</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B19</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Advanced or honors diploma</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B20">
+          <h3>B20
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B20</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B20</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B20</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Vocational diploma</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B21">
+          <h3>B21
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B21</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B21</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B21</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Special Education Diploma normally for students with a disabilit</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B22">
+          <h3>B22
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B22</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B22</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B22</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Certificate of completion or attendance</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B23">
+          <h3>B23
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B23</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B23</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B23</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Special certificate of completion or attendance</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B24">
+          <h3>B24
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B24</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B24</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B24</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>General Education Development Test Diploma (GED)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B25">
+          <h3>B25
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B25</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B25</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B25</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Other high school equivalency diploma</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B26">
+          <h3>B26
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B26</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B26</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B26</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>International diploma or certificate (such as International Baccalaureate)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B27">
+          <h3>B27
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B27</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B27</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B27</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Standard High School Diploma with only 3 year curriculum</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B28">
+          <h3>B28
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B28</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B28</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B28</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Met all graduation requirements except for required exit test</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B58">
+          <h3>B58
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B58</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B58</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B58</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>B58</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B59">
+          <h3>B59
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B59</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B59</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B59</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>B59</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="B60">
+          <h3>B60
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#B60</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>B60</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>B60</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>B60</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="CEGEP">
+          <h3>Cegep
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#CEGEP</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Cegep</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>CEGEP</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>CEGEP</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="FrenchBaccalaureate">
+          <h3>French Baccalaureate
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/AcademicAwardLevels#FrenchBaccalaureate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>French Baccalaureate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>FrenchBaccalaureate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>French Baccalaureate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#AcademicAwardLevels">Academic Award Levels</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="pescAcademicAwardLevels">pescAcademicAwardLevels</dt>
+          <dd>
+            <code>https://pesc.org/vocabs/AcademicAwardLevels#</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity"></table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>made by 
+        <a href="https://github.com/rdflib/pyLODE">
+          <span id="p">p</span>
+          <span id="y">y</span>
+          <span>LODE</span>
+        </a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.2.1_pesc1" id="version">3.2.1_pesc1</a>
+        <span> with the </span>
+        <a href="https://github.com/pesc-org/json-ld-transcript/" id="profile">PescVoc</a>
+        <span>profile</span>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#metadata">Metadata</a>
+          </h4>
+        </li>
+        <li>
+          <h4>
+            <a href="#conceptschemes">Concept Schemes</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#AcademicAwardLevels">Academic Award Levels</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#concepts">Concepts</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#0.0">0.0</a>
+            </li>
+            <li>
+              <a href="#1">1</a>
+            </li>
+            <li>
+              <a href="#1.1">1.1</a>
+            </li>
+            <li>
+              <a href="#1.2">1.2</a>
+            </li>
+            <li>
+              <a href="#1.3">1.3</a>
+            </li>
+            <li>
+              <a href="#1.4">1.4</a>
+            </li>
+            <li>
+              <a href="#1.5">1.5</a>
+            </li>
+            <li>
+              <a href="#10">10</a>
+            </li>
+            <li>
+              <a href="#11">11</a>
+            </li>
+            <li>
+              <a href="#17">17</a>
+            </li>
+            <li>
+              <a href="#18">18</a>
+            </li>
+            <li>
+              <a href="#19">19</a>
+            </li>
+            <li>
+              <a href="#2">2</a>
+            </li>
+            <li>
+              <a href="#2.0">2.0</a>
+            </li>
+            <li>
+              <a href="#2.1">2.1</a>
+            </li>
+            <li>
+              <a href="#2.2">2.2</a>
+            </li>
+            <li>
+              <a href="#2.3">2.3</a>
+            </li>
+            <li>
+              <a href="#2.4">2.4</a>
+            </li>
+            <li>
+              <a href="#2.5">2.5</a>
+            </li>
+            <li>
+              <a href="#2.6">2.6</a>
+            </li>
+            <li>
+              <a href="#2.7">2.7</a>
+            </li>
+            <li>
+              <a href="#2.8">2.8</a>
+            </li>
+            <li>
+              <a href="#3">3</a>
+            </li>
+            <li>
+              <a href="#3.1">3.1</a>
+            </li>
+            <li>
+              <a href="#3.2">3.2</a>
+            </li>
+            <li>
+              <a href="#3.3">3.3</a>
+            </li>
+            <li>
+              <a href="#4">4</a>
+            </li>
+            <li>
+              <a href="#4.0">4.0</a>
+            </li>
+            <li>
+              <a href="#4.1">4.1</a>
+            </li>
+            <li>
+              <a href="#4.2">4.2</a>
+            </li>
+            <li>
+              <a href="#4.3">4.3</a>
+            </li>
+            <li>
+              <a href="#4.4">4.4</a>
+            </li>
+            <li>
+              <a href="#4.5">4.5</a>
+            </li>
+            <li>
+              <a href="#5">5</a>
+            </li>
+            <li>
+              <a href="#6">6</a>
+            </li>
+            <li>
+              <a href="#7">7</a>
+            </li>
+            <li>
+              <a href="#8">8</a>
+            </li>
+            <li>
+              <a href="#9">9</a>
+            </li>
+            <li>
+              <a href="#B17">B17</a>
+            </li>
+            <li>
+              <a href="#B18">B18</a>
+            </li>
+            <li>
+              <a href="#B19">B19</a>
+            </li>
+            <li>
+              <a href="#B20">B20</a>
+            </li>
+            <li>
+              <a href="#B21">B21</a>
+            </li>
+            <li>
+              <a href="#B22">B22</a>
+            </li>
+            <li>
+              <a href="#B23">B23</a>
+            </li>
+            <li>
+              <a href="#B24">B24</a>
+            </li>
+            <li>
+              <a href="#B25">B25</a>
+            </li>
+            <li>
+              <a href="#B26">B26</a>
+            </li>
+            <li>
+              <a href="#B27">B27</a>
+            </li>
+            <li>
+              <a href="#B28">B28</a>
+            </li>
+            <li>
+              <a href="#B58">B58</a>
+            </li>
+            <li>
+              <a href="#B59">B59</a>
+            </li>
+            <li>
+              <a href="#B60">B60</a>
+            </li>
+            <li>
+              <a href="#CEGEP">Cegep</a>
+            </li>
+            <li>
+              <a href="#FrenchBaccalaureate">French Baccalaureate</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#pescAcademicAwardLevels">pescAcademicAwardLevels</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second"></ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

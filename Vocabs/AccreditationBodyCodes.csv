@@ -1,0 +1,21 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescAccreditationBodyCodes:MSA","Msa","Middle States Association of Colleges and Schools, Commission on Higher Education","MSA","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:NCA-CASI","Nca-Casi","North Central Association of Colleges and Schools, Commission on Accreditation and School Improvement, Board of Trustees","NCA-CASI","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:NCA-HLC","Nca-Hlc","North Central Association of Colleges and Schools, Higher Learning Commission","NCA-HLC","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:NEASC-CIHE","Neasc-Cihe","New England Association of Schools and Colleges, Inc., Commission on Institutions of Higher Education","NEASC-CIHE","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:NEASC-CTCI","Neasc-Ctci","New England Association of Schools and Colleges, Inc., Commission on Technical and Career Institutions","NEASC-CTCI","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:NWCCU","Nwccu","Northwest Commission on Colleges and Universities","NWCCU","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:Other","Other","Use AccreditationTypeName to enter Accrediting body other than listed","Other","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:SACS","Sacs","Southern Association of Colleges and Schools, Commission on Colleges","SACS","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:WASC-ACCJC","Wasc-Accjc","Western Association of Schools and Colleges, Accrediting Commission for Community and Junior Colleges","WASC-ACCJC","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept","pescAccreditationBodyCodes:WASC-ACSCU","Wasc-Acscu","Western Association of Schools and Colleges, Accrediting Commission for Senior Colleges and Universities","WASC-ACSCU","pescAccreditationBodyCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescAccreditationBodyCodes:","Accreditation Body Codes","Need Definition","","pescAccreditationBodyCodes:MSA,
+pescAccreditationBodyCodes:NCA-CASI,
+pescAccreditationBodyCodes:NCA-HLC,
+pescAccreditationBodyCodes:NEASC-CIHE,
+pescAccreditationBodyCodes:NEASC-CTCI,
+pescAccreditationBodyCodes:NWCCU,
+pescAccreditationBodyCodes:Other,
+pescAccreditationBodyCodes:SACS,
+pescAccreditationBodyCodes:WASC-ACCJC,
+pescAccreditationBodyCodes:WASC-ACSCU","hasTopConcept"

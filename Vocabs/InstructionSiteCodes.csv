@@ -1,0 +1,21 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescInstructionSiteCodes:OnCampus","On Campus","On Campus","OnCampus","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:OffCampus","Off Campus","Off Campus","OffCampus","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:Extension","Extension","Extension","Extension","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:StudyAbroad","Study Abroad","Study Abroad","StudyAbroad","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:Correctional","Correctional","Correctional","Correctional","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:Millitary","Millitary","Millitary","Millitary","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:Telecommunication","Telecommunication","Telecommunication","Telecommunication","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:Auxiliary","Auxiliary","Auxiliary","Auxiliary","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:ClinicHospital","Clinic Hospital","Clinic Hospital","ClinicHospital","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept","pescInstructionSiteCodes:DistanceLearning","Distance Learning","Distance Learning","DistanceLearning","pescInstructionSiteCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescInstructionSiteCodes:","Instruction Site Codes","An indication of the type of location at which the course is taught.","","pescInstructionSiteCodes:OnCampus,
+pescInstructionSiteCodes:OffCampus,
+pescInstructionSiteCodes:Extension,
+pescInstructionSiteCodes:StudyAbroad,
+pescInstructionSiteCodes:Correctional,
+pescInstructionSiteCodes:Millitary,
+pescInstructionSiteCodes:Telecommunication,
+pescInstructionSiteCodes:Auxiliary,
+pescInstructionSiteCodes:ClinicHospital,
+pescInstructionSiteCodes:DistanceLearning","hasTopConcept"

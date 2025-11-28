@@ -1,0 +1,53 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescDocumentTypeCodes:Acknowledgment","Acknowledgment","Acknowledgment","Acknowledgment","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Application","Application","Application","Application","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Cancel","Cancel","Cancel","Cancel","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Certificate","Certificate","Certificate","Certificate","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:CertificationRequest","Certification Request","Certification Request","CertificationRequest","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Change","Change","Change","Change","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Credential","Credential","Credential","Credential","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Diploma","Diploma","Diploma","Diploma","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:DisbursementAcknowledgement","Disbursement Acknowledgement","Disbursement Acknowledgement","DisbursementAcknowledgement","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:DisbursementForecast","Disbursement Forecast","Disbursement Forecast","DisbursementForecast","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:DisbursementRoster","Disbursement Roster","Disbursement Roster","DisbursementRoster","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:InstitutionRequest","Institution Request","Institution Request","InstitutionRequest","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:GainfulEmploymentStudentResponseFile","Gainful Employment Student Response File","Gainful Employment Student Response File","GainfulEmploymentStudentResponseFile","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:GainfulEmploymentStudentSubmittal","Gainful Employment Student Submittal","Gainful Employment Student Submittal","GainfulEmploymentStudentSubmittal","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:IPEDS","Ipeds","Integrated PostSecondary Education Data System","IPEDS","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:NSLDSEnrollmentError","Nsldsenrollment Error","National Student Loan Data System Enrollment Error","NSLDSEnrollmentError","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:NSLDSEnrollmentSubmittal","Nsldsenrollment Submittal","National Student Loan Data System Enrollment Submittal","NSLDSEnrollmentSubmittal","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Receipt","Receipt","Receipt","Receipt","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Request","Request","Request","Request","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:RequestedRecord","Requested Record","Requested Record","RequestedRecord","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:Response","Response","Response","Response","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:ReverseTransfer","Reverse Transfer","Reverse Transfer","ReverseTransfer","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:StudentRequest","Student Request","Student Request","StudentRequest","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:TermEnroll","Term Enroll","Term Enroll","TermEnroll","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:TermGrade","Term Grade","Term Grade","TermGrade","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentTypeCodes:ThirdPartyRequest","Third Party Request","Third Party Request","ThirdPartyRequest","pescDocumentTypeCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescDocumentTypeCodes:","Document Type Codes","Type and purpose of document being transmitted","","pescDocumentTypeCodes:Acknowledgment,
+pescDocumentTypeCodes:Application,
+pescDocumentTypeCodes:Cancel,
+pescDocumentTypeCodes:Certificate,
+pescDocumentTypeCodes:CertificationRequest,
+pescDocumentTypeCodes:Change,
+pescDocumentTypeCodes:Credential,
+pescDocumentTypeCodes:Diploma,
+pescDocumentTypeCodes:DisbursementAcknowledgement,
+pescDocumentTypeCodes:DisbursementForecast,
+pescDocumentTypeCodes:DisbursementRoster,
+pescDocumentTypeCodes:InstitutionRequest,
+pescDocumentTypeCodes:GainfulEmploymentStudentResponseFile,
+pescDocumentTypeCodes:GainfulEmploymentStudentSubmittal,
+pescDocumentTypeCodes:IPEDS,
+pescDocumentTypeCodes:NSLDSEnrollmentError,
+pescDocumentTypeCodes:NSLDSEnrollmentSubmittal,
+pescDocumentTypeCodes:Receipt,
+pescDocumentTypeCodes:Request,
+pescDocumentTypeCodes:RequestedRecord,
+pescDocumentTypeCodes:Response,
+pescDocumentTypeCodes:ReverseTransfer,
+pescDocumentTypeCodes:StudentRequest,
+pescDocumentTypeCodes:TermEnroll,
+pescDocumentTypeCodes:TermGrade,
+pescDocumentTypeCodes:ThirdPartyRequest","hasTopConcept"

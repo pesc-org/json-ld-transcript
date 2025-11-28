@@ -1,0 +1,161 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescCreditBasis:AcademicRenewal a skos:Concept ;
+    skos:definition "Academic Renewal" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "AcademicRenewal" ;
+    skos:prefLabel "Academic Renewal" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:AdultBasic a skos:Concept ;
+    skos:definition "Deprecated" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "AdultBasic" ;
+    skos:prefLabel "Adult Basic" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:AdvancedPlacement a skos:Concept ;
+    skos:definition "Advanced Placement" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "AdvancedPlacement" ;
+    skos:prefLabel "Advanced Placement" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:AdvancedStanding a skos:Concept ;
+    skos:definition "Advanced Standing" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "AdvancedStanding" ;
+    skos:prefLabel "Advanced Standing" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:ContinuingEducation a skos:Concept ;
+    skos:definition "Continuing Education" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "ContinuingEducation" ;
+    skos:prefLabel "Continuing Education" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:Correspondence a skos:Concept ;
+    skos:definition "Correspondence" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "Correspondence" ;
+    skos:prefLabel "Correspondence" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:CreditByExam a skos:Concept ;
+    skos:definition "Credit granted from successful score on a standardized test of comprehension or proficiency." ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "CreditByExam" ;
+    skos:prefLabel "Credit By Exam" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:Equivalence a skos:Concept ;
+    skos:definition "Equivalence" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "Equivalence" ;
+    skos:prefLabel "Equivalence" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:Exemption a skos:Concept ;
+    skos:definition "Exemption" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "Exemption" ;
+    skos:prefLabel "Exemption" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:HighSchoolCreditOnly a skos:Concept ;
+    skos:definition "Credit from a college course is transferred back to high school and not counted by the college." ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "HighSchoolCreditOnly" ;
+    skos:prefLabel "High School Credit Only" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:HighSchoolDualCredit a skos:Concept ;
+    skos:definition "Credit from a college course is counted at both the college and high school." ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "HighSchoolDualCredit" ;
+    skos:prefLabel "High School Dual Credit" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:HighSchoolTransferCredit a skos:Concept ;
+    skos:definition "Credit from a high school course is transferred to the college." ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "HighSchoolTransferCredit" ;
+    skos:prefLabel "High School Transfer Credit" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:InternationalBaccalaureate a skos:Concept ;
+    skos:definition "International Baccalaureate" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "InternationalBaccalaureate" ;
+    skos:prefLabel "International Baccalaureate" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:JuniorHighSchoolCredit a skos:Concept ;
+    skos:definition "Credit from a junior high school course is counted at the high school." ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "JuniorHighSchoolCredit" ;
+    skos:prefLabel "Junior High School Credit" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:LifeExperience a skos:Concept ;
+    skos:definition "Life Experience" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "LifeExperience" ;
+    skos:prefLabel "Life Experience" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:Major a skos:Concept ;
+    skos:definition "Credit associated with the student's major AcademicRenewal AdultBasic AdvancedPlacement AdvancedStanding Correspondence ContinuingEducation Exemption Equivalence InternationalBaccalaureate Military" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "Major" ;
+    skos:prefLabel "Major" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:Military a skos:Concept ;
+    skos:definition "Military" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "Military" ;
+    skos:prefLabel "Military" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:Regular a skos:Concept ;
+    skos:definition "Regular/general enrollment" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "Regular" ;
+    skos:prefLabel "Regular" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis:Remedial a skos:Concept ;
+    skos:definition "Remedial/developmental" ;
+    skos:inScheme pescCreditBasis: ;
+    skos:notation "Remedial" ;
+    skos:prefLabel "Remedial" ;
+    skos:topConceptOf pescCreditBasis: .
+
+pescCreditBasis: a skos:ConceptScheme ;
+    dcterms:description "The type of enrollment associated with the credit hours for the course." ;
+    dcterms:title "Credit Basis" ;
+    skos:hasTopConcept pescCreditBasis:AcademicRenewal,
+        pescCreditBasis:AdultBasic,
+        pescCreditBasis:AdvancedPlacement,
+        pescCreditBasis:AdvancedStanding,
+        pescCreditBasis:ContinuingEducation,
+        pescCreditBasis:Correspondence,
+        pescCreditBasis:CreditByExam,
+        pescCreditBasis:Equivalence,
+        pescCreditBasis:Exemption,
+        pescCreditBasis:HighSchoolCreditOnly,
+        pescCreditBasis:HighSchoolDualCredit,
+        pescCreditBasis:HighSchoolTransferCredit,
+        pescCreditBasis:InternationalBaccalaureate,
+        pescCreditBasis:JuniorHighSchoolCredit,
+        pescCreditBasis:LifeExperience,
+        pescCreditBasis:Major,
+        pescCreditBasis:Military,
+        pescCreditBasis:Regular,
+        pescCreditBasis:Remedial .
+

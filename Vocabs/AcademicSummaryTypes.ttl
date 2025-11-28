@@ -1,0 +1,137 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescAcademicSummaryTypes:AcademicRenewal a skos:Concept ;
+    skos:definition "Subset of forgiven courses" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "AcademicRenewal" ;
+    skos:prefLabel "Academic Renewal" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:All a skos:Concept ;
+    skos:definition "Summary of all courses regardless of institution" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "All" ;
+    skos:prefLabel "All" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:AllNotRepeated a skos:Concept ;
+    skos:definition "Summary of all courses except for repeated or forgiven courses/credits" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "AllNotRepeated" ;
+    skos:prefLabel "All Not Repeated" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:CarryoverCredit a skos:Concept ;
+    skos:definition "Summary from offline records and used as the intitial point for cumulatives and averages" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "CarryoverCredit" ;
+    skos:prefLabel "Carryover Credit" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:ConvertedFrom a skos:Concept ;
+    skos:definition "Summary of credits before an institutional term-basis conversion, such as from quarters to semesters" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "ConvertedFrom" ;
+    skos:prefLabel "Converted From" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:ConvertedTo a skos:Concept ;
+    skos:definition "Summary of credits after an institutional term-basis conversion, such as from quarters to semesters" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "ConvertedTo" ;
+    skos:prefLabel "Converted To" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:Cumulative a skos:Concept ;
+    skos:definition "Cumulative" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "Cumulative" ;
+    skos:prefLabel "Cumulative" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:DegreeApplicable a skos:Concept ;
+    skos:definition "Summary of course that apply to degree" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "DegreeApplicable" ;
+    skos:prefLabel "Degree Applicable" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:NonDegreeApplicable a skos:Concept ;
+    skos:definition "Summary of courses that do not apply toward degree" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "NonDegreeApplicable" ;
+    skos:prefLabel "Non Degree Applicable" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:NonWeighted a skos:Concept ;
+    skos:definition "Summary that does not give additional value to courses, regardless of special characteristics of the courses. For example, if the grading scale is from 0 to 4.00, then it is not possible to have a summary higher than 4.00." ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "NonWeighted" ;
+    skos:prefLabel "Non Weighted" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:SenderNotRepeated a skos:Concept ;
+    skos:definition "Summary of all courses at sending institution except for repeated or forgiven courses/credits" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "SenderNotRepeated" ;
+    skos:prefLabel "Sender Not Repeated" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:SenderOnly a skos:Concept ;
+    skos:definition "Summary of all courses at sending institution (or recorded as if they were taken at the" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "SenderOnly" ;
+    skos:prefLabel "Sender Only" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:TransferNotRepeated a skos:Concept ;
+    skos:definition "Summary of transfer work except for repeated or forgiven courses/credits" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "TransferNotRepeated" ;
+    skos:prefLabel "Transfer Not Repeated" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:TransferOnly a skos:Concept ;
+    skos:definition "Summary of transfer work (courses taken at other than the sending institution)" ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "TransferOnly" ;
+    skos:prefLabel "Transfer Only" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:UserDefined a skos:Concept ;
+    skos:definition "see NoteMessage for explanation." ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "UserDefined" ;
+    skos:prefLabel "User Defined" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes:Weighted a skos:Concept ;
+    skos:definition "Summary that gives additional (higher) value to specific courses taken by a student, such as honors courses, International Baccalaureate, Advanced Placement, high school /college dual enrollment." ;
+    skos:inScheme pescAcademicSummaryTypes: ;
+    skos:notation "Weighted" ;
+    skos:prefLabel "Weighted" ;
+    skos:topConceptOf pescAcademicSummaryTypes: .
+
+pescAcademicSummaryTypes: a skos:ConceptScheme ;
+    dcterms:description "Summary Type is an indication of what is being summarized over which period of time." ;
+    dcterms:title "Academic Summary Types" ;
+    skos:hasTopConcept pescAcademicSummaryTypes:AcademicRenewal,
+        pescAcademicSummaryTypes:All,
+        pescAcademicSummaryTypes:AllNotRepeated,
+        pescAcademicSummaryTypes:CarryoverCredit,
+        pescAcademicSummaryTypes:ConvertedFrom,
+        pescAcademicSummaryTypes:ConvertedTo,
+        pescAcademicSummaryTypes:Cumulative,
+        pescAcademicSummaryTypes:DegreeApplicable,
+        pescAcademicSummaryTypes:NonDegreeApplicable,
+        pescAcademicSummaryTypes:NonWeighted,
+        pescAcademicSummaryTypes:SenderNotRepeated,
+        pescAcademicSummaryTypes:SenderOnly,
+        pescAcademicSummaryTypes:TransferNotRepeated,
+        pescAcademicSummaryTypes:TransferOnly,
+        pescAcademicSummaryTypes:UserDefined,
+        pescAcademicSummaryTypes:Weighted .
+

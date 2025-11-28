@@ -1,0 +1,7 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescHonorsLevels:FirstHighest","First Highest","First Highest","FirstHighest","pescHonorsLevels:","inScheme, topConceptOf"
+"Concept","pescHonorsLevels:SecondHighest","Second Highest","Second Highest","SecondHighest","pescHonorsLevels:","inScheme, topConceptOf"
+"Concept","pescHonorsLevels:ThirdHighest","Third Highest","Third Highest","ThirdHighest","pescHonorsLevels:","inScheme, topConceptOf"
+"Concept Scheme","pescHonorsLevels:","Honors Levels","A code value representing 1st highest honor, 2nd highest and 3rd highest.","","pescHonorsLevels:FirstHighest,
+pescHonorsLevels:SecondHighest,
+pescHonorsLevels:ThirdHighest","hasTopConcept"

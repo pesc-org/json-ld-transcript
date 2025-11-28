@@ -1,0 +1,9 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescConditionsMetCodes:Yes","Yes","Yes","Yes","pescConditionsMetCodes:","inScheme, topConceptOf"
+"Concept","pescConditionsMetCodes:No","No","No","No","pescConditionsMetCodes:","inScheme, topConceptOf"
+"Concept","pescConditionsMetCodes:Conditional","Conditional","Conditional","Conditional","pescConditionsMetCodes:","inScheme, topConceptOf"
+"Concept","pescConditionsMetCodes:MutuallyDefined","Mutually Defined","Mutually Defined","MutuallyDefined","pescConditionsMetCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescConditionsMetCodes:","Conditions Met Codes","Indicates whether and how conditions for the requirement have been attained.","","pescConditionsMetCodes:Yes,
+pescConditionsMetCodes:No,
+pescConditionsMetCodes:Conditional,
+pescConditionsMetCodes:MutuallyDefined","hasTopConcept"

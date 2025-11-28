@@ -1,0 +1,41 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescGenderCodes:Female a skos:Concept ;
+    skos:definition "Female" ;
+    skos:inScheme pescGenderCodes: ;
+    skos:notation "Female" ;
+    skos:prefLabel "Female" ;
+    skos:topConceptOf pescGenderCodes: .
+
+pescGenderCodes:Male a skos:Concept ;
+    skos:definition "Male" ;
+    skos:inScheme pescGenderCodes: ;
+    skos:notation "Male" ;
+    skos:prefLabel "Male" ;
+    skos:topConceptOf pescGenderCodes: .
+
+pescGenderCodes:Unreported a skos:Concept ;
+    skos:definition "Unreported" ;
+    skos:inScheme pescGenderCodes: ;
+    skos:notation "Unreported" ;
+    skos:prefLabel "Unreported" ;
+    skos:topConceptOf pescGenderCodes: .
+
+pescGenderCodes:Unspecified a skos:Concept ;
+    skos:definition "Unspecified" ;
+    skos:inScheme pescGenderCodes: ;
+    skos:notation "Unspecified" ;
+    skos:prefLabel "Unspecified" ;
+    skos:topConceptOf pescGenderCodes: .
+
+pescGenderCodes: a skos:ConceptScheme ;
+    dcterms:description "The gender of the Student" ;
+    dcterms:title "Gender Codes" ;
+    skos:hasTopConcept pescGenderCodes:Female,
+        pescGenderCodes:Male,
+        pescGenderCodes:Unreported,
+        pescGenderCodes:Unspecified .
+

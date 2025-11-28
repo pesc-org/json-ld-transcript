@@ -1,0 +1,41 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescCreditLevels:SeventhGrade","Seventh Grade","Seventh Grade","SeventhGrade","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:EighthGrade","Eighth Grade","Eighth Grade","EighthGrade","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:NinthGrade","Ninth Grade","Ninth Grade","NinthGrade","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:TenthGrade","Tenth Grade","Tenth Grade","TenthGrade","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:EleventhGrade","Eleventh Grade","Eleventh Grade","EleventhGrade","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:TwelfthGrade","Twelfth Grade","Twelfth Grade","TwelfthGrade","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:Grade13","Grade13","Grade13","Grade13","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:Dual","Dual","Dual level (upper division and graduate, may be applicable to a bachelor's degree or graduate degree or both) GraduateProfessional=Dual level (graduate and professional- may be applicable to both) added enums below and reodered in alpha order SeventhGrade EighthGrade NinthGrade enthGrade EleventhGrade TwelfthGrade DualHighSchoolCollege DualGraduateUndergraduat Secondary","Dual","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:DualGraduateUndergraduate","Dual Graduate Undergraduate","Dual Graduate Undergraduate","DualGraduateUndergraduate","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:DualHighSchoolCollege","Dual High School College","Dual High School College","DualHighSchoolCollege","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:Graduate","Graduate","Graduate level credit","Graduate","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:GraduateProfessional","Graduate Professional","Graduate Professional","GraduateProfessional","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:LowerDivision","Lower Division","Lower Division","LowerDivision","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:Professional","Professional","Professional","Professional","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:Secondary","Secondary","Secondary","Secondary","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:TechnicalPreparatory","Technical Preparatory","Tech Prep credit","TechnicalPreparatory","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:Undergraduate","Undergraduate","Undergraduate LowerDivision=Lower division credit (associated with first/second year)","Undergraduate","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:Ungraded","Ungraded","Ungraded","Ungraded","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:UpperDivision","Upper Division","Higher or upper division credit (associated with third or fourth year)","UpperDivision","pescCreditLevels:","inScheme, topConceptOf"
+"Concept","pescCreditLevels:Vocational","Vocational","Vocational/technical credit","Vocational","pescCreditLevels:","inScheme, topConceptOf"
+"Concept Scheme","pescCreditLevels:","Credit Levels","The level of credit associated with the credit hours earned for the course.","","pescCreditLevels:SeventhGrade,
+pescCreditLevels:EighthGrade,
+pescCreditLevels:NinthGrade,
+pescCreditLevels:TenthGrade,
+pescCreditLevels:EleventhGrade,
+pescCreditLevels:TwelfthGrade,
+pescCreditLevels:Grade13,
+pescCreditLevels:Dual,
+pescCreditLevels:DualGraduateUndergraduate,
+pescCreditLevels:DualHighSchoolCollege,
+pescCreditLevels:Graduate,
+pescCreditLevels:GraduateProfessional,
+pescCreditLevels:LowerDivision,
+pescCreditLevels:Professional,
+pescCreditLevels:Secondary,
+pescCreditLevels:TechnicalPreparatory,
+pescCreditLevels:Undergraduate,
+pescCreditLevels:Ungraded,
+pescCreditLevels:UpperDivision,
+pescCreditLevels:Vocational","hasTopConcept"

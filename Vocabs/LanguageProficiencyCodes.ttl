@@ -1,0 +1,97 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescLanguageProficiencyCodes:EnglishOnly a skos:Concept ;
+    skos:definition "English Only" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "EnglishOnly" ;
+    skos:prefLabel "English Only" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:Excellent a skos:Concept ;
+    skos:definition "Excellent" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "Excellent" ;
+    skos:prefLabel "Excellent" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:Fair a skos:Concept ;
+    skos:definition "Fair" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "Fair" ;
+    skos:prefLabel "Fair" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:FullyEnglishProficient a skos:Concept ;
+    skos:definition "Fully English Proficient" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "FullyEnglishProficient" ;
+    skos:prefLabel "Fully English Proficient" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:Good a skos:Concept ;
+    skos:definition "Good" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "Good" ;
+    skos:prefLabel "Good" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:LimitedEnglishProficiency a skos:Concept ;
+    skos:definition "Limited English Proficiency" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "LimitedEnglishProficiency" ;
+    skos:prefLabel "Limited English Proficiency" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:NonEnglishSpeaking a skos:Concept ;
+    skos:definition "Non English Speaking" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "NonEnglishSpeaking" ;
+    skos:prefLabel "Non English Speaking" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:Poor a skos:Concept ;
+    skos:definition "Poor" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "Poor" ;
+    skos:prefLabel "Poor" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient a skos:Concept ;
+    skos:definition "Redesignated Fluent English Proficient" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "RedesignatedFluentEnglishProficient" ;
+    skos:prefLabel "Redesignated Fluent English Proficient" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:Unacceptable a skos:Concept ;
+    skos:definition "Unacceptable" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "Unacceptable" ;
+    skos:prefLabel "Unacceptable" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes:Unknown a skos:Concept ;
+    skos:definition "Unknown" ;
+    skos:inScheme pescLanguageProficiencyCodes: ;
+    skos:notation "Unknown" ;
+    skos:prefLabel "Unknown" ;
+    skos:topConceptOf pescLanguageProficiencyCodes: .
+
+pescLanguageProficiencyCodes: a skos:ConceptScheme ;
+    dcterms:description "Adeptness in comprehending and using the language" ;
+    dcterms:title "Language Proficiency Codes" ;
+    skos:hasTopConcept pescLanguageProficiencyCodes:EnglishOnly,
+        pescLanguageProficiencyCodes:Excellent,
+        pescLanguageProficiencyCodes:Fair,
+        pescLanguageProficiencyCodes:FullyEnglishProficient,
+        pescLanguageProficiencyCodes:Good,
+        pescLanguageProficiencyCodes:LimitedEnglishProficiency,
+        pescLanguageProficiencyCodes:NonEnglishSpeaking,
+        pescLanguageProficiencyCodes:Poor,
+        pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient,
+        pescLanguageProficiencyCodes:Unacceptable,
+        pescLanguageProficiencyCodes:Unknown .
+

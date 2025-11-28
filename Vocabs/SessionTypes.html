@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Session Types</title>
+    <style>
+        #pylode {
+            position: fixed;
+            top: 205px;
+            left: -150px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+        #pylode #p {
+            color: #329545;
+        }
+        #pylode #y {
+            color: #f9cb33;
+        }
+        #pylode #version {
+            font-size: 1.0em;
+        }
+
+        #profile {
+            font-style: italic;
+            font-size: 1.25em;
+            color: darkred!important;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dl {
+            /*border: 1px solid navy;*/
+            /*padding:5px;*/
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 0;
+        }
+
+        dd {
+            margin-bottom: 10px;
+            padding-top: 7px;
+        }
+
+        #metadata ul,
+        #classes ul {
+            list-style-type: none;
+        }
+
+        #metadata ul li,
+        #classes ul li {
+            margin-left: -40px;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: left;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        sup {
+            margin-left: -3px;
+        }
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+
+#toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    border: solid 1px navy;
+    font-size: small;
+    width: 180px;
+}
+#toc h3 {
+    margin-top: 5px;
+}
+
+#toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#toc .first > li {
+    margin-top: 5px;
+}
+
+#toc .second,
+#toc .third {
+    padding-left: 10px;
+}
+
+#content {
+    width: calc(100% - 150px);
+}
+
+.hover_property {
+    cursor: help;
+    text-decoration: none;
+    border-bottom: dashed 1px;
+}
+
+.setclass {
+    list-style-type: none;
+}
+
+code{
+    word-wrap: break-word;
+  }
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+td {
+    word-wrap: break-word;
+}
+#legend table.entity {
+    width: 25%;
+}
+	</style>
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <script id="schema.org" type="application/ld+json">
+[
+  {
+    "@id": "https://pesc.org/vocabs/SessionTypes#",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "Indicates the type of academic session at an educational institution."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Session Types"
+      }
+    ]
+  }
+]
+	</script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section" id="metadata">
+        <h1>Session Types</h1>
+        <h2>Metadata</h2>
+        <dl>
+          <div>
+            <dt>
+              <strong>IRI</strong>
+            </dt>
+            <dd>
+              <code>https://pesc.org/vocabs/SessionTypes#</code>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/title" title="None. Defined in None">Title</a>
+            </dt>
+            <dd><p>Session Types</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+            </dt>
+            <dd><p>Indicates the type of academic session at an educational institution.</p></dd>
+          </div>
+        </dl>
+      </div>
+      <div class="section" id="conceptschemes">
+        <h2>Concept Scheme</h2>
+        <div class="property entity" id="SessionTypes">
+          <h3>Session Types
+            <sup class="sup-cs" title="SKOS Concept Scheme">cs</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>Indicates the type of academic session at an educational institution.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#hasTopConcept" title="None. Defined in None">Has Top Concept</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <a href="#Continuous">Continuous</a>
+                  </li>
+                  <li>
+                    <a href="#DiffersByProgram">Differs By Program</a>
+                  </li>
+                  <li>
+                    <a href="#FallSession">Fall Session</a>
+                  </li>
+                  <li>
+                    <a href="#FourOneFourPlan">Four One Four Plan</a>
+                  </li>
+                  <li>
+                    <a href="#FullYear">Full Year</a>
+                  </li>
+                  <li>
+                    <a href="#Intersession">Intersession</a>
+                  </li>
+                  <li>
+                    <a href="#LongSession">Long Session</a>
+                  </li>
+                  <li>
+                    <a href="#MiniTerm">Mini Term</a>
+                  </li>
+                  <li>
+                    <a href="#Other">Other</a>
+                  </li>
+                  <li>
+                    <a href="#Quarter">Quarter</a>
+                  </li>
+                  <li>
+                    <a href="#Quinmester">Quinmester</a>
+                  </li>
+                  <li>
+                    <a href="#Semester">Semester</a>
+                  </li>
+                  <li>
+                    <a href="#SummerSession">Summer Session</a>
+                  </li>
+                  <li>
+                    <a href="#Trimester">Trimester</a>
+                  </li>
+                  <li>
+                    <a href="#TwelveMonth">Twelve Month</a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="concepts">
+        <h2>Concepts</h2>
+        <div class="property entity" id="Continuous">
+          <h3>Continuous
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#Continuous</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Continuous</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Continuous</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Continuous</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="DiffersByProgram">
+          <h3>Differs By Program
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#DiffersByProgram</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Differs By Program</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>DiffersByProgram</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Differs By Program</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="FallSession">
+          <h3>Fall Session
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#FallSession</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Fall Session</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>FallSession</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Fall Session</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="FourOneFourPlan">
+          <h3>Four One Four Plan
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#FourOneFourPlan</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Four One Four Plan</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>FourOneFourPlan</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>A school year consisting of a four-month semester of academic work, followed by a month of special activity, followed by another four-month semester of academic work. Continuous DiffersByProgram Other TwelveMonth.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="FullYear">
+          <h3>Full Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#FullYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Full Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>FullYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>The prescribed length of instruction upon which credit is awarded based on the total number of days in a school year.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Intersession">
+          <h3>Intersession
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#Intersession</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Intersession</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Intersession</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>For year round schools, the days of optional attendance (equivalent to a summer session) for a student enrolled in a school offering a year-round program which provides three time blocks of 60 days of instruction followed by 15 of intersession.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="LongSession">
+          <h3>Long Session
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#LongSession</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Long Session</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>LongSession</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Longer than a semester or quarter or trimester, but shorter than a full year. FallSession</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="MiniTerm">
+          <h3>Mini Term
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#MiniTerm</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Mini Term</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>MiniTerm</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>A session whose length is less than the regular session; usually but not always contained wholly within the regular session.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Other">
+          <h3>Other
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#Other</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Other</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Other</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Other</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Quarter">
+          <h3>Quarter
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#Quarter</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Quarter</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Quarter</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Usually about 10 to 14 weeks in length; normally there are four quarter sessions and perhaps other shorter sessions in an academic year.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Quinmester">
+          <h3>Quinmester
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#Quinmester</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Quinmester</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Quinmester</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Usually about 8 to 10 weeks in length; normally there are five quinmester sessions per academic year.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Semester">
+          <h3>Semester
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#Semester</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Semester</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Semester</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Usually about 15 to 17 weeks in length; there are usually two semesters per academic year and perhaps other shorter sessions.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SummerSession">
+          <h3>Summer Session
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#SummerSession</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Summer Session</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>SummerSession</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>A session or combination of sessions conducted after the last regular session of the school year and prior to the first regular session of the next school year.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Trimester">
+          <h3>Trimester
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#Trimester</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Trimester</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Trimester</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Usually about 13 to 15 weeks in length; normally there are three trimesters and perhaps other shorter sessions in an academic year.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="TwelveMonth">
+          <h3>Twelve Month
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/SessionTypes#TwelveMonth</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Twelve Month</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>TwelveMonth</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Twelve Month</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#SessionTypes">Session Types</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="pescSessionTypes">pescSessionTypes</dt>
+          <dd>
+            <code>https://pesc.org/vocabs/SessionTypes#</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity"></table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>made by 
+        <a href="https://github.com/rdflib/pyLODE">
+          <span id="p">p</span>
+          <span id="y">y</span>
+          <span>LODE</span>
+        </a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.2.1_pesc1" id="version">3.2.1_pesc1</a>
+        <span> with the </span>
+        <a href="https://github.com/pesc-org/json-ld-transcript/" id="profile">PescVoc</a>
+        <span>profile</span>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#metadata">Metadata</a>
+          </h4>
+        </li>
+        <li>
+          <h4>
+            <a href="#conceptschemes">Concept Schemes</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#SessionTypes">Session Types</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#concepts">Concepts</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#Continuous">Continuous</a>
+            </li>
+            <li>
+              <a href="#DiffersByProgram">Differs By Program</a>
+            </li>
+            <li>
+              <a href="#FallSession">Fall Session</a>
+            </li>
+            <li>
+              <a href="#FourOneFourPlan">Four One Four Plan</a>
+            </li>
+            <li>
+              <a href="#FullYear">Full Year</a>
+            </li>
+            <li>
+              <a href="#Intersession">Intersession</a>
+            </li>
+            <li>
+              <a href="#LongSession">Long Session</a>
+            </li>
+            <li>
+              <a href="#MiniTerm">Mini Term</a>
+            </li>
+            <li>
+              <a href="#Other">Other</a>
+            </li>
+            <li>
+              <a href="#Quarter">Quarter</a>
+            </li>
+            <li>
+              <a href="#Quinmester">Quinmester</a>
+            </li>
+            <li>
+              <a href="#Semester">Semester</a>
+            </li>
+            <li>
+              <a href="#SummerSession">Summer Session</a>
+            </li>
+            <li>
+              <a href="#Trimester">Trimester</a>
+            </li>
+            <li>
+              <a href="#TwelveMonth">Twelve Month</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#pescSessionTypes">pescSessionTypes</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second"></ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

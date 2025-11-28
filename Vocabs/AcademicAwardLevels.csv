@@ -1,0 +1,111 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescAcademicAwardLevels:B17","B17","Did not complete secondary school","B17","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B18","B18","Standard High School Diploma which may or may not include an exit test","B18","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B19","B19","Advanced or honors diploma","B19","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B20","B20","Vocational diploma","B20","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B21","B21","Special Education Diploma normally for students with a disabilit","B21","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B22","B22","Certificate of completion or attendance","B22","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B23","B23","Special certificate of completion or attendance","B23","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B24","B24","General Education Development Test Diploma (GED)","B24","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B25","B25","Other high school equivalency diploma","B25","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B26","B26","International diploma or certificate (such as International Baccalaureate)","B26","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B27","B27","Standard High School Diploma with only 3 year curriculum","B27","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B28","B28","Met all graduation requirements except for required exit test","B28","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B58","B58","B58","B58","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B59","B59","B59","B59","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:B60","B60","B60","B60","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:0.0","0.0","""Other"" - value to represent an award that does not otherwise fit existing enumerations","0.0","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:1.1","1.1","Certificate of completion,","1.1","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:1.2","1.2","Certificate of proficiency","1.2","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:1.3","1.3","Statement of participation","1.3","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:1.4","1.4","Statement of completion","1.4","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:1.5","1.5","Statement of achievement","1.5","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.0","2.0","Certificate","2.0","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.1","2.1","Postsecondary Certificate Or Diploma (less than one year)","2.1","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.2","2.2","Postsecondary Certificate Or Diploma (one year or more but less than four years)","2.2","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.3","2.3","Associate Degree (e.g., Associate In Arts, Associate In Science)","2.3","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.4","2.4","Baccalaureate Degree","2.4","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.5","2.5","Baccalaureate (Honors) Degree","2.5","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.6","2.6","Postsecondary Certificate Or Diploma (one year or more but less than two years)","2.6","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.7","2.7","Postsecondary Certificate Or Diploma (two years or more but less than four years)","2.7","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2.8","2.8","""Undergraduate non-degree"" - value to represent an award from undergraduate coursework that is not a certificate or degree","2.8","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:3.1","3.1","First Professional Degree","3.1","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:3.2","3.2","Post-Professional Degree","3.2","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:3.3","3.3","""Graduate Professional"" - value to represent an award from graduate coursework in a professional program","3.3","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:4.0","4.0","""Graduate non-degree"" - value to represent an award from graduate coursework that is not a certificate or degree","4.0","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:4.1","4.1","Graduate Certificate","4.1","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:4.2","4.2","Master's Degree","4.2","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:4.3","4.3","Intermediate Graduate Degree","4.3","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:4.4","4.4","Doctoral Degree","4.4","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:4.5","4.5","Post-doctoral Award","4.5","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:FrenchBaccalaureate","French Baccalaureate","French Baccalaureate","FrenchBaccalaureate","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:CEGEP","Cegep","CEGEP","CEGEP","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:1","1","Postsecondary award, certificate or diploma of less than one academic year (less than 900 contact or clock hours)","1","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:2","2","Certificate","2","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:3","3","Associate's Degree","3","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:4","4","Postsecondary award, certificate, or diploma of at least two but less than four academic years (at least 1800 contact or clock hours)","4","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:5","5","Bachelor's Degree or equivalent","5","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:6","6","Postbaccalaureate Certificate","6","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:7","7","Master's Degree","7","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:8","8","Post Masters Certificate","8","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:9","9","Doctor's Degree","9","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:10","10","First-Professional Degree","10","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:11","11","First-Professional Certificate (Post-Degree)","11","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:17","17","Doctor's degree - research/scholarship","17","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:18","18","Doctor's degree - professional practice","18","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept","pescAcademicAwardLevels:19","19","Doctor's degree - otherAward Levels.","19","pescAcademicAwardLevels:","inScheme, topConceptOf"
+"Concept Scheme","pescAcademicAwardLevels:","Academic Award Levels","The level of the degree, certificate, or award granted for the successful completion of requirements of an academic program.B17 Did not complete secondary schoolB18 Standard High School Diploma which may or may not include an exit testB19 Advanced or honors diplomaB20 Vocational diplomaB21 Special Education Diploma normally for students with a disabilityB22 Certificate of completion or attendanceB23 Special certificate of completion or attendanceB24 General Education Development (GED) DiplomaB25 Other high school equivalency diplomaB26 International diploma or certificate such as International Baccalaureate B27 Standard High School Diploma with only 3 year curriculumB28 Met all graduation requirements except for required exit testFrenchBaccalaureate is an award made to high school students who complete a rigorous program of student including foreign languages.  It allows French and international students to obtain a standardized qualification, typically at the age of 18. This then qualifies holders to work in certain areas, or go on to tertiary education or acquire some other professional qualification or training.CEGEP is an award made by Canadian secondary schools that is typically equivalent to a high school diploma plus one year of college level courses","","pescAcademicAwardLevels:B17,
+pescAcademicAwardLevels:B18,
+pescAcademicAwardLevels:B19,
+pescAcademicAwardLevels:B20,
+pescAcademicAwardLevels:B21,
+pescAcademicAwardLevels:B22,
+pescAcademicAwardLevels:B23,
+pescAcademicAwardLevels:B24,
+pescAcademicAwardLevels:B25,
+pescAcademicAwardLevels:B26,
+pescAcademicAwardLevels:B27,
+pescAcademicAwardLevels:B28,
+pescAcademicAwardLevels:B58,
+pescAcademicAwardLevels:B59,
+pescAcademicAwardLevels:B60,
+pescAcademicAwardLevels:0.0,
+pescAcademicAwardLevels:1.1,
+pescAcademicAwardLevels:1.2,
+pescAcademicAwardLevels:1.3,
+pescAcademicAwardLevels:1.4,
+pescAcademicAwardLevels:1.5,
+pescAcademicAwardLevels:2.0,
+pescAcademicAwardLevels:2.1,
+pescAcademicAwardLevels:2.2,
+pescAcademicAwardLevels:2.3,
+pescAcademicAwardLevels:2.4,
+pescAcademicAwardLevels:2.5,
+pescAcademicAwardLevels:2.6,
+pescAcademicAwardLevels:2.7,
+pescAcademicAwardLevels:2.8,
+pescAcademicAwardLevels:3.1,
+pescAcademicAwardLevels:3.2,
+pescAcademicAwardLevels:3.3,
+pescAcademicAwardLevels:4.0,
+pescAcademicAwardLevels:4.1,
+pescAcademicAwardLevels:4.2,
+pescAcademicAwardLevels:4.3,
+pescAcademicAwardLevels:4.4,
+pescAcademicAwardLevels:4.5,
+pescAcademicAwardLevels:FrenchBaccalaureate,
+pescAcademicAwardLevels:CEGEP,
+pescAcademicAwardLevels:1,
+pescAcademicAwardLevels:2,
+pescAcademicAwardLevels:3,
+pescAcademicAwardLevels:4,
+pescAcademicAwardLevels:5,
+pescAcademicAwardLevels:6,
+pescAcademicAwardLevels:7,
+pescAcademicAwardLevels:8,
+pescAcademicAwardLevels:9,
+pescAcademicAwardLevels:10,
+pescAcademicAwardLevels:11,
+pescAcademicAwardLevels:17,
+pescAcademicAwardLevels:18,
+pescAcademicAwardLevels:19","hasTopConcept"

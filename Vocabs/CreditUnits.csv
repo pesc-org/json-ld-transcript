@@ -1,0 +1,29 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescCreditUnits:NoCredit","No Credit","No Credit No Credit","NoCredit","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Quarter","Quarter","Quarter Quarter","Quarter","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Semester","Semester","Semester Semester","Semester","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Units","Units","Units Units","Units","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:ClockHours","Clock Hours","Clock Hours","ClockHours","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:CarnegieUnits","Carnegie Units","Carnegie Units","CarnegieUnits","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:ContinuingEducationUnits","Continuing Education Units","Continuing Education Units","ContinuingEducationUnits","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Unreported","Unreported","Unreported","Unreported","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Other","Other","Other Other","Other","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:NoCredit ","No Credit ","No Credit","NoCredit ","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Quarter ","Quarter ","Quarter","Quarter ","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Semester  ","Semester  ","Semester","Semester  ","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Units ","Units ","Units","Units ","pescCreditUnits:","inScheme, topConceptOf"
+"Concept","pescCreditUnits:Other ","Other ","Other","Other ","pescCreditUnits:","inScheme, topConceptOf"
+"Concept Scheme","pescCreditUnits:","Credit Units","The type of credits used at the high school","","pescCreditUnits:NoCredit,
+pescCreditUnits:Quarter,
+pescCreditUnits:Semester,
+pescCreditUnits:Units,
+pescCreditUnits:ClockHours,
+pescCreditUnits:CarnegieUnits,
+pescCreditUnits:ContinuingEducationUnits,
+pescCreditUnits:Unreported,
+pescCreditUnits:Other,
+pescCreditUnits:NoCredit ,
+pescCreditUnits:Quarter ,
+pescCreditUnits:Semester  ,
+pescCreditUnits:Units ,
+pescCreditUnits:Other ","hasTopConcept"

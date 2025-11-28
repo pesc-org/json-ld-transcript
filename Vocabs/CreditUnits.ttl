@@ -1,0 +1,86 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescCreditUnits:CarnegieUnits a skos:Concept ;
+    skos:definition "Carnegie Units" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "CarnegieUnits" ;
+    skos:prefLabel "Carnegie Units" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits:ClockHours a skos:Concept ;
+    skos:definition "Clock Hours" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "ClockHours" ;
+    skos:prefLabel "Clock Hours" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits:ContinuingEducationUnits a skos:Concept ;
+    skos:definition "Continuing Education Units" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "ContinuingEducationUnits" ;
+    skos:prefLabel "Continuing Education Units" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits:NoCredit a skos:Concept ;
+    skos:definition "No Credit",
+        "No Credit No Credit" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "NoCredit" ;
+    skos:prefLabel "No Credit" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits:Other a skos:Concept ;
+    skos:definition "Other",
+        "Other Other" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "Other" ;
+    skos:prefLabel "Other" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits:Quarter a skos:Concept ;
+    skos:definition "Quarter",
+        "Quarter Quarter" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "Quarter" ;
+    skos:prefLabel "Quarter" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits:Semester a skos:Concept ;
+    skos:definition "Semester",
+        "Semester Semester" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "Semester" ;
+    skos:prefLabel "Semester" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits:Units a skos:Concept ;
+    skos:definition "Units",
+        "Units Units" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "Units" ;
+    skos:prefLabel "Units" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits:Unreported a skos:Concept ;
+    skos:definition "Unreported" ;
+    skos:inScheme pescCreditUnits: ;
+    skos:notation "Unreported" ;
+    skos:prefLabel "Unreported" ;
+    skos:topConceptOf pescCreditUnits: .
+
+pescCreditUnits: a skos:ConceptScheme ;
+    dcterms:description "The type of credits used at the high school" ;
+    dcterms:title "Credit Units" ;
+    skos:hasTopConcept pescCreditUnits:CarnegieUnits,
+        pescCreditUnits:ClockHours,
+        pescCreditUnits:ContinuingEducationUnits,
+        pescCreditUnits:NoCredit,
+        pescCreditUnits:Other,
+        pescCreditUnits:Quarter,
+        pescCreditUnits:Semester,
+        pescCreditUnits:Units,
+        pescCreditUnits:Unreported .
+

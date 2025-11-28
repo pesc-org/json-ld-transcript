@@ -1,0 +1,105 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescTestScoreMethods:Adjective a skos:Concept ;
+    skos:definition "Adjective Classification or Locally Defined Score Stanine Percentile" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Adjective" ;
+    skos:prefLabel "Adjective" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Equated a skos:Concept ;
+    skos:definition "Equated Score (pre-test and post-test were different)" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Equated" ;
+    skos:prefLabel "Equated" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Graded a skos:Concept ;
+    skos:definition "Grade Equivalent or Grade Level Indicator" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Graded" ;
+    skos:prefLabel "Graded" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Local a skos:Concept ;
+    skos:definition "Locally Defined." ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Local" ;
+    skos:prefLabel "Local" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Mastery a skos:Concept ;
+    skos:definition "Mastery Score" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Mastery" ;
+    skos:prefLabel "Mastery" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:NormalCurve a skos:Concept ;
+    skos:definition "Normal Curve Equivalent" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "NormalCurve" ;
+    skos:prefLabel "Normal Curve" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Percent a skos:Concept ;
+    skos:definition "Percent of Items Correct" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Percent" ;
+    skos:prefLabel "Percent" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Percentile a skos:Concept ;
+    skos:definition "Percentile" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Percentile" ;
+    skos:prefLabel "Percentile" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Raw a skos:Concept ;
+    skos:definition "Raw Score" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Raw" ;
+    skos:prefLabel "Raw" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Scaled a skos:Concept ;
+    skos:definition "Scaled Score" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Scaled" ;
+    skos:prefLabel "Scaled" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Standard a skos:Concept ;
+    skos:definition "Standard Score" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Standard" ;
+    skos:prefLabel "Standard" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods:Stanine a skos:Concept ;
+    skos:definition "Stanine" ;
+    skos:inScheme pescTestScoreMethods: ;
+    skos:notation "Stanine" ;
+    skos:prefLabel "Stanine" ;
+    skos:topConceptOf pescTestScoreMethods: .
+
+pescTestScoreMethods: a skos:ConceptScheme ;
+    dcterms:description "Code identifying the method used to measure and report the test scores" ;
+    dcterms:title "Test Score Methods" ;
+    skos:hasTopConcept pescTestScoreMethods:Adjective,
+        pescTestScoreMethods:Equated,
+        pescTestScoreMethods:Graded,
+        pescTestScoreMethods:Local,
+        pescTestScoreMethods:Mastery,
+        pescTestScoreMethods:NormalCurve,
+        pescTestScoreMethods:Percent,
+        pescTestScoreMethods:Percentile,
+        pescTestScoreMethods:Raw,
+        pescTestScoreMethods:Scaled,
+        pescTestScoreMethods:Standard,
+        pescTestScoreMethods:Stanine .
+

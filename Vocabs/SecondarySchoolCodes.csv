@@ -1,0 +1,15 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescSecondarySchoolCodes:CareerPrep","Career Prep","Career Prep","CareerPrep","pescSecondarySchoolCodes:","inScheme, topConceptOf"
+"Concept","pescSecondarySchoolCodes:CollegePrep","College Prep","College Prep","CollegePrep","pescSecondarySchoolCodes:","inScheme, topConceptOf"
+"Concept","pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep","College Prep Or College Tech Prep","College Prep Or College Tech Prep","CollegePrepOrCollegeTechPrep","pescSecondarySchoolCodes:","inScheme, topConceptOf"
+"Concept","pescSecondarySchoolCodes:CollegeTechPrep","College Tech Prep","College Tech Prep","CollegeTechPrep","pescSecondarySchoolCodes:","inScheme, topConceptOf"
+"Concept","pescSecondarySchoolCodes:General","General","General","General","pescSecondarySchoolCodes:","inScheme, topConceptOf"
+"Concept","pescSecondarySchoolCodes:Occupational","Occupational","Occupational","Occupational","pescSecondarySchoolCodes:","inScheme, topConceptOf"
+"Concept","pescSecondarySchoolCodes:Vocational","Vocational","Vocational","Vocational","pescSecondarySchoolCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescSecondarySchoolCodes:","Secondary School Codes","Code indicating the type of secondary school program or award that a student is pursuing","","pescSecondarySchoolCodes:CareerPrep,
+pescSecondarySchoolCodes:CollegePrep,
+pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep,
+pescSecondarySchoolCodes:CollegeTechPrep,
+pescSecondarySchoolCodes:General,
+pescSecondarySchoolCodes:Occupational,
+pescSecondarySchoolCodes:Vocational","hasTopConcept"

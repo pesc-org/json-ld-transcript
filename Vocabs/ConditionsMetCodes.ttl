@@ -1,0 +1,41 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescConditionsMetCodes:Conditional a skos:Concept ;
+    skos:definition "Conditional" ;
+    skos:inScheme pescConditionsMetCodes: ;
+    skos:notation "Conditional" ;
+    skos:prefLabel "Conditional" ;
+    skos:topConceptOf pescConditionsMetCodes: .
+
+pescConditionsMetCodes:MutuallyDefined a skos:Concept ;
+    skos:definition "Mutually Defined" ;
+    skos:inScheme pescConditionsMetCodes: ;
+    skos:notation "MutuallyDefined" ;
+    skos:prefLabel "Mutually Defined" ;
+    skos:topConceptOf pescConditionsMetCodes: .
+
+pescConditionsMetCodes:No a skos:Concept ;
+    skos:definition "No" ;
+    skos:inScheme pescConditionsMetCodes: ;
+    skos:notation "No" ;
+    skos:prefLabel "No" ;
+    skos:topConceptOf pescConditionsMetCodes: .
+
+pescConditionsMetCodes:Yes a skos:Concept ;
+    skos:definition "Yes" ;
+    skos:inScheme pescConditionsMetCodes: ;
+    skos:notation "Yes" ;
+    skos:prefLabel "Yes" ;
+    skos:topConceptOf pescConditionsMetCodes: .
+
+pescConditionsMetCodes: a skos:ConceptScheme ;
+    dcterms:description "Indicates whether and how conditions for the requirement have been attained." ;
+    dcterms:title "Conditions Met Codes" ;
+    skos:hasTopConcept pescConditionsMetCodes:Conditional,
+        pescConditionsMetCodes:MutuallyDefined,
+        pescConditionsMetCodes:No,
+        pescConditionsMetCodes:Yes .
+

@@ -1,0 +1,169 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescCreditLevels:Dual a skos:Concept ;
+    skos:definition "Dual level (upper division and graduate, may be applicable to a bachelor's degree or graduate degree or both) GraduateProfessional=Dual level (graduate and professional- may be applicable to both) added enums below and reodered in alpha order SeventhGrade EighthGrade NinthGrade enthGrade EleventhGrade TwelfthGrade DualHighSchoolCollege DualGraduateUndergraduat Secondary" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "Dual" ;
+    skos:prefLabel "Dual" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:DualGraduateUndergraduate a skos:Concept ;
+    skos:definition "Dual Graduate Undergraduate" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "DualGraduateUndergraduate" ;
+    skos:prefLabel "Dual Graduate Undergraduate" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:DualHighSchoolCollege a skos:Concept ;
+    skos:definition "Dual High School College" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "DualHighSchoolCollege" ;
+    skos:prefLabel "Dual High School College" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:EighthGrade a skos:Concept ;
+    skos:definition "Eighth Grade" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "EighthGrade" ;
+    skos:prefLabel "Eighth Grade" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:EleventhGrade a skos:Concept ;
+    skos:definition "Eleventh Grade" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "EleventhGrade" ;
+    skos:prefLabel "Eleventh Grade" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:Grade13 a skos:Concept ;
+    skos:definition "Grade13" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "Grade13" ;
+    skos:prefLabel "Grade13" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:Graduate a skos:Concept ;
+    skos:definition "Graduate level credit" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "Graduate" ;
+    skos:prefLabel "Graduate" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:GraduateProfessional a skos:Concept ;
+    skos:definition "Graduate Professional" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "GraduateProfessional" ;
+    skos:prefLabel "Graduate Professional" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:LowerDivision a skos:Concept ;
+    skos:definition "Lower Division" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "LowerDivision" ;
+    skos:prefLabel "Lower Division" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:NinthGrade a skos:Concept ;
+    skos:definition "Ninth Grade" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "NinthGrade" ;
+    skos:prefLabel "Ninth Grade" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:Professional a skos:Concept ;
+    skos:definition "Professional" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "Professional" ;
+    skos:prefLabel "Professional" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:Secondary a skos:Concept ;
+    skos:definition "Secondary" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "Secondary" ;
+    skos:prefLabel "Secondary" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:SeventhGrade a skos:Concept ;
+    skos:definition "Seventh Grade" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "SeventhGrade" ;
+    skos:prefLabel "Seventh Grade" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:TechnicalPreparatory a skos:Concept ;
+    skos:definition "Tech Prep credit" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "TechnicalPreparatory" ;
+    skos:prefLabel "Technical Preparatory" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:TenthGrade a skos:Concept ;
+    skos:definition "Tenth Grade" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "TenthGrade" ;
+    skos:prefLabel "Tenth Grade" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:TwelfthGrade a skos:Concept ;
+    skos:definition "Twelfth Grade" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "TwelfthGrade" ;
+    skos:prefLabel "Twelfth Grade" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:Undergraduate a skos:Concept ;
+    skos:definition "Undergraduate LowerDivision=Lower division credit (associated with first/second year)" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "Undergraduate" ;
+    skos:prefLabel "Undergraduate" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:Ungraded a skos:Concept ;
+    skos:definition "Ungraded" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "Ungraded" ;
+    skos:prefLabel "Ungraded" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:UpperDivision a skos:Concept ;
+    skos:definition "Higher or upper division credit (associated with third or fourth year)" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "UpperDivision" ;
+    skos:prefLabel "Upper Division" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels:Vocational a skos:Concept ;
+    skos:definition "Vocational/technical credit" ;
+    skos:inScheme pescCreditLevels: ;
+    skos:notation "Vocational" ;
+    skos:prefLabel "Vocational" ;
+    skos:topConceptOf pescCreditLevels: .
+
+pescCreditLevels: a skos:ConceptScheme ;
+    dcterms:description "The level of credit associated with the credit hours earned for the course." ;
+    dcterms:title "Credit Levels" ;
+    skos:hasTopConcept pescCreditLevels:Dual,
+        pescCreditLevels:DualGraduateUndergraduate,
+        pescCreditLevels:DualHighSchoolCollege,
+        pescCreditLevels:EighthGrade,
+        pescCreditLevels:EleventhGrade,
+        pescCreditLevels:Grade13,
+        pescCreditLevels:Graduate,
+        pescCreditLevels:GraduateProfessional,
+        pescCreditLevels:LowerDivision,
+        pescCreditLevels:NinthGrade,
+        pescCreditLevels:Professional,
+        pescCreditLevels:Secondary,
+        pescCreditLevels:SeventhGrade,
+        pescCreditLevels:TechnicalPreparatory,
+        pescCreditLevels:TenthGrade,
+        pescCreditLevels:TwelfthGrade,
+        pescCreditLevels:Undergraduate,
+        pescCreditLevels:Ungraded,
+        pescCreditLevels:UpperDivision,
+        pescCreditLevels:Vocational .
+

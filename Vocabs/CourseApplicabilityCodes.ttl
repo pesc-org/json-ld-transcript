@@ -1,0 +1,41 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescCourseApplicabilityCodes:BothPrograms a skos:Concept ;
+    skos:definition "Both Programs" ;
+    skos:inScheme pescCourseApplicabilityCodes: ;
+    skos:notation "BothPrograms" ;
+    skos:prefLabel "Both Programs" ;
+    skos:topConceptOf pescCourseApplicabilityCodes: .
+
+pescCourseApplicabilityCodes:FirstProgram a skos:Concept ;
+    skos:definition "First Program" ;
+    skos:inScheme pescCourseApplicabilityCodes: ;
+    skos:notation "FirstProgram" ;
+    skos:prefLabel "First Program" ;
+    skos:topConceptOf pescCourseApplicabilityCodes: .
+
+pescCourseApplicabilityCodes:NotApplicable a skos:Concept ;
+    skos:definition "Not Applicable" ;
+    skos:inScheme pescCourseApplicabilityCodes: ;
+    skos:notation "NotApplicable" ;
+    skos:prefLabel "Not Applicable" ;
+    skos:topConceptOf pescCourseApplicabilityCodes: .
+
+pescCourseApplicabilityCodes:SecondProgram a skos:Concept ;
+    skos:definition "Second Program" ;
+    skos:inScheme pescCourseApplicabilityCodes: ;
+    skos:notation "SecondProgram" ;
+    skos:prefLabel "Second Program" ;
+    skos:topConceptOf pescCourseApplicabilityCodes: .
+
+pescCourseApplicabilityCodes: a skos:ConceptScheme ;
+    dcterms:description "The academic program to which this academic course applies toward graduation." ;
+    dcterms:title "Course Applicability Codes" ;
+    skos:hasTopConcept pescCourseApplicabilityCodes:BothPrograms,
+        pescCourseApplicabilityCodes:FirstProgram,
+        pescCourseApplicabilityCodes:NotApplicable,
+        pescCourseApplicabilityCodes:SecondProgram .
+

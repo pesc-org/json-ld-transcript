@@ -1,0 +1,31 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescSessionTypes:FullYear","Full Year","The prescribed length of instruction upon which credit is awarded based on the total number of days in a school year.","FullYear","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:Semester","Semester","Usually about 15 to 17 weeks in length; there are usually two semesters per academic year and perhaps other shorter sessions.","Semester","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:Trimester","Trimester","Usually about 13 to 15 weeks in length; normally there are three trimesters and perhaps other shorter sessions in an academic year.","Trimester","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:Quarter","Quarter","Usually about 10 to 14 weeks in length; normally there are four quarter sessions and perhaps other shorter sessions in an academic year.","Quarter","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:Quinmester","Quinmester","Usually about 8 to 10 weeks in length; normally there are five quinmester sessions per academic year.","Quinmester","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:MiniTerm","Mini Term","A session whose length is less than the regular session; usually but not always contained wholly within the regular session.","MiniTerm","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:SummerSession","Summer Session","A session or combination of sessions conducted after the last regular session of the school year and prior to the first regular session of the next school year.","SummerSession","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:Intersession","Intersession","For year round schools, the days of optional attendance (equivalent to a summer session) for a student enrolled in a school offering a year-round program which provides three time blocks of 60 days of instruction followed by 15 of intersession.","Intersession","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:LongSession","Long Session","Longer than a semester or quarter or trimester, but shorter than a full year. FallSession","LongSession","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:FallSession","Fall Session","Fall Session","FallSession","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:FourOneFourPlan","Four One Four Plan","A school year consisting of a four-month semester of academic work, followed by a month of special activity, followed by another four-month semester of academic work. Continuous DiffersByProgram Other TwelveMonth.","FourOneFourPlan","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:Continuous","Continuous","Continuous","Continuous","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:DiffersByProgram","Differs By Program","Differs By Program","DiffersByProgram","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:Other","Other","Other","Other","pescSessionTypes:","inScheme, topConceptOf"
+"Concept","pescSessionTypes:TwelveMonth","Twelve Month","Twelve Month","TwelveMonth","pescSessionTypes:","inScheme, topConceptOf"
+"Concept Scheme","pescSessionTypes:","Session Types","Indicates the type of academic session at an educational institution.","","pescSessionTypes:FullYear,
+pescSessionTypes:Semester,
+pescSessionTypes:Trimester,
+pescSessionTypes:Quarter,
+pescSessionTypes:Quinmester,
+pescSessionTypes:MiniTerm,
+pescSessionTypes:SummerSession,
+pescSessionTypes:Intersession,
+pescSessionTypes:LongSession,
+pescSessionTypes:FallSession,
+pescSessionTypes:FourOneFourPlan,
+pescSessionTypes:Continuous,
+pescSessionTypes:DiffersByProgram,
+pescSessionTypes:Other,
+pescSessionTypes:TwelveMonth","hasTopConcept"

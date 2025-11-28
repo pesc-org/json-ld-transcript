@@ -7,65 +7,65 @@
 ,ProgramSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Recommended,
 ,SessionSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Optional,
 229,AcademicSummaryShape,pesc:academicHonors,Academic Honors,FALSE,FALSE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Recommended,
-,AwardSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
-pescAcademicSummaryLevels:DualGraduate
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:Grade13
-pescAcademicSummaryLevels:Ungraded
-pescAcademicSummaryLevels:DualHighSchoolCollege
-pescAcademicSummaryLevels:Graduate
-pescAcademicSummaryLevels:GraduateProfessional
-pescAcademicSummaryLevels:LowerDivision
-pescAcademicSummaryLevels:Professional
-pescAcademicSummaryLevels:Secondary
-pescAcademicSummaryLevels:TechnicalPreparatory
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:UpperDivision
-pescAcademicSummaryLevels:Vocational",picklist,,,,Recommended,
-,ProgramSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
-pescAcademicSummaryLevels:DualGraduateUndergraduate
-pescAcademicSummaryLevels:Grade13
-pescAcademicSummaryLevels:Ungraded
-pescAcademicSummaryLevels:DualHighSchoolCollege
-pescAcademicSummaryLevels:Graduate
-pescAcademicSummaryLevels:GraduateProfessional
-pescAcademicSummaryLevels:LowerDivision
-pescAcademicSummaryLevels:Professional
-pescAcademicSummaryLevels:Secondary
-pescAcademicSummaryLevels:TechnicalPreparatory
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:UpperDivision
-pescAcademicSummaryLevels:Vocational",picklist,,,,Not Recommended,
-,SessionSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
-pescAcademicSummaryLevels:DualGraduate
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:Grade13
-pescAcademicSummaryLevels:Ungraded
-pescAcademicSummaryLevels:DualHighSchoolCollege
-pescAcademicSummaryLevels:Graduate
-pescAcademicSummaryLevels:GraduateProfessional
-pescAcademicSummaryLevels:LowerDivision
-pescAcademicSummaryLevels:Professional
-pescAcademicSummaryLevels:Secondary
-pescAcademicSummaryLevels:TechnicalPreparatory
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:UpperDivision
-pescAcademicSummaryLevels:Vocational",picklist,,,,Optional,
-257,AcademicSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
-pescAcademicSummaryLevels:DualGraduate
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:Grade13
-pescAcademicSummaryLevels:Ungraded
-pescAcademicSummaryLevels:DualHighSchoolCollege
-pescAcademicSummaryLevels:Graduate
-pescAcademicSummaryLevels:GraduateProfessional
-pescAcademicSummaryLevels:LowerDivision
-pescAcademicSummaryLevels:Professional
-pescAcademicSummaryLevels:Secondary
-pescAcademicSummaryLevels:TechnicalPreparatory
-pescAcademicSummaryLevels:Undergraduate
-pescAcademicSummaryLevels:UpperDivision
-pescAcademicSummaryLevels:Vocational",picklist,,,,Recommended,
+,AwardSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescCreditLevels:Dual
+pescCreditLevels:DualGraduate
+pescCreditLevels:Undergraduate
+pescCreditLevels:Grade13
+pescCreditLevels:Ungraded
+pescCreditLevels:DualHighSchoolCollege
+pescCreditLevels:Graduate
+pescCreditLevels:GraduateProfessional
+pescCreditLevels:LowerDivision
+pescCreditLevels:Professional
+pescCreditLevels:Secondary
+pescCreditLevels:TechnicalPreparatory
+pescCreditLevels:Undergraduate
+pescCreditLevels:UpperDivision
+pescCreditLevels:Vocational",picklist,,,,Recommended,
+,ProgramSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescCreditLevels:Dual
+pescCreditLevels:DualGraduateUndergraduate
+pescCreditLevels:Grade13
+pescCreditLevels:Ungraded
+pescCreditLevels:DualHighSchoolCollege
+pescCreditLevels:Graduate
+pescCreditLevels:GraduateProfessional
+pescCreditLevels:LowerDivision
+pescCreditLevels:Professional
+pescCreditLevels:Secondary
+pescCreditLevels:TechnicalPreparatory
+pescCreditLevels:Undergraduate
+pescCreditLevels:UpperDivision
+pescCreditLevels:Vocational",picklist,,,,Not Recommended,
+,SessionSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescCreditLevels:Dual
+pescCreditLevels:DualGraduate
+pescCreditLevels:Undergraduate
+pescCreditLevels:Grade13
+pescCreditLevels:Ungraded
+pescCreditLevels:DualHighSchoolCollege
+pescCreditLevels:Graduate
+pescCreditLevels:GraduateProfessional
+pescCreditLevels:LowerDivision
+pescCreditLevels:Professional
+pescCreditLevels:Secondary
+pescCreditLevels:TechnicalPreparatory
+pescCreditLevels:Undergraduate
+pescCreditLevels:UpperDivision
+pescCreditLevels:Vocational",picklist,,,,Optional,
+257,AcademicSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescCreditLevels:Dual
+pescCreditLevels:DualGraduate
+pescCreditLevels:Undergraduate
+pescCreditLevels:Grade13
+pescCreditLevels:Ungraded
+pescCreditLevels:DualHighSchoolCollege
+pescCreditLevels:Graduate
+pescCreditLevels:GraduateProfessional
+pescCreditLevels:LowerDivision
+pescCreditLevels:Professional
+pescCreditLevels:Secondary
+pescCreditLevels:TechnicalPreparatory
+pescCreditLevels:Undergraduate
+pescCreditLevels:UpperDivision
+pescCreditLevels:Vocational",picklist,,,,Recommended,
 ,AwardSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
 pescAcademicSummaryTypes:SenderOnly
 pescAcademicSummaryTypes:TransferOnly

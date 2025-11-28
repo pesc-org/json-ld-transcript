@@ -1,0 +1,73 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescResidencyStatusCodes:InCity a skos:Concept ;
+    skos:definition "In City" ;
+    skos:inScheme pescResidencyStatusCodes: ;
+    skos:notation "InCity" ;
+    skos:prefLabel "In City" ;
+    skos:topConceptOf pescResidencyStatusCodes: .
+
+pescResidencyStatusCodes:InCounty a skos:Concept ;
+    skos:definition "In County" ;
+    skos:inScheme pescResidencyStatusCodes: ;
+    skos:notation "InCounty" ;
+    skos:prefLabel "In County" ;
+    skos:topConceptOf pescResidencyStatusCodes: .
+
+pescResidencyStatusCodes:InDistrict a skos:Concept ;
+    skos:definition "In District" ;
+    skos:inScheme pescResidencyStatusCodes: ;
+    skos:notation "InDistrict" ;
+    skos:prefLabel "In District" ;
+    skos:topConceptOf pescResidencyStatusCodes: .
+
+pescResidencyStatusCodes:InState a skos:Concept ;
+    skos:definition "In State" ;
+    skos:inScheme pescResidencyStatusCodes: ;
+    skos:notation "InState" ;
+    skos:prefLabel "In State" ;
+    skos:topConceptOf pescResidencyStatusCodes: .
+
+pescResidencyStatusCodes:NonResident a skos:Concept ;
+    skos:definition "Non Resident" ;
+    skos:inScheme pescResidencyStatusCodes: ;
+    skos:notation "NonResident" ;
+    skos:prefLabel "Non Resident" ;
+    skos:topConceptOf pescResidencyStatusCodes: .
+
+pescResidencyStatusCodes:NotReported a skos:Concept ;
+    skos:definition "Not Reported" ;
+    skos:inScheme pescResidencyStatusCodes: ;
+    skos:notation "NotReported" ;
+    skos:prefLabel "Not Reported" ;
+    skos:topConceptOf pescResidencyStatusCodes: .
+
+pescResidencyStatusCodes:OtherResident a skos:Concept ;
+    skos:definition "Other Resident" ;
+    skos:inScheme pescResidencyStatusCodes: ;
+    skos:notation "OtherResident" ;
+    skos:prefLabel "Other Resident" ;
+    skos:topConceptOf pescResidencyStatusCodes: .
+
+pescResidencyStatusCodes:Resident a skos:Concept ;
+    skos:definition "Resident" ;
+    skos:inScheme pescResidencyStatusCodes: ;
+    skos:notation "Resident" ;
+    skos:prefLabel "Resident" ;
+    skos:topConceptOf pescResidencyStatusCodes: .
+
+pescResidencyStatusCodes: a skos:ConceptScheme ;
+    dcterms:description "Declaration made by the claimant as to his or her permanent residency" ;
+    dcterms:title "Residency Status Codes" ;
+    skos:hasTopConcept pescResidencyStatusCodes:InCity,
+        pescResidencyStatusCodes:InCounty,
+        pescResidencyStatusCodes:InDistrict,
+        pescResidencyStatusCodes:InState,
+        pescResidencyStatusCodes:NonResident,
+        pescResidencyStatusCodes:NotReported,
+        pescResidencyStatusCodes:OtherResident,
+        pescResidencyStatusCodes:Resident .
+

@@ -1,0 +1,73 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescNameCodes:Casual a skos:Concept ;
+    skos:definition "Casual" ;
+    skos:inScheme pescNameCodes: ;
+    skos:notation "Casual" ;
+    skos:prefLabel "Casual" ;
+    skos:topConceptOf pescNameCodes: .
+
+pescNameCodes:Formal a skos:Concept ;
+    skos:definition "Formal" ;
+    skos:inScheme pescNameCodes: ;
+    skos:notation "Formal" ;
+    skos:prefLabel "Formal" ;
+    skos:topConceptOf pescNameCodes: .
+
+pescNameCodes:Former a skos:Concept ;
+    skos:definition "Former" ;
+    skos:inScheme pescNameCodes: ;
+    skos:notation "Former" ;
+    skos:prefLabel "Former" ;
+    skos:topConceptOf pescNameCodes: .
+
+pescNameCodes:LawSchoolApplicationSource a skos:Concept ;
+    skos:definition "Law School Application Source" ;
+    skos:inScheme pescNameCodes: ;
+    skos:notation "LawSchoolApplicationSource" ;
+    skos:prefLabel "Law School Application Source" ;
+    skos:topConceptOf pescNameCodes: .
+
+pescNameCodes:Legal a skos:Concept ;
+    skos:definition "Legal" ;
+    skos:inScheme pescNameCodes: ;
+    skos:notation "Legal" ;
+    skos:prefLabel "Legal" ;
+    skos:topConceptOf pescNameCodes: .
+
+pescNameCodes:MedicalSchoolApplicationSource a skos:Concept ;
+    skos:definition "Medical School Application Source" ;
+    skos:inScheme pescNameCodes: ;
+    skos:notation "MedicalSchoolApplicationSource" ;
+    skos:prefLabel "Medical School Application Source" ;
+    skos:topConceptOf pescNameCodes: .
+
+pescNameCodes:Nickname a skos:Concept ;
+    skos:definition "Nickname" ;
+    skos:inScheme pescNameCodes: ;
+    skos:notation "Nickname" ;
+    skos:prefLabel "Nickname" ;
+    skos:topConceptOf pescNameCodes: .
+
+pescNameCodes:Other a skos:Concept ;
+    skos:definition "Other" ;
+    skos:inScheme pescNameCodes: ;
+    skos:notation "Other" ;
+    skos:prefLabel "Other" ;
+    skos:topConceptOf pescNameCodes: .
+
+pescNameCodes: a skos:ConceptScheme ;
+    dcterms:description "This data element is used to describe the type of name included in this complex data element" ;
+    dcterms:title "Name Codes" ;
+    skos:hasTopConcept pescNameCodes:Casual,
+        pescNameCodes:Formal,
+        pescNameCodes:Former,
+        pescNameCodes:LawSchoolApplicationSource,
+        pescNameCodes:Legal,
+        pescNameCodes:MedicalSchoolApplicationSource,
+        pescNameCodes:Nickname,
+        pescNameCodes:Other .
+

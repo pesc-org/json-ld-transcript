@@ -1,0 +1,145 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescGradeStatusCodes:AuditedCourse a skos:Concept ;
+    skos:definition "Audited or visited the course" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "AuditedCourse" ;
+    skos:prefLabel "Audited Course" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:Completed a skos:Concept ;
+    skos:definition "Completed" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "Completed" ;
+    skos:prefLabel "Completed" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:HonorsGrade a skos:Concept ;
+    skos:definition "Honors grade" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "HonorsGrade" ;
+    skos:prefLabel "Honors Grade" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:InProgress a skos:Concept ;
+    skos:definition "Current enrollment course in progress, permanent grade not yet assigned" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "InProgress" ;
+    skos:prefLabel "In Progress" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:Incomplete a skos:Concept ;
+    skos:definition "Incomplete" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "Incomplete" ;
+    skos:prefLabel "Incomplete" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:IncompleteNotResolvedFail a skos:Concept ;
+    skos:definition "Failing/no pass/unsatisfactory grade awarded because incomplete not resolved satisfactorily" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "IncompleteNotResolvedFail" ;
+    skos:prefLabel "Incomplete Not Resolved Fail" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:NotYetReported a skos:Concept ;
+    skos:definition "No grade reported yet by instructor (although the course has ended)" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "NotYetReported" ;
+    skos:prefLabel "Not Yet Reported" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:OtherFail a skos:Concept ;
+    skos:definition "Other not passing/unsatisfactory grade not described above" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "OtherFail" ;
+    skos:prefLabel "Other Fail" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:OtherPass a skos:Concept ;
+    skos:definition "Other passing/satisfactory grade not described above" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "OtherPass" ;
+    skos:prefLabel "Other Pass" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:PassFailFail a skos:Concept ;
+    skos:definition "Failing grade in a course (credit or non-credit) which is normally, or based on student option, given a pass/fail or satisfactory/unsatisfactory designation" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "PassFailFail" ;
+    skos:prefLabel "Pass Fail Fail" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:PassFailPass a skos:Concept ;
+    skos:definition "Passing grade in a course (credit or non-credit) which is normally, or based on student option, given a pass/fail or satisfactory/unsatisfactory designation" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "PassFailPass" ;
+    skos:prefLabel "Pass Fail Pass" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:PlanningToTake a skos:Concept ;
+    skos:definition "Planning To Take" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "PlanningToTake" ;
+    skos:prefLabel "Planning To Take" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:TransferNoGrade a skos:Concept ;
+    skos:definition "Transfer credit; grade not carried on receiving institution's transcript" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "TransferNoGrade" ;
+    skos:prefLabel "Transfer No Grade" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:Withdrew a skos:Concept ;
+    skos:definition "Withdrew" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "Withdrew" ;
+    skos:prefLabel "Withdrew" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:WithdrewFailing a skos:Concept ;
+    skos:definition "Withdrew failing" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "WithdrewFailing" ;
+    skos:prefLabel "Withdrew Failing" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:WithdrewNoPenalty a skos:Concept ;
+    skos:definition "Withdrew without penalty or pass/fail designation" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "WithdrewNoPenalty" ;
+    skos:prefLabel "Withdrew No Penalty" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes:WithdrewPassing a skos:Concept ;
+    skos:definition "Withdrew passing" ;
+    skos:inScheme pescGradeStatusCodes: ;
+    skos:notation "WithdrewPassing" ;
+    skos:prefLabel "Withdrew Passing" ;
+    skos:topConceptOf pescGradeStatusCodes: .
+
+pescGradeStatusCodes: a skos:ConceptScheme ;
+    dcterms:description "Special enrollment or completion status of this course" ;
+    dcterms:title "Grade Status Codes" ;
+    skos:hasTopConcept pescGradeStatusCodes:AuditedCourse,
+        pescGradeStatusCodes:Completed,
+        pescGradeStatusCodes:HonorsGrade,
+        pescGradeStatusCodes:InProgress,
+        pescGradeStatusCodes:Incomplete,
+        pescGradeStatusCodes:IncompleteNotResolvedFail,
+        pescGradeStatusCodes:NotYetReported,
+        pescGradeStatusCodes:OtherFail,
+        pescGradeStatusCodes:OtherPass,
+        pescGradeStatusCodes:PassFailFail,
+        pescGradeStatusCodes:PassFailPass,
+        pescGradeStatusCodes:PlanningToTake,
+        pescGradeStatusCodes:TransferNoGrade,
+        pescGradeStatusCodes:Withdrew,
+        pescGradeStatusCodes:WithdrewFailing,
+        pescGradeStatusCodes:WithdrewNoPenalty,
+        pescGradeStatusCodes:WithdrewPassing .
+

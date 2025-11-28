@@ -1,0 +1,23 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescDelinquencyCodes:ExclusionAcademic","Exclusion Academic","Exclusion Academic","ExclusionAcademic","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:ExclusionDiscipline","Exclusion Discipline","Exclusion Discipline","ExclusionDiscipline","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:GoodStanding","Good Standing","Student was in good standing ProbationGPA=Student was on academic probation (because of low GPA)","GoodStanding","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:ProbationGPA","Probation Gpa","Probation GPA","ProbationGPA","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:ProbationHours","Probation Hours","Student was on academic probation (deficiency in credit hours)","ProbationHours","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:SuspensionGPA","Suspension Gpa","Student was on academic suspension (because of low GPA)","SuspensionGPA","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:SuspensionHours","Suspension Hours","Student was on academic suspension (deficiency in credit hours)","SuspensionHours","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:ProbationDiscipline","Probation Discipline","Student was on disciplinary probation","ProbationDiscipline","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:SuspensionDiscipline","Suspension Discipline","Student was on disciplinary suspension Unknown Other.","SuspensionDiscipline","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:Unknown","Unknown","Unknown","Unknown","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept","pescDelinquencyCodes:Other","Other","Other","Other","pescDelinquencyCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescDelinquencyCodes:","Delinquency Codes","The academic standing of the student upon transfer to the institution","","pescDelinquencyCodes:ExclusionAcademic,
+pescDelinquencyCodes:ExclusionDiscipline,
+pescDelinquencyCodes:GoodStanding,
+pescDelinquencyCodes:ProbationGPA,
+pescDelinquencyCodes:ProbationHours,
+pescDelinquencyCodes:SuspensionGPA,
+pescDelinquencyCodes:SuspensionHours,
+pescDelinquencyCodes:ProbationDiscipline,
+pescDelinquencyCodes:SuspensionDiscipline,
+pescDelinquencyCodes:Unknown,
+pescDelinquencyCodes:Other","hasTopConcept"

@@ -1,0 +1,35 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescGradeStatusCodes:AuditedCourse","Audited Course","Audited or visited the course","AuditedCourse","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:Completed","Completed","Completed","Completed","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:HonorsGrade","Honors Grade","Honors grade","HonorsGrade","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:Incomplete","Incomplete","Incomplete","Incomplete","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:IncompleteNotResolvedFail","Incomplete Not Resolved Fail","Failing/no pass/unsatisfactory grade awarded because incomplete not resolved satisfactorily","IncompleteNotResolvedFail","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:InProgress","In Progress","Current enrollment course in progress, permanent grade not yet assigned","InProgress","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:NotYetReported","Not Yet Reported","No grade reported yet by instructor (although the course has ended)","NotYetReported","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:OtherFail","Other Fail","Other not passing/unsatisfactory grade not described above","OtherFail","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:OtherPass","Other Pass","Other passing/satisfactory grade not described above","OtherPass","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:PassFailFail","Pass Fail Fail","Failing grade in a course (credit or non-credit) which is normally, or based on student option, given a pass/fail or satisfactory/unsatisfactory designation","PassFailFail","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:PassFailPass","Pass Fail Pass","Passing grade in a course (credit or non-credit) which is normally, or based on student option, given a pass/fail or satisfactory/unsatisfactory designation","PassFailPass","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:PlanningToTake","Planning To Take","Planning To Take","PlanningToTake","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:TransferNoGrade","Transfer No Grade","Transfer credit; grade not carried on receiving institution's transcript","TransferNoGrade","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:Withdrew","Withdrew","Withdrew","Withdrew","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:WithdrewFailing","Withdrew Failing","Withdrew failing","WithdrewFailing","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:WithdrewNoPenalty","Withdrew No Penalty","Withdrew without penalty or pass/fail designation","WithdrewNoPenalty","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept","pescGradeStatusCodes:WithdrewPassing","Withdrew Passing","Withdrew passing","WithdrewPassing","pescGradeStatusCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescGradeStatusCodes:","Grade Status Codes","Special enrollment or completion status of this course","","pescGradeStatusCodes:AuditedCourse,
+pescGradeStatusCodes:Completed,
+pescGradeStatusCodes:HonorsGrade,
+pescGradeStatusCodes:Incomplete,
+pescGradeStatusCodes:IncompleteNotResolvedFail,
+pescGradeStatusCodes:InProgress,
+pescGradeStatusCodes:NotYetReported,
+pescGradeStatusCodes:OtherFail,
+pescGradeStatusCodes:OtherPass,
+pescGradeStatusCodes:PassFailFail,
+pescGradeStatusCodes:PassFailPass,
+pescGradeStatusCodes:PlanningToTake,
+pescGradeStatusCodes:TransferNoGrade,
+pescGradeStatusCodes:Withdrew,
+pescGradeStatusCodes:WithdrewFailing,
+pescGradeStatusCodes:WithdrewNoPenalty,
+pescGradeStatusCodes:WithdrewPassing","hasTopConcept"

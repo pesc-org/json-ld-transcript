@@ -1,0 +1,89 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescLanguageUsageCodes:Always a skos:Concept ;
+    skos:definition "Always" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "Always" ;
+    skos:prefLabel "Always" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:FirstSpokenLanguage a skos:Concept ;
+    skos:definition "First Spoken Language" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "FirstSpokenLanguage" ;
+    skos:prefLabel "First Spoken Language" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:Native a skos:Concept ;
+    skos:definition "Native" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "Native" ;
+    skos:prefLabel "Native" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:Reading a skos:Concept ;
+    skos:definition "Reading" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "Reading" ;
+    skos:prefLabel "Reading" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:SomeSections a skos:Concept ;
+    skos:definition "Some Sections" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "SomeSections" ;
+    skos:prefLabel "Some Sections" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:Sometimes a skos:Concept ;
+    skos:definition "Sometimes" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "Sometimes" ;
+    skos:prefLabel "Sometimes" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:Speaking a skos:Concept ;
+    skos:definition "Speaking" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "Speaking" ;
+    skos:prefLabel "Speaking" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:SpokenAtHome a skos:Concept ;
+    skos:definition "Spoken At Home" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "SpokenAtHome" ;
+    skos:prefLabel "Spoken At Home" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:Writing a skos:Concept ;
+    skos:definition "Writing" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "Writing" ;
+    skos:prefLabel "Writing" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes:WrittenCommunication a skos:Concept ;
+    skos:definition "Written Communication" ;
+    skos:inScheme pescLanguageUsageCodes: ;
+    skos:notation "WrittenCommunication" ;
+    skos:prefLabel "Written Communication" ;
+    skos:topConceptOf pescLanguageUsageCodes: .
+
+pescLanguageUsageCodes: a skos:ConceptScheme ;
+    dcterms:description "Indication of person's use of the language" ;
+    dcterms:title "Language Usage Codes" ;
+    skos:hasTopConcept pescLanguageUsageCodes:Always,
+        pescLanguageUsageCodes:FirstSpokenLanguage,
+        pescLanguageUsageCodes:Native,
+        pescLanguageUsageCodes:Reading,
+        pescLanguageUsageCodes:SomeSections,
+        pescLanguageUsageCodes:Sometimes,
+        pescLanguageUsageCodes:Speaking,
+        pescLanguageUsageCodes:SpokenAtHome,
+        pescLanguageUsageCodes:Writing,
+        pescLanguageUsageCodes:WrittenCommunication .
+

@@ -1,0 +1,23 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescLanguageProficiencyCodes:EnglishOnly","English Only","English Only","EnglishOnly","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:Excellent","Excellent","Excellent","Excellent","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:Fair","Fair","Fair","Fair","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:FullyEnglishProficient","Fully English Proficient","Fully English Proficient","FullyEnglishProficient","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:Good","Good","Good","Good","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:LimitedEnglishProficiency","Limited English Proficiency","Limited English Proficiency","LimitedEnglishProficiency","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:NonEnglishSpeaking","Non English Speaking","Non English Speaking","NonEnglishSpeaking","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:Poor","Poor","Poor","Poor","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient","Redesignated Fluent English Proficient","Redesignated Fluent English Proficient","RedesignatedFluentEnglishProficient","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:Unacceptable","Unacceptable","Unacceptable","Unacceptable","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept","pescLanguageProficiencyCodes:Unknown","Unknown","Unknown","Unknown","pescLanguageProficiencyCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescLanguageProficiencyCodes:","Language Proficiency Codes","Adeptness in comprehending and using the language","","pescLanguageProficiencyCodes:EnglishOnly,
+pescLanguageProficiencyCodes:Excellent,
+pescLanguageProficiencyCodes:Fair,
+pescLanguageProficiencyCodes:FullyEnglishProficient,
+pescLanguageProficiencyCodes:Good,
+pescLanguageProficiencyCodes:LimitedEnglishProficiency,
+pescLanguageProficiencyCodes:NonEnglishSpeaking,
+pescLanguageProficiencyCodes:Poor,
+pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient,
+pescLanguageProficiencyCodes:Unacceptable,
+pescLanguageProficiencyCodes:Unknown","hasTopConcept"

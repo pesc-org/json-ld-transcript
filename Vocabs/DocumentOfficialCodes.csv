@@ -1,0 +1,5 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescDocumentOfficialCodes:Official","Official","Official","Official","pescDocumentOfficialCodes:","inScheme, topConceptOf"
+"Concept","pescDocumentOfficialCodes:Unofficial","Unofficial","Unofficial","Unofficial","pescDocumentOfficialCodes:","inScheme, topConceptOf"
+"Concept Scheme","pescDocumentOfficialCodes:","Document Official Codes","This element indicates if the document is unofficial. Unofficial documents may be produced for reference purpose but may not be binding.","","pescDocumentOfficialCodes:Official,
+pescDocumentOfficialCodes:Unofficial","hasTopConcept"

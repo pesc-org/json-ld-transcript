@@ -1,0 +1,217 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescDocumentTypeCodes:Acknowledgment a skos:Concept ;
+    skos:definition "Acknowledgment" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Acknowledgment" ;
+    skos:prefLabel "Acknowledgment" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Application a skos:Concept ;
+    skos:definition "Application" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Application" ;
+    skos:prefLabel "Application" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Cancel a skos:Concept ;
+    skos:definition "Cancel" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Cancel" ;
+    skos:prefLabel "Cancel" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Certificate a skos:Concept ;
+    skos:definition "Certificate" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Certificate" ;
+    skos:prefLabel "Certificate" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:CertificationRequest a skos:Concept ;
+    skos:definition "Certification Request" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "CertificationRequest" ;
+    skos:prefLabel "Certification Request" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Change a skos:Concept ;
+    skos:definition "Change" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Change" ;
+    skos:prefLabel "Change" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Credential a skos:Concept ;
+    skos:definition "Credential" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Credential" ;
+    skos:prefLabel "Credential" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Diploma a skos:Concept ;
+    skos:definition "Diploma" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Diploma" ;
+    skos:prefLabel "Diploma" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:DisbursementAcknowledgement a skos:Concept ;
+    skos:definition "Disbursement Acknowledgement" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "DisbursementAcknowledgement" ;
+    skos:prefLabel "Disbursement Acknowledgement" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:DisbursementForecast a skos:Concept ;
+    skos:definition "Disbursement Forecast" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "DisbursementForecast" ;
+    skos:prefLabel "Disbursement Forecast" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:DisbursementRoster a skos:Concept ;
+    skos:definition "Disbursement Roster" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "DisbursementRoster" ;
+    skos:prefLabel "Disbursement Roster" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:GainfulEmploymentStudentResponseFile a skos:Concept ;
+    skos:definition "Gainful Employment Student Response File" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "GainfulEmploymentStudentResponseFile" ;
+    skos:prefLabel "Gainful Employment Student Response File" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:GainfulEmploymentStudentSubmittal a skos:Concept ;
+    skos:definition "Gainful Employment Student Submittal" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "GainfulEmploymentStudentSubmittal" ;
+    skos:prefLabel "Gainful Employment Student Submittal" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:IPEDS a skos:Concept ;
+    skos:definition "Integrated PostSecondary Education Data System" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "IPEDS" ;
+    skos:prefLabel "Ipeds" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:InstitutionRequest a skos:Concept ;
+    skos:definition "Institution Request" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "InstitutionRequest" ;
+    skos:prefLabel "Institution Request" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:NSLDSEnrollmentError a skos:Concept ;
+    skos:definition "National Student Loan Data System Enrollment Error" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "NSLDSEnrollmentError" ;
+    skos:prefLabel "Nsldsenrollment Error" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:NSLDSEnrollmentSubmittal a skos:Concept ;
+    skos:definition "National Student Loan Data System Enrollment Submittal" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "NSLDSEnrollmentSubmittal" ;
+    skos:prefLabel "Nsldsenrollment Submittal" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Receipt a skos:Concept ;
+    skos:definition "Receipt" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Receipt" ;
+    skos:prefLabel "Receipt" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Request a skos:Concept ;
+    skos:definition "Request" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Request" ;
+    skos:prefLabel "Request" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:RequestedRecord a skos:Concept ;
+    skos:definition "Requested Record" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "RequestedRecord" ;
+    skos:prefLabel "Requested Record" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:Response a skos:Concept ;
+    skos:definition "Response" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "Response" ;
+    skos:prefLabel "Response" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:ReverseTransfer a skos:Concept ;
+    skos:definition "Reverse Transfer" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "ReverseTransfer" ;
+    skos:prefLabel "Reverse Transfer" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:StudentRequest a skos:Concept ;
+    skos:definition "Student Request" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "StudentRequest" ;
+    skos:prefLabel "Student Request" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:TermEnroll a skos:Concept ;
+    skos:definition "Term Enroll" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "TermEnroll" ;
+    skos:prefLabel "Term Enroll" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:TermGrade a skos:Concept ;
+    skos:definition "Term Grade" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "TermGrade" ;
+    skos:prefLabel "Term Grade" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes:ThirdPartyRequest a skos:Concept ;
+    skos:definition "Third Party Request" ;
+    skos:inScheme pescDocumentTypeCodes: ;
+    skos:notation "ThirdPartyRequest" ;
+    skos:prefLabel "Third Party Request" ;
+    skos:topConceptOf pescDocumentTypeCodes: .
+
+pescDocumentTypeCodes: a skos:ConceptScheme ;
+    dcterms:description "Type and purpose of document being transmitted" ;
+    dcterms:title "Document Type Codes" ;
+    skos:hasTopConcept pescDocumentTypeCodes:Acknowledgment,
+        pescDocumentTypeCodes:Application,
+        pescDocumentTypeCodes:Cancel,
+        pescDocumentTypeCodes:Certificate,
+        pescDocumentTypeCodes:CertificationRequest,
+        pescDocumentTypeCodes:Change,
+        pescDocumentTypeCodes:Credential,
+        pescDocumentTypeCodes:Diploma,
+        pescDocumentTypeCodes:DisbursementAcknowledgement,
+        pescDocumentTypeCodes:DisbursementForecast,
+        pescDocumentTypeCodes:DisbursementRoster,
+        pescDocumentTypeCodes:GainfulEmploymentStudentResponseFile,
+        pescDocumentTypeCodes:GainfulEmploymentStudentSubmittal,
+        pescDocumentTypeCodes:IPEDS,
+        pescDocumentTypeCodes:InstitutionRequest,
+        pescDocumentTypeCodes:NSLDSEnrollmentError,
+        pescDocumentTypeCodes:NSLDSEnrollmentSubmittal,
+        pescDocumentTypeCodes:Receipt,
+        pescDocumentTypeCodes:Request,
+        pescDocumentTypeCodes:RequestedRecord,
+        pescDocumentTypeCodes:Response,
+        pescDocumentTypeCodes:ReverseTransfer,
+        pescDocumentTypeCodes:StudentRequest,
+        pescDocumentTypeCodes:TermEnroll,
+        pescDocumentTypeCodes:TermGrade,
+        pescDocumentTypeCodes:ThirdPartyRequest .
+

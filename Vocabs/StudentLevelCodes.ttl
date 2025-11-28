@@ -1,0 +1,353 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescStudentLevelCodes:CollegeFifthYear a skos:Concept ;
+    skos:definition "College Fifth Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "CollegeFifthYear" ;
+    skos:prefLabel "College Fifth Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:CollegeFirstYear a skos:Concept ;
+    skos:definition "First-year, never attended college before" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "CollegeFirstYear" ;
+    skos:prefLabel "College First Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:CollegeFirstYearAttendedBefore a skos:Concept ;
+    skos:definition "First-year, attended college before" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "CollegeFirstYearAttendedBefore" ;
+    skos:prefLabel "College First Year Attended Before" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:CollegeJunior a skos:Concept ;
+    skos:definition "College Junior" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "CollegeJunior" ;
+    skos:prefLabel "College Junior" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:CollegeSenior a skos:Concept ;
+    skos:definition "College Senior" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "CollegeSenior" ;
+    skos:prefLabel "College Senior" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:CollegeSophomore a skos:Concept ;
+    skos:definition "College Sophomore" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "CollegeSophomore" ;
+    skos:prefLabel "College Sophomore" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Doctoral a skos:Concept ;
+    skos:definition "Doctoral" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Doctoral" ;
+    skos:prefLabel "Doctoral" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:EighthGrade a skos:Concept ;
+    skos:definition "Eighth Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "EighthGrade" ;
+    skos:prefLabel "Eighth Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:EleventhGrade a skos:Concept ;
+    skos:definition "Eleventh Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "EleventhGrade" ;
+    skos:prefLabel "Eleventh Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:FifthGrade a skos:Concept ;
+    skos:definition "Fifth Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "FifthGrade" ;
+    skos:prefLabel "Fifth Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:FirstGrade a skos:Concept ;
+    skos:definition "First Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "FirstGrade" ;
+    skos:prefLabel "First Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:FourthGrade a skos:Concept ;
+    skos:definition "Fourth Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "FourthGrade" ;
+    skos:prefLabel "Fourth Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Grade13 a skos:Concept ;
+    skos:definition "Grade13" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Grade13" ;
+    skos:prefLabel "Grade13" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:GraduateBeyondThirdYear a skos:Concept ;
+    skos:definition "Graduate Beyond Third Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "GraduateBeyondThirdYear" ;
+    skos:prefLabel "Graduate Beyond Third Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:GraduateFirstYear a skos:Concept ;
+    skos:definition "Graduate First Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "GraduateFirstYear" ;
+    skos:prefLabel "Graduate First Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:GraduateNonDegree a skos:Concept ;
+    skos:definition "Graduate Non Degree" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "GraduateNonDegree" ;
+    skos:prefLabel "Graduate Non Degree" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:GraduateSecondYear a skos:Concept ;
+    skos:definition "Graduate Second Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "GraduateSecondYear" ;
+    skos:prefLabel "Graduate Second Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:GraduateThirdYear a skos:Concept ;
+    skos:definition "Graduate Third Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "GraduateThirdYear" ;
+    skos:prefLabel "Graduate Third Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:HalfDayKindergarten a skos:Concept ;
+    skos:definition "Half Day Kindergarten" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "HalfDayKindergarten" ;
+    skos:prefLabel "Half Day Kindergarten" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Infant a skos:Concept ;
+    skos:definition "Infant (0 to age 2)" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Infant" ;
+    skos:prefLabel "Infant" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Kindergarten a skos:Concept ;
+    skos:definition "Kindergarten" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Kindergarten" ;
+    skos:prefLabel "Kindergarten" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Masters a skos:Concept ;
+    skos:definition "Masters" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Masters" ;
+    skos:prefLabel "Masters" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:MastersQualifying a skos:Concept ;
+    skos:definition "Masters Qualifying" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "MastersQualifying" ;
+    skos:prefLabel "Masters Qualifying" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:NinthGrade a skos:Concept ;
+    skos:definition "Ninth Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "NinthGrade" ;
+    skos:prefLabel "Ninth Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:NoFormalSchool a skos:Concept ;
+    skos:definition "No Formal School" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "NoFormalSchool" ;
+    skos:prefLabel "No Formal School" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:NonDegree a skos:Concept ;
+    skos:definition "Non-Degree or Transient Student" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "NonDegree" ;
+    skos:prefLabel "Non Degree" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:PostBaccalaureate a skos:Concept ;
+    skos:definition "Post Baccalaureate" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "PostBaccalaureate" ;
+    skos:prefLabel "Post Baccalaureate" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Postdoctoral a skos:Concept ;
+    skos:definition "Postdoctoral" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Postdoctoral" ;
+    skos:prefLabel "Postdoctoral" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Postsecondary a skos:Concept ;
+    skos:definition "Postsecondary" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Postsecondary" ;
+    skos:prefLabel "Postsecondary" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear a skos:Concept ;
+    skos:definition "Postsecondary Bachelor Preliminary Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "PostsecondaryBachelorPreliminaryYear" ;
+    skos:prefLabel "Postsecondary Bachelor Preliminary Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:PreKindergarten a skos:Concept ;
+    skos:definition "Pre Kindergarten" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "PreKindergarten" ;
+    skos:prefLabel "Pre Kindergarten" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Professional a skos:Concept ;
+    skos:definition "Professional" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Professional" ;
+    skos:prefLabel "Professional" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:ProfessionalBeyondThirdYear a skos:Concept ;
+    skos:definition "Professional Beyond Third Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "ProfessionalBeyondThirdYear" ;
+    skos:prefLabel "Professional Beyond Third Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:ProfessionalFirstYear a skos:Concept ;
+    skos:definition "Professional First Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "ProfessionalFirstYear" ;
+    skos:prefLabel "Professional First Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:ProfessionalSecondYear a skos:Concept ;
+    skos:definition "Professional Second Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "ProfessionalSecondYear" ;
+    skos:prefLabel "Professional Second Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:ProfessionalThirdYear a skos:Concept ;
+    skos:definition "Professional Third Year" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "ProfessionalThirdYear" ;
+    skos:prefLabel "Professional Third Year" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:SecondGrade a skos:Concept ;
+    skos:definition "Second Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "SecondGrade" ;
+    skos:prefLabel "Second Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:SeventhGrade a skos:Concept ;
+    skos:definition "Seventh Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "SeventhGrade" ;
+    skos:prefLabel "Seventh Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:SixthGrade a skos:Concept ;
+    skos:definition "Sixth Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "SixthGrade" ;
+    skos:prefLabel "Sixth Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:TenthGrade a skos:Concept ;
+    skos:definition "Tenth Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "TenthGrade" ;
+    skos:prefLabel "Tenth Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:ThirdGrade a skos:Concept ;
+    skos:definition "Third Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "ThirdGrade" ;
+    skos:prefLabel "Third Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:TwelfthGrade a skos:Concept ;
+    skos:definition "Twelfth Grade" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "TwelfthGrade" ;
+    skos:prefLabel "Twelfth Grade" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes:Ungraded a skos:Concept ;
+    skos:definition "Ungraded" ;
+    skos:inScheme pescStudentLevelCodes: ;
+    skos:notation "Ungraded" ;
+    skos:prefLabel "Ungraded" ;
+    skos:topConceptOf pescStudentLevelCodes: .
+
+pescStudentLevelCodes: a skos:ConceptScheme ;
+    dcterms:description "The current grade level of the student or the highest grade level attained by the student at the time the record was created." ;
+    dcterms:title "Student Level Codes" ;
+    skos:hasTopConcept pescStudentLevelCodes:CollegeFifthYear,
+        pescStudentLevelCodes:CollegeFirstYear,
+        pescStudentLevelCodes:CollegeFirstYearAttendedBefore,
+        pescStudentLevelCodes:CollegeJunior,
+        pescStudentLevelCodes:CollegeSenior,
+        pescStudentLevelCodes:CollegeSophomore,
+        pescStudentLevelCodes:Doctoral,
+        pescStudentLevelCodes:EighthGrade,
+        pescStudentLevelCodes:EleventhGrade,
+        pescStudentLevelCodes:FifthGrade,
+        pescStudentLevelCodes:FirstGrade,
+        pescStudentLevelCodes:FourthGrade,
+        pescStudentLevelCodes:Grade13,
+        pescStudentLevelCodes:GraduateBeyondThirdYear,
+        pescStudentLevelCodes:GraduateFirstYear,
+        pescStudentLevelCodes:GraduateNonDegree,
+        pescStudentLevelCodes:GraduateSecondYear,
+        pescStudentLevelCodes:GraduateThirdYear,
+        pescStudentLevelCodes:HalfDayKindergarten,
+        pescStudentLevelCodes:Infant,
+        pescStudentLevelCodes:Kindergarten,
+        pescStudentLevelCodes:Masters,
+        pescStudentLevelCodes:MastersQualifying,
+        pescStudentLevelCodes:NinthGrade,
+        pescStudentLevelCodes:NoFormalSchool,
+        pescStudentLevelCodes:NonDegree,
+        pescStudentLevelCodes:PostBaccalaureate,
+        pescStudentLevelCodes:Postdoctoral,
+        pescStudentLevelCodes:Postsecondary,
+        pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear,
+        pescStudentLevelCodes:PreKindergarten,
+        pescStudentLevelCodes:Professional,
+        pescStudentLevelCodes:ProfessionalBeyondThirdYear,
+        pescStudentLevelCodes:ProfessionalFirstYear,
+        pescStudentLevelCodes:ProfessionalSecondYear,
+        pescStudentLevelCodes:ProfessionalThirdYear,
+        pescStudentLevelCodes:SecondGrade,
+        pescStudentLevelCodes:SeventhGrade,
+        pescStudentLevelCodes:SixthGrade,
+        pescStudentLevelCodes:TenthGrade,
+        pescStudentLevelCodes:ThirdGrade,
+        pescStudentLevelCodes:TwelfthGrade,
+        pescStudentLevelCodes:Ungraded .
+

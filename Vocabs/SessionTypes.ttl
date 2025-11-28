@@ -1,0 +1,129 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+pescSessionTypes:Continuous a skos:Concept ;
+    skos:definition "Continuous" ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "Continuous" ;
+    skos:prefLabel "Continuous" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:DiffersByProgram a skos:Concept ;
+    skos:definition "Differs By Program" ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "DiffersByProgram" ;
+    skos:prefLabel "Differs By Program" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:FallSession a skos:Concept ;
+    skos:definition "Fall Session" ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "FallSession" ;
+    skos:prefLabel "Fall Session" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:FourOneFourPlan a skos:Concept ;
+    skos:definition "A school year consisting of a four-month semester of academic work, followed by a month of special activity, followed by another four-month semester of academic work. Continuous DiffersByProgram Other TwelveMonth." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "FourOneFourPlan" ;
+    skos:prefLabel "Four One Four Plan" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:FullYear a skos:Concept ;
+    skos:definition "The prescribed length of instruction upon which credit is awarded based on the total number of days in a school year." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "FullYear" ;
+    skos:prefLabel "Full Year" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:Intersession a skos:Concept ;
+    skos:definition "For year round schools, the days of optional attendance (equivalent to a summer session) for a student enrolled in a school offering a year-round program which provides three time blocks of 60 days of instruction followed by 15 of intersession." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "Intersession" ;
+    skos:prefLabel "Intersession" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:LongSession a skos:Concept ;
+    skos:definition "Longer than a semester or quarter or trimester, but shorter than a full year. FallSession" ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "LongSession" ;
+    skos:prefLabel "Long Session" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:MiniTerm a skos:Concept ;
+    skos:definition "A session whose length is less than the regular session; usually but not always contained wholly within the regular session." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "MiniTerm" ;
+    skos:prefLabel "Mini Term" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:Other a skos:Concept ;
+    skos:definition "Other" ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "Other" ;
+    skos:prefLabel "Other" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:Quarter a skos:Concept ;
+    skos:definition "Usually about 10 to 14 weeks in length; normally there are four quarter sessions and perhaps other shorter sessions in an academic year." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "Quarter" ;
+    skos:prefLabel "Quarter" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:Quinmester a skos:Concept ;
+    skos:definition "Usually about 8 to 10 weeks in length; normally there are five quinmester sessions per academic year." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "Quinmester" ;
+    skos:prefLabel "Quinmester" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:Semester a skos:Concept ;
+    skos:definition "Usually about 15 to 17 weeks in length; there are usually two semesters per academic year and perhaps other shorter sessions." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "Semester" ;
+    skos:prefLabel "Semester" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:SummerSession a skos:Concept ;
+    skos:definition "A session or combination of sessions conducted after the last regular session of the school year and prior to the first regular session of the next school year." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "SummerSession" ;
+    skos:prefLabel "Summer Session" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:Trimester a skos:Concept ;
+    skos:definition "Usually about 13 to 15 weeks in length; normally there are three trimesters and perhaps other shorter sessions in an academic year." ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "Trimester" ;
+    skos:prefLabel "Trimester" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes:TwelveMonth a skos:Concept ;
+    skos:definition "Twelve Month" ;
+    skos:inScheme pescSessionTypes: ;
+    skos:notation "TwelveMonth" ;
+    skos:prefLabel "Twelve Month" ;
+    skos:topConceptOf pescSessionTypes: .
+
+pescSessionTypes: a skos:ConceptScheme ;
+    dcterms:description "Indicates the type of academic session at an educational institution." ;
+    dcterms:title "Session Types" ;
+    skos:hasTopConcept pescSessionTypes:Continuous,
+        pescSessionTypes:DiffersByProgram,
+        pescSessionTypes:FallSession,
+        pescSessionTypes:FourOneFourPlan,
+        pescSessionTypes:FullYear,
+        pescSessionTypes:Intersession,
+        pescSessionTypes:LongSession,
+        pescSessionTypes:MiniTerm,
+        pescSessionTypes:Other,
+        pescSessionTypes:Quarter,
+        pescSessionTypes:Quinmester,
+        pescSessionTypes:Semester,
+        pescSessionTypes:SummerSession,
+        pescSessionTypes:Trimester,
+        pescSessionTypes:TwelveMonth .
+

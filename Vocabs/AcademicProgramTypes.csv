@@ -1,0 +1,13 @@
+"Type","URI","Label","Definition","Notation","Related term","Relationship"
+"Concept","pescAcademicProgramTypes:Concentration","Concentration","Concentration","Concentration","pescAcademicProgramTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicProgramTypes:Focus","Focus","Focus","Focus","pescAcademicProgramTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicProgramTypes:Major","Major","Major","Major","pescAcademicProgramTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicProgramTypes:Minor","Minor","Minor","Minor","pescAcademicProgramTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicProgramTypes:SecondMajor","Second Major","Second Major","SecondMajor","pescAcademicProgramTypes:","inScheme, topConceptOf"
+"Concept","pescAcademicProgramTypes:Specialization","Specialization","Specialization","Specialization","pescAcademicProgramTypes:","inScheme, topConceptOf"
+"Concept Scheme","pescAcademicProgramTypes:","Academic Program Types","Indicates whether the academic program is a major, minor, area of concentration or specialization.","","pescAcademicProgramTypes:Concentration,
+pescAcademicProgramTypes:Focus,
+pescAcademicProgramTypes:Major,
+pescAcademicProgramTypes:Minor,
+pescAcademicProgramTypes:SecondMajor,
+pescAcademicProgramTypes:Specialization","hasTopConcept"
