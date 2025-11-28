@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Level Codes</title>
+    <style>
+        #pylode {
+            position: fixed;
+            top: 205px;
+            left: -150px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+        #pylode #p {
+            color: #329545;
+        }
+        #pylode #y {
+            color: #f9cb33;
+        }
+        #pylode #version {
+            font-size: 1.0em;
+        }
+
+        #profile {
+            font-style: italic;
+            font-size: 1.25em;
+            color: darkred!important;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dl {
+            /*border: 1px solid navy;*/
+            /*padding:5px;*/
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 0;
+        }
+
+        dd {
+            margin-bottom: 10px;
+            padding-top: 7px;
+        }
+
+        #metadata ul,
+        #classes ul {
+            list-style-type: none;
+        }
+
+        #metadata ul li,
+        #classes ul li {
+            margin-left: -40px;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: left;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        sup {
+            margin-left: -3px;
+        }
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+
+#toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    border: solid 1px navy;
+    font-size: small;
+    width: 180px;
+}
+#toc h3 {
+    margin-top: 5px;
+}
+
+#toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#toc .first > li {
+    margin-top: 5px;
+}
+
+#toc .second,
+#toc .third {
+    padding-left: 10px;
+}
+
+#content {
+    width: calc(100% - 150px);
+}
+
+.hover_property {
+    cursor: help;
+    text-decoration: none;
+    border-bottom: dashed 1px;
+}
+
+.setclass {
+    list-style-type: none;
+}
+
+code{
+    word-wrap: break-word;
+  }
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+td {
+    word-wrap: break-word;
+}
+#legend table.entity {
+    width: 25%;
+}
+	</style>
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <script id="schema.org" type="application/ld+json">
+[
+  {
+    "@id": "https://pesc.org/vocabs/StudentLevelCodes#",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "The current grade level of the student or the highest grade level attained by the student at the time the record was created."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Student Level Codes"
+      }
+    ]
+  }
+]
+	</script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section" id="metadata">
+        <h1>Student Level Codes</h1>
+        <h2>Metadata</h2>
+        <dl>
+          <div>
+            <dt>
+              <strong>IRI</strong>
+            </dt>
+            <dd>
+              <code>https://pesc.org/vocabs/StudentLevelCodes#</code>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/title" title="None. Defined in None">Title</a>
+            </dt>
+            <dd><p>Student Level Codes</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+            </dt>
+            <dd><p>The current grade level of the student or the highest grade level attained by the student at the time the record was created.</p></dd>
+          </div>
+        </dl>
+      </div>
+      <div class="section" id="conceptschemes">
+        <h2>Concept Scheme</h2>
+        <div class="property entity" id="StudentLevelCodes">
+          <h3>Student Level Codes
+            <sup class="sup-cs" title="SKOS Concept Scheme">cs</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>The current grade level of the student or the highest grade level attained by the student at the time the record was created.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#hasTopConcept" title="None. Defined in None">Has Top Concept</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <a href="#CollegeFifthYear">College Fifth Year</a>
+                  </li>
+                  <li>
+                    <a href="#CollegeFirstYear">College First Year</a>
+                  </li>
+                  <li>
+                    <a href="#CollegeFirstYearAttendedBefore">College First Year Attended Before</a>
+                  </li>
+                  <li>
+                    <a href="#CollegeJunior">College Junior</a>
+                  </li>
+                  <li>
+                    <a href="#CollegeSenior">College Senior</a>
+                  </li>
+                  <li>
+                    <a href="#CollegeSophomore">College Sophomore</a>
+                  </li>
+                  <li>
+                    <a href="#Doctoral">Doctoral</a>
+                  </li>
+                  <li>
+                    <a href="#EighthGrade">Eighth Grade</a>
+                  </li>
+                  <li>
+                    <a href="#EleventhGrade">Eleventh Grade</a>
+                  </li>
+                  <li>
+                    <a href="#FifthGrade">Fifth Grade</a>
+                  </li>
+                  <li>
+                    <a href="#FirstGrade">First Grade</a>
+                  </li>
+                  <li>
+                    <a href="#FourthGrade">Fourth Grade</a>
+                  </li>
+                  <li>
+                    <a href="#Grade13">Grade13</a>
+                  </li>
+                  <li>
+                    <a href="#GraduateBeyondThirdYear">Graduate Beyond Third Year</a>
+                  </li>
+                  <li>
+                    <a href="#GraduateFirstYear">Graduate First Year</a>
+                  </li>
+                  <li>
+                    <a href="#GraduateNonDegree">Graduate Non Degree</a>
+                  </li>
+                  <li>
+                    <a href="#GraduateSecondYear">Graduate Second Year</a>
+                  </li>
+                  <li>
+                    <a href="#GraduateThirdYear">Graduate Third Year</a>
+                  </li>
+                  <li>
+                    <a href="#HalfDayKindergarten">Half Day Kindergarten</a>
+                  </li>
+                  <li>
+                    <a href="#Infant">Infant</a>
+                  </li>
+                  <li>
+                    <a href="#Kindergarten">Kindergarten</a>
+                  </li>
+                  <li>
+                    <a href="#Masters">Masters</a>
+                  </li>
+                  <li>
+                    <a href="#MastersQualifying">Masters Qualifying</a>
+                  </li>
+                  <li>
+                    <a href="#NinthGrade">Ninth Grade</a>
+                  </li>
+                  <li>
+                    <a href="#NoFormalSchool">No Formal School</a>
+                  </li>
+                  <li>
+                    <a href="#NonDegree">Non Degree</a>
+                  </li>
+                  <li>
+                    <a href="#PostBaccalaureate">Post Baccalaureate</a>
+                  </li>
+                  <li>
+                    <a href="#Postdoctoral">Postdoctoral</a>
+                  </li>
+                  <li>
+                    <a href="#Postsecondary">Postsecondary</a>
+                  </li>
+                  <li>
+                    <a href="#PostsecondaryBachelorPreliminaryYear">Postsecondary Bachelor Preliminary Year</a>
+                  </li>
+                  <li>
+                    <a href="#PreKindergarten">Pre Kindergarten</a>
+                  </li>
+                  <li>
+                    <a href="#Professional">Professional</a>
+                  </li>
+                  <li>
+                    <a href="#ProfessionalBeyondThirdYear">Professional Beyond Third Year</a>
+                  </li>
+                  <li>
+                    <a href="#ProfessionalFirstYear">Professional First Year</a>
+                  </li>
+                  <li>
+                    <a href="#ProfessionalSecondYear">Professional Second Year</a>
+                  </li>
+                  <li>
+                    <a href="#ProfessionalThirdYear">Professional Third Year</a>
+                  </li>
+                  <li>
+                    <a href="#SecondGrade">Second Grade</a>
+                  </li>
+                  <li>
+                    <a href="#SeventhGrade">Seventh Grade</a>
+                  </li>
+                  <li>
+                    <a href="#SixthGrade">Sixth Grade</a>
+                  </li>
+                  <li>
+                    <a href="#TenthGrade">Tenth Grade</a>
+                  </li>
+                  <li>
+                    <a href="#ThirdGrade">Third Grade</a>
+                  </li>
+                  <li>
+                    <a href="#TwelfthGrade">Twelfth Grade</a>
+                  </li>
+                  <li>
+                    <a href="#Ungraded">Ungraded</a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="concepts">
+        <h2>Concepts</h2>
+        <div class="property entity" id="CollegeFifthYear">
+          <h3>College Fifth Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#CollegeFifthYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>College Fifth Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>CollegeFifthYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>College Fifth Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="CollegeFirstYear">
+          <h3>College First Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#CollegeFirstYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>College First Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>CollegeFirstYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>First-year, never attended college before</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="CollegeFirstYearAttendedBefore">
+          <h3>College First Year Attended Before
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#CollegeFirstYearAttendedBefore</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>College First Year Attended Before</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>CollegeFirstYearAttendedBefore</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>First-year, attended college before</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="CollegeJunior">
+          <h3>College Junior
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#CollegeJunior</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>College Junior</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>CollegeJunior</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>College Junior</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="CollegeSenior">
+          <h3>College Senior
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#CollegeSenior</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>College Senior</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>CollegeSenior</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>College Senior</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="CollegeSophomore">
+          <h3>College Sophomore
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#CollegeSophomore</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>College Sophomore</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>CollegeSophomore</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>College Sophomore</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Doctoral">
+          <h3>Doctoral
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Doctoral</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Doctoral</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Doctoral</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Doctoral</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="EighthGrade">
+          <h3>Eighth Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#EighthGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Eighth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>EighthGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Eighth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="EleventhGrade">
+          <h3>Eleventh Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#EleventhGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Eleventh Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>EleventhGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Eleventh Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="FifthGrade">
+          <h3>Fifth Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#FifthGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Fifth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>FifthGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Fifth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="FirstGrade">
+          <h3>First Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#FirstGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>First Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>FirstGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>First Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="FourthGrade">
+          <h3>Fourth Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#FourthGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Fourth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>FourthGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Fourth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Grade13">
+          <h3>Grade13
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Grade13</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Grade13</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Grade13</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Grade13</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="GraduateBeyondThirdYear">
+          <h3>Graduate Beyond Third Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#GraduateBeyondThirdYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Graduate Beyond Third Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>GraduateBeyondThirdYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Graduate Beyond Third Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="GraduateFirstYear">
+          <h3>Graduate First Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#GraduateFirstYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Graduate First Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>GraduateFirstYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Graduate First Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="GraduateNonDegree">
+          <h3>Graduate Non Degree
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#GraduateNonDegree</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Graduate Non Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>GraduateNonDegree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Graduate Non Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="GraduateSecondYear">
+          <h3>Graduate Second Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#GraduateSecondYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Graduate Second Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>GraduateSecondYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Graduate Second Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="GraduateThirdYear">
+          <h3>Graduate Third Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#GraduateThirdYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Graduate Third Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>GraduateThirdYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Graduate Third Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="HalfDayKindergarten">
+          <h3>Half Day Kindergarten
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#HalfDayKindergarten</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Half Day Kindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>HalfDayKindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Half Day Kindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Infant">
+          <h3>Infant
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Infant</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Infant</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Infant</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Infant (0 to age 2)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Kindergarten">
+          <h3>Kindergarten
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Kindergarten</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Kindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Kindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Kindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Masters">
+          <h3>Masters
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Masters</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Masters</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Masters</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Masters</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="MastersQualifying">
+          <h3>Masters Qualifying
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#MastersQualifying</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Masters Qualifying</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>MastersQualifying</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Masters Qualifying</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="NinthGrade">
+          <h3>Ninth Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#NinthGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Ninth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>NinthGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Ninth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="NoFormalSchool">
+          <h3>No Formal School
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#NoFormalSchool</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>No Formal School</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>NoFormalSchool</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>No Formal School</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="NonDegree">
+          <h3>Non Degree
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#NonDegree</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Non Degree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>NonDegree</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Non-Degree or Transient Student</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="PostBaccalaureate">
+          <h3>Post Baccalaureate
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#PostBaccalaureate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Post Baccalaureate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>PostBaccalaureate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Post Baccalaureate</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Postdoctoral">
+          <h3>Postdoctoral
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Postdoctoral</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Postdoctoral</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Postdoctoral</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postdoctoral</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Postsecondary">
+          <h3>Postsecondary
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Postsecondary</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Postsecondary</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Postsecondary</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postsecondary</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="PostsecondaryBachelorPreliminaryYear">
+          <h3>Postsecondary Bachelor Preliminary Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#PostsecondaryBachelorPreliminaryYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Postsecondary Bachelor Preliminary Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>PostsecondaryBachelorPreliminaryYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Postsecondary Bachelor Preliminary Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="PreKindergarten">
+          <h3>Pre Kindergarten
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#PreKindergarten</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Pre Kindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>PreKindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Pre Kindergarten</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Professional">
+          <h3>Professional
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Professional</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Professional</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Professional</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Professional</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="ProfessionalBeyondThirdYear">
+          <h3>Professional Beyond Third Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#ProfessionalBeyondThirdYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Professional Beyond Third Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>ProfessionalBeyondThirdYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Professional Beyond Third Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="ProfessionalFirstYear">
+          <h3>Professional First Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#ProfessionalFirstYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Professional First Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>ProfessionalFirstYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Professional First Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="ProfessionalSecondYear">
+          <h3>Professional Second Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#ProfessionalSecondYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Professional Second Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>ProfessionalSecondYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Professional Second Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="ProfessionalThirdYear">
+          <h3>Professional Third Year
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#ProfessionalThirdYear</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Professional Third Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>ProfessionalThirdYear</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Professional Third Year</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SecondGrade">
+          <h3>Second Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#SecondGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Second Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>SecondGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Second Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SeventhGrade">
+          <h3>Seventh Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#SeventhGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Seventh Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>SeventhGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Seventh Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SixthGrade">
+          <h3>Sixth Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#SixthGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Sixth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>SixthGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Sixth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="TenthGrade">
+          <h3>Tenth Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#TenthGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Tenth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>TenthGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Tenth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="ThirdGrade">
+          <h3>Third Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#ThirdGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Third Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>ThirdGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Third Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="TwelfthGrade">
+          <h3>Twelfth Grade
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#TwelfthGrade</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Twelfth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>TwelfthGrade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Twelfth Grade</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Ungraded">
+          <h3>Ungraded
+            <sup class="sup-co" title="SKOS Concept">co</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://pesc.org/vocabs/StudentLevelCodes#Ungraded</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#prefLabel" title="None. Defined in None">Pref Label</a>
+              </th>
+              <td><p>Ungraded</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#notation" title="None. Defined in None">Notation</a>
+              </th>
+              <td><p>Ungraded</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#definition" title="None. Defined in None">Definition</a>
+              </th>
+              <td><p>Ungraded</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#inScheme" title="None. Defined in None">In Scheme</a>
+              </th>
+              <td>
+                <a href="#StudentLevelCodes">Student Level Codes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="pescStudentLevelCodes">pescStudentLevelCodes</dt>
+          <dd>
+            <code>https://pesc.org/vocabs/StudentLevelCodes#</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity"></table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>made by 
+        <a href="https://github.com/rdflib/pyLODE">
+          <span id="p">p</span>
+          <span id="y">y</span>
+          <span>LODE</span>
+        </a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.2.1_pesc1" id="version">3.2.1_pesc1</a>
+        <span> with the </span>
+        <a href="https://github.com/pesc-org/json-ld-transcript/" id="profile">PescVoc</a>
+        <span>profile</span>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#metadata">Metadata</a>
+          </h4>
+        </li>
+        <li>
+          <h4>
+            <a href="#conceptschemes">Concept Schemes</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#StudentLevelCodes">Student Level Codes</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#concepts">Concepts</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#CollegeFifthYear">College Fifth Year</a>
+            </li>
+            <li>
+              <a href="#CollegeFirstYear">College First Year</a>
+            </li>
+            <li>
+              <a href="#CollegeFirstYearAttendedBefore">College First Year Attended Before</a>
+            </li>
+            <li>
+              <a href="#CollegeJunior">College Junior</a>
+            </li>
+            <li>
+              <a href="#CollegeSenior">College Senior</a>
+            </li>
+            <li>
+              <a href="#CollegeSophomore">College Sophomore</a>
+            </li>
+            <li>
+              <a href="#Doctoral">Doctoral</a>
+            </li>
+            <li>
+              <a href="#EighthGrade">Eighth Grade</a>
+            </li>
+            <li>
+              <a href="#EleventhGrade">Eleventh Grade</a>
+            </li>
+            <li>
+              <a href="#FifthGrade">Fifth Grade</a>
+            </li>
+            <li>
+              <a href="#FirstGrade">First Grade</a>
+            </li>
+            <li>
+              <a href="#FourthGrade">Fourth Grade</a>
+            </li>
+            <li>
+              <a href="#Grade13">Grade13</a>
+            </li>
+            <li>
+              <a href="#GraduateBeyondThirdYear">Graduate Beyond Third Year</a>
+            </li>
+            <li>
+              <a href="#GraduateFirstYear">Graduate First Year</a>
+            </li>
+            <li>
+              <a href="#GraduateNonDegree">Graduate Non Degree</a>
+            </li>
+            <li>
+              <a href="#GraduateSecondYear">Graduate Second Year</a>
+            </li>
+            <li>
+              <a href="#GraduateThirdYear">Graduate Third Year</a>
+            </li>
+            <li>
+              <a href="#HalfDayKindergarten">Half Day Kindergarten</a>
+            </li>
+            <li>
+              <a href="#Infant">Infant</a>
+            </li>
+            <li>
+              <a href="#Kindergarten">Kindergarten</a>
+            </li>
+            <li>
+              <a href="#Masters">Masters</a>
+            </li>
+            <li>
+              <a href="#MastersQualifying">Masters Qualifying</a>
+            </li>
+            <li>
+              <a href="#NinthGrade">Ninth Grade</a>
+            </li>
+            <li>
+              <a href="#NoFormalSchool">No Formal School</a>
+            </li>
+            <li>
+              <a href="#NonDegree">Non Degree</a>
+            </li>
+            <li>
+              <a href="#PostBaccalaureate">Post Baccalaureate</a>
+            </li>
+            <li>
+              <a href="#Postdoctoral">Postdoctoral</a>
+            </li>
+            <li>
+              <a href="#Postsecondary">Postsecondary</a>
+            </li>
+            <li>
+              <a href="#PostsecondaryBachelorPreliminaryYear">Postsecondary Bachelor Preliminary Year</a>
+            </li>
+            <li>
+              <a href="#PreKindergarten">Pre Kindergarten</a>
+            </li>
+            <li>
+              <a href="#Professional">Professional</a>
+            </li>
+            <li>
+              <a href="#ProfessionalBeyondThirdYear">Professional Beyond Third Year</a>
+            </li>
+            <li>
+              <a href="#ProfessionalFirstYear">Professional First Year</a>
+            </li>
+            <li>
+              <a href="#ProfessionalSecondYear">Professional Second Year</a>
+            </li>
+            <li>
+              <a href="#ProfessionalThirdYear">Professional Third Year</a>
+            </li>
+            <li>
+              <a href="#SecondGrade">Second Grade</a>
+            </li>
+            <li>
+              <a href="#SeventhGrade">Seventh Grade</a>
+            </li>
+            <li>
+              <a href="#SixthGrade">Sixth Grade</a>
+            </li>
+            <li>
+              <a href="#TenthGrade">Tenth Grade</a>
+            </li>
+            <li>
+              <a href="#ThirdGrade">Third Grade</a>
+            </li>
+            <li>
+              <a href="#TwelfthGrade">Twelfth Grade</a>
+            </li>
+            <li>
+              <a href="#Ungraded">Ungraded</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#pescStudentLevelCodes">pescStudentLevelCodes</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second"></ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
