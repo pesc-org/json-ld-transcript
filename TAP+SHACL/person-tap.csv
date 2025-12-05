@@ -118,6 +118,7 @@ pescStudentLevelCodes:MastersQualifying
 pescStudentLevelCodes:Masters
 pescStudentLevelCodes:Doctoral
 pescStudentLevelCodes:Postdoctoral",picklist,,,Recommended,
+,StudentShape,pesc:highSchoolAttended,High School Attended,FALSE,TRUE,IRI BNODE,,,,OrganizationShape,ceds:C200239,,
 ,PersonIdentifierShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200291,,,,,
 ,PersonNameShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200377,,,,,
 ,ResidencyShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Residency,,,,,

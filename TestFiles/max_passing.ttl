@@ -248,7 +248,17 @@
     elm:additionalNote [
         rdf:type elm:Note ;
         elm:noteLiteral "A made up test peson" ;
+    ];
+    pesc:highSchoolAttended <https://example.org/highscool/001>; 
+    ceds:P600502 [              # hasOrganizationIdentification
+        a ceds:C200252 ;        # OrganizationIdentifier
+        ceds:P000826 "1234"^^xsd:token ;   # organizationIdentifer
+        ceds:P000827 pescIdentifierTypes:ACT ; 
     ].
+
+<https://example.org/highscool/001> a ceds:C200239 ;
+    ceterms:name "Example High"@en ;
+    .
 
 <https://example.edu/achievement001> a pesc:Achievement, ceds:C200335 ; # Academic Award
     ceds:P000001 "1985-05-01"^^xsd:date ;  # Academic Award Date
