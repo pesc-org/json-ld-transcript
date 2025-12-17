@@ -8,9 +8,6 @@ pesc:SessionSummary",,
 ,CollegeTranscriptShape,pesc:describesAchievement,Describes Achievement,FALSE,TRUE,IRI BNODE,,,,,"pesc:AdditionalStudentAchievement
 ceds:C200335
 ceds:C200346
-pesc:GPA
-pesc:AcademicSummary
-pesc:ProgramSummary
 pesc:LicensureAchievement
 ceds:C200047",,
 22,CollegeTranscriptShape,pesc:destination,Destination,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,Required,
