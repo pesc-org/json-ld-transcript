@@ -247,7 +247,7 @@
 <collegetranscriptshapeDescribesAchievement> a sh:PropertyShape ;
     sh:name "Describes Achievement"@en-US ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:or ( [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:GPA ] [ sh:class pesc:AcademicSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
+    sh:or ( [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
     sh:path pesc:describesAchievement .
 
 <collegetranscriptshapeDestination> a sh:PropertyShape ;

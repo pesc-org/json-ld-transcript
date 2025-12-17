@@ -21,7 +21,7 @@ Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrCons
 	Focus Node: <https://example.edu/transcripts/050330001>
 	Value Node: Literal("Achievement/001")
 	Result Path: pesc:describesAchievement
-	Message: Node Literal("Achievement/001") does not conform to one or more shapes in [ sh:class pesc:AdditionalStudentAchievement ] , [ sh:class ceds:C200335 ] , [ sh:class ceds:C200346 ] , [ sh:class pesc:GPA ] , [ sh:class pesc:AcademicSummary ] , [ sh:class pesc:ProgramSummary ] , [ sh:class pesc:LicensureAchievement ] , [ sh:class ceds:C200047 ]
+	Message: Node Literal("Achievement/001") does not conform to one or more shapes in [ sh:class pesc:AdditionalStudentAchievement ] , [ sh:class ceds:C200335 ] , [ sh:class ceds:C200346 ] , [ sh:class pesc:LicensureAchievement ] , [ sh:class ceds:C200047 ]
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:collegetranscriptshapeDestination
