@@ -123,11 +123,6 @@
     sh:severity sh:Info ;
     sh:targetClass ceds:C200252 .
 
-<OrganizationShape> a sh:NodeShape ;
-    rdfs:label "Organization"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200239 .
-
 <PhoneShape> a sh:NodeShape ;
     rdfs:label "Phone"@en ;
     sh:closed false ;
@@ -183,6 +178,7 @@
         <studentshapeHasPersonLanguage>,
         <studentshapeHasPersonName>,
         <studentshapeHasSummary>,
+        <studentshapeHighSchoolAttended>,
         <studentshapeResidency>,
         <studentshapeStudentLevel>,
         <studentshapeType> ;
@@ -226,6 +222,11 @@
     rdfs:label "Note"@en ;
     sh:closed false ;
     sh:targetClass elm:Note .
+
+<OrganizationShape> a sh:NodeShape ;
+    rdfs:label "Organization"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200239 .
 
 <PersonIdentifierShape> a sh:NodeShape ;
     rdfs:label "Person Identifier"@en ;
@@ -547,6 +548,13 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:or ( [ sh:class pesc:AcademicSummary ] [ sh:class pesc:AwardSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:SessionSummary ] ) ;
     sh:path pesc:hasSummary .
+
+<studentshapeHighSchoolAttended> a sh:PropertyShape ;
+    sh:class ceds:C200239 ;
+    sh:name "High School Attended"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:highSchoolAttended .
 
 <studentshapeResidency> a sh:PropertyShape ;
     sh:class pesc:Residency ;
