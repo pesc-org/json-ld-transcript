@@ -302,7 +302,7 @@
     sh:class ceds:C200252 ;
     sh:name "Has Organization Identification"@en-US ;
     sh:node <OrganizationIdentifierShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path ceds:P600502 .
 
 <organizationshapeOrganizationName> a sh:PropertyShape ;

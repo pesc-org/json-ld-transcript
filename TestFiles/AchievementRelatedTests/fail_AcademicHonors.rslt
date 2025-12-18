@@ -1,13 +1,13 @@
 Validation Report
 Conforms: False
-Results (3):
+Results (4):
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academichonorsshapeHonorsLevel
 	Focus Node: <https://example.edu/academicHonors/001>
 	Value Node: pescHonorsLevels:UpperSecond
 	Result Path: pesc:honorsLevel
-	Message: Value pescHonorsLevels:UpperSecond not in list ['pescHonorsLevels:SecondHighest', 'pescHonorsLevels:ThirdHighest', 'pescHonorsLevels:FirstHighest']
+	Message: Value pescHonorsLevels:UpperSecond not in list ['pescHonorsLevels:FirstHighest', 'pescHonorsLevels:SecondHighest', 'pescHonorsLevels:ThirdHighest']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academichonorsshapeHonorsTitle
@@ -29,7 +29,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: <https://example.edu/academicHonors/001>
 			Value Node: pescHonorsLevels:UpperSecond
 			Result Path: pesc:honorsLevel
-			Message: Value pescHonorsLevels:UpperSecond not in list ['pescHonorsLevels:SecondHighest', 'pescHonorsLevels:ThirdHighest', 'pescHonorsLevels:FirstHighest']
+			Message: Value pescHonorsLevels:UpperSecond not in list ['pescHonorsLevels:FirstHighest', 'pescHonorsLevels:SecondHighest', 'pescHonorsLevels:ThirdHighest']
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 			Severity: sh:Violation
 			Source Shape: ex:academichonorsshapeHonorsTitle
@@ -37,3 +37,10 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Value Node: Literal("2.1", datatype=xsd:decimal)
 			Result Path: pesc:honorsTitle
 			Message: Value is not Literal with datatype xsd:string
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:academicawardshapeAcademicHonors
+	Focus Node: <https://example.edu/achievement001>
+	Value Node: <https://example.edu/academicHonors/001>
+	Result Path: pesc:academicHonors
+	Message: Value is not of Node Kind sh:BlankNode

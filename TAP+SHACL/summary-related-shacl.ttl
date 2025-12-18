@@ -283,7 +283,7 @@
     sh:maxCount 1 ;
     sh:name "Academic Honors"@en-US ;
     sh:node <AcademicHonorsShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:academicHonors .
 
 <academicsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
@@ -395,7 +395,7 @@
     sh:maxCount 1 ;
     sh:name "GPA Summary"@en-US ;
     sh:node <GPAShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:gpaSummary .
 
 <academicsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
@@ -432,7 +432,7 @@
     sh:class pesc:AcademicHonors ;
     sh:name "Academic Honors"@en-US ;
     sh:node <AcademicHonorsShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:academicHonors .
 
 <awardsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
@@ -479,7 +479,7 @@
     sh:maxCount 1 ;
     sh:name "GPA Summary"@en-US ;
     sh:node <GPAShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:gpaSummary .
 
 <awardsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
@@ -612,7 +612,7 @@
     sh:class pesc:AcademicHonors ;
     sh:name "Academic Honors"@en-US ;
     sh:node <AcademicHonorsShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:academicHonors .
 
 <programsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
@@ -675,7 +675,7 @@
     sh:maxCount 1 ;
     sh:name "GPA Summary"@en-US ;
     sh:node <GPAShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:gpaSummary .
 
 <programsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
@@ -712,7 +712,7 @@
     sh:class pesc:AcademicHonors ;
     sh:name "Academic Honors"@en-US ;
     sh:node <AcademicHonorsShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:academicHonors .
 
 <sessionsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
@@ -825,7 +825,7 @@ Rank in the College Transcript. However, if it is included, it is recommended th
     sh:maxCount 1 ;
     sh:name "GPA Summary"@en-US ;
     sh:node <GPAShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:gpaSummary .
 
 <sessionsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;

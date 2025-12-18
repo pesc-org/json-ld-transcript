@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (24):
+Results (26):
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeAcademicHonors
@@ -28,13 +28,20 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: <https://example.edu/honors>
 			Result Path: rdf:type
 			Message: Less than 1 values on <https://example.edu/honors>->rdf:type
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:sessionsummaryshapeAcademicHonors
+	Focus Node: <https://example.edu/sessionSummary001>
+	Value Node: <https://example.edu/honors>
+	Result Path: pesc:academicHonors
+	Message: Value is not of Node Kind sh:BlankNode
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeAcademicSummaryLevel
 	Focus Node: <https://example.edu/sessionSummary001>
 	Value Node: Literal("Undergraduate")
 	Result Path: pesc:academicSummaryLevel
-	Message: Value Literal("Undergraduate") not in list ['pescCreditLevels:Graduate', 'pescCreditLevels:Grade13', 'pescCreditLevels:Secondary', 'pescCreditLevels:Professional', 'pescCreditLevels:LowerDivision', 'pescCreditLevels:TechnicalPreparatory', 'pescCreditLevels:DualGraduate', 'pescCreditLevels:Undergraduate', 'pescCreditLevels:Ungraded', 'pescCreditLevels:DualHighSchoolCollege', 'pescCreditLevels:UpperDivision', 'pescCreditLevels:Vocational', 'pescCreditLevels:Dual', 'pescCreditLevels:GraduateProfessional']
+	Message: Value Literal("Undergraduate") not in list ['pescCreditLevels:Professional', 'pescCreditLevels:DualGraduate', 'pescCreditLevels:Undergraduate', 'pescCreditLevels:Grade13', 'pescCreditLevels:Secondary', 'pescCreditLevels:LowerDivision', 'pescCreditLevels:Vocational', 'pescCreditLevels:Dual', 'pescCreditLevels:TechnicalPreparatory', 'pescCreditLevels:UpperDivision', 'pescCreditLevels:Ungraded', 'pescCreditLevels:DualHighSchoolCollege', 'pescCreditLevels:GraduateProfessional', 'pescCreditLevels:Graduate']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeAcademicSummaryLevel
@@ -48,7 +55,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/sessionSummary001>
 	Value Node: Literal("DegreeApplicable")
 	Result Path: pesc:academicSummaryType
-	Message: Value Literal("DegreeApplicable") not in list ['pescAcademicSummaryTypes:ConvertedFrom', 'pescAcademicSummaryTypes:NonDegreeApplicable', 'pescAcademicSummaryTypes:ConvertedTo', 'pescAcademicSummaryTypes:CarryoverCredit', 'pescAcademicSummaryTypes:SenderNotRepeated', 'pescAcademicSummaryTypes:DegreeApplicable', 'pescAcademicSummaryTypes:SenderOnly', 'pescAcademicSummaryTypes:All', 'pescAcademicSummaryTypes:AllNotRepeated', 'pescAcademicSummaryTypes:UserDefined', 'pescAcademicSummaryTypes:Cumulative', 'pescAcademicSummaryTypes:NonWeighted', 'pescAcademicSummaryTypes:TransferNotRepeated', 'pescAcademicSummaryTypes:TransferOnly', 'pescAcademicSummaryTypes:Weighted', 'pescAcademicSummaryTypes:AcademicRenewal']
+	Message: Value Literal("DegreeApplicable") not in list ['pescAcademicSummaryTypes:All', 'pescAcademicSummaryTypes:SenderOnly', 'pescAcademicSummaryTypes:TransferNotRepeated', 'pescAcademicSummaryTypes:AcademicRenewal', 'pescAcademicSummaryTypes:SenderNotRepeated', 'pescAcademicSummaryTypes:TransferOnly', 'pescAcademicSummaryTypes:AllNotRepeated', 'pescAcademicSummaryTypes:Cumulative', 'pescAcademicSummaryTypes:NonWeighted', 'pescAcademicSummaryTypes:DegreeApplicable', 'pescAcademicSummaryTypes:ConvertedFrom', 'pescAcademicSummaryTypes:ConvertedTo', 'pescAcademicSummaryTypes:Weighted', 'pescAcademicSummaryTypes:CarryoverCredit', 'pescAcademicSummaryTypes:UserDefined', 'pescAcademicSummaryTypes:NonDegreeApplicable']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeAcademicSummaryType
@@ -104,7 +111,7 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Focus Node: <https://example.edu/sessionSummary001>
 	Value Node: Literal("Suspension")
 	Result Path: pesc:delinquencies
-	Message: Value Literal("Suspension") not in list ['pescDelinquencyCodes:ProbationDiscipline', 'pescDelinquencyCodes:SuspensionDiscipline', 'pescDelinquencyCodes:ExclusionDiscipline', 'pescDelinquencyCodes:SuspensionGPA', 'pescDelinquencyCodes:ProbationGPA', 'pescDelinquencyCodes:Other', 'pescDelinquencyCodes:ExclusionAcademic', 'pescDelinquencyCodes:GoodStanding', 'pescDelinquencyCodes:ProbationHours', 'pescDelinquencyCodes:SuspensionHours', 'pescDelinquencyCodes:Unknown']
+	Message: Value Literal("Suspension") not in list ['pescDelinquencyCodes:ExclusionAcademic', 'pescDelinquencyCodes:SuspensionDiscipline', 'pescDelinquencyCodes:ExclusionDiscipline', 'pescDelinquencyCodes:ProbationHours', 'pescDelinquencyCodes:GoodStanding', 'pescDelinquencyCodes:SuspensionGPA', 'pescDelinquencyCodes:ProbationDiscipline', 'pescDelinquencyCodes:Other', 'pescDelinquencyCodes:ProbationGPA', 'pescDelinquencyCodes:Unknown', 'pescDelinquencyCodes:SuspensionHours']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeDelinquencies
@@ -160,6 +167,13 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Focus Node: <https://example.edu/gpa>
 			Result Path: rdf:type
 			Message: Less than 1 values on <https://example.edu/gpa>->rdf:type
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: ex:sessionsummaryshapeGPASummary
+	Focus Node: <https://example.edu/sessionSummary001>
+	Value Node: <https://example.edu/gpa>
+	Result Path: pesc:gpaSummary
+	Message: Value is not of Node Kind sh:BlankNode
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:sessionsummaryshapeIsSummaryForProgram

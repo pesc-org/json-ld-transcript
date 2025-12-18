@@ -50,7 +50,7 @@
     ceterms:targetContactPoint [
         a ceterms:ContactPoint ;
         ceterms:contactType "Home address"@en ;
-        ceterms:address <https://example.org/address/001> ;
+        ceterms:address <https://example.org/address/001> ;  #should be a BNODE
         pesc:attentionLine "M. Testy Test" ; # not a langString
     ] ;
     pesc:hasAchievement <https://example.edu/achievement001> .
@@ -65,7 +65,7 @@
 <https://example.edu/Source#id> a ceds:C200239 ;
     ceterms:name "Example Source"@en .
 
-<https://example.org/address/001> a ceterms:PostalAddress ;
+<https://example.org/address/001> a ceterms:PostalAddress ; # wrong shape
 #    ceterms:streetAddress "42 No Street"@en ; missing mandatory
     ceterms:addressLocality "Sunnydale" ; # wrong datatype
     ceterms:addressRegion "CA" ; # wrong datatype

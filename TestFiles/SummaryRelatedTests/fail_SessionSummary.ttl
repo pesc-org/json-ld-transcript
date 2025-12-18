@@ -66,8 +66,8 @@
     pesc:source "https://example.edu/Source#id" ; # 2 fail wrong node kind, wrong class 
     pesc:academicSummaryType "DegreeApplicable" ; # 2 fail wrong node kind, not in list
     pesc:academicSummaryLevel "Undergraduate" ; # 2 fail wrong node kind, not in list
-    pesc:gpaSummary <https://example.edu/gpa> ; # 2 fail wrong class, wrong shape
-    pesc:academicHonors <https://example.edu/honors> ; # 2 fail wrong class, wrong shape
+    pesc:gpaSummary <https://example.edu/gpa> ; # 3 fail not BNode, wrong class, wrong shape
+    pesc:academicHonors <https://example.edu/honors> ; # 3 fail not BNode, wrong class, wrong shape
     pesc:classRank 3.5 ; # 1 fail wrong datatype
     pesc:classSize 99999 ; # 1 fail too large
     pesc:delinquencies "Suspension" ;  # 2 fail, wrong node kind, not in list

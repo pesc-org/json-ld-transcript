@@ -233,7 +233,7 @@
     sh:class ceterms:PostalAddress ;
     sh:name "Address"@en-US ;
     sh:node <PostalAddressShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path ceterms:address .
 
 <contactshapeAttentionLine> a sh:PropertyShape ;
@@ -261,14 +261,14 @@
     sh:class pesc:Phone ;
     sh:name "FAX Phone"@en-US ;
     sh:node <PhoneShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:faxPhone .
 
 <contactshapePhone> a sh:PropertyShape ;
     sh:class pesc:Phone ;
     sh:name "Phone"@en-US ;
     sh:node <PhoneShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:phone .
 
 <contactshapeType> a sh:PropertyShape ;

@@ -301,14 +301,14 @@
     sh:class pesc:AcademicDegreeRequirement ;
     sh:name "Academic Degree Requirement"@en-US ;
     sh:node <AcademicDegreeRequirementShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:academicDegreeRequirement .
 
 <academicawardshapeAcademicHonors> a sh:PropertyShape ;
     sh:class pesc:AcademicHonors ;
     sh:name "Academic Honors"@en-US ;
     sh:node <AcademicHonorsShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:academicHonors .
 
 <academicawardshapeType> a sh:PropertyShape ;
@@ -401,10 +401,10 @@
     sh:path pesc:inCourse .
 
 <additionalstudentachievmentshapeLanguageAchieved> a sh:PropertyShape ;
+    sh:class ceds:C200293 ;
     sh:name "Language Achieved"@en-US ;
     sh:node <LanguageShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:or ( [ sh:class <class> ] [ sh:class ceds:C200293 ] ) ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:languageAchieved .
 
 <additionalstudentachievmentshapeProficiencyAchieved> a sh:PropertyShape ;
@@ -447,7 +447,7 @@
     sh:maxCount 1 ;
     sh:name "Course Equivalent Grade"@en-US ;
     sh:node <GradeShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:courseEquivalentGrade .
 
 <courseachievementshapeCourseGrade> a sh:PropertyShape ;
@@ -455,7 +455,7 @@
     sh:maxCount 1 ;
     sh:name "Course Grade"@en-US ;
     sh:node <GradeShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:courseGrade .
 
 <courseachievementshapeCourseQualityPointsEarned> a sh:PropertyShape ;
@@ -471,7 +471,7 @@
     sh:maxCount 1 ;
     sh:name "Course Supplemental Grade"@en-US ;
     sh:node <CourseSupplementalGradeShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:courseSupplementalGrade .
 
 <courseachievementshapeHasCourseRepeatCode> a sh:PropertyShape ;
@@ -588,7 +588,7 @@
     sh:maxCount 1 ;
     sh:name "Supplemental Grade"@en-US ;
     sh:node <CourseSupplementalGradeShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:supplementalGrade .
 
 <gradeshapeType> a sh:PropertyShape ;
