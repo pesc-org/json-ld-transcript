@@ -3,10 +3,10 @@
 ,ProgramSummaryShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,,Not Recommended,
 ,SessionSummaryShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,,Not Recommended,
 ,AcademicSummaryShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,,Optional,
-,AwardSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Recommended,
-,ProgramSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Recommended,
-,SessionSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Optional,
-229,AcademicSummaryShape,pesc:academicHonors,Academic Honors,FALSE,FALSE,IRI BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Recommended,
+,AwardSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Recommended,
+,ProgramSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Recommended,
+,SessionSummaryShape,pesc:academicHonors,Academic Honors,FALSE,TRUE,BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Optional,
+229,AcademicSummaryShape,pesc:academicHonors,Academic Honors,FALSE,FALSE,BNODE,,,,AcademicHonorsShape,pesc:AcademicHonors,,Recommended,
 ,AwardSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescCreditLevels:Dual
 pescCreditLevels:DualGraduate
 pescCreditLevels:Undergraduate
@@ -203,10 +203,10 @@ pescDelinquencyCodes:Other",picklist,,,,Not Recommended,"It is recommended that 
 354,AcademicSummaryShape,pesc:exitReasonCode,Exit Reason Code,FALSE,FALSE,Literal,xsd:string,60,maxLength,,,,Not Recommended,"This data element is useful for the high school transcript, but is not appropriate for the College Transcript."
 276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
 275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
-,AwardSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,pesc:GPA,,Recommended,
-,ProgramSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,pesc:GPA,,Optional,Would not typically be included on a College Transcript.
-,SessionSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,pesc:GPA,,Recommended,This would typically be where items like Dean’s List at the end of a session are listed.
-266,AcademicSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,IRI BNODE,,,,GPAShape,pesc:GPA,,Recommended,
+,AwardSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Recommended,
+,ProgramSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Optional,Would not typically be included on a College Transcript.
+,SessionSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Recommended,This would typically be where items like Dean’s List at the end of a session are listed.
+266,AcademicSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Recommended,
 272,GPAShape,pesc:gradePointAverage,Grade Point Average,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
 ,StudentShape,pesc:hasSummary,Has Summary,TRUE,TRUE,IRI BNODE,,,,,"pesc:AcademicSummary
 pesc:AwardSummary

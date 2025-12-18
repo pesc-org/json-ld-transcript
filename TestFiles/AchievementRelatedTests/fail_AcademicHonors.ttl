@@ -54,7 +54,7 @@
     ceds:P000003 "Example Award"^^xsd:string ; # Academic Award Title
     pesc:inProgram <https://example.edu/Program/001> ;
     pesc:school <https://example.edu/Source#id> ;
-    pesc:academicHonors <https://example.edu/academicHonors/001> ;
+    pesc:academicHonors <https://example.edu/academicHonors/001> ; # 2 fail, wrong shape, not BNode
 .
 
 

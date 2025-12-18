@@ -1,487 +1,607 @@
-@prefix ceds: <http://ceds.ed.gov/terms#> .
-@prefix ceterms: <https://purl.org/ctdl/terms/> .
-@prefix elm:  <http://data.europa.eu/snb/model/elm/>.
-@prefix ex: <http://example.org/> .
-@prefix pesc: <https://pesc.org/terms/> .
-@prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
-@prefix pescCreditLevels:	<https://pesc.org/vocabs/AcademicSummaryLevels#> .
-@prefix pescAcademicSummaryTypes:	<https://pesc.org/vocabs/AcademicSummaryTypes#> .
-@prefix pescAccreditationBodyCodes:	<https://pesc.org/vocabs/AccreditationBodyCodes#> .
-@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
-@prefix pescConditionsMetCodes:	<https://pesc.org/vocabs/ConditionsMetCodes#> .
-@prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
-@prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
-@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
-@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
-@prefix pescDelinquencyCodes:	<https://pesc.org/vocabs/DelinquencyCodes#> .
-@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
-@prefix pescGradeStatusCodes:	<https://pesc.org/vocabs/GradeStatusCodes#> .
-@prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
-@prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
-@prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
-@prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#> .
-@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
-@prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
-@prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
-@prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
-@prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
-@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#> .
-@prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
-@prefix pescTestScoreMethods:	<https://pesc.org/vocabs/TestScoreMethods#> .
-@prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
-@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ceds: <http://ceds.ed.gov/terms#>.
+@prefix ceterms: <https://purl.org/ctdl/terms/>.
+@prefix elm: <http://data.europa.eu/snb/model/elm/>.
+@prefix ex: <http://example.org/>.
+@prefix pesc: <https://pesc.org/terms/>.
+@prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#>.
+@prefix pescCreditLevels: <https://pesc.org/vocabs/AcademicSummaryLevels#>.
+@prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#>.
+@prefix pescAccreditationBodyCodes: <https://pesc.org/vocabs/AccreditationBodyCodes#>.
+@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#>.
+@prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#>.
+@prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#>.
+@prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#>.
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#>.
+@prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#>.
+@prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DelinquencyCodes#>.
+@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#>.
+@prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#>.
+@prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#>.
+@prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#>.
+@prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#>.
+@prefix pescLanguageUsageCodes: <https://pesc.org/vocabs/LanguageUsageCodes#>.
+@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#>.
+@prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#>.
+@prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#>.
+@prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#>.
+@prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#>.
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#>.
+@prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#>.
+@prefix pescTestScoreMethods: <https://pesc.org/vocabs/TestScoreMethods#>.
+@prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#>.
+@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://example.edu/transcripts/050330001> a pesc:CollegeTranscript ;
-    pesc:createdDateTime "2023-05-08T14:17:29-05:00"^^xsd:dateTime ;
-    pesc:destination <https://example.edu/Destination#id> ;
-    pesc:documentID "050330001" ;
-    pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord ;
-    pesc:describesAchievement <https://example.edu/achievement001>, # academic award
-        <https://example.edu/achievement002>, # test score
-        <https://example.edu/achievement003>, # course achievement
-        <https://example.edu/achievement004>, # licensure achievement
-        <https://example.edu/achievement005>; # additional achievement
-    ceterms:hasPart <https://example.edu/awardSummary001>,
-        <https://example.edu/programSummary001>,
-        <https://example.edu/sessionSummary001>,
-        <https://example.edu/academicSummary001> ;
-    pesc:source <https://example.edu/Source#id> ;
-    pesc:student <https://people.pjjk.net/test> ;
-    pesc:transmissionType pescTransmissionTypes:Original .
+<https://example.edu/transcripts/050330001> a pesc:CollegeTranscript;
+  pesc:createdDateTime "2023-05-08T14:17:29-05:00"^^xsd:dateTime;
+  pesc:destination <https://example.edu/Destination#id>;
+  pesc:documentID "050330001";
+  pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord;
+  pesc:describesAchievement <https://example.edu/achievement001>,
+    # academic award
+    <https://example.edu/achievement002>,
+    # test score
+    <https://example.edu/achievement003>,
+    # course achievement
+    <https://example.edu/achievement004>,
+    # licensure achievement
+    <https://example.edu/achievement005>;
+  # additional achievement
+  ceterms:hasPart <https://example.edu/awardSummary001>,
+    <https://example.edu/programSummary001>,
+    <https://example.edu/sessionSummary001>,
+    <https://example.edu/academicSummary001>;
+  pesc:source <https://example.edu/Source#id>;
+  pesc:student <https://people.pjjk.net/test>;
+  pesc:transmissionType pescTransmissionTypes:Original.
 
-<https://example.edu/Session/001> a ceds:C200245 ;# AcademicSession 
-    ceds:P000252 "2019-09"^^xsd:gYearMonth ; # session designator
-    pesc:sessionDesignatorSuffix "II";
-    ceterms:name "Fall 2019"@en ;
-    ceds:P000254 pescSessionTypes:FallSession ; # Session type
-    pesc:sessionSchoolYear "2019-2020" ;
-    ceds:P000251  "2019-09-01"^^xsd:date ; # Session Begin date
-    ceds:P000253 "2019-12-19"^^xsd:date; # Session End date
-.
+<https://example.edu/Session/001> a ceds:C200245;
+  # AcademicSession 
+  ceds:P000252 "2019-09"^^xsd:gYearMonth;
+  # session designator
+  pesc:sessionDesignatorSuffix "II";
+  ceterms:name "Fall 2019"@en;
+  ceds:P000254 pescSessionTypes:FallSession;
+  # Session type
+  pesc:sessionSchoolYear "2019-2020";
+  ceds:P000251 "2019-09-01"^^xsd:date;
+  # Session Begin date
+  ceds:P000253 "2019-12-19"^^xsd:date.
 
-<https://example.edu/Course/001> a ceds:C200328 ;  #Course
-    ceds:P000043 "12.1234"; # CIP 
-    ceds:P000057 ceds:NI000057115402 ; # Credit units Carnegie
-    ceds:P000058 15.0 ; # credit value
-    ceds:P000060 ceds:NI000060116257; # Grade point applicability
-    ceds:P000066 "abbrev" ; #Course subject abbreviation
-    ceds:P000068 "Example Course"^^xsd:string ; # course title 
-    ceds:P001298 "A-F" ; # Grade scale code; to do: valid values 
-    ceds:P001303 ceds:NI001303116728 ; # credit basis: regular
-    ceds:P001304 ceds:NI001304117129 ; # credit level: UpperDivision
-    ceds:P001312 ceds:NI001312127892 ; #course level Honors
-    ceds:P001314 "101" ; # Course Number (as a string)
-    ceds:P001414 "0123456789" ; # NCES course map code
-    ceds:P001420 "Course101" ;  # Original course identifier
-    pesc:agencyCourseID "ABC101"; # Agency course ID
-    ceterms:sced "12345X1.0512" ; # 12 digit sced code
-    ceds:P001517 "01234" ; # 5 digiti sced code
-    ceds:P001518 ceds:NI001518118404 ; # copurse subject area code ;
-    pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram ;
-    ceterms:offeredBy <https://example.edu/Source#id> ;
-    pesc:requirement <https://example.edu/reqs/1> ;
-    pesc:attribute <https://example.edu/attr/1> ;
-    pesc:proficiency <https://example.edu/prof/1> ;
-    pesc:licensure <https://example.edu/licensure/1> ;
-    ceds:P600267 <https://example.edu/CourseSection/001> ; # has Section
-    ceds:P000448 "eng" ; # Instruction language
-    pesc:overrideSchoolCourseNumber "101" ; 
-    pesc:courseOverrideSchool  <https://example.edu/Destination#id> ; 
-.
+# Session End date
+<https://example.edu/Course/001> a ceds:C200328;
+  #Course
+  ceds:P000043 "12.1234";
+  # CIP 
+  ceds:P000057 ceds:NI000057115402;
+  # Credit units Carnegie
+  ceds:P000058 15.0;
+  # credit value
+  ceds:P000060 ceds:NI000060116257;
+  # Grade point applicability
+  ceds:P000066 "abbrev";
+  #Course subject abbreviation
+  ceds:P000068 "Example Course"^^xsd:string;
+  # course title 
+  ceds:P001298 "A-F";
+  # Grade scale code; to do: valid values 
+  ceds:P001303 ceds:NI001303116728;
+  # credit basis: regular
+  ceds:P001304 ceds:NI001304117129;
+  # credit level: UpperDivision
+  ceds:P001312 ceds:NI001312127892;
+  #course level Honors
+  ceds:P001314 "101";
+  # Course Number (as a string)
+  ceds:P001414 "0123456789";
+  # NCES course map code
+  ceds:P001420 "Course101";
+  # Original course identifier
+  pesc:agencyCourseID "ABC101";
+  # Agency course ID
+  ceterms:sced "12345X1.0512";
+  # 12 digit sced code
+  ceds:P001517 "01234";
+  # 5 digiti sced code
+  ceds:P001518 ceds:NI001518118404;
+  # copurse subject area code ;
+  pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram;
+  ceterms:offeredBy <https://example.edu/Source#id>;
+  pesc:requirement <https://example.edu/reqs/1>;
+  pesc:attribute <https://example.edu/attr/1>;
+  pesc:proficiency <https://example.edu/prof/1>;
+  pesc:licensure <https://example.edu/licensure/1>;
+  ceds:P600267 <https://example.edu/CourseSection/001>;
+  # has Section
+  ceds:P000448 "eng";
+  # Instruction language
+  pesc:overrideSchoolCourseNumber "101";
+  pesc:courseOverrideSchool <https://example.edu/Destination#id>.
 
-<https://example.edu/CourseSection/001> a ceds:C200332 ;
-    ceds:P001315 "42" ; # course section number as string
-    ceds:P600108 <https://example.edu/Location/001> ; # has location
-    ceds:P000054 "2019-09-05"^^xsd:date	; # Course Begin Date
-    ceds:P000059 "2019-12-16"^^xsd:date	; # Course End Date
-.
+<https://example.edu/CourseSection/001> a ceds:C200332;
+  ceds:P001315 "42";
+  # course section number as string
+  ceds:P600108 <https://example.edu/Location/001>;
+  # has location
+  ceds:P000054 "2019-09-05"^^xsd:date;
+  # Course Begin Date
+  ceds:P000059 "2019-12-16"^^xsd:date.
 
-<https://example.edu/Location/001> a ceds:C200333 ;
-    ceds:P001309 "Site 1" ; # Instruction site name
-    ceds:P001310 ceds:NI001310116323 ; # Instruction site type
-.
+# Course End Date
+<https://example.edu/Location/001> a ceds:C200333;
+  ceds:P001309 "Site 1";
+  # Instruction site name
+  ceds:P001310 ceds:NI001310116323.
 
-<https://example.edu/reqs/1> a ceds:C200065 ;
-    # a Competency Description
-    pesc:rapCode "exR" ;
-    pesc:rapName "Example requirement" ;
-    pesc:rapSubName "Example requirement subname" ;
-.
+# Instruction site type
+<https://example.edu/reqs/1> a ceds:C200065;
+  # a Competency Description
+  pesc:rapCode "exR";
+  pesc:rapName "Example requirement";
+  pesc:rapSubName "Example requirement subname".
 
-<https://example.edu/prof/1>  a ceds:C200065 ;
-    # a Competency Description
-    pesc:rapCode "exP" ;
-    pesc:rapName "Example proficiency" ;
-    pesc:rapSubName "Example proficiency subname" ;
-.
+<https://example.edu/prof/1> a ceds:C200065;
+  # a Competency Description
+  pesc:rapCode "exP";
+  pesc:rapName "Example proficiency";
+  pesc:rapSubName "Example proficiency subname".
 
-<https://example.edu/attr/1> a ceds:C200065 ;
-    pesc:rapCode "exA" ;
-    pesc:rapName "Example Attribute" ;
-    pesc:rapSubName "Example Attribute subname" ;
-.
+<https://example.edu/attr/1> a ceds:C200065;
+  pesc:rapCode "exA";
+  pesc:rapName "Example Attribute";
+  pesc:rapSubName "Example Attribute subname".
 
-<https://example.edu/licensure/1> a pesc:Licensure ;
-    pesc:licensureName "Test license" ;
-.
-<https://example.edu/Destination#id> a ceds:C200239 ;
-    ceterms:name "Example Destination"@en .
+<https://example.edu/licensure/1> a pesc:Licensure;
+  pesc:licensureName "Test license".
 
-<https://example.edu/Program/001> a ceds:C200331; # AcademicProgram 
-    ceterms:name "Example Program"@en ;
-    ceterms:offeredBy <https://example.edu/Offerer#id> ;
-    ceterms:hasPart <https://example.edu/Course/001> ;
-    pesc:programSecondarySchoolCode pescSecondarySchoolCodes:Vocational ;
-    ceds:P000043 "12.1234" ; # CIP code
-    pesc:programHEGISCode "123456" ;
-    pesc:programESISCode "ABCDEF" ;
-    ceterms:codedNotation "EX:P001" ;
-    pesc:academicProgramType pescAcademicProgramTypes:Specialization ;
-.
+<https://example.edu/Destination#id> a ceds:C200239;
+  ceterms:name "Example Destination"@en.
 
-<https://example.edu/Test/001> a ceds:C200010 ; # Assessment
-    ceds:P000028 "Standard Test" ; # Assessment Title
-    ceds:P001067 "ST" ; # Assessment Identifier
-    pesc:hasSubtest <https://example.edu/Test/001A> ;
-.
+<https://example.edu/Program/001> a ceds:C200331;
+  # AcademicProgram 
+  ceterms:name "Example Program"@en;
+  ceterms:offeredBy <https://example.edu/Offerer#id>;
+  ceterms:hasPart <https://example.edu/Course/001>;
+  pesc:programSecondarySchoolCode pescSecondarySchoolCodes:Vocational;
+  ceds:P000043 "12.1234";
+  # CIP code
+  pesc:programHEGISCode "123456";
+  pesc:programESISCode "ABCDEF";
+  ceterms:codedNotation "EX:P001";
+  pesc:academicProgramType pescAcademicProgramTypes:Specialization.
 
-<https://example.edu/Test/001A> a ceds:C200051 ;
-    ceds:P000367 "Standard Test part A" ;
-    ceds:P000275 "STA" ;
-.
+<https://example.edu/Test/001> a ceds:C200010;
+  # Assessment
+  ceds:P000028 "Standard Test";
+  # Assessment Title
+  ceds:P001067 "ST";
+  # Assessment Identifier
+  pesc:hasSubtest <https://example.edu/Test/001A>.
 
+<https://example.edu/Test/001A> a ceds:C200051;
+  ceds:P000367 "Standard Test part A";
+  ceds:P000275 "STA".
 
-<https://people.pjjk.net/test> a ceds:C200275 ; # Person
-    ceds:P600336 [ a ceds:C200377 ;
-            ceds:P000212 "Dr"^^xsd:token ;
-            ceds:P000115 "Testy"^^xsd:token ;
-            ceds:P000184 "Example"^^xsd:token ;
-            ceds:P000172 "Test"^^xsd:token ;
-            ceds:P000121 "IX" ;
-            pesc:nameCode pescNameCodes:Legal ] ;
-    ceds:P600101 [ a ceds:C200377 ;
-            ceds:P000115 "Testing"^^xsd:token ;
-            ceds:P000172 "Testy"^^xsd:token ] ;
-    ceds:P600052 [  # has person language
-        a ceds:C200293 ; # person language
-        ceds:P000317 "eng" ; # iso 639-2 language code
-        ceds:P000316 pescLanguageUsageCodes:Writing ,
-        pescLanguageUsageCodes:Reading ,
-        ceds:NI000316151878 ; # written correspondence 
-        pesc:languageProficiency pescLanguageProficiencyCodes:EnglishOnly;
-    ] ;
-    ceds:P600049 [ # Has Person Identifier
-        a ceds:C200291 ; # a Person Identifier
-        ceds:P001572 "123456789"^^xsd:string ; # Person Identifier
-        ceds:P001075 ceds:NI001075173041 ;
-    ] , [
-        a ceds:C200291  ;  # a Person Identifier
-        ceds:P001572 "123456789"^^xsd:string ; # Person Identifier
-        ceds:P001075 ceds:NI001075173047 ; # Has Student Identification System
-    ] , [
-        a ceds:C200291  ;  # a Person Identifier
-        ceds:P001572 "123456789"^^xsd:string ; # Person Identifier
-        pesc:identifierAssignedBy <https://example.edu/Source#id> ;
-        ceds:P001075 ceds:NI001075173046 ; # Has Student Identification System
+<https://people.pjjk.net/test> a ceds:C200275;
+  # Person
+  ceds:P600336 [
+    a ceds:C200377;
+    ceds:P000212 "Dr"^^xsd:token;
+    ceds:P000115 "Testy"^^xsd:token;
+    ceds:P000184 "Example"^^xsd:token;
+    ceds:P000172 "Test"^^xsd:token;
+    ceds:P000121 "IX";
+    pesc:nameCode pescNameCodes:Legal;
+  ];
+  ceds:P600101 [
+    a ceds:C200377;
+    ceds:P000115 "Testing"^^xsd:token;
+    ceds:P000172 "Testy"^^xsd:token;
+  ];
+  ceds:P600052 [
+    # has person language
+    a ceds:C200293;
+    # person language
+    ceds:P000317 "eng";
+    # iso 639-2 language code
+    ceds:P000316 pescLanguageUsageCodes:Writing,
+      pescLanguageUsageCodes:Reading,
+      ceds:NI000316151878;
+    # written correspondence 
+    pesc:languageProficiency pescLanguageProficiencyCodes:EnglishOnly;
+  ];
+  ceds:P600049 [
+    # Has Person Identifier
+    a ceds:C200291;
+    # a Person Identifier
+    ceds:P001572 "123456789"^^xsd:string;
+    # Person Identifier
+    ceds:P001075 ceds:NI001075173041;
+  ], [
+    a ceds:C200291;
+    # a Person Identifier
+    ceds:P001572 "123456789"^^xsd:string;
+    # Person Identifier
+    ceds:P001075 ceds:NI001075173047;
+  ], [
+    # Has Student Identification System
+    a ceds:C200291;
+    # a Person Identifier
+    ceds:P001572 "123456789"^^xsd:string;
+    # Person Identifier
+    pesc:identifierAssignedBy <https://example.edu/Source#id>;
+    ceds:P001075 ceds:NI001075173046;
+  ];
+  # Has Student Identification System
+  pesc:hasResidency [
+    a pesc:Residency;
+    pesc:stateProvinceCode "CA";
+    pesc:countryCode "US";
+    pesc:stateProvince "California";
+    pesc:countyCode "RNG";
+    pesc:county "Orange County";
+    pesc:country "USA";
+    pesc:residencyStatusCode pescResidencyStatusCodes:NonResident;
+  ];
+  ceterms:targetContactPoint [
+    a ceterms:ContactPoint;
+    ceterms:contactType "Home address"@en;
+    ceterms:address [
+      a ceterms:PostalAddress;
+      ceterms:streetAddress "42 No Street"@en;
+      ceterms:addressLocality "Sunnydale"@en;
+      ceterms:addressRegion "CA"^^xsd:token;
+      ceterms:postalCode "90299"^^xsd:token;
+      ceterms:addressCountry "US"^^xsd:token;
     ];
-    pesc:hasResidency [
-        a pesc:Residency ;
-        pesc:stateProvinceCode "CA" ;
-        pesc:countryCode "US" ;
-        pesc:stateProvince "California" ;
-        pesc:countyCode "RNG" ;
-        pesc:county "Orange County" ;
-        pesc:country "USA" ;
-        pesc:residencyStatusCode pescResidencyStatusCodes:NonResident ;
-    ] ;
-    ceterms:targetContactPoint [
-        a ceterms:ContactPoint ;
-        ceterms:contactType "Home address"@en ;
-        ceterms:address <https://example.org/address/001> ;
-        pesc:attentionLine "Attn: Parent or Gardian of Testy Test"@en ;
-        elm:additionalNote [
-            rdf:type elm:Note ;
-            elm:noteLiteral "A made up contact." ;
-        ]
-    ],[
-        a ceterms:ContactPoint ;
-        ceterms:contactType "Home phone"@en ;
-        pesc:phone [
-            a pesc:Phone ;
-            pesc:countryPrefixCode  "34" ;
-            pesc:phoneNumber  "5551234567" ;
-            pesc:phoneNumberExtension "123" ;
-        ] ;
-        pesc:faxPhone [
-            a pesc:Phone ;
-            pesc:countryPrefixCode  "34" ;
-            pesc:phoneNumber  "5551234568" ;
-            pesc:phoneNumberExtension "123" ;
-        ] ;
-        pesc:attentionLine "Ask for Parent or Gardian of Testy Test"@en ;
-        elm:additionalNote [
-            rdf:type elm:Note ;
-            elm:noteLiteral "A made up contact." ;
-        ] ;
-    ] ;
-    ceds:P000033 "2000-01-01"^^xsd:date ;
-    pesc:birthday "--01-01"^^xsd:gMonthDay ;
-    pesc:birthYear "2000"^^xsd:gYear ;
-    pesc:birthCity "Sunnydale"^^xsd:string ;
-    pesc:birthStateProvinceCode "CA" ;
-    pesc:birthCountry "US" ;
-    pesc:cohortGraduationYear "2024"^^xsd:gYear ;
-    pesc:deceasedIndicator true ;
-    pesc:genderCode pescGenderCodes:Unreported ;
-    pesc:studentLevel pescStudentLevelCodes:CollegeJunior ;
-    pesc:hasAchievement <https://example.edu/achievement001>, # academic award
-        <https://example.edu/achievement002>, # test score
-        <https://example.edu/achievement003>, # course achievement
-        <https://example.edu/achievement004>, # licensure achievement
-        <https://example.edu/achievement005>; # additional achievement
-    pesc:hasSummary <https://example.edu/awardSummary001>,
-        <https://example.edu/programSummary001>,
-        <https://example.edu/sessionSummary001>,
-        <https://example.edu/academicSummary001> ;
+    pesc:attentionLine "Attn: Parent or Gardian of Testy Test"@en;
     elm:additionalNote [
-        rdf:type elm:Note ;
-        elm:noteLiteral "A made up test peson" ;
+      rdf:type elm:Note;
+      elm:noteLiteral "A made up contact.";
     ];
-    pesc:highSchoolAttended <https://example.org/highscool/001>; 
-    ceds:P600502 [              # hasOrganizationIdentification
-        a ceds:C200252 ;        # OrganizationIdentifier
-        ceds:P000826 "1234"^^xsd:token ;   # organizationIdentifer
-        ceds:P000827 pescIdentifierTypes:ACT ; 
-    ].
+  ], [
+    a ceterms:ContactPoint;
+    ceterms:contactType "Home phone"@en;
+    pesc:phone [
+      a pesc:Phone;
+      pesc:countryPrefixCode "34";
+      pesc:phoneNumber "5551234567";
+      pesc:phoneNumberExtension "123";
+    ];
+    pesc:faxPhone [
+      a pesc:Phone;
+      pesc:countryPrefixCode "34";
+      pesc:phoneNumber "5551234568";
+      pesc:phoneNumberExtension "123";
+    ];
+    pesc:attentionLine "Ask for Parent or Gardian of Testy Test"@en;
+    elm:additionalNote [
+      rdf:type elm:Note;
+      elm:noteLiteral "A made up contact.";
+    ];
+  ];
+  ceds:P000033 "2000-01-01"^^xsd:date;
+  pesc:birthday "--01-01"^^xsd:gMonthDay;
+  pesc:birthYear "2000"^^xsd:gYear;
+  pesc:birthCity "Sunnydale"^^xsd:string;
+  pesc:birthStateProvinceCode "CA";
+  pesc:birthCountry "US";
+  pesc:cohortGraduationYear "2024"^^xsd:gYear;
+  pesc:deceasedIndicator true;
+  pesc:genderCode pescGenderCodes:Unreported;
+  pesc:studentLevel pescStudentLevelCodes:CollegeJunior;
+  pesc:hasAchievement <https://example.edu/achievement001>,
+    # academic award
+    <https://example.edu/achievement002>,
+    # test score
+    <https://example.edu/achievement003>,
+    # course achievement
+    <https://example.edu/achievement004>,
+    # licensure achievement
+    <https://example.edu/achievement005>;
+  # additional achievement
+  pesc:hasSummary <https://example.edu/awardSummary001>,
+    <https://example.edu/programSummary001>,
+    <https://example.edu/sessionSummary001>,
+    <https://example.edu/academicSummary001>;
+  elm:additionalNote [
+    rdf:type elm:Note;
+    elm:noteLiteral "A made up test peson";
+  ];
+  pesc:highSchoolAttended <https://example.org/highscool/001>;
+  ceds:P600502 [
+    # hasOrganizationIdentification
+    a ceds:C200252;
+    # OrganizationIdentifier
+    ceds:P000826 "1234"^^xsd:token;
+    # organizationIdentifer
+    ceds:P000827 pescIdentifierTypes:ACT;
+  ].
 
-<https://example.org/highscool/001> a ceds:C200239 ;
-    ceterms:name "Example High"@en ;
-    .
+<https://example.org/highscool/001> a ceds:C200239;
+  ceterms:name "Example High"@en.
 
-<https://example.edu/achievement001> a pesc:Achievement, ceds:C200335 ; # Academic Award
-    ceds:P000001 "1985-05-01"^^xsd:date ;  # Academic Award Date
-    ceds:P000003 "Example Award"^^xsd:string ; # Academic Award Title
-    ceds:P001668  ceds:NI001668151655 ; # Has PESC Award Level Type: 1.1 Cert of Completion
-    pesc:inProgram <https://example.edu/Program/001> ;
-    pesc:school <https://example.edu/Source#id> ;
-    pesc:academicCompletionIndicator true ;
-    pesc:academicCompletionDate "1985-05-01"^^xsd:date ;
-    pesc:academicDegreeRequirement <https://example.edu/academicDegreeRequirement/001> ;
-    pesc:academicHonors <https://example.edu/academicHonors/001>
-.
+<https://example.edu/achievement001> a pesc:Achievement, ceds:C200335;
+  # Academic Award
+  ceds:P000001 "1985-05-01"^^xsd:date;
+  # Academic Award Date
+  ceds:P000003 "Example Award"^^xsd:string;
+  # Academic Award Title
+  ceds:P001668 ceds:NI001668151655;
+  # Has PESC Award Level Type: 1.1 Cert of Completion
+  pesc:inProgram <https://example.edu/Program/001>;
+  pesc:school <https://example.edu/Source#id>;
+  pesc:academicCompletionIndicator true;
+  pesc:academicCompletionDate "1985-05-01"^^xsd:date;
+  pesc:academicDegreeRequirement [
+    a pesc:AcademicDegreeRequirement;
+    pesc:thesisDIssertationTitle "Example Title";
+    pesc:thesisDissertationAdvisor "Example Advisor Name";
+    pesc:URLAddress "https://example.edu/ExampleURL/address"^^xsd:AnyURI;
+  ];
+  pesc:academicHonors [
+    a pesc:AcademicHonors;
+    pesc:honorsTitle "Third";
+    pesc:honorsLevel pescHonorsLevels:ThirdHighest;
+  ].
 
-<https://example.edu/achievement002> 
-    a pesc:Achievement, ceds:C200047 ;
-    pesc:scoreValue "A+" ;
-    ceds:P000369 pescTestScoreMethods:Equated ; # Assessment Score Metric Type
-    pesc:scoreRevisedIndicator "false"^^xsd:boolean ;
-    pesc:scoreInvalidatedIndicator "false"^^xsd:boolean ;
-    pesc:scoreSelfRportedIndicator "false"^^xsd:boolean ;
-    pesc:testDate "2020-08-02"^^xsd:date ;
-    pesc:testYear "2020"^^xsd:gYear ;
-    pesc:testYearMonth "2020-08"^^xsd:gYearMonth ;
-    pesc:studentLevel pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear ;
-    pesc:inTest <https://example.edu/Test/001> ;
-    pesc:inSubtest <https://example.edu/Test/001A> ;
-.
+<https://example.edu/achievement002> a pesc:Achievement, ceds:C200047;
+  pesc:scoreValue "A+";
+  ceds:P000369 pescTestScoreMethods:Equated;
+  # Assessment Score Metric Type
+  pesc:scoreRevisedIndicator "false"^^xsd:boolean;
+  pesc:scoreInvalidatedIndicator "false"^^xsd:boolean;
+  pesc:scoreSelfRportedIndicator "false"^^xsd:boolean;
+  pesc:testDate "2020-08-02"^^xsd:date;
+  pesc:testYear "2020"^^xsd:gYear;
+  pesc:testYearMonth "2020-08"^^xsd:gYearMonth;
+  pesc:studentLevel pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear;
+  pesc:inTest <https://example.edu/Test/001>;
+  pesc:inSubtest <https://example.edu/Test/001A>.
 
+<https://example.edu/Source#id> a ceds:C200239;
+  # a Organization
+  ceterms:name "Example Source"@en;
+  ceds:P600502 [
+    # Has Organization Identifier
+    a ceds:C200252;
+    # a Organization Identifier
+    ceds:P000827 pescIdentifierTypes:OPEid;
+    # Has Organization Identification System
+    ceds:P000826 "00-0000000"^^xsd:token;
+  ], [
+    # Organization Identifier
+    a ceds:C200252;
+    # a Organization Identifier
+    ceds:P000827 pescIdentifierTypes:PSISid;
+    ceds:P000826 "example001"^^xsd:token;
+  ], [
+    a ceds:C200252;
+    # a Organization Identifier
+    ceds:P000827 pescIdentifierTypes:GEOCode;
+    ceds:P000826 "EX12345"^^xsd:token;
+  ];
+  pesc:schoolLevel pescSchoolLevels:Postsecondary;
+  ceterms:targetContactPoint [
+    a ceterms:ContactPoint;
+    ceterms:contactType "Registrar"@en;
+    pesc:attentionLine "Ask for Rick"@en;
+    pesc:phone [
+      a pesc:Phone;
+      pesc:countryPrefixCode "422";
+      pesc:phoneNumber "5551234567";
+      pesc:phoneNumberExtension "123";
+    ];
+  ];
+  ceds:P600472 [
+    # Has Organization Accreditation
+    a ceds:C200240;
+    # Organization Accreditation
+    ceds:P001526 "Some name";
+    pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC;
+  ].
 
-<https://example.edu/academicDegreeRequirement/001> a pesc:AcademicDegreeRequirement ;
-    pesc:thesisDIssertationTitle "Example Title" ;
-    pesc:thesisDissertationAdvisor "Example Advisor Name" ;
-    pesc:URLAddress "https://example.edu/ExampleURL/address"^^xsd:AnyURI
-.
+<https://example.edu/Offerer#id> a ceds:C200239;
+  ceterms:name "Example course offerer"@en.
 
-<https://example.edu/academicHonors/001> a pesc:AcademicHonors;
-    pesc:honorsTitle "Third" ;
-    pesc:honorsLevel pescHonorsLevels:ThirdHighest ;
-.
+<https://example.edu/achievement003> a ceds:C200346;
+  # Postsecondary Student Section
+  pesc:inSection <https://example.edu/CourseSection/001>;
+  # In Section
+  pesc:inSession <https://example.edu/Session/001>;
+  # In Session
+  pesc:inCourse <https://example.edu/Course/001>;
+  # In Course
+  ceds:P001300 "2009-09-12"^^xsd:date;
+  # Course Add Date
+  ceds:P001305 "2009-12-02"^^xsd:date;
+  # Course Drop Date
+  ceds:P000200 42.0;
+  # Number of Credits Earned
+  ceds:P000065 ceds:NI000065116745;
+  # Has Course Repeat Code
+  ceds:P000064 42.0;
+  # Course Quality Points Earned
+  pesc:courseGrade [
+    # Course Grade
+    a pesc:Grade;
+    ceds:P000053 "B-plus";
+    # Course Academic Grade
+    ceds:P001298 "valid code";
+    # Course academic grade scale code
+    ceds:P001299 ceds:NI001299115324;
+    # Has Course Ac. Grade Status Code
+    ceds:P001313 "Tell me a story";
+  ];
+  # Course Narrative Explanation Grade
+  pesc:courseEquivalentGrade [
+    # Course Equivalent Grade
+    a pesc:Grade;
+    ceds:P000053 "B+";
+    # Course Academic Grade
+    ceds:P001298 "other code";
+  ];
+  # Course academic grade scale code
+  pesc:courseSupplementalGrade [
+    # Course Supplemental Grade
+    a pesc:CourseSupplementalGrade;
+    pesc:courseAcademicSupplementalGradeStatusCode pescGradeStatusCodes:HonorsGrade;
+    pesc:supplementalGradeCode pescSupplementalGradeCodes:BlendedFinalGrade;
+    pesc:courseGrade [
+      a pesc:Grade;
+      ceds:P000053 "B";
+      # Course Academic Grade
+      ceds:P001298 "code";
+    ];
+  ].
 
+# Course academic grade scale code
+<https://example.edu/achievement004> a pesc:LicensureAchievement;
+  pesc:licensureAchieved <https://example.edu/licensure/1>;
+  pesc:inCourse <https://example.edu/Course/001>;
+  pesc:licensurePassageDate "2009-09-12"^^xsd:date.
 
-<https://example.edu/Source#id> a ceds:C200239 ; # a Organization
-    ceterms:name "Example Source"@en ;
-    ceds:P600502 [  # Has Organization Identifier
-        a ceds:C200252 ; # a Organization Identifier
-        ceds:P000827 pescIdentifierTypes:OPEid ; # Has Organization Identification System
-        ceds:P000826 "00-0000000"^^xsd:token ; # Organization Identifier
-    ] , [
-        a ceds:C200252 ; # a Organization Identifier
-        ceds:P000827 pescIdentifierTypes:PSISid ;
-        ceds:P000826 "example001"^^xsd:token
-    ] , [
-        a ceds:C200252 ; # a Organization Identifier
-        ceds:P000827 pescIdentifierTypes:GEOCode ;
-        ceds:P000826 "EX12345"^^xsd:token
-    ] ;
-    pesc:schoolLevel pescSchoolLevels:Postsecondary ;
-    ceterms:targetContactPoint [
-        a ceterms:ContactPoint ;
-        ceterms:contactType "Registrar"@en ;
-        pesc:attentionLine "Ask for Rick"@en ;
-        pesc:phone [
-            a pesc:Phone ;
-            pesc:countryPrefixCode  "422" ;
-            pesc:phoneNumber  "5551234567" ;
-            pesc:phoneNumberExtension "123" ;
-        ]
-    ] ;
-    ceds:P600472 [  # Has Organization Accreditation
-        a ceds:C200240 ; # Organization Accreditation
-        ceds:P001526 "Some name" ;
-        pesc:accreditationBodyCode pescAccreditationBodyCodes:NCA-HLC ;
-    ]
-    .
+<https://example.edu/achievement005> a pesc:AdditionalStudentAchievement;
+  pesc:requirementAchieved <https://example.edu/reqs/1>;
+  pesc:attributeAchieved <https://example.edu/attr/1>;
+  pesc:proficiencyAchieved <https://example.edu/prof/1>;
+  pesc:languageAchieved [
+    a ceds:C200293;
+    # person language 
+    ceds:P000317 "fra";
+    # iso 639-2 language code
+    ceds:P000316 pescLanguageUsageCodes:Reading;
+    pesc:languageProficiency pescLanguageProficiencyCodes:Fair;
+  ];
+  pesc:inCourse <https://example.edu/Course/001>;
+  pesc:conditionsMetDate "2009-09-12"^^xsd:date;
+  pesc:conditionsMetCode pescConditionsMetCodes:Yes.
 
-<https://example.org/address/001> a ceterms:PostalAddress ;
-    ceterms:streetAddress "42 No Street"@en ;
-    ceterms:addressLocality "Sunnydale"@en ;
-    ceterms:addressRegion "CA"^^xsd:token ;
-    ceterms:postalCode "90299"^^xsd:token ;
-    ceterms:addressCountry "US"^^xsd:token ;
-    .
+<https://example.edu/awardSummary001> a pesc:AwardSummary;
+  pesc:source <https://example.edu/Source#id>;
+  pesc:isSummaryForAward <https://example.edu/achievement001>;
+  pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable;
+  pesc:academicSummaryLevel pescCreditLevels:Undergraduate;
+  pesc:gpaSummary [
+    a pesc:GPA;
+    pesc:creditHoursAttempted "12"^^xsd:decimal;
+    pesc:creditHoursEarned "12"^^xsd:decimal;
+    pesc:creditHoursRequired "12"^^xsd:decimal;
+    pesc:creditHoursDeficient "0"^^xsd:decimal;
+    ceds:P000057 ceds:NI000057116841;
+    pesc:gradePointAverage "3.75"^^xsd:decimal;
+    pesc:totalQualityPoints "45"^^xsd:decimal;
+    pesc:creditHoursForGPA "12"^^xsd:decimal;
+    pesc:gpaRangeMinimum "0"^^xsd:decimal;
+    pesc:gpaRangeMaximum "4"^^xsd:decimal;
+  ];
+  pesc:academicHonors [
+    a pesc:AcademicHonors;
+    pesc:honorsTitle "cum laude";
+    pesc:honorsLevel pescHonorsLevels:ThirdHighest;
+  ];
+  pesc:classRank 3;
+  pesc:classSize 9999;
+  #    pesc:highSchoolCreditSummary
+  pesc:isSummaryForProgram <https://example.edu/Program/001>.
 
-<https://example.edu/Offerer#id> a ceds:C200239 ;
-    ceterms:name "Example course offerer"@en ;
-    .
+<https://example.edu/programSummary001> a pesc:ProgramSummary;
+  pesc:source <https://example.edu/Source#id>;
+  pesc:isSummaryForProgram <https://example.edu/Program/001>;
+  pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable;
+  pesc:academicSummaryLevel pescCreditLevels:Undergraduate;
+  pesc:gpaSummary [
+    a pesc:GPA;
+    pesc:creditHoursAttempted "12"^^xsd:decimal;
+    pesc:creditHoursEarned "12"^^xsd:decimal;
+    pesc:creditHoursRequired "12"^^xsd:decimal;
+    pesc:creditHoursDeficient "0"^^xsd:decimal;
+    ceds:P000057 ceds:NI000057116841;
+    pesc:gradePointAverage "3.75"^^xsd:decimal;
+    pesc:totalQualityPoints "45"^^xsd:decimal;
+    pesc:creditHoursForGPA "12"^^xsd:decimal;
+    pesc:gpaRangeMinimum "0"^^xsd:decimal;
+    pesc:gpaRangeMaximum "4"^^xsd:decimal;
+  ];
+  pesc:academicHonors [
+    a pesc:AcademicHonors;
+    pesc:honorsTitle "cum laude";
+    pesc:honorsLevel pescHonorsLevels:ThirdHighest;
+  ];
+  pesc:classRank 3;
+  pesc:classSize 9999;
+  pesc:delinquencies pescDelinquencyCodes:SuspensionGPA.
 
-<https://example.edu/achievement003> a ceds:C200346 ;   # Postsecondary Student Section
-    pesc:inSection	<https://example.edu/CourseSection/001> ;   # In Section
-    pesc:inSession	<https://example.edu/Session/001> ; # In Session
-    pesc:inCourse	<https://example.edu/Course/001> ;  # In Course
-    ceds:P001300 "2009-09-12"^^xsd:date ;   # Course Add Date
-    ceds:P001305 "2009-12-02"^^xsd:date	;   # Course Drop Date
-    ceds:P000200 42.0 ;	# Number of Credits Earned
-    ceds:P000065 ceds:NI000065116745 ;	# Has Course Repeat Code
-    ceds:P000064 42.0 ;	# Course Quality Points Earned
-    pesc:courseGrade                    # Course Grade
-    [    a pesc:Grade ;
-        ceds:P000053 "B-plus" ;         # Course Academic Grade
-        ceds:P001298 "valid code" ;     # Course academic grade scale code
-        ceds:P001299 ceds:NI001299115324 ;  # Has Course Ac. Grade Status Code
-        ceds:P001313 "Tell me a story" ;    # Course Narrative Explanation Grade
-    ] ;
-    pesc:courseEquivalentGrade	    # Course Equivalent Grade
-    [   a pesc:Grade ;
-        ceds:P000053 "B+" ;         # Course Academic Grade
-        ceds:P001298 "other code" ; # Course academic grade scale code
-    ] ; 
-    pesc:courseSupplementalGrade	# Course Supplemental Grade
-    [   a pesc:CourseSupplementalGrade ;
-        pesc:courseAcademicSupplementalGradeStatusCode pescGradeStatusCodes:HonorsGrade ;
-        pesc:supplementalGradeCode pescSupplementalGradeCodes:BlendedFinalGrade ;
-        pesc:courseGrade [   
-            a pesc:Grade ;
-            ceds:P000053 "B" ;         # Course Academic Grade
-            ceds:P001298 "code" ; # Course academic grade scale code
-        ] ; 
-    ]
-.
-
-<https://example.edu/achievement004> a pesc:LicensureAchievement ;
-    pesc:licensureAchieved <https://example.edu/licensure/1> ;
-    pesc:inCourse <https://example.edu/Course/001> ;
-    pesc:licensurePassageDate "2009-09-12"^^xsd:date ;
-.
-
-<https://example.edu/achievement005> a pesc:AdditionalStudentAchievement ;
-    pesc:requirementAchieved <https://example.edu/reqs/1> ;
-    pesc:attributeAchieved <https://example.edu/attr/1> ;
-    pesc:proficiencyAchieved <https://example.edu/prof/1> ;
-    pesc:languageAchieved <https://example.edu/lang/1> ;
-    pesc:inCourse <https://example.edu/Course/001> ;
-    pesc:conditionsMetDate "2009-09-12"^^xsd:date ;
-    pesc:conditionsMetCode pescConditionsMetCodes:Yes ;
-.
-
-<https://example.edu/lang/1> a ceds:C200293 ; # person language 
-    ceds:P000317 "fra" ; # iso 639-2 language code
-    ceds:P000316 pescLanguageUsageCodes:Reading ;
-    pesc:languageProficiency pescLanguageProficiencyCodes:Fair ;
-.
-
-<https://example.edu/awardSummary001> a pesc:AwardSummary ;
-    pesc:source <https://example.edu/Source#id> ;
-    pesc:isSummaryForAward <https://example.edu/achievement001> ;
-    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
-    pesc:gpaSummary <https://example.edu/gpa001> ;
-    pesc:academicHonors <https://example.edu/honors001> ;
-    pesc:classRank 3 ;
-    pesc:classSize 9999 ;
 #    pesc:highSchoolCreditSummary
-    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
-.
+<https://example.edu/sessionSummary001> a pesc:SessionSummary;
+  pesc:source <https://example.edu/Source#id>;
+  pesc:isSummaryForSession <https://example.edu/Session/001>;
+  pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable;
+  pesc:academicSummaryLevel pescCreditLevels:Undergraduate;
+  pesc:gpaSummary [
+    a pesc:GPA;
+    pesc:creditHoursAttempted "12"^^xsd:decimal;
+    pesc:creditHoursEarned "12"^^xsd:decimal;
+    pesc:creditHoursRequired "12"^^xsd:decimal;
+    pesc:creditHoursDeficient "0"^^xsd:decimal;
+    ceds:P000057 ceds:NI000057116841;
+    pesc:gradePointAverage "3.75"^^xsd:decimal;
+    pesc:totalQualityPoints "45"^^xsd:decimal;
+    pesc:creditHoursForGPA "12"^^xsd:decimal;
+    pesc:gpaRangeMinimum "0"^^xsd:decimal;
+    pesc:gpaRangeMaximum "4"^^xsd:decimal;
+  ];
+  pesc:academicHonors [
+    a pesc:AcademicHonors;
+    pesc:honorsTitle "cum laude";
+    pesc:honorsLevel pescHonorsLevels:ThirdHighest;
+  ];
+  pesc:classRank 3;
+  pesc:classSize 9999;
+  #    pesc:highSchoolCreditSummary
+  pesc:isSummaryForProgram <https://example.edu/Program/001>;
+  pesc:delinquencies pescDelinquencyCodes:ProbationGPA;
+  pesc:entryDate "2022-03-23"^^xsd:date;
+  pesc:exitDate "2024-06-23"^^xsd:date;
+  pesc:exitReasonCode "Gave up";
+  pesc:classRankSessionCount 1000;
+  pesc:classRankDate "2024-06-23"^^xsd:date;
+  pesc:classRankYear "2024"^^xsd:gYear;
+  pesc:classRankYearMonth "2024-06"^^xsd:gYearMonth.
 
-<https://example.edu/programSummary001> a pesc:ProgramSummary ;
-    pesc:source <https://example.edu/Source#id> ;
-    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
-    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
-    pesc:gpaSummary <https://example.edu/gpa001> ;
-    pesc:academicHonors <https://example.edu/honors001> ;
-    pesc:classRank 3 ;
-    pesc:classSize 9999 ;
-    pesc:delinquencies pescDelinquencyCodes:SuspensionGPA ;
-#    pesc:highSchoolCreditSummary
-.
+<https://example.edu/academicSummary001> a pesc:AcademicSummary;
+  pesc:source <https://example.edu/Source#id>;
+  pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable;
+  pesc:academicSummaryLevel pescCreditLevels:Undergraduate;
+  pesc:gpaSummary [
+    a pesc:GPA;
+    pesc:creditHoursAttempted "12"^^xsd:decimal;
+    pesc:creditHoursEarned "12"^^xsd:decimal;
+    pesc:creditHoursRequired "12"^^xsd:decimal;
+    pesc:creditHoursDeficient "0"^^xsd:decimal;
+    ceds:P000057 ceds:NI000057116841;
+    pesc:gradePointAverage "3.75"^^xsd:decimal;
+    pesc:totalQualityPoints "45"^^xsd:decimal;
+    pesc:creditHoursForGPA "12"^^xsd:decimal;
+    pesc:gpaRangeMinimum "0"^^xsd:decimal;
+    pesc:gpaRangeMaximum "4"^^xsd:decimal;
+  ];
+  pesc:academicHonors [
+    a pesc:AcademicHonors;
+    pesc:honorsTitle "cum laude";
+    pesc:honorsLevel pescHonorsLevels:ThirdHighest;
+  ];
+  pesc:classRank 3;
+  pesc:classSize 9999;
+  #    pesc:highSchoolCreditSummary
+  pesc:isSummaryForProgram <https://example.edu/Program/001>;
+  pesc:delinquencies pescDelinquencyCodes:ProbationGPA;
+  pesc:entryDate "2022-03-23"^^xsd:date;
+  pesc:exitDate "2024-06-23"^^xsd:date;
+  pesc:exitReasonCode "Gave up";
+  pesc:classRankSessionCount 1000;
+  pesc:classRankDate "2024-06-23"^^xsd:date;
+  pesc:classRankYear "2024"^^xsd:gYear;
+  pesc:classRankYearMonth "2024-06"^^xsd:gYearMonth.
 
-<https://example.edu/sessionSummary001> a pesc:SessionSummary ;
-    pesc:source <https://example.edu/Source#id> ;
-    pesc:isSummaryForSession <https://example.edu/Session/001> ;
-    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
-    pesc:gpaSummary <https://example.edu/gpa001> ;
-    pesc:academicHonors <https://example.edu/honors001> ;
-    pesc:classRank 3 ;
-    pesc:classSize 9999 ;
-#    pesc:highSchoolCreditSummary
-    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
-    pesc:delinquencies pescDelinquencyCodes:ProbationGPA ;
-    pesc:entryDate "2022-03-23"^^xsd:date ;
-    pesc:exitDate "2024-06-23"^^xsd:date ;
-    pesc:exitReasonCode "Gave up" ;
-    pesc:classRankSessionCount 1000 ;
-    pesc:classRankDate "2024-06-23"^^xsd:date ;
-    pesc:classRankYear  "2024"^^xsd:gYear ;
-    pesc:classRankYearMonth  "2024-06"^^xsd:gYearMonth ;
-.
-
-<https://example.edu/academicSummary001> a pesc:AcademicSummary ;
-    pesc:source <https://example.edu/Source#id> ;
-    pesc:academicSummaryType pescAcademicSummaryTypes:DegreeApplicable ;
-    pesc:academicSummaryLevel pescCreditLevels:Undergraduate ;
-    pesc:gpaSummary <https://example.edu/gpa001> ;
-    pesc:academicHonors <https://example.edu/honors001> ;
-    pesc:classRank 3 ;
-    pesc:classSize 9999 ;
-#    pesc:highSchoolCreditSummary
-    pesc:isSummaryForProgram <https://example.edu/Program/001> ;
-    pesc:delinquencies pescDelinquencyCodes:ProbationGPA ;
-    pesc:entryDate "2022-03-23"^^xsd:date ;
-    pesc:exitDate "2024-06-23"^^xsd:date ;
-    pesc:exitReasonCode "Gave up" ;
-    pesc:classRankSessionCount 1000 ;
-    pesc:classRankDate "2024-06-23"^^xsd:date ;
-    pesc:classRankYear  "2024"^^xsd:gYear ;
-    pesc:classRankYearMonth  "2024-06"^^xsd:gYearMonth ;
-.
-
-<https://example.edu/gpa001> a pesc:GPA ;
-    pesc:creditHoursAttempted "12"^^xsd:decimal ;
-    pesc:creditHoursEarned "12"^^xsd:decimal ;
-    pesc:creditHoursRequired "12"^^xsd:decimal ;
-    pesc:creditHoursDeficient "0"^^xsd:decimal ;
-    ceds:P000057 ceds:NI000057116841 ;
-    pesc:gradePointAverage "3.75"^^xsd:decimal ;
-    pesc:totalQualityPoints "45"^^xsd:decimal ;
-    pesc:creditHoursForGPA "12"^^xsd:decimal ;
-    pesc:gpaRangeMinimum "0"^^xsd:decimal ;
-    pesc:gpaRangeMaximum "4"^^xsd:decimal ;
-.
-
-<https://example.edu/honors001> a pesc:AcademicHonors ;
-    pesc:honorsTitle "cum laude" ;
-    pesc:honorsLevel pescHonorsLevels:ThirdHighest ;
-.

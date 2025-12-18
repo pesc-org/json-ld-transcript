@@ -1,5 +1,5 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,valueClass,Rec Usage,note
-104,ContactShape,ceterms:address,Address,FALSE,TRUE,IRI BNODE,,,,PostalAddressShape,ceterms:PostalAddress,Recommended,
+104,ContactShape,ceterms:address,Address,FALSE,TRUE,BNODE,,,,PostalAddressShape,ceterms:PostalAddress,Recommended,
 116,PostalAddressShape,ceterms:addressCountry,Country Code,TRUE,FALSE,Literal,xsd:token,,,,,Required,pesc:core:InternationalAddressDetailsGroup
 111,PostalAddressShape,ceterms:addressLocality,"Address Locality, e.g. City",TRUE,FALSE,Literal,rdf:langString,,,,,Required,pesc:core:CommonAddressDetailsGroup
 112,PostalAddressShape,ceterms:addressRegion,"Address Region, e.g State or Province Code",TRUE,FALSE,Literal,xsd:token,,,,,Required,"pesc:core:DomesticAddressDetailsGroup
@@ -12,8 +12,8 @@ pesc:core:InternationalAddressDetailsGroup"
 123,ContactShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,rdf:langString,45,maxLength,,,Optional,
 126,PhoneShape,pesc:countryPrefixCode,Country Prefix Code,FALSE,FALSE,Literal,xsd:string,3,maxLength,,,Optional,
 108,ContactShape,pesc:email,Email Address,FALSE,TRUE,Literal,xsd:string,,,,,Optional,
-107,ContactShape,pesc:faxPhone,FAX Phone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,pesc:Phone,Optional,
-106,ContactShape,pesc:phone,Phone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,pesc:Phone,Optional,
+107,ContactShape,pesc:faxPhone,FAX Phone,FALSE,TRUE,BNODE,,,,PhoneShape,pesc:Phone,Optional,
+106,ContactShape,pesc:phone,Phone,FALSE,TRUE,BNODE,,,,PhoneShape,pesc:Phone,Optional,
 130,PhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,,Required,"Including the area code, no spaces or other delimiters."
 132,PhoneShape,pesc:phoneNumberExtension,Phone Number Extension,FALSE,FALSE,Literal,xsd:string,5,maxLength,,,Optional,
 109,ContactShape,pesc:url,URL,FALSE,TRUE,Literal,xsd:anyURI,,,,,Optional,

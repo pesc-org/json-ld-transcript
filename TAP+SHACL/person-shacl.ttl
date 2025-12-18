@@ -517,21 +517,21 @@
     sh:class ceds:C200377 ;
     sh:name "Has Other Person Name"@en-US ;
     sh:node <PersonNameShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path ceds:P600101 .
 
 <studentshapeHasPersonIdentifier> a sh:PropertyShape ;
     sh:class ceds:C200291 ;
     sh:name "hasPersonIdentifier"@en-US ;
     sh:node <PersonIdentifierShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path ceds:P600049 .
 
 <studentshapeHasPersonLanguage> a sh:PropertyShape ;
     sh:class ceds:C200293 ;
     sh:name "Has Person Language"@en-US ;
     sh:node <LanguageShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path ceds:P600052 .
 
 <studentshapeHasPersonName> a sh:PropertyShape ;
@@ -540,7 +540,7 @@
     sh:minCount 1 ;
     sh:name "Has Person Name"@en-US ;
     sh:node <PersonNameShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path ceds:P600336 .
 
 <studentshapeHasSummary> a sh:PropertyShape ;
@@ -561,7 +561,7 @@
     sh:maxCount 1 ;
     sh:name "Residency"@en-US ;
     sh:node <ResidencyShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:nodeKind sh:BlankNode ;
     sh:path pesc:hasResidency .
 
 <studentshapeStudentLevel> a sh:PropertyShape ;

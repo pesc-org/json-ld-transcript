@@ -29,10 +29,10 @@ ceds:NI001075173046
 ceds:NI001075173047
 ceds:NI001075173048",picklist,,,,
 ,PersonIdentifierShape,ceds:P001572,Person Identifier,TRUE,FALSE,Literal,xsd:string,,,,,,
-,StudentShape,ceds:P600049,hasPersonIdentifier,FALSE,TRUE,IRI BNODE,,,,PersonIdentifierShape,ceds:C200291,,
-191,StudentShape,ceds:P600052,Has Person Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,ceds:C200293,Optional,
-163,StudentShape,ceds:P600101,Has Other Person Name,FALSE,TRUE,IRI BNODE,,,,PersonNameShape,ceds:C200377,,
-162,StudentShape,ceds:P600336,Has Person Name,TRUE,FALSE,IRI BNODE,,,,PersonNameShape,ceds:C200377,Required,
+,StudentShape,ceds:P600049,hasPersonIdentifier,FALSE,TRUE,BNODE,,,,PersonIdentifierShape,ceds:C200291,,
+191,StudentShape,ceds:P600052,Has Person Language,FALSE,TRUE,BNODE,,,,LanguageShape,ceds:C200293,Optional,
+163,StudentShape,ceds:P600101,Has Other Person Name,FALSE,TRUE,BNODE,,,,PersonNameShape,ceds:C200377,,
+162,StudentShape,ceds:P600336,Has Person Name,TRUE,FALSE,BNODE,,,,PersonNameShape,ceds:C200377,Required,
 96,StudentShape,ceterms:targetContactPoint,Contact,FALSE,TRUE,IRI BNODE,,,,ContactShape,ceterms:ContactPoint,Recommended,
 14,StudentShape,elm:additionalNote,Additional Note,FALSE,TRUE,IRI BNODE,,,,NoteShape,elm:Note,Not Recommended,
 158,StudentShape,pesc:birthCity,Birth City,FALSE,FALSE,Literal,xsd:string,25,maxLength,,,Optional,
@@ -58,7 +58,7 @@ pesc:AcademicSummary
 pesc:ProgramSummary
 pesc:LicensureAchievement
 ceds:C200047",Required,
-181,StudentShape,pesc:hasResidency,Residency,FALSE,FALSE,IRI BNODE,,,,ResidencyShape,pesc:Residency,Optional,
+181,StudentShape,pesc:hasResidency,Residency,FALSE,FALSE,BNODE,,,,ResidencyShape,pesc:Residency,Optional,
 ,StudentShape,pesc:hasSummary,Has Summary,FALSE,TRUE,IRI BNODE,,,,,"pesc:AcademicSummary
 pesc:AwardSummary
 pesc:ProgramSummary
