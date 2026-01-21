@@ -32,18 +32,11 @@
         <academicsummaryshapeAcademicSummaryLevel>,
         <academicsummaryshapeAcademicSummaryType>,
         <academicsummaryshapeAdditionalNote>,
-        <academicsummaryshapeClassRank>,
-        <academicsummaryshapeClassRankDate>,
-        <academicsummaryshapeClassRankSessioncount>,
-        <academicsummaryshapeClassRankYear>,
-        <academicsummaryshapeClassRankYearMonth>,
-        <academicsummaryshapeClassSize>,
         <academicsummaryshapeDelinquencies>,
         <academicsummaryshapeEntryDate>,
         <academicsummaryshapeExitDate>,
         <academicsummaryshapeExitReasonCode>,
         <academicsummaryshapeGPASummary>,
-        <academicsummaryshapeHighSchoolCreditSummary>,
         <academicsummaryshapeIsSummaryForProgram>,
         <academicsummaryshapeSource>,
         <academicsummaryshapeType> ;
@@ -307,57 +300,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
 
-<academicsummaryshapeClassRank> a sh:PropertyShape ;
-    rdfs:comment "This is the most appropriate place in the Schema to include the student’s overall rank in class, if it is to be included. The student ranking the highest in the class would have a rank of “1”. Class rank is not typically included on a College Transcript."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Rank"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRank .
-
-<academicsummaryshapeClassRankDate> a sh:PropertyShape ;
-    rdfs:comment "Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."@eng ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankDate .
-
-<academicsummaryshapeClassRankSessioncount> a sh:PropertyShape ;
-    rdfs:comment "This data element would not typically be included on a College Transcript."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Rank Session count"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankSessionCount .
-
-<academicsummaryshapeClassRankYear> a sh:PropertyShape ;
-    rdfs:comment "Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."@eng ;
-    sh:datatype xsd:gYear ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankYear .
-
-<academicsummaryshapeClassRankYearMonth> a sh:PropertyShape ;
-    rdfs:comment "Since class ranking is not typically included on a College Transcript, none of these three choices would typically be found on a College Transcript."@eng ;
-    sh:datatype xsd:gYearMonth ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Year Month"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankYearMonth .
-
-<academicsummaryshapeClassSize> a sh:PropertyShape ;
-    rdfs:comment "If there were 753 students in the student’s class and they were ranked by the high school, then this value would be “753”. Class size is not included on a typical college transcript."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Size"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classSize .
-
 <academicsummaryshapeDelinquencies> a sh:PropertyShape ;
     rdfs:comment "It is recommended that probation not be included on the transcript since there is no universally accepted definition of probation, and that other Delinquencies be included at the Session level."@eng ;
     sh:in ( pescDelinquencyCodes:ExclusionAcademic pescDelinquencyCodes:ExclusionDiscipline pescDelinquencyCodes:GoodStanding pescDelinquencyCodes:ProbationGPA pescDelinquencyCodes:ProbationHours pescDelinquencyCodes:SuspensionGPA pescDelinquencyCodes:SuspensionHours pescDelinquencyCodes:ProbationDiscipline pescDelinquencyCodes:SuspensionDiscipline pescDelinquencyCodes:Unknown pescDelinquencyCodes:Other ) ;
@@ -397,12 +339,6 @@
     sh:node <GPAShape> ;
     sh:nodeKind sh:BlankNode ;
     sh:path pesc:gpaSummary .
-
-<academicsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
-    rdfs:comment "Intended for use in a High School Transcript and would not be included on a College Transcript."@eng ;
-    sh:maxCount 1 ;
-    sh:name "High School Credit Summary"@en-US ;
-    sh:path pesc:highSchoolCreditSummary .
 
 <academicsummaryshapeIsSummaryForProgram> a sh:PropertyShape ;
     rdfs:comment "This would not normally be used at this point in the schema, to give detailed data about the academic program in which an award was earned."@eng ;

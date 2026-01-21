@@ -589,16 +589,9 @@
     pesc:honorsTitle "cum laude";
     pesc:honorsLevel pescHonorsLevels:ThirdHighest;
   ];
-  pesc:classRank 3;
-  pesc:classSize 9999;
-  #    pesc:highSchoolCreditSummary
   pesc:isSummaryForProgram <https://example.edu/Program/001>;
   pesc:delinquencies pescDelinquencyCodes:ProbationGPA;
   pesc:entryDate "2022-03-23"^^xsd:date;
   pesc:exitDate "2024-06-23"^^xsd:date;
   pesc:exitReasonCode "Gave up";
-  pesc:classRankSessionCount 1000;
-  pesc:classRankDate "2024-06-23"^^xsd:date;
-  pesc:classRankYear "2024"^^xsd:gYear;
-  pesc:classRankYearMonth "2024-06"^^xsd:gYearMonth.
-
+.

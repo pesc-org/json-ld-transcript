@@ -66,19 +66,12 @@
     pesc:academicSummaryType "DegreeApplicable" ; # 2 fail, wrong node kind, not in list
     pesc:academicSummaryLevel "Undergraduate" ; # 2 fail, wrong node kind, not in list
     pesc:gpaSummary <https://example.edu/gpa001> ; # 3 fail not BNode,, wrong shape, wrong class
-    pesc:academicHonors <https://example.edu/honors> ; # 2 fail not BNode, wrong class
-    pesc:classRank 3.5 ; # 1 fail, wrong datatype
-    pesc:classSize 99999 ; # 1 fail, too large
+    pesc:academicHonors <https://example.edu/honors> ; # 3 fail not BNode, wrong class, wrong shape
     pesc:delinquencies "Suspension" ;  # 2 fail, not in list, wrong node kind
-#    pesc:highSchoolCreditSummary
     pesc:isSummaryForProgram <https://example.edu/Program/> ; # 1 fail wrong class
     pesc:entryDate "2022-03-23" ;  # 1 fail, wrong datatype
     pesc:exitDate "2024-06-23" ; # 1 fail, wrong datatype
     pesc:exitReasonCode "Gave up"@en ; # 1 fail, wrong data type
-    pesc:classRankSessionCount 10000 ; # 1 fail, Too large
-    pesc:classRankDate "2024-06-23" ;  # 1 fail, wrong datatype
-    pesc:classRankYear  "2024" ;  # 1 fail, wrong datatype
-    pesc:classRankYearMonth  "2024-06" ;  # 1 fail, wrong datatype
 .
 
 <https://example.edu/gpa001> a pesc:gpa .
