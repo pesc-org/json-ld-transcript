@@ -382,10 +382,6 @@
       "@id": "pesc:ccdID",
       "@type": "xsd:string"
     },
-    "ceebactID": {
-      "@id": "pesc:ceebactID",
-      "@type": "xsd:string"
-    },
     "classRank": {
       "@id": "pesc:classRank",
       "@type": "xsd:string"

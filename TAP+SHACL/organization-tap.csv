@@ -5,8 +5,7 @@ pescIdentifierTypes:OPEid
 pescIdentifierTypes:PSISid
 pescIdentifierTypes:GEOCode
 pescIdentifierTypes:ACT
-pescIdentifierTypes:MutuallyDefined
-pescIdentifierTypes:CEEBACT",picklist,,,,
+pescIdentifierTypes:MutuallyDefined",picklist,,,,
 138,AccreditationShape,ceds:P001526,Accreditation Agency Name,FALSE,FALSE,Literal,xsd:string,80,maxLength,,,Optional,
 99,OrganizationShape,ceds:P600472,Has Organization Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,ceds:C200240,Recommended,
 ,OrganizationShape,ceds:P600502,Has Organization Identification,FALSE,TRUE,BNODE,,,,OrganizationIdentifierShape,ceds:C200252,,
