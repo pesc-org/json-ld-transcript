@@ -44,7 +44,6 @@
     "pescResidencyStatusCodes":"https://pesc.org/vocabs/ResidencyStatusCodes#",
     "pescSchoolLevels":"https://pesc.org/vocabs/SchoolLevels#",
     "pescSchoolOverrideCodes":"https://pesc.org/vocabs/SchoolOverrideCodes#",
-    "pescSecondarySchoolCodes":"https://pesc.org/vocabs/SecondarySchoolCodes#",
     "pescSessionTypes":"https://pesc.org/vocabs/SessionTypes#",
     "pescStudentLevelCodes":"https://pesc.org/vocabs/SchoolLevelCodes#",
     "pescSubjectCodes":"https://pesc.org/vocabs/SubjectCodes#",
@@ -917,10 +916,6 @@
     "programLocalCode": {
       "@id": "pesc:programLocalCode",
       "@type": "xsd:string"
-    },
-    "programSecondarySchoolCode": {
-      "@id": "pesc:programSecondarySchoolCode",
-      "@type": "@id"
     },
     "programUSISCode": {
       "@id": "pesc:programUSISCode",

@@ -1141,12 +1141,6 @@
         ]
     ] ;
     rr:predicateObjectMap [
-        rr:predicate pesc:programSecondarySchoolCode ;
-        rr:objectMap [
-            rr:template "https://pesc.org/vocabs/SecondarySchoolCodes#{ProgramSecondarySchoolCode}"
-        ]
-    ] ;
-    rr:predicateObjectMap [
         rr:predicate pesc:programHEGISCode ;
         rr:objectMap [
             rml:reference "ProgramHEGISCode"

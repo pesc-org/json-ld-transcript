@@ -31,7 +31,6 @@ classDiagram
 	AcademicProgramShape --> CourseShape : ceterms#58;hasPart #40;Has Part#41;
 	AcademicProgramShape : rdf#58;type #40;Type#41;
 	AcademicProgramShape --> OrganizationShape : ceterms#58;offeredBy #40;Offered By#41;
-	AcademicProgramShape : pesc#58;programSecondarySchoolCode #40;Program Secondary School Code#41;
 	AcademicProgramShape : ceds#58;P000043 #40;Has Classification of Instructional Program Code#41;
 	AcademicProgramShape : pesc#58;programHEGISCode #40;Program HEGIS Code#41;
 	AcademicProgramShape : pesc#58;programESISCode #40;Program ESIS Code#41;

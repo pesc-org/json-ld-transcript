@@ -23,7 +23,6 @@
 @prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#>.
 @prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#>.
 @prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#>.
-@prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#>.
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#>.
 @prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#>.
 @prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#>.
@@ -163,7 +162,6 @@
   ceterms:name "Example Program"@en;
   ceterms:offeredBy <https://example.edu/Offerer#id>;
   ceterms:hasPart <https://example.edu/Course/001>;
-  pesc:programSecondarySchoolCode pescSecondarySchoolCodes:Vocational;
   ceds:P000043 "12.1234";
   # CIP code
   pesc:programHEGISCode "123456";

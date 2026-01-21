@@ -9,7 +9,6 @@
 @prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
-@prefix pescSecondarySchoolCodes: <https://pesc.org/vocabs/SecondarySchoolCodes#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -43,7 +42,6 @@
         <academicprogramshapeOfferedBy>,
         <academicprogramshapeProgramESISCode>,
         <academicprogramshapeProgramHEGISCode>,
-        <academicprogramshapeProgramSecondarySchoolCode>,
         <academicprogramshapeType> ;
     sh:targetClass ceds:C200331 .
 
@@ -336,13 +334,6 @@
     sh:name "Program HEGIS Code"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:programHEGISCode .
-
-<academicprogramshapeProgramSecondarySchoolCode> a sh:PropertyShape ;
-    sh:in ( pescSecondarySchoolCodes:CareerPrep pescSecondarySchoolCodes:CollegePrep pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep pescSecondarySchoolCodes:CollegeTechPrep pescSecondarySchoolCodes:General pescSecondarySchoolCodes:Occupational pescSecondarySchoolCodes:Vocational ) ;
-    sh:maxCount 1 ;
-    sh:name "Program Secondary School Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:programSecondarySchoolCode .
 
 <academicprogramshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200331 ;

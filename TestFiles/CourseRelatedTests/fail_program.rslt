@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (11):
+Results (10):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeAcademicProgramName
@@ -96,10 +96,3 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("123456", datatype=xsd:integer)
 	Result Path: pesc:programHEGISCode
 	Message: Value is not Literal with datatype xsd:string
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:academicprogramshapeProgramSecondarySchoolCode
-	Focus Node: <https://example.edu/Program/001>
-	Value Node: pescSecondarySchoolCodes:Vocation
-	Result Path: pesc:programSecondarySchoolCode
-	Message: Value pescSecondarySchoolCodes:Vocation not in list ['pescSecondarySchoolCodes:General', 'pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep', 'pescSecondarySchoolCodes:CollegeTechPrep', 'pescSecondarySchoolCodes:CollegePrep', 'pescSecondarySchoolCodes:Occupational', 'pescSecondarySchoolCodes:Vocational', 'pescSecondarySchoolCodes:CareerPrep']
