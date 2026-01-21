@@ -36,7 +36,6 @@
     sh:closed false ;
     sh:property <academicprogramshapeAcademicProgramName>,
         <academicprogramshapeAcademicProgramType>,
-        <academicprogramshapeCodedNotation>,
         <academicprogramshapeHasClassificationofInstructionalProgramCode>,
         <academicprogramshapeHasPart>,
         <academicprogramshapeOfferedBy>,
@@ -283,15 +282,6 @@
     sh:name "Academic Program Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:academicProgramType .
-
-<academicprogramshapeCodedNotation> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minLength 1 ;
-    sh:name "Coded Notation"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:codedNotation .
 
 <academicprogramshapeHasClassificationofInstructionalProgramCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;

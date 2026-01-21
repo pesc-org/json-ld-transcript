@@ -166,7 +166,6 @@
   # CIP code
   pesc:programHEGISCode "123456";
   pesc:programESISCode "ABCDEF";
-  ceterms:codedNotation "EX:P001";
   pesc:academicProgramType pescAcademicProgramTypes:Specialization.
 
 <https://example.edu/Test/001> a ceds:C200010;

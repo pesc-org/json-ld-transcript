@@ -1153,12 +1153,6 @@
         ]
     ] ;
     rr:predicateObjectMap [
-        rr:predicate ceterms:codedNotation ;
-        rr:objectMap [
-            rml:reference "ProgramLocalCode"
-        ]
-    ] ;
-    rr:predicateObjectMap [
         rr:predicate pesc:academicProgramType ;
         rr:objectMap [
             rr:template "https://pesc.org/vocabs/AcademicProgramTypes#{AcademicProgramType}"
