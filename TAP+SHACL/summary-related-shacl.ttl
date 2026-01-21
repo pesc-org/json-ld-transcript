@@ -455,14 +455,6 @@
     sh:nodeKind sh:Literal ;
     sh:path pesc:creditHoursAttempted .
 
-<gpashapeCreditHoursDeficient> a sh:PropertyShape ;
-    rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Deficient"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursDeficient .
-
 <gpashapeCreditHoursEarned> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
     sh:datatype xsd:decimal ;
@@ -478,14 +470,6 @@
     sh:name "Credit Hours GPA"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:creditHoursForGPA .
-
-<gpashapeCreditHoursRequired> a sh:PropertyShape ;
-    rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
-    sh:maxCount 1 ;
-    sh:name "Credit Hours Required"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:creditHoursRequired .
 
 <gpashapeGPARangeMaximum> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
@@ -808,10 +792,8 @@ Rank in the College Transcript. However, if it is included, it is recommended th
     rdfs:label "GPA"@en ;
     sh:closed false ;
     sh:property <gpashapeCreditHoursAttempted>,
-        <gpashapeCreditHoursDeficient>,
         <gpashapeCreditHoursEarned>,
         <gpashapeCreditHoursGPA>,
-        <gpashapeCreditHoursRequired>,
         <gpashapeGPARangeMaximum>,
         <gpashapeGPARangeMinimum>,
         <gpashapeGradePointAverage>,

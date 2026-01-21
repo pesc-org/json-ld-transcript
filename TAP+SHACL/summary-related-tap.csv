@@ -142,10 +142,8 @@ Rank in the College Transcript. However, if it is included, it is recommended th
 ,ProgramSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,,,Not Recommended,This is rarely found on a postsecondary transcript.
 ,SessionSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,,,Not Recommended,"If there were 753 students in the student’s class and if they were ranked by the school, then this value would be “753”."
 267,GPAShape,pesc:creditHoursAttempted,Credit Hours Attempted,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
-270,GPAShape,pesc:creditHoursDeficient,Credit Hours Deficient,FALSE,FALSE,Literal,xsd:decimal,,,,,,Not Recommended,decimal
 268,GPAShape,pesc:creditHoursEarned,Credit Hours Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
 274,GPAShape,pesc:creditHoursForGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
-269,GPAShape,pesc:creditHoursRequired,Credit Hours Required,FALSE,FALSE,Literal,xsd:decimal,,,,,,Not Recommended,decimal
 271,GPAShape,ceds:P000057,Has Course Credit Units,FALSE,FALSE,IRI,,"ceds:NI000057116219
 ceds:NI000057116669
 ceds:NI000057116841 

@@ -606,20 +606,12 @@
       "@id": "pesc:creditHoursAttempted",
       "@type": "xsd:decimal"
     },
-    "creditHoursDeficient": {
-      "@id": "pesc:creditHoursDeficient",
-      "@type": "xsd:decimal"
-    },
     "creditHoursEarned": {
       "@id": "pesc:creditHoursEarned",
       "@type": "xsd:decimal"
     },
     "creditHoursGPA": {
       "@id": "pesc:creditHoursGPA",
-      "@type": "xsd:decimal"
-    },
-    "creditHoursRequired": {
-      "@id": "pesc:creditHoursRequired",
       "@type": "xsd:decimal"
     },
     "creditUnit": {

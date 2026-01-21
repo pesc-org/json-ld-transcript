@@ -63,8 +63,6 @@
 <https://example.edu/gpa001> a pesc:GPA ; # fail wrong shape for pesc:gpaSummary (1)
     pesc:creditHoursAttempted "12" ; # fail wrong data type (2)
     pesc:creditHoursEarned 12 ; # fail wrong data type (3)
-    pesc:creditHoursRequired "12" ; # fail wrong data type (4)
-    pesc:creditHoursDeficient "0" ; # fail wrong data type (5)
     ceds:P000057 ceds:semsester ; # fail not in allowed value list (6) 
     pesc:gradePointAverage "3.75" ; # fail wrong data type (7)
     pesc:totalQualityPoints "45" ; # fail wrong data type (8)

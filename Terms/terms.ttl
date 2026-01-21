@@ -314,12 +314,6 @@ pesc:creditHoursAttempted a rdf:Property ;
     schema:domainIncludes pesc:GPA ;
     schema:rangeIncludes xsd:decimal .
 
-pesc:creditHoursDeficient a rdf:Property ;
-    rdfs:label "Credit Hours Deficient" ;
-    rdfs:comment "The total value of credit hours the student is lacking in order to successfully complete requirements for an award, diploma or certificate." ;
-    schema:domainIncludes pesc:GPA ;
-    schema:rangeIncludes xsd:decimal .
-
 pesc:creditHoursEarned a rdf:Property ;
     rdfs:label "Credit Hours Earned" ;
     rdfs:comment "The total value of credit hours successfully completed or earned." ;
@@ -329,12 +323,6 @@ pesc:creditHoursEarned a rdf:Property ;
 pesc:creditHoursForGPA a rdf:Property ;
     rdfs:label "Credit Hours For GPA" ;
     rdfs:comment "The total value of credit hours used to calculate the Grade Point Average." ;
-    schema:domainIncludes pesc:GPA ;
-    schema:rangeIncludes xsd:decimal .
-
-pesc:creditHoursRequired a rdf:Property ;
-    rdfs:label "Credit Hours Required" ;
-    rdfs:comment "The total value of credit hours that are required for the award or diploma for which the student is pursuing." ;
     schema:domainIncludes pesc:GPA ;
     schema:rangeIncludes xsd:decimal .
 

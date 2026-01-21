@@ -67,10 +67,8 @@ pesc:SessionSummary",xsd:gYearMonth,
 pesc:classSize,Property,Class Size,The numeric size of the academic cohort (e.g. class).,,"pesc:AcademicSummary
 pesc:AwardSummary",xsd:integer,
 pesc:creditHoursAttempted,Property,Credit Hours Attempted,The total value of credit hours attempted whether or not included in the hours for GPA or hours earned.,,pesc:GPA,xsd:decimal,
-pesc:creditHoursDeficient,Property,Credit Hours Deficient,"The total value of credit hours the student is lacking in order to successfully complete requirements for an award, diploma or certificate.",,pesc:GPA,xsd:decimal,
 pesc:creditHoursEarned,Property,Credit Hours Earned,The total value of credit hours successfully completed or earned.,,pesc:GPA,xsd:decimal,
 pesc:creditHoursForGPA,Property,Credit Hours For GPA,The total value of credit hours used to calculate the Grade Point Average.,,pesc:GPA,xsd:decimal,
-pesc:creditHoursRequired,Property,Credit Hours Required,The total value of credit hours that are required for the award or diploma for which the student is pursuing.,,pesc:GPA,xsd:decimal,
 pesc:delinquencies,Property,Delinquencies,The academic standing of the student upon transfer to the institution.,,"pesc:AcademicSummary
 pesc:ProgramSummary
 pesc:SessionSummary",skos:Concept,
