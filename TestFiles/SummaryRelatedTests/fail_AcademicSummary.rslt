@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (19):
+Results (18):
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicsummaryshapeAcademicHonors
@@ -91,13 +91,6 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("2024-06-23")
 	Result Path: pesc:exitDate
 	Message: Value is not Literal with datatype xsd:date
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:academicsummaryshapeExitReasonCode
-	Focus Node: <https://example.edu/academicSummary001>
-	Value Node: Literal("Gave up", lang=en)
-	Result Path: pesc:exitReasonCode
-	Message: Value is not Literal with datatype xsd:string
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicsummaryshapeGPASummary

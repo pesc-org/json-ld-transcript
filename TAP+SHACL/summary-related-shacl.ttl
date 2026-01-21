@@ -35,7 +35,6 @@
         <academicsummaryshapeDelinquencies>,
         <academicsummaryshapeEntryDate>,
         <academicsummaryshapeExitDate>,
-        <academicsummaryshapeExitReasonCode>,
         <academicsummaryshapeGPASummary>,
         <academicsummaryshapeIsSummaryForProgram>,
         <academicsummaryshapeSource>,
@@ -204,7 +203,6 @@
         <sessionsummaryshapeDelinquencies>,
         <sessionsummaryshapeEntryDate>,
         <sessionsummaryshapeExitDate>,
-        <sessionsummaryshapeExitReasonCode>,
         <sessionsummaryshapeGPASummary>,
         <sessionsummaryshapeHighSchoolCreditSummary>,
         <sessionsummaryshapeIsSummaryForProgram>,
@@ -322,15 +320,6 @@
     sh:name "Exit Date"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:exitDate .
-
-<academicsummaryshapeExitReasonCode> a sh:PropertyShape ;
-    rdfs:comment "This data element is useful for the high school transcript, but is not appropriate for the College Transcript."@eng ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 60 ;
-    sh:name "Exit Reason Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:exitReasonCode .
 
 <academicsummaryshapeGPASummary> a sh:PropertyShape ;
     sh:class pesc:GPA ;
@@ -745,15 +734,6 @@ Rank in the College Transcript. However, if it is included, it is recommended th
     sh:name "Exit Date"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:exitDate .
-
-<sessionsummaryshapeExitReasonCode> a sh:PropertyShape ;
-    rdfs:comment "This code would typically be used for a high school transcript, but would never be used for a College Transcript."@eng ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 60 ;
-    sh:name "Exit Reason Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:exitReasonCode .
 
 <sessionsummaryshapeGPASummary> a sh:PropertyShape ;
     rdfs:comment "This would typically be where items like Dean’s List at the end of a session are listed."@eng ;

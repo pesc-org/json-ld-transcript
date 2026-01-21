@@ -1,4 +1,4 @@
-URI,Type,Label,Comment,Usage Note,Domain Includes,Range Includes,Sub-of
+URI,Type,Label,Comment,Usage,Domain Includes,Range Includes,Sub-of
 pesc:,Ontology,PESC College Transcript Terms,RDF terms defined by PESC for College Transcripts.,,,,
 pesc:AcademicDegreeRequirement,Class,Academic Degree Requirement,Thesis or dissertation information.,,,,
 pesc:AcademicHonors,Class,Academic Honors,Honors information for an academic award.,,,,
@@ -80,9 +80,6 @@ pesc:SessionSummary",xsd:date,
 pesc:exitDate,Property,Exit Date,"The date on which the student officially withdrew, was withdrawn, or graduated.",,"pesc:AcademicSummary
 pesc:ProgramSummary
 pesc:SessionSummary",xsd:date,
-pesc:exitReasonCode,Property,Exit Reason Code,The reason the student stopped attending.  It is a code set approved by the US Department of Education's National Center for Education Statistics and is included in the NCES Handbook.,,"pesc:AcademicSummary
-pesc:ProgramSummary
-pesc:SessionSummary",xsd:string,
 pesc:gpaRangeMaximum,Property,GPA Range Maximum,The maximum possible GPA.,,pesc:GPA,xsd:decimal,
 pesc:gpaRangeMinimum,Property,GPA Range Minimum,The minimum possible GPA.,,pesc:GPA,xsd:decimal,
 pesc:gpaSummary,Property,GPA Summary,The summary GPA information.,,"pesc:AcademicSummary

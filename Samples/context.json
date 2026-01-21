@@ -690,10 +690,6 @@
       "@id": "pesc:exitDate",
       "@type": "xsd:date"
     },
-    "exitReasonCode": {
-      "@id": "pesc:exitReasonCode",
-      "@type": "xsd:string"
-    },
     "expirationDate": {
       "@id": "pesc:expirationDate",
       "@type": "xsd:date"

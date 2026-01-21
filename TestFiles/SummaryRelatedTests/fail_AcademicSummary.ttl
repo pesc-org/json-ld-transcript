@@ -71,7 +71,6 @@
     pesc:isSummaryForProgram <https://example.edu/Program/> ; # 1 fail wrong class
     pesc:entryDate "2022-03-23" ;  # 1 fail, wrong datatype
     pesc:exitDate "2024-06-23" ; # 1 fail, wrong datatype
-    pesc:exitReasonCode "Gave up"@en ; # 1 fail, wrong data type
 .
 
 <https://example.edu/gpa001> a pesc:gpa .
