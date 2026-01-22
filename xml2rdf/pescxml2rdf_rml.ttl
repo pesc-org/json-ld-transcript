@@ -1377,12 +1377,6 @@
         ] ;
     ] ;
     rr:predicateObjectMap [
-        rr:predicate ceds:P001313 ; # (Course Narrative Explanation Grade)
-        rr:objectMap [ 
-            rml:reference "CourseNarrativeExplanationGrade" ;
-        ] ;
-    ] ;
-    rr:predicateObjectMap [
         rr:predicate ceds:P001299 ; # (Has Course Ac. Grade Status Code)
         rr:objectMap [
             rr:parentTriplesMap :GradeStatusCodeTM ;

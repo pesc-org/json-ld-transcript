@@ -57,7 +57,6 @@
         ceds:P000053 42 ;         # 1 fail wrong datatype for Course Academic Grade
         ceds:P001298 ceds:NI001299115324 ;     # 2 fail wrong node kind, wrong datatype for Course academic grade scale code
         ceds:P001299 ceds:NotValid ;  # 1 fail, not in list for Has Course Ac. Grade Status Code
-        ceds:P001313 "invalid lang string"@en ; # 1 fail wrong datatype should be string Course Narrative Explanation Grade
     ] ;
     pesc:courseEquivalentGrade	    # 2 fail wrong class, wrong shape 
     [   a pesc:Mark ;    # wrong class so not checked

@@ -568,14 +568,6 @@
     sh:nodeKind sh:Literal ;
     sh:path ceds:P001298 .
 
-<gradeshapeCourseNarrativeExplanationGrade> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 200 ;
-    sh:name "Course Narrative Explanation Grade"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001313 .
-
 <gradeshapeHasCourseAcademicGradeStatusCode> a sh:PropertyShape ;
     sh:in ( pescGradeStatusCodes:Completed pescGradeStatusCodes:PlanningToTake ceds:NI001299115324 ceds:NI001299115877 ceds:NI001299115916 ceds:NI001299115918 ceds:NI001299115931 ceds:NI001299116290 ceds:NI001299116438 ceds:NI001299116457 ceds:NI001299116507 ceds:NI001299116508 ceds:NI001299117075 ceds:NI001299117192 ceds:NI001299117194 ceds:NI001299117195 ceds:NI001299117196 ) ;
     sh:maxCount 1 ;
@@ -735,7 +727,6 @@
     sh:closed false ;
     sh:property <gradeshapeCourseAcademicGrade>,
         <gradeshapeCourseAcademicGradeScaleCode>,
-        <gradeshapeCourseNarrativeExplanationGrade>,
         <gradeshapeHasCourseAcademicGradeStatusCode>,
         <gradeshapeSupplementalGrade>,
         <gradeshapeType> ;

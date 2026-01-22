@@ -104,7 +104,6 @@ ceds:NI001299117192
 ceds:NI001299117194
 ceds:NI001299117195
 ceds:NI001299117196",picklist,,,Recommended,
-298,GradeShape,ceds:P001313,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,,Not Recommended,
 ,GradeShape,pesc:supplementalGrade,Supplemental Grade,FALSE,FALSE,BNODE,,,,CourseSupplementalGradeShape,pesc:Grade,,
 ,GradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Grade,,,,,
 ,LicensureAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,,
