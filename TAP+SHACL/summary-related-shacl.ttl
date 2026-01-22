@@ -194,17 +194,10 @@
         <sessionsummaryshapeAcademicSummaryLevel>,
         <sessionsummaryshapeAcademicSummaryType>,
         <sessionsummaryshapeAdditionalNote>,
-        <sessionsummaryshapeClassRank>,
-        <sessionsummaryshapeClassRankDate>,
-        <sessionsummaryshapeClassRankSessioncount>,
-        <sessionsummaryshapeClassRankYear>,
-        <sessionsummaryshapeClassRankYearMonth>,
-        <sessionsummaryshapeClassSize>,
         <sessionsummaryshapeDelinquencies>,
         <sessionsummaryshapeEntryDate>,
         <sessionsummaryshapeExitDate>,
         <sessionsummaryshapeGPASummary>,
-        <sessionsummaryshapeHighSchoolCreditSummary>,
         <sessionsummaryshapeIsSummaryForProgram>,
         <sessionsummaryshapeIsSummaryForSession>,
         <sessionsummaryshapeSource>,
@@ -645,58 +638,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
 
-<sessionsummaryshapeClassRank> a sh:PropertyShape ;
-    rdfs:comment """The Workgroup that developed this PESC XML College Transcript Schema does not recommend inclusion of Class
-Rank in the College Transcript. However, if it is included, it is recommended that this is not the most appropriate place for inclusion of the student’s overall rank in class."""@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Rank"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRank .
-
-<sessionsummaryshapeClassRankDate> a sh:PropertyShape ;
-    rdfs:comment "Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."@eng ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankDate .
-
-<sessionsummaryshapeClassRankSessioncount> a sh:PropertyShape ;
-    rdfs:comment "Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Rank Session count"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankSessionCount .
-
-<sessionsummaryshapeClassRankYear> a sh:PropertyShape ;
-    rdfs:comment "Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."@eng ;
-    sh:datatype xsd:gYear ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankYear .
-
-<sessionsummaryshapeClassRankYearMonth> a sh:PropertyShape ;
-    rdfs:comment "Since College Transcripts do not include class rank, this data element would not appear in a College Transcript."@eng ;
-    sh:datatype xsd:gYearMonth ;
-    sh:maxCount 1 ;
-    sh:name "Class Rank Year Month"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRankYearMonth .
-
-<sessionsummaryshapeClassSize> a sh:PropertyShape ;
-    rdfs:comment "If there were 753 students in the student’s class and if they were ranked by the school, then this value would be “753”."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Size"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classSize .
-
 <sessionsummaryshapeDelinquencies> a sh:PropertyShape ;
     sh:in ( pescDelinquencyCodes:ExclusionAcademic pescDelinquencyCodes:ExclusionDiscipline pescDelinquencyCodes:GoodStanding pescDelinquencyCodes:ProbationGPA pescDelinquencyCodes:ProbationHours pescDelinquencyCodes:SuspensionGPA pescDelinquencyCodes:SuspensionHours pescDelinquencyCodes:ProbationDiscipline pescDelinquencyCodes:SuspensionDiscipline pescDelinquencyCodes:Unknown pescDelinquencyCodes:Other ) ;
     sh:name "Delinquencies"@en-US ;
@@ -727,12 +668,6 @@ Rank in the College Transcript. However, if it is included, it is recommended th
     sh:node <GPAShape> ;
     sh:nodeKind sh:BlankNode ;
     sh:path pesc:gpaSummary .
-
-<sessionsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
-    rdfs:comment "This will not be included in a College Transcript."@eng ;
-    sh:maxCount 1 ;
-    sh:name "High School Credit Summary"@en-US ;
-    sh:path pesc:highSchoolCreditSummary .
 
 <sessionsummaryshapeIsSummaryForProgram> a sh:PropertyShape ;
     rdfs:comment "It would be quite unusual to see this included on a college transcript at this point in the schema."@eng ;

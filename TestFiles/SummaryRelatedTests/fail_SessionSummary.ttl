@@ -49,6 +49,7 @@
             ceds:P000115 "Testy"^^xsd:token ;
             ceds:P000172 "Test"^^xsd:token ;
             pesc:nameCode pescNameCodes:Legal ] ;
+#   pesc:hasSummary <https://example.edu/sessionSummary001> ; # 1 warning for no summary
     pesc:hasAchievement <https://example.edu/achievement001> .
 
 <https://example.edu/achievement001> a pesc:Achievement,
@@ -68,17 +69,10 @@
     pesc:academicSummaryLevel "Undergraduate" ; # 2 fail wrong node kind, not in list
     pesc:gpaSummary <https://example.edu/gpa> ; # 3 fail not BNode, wrong class, wrong shape
     pesc:academicHonors <https://example.edu/honors> ; # 3 fail not BNode, wrong class, wrong shape
-    pesc:classRank 3.5 ; # 1 fail wrong datatype
-    pesc:classSize 99999 ; # 1 fail too large
     pesc:delinquencies "Suspension" ;  # 2 fail, wrong node kind, not in list
-#    pesc:highSchoolCreditSummary
     pesc:isSummaryForProgram <https://example.edu/Program/> ; # 1 fail wrong class
     pesc:entryDate "2022-03-23" ;  # 1 fail wrong datatype
     pesc:exitDate "2024-06-23" ; # 1 fail wrong datatype
-    pesc:classRankSessionCount 10000 ; # 1 fail Too large
-    pesc:classRankDate "2024-06-23" ;  # 1 fail wrong datatype
-    pesc:classRankYear  "2024" ;  # 1 fail wrong datatype
-    pesc:classRankYearMonth  "2024-06" ;  # 1 fail wrong datatype
 .
 
 <https://example.edu/gpa001> a pesc:GPA . 
