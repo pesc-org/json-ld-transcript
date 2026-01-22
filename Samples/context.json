@@ -176,9 +176,6 @@
     "PersonalIdentification":{
       "@id": "cedso:PersonalIdentification"
     },
-    "PersonIdentifier":{
-      "@id": "ceds:P001572"
-    },
     "Note":{
       "@id": "elm:Note"
     },
@@ -202,10 +199,6 @@
     "HonorsTitle": {
       "@id": "pesc:HonorsTitle",
       "@type": "xsd:string"
-    },
-    "Immunizations": {
-      "@id": "pesc:Immunizations",
-      "@type": "@id"
     },
     "LastOrSurname": {
       "@id": "cedso:LastOrSurname",
