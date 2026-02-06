@@ -889,16 +889,6 @@
         ];
     ] ;
     rr:predicateObjectMap [
-        rr:predicate ceds:P001518 ; # Course Subject Area Code
-        rr:objectMap [
-            rr:parentTriplesMap :CourseSubjectAreaTM ;
-            rr:joinCondition [
-                rr:parent "PESC" ;
-                rr:child "CourseSubjectAreaCode"
-            ]
-        ];
-    ] ;
-    rr:predicateObjectMap [
         rr:predicate ceds:P600267 ; # (hasPostsecondarySection)
         rr:objectMap [
             rr:parentTriplesMap :CourseSectionTM ;
@@ -992,16 +982,6 @@
     ];
 .
 
-#Course Subject Area Code Mapping
-:CourseSubjectAreaTM a rr:TriplesMap ;
-        rml:logicalSource [
-        rml:source "courseSubjectAreaLookup.csv" ;
-    rml:referenceFormulation ql:CSV
-    ];
-    rr:subjectMap [
-        rml:reference "URI"
-    ];
-.
 
 ###############################
 # Course-section related Maps #

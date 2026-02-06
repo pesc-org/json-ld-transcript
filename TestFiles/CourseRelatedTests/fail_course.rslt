@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (35):
+Results (34):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeAgencyCourseID
@@ -105,13 +105,6 @@ Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl
 	Value Node: Literal("abbreviation")
 	Result Path: ceds:P000066
 	Message: String length not <= Literal("10", datatype=xsd:integer)
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:courseshapeCourseSubjectAreaCode
-	Focus Node: <https://example.edu/Course/001>
-	Value Node: ceds:NI0000
-	Result Path: ceds:P001518
-	Message: Value ceds:NI0000 not in list ['ceds:NI001518118422', 'ceds:NI001518118407', 'ceds:NI001518118408', 'ceds:NI001518118412', 'ceds:NI001518118417', 'ceds:NI001518118406', 'ceds:NI001518118423', 'ceds:NI001518118410', 'ceds:NI001518118411', 'ceds:NI001518118415', 'ceds:NI001518118421', 'ceds:NI001518118416', 'ceds:NI001518118405', 'ceds:NI001518118424', 'ceds:NI001518118426', 'ceds:NI001518118425', 'ceds:NI001518118414', 'ceds:NI001518118420', 'ceds:NI001518118427', 'ceds:NI001518118418', 'ceds:NI001518118404', 'ceds:NI001518118413', 'ceds:NI001518118419']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseTitle

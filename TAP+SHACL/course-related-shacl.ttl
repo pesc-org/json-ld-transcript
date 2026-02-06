@@ -211,7 +211,6 @@
         <courseshapeCourseNumber>,
         <courseshapeCourseOverrideSchool>,
         <courseshapeCourseSubjectAbbreviation>,
-        <courseshapeCourseSubjectAreaCode>,
         <courseshapeCourseTitle>,
         <courseshapeHasClassificationofInstructionalProgramCode>,
         <courseshapeHasCourseCreditBasisType>,
@@ -441,13 +440,6 @@
     sh:name "Course Subject Abbreviation"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:P000066 .
-
-<courseshapeCourseSubjectAreaCode> a sh:PropertyShape ;
-    sh:in ( ceds:NI001518118404 ceds:NI001518118405 ceds:NI001518118406 ceds:NI001518118407 ceds:NI001518118408 ceds:NI001518118427 ceds:NI001518118410 ceds:NI001518118411 ceds:NI001518118412 ceds:NI001518118413 ceds:NI001518118414 ceds:NI001518118415 ceds:NI001518118416 ceds:NI001518118417 ceds:NI001518118418 ceds:NI001518118419 ceds:NI001518118420 ceds:NI001518118421 ceds:NI001518118422 ceds:NI001518118423 ceds:NI001518118424 ceds:NI001518118425 ceds:NI001518118426 ) ;
-    sh:maxCount 1 ;
-    sh:name "Course Subject Area Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path ceds:P001518 .
 
 <courseshapeCourseTitle> a sh:PropertyShape ;
     sh:datatype xsd:string ;

@@ -542,10 +542,6 @@
       "@id": "pesc:courseSubjectAbbreviation",
       "@type": "xsd:string"
     },
-    "courseSubjectAreaCode": {
-      "@id": "pesc:courseSubjectAreaCode",
-      "@type": "@id"
-    },
     "courseSupplementalGrade": {
       "@id": "pesc:courseSupplementalGrade",
       "@type": "@id"

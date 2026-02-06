@@ -98,8 +98,6 @@
   # Agency course ID
   ceds:P001517 "01234";
   # 5 digiti sced code
-  ceds:P001518 ceds:NI001518118404;
-  # copurse subject area code ;
   ceterms:offeredBy <https://example.edu/Source#id>;
   pesc:requirement <https://example.edu/reqs/1>;
   pesc:attribute <https://example.edu/attr/1>;
