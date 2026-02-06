@@ -375,30 +375,6 @@
       "@id": "pesc:ccdID",
       "@type": "xsd:string"
     },
-    "classRank": {
-      "@id": "pesc:classRank",
-      "@type": "xsd:string"
-    },
-    "classRankDate": {
-      "@id": "pesc:classRankDate",
-      "@type": "xsd:date"
-    },
-    "classRankSessionCount": {
-      "@id": "pesc:classRankSessionCount",
-      "@type": "xsd:string"
-    },
-    "classRankYear": {
-      "@id": "pesc:classRankYear",
-      "@type": "xsd:date"
-    },
-    "classRankYearMonth": {
-      "@id": "pesc:classRankYearMonth",
-      "@type": "xsd:date"
-    },
-    "classSize": {
-      "@id": "pesc:classSize",
-      "@type": "xsd:string"
-    },
     "cohortGraduationYear": {
       "@id": "pesc:cohortGraduationYear",
       "@type": "xsd:date"
@@ -726,10 +702,6 @@
     "hasSession": {
       "@id": "pesc:hasSession",
       "@type": "@id"
-    },
-    "highSchoolCreditSummary": {
-      "@id": "pesc:highSchoolCreditSummary",
-      "@container": "@language"
     },
     "honorsLevel": {
       "@id": "pesc:honorsLevel",

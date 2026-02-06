@@ -61,15 +61,13 @@
     ceterms:name "Example Source"@en .
 
 <https://example.edu/awardSummary001> a pesc:AwardSummary ;
+# 1 fail: no link to this using pesc:hasSummary
 #    pesc:isSummaryForAward <https://example.edu/achievement001> ; # 1 fail missing mandatory property
     pesc:source "https://example.edu/Source#id" ; # 2 fail wrong node kind, wrong class
     pesc:academicSummaryType pescAcademicSummaryTypes:None ; # 1 fail not in list
     pesc:academicSummaryLevel "Undergraduate" ; # 2 fail invalid node kind, invalid value
-    pesc:gpaSummary "Very good A-Star" ; # 3 fail invalid node kind, wrong class, wrong shape
+    pesc:gpaSummary "Very good A-Star" ; # 3 fail invalid node kind, wrong class, wrong shape,
     pesc:academicHonors "First class" ; # 3 fail invalid node kind, wrong class, wrong shape
-    pesc:classRank "3" ; # 1 fail invalid node kind
-    pesc:classSize 99999 ; # 1 fail too big
-#    pesc:highSchoolCreditSummary
     pesc:isSummaryForProgram <https://example.edu/Program/one> ; # 1 fail Wrong class (doesn't exist)
 .
 

@@ -130,10 +130,6 @@ pescAcademicSummaryTypes:UserDefined
 pescAcademicSummaryTypes:Weighted
 pescAcademicSummaryTypes:NonWeighted
 pescAcademicSummaryTypes:Cumulative",picklist,,,,Recommended,
-,AwardSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,,,Not Recommended,It would be highly unusual to see class ranking and class size on a College Transcript.
-,ProgramSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,,,Not Recommended,"The student ranking the highest in the class would have a rank of “1”. However, this is rarely found on a postsecondary transcript."
-,AwardSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,,,Not Recommended,It would be highly unusual to see class ranking and class size on a College Transcript.
-,ProgramSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:integer,4,maxLength,,,,Not Recommended,This is rarely found on a postsecondary transcript.
 267,GPAShape,pesc:creditHoursAttempted,Credit Hours Attempted,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
 268,GPAShape,pesc:creditHoursEarned,Credit Hours Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
 274,GPAShape,pesc:creditHoursForGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
@@ -195,8 +191,6 @@ pescDelinquencyCodes:Other",picklist,,,,Not Recommended,"It is recommended that 
 pesc:AwardSummary
 pesc:ProgramSummary
 pesc:SessionSummary",Warning,Required,
-,AwardSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,Literal,rdf:langString,,,,,,Not Recommended,
-,ProgramSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,,,,,,,,Not Recommended,This complex data element would not be included on a postsecondary transcript.
 231,AcademicHonorsShape,pesc:honorsLevel,Honors Level,FALSE,FALSE,IRI,,"pescHonorsLevels:FirstHighest
 pescHonorsLevels:SecondHighest
 pescHonorsLevels:ThirdHighest",picklist,,,,Recommended,

@@ -494,9 +494,6 @@
     pesc:honorsTitle "cum laude";
     pesc:honorsLevel pescHonorsLevels:ThirdHighest;
   ];
-  pesc:classRank 3;
-  pesc:classSize 9999;
-  #    pesc:highSchoolCreditSummary
   pesc:isSummaryForProgram <https://example.edu/Program/001>.
 
 <https://example.edu/programSummary001> a pesc:ProgramSummary;
@@ -520,11 +517,8 @@
     pesc:honorsTitle "cum laude";
     pesc:honorsLevel pescHonorsLevels:ThirdHighest;
   ];
-  pesc:classRank 3;
-  pesc:classSize 9999;
   pesc:delinquencies pescDelinquencyCodes:SuspensionGPA.
 
-#    pesc:highSchoolCreditSummary
 <https://example.edu/sessionSummary001> a pesc:SessionSummary;
   pesc:source <https://example.edu/Source#id>;
   pesc:isSummaryForSession <https://example.edu/Session/001>;

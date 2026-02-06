@@ -63,10 +63,7 @@
         <awardsummaryshapeAcademicSummaryLevel>,
         <awardsummaryshapeAcademicSummaryType>,
         <awardsummaryshapeAdditionalNote>,
-        <awardsummaryshapeClassRank>,
-        <awardsummaryshapeClassSize>,
         <awardsummaryshapeGPASummary>,
-        <awardsummaryshapeHighSchoolCreditSummary>,
         <awardsummaryshapeIsSummaryForAward>,
         <awardsummaryshapeIsSummaryForProgram>,
         <awardsummaryshapeSource>,
@@ -166,12 +163,9 @@
         <programsummaryshapeAcademicSummaryLevel>,
         <programsummaryshapeAcademicSummaryType>,
         <programsummaryshapeAdditionalNote>,
-        <programsummaryshapeClassRank>,
-        <programsummaryshapeClassSize>,
         <programsummaryshapeDelinquencies>,
         <programsummaryshapeExitDate>,
         <programsummaryshapeGPASummary>,
-        <programsummaryshapeHighSchoolCreditSummary>,
         <programsummaryshapeIsSummaryForProgram>,
         <programsummaryshapeSource>,
         <programsummaryshapeType> ;
@@ -374,24 +368,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
 
-<awardsummaryshapeClassRank> a sh:PropertyShape ;
-    rdfs:comment "It would be highly unusual to see class ranking and class size on a College Transcript."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Rank"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRank .
-
-<awardsummaryshapeClassSize> a sh:PropertyShape ;
-    rdfs:comment "It would be highly unusual to see class ranking and class size on a College Transcript."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Size"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classSize .
-
 <awardsummaryshapeGPASummary> a sh:PropertyShape ;
     sh:class pesc:GPA ;
     sh:maxCount 1 ;
@@ -399,13 +375,6 @@
     sh:node <GPAShape> ;
     sh:nodeKind sh:BlankNode ;
     sh:path pesc:gpaSummary .
-
-<awardsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
-    sh:datatype rdf:langString ;
-    sh:maxCount 1 ;
-    sh:name "High School Credit Summary"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:highSchoolCreditSummary .
 
 <awardsummaryshapeIsSummaryForAward> a sh:PropertyShape ;
     sh:class ceds:C200335 ;
@@ -539,24 +508,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path elm:additionalNote .
 
-<programsummaryshapeClassRank> a sh:PropertyShape ;
-    rdfs:comment "The student ranking the highest in the class would have a rank of “1”. However, this is rarely found on a postsecondary transcript."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Rank"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classRank .
-
-<programsummaryshapeClassSize> a sh:PropertyShape ;
-    rdfs:comment "This is rarely found on a postsecondary transcript."@eng ;
-    sh:datatype xsd:integer ;
-    sh:maxCount 1 ;
-    sh:maxLength 4 ;
-    sh:name "Class Size"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:classSize .
-
 <programsummaryshapeDelinquencies> a sh:PropertyShape ;
     sh:in ( pescDelinquencyCodes:ExclusionAcademic pescDelinquencyCodes:ExclusionDiscipline pescDelinquencyCodes:GoodStanding pescDelinquencyCodes:ProbationGPA pescDelinquencyCodes:ProbationHours pescDelinquencyCodes:SuspensionGPA pescDelinquencyCodes:SuspensionHours pescDelinquencyCodes:ProbationDiscipline pescDelinquencyCodes:SuspensionDiscipline pescDelinquencyCodes:Unknown pescDelinquencyCodes:Other ) ;
     sh:name "Delinquencies"@en-US ;
@@ -579,12 +530,6 @@
     sh:node <GPAShape> ;
     sh:nodeKind sh:BlankNode ;
     sh:path pesc:gpaSummary .
-
-<programsummaryshapeHighSchoolCreditSummary> a sh:PropertyShape ;
-    rdfs:comment "This complex data element would not be included on a postsecondary transcript."@eng ;
-    sh:maxCount 1 ;
-    sh:name "High School Credit Summary"@en-US ;
-    sh:path pesc:highSchoolCreditSummary .
 
 <programsummaryshapeIsSummaryForProgram> a sh:PropertyShape ;
     sh:class ceds:C200331 ;
