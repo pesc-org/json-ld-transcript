@@ -6,7 +6,6 @@
 @prefix ex: <http://example.org/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
-@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescSessionTypes: <https://pesc.org/vocabs/SessionTypes#> .
@@ -208,7 +207,6 @@
     sh:property <courseshapeAgencyCourseID>,
         <courseshapeAttribute>,
         <courseshapeCourseAcademicGradeScaleCode>,
-        <courseshapeCourseApplicability>,
         <courseshapeCourseCreditValue>,
         <courseshapeCourseFiveDigitSCEDCode>,
         <courseshapeCourseNumber>,
@@ -413,13 +411,6 @@
     sh:name "Course Academic Grade Scale Code"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:P001298 .
-
-<courseshapeCourseApplicability> a sh:PropertyShape ;
-    sh:in ( pescCourseApplicabilityCodes:NotApplicable pescCourseApplicabilityCodes:FirstProgram pescCourseApplicabilityCodes:SecondProgram pescCourseApplicabilityCodes:BothPrograms ) ;
-    sh:maxCount 1 ;
-    sh:name "Course Applicability"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:courseApplicability .
 
 <courseshapeCourseCreditValue> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;

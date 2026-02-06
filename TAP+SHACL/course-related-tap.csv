@@ -131,10 +131,6 @@ ceds:NI000060117182",picklist,,,Optional,
 315,CourseShape,ceds:P000068,Course Title,FALSE,FALSE,Literal,xsd:string,60,maxLength,,,Recommended,
 318,CourseShape,pesc:courseOverrideSchool,Course Override School,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,Optional,
 319,CourseShape,pesc:overrideSchoolCourseNumber,Override School Course Number,FALSE,FALSE,Literal,xsd:string,35,maxLength,,,Optional,
-320,CourseShape,pesc:courseApplicability,Course Applicability,FALSE,FALSE,IRI,,"pescCourseApplicabilityCodes:NotApplicable
-pescCourseApplicabilityCodes:FirstProgram
-pescCourseApplicabilityCodes:SecondProgram
-pescCourseApplicabilityCodes:BothPrograms",picklist,,,Not Recommended,
 331,CourseShape,pesc:requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
 332,CourseShape,pesc:attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
 333,CourseShape,pesc:proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,

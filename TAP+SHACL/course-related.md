@@ -63,7 +63,6 @@ classDiagram
 	CourseShape : ceds#58;P000068 #40;Course Title#41;
 	CourseShape --> OrganizationShape : pesc#58;courseOverrideSchool #40;Course Override School#41;
 	CourseShape : pesc#58;overrideSchoolCourseNumber #40;Override School Course Number#41;
-	CourseShape : pesc#58;courseApplicability #40;Course Applicability#41;
 	CourseShape --> RAPShape : pesc#58;requirement #40;Requirement#41;
 	CourseShape --> AttributeShape : pesc#58;attribute #40;Attribute#41;
 	CourseShape --> RAPShape : pesc#58;proficiency #40;Proficiency#41;

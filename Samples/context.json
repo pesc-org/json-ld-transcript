@@ -22,7 +22,6 @@
     "pescAcademicAwardLevels":"https://pesc.org/vocabs/AcademicAwardLevels#",
     "pescAgencyCodes":"https://pesc.org/vocabs/AgencyCodes#",
     "pescConditionsMetCodes":"https://pesc.org/vocabs/ConditionsMetCodes#",
-    "pescCourseApplicabilityCodes":"https://pesc.org/vocabs/CourseApplicabilityCodes#",
     "pescCourseLevels":"https://pesc.org/vocabs/CourseLevels#",
     "pescCreditBasis":"https://pesc.org/vocabs/CreditBasis#",
     "pescCreditLevels":"https://pesc.org/vocabs/CreditLevels#",
@@ -442,10 +441,6 @@
     "courseAddDate": {
       "@id": "pesc:courseAddDate",
       "@type": "xsd:date"
-    },
-    "courseApplicability": {
-      "@id": "pesc:courseApplicability",
-      "@type": "@id"
     },
     "courseBeginDate": {
       "@id": "pesc:courseBeginDate",

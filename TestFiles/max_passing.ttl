@@ -7,7 +7,6 @@
 @prefix pescCreditLevels: <https://pesc.org/vocabs/AcademicSummaryLevels#>.
 @prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#>.
 @prefix pescAccreditationBodyCodes: <https://pesc.org/vocabs/AccreditationBodyCodes#>.
-@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#>.
 @prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#>.
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#>.
 @prefix pescCreditBasis: <https://pesc.org/vocabs/CreditBasis#>.
@@ -101,7 +100,6 @@
   # 5 digiti sced code
   ceds:P001518 ceds:NI001518118404;
   # copurse subject area code ;
-  pesc:courseApplicability pescCourseApplicabilityCodes:FirstProgram;
   ceterms:offeredBy <https://example.edu/Source#id>;
   pesc:requirement <https://example.edu/reqs/1>;
   pesc:attribute <https://example.edu/attr/1>;

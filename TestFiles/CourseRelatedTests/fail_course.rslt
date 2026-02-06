@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (36):
+Results (35):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeAgencyCourseID
@@ -63,13 +63,6 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: [ ]
 	Result Path: ceds:P001298
 	Message: Value is not of Node Kind sh:Literal
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:courseshapeCourseApplicability
-	Focus Node: <https://example.edu/Course/001>
-	Value Node: pescCourseApplicabilityCodes:NotValid
-	Result Path: pesc:courseApplicability
-	Message: Value pescCourseApplicabilityCodes:NotValid not in list ['pescCourseApplicabilityCodes:FirstProgram', 'pescCourseApplicabilityCodes:SecondProgram', 'pescCourseApplicabilityCodes:NotApplicable', 'pescCourseApplicabilityCodes:BothPrograms']
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseCreditValue
