@@ -43,7 +43,6 @@
     ceterms:hasPart <https://example.edu/Course/002> ; # 2 fail: wrong class, wrong shape
     ceds:P000043 "12" ; # 1 fail: wrong pattern CIP code
     pesc:programHEGISCode 123456 ; # 1 fail: wrong data type 
-    pesc:programESISCode "" ; # 1 fail: too short
     pesc:academicProgramType pescAcademicProgramTypes:Special ; # 1 fail: not in list
 .
 

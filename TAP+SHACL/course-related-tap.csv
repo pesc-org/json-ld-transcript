@@ -4,7 +4,6 @@
 ,AcademicProgramShape,ceterms:offeredBy,Offered By,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,,
 235,AcademicProgramShape,ceds:P000043,Has Classification of Instructional Program Code,FALSE,FALSE,Literal,xsd:string,^\d{2}\.\d{4}$,pattern,,,Not Recommended,
 237,AcademicProgramShape,pesc:programHEGISCode,Program HEGIS Code,FALSE,FALSE,Literal,xsd:string,6..20,lengthRange,,,Recommended,
-243,AcademicProgramShape,pesc:programESISCode,Program ESIS Code,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,,Optional,
 247,AcademicProgramShape,pesc:academicProgramType,Academic Program Type,FALSE,FALSE,IRI,,"pescAcademicProgramTypes:Concentration
 pescAcademicProgramTypes:Focus
 pescAcademicProgramTypes:Major

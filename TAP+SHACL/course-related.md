@@ -33,7 +33,6 @@ classDiagram
 	AcademicProgramShape --> OrganizationShape : ceterms#58;offeredBy #40;Offered By#41;
 	AcademicProgramShape : ceds#58;P000043 #40;Has Classification of Instructional Program Code#41;
 	AcademicProgramShape : pesc#58;programHEGISCode #40;Program HEGIS Code#41;
-	AcademicProgramShape : pesc#58;programESISCode #40;Program ESIS Code#41;
 	AcademicProgramShape : pesc#58;academicProgramType #40;Academic Program Type#41;
 	AcademicProgramShape : ceterms#58;name #40;Academic Program Name#41;
 	AcademicSessionShape : rdf#58;type #40;Type#41;

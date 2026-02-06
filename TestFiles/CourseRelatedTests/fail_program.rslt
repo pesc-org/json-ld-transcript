@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (9):
+Results (8):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeAcademicProgramName
@@ -75,13 +75,6 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("Example Source")
 	Result Path: ceterms:offeredBy
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in MinLengthConstraintComponent (http://www.w3.org/ns/shacl#MinLengthConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:academicprogramshapeProgramESISCode
-	Focus Node: <https://example.edu/Program/001>
-	Value Node: Literal("")
-	Result Path: pesc:programESISCode
-	Message: String length not >= Literal("1", datatype=xsd:integer)
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:academicprogramshapeProgramHEGISCode

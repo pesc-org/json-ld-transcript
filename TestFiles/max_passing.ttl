@@ -159,7 +159,6 @@
   ceds:P000043 "12.1234";
   # CIP code
   pesc:programHEGISCode "123456";
-  pesc:programESISCode "ABCDEF";
   pesc:academicProgramType pescAcademicProgramTypes:Specialization.
 
 <https://example.edu/Test/001> a ceds:C200010;

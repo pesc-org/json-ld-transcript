@@ -38,7 +38,6 @@
         <academicprogramshapeHasClassificationofInstructionalProgramCode>,
         <academicprogramshapeHasPart>,
         <academicprogramshapeOfferedBy>,
-        <academicprogramshapeProgramESISCode>,
         <academicprogramshapeProgramHEGISCode>,
         <academicprogramshapeType> ;
     sh:targetClass ceds:C200331 .
@@ -302,15 +301,6 @@
     sh:node <OrganizationShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path ceterms:offeredBy .
-
-<academicprogramshapeProgramESISCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 20 ;
-    sh:minLength 1 ;
-    sh:name "Program ESIS Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:programESISCode .
 
 <academicprogramshapeProgramHEGISCode> a sh:PropertyShape ;
     sh:datatype xsd:string ;

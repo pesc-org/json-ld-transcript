@@ -634,10 +634,6 @@
       "@id": "pesc:entryDate",
       "@type": "xsd:date"
     },
-    "esisID": {
-      "@id": "pesc:esisID",
-      "@type": "xsd:string"
-    },
     "exitDate": {
       "@id": "pesc:exitDate",
       "@type": "xsd:date"
@@ -847,10 +843,6 @@
     },
     "programCSISCode": {
       "@id": "pesc:programCSISCode",
-      "@type": "xsd:string"
-    },
-    "programESISCode": {
-      "@id": "pesc:programESISCode",
       "@type": "xsd:string"
     },
     "programHEGISCode": {
