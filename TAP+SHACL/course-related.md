@@ -52,8 +52,6 @@ classDiagram
 	CourseShape : ceds#58;P000058 #40;Course Credit Value#41;
 	CourseShape : ceds#58;P001298 #40;Course Academic Grade Scale Code#41;
 	CourseShape : ceds#58;P000043 #40;Has Classification of Instructional Program Code#41;
-	CourseShape : ceds#58;P001414 #40;Has NCES College Course Map Code#41;
-	CourseShape : ceterms#58;sced #40;Course SCED Code#41;
 	CourseShape : ceds#58;P001517 #40;Course Five Digit SCED Code#41;
 	CourseShape : ceds#58;P001518 #40;Course Subject Area Code#41;
 	CourseShape : ceds#58;P001312 #40;Has Course Level Type#41;

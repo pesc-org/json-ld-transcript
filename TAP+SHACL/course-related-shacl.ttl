@@ -213,7 +213,6 @@
         <courseshapeCourseFiveDigitSCEDCode>,
         <courseshapeCourseNumber>,
         <courseshapeCourseOverrideSchool>,
-        <courseshapeCourseSCEDCode>,
         <courseshapeCourseSubjectAbbreviation>,
         <courseshapeCourseSubjectAreaCode>,
         <courseshapeCourseTitle>,
@@ -224,7 +223,6 @@
         <courseshapeHasCourseGradePointAverageApplicability>,
         <courseshapeHasCourseLevelType>,
         <courseshapeHasInstructionLanguage>,
-        <courseshapeHasNCESCollegeCourseMapCode>,
         <courseshapeHasPostsecondarySection>,
         <courseshapeLicensure>,
         <courseshapeOfferedBy>,
@@ -455,14 +453,6 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:courseOverrideSchool .
 
-<courseshapeCourseSCEDCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Course SCED Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceterms:sced ;
-    sh:pattern "^[\\dPKG]{5}[BGEHCX]\\d[\\d|.]\\d\\d[1-9][1-9]$" .
-
 <courseshapeCourseSubjectAbbreviation> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -538,14 +528,6 @@
     sh:name "Has Instruction Language"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:P000448 .
-
-<courseshapeHasNCESCollegeCourseMapCode> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 10 ;
-    sh:name "Has NCES College Course Map Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001414 .
 
 <courseshapeHasPostsecondarySection> a sh:PropertyShape ;
     sh:class ceds:C200332 ;

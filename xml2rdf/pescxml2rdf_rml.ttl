@@ -814,13 +814,6 @@
         ];
     ] ;
     rr:predicateObjectMap [
-        rr:predicate ceterms:sced ; # Course SCED Code
-        rr:objectMap [ 
-            rml:reference "CourseSCEDCode" ;
-            rr:datatype xsd:string ;
-        ];
-    ] ;
-    rr:predicateObjectMap [
         rr:predicate ceds:P001517 ; # Course Five Digit SCED Code
         rr:objectMap [ 
             rml:reference "CourseFiveDigitSCEDCode" ;
@@ -831,13 +824,6 @@
         rr:predicate ceds:P000043 ; #	Has Classification of Instructional Program Code
         rr:objectMap [ 
             rml:reference "CourseCIPCode" ;
-            rr:datatype xsd:string ;
-        ];
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate  ceds:P001414; # Has NCES College Course Map Code
-        rr:objectMap [ 
-            rml:reference "CourseNCESCode" ;
             rr:datatype xsd:string ;
         ];
     ] ;

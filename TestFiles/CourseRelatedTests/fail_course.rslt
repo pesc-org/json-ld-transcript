@@ -1,6 +1,6 @@
 Validation Report
 Conforms: False
-Results (38):
+Results (36):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeAgencyCourseID
@@ -105,13 +105,6 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Value Node: Literal("Example College")
 	Result Path: pesc:courseOverrideSchool
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
-Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#PatternConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:courseshapeCourseSCEDCode
-	Focus Node: <https://example.edu/Course/001>
-	Value Node: Literal("12345S1.0512")
-	Result Path: ceterms:sced
-	Message: Value does not match pattern '^[\dPKG]{5}[BGEHCX]\d[\d|.]\d\d[1-9][1-9]$'
 Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseSubjectAbbreviation
@@ -181,13 +174,6 @@ Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl
 	Value Node: Literal("english")
 	Result Path: ceds:P000448
 	Message: String length not <= Literal("3", datatype=xsd:integer)
-Constraint Violation in MaxLengthConstraintComponent (http://www.w3.org/ns/shacl#MaxLengthConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:courseshapeHasNCESCollegeCourseMapCode
-	Focus Node: <https://example.edu/Course/001>
-	Value Node: Literal("12345678901")
-	Result Path: ceds:P001414
-	Message: String length not <= Literal("10", datatype=xsd:integer)
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeHasPostsecondarySection
