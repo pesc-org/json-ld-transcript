@@ -20,11 +20,6 @@
     sh:closed false ;
     sh:targetClass pesc:AcademicDegreeRequirement .
 
-<AcademicRecordShape> a sh:NodeShape ;
-    rdfs:label "Academic Record"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:AcademicRecord .
-
 <AcademicSummaryShape> a sh:NodeShape ;
     rdfs:label "Academic Summary"@en ;
     sh:closed false ;

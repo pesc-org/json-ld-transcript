@@ -31,11 +31,6 @@
     sh:closed false ;
     sh:targetClass ceds:C200331 .
 
-<AcademicRecordShape> a sh:NodeShape ;
-    rdfs:label "Academic Record"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:AcademicRecord .
-
 <AcademicSessionShape> a sh:NodeShape ;
     rdfs:label "Academic Session"@en ;
     sh:closed false ;
