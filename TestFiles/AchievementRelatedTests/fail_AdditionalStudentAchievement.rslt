@@ -3,91 +3,91 @@ Conforms: False
 Results (13):
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeAttributeAchieved
+	Source Shape: ex:additionalstudentachievementshapeAttributeAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("attr/1")
 	Result Path: pesc:attributeAchieved
 	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeAttributeAchieved
+	Source Shape: ex:additionalstudentachievementshapeAttributeAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("attr/1")
 	Result Path: pesc:attributeAchieved
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeConditionsMetCode
+	Source Shape: ex:additionalstudentachievementshapeConditionsMetCode
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("true" = True, datatype=xsd:boolean)
 	Result Path: pesc:conditionsMetCode
 	Message: Value Literal("true" = True, datatype=xsd:boolean) not in list ['pescConditionsMetCodes:MutuallyDefined', 'pescConditionsMetCodes:Yes', 'pescConditionsMetCodes:No', 'pescConditionsMetCodes:Conditional']
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeConditionsMetCode
+	Source Shape: ex:additionalstudentachievementshapeConditionsMetCode
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("true" = True, datatype=xsd:boolean)
 	Result Path: pesc:conditionsMetCode
 	Message: Value is not of Node Kind sh:IRI
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeConditionsMetDate
+	Source Shape: ex:additionalstudentachievementshapeConditionsMetDate
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("2009-09-12")
 	Result Path: pesc:conditionsMetDate
 	Message: Value is not Literal with datatype xsd:date
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeInCourse
+	Source Shape: ex:additionalstudentachievementshapeInCourse
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("Course/001")
 	Result Path: pesc:inCourse
 	Message: Value does not have class ceds:C200328
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeInCourse
+	Source Shape: ex:additionalstudentachievementshapeInCourse
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("Course/001")
 	Result Path: pesc:inCourse
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeLanguageAchieved
+	Source Shape: ex:additionalstudentachievementshapeLanguageAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("lang/1")
 	Result Path: pesc:languageAchieved
 	Message: Value does not have class ceds:C200293
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeLanguageAchieved
+	Source Shape: ex:additionalstudentachievementshapeLanguageAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("lang/1")
 	Result Path: pesc:languageAchieved
 	Message: Value is not of Node Kind sh:BlankNode
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeProficiencyAchieved
+	Source Shape: ex:additionalstudentachievementshapeProficiencyAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("prof/1")
 	Result Path: pesc:proficiencyAchieved
 	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeProficiencyAchieved
+	Source Shape: ex:additionalstudentachievementshapeProficiencyAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("prof/1")
 	Result Path: pesc:proficiencyAchieved
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeRequirementAchieved
+	Source Shape: ex:additionalstudentachievementshapeRequirementAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("reqs/1")
 	Result Path: pesc:requirementAchieved
 	Message: Value does not have class ceds:C200065
 Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:additionalstudentachievmentshapeRequirementAchieved
+	Source Shape: ex:additionalstudentachievementshapeRequirementAchieved
 	Focus Node: <https://example.edu/achievement005>
 	Value Node: Literal("reqs/1")
 	Result Path: pesc:requirementAchieved

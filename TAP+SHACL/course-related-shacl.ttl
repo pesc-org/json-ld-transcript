@@ -65,8 +65,8 @@
     sh:closed false ;
     sh:targetClass ceds:C200240 .
 
-<AdditionalStudentAchievmentShape> a sh:NodeShape ;
-    rdfs:label "Additional Student Achievment"@en ;
+<AdditionalStudentAchievementShape> a sh:NodeShape ;
+    rdfs:label "Additional Student Achievement"@en ;
     sh:closed false ;
     sh:targetClass pesc:AdditionalStudentAchievement .
 
