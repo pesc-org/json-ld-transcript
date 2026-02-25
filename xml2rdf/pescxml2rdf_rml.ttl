@@ -10,7 +10,6 @@
 @prefix ceds: <http://ceds.ed.gov/terms#> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
-@prefix pescCourseApplicabilityCodes:	<https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCourseLevels:	<https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditBasis:	<https://pesc.org/vocabs/CreditBasis#> .
 @prefix pescCreditLevels:	<https://pesc.org/vocabs/CreditLevels#> .
@@ -814,13 +813,6 @@
         ];
     ] ;
     rr:predicateObjectMap [
-        rr:predicate ceterms:sced ; # Course SCED Code
-        rr:objectMap [ 
-            rml:reference "CourseSCEDCode" ;
-            rr:datatype xsd:string ;
-        ];
-    ] ;
-    rr:predicateObjectMap [
         rr:predicate ceds:P001517 ; # Course Five Digit SCED Code
         rr:objectMap [ 
             rml:reference "CourseFiveDigitSCEDCode" ;
@@ -831,13 +823,6 @@
         rr:predicate ceds:P000043 ; #	Has Classification of Instructional Program Code
         rr:objectMap [ 
             rml:reference "CourseCIPCode" ;
-            rr:datatype xsd:string ;
-        ];
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate  ceds:P001414; # Has NCES College Course Map Code
-        rr:objectMap [ 
-            rml:reference "CourseNCESCode" ;
             rr:datatype xsd:string ;
         ];
     ] ;
@@ -856,12 +841,6 @@
         rr:objectMap [
             rml:reference "LanguageOfInstruction/LanguageCode" ;
             rr:datatype xsd:string ;
-        ];
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate pesc:courseApplicability ; # Course Applicability
-        rr:objectMap [
-            rr:template "https://pesc.org/vocabs/CourseApplicabilityCodes#{CourseApplicability}" ;
         ];
     ] ;
     rr:predicateObjectMap [
@@ -906,16 +885,6 @@
             rr:joinCondition [
                 rr:parent "PESC" ;
                 rr:child "CourseGPAApplicabilityCode"
-            ]
-        ];
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate ceds:P001518 ; # Course Subject Area Code
-        rr:objectMap [
-            rr:parentTriplesMap :CourseSubjectAreaTM ;
-            rr:joinCondition [
-                rr:parent "PESC" ;
-                rr:child "CourseSubjectAreaCode"
             ]
         ];
     ] ;
@@ -1013,16 +982,6 @@
     ];
 .
 
-#Course Subject Area Code Mapping
-:CourseSubjectAreaTM a rr:TriplesMap ;
-        rml:logicalSource [
-        rml:source "courseSubjectAreaLookup.csv" ;
-    rml:referenceFormulation ql:CSV
-    ];
-    rr:subjectMap [
-        rml:reference "URI"
-    ];
-.
 
 ###############################
 # Course-section related Maps #
@@ -1141,27 +1100,9 @@
         ]
     ] ;
     rr:predicateObjectMap [
-        rr:predicate pesc:programSecondarySchoolCode ;
-        rr:objectMap [
-            rr:template "https://pesc.org/vocabs/SecondarySchoolCodes#{ProgramSecondarySchoolCode}"
-        ]
-    ] ;
-    rr:predicateObjectMap [
         rr:predicate pesc:programHEGISCode ;
         rr:objectMap [
             rml:reference "ProgramHEGISCode"
-        ]
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate pesc:programESISCode ;
-        rr:objectMap [
-            rml:reference "ProgramESISCode"
-        ]
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate ceterms:codedNotation ;
-        rr:objectMap [
-            rml:reference "ProgramLocalCode"
         ]
     ] ;
     rr:predicateObjectMap [
@@ -1386,12 +1327,6 @@
         rr:predicate ceds:P001298 ; # (Course academic grade scale code)
         rr:objectMap [ 
             rml:reference "CourseAcademicGradeScaleCode" ;
-        ] ;
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate ceds:P001313 ; # (Course Narrative Explanation Grade)
-        rr:objectMap [ 
-            rml:reference "CourseNarrativeExplanationGrade" ;
         ] ;
     ] ;
     rr:predicateObjectMap [

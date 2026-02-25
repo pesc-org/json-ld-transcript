@@ -63,7 +63,6 @@
         ceds:P000053 "B-plus" ;         # Course Academic Grade
         ceds:P001298 "valid code" ;     # Course academic grade scale code
         ceds:P001299 ceds:NI001299115324 ;  # Has Course Ac. Grade Status Code
-        ceds:P001313 "Tell me a story" ;    # Course Narrative Explanation Grade
     ] ;
     pesc:courseEquivalentGrade	    # Course Equivalent Grade
     [   a pesc:Grade ;

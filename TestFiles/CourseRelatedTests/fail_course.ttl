@@ -3,7 +3,6 @@
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
-@prefix pescCourseApplicabilityCodes: <https://pesc.org/vocabs/CourseApplicabilityCodes#> .
 @prefix pescCourseLevels: <https://pesc.org/vocabs/CourseLevels#> .
 @prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
 @prefix pescCreditUnits: <https://pesc.org/vocabs/CreditUnits#> .
@@ -30,7 +29,7 @@
     ceds:P000254 ceds:NI000254115787 ; # session type
 . 
 
-<https://example.edu/Course/001> a ceds:C200328 ;  #Course 38 errors
+<https://example.edu/Course/001> a ceds:C200328 ;  #Course 34 errors
     ceds:P000043 "123.123"; # 1 invalid CIP format
     ceds:P000057 ceds:NI00000 ; # 1 Credit units invalid
     ceds:P000058 "15.0" ; # 1 credit value wrong datatype
@@ -42,13 +41,9 @@
     ceds:P001304 ceds:NI00000 ; # 1 credit level: invalid
     ceds:P001312 ceds:NI00000 ; # 1 course level invalid
     ceds:P001314 101 ; # 1 Course Number wrtong datatype
-    ceds:P001414 "12345678901" ; # 1 NCES course map code too long
-    ceterms:sced "12345S1.0512" ; # 1 too long 12 digit sced code
     ceds:P001420 101 ;  # 1 should be a string Original course identifier
     pesc:agencyCourseID <http://wrong.type> ; # 2 wrong class & shape Agency course ID
     ceds:P001517 "abcde"; # 1 not a 5 digit sced code
-    ceds:P001518 ceds:NI0000 ; # 1 invalid course subject area code ;
-    pesc:courseApplicability pescCourseApplicabilityCodes:NotValid ; # 1 not in list
     ceterms:offeredBy "Source ID" ; # 2 wrong nodetype, class
     pesc:requirement "req1" ; # 3 wrong nodetype, class & shape
     pesc:attribute "attr1" ; # 3 wrong nodetype, class  & shape

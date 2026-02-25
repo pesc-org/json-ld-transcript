@@ -1,19 +1,12 @@
 Validation Report
 Conforms: False
-Results (11):
+Results (9):
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:gpashapeCreditHoursAttempted
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("12")
 	Result Path: pesc:creditHoursAttempted
-	Message: Value is not Literal with datatype xsd:decimal
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:gpashapeCreditHoursDeficient
-	Focus Node: <https://example.edu/gpa001>
-	Value Node: Literal("0")
-	Result Path: pesc:creditHoursDeficient
 	Message: Value is not Literal with datatype xsd:decimal
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
@@ -28,13 +21,6 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("12")
 	Result Path: pesc:creditHoursForGPA
-	Message: Value is not Literal with datatype xsd:decimal
-Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: ex:gpashapeCreditHoursRequired
-	Focus Node: <https://example.edu/gpa001>
-	Value Node: Literal("12")
-	Result Path: pesc:creditHoursRequired
 	Message: Value is not Literal with datatype xsd:decimal
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation

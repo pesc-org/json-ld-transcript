@@ -31,11 +31,6 @@
         <academicawardshapeType> ;
     sh:targetClass ceds:C200335 .
 
-<AcademicRecordShape> a sh:NodeShape ;
-    rdfs:label "Academic Record"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:AcademicRecord .
-
 <AcademicSummaryShape> a sh:NodeShape ;
     rdfs:label "Academic Summary"@en ;
     sh:closed false ;
@@ -46,17 +41,17 @@
     sh:closed false ;
     sh:targetClass ceds:C200240 .
 
-<AdditionalStudentAchievmentShape> a sh:NodeShape ;
-    rdfs:label "Additional Student Achievment"@en ;
+<AdditionalStudentAchievementShape> a sh:NodeShape ;
+    rdfs:label "Additional Student Achievement"@en ;
     sh:closed false ;
-    sh:property <additionalstudentachievmentshapeAttributeAchieved>,
-        <additionalstudentachievmentshapeConditionsMetCode>,
-        <additionalstudentachievmentshapeConditionsMetDate>,
-        <additionalstudentachievmentshapeInCourse>,
-        <additionalstudentachievmentshapeLanguageAchieved>,
-        <additionalstudentachievmentshapeProficiencyAchieved>,
-        <additionalstudentachievmentshapeRequirementAchieved>,
-        <additionalstudentachievmentshapeType> ;
+    sh:property <additionalstudentachievementshapeAttributeAchieved>,
+        <additionalstudentachievementshapeConditionsMetCode>,
+        <additionalstudentachievementshapeConditionsMetDate>,
+        <additionalstudentachievementshapeInCourse>,
+        <additionalstudentachievementshapeLanguageAchieved>,
+        <additionalstudentachievementshapeProficiencyAchieved>,
+        <additionalstudentachievementshapeRequirementAchieved>,
+        <additionalstudentachievementshapeType> ;
     sh:targetClass pesc:AdditionalStudentAchievement .
 
 <AgencyIdentifierShape> a sh:NodeShape ;
@@ -372,26 +367,26 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<additionalstudentachievmentshapeAttributeAchieved> a sh:PropertyShape ;
+<additionalstudentachievementshapeAttributeAchieved> a sh:PropertyShape ;
     sh:class ceds:C200065 ;
     sh:name "Attribute Achieved"@en-US ;
     sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:attributeAchieved .
 
-<additionalstudentachievmentshapeConditionsMetCode> a sh:PropertyShape ;
+<additionalstudentachievementshapeConditionsMetCode> a sh:PropertyShape ;
     sh:in ( pescConditionsMetCodes:Yes pescConditionsMetCodes:No pescConditionsMetCodes:Conditional pescConditionsMetCodes:MutuallyDefined ) ;
     sh:name "Conditions Met Code"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path pesc:conditionsMetCode .
 
-<additionalstudentachievmentshapeConditionsMetDate> a sh:PropertyShape ;
+<additionalstudentachievementshapeConditionsMetDate> a sh:PropertyShape ;
     sh:datatype xsd:date ;
     sh:name "Conditions Met Date"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:conditionsMetDate .
 
-<additionalstudentachievmentshapeInCourse> a sh:PropertyShape ;
+<additionalstudentachievementshapeInCourse> a sh:PropertyShape ;
     sh:class ceds:C200328 ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -400,28 +395,28 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:inCourse .
 
-<additionalstudentachievmentshapeLanguageAchieved> a sh:PropertyShape ;
+<additionalstudentachievementshapeLanguageAchieved> a sh:PropertyShape ;
     sh:class ceds:C200293 ;
     sh:name "Language Achieved"@en-US ;
     sh:node <LanguageShape> ;
     sh:nodeKind sh:BlankNode ;
     sh:path pesc:languageAchieved .
 
-<additionalstudentachievmentshapeProficiencyAchieved> a sh:PropertyShape ;
+<additionalstudentachievementshapeProficiencyAchieved> a sh:PropertyShape ;
     sh:class ceds:C200065 ;
     sh:name "Proficiency Achieved"@en-US ;
     sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:proficiencyAchieved .
 
-<additionalstudentachievmentshapeRequirementAchieved> a sh:PropertyShape ;
+<additionalstudentachievementshapeRequirementAchieved> a sh:PropertyShape ;
     sh:class ceds:C200065 ;
     sh:name "Requirement Achieved"@en-US ;
     sh:node <RAPShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:requirementAchieved .
 
-<additionalstudentachievmentshapeType> a sh:PropertyShape ;
+<additionalstudentachievementshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:AdditionalStudentAchievement ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
@@ -568,14 +563,6 @@
     sh:nodeKind sh:Literal ;
     sh:path ceds:P001298 .
 
-<gradeshapeCourseNarrativeExplanationGrade> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 200 ;
-    sh:name "Course Narrative Explanation Grade"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P001313 .
-
 <gradeshapeHasCourseAcademicGradeStatusCode> a sh:PropertyShape ;
     sh:in ( pescGradeStatusCodes:Completed pescGradeStatusCodes:PlanningToTake ceds:NI001299115324 ceds:NI001299115877 ceds:NI001299115916 ceds:NI001299115918 ceds:NI001299115931 ceds:NI001299116290 ceds:NI001299116438 ceds:NI001299116457 ceds:NI001299116507 ceds:NI001299116508 ceds:NI001299117075 ceds:NI001299117192 ceds:NI001299117194 ceds:NI001299117195 ceds:NI001299117196 ) ;
     sh:maxCount 1 ;
@@ -584,7 +571,7 @@
     sh:path ceds:P001299 .
 
 <gradeshapeSupplementalGrade> a sh:PropertyShape ;
-    sh:class pesc:Grade ;
+    sh:class pesc:CourseSupplementalGrade ;
     sh:maxCount 1 ;
     sh:name "Supplemental Grade"@en-US ;
     sh:node <CourseSupplementalGradeShape> ;
@@ -735,7 +722,6 @@
     sh:closed false ;
     sh:property <gradeshapeCourseAcademicGrade>,
         <gradeshapeCourseAcademicGradeScaleCode>,
-        <gradeshapeCourseNarrativeExplanationGrade>,
         <gradeshapeHasCourseAcademicGradeStatusCode>,
         <gradeshapeSupplementalGrade>,
         <gradeshapeType> ;

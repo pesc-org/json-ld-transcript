@@ -382,8 +382,7 @@ ex:100000000 a ceds:C200275;
 <https://example.edu/CourseGrade/388C-Grade-CR> a pesc:Grade;
   ceds:P000053 "CR";
   ceds:P001298 "501";
-  ceds:P001299 ceds:NI001299115324;
-  ceds:P001313 "Did very well." .
+  ceds:P001299 ceds:NI001299115324 .
 
 <https://example.edu/CourseGrade/389K-Grade-B> a pesc:Grade;
   ceds:P000053 "B";
@@ -695,7 +694,6 @@ ex:TX.123456 a ceds:C200239;
   ceds:P001312 ceds:NI001312127892;
   ceds:P001314 "406";
   ceds:P001420 "SPAN 105";
-  ceds:P001518 ceds:NI001518118427;
   ceterms:offeredBy ex:TX.123456 .
 
 <https://example.edu/courses/407> a ceds:C200328;

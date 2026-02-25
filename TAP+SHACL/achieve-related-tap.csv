@@ -34,17 +34,17 @@ pescHonorsLevels:SecondHighest
 pescHonorsLevels:ThirdHighest",picklist,,,Recommended,
 230,AcademicHonorsShape,pesc:honorsTitle,Honors Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,,Recommended,
 ,AcademicHonorsShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:AcademicHonors,,,,,
-385,AdditionalStudentAchievmentShape,pesc:attributeAchieved,Attribute Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
-382,AdditionalStudentAchievmentShape,pesc:conditionsMetCode,Conditions Met Code,FALSE,TRUE,IRI,,"pescConditionsMetCodes:Yes
+385,AdditionalStudentAchievementShape,pesc:attributeAchieved,Attribute Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
+382,AdditionalStudentAchievementShape,pesc:conditionsMetCode,Conditions Met Code,FALSE,TRUE,IRI,,"pescConditionsMetCodes:Yes
 pescConditionsMetCodes:No
 pescConditionsMetCodes:Conditional
 pescConditionsMetCodes:MutuallyDefined",picklist,,,Recommended,
-383,AdditionalStudentAchievmentShape,pesc:conditionsMetDate,Conditions Met Date,FALSE,TRUE,Literal,xsd:date,,,,,Optional,
-,AdditionalStudentAchievmentShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,,
-387,AdditionalStudentAchievmentShape,pesc:languageAchieved,Language Achieved,FALSE,TRUE,BNODE,,,,LanguageShape,ceds:C200293,Optional,
-386,AdditionalStudentAchievmentShape,pesc:proficiencyAchieved,Proficiency Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
-384,AdditionalStudentAchievmentShape,pesc:requirementAchieved,Requirement Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
-,AdditionalStudentAchievmentShape,rdf:type,Type,TRUE,,IRI,,pesc:AdditionalStudentAchievement,,,,,
+383,AdditionalStudentAchievementShape,pesc:conditionsMetDate,Conditions Met Date,FALSE,TRUE,Literal,xsd:date,,,,,Optional,
+,AdditionalStudentAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,,
+387,AdditionalStudentAchievementShape,pesc:languageAchieved,Language Achieved,FALSE,TRUE,BNODE,,,,LanguageShape,ceds:C200293,Optional,
+386,AdditionalStudentAchievementShape,pesc:proficiencyAchieved,Proficiency Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
+384,AdditionalStudentAchievementShape,pesc:requirementAchieved,Requirement Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
+,AdditionalStudentAchievementShape,rdf:type,Type,TRUE,,IRI,,pesc:AdditionalStudentAchievement,,,,,
 307,CourseAchievementShape,ceds:P000064,Course Quality Points Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
 299,CourseAchievementShape,ceds:P000065,Has Course Repeat Code,FALSE,FALSE,IRI,,"ceds:NI000065116744
 ceds:NI000065116745
@@ -104,8 +104,7 @@ ceds:NI001299117192
 ceds:NI001299117194
 ceds:NI001299117195
 ceds:NI001299117196",picklist,,,Recommended,
-298,GradeShape,ceds:P001313,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,,Not Recommended,
-,GradeShape,pesc:supplementalGrade,Supplemental Grade,FALSE,FALSE,BNODE,,,,CourseSupplementalGradeShape,pesc:Grade,,
+,GradeShape,pesc:supplementalGrade,Supplemental Grade,FALSE,FALSE,BNODE,,,,CourseSupplementalGradeShape,pesc:CourseSupplementalGrade,,
 ,GradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Grade,,,,,
 ,LicensureAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,,
 ,LicensureAchievementShape,pesc:licensureAchieved,Licensure Achieved,TRUE,FALSE,IRI BNODE,,,,LicensureShape,pesc:Licensure,,

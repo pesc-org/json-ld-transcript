@@ -2,17 +2,8 @@
 ,AcademicProgramShape,rdf:type,Type,TRUE,TRUE,IRI,,ceds:C200331,,,,,
 ,AcademicProgramShape,ceterms:hasPart,Has Part,FALSE,TRUE,IRI BNODE,,,,CourseShape,ceds:C200328,,
 ,AcademicProgramShape,ceterms:offeredBy,Offered By,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,,
-233,AcademicProgramShape,pesc:programSecondarySchoolCode,Program Secondary School Code,FALSE,FALSE,IRI,,"pescSecondarySchoolCodes:CareerPrep
-pescSecondarySchoolCodes:CollegePrep
-pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep
-pescSecondarySchoolCodes:CollegeTechPrep
-pescSecondarySchoolCodes:General
-pescSecondarySchoolCodes:Occupational
-pescSecondarySchoolCodes:Vocational",picklist,,,Not Recommended,
 235,AcademicProgramShape,ceds:P000043,Has Classification of Instructional Program Code,FALSE,FALSE,Literal,xsd:string,^\d{2}\.\d{4}$,pattern,,,Not Recommended,
 237,AcademicProgramShape,pesc:programHEGISCode,Program HEGIS Code,FALSE,FALSE,Literal,xsd:string,6..20,lengthRange,,,Recommended,
-243,AcademicProgramShape,pesc:programESISCode,Program ESIS Code,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,,Optional,
-245,AcademicProgramShape,ceterms:codedNotation,Coded Notation,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,,Not Recommended,
 247,AcademicProgramShape,pesc:academicProgramType,Academic Program Type,FALSE,FALSE,IRI,,"pescAcademicProgramTypes:Concentration
 pescAcademicProgramTypes:Focus
 pescAcademicProgramTypes:Major
@@ -86,32 +77,7 @@ pescCreditLevels:DualGraduateUndergraduate",picklist,,,Recommended,
 293,CourseShape,ceds:P000058,Course Credit Value,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
 295,CourseShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,picklist,,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
 300,CourseShape,ceds:P000043,Has Classification of Instructional Program Code,FALSE,FALSE,Literal,xsd:string,^\d{2}\.\d{4}$,pattern,,,Optional,
-303,CourseShape,ceds:P001414,Has NCES College Course Map Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,,Not Recommended,
-304,CourseShape,ceterms:sced,Course SCED Code,FALSE,FALSE,Literal,xsd:string,^[\dPKG]{5}[BGEHCX]\d[\d|.]\d\d[1-9][1-9]$,pattern,,,Not Recommended,
 305,CourseShape,ceds:P001517,Course Five Digit SCED Code,FALSE,FALSE,Literal,xsd:string,^[\dPKG]{5}$,pattern,,,Optional,
-306,CourseShape,ceds:P001518,Course Subject Area Code,FALSE,FALSE,IRI,,"ceds:NI001518118404
-ceds:NI001518118405
-ceds:NI001518118406
-ceds:NI001518118407
-ceds:NI001518118408
-ceds:NI001518118427
-ceds:NI001518118410
-ceds:NI001518118411
-ceds:NI001518118412
-ceds:NI001518118413
-ceds:NI001518118414
-ceds:NI001518118415
-ceds:NI001518118416
-ceds:NI001518118417
-ceds:NI001518118418
-ceds:NI001518118419
-ceds:NI001518118420
-ceds:NI001518118421
-ceds:NI001518118422
-ceds:NI001518118423
-ceds:NI001518118424
-ceds:NI001518118425
-ceds:NI001518118426",picklist,,,Optional,
 308,CourseShape,ceds:P001312,Has Course Level Type,FALSE,FALSE,IRI,,"ceds:NI001312127883
 ceds:NI001312127884
 ceds:NI001312127885
@@ -141,10 +107,6 @@ ceds:NI000060117182",picklist,,,Optional,
 315,CourseShape,ceds:P000068,Course Title,FALSE,FALSE,Literal,xsd:string,60,maxLength,,,Recommended,
 318,CourseShape,pesc:courseOverrideSchool,Course Override School,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,Optional,
 319,CourseShape,pesc:overrideSchoolCourseNumber,Override School Course Number,FALSE,FALSE,Literal,xsd:string,35,maxLength,,,Optional,
-320,CourseShape,pesc:courseApplicability,Course Applicability,FALSE,FALSE,IRI,,"pescCourseApplicabilityCodes:NotApplicable
-pescCourseApplicabilityCodes:FirstProgram
-pescCourseApplicabilityCodes:SecondProgram
-pescCourseApplicabilityCodes:BothPrograms",picklist,,,Not Recommended,
 331,CourseShape,pesc:requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
 332,CourseShape,pesc:attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
 333,CourseShape,pesc:proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,

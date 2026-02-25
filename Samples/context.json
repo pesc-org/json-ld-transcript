@@ -22,7 +22,6 @@
     "pescAcademicAwardLevels":"https://pesc.org/vocabs/AcademicAwardLevels#",
     "pescAgencyCodes":"https://pesc.org/vocabs/AgencyCodes#",
     "pescConditionsMetCodes":"https://pesc.org/vocabs/ConditionsMetCodes#",
-    "pescCourseApplicabilityCodes":"https://pesc.org/vocabs/CourseApplicabilityCodes#",
     "pescCourseLevels":"https://pesc.org/vocabs/CourseLevels#",
     "pescCreditBasis":"https://pesc.org/vocabs/CreditBasis#",
     "pescCreditLevels":"https://pesc.org/vocabs/CreditLevels#",
@@ -44,7 +43,6 @@
     "pescResidencyStatusCodes":"https://pesc.org/vocabs/ResidencyStatusCodes#",
     "pescSchoolLevels":"https://pesc.org/vocabs/SchoolLevels#",
     "pescSchoolOverrideCodes":"https://pesc.org/vocabs/SchoolOverrideCodes#",
-    "pescSecondarySchoolCodes":"https://pesc.org/vocabs/SecondarySchoolCodes#",
     "pescSessionTypes":"https://pesc.org/vocabs/SessionTypes#",
     "pescStudentLevelCodes":"https://pesc.org/vocabs/SchoolLevelCodes#",
     "pescSubjectCodes":"https://pesc.org/vocabs/SubjectCodes#",
@@ -177,9 +175,6 @@
     "PersonalIdentification":{
       "@id": "cedso:PersonalIdentification"
     },
-    "PersonIdentifier":{
-      "@id": "ceds:P001572"
-    },
     "Note":{
       "@id": "elm:Note"
     },
@@ -203,10 +198,6 @@
     "HonorsTitle": {
       "@id": "pesc:HonorsTitle",
       "@type": "xsd:string"
-    },
-    "Immunizations": {
-      "@id": "pesc:Immunizations",
-      "@type": "@id"
     },
     "LastOrSurname": {
       "@id": "cedso:LastOrSurname",
@@ -383,34 +374,6 @@
       "@id": "pesc:ccdID",
       "@type": "xsd:string"
     },
-    "ceebactID": {
-      "@id": "pesc:ceebactID",
-      "@type": "xsd:string"
-    },
-    "classRank": {
-      "@id": "pesc:classRank",
-      "@type": "xsd:string"
-    },
-    "classRankDate": {
-      "@id": "pesc:classRankDate",
-      "@type": "xsd:date"
-    },
-    "classRankSessionCount": {
-      "@id": "pesc:classRankSessionCount",
-      "@type": "xsd:string"
-    },
-    "classRankYear": {
-      "@id": "pesc:classRankYear",
-      "@type": "xsd:date"
-    },
-    "classRankYearMonth": {
-      "@id": "pesc:classRankYearMonth",
-      "@type": "xsd:date"
-    },
-    "classSize": {
-      "@id": "pesc:classSize",
-      "@type": "xsd:string"
-    },
     "cohortGraduationYear": {
       "@id": "pesc:cohortGraduationYear",
       "@type": "xsd:date"
@@ -478,10 +441,6 @@
     "courseAddDate": {
       "@id": "pesc:courseAddDate",
       "@type": "xsd:date"
-    },
-    "courseApplicability": {
-      "@id": "pesc:courseApplicability",
-      "@type": "@id"
     },
     "courseBeginDate": {
       "@id": "pesc:courseBeginDate",
@@ -583,10 +542,6 @@
       "@id": "pesc:courseSubjectAbbreviation",
       "@type": "xsd:string"
     },
-    "courseSubjectAreaCode": {
-      "@id": "pesc:courseSubjectAreaCode",
-      "@type": "@id"
-    },
     "courseSupplementalGrade": {
       "@id": "pesc:courseSupplementalGrade",
       "@type": "@id"
@@ -607,20 +562,12 @@
       "@id": "pesc:creditHoursAttempted",
       "@type": "xsd:decimal"
     },
-    "creditHoursDeficient": {
-      "@id": "pesc:creditHoursDeficient",
-      "@type": "xsd:decimal"
-    },
     "creditHoursEarned": {
       "@id": "pesc:creditHoursEarned",
       "@type": "xsd:decimal"
     },
     "creditHoursGPA": {
       "@id": "pesc:creditHoursGPA",
-      "@type": "xsd:decimal"
-    },
-    "creditHoursRequired": {
-      "@id": "pesc:creditHoursRequired",
       "@type": "xsd:decimal"
     },
     "creditUnit": {
@@ -683,17 +630,9 @@
       "@id": "pesc:entryDate",
       "@type": "xsd:date"
     },
-    "esisID": {
-      "@id": "pesc:esisID",
-      "@type": "xsd:string"
-    },
     "exitDate": {
       "@id": "pesc:exitDate",
       "@type": "xsd:date"
-    },
-    "exitReasonCode": {
-      "@id": "pesc:exitReasonCode",
-      "@type": "xsd:string"
     },
     "expirationDate": {
       "@id": "pesc:expirationDate",
@@ -750,10 +689,6 @@
     "hasSession": {
       "@id": "pesc:hasSession",
       "@type": "@id"
-    },
-    "highSchoolCreditSummary": {
-      "@id": "pesc:highSchoolCreditSummary",
-      "@container": "@language"
     },
     "honorsLevel": {
       "@id": "pesc:honorsLevel",
@@ -906,10 +841,6 @@
       "@id": "pesc:programCSISCode",
       "@type": "xsd:string"
     },
-    "programESISCode": {
-      "@id": "pesc:programESISCode",
-      "@type": "xsd:string"
-    },
     "programHEGISCode": {
       "@id": "pesc:programHEGISCode",
       "@type": "xsd:string"
@@ -917,10 +848,6 @@
     "programLocalCode": {
       "@id": "pesc:programLocalCode",
       "@type": "xsd:string"
-    },
-    "programSecondarySchoolCode": {
-      "@id": "pesc:programSecondarySchoolCode",
-      "@type": "@id"
     },
     "programUSISCode": {
       "@id": "pesc:programUSISCode",

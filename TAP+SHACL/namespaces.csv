@@ -21,7 +21,6 @@ pescAcademicAwardLevels,https://pesc.org/vocabs/AcademicAwardLevels#,DOES NOT EX
 pescAccreditationBodyCodes,https://pesc.org/vocabs/AccreditationBodyCodes#,DOES NOT EXIST
 pescAgencyCodes,https://pesc.org/vocabs/AgencyCodes#,DOES NOT EXIST
 pescConditionsMetCodes,https://pesc.org/vocabs/ConditionsMetCodes#,DOES NOT EXIST
-pescCourseApplicabilityCodes,https://pesc.org/vocabs/CourseApplicabilityCodes#,DOES NOT EXIST
 pescCourseLevels,https://pesc.org/vocabs/CourseLevels#,DOES NOT EXIST
 pescCreditBasis:,https://pesc.org/vocabs/CreditBasis#,DOES NOT EXIST
 pescCreditLevels,https://pesc.org/vocabs/CreditLevels#,DOES NOT EXIST
@@ -40,7 +39,6 @@ pescLanguageUsageCodes,https://pesc.org/vocabs/LanguageUsageCodes#,DOES NOT EXIS
 pescResidencyStatusCodes,https://pesc.org/vocabs/ResidencyStatusCodes#,DOES NOT EXIST
 pescSchoolLevels,https://pesc.org/vocabs/SchoolLevels#,DOES NOT EXIST
 pescSchoolOverrideCodes,https://pesc.org/vocabs/SchoolOverrideCodes#,DOES NOT EXIST
-pescSecondarySchoolCodes,https://pesc.org/vocabs/SecondarySchoolCodes#,DOES NOT EXIST
 pescSessionTypes,https://pesc.org/vocabs/SessionTypes#,DOES NOT EXIST
 pescStudentLevelCodes,https://pesc.org/vocabs/StudentLevelCodes#,DOES NOT EXIST
 pescSupplementalGradeCodes,https://pesc.org/vocabs/SupplementalGradeCodes#,DOES NOT EXIST

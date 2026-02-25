@@ -31,11 +31,8 @@ classDiagram
 	AcademicProgramShape --> CourseShape : ceterms#58;hasPart #40;Has Part#41;
 	AcademicProgramShape : rdf#58;type #40;Type#41;
 	AcademicProgramShape --> OrganizationShape : ceterms#58;offeredBy #40;Offered By#41;
-	AcademicProgramShape : pesc#58;programSecondarySchoolCode #40;Program Secondary School Code#41;
 	AcademicProgramShape : ceds#58;P000043 #40;Has Classification of Instructional Program Code#41;
 	AcademicProgramShape : pesc#58;programHEGISCode #40;Program HEGIS Code#41;
-	AcademicProgramShape : pesc#58;programESISCode #40;Program ESIS Code#41;
-	AcademicProgramShape : ceterms#58;codedNotation #40;Coded Notation#41;
 	AcademicProgramShape : pesc#58;academicProgramType #40;Academic Program Type#41;
 	AcademicProgramShape : ceterms#58;name #40;Academic Program Name#41;
 	AcademicSessionShape : rdf#58;type #40;Type#41;
@@ -54,10 +51,7 @@ classDiagram
 	CourseShape : ceds#58;P000058 #40;Course Credit Value#41;
 	CourseShape : ceds#58;P001298 #40;Course Academic Grade Scale Code#41;
 	CourseShape : ceds#58;P000043 #40;Has Classification of Instructional Program Code#41;
-	CourseShape : ceds#58;P001414 #40;Has NCES College Course Map Code#41;
-	CourseShape : ceterms#58;sced #40;Course SCED Code#41;
 	CourseShape : ceds#58;P001517 #40;Course Five Digit SCED Code#41;
-	CourseShape : ceds#58;P001518 #40;Course Subject Area Code#41;
 	CourseShape : ceds#58;P001312 #40;Has Course Level Type#41;
 	CourseShape : ceds#58;P000060 #40; Has Course Grade Point Average Applicability#41;
 	CourseShape : ceds#58;P000066 #40;Course Subject Abbreviation#41;
@@ -67,7 +61,6 @@ classDiagram
 	CourseShape : ceds#58;P000068 #40;Course Title#41;
 	CourseShape --> OrganizationShape : pesc#58;courseOverrideSchool #40;Course Override School#41;
 	CourseShape : pesc#58;overrideSchoolCourseNumber #40;Override School Course Number#41;
-	CourseShape : pesc#58;courseApplicability #40;Course Applicability#41;
 	CourseShape --> RAPShape : pesc#58;requirement #40;Requirement#41;
 	CourseShape --> AttributeShape : pesc#58;attribute #40;Attribute#41;
 	CourseShape --> RAPShape : pesc#58;proficiency #40;Proficiency#41;

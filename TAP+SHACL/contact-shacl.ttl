@@ -31,11 +31,6 @@
     sh:closed false ;
     sh:targetClass ceds:C200331 .
 
-<AcademicRecordShape> a sh:NodeShape ;
-    rdfs:label "Academic Record"@en ;
-    sh:closed false ;
-    sh:targetClass pesc:AcademicRecord .
-
 <AcademicSessionShape> a sh:NodeShape ;
     rdfs:label "Academic Session"@en ;
     sh:closed false ;
@@ -51,8 +46,8 @@
     sh:closed false ;
     sh:targetClass ceds:C200240 .
 
-<AdditionalStudentAchievmentShape> a sh:NodeShape ;
-    rdfs:label "Additional Student Achievment"@en ;
+<AdditionalStudentAchievementShape> a sh:NodeShape ;
+    rdfs:label "Additional Student Achievement"@en ;
     sh:closed false ;
     sh:targetClass pesc:AdditionalStudentAchievement .
 
