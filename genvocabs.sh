@@ -7,10 +7,10 @@ DIR='Vocabs/'             # path to directory with csv tabular vocab definitions
 NS='TAP+SHACL/namespaces.csv' # path to namespaces csv
 
 
-for file in AcademicAwardLevels AcademicProgramTypes AcademicSummaryTypes AccreditationBodyCodes AgencyCodes ConditionsMetCodes CourseLevels CreditBasis CreditLevels CreditUnits DelinquencyCodes DocumentCompleteCodes DocumentOfficialCodes DocumentProcessCodes DocumentTypeCodes GenderCodes GradeStatusCodes HonorsLevels InstructionSiteCodes LanguageProficiencyCodes LanguageUsageCodes NameCodes ResidencyStatusCodes SchoolLevels SchoolOverrideCodes SecondarySchoolCodes SessionTypes StudentLevelCodes SupplementalGradeCodes TestScoreMethods TransmissionTypes
+for file in AcademicAwardLevels AcademicProgramTypes AcademicSummaryTypes AccreditationBodyCodes AgencyCodes ConditionsMetCodes CourseLevels CreditBasis CreditLevels CreditUnits DelinquencyCodes DocumentCompleteCodes DocumentOfficialCodes DocumentProcessCodes DocumentTypeCodes GenderCodes GradeStatusCodes HonorsLevels InstructionSiteCodes LanguageProficiencyCodes LanguageUsageCodes NameCodes ResidencyStatusCodes SchoolLevels SchoolOverrideCodes SessionTypes StudentLevelCodes SupplementalGradeCodes TestScoreMethods TransmissionTypes
 do
     echo $file
-    /home/phil/bin/tvd2rdf -ns $NS  -of ttl $DIR$file.csv $DIR$file.ttl
-    /home/phil/bin/tvd2rdf -ns $NS  -of xml $DIR$file.csv $DIR$file.xml
+    /home/phil/bin/tvd convert -ns $NS  -of turtle $DIR$file.csv $DIR$file.ttl
+    /home/phil/bin/tvd convert -ns $NS  -of xml $DIR$file.csv $DIR$file.xml
     /home/phil/bin/pylode -p pescvoc -o  $DIR$file.html $DIR$file.ttl
 done
