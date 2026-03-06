@@ -232,7 +232,7 @@
     sh:targetClass pesc:Licensure .
 
 <PostsecondarySectionLocationShape> a sh:NodeShape ;
-    rdfs:label "Postsecondary Section Location Shape"@en ;
+    rdfs:label "Postsecondary Section Location"@en ;
     sh:closed false ;
     sh:property <postsecondarysectionlocationshapeCourseInstructionSiteName>,
         <postsecondarysectionlocationshapeHasCourseInstructionSiteType>,
@@ -240,7 +240,7 @@
     sh:targetClass ceds:C200333 .
 
 <PostsecondarySectionShape> a sh:NodeShape ;
-    rdfs:label "Postsecondary Location Shape"@en ;
+    rdfs:label "Postsecondary Location"@en ;
     sh:closed false ;
     sh:property <postsecondarysectionshapeCourseBeginDate>,
         <postsecondarysectionshapeCourseEndDate>,

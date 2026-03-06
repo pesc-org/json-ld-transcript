@@ -142,12 +142,12 @@
     sh:targetClass ceterms:PostalAddress .
 
 <PostsecondarySectionLocationShape> a sh:NodeShape ;
-    rdfs:label "Postsecondary Section Location Shape"@en ;
+    rdfs:label "Postsecondary Section Location"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200333 .
 
 <PostsecondarySectionShape> a sh:NodeShape ;
-    rdfs:label "Postsecondary Location Shape"@en ;
+    rdfs:label "Postsecondary Location"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200332 .
 
