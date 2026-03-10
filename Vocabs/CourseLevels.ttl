@@ -77,14 +77,14 @@ pescCourseLevels:Dual a skos:Concept ;
     skos:prefLabel "Dual" ;
     skos:topConceptOf pescCourseLevels: .
 
-<https://pesc.org/vocabs/CourseLevels#Dual+Grad%2FUpper> a skos:Concept ;
+pescCourseLevels:DualGradUpper a skos:Concept ;
     skos:definition "Dual  Grad/ Upper" ;
     skos:inScheme pescCourseLevels: ;
     skos:notation "Dual Grad/Upper" ;
     skos:prefLabel "Dual Grad/Upper" ;
     skos:topConceptOf pescCourseLevels: .
 
-<https://pesc.org/vocabs/CourseLevels#Dual+HS%2FUndergrad> a skos:Concept ;
+pescCourseLevels:DualHSUndergrad a skos:Concept ;
     skos:definition "Dual  H S/ Undergrad" ;
     skos:inScheme pescCourseLevels: ;
     skos:notation "Dual HS/Undergrad" ;

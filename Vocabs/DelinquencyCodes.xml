@@ -5,6 +5,14 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#GoodStanding">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Good Standing</skos:prefLabel>
+    <skos:definition>Student was in good standing ProbationGPA=Student was on academic probation (because of low GPA)</skos:definition>
+    <skos:notation>GoodStanding</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     <dcterms:title>Delinquency Codes</dcterms:title>
@@ -21,51 +29,11 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#Unknown"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#Other"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#Unknown">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Unknown</skos:prefLabel>
-    <skos:definition>Unknown</skos:definition>
-    <skos:notation>Unknown</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#Other">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Other</skos:prefLabel>
     <skos:definition>Other</skos:definition>
     <skos:notation>Other</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#ProbationHours">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Probation Hours</skos:prefLabel>
-    <skos:definition>Student was on academic probation (deficiency in credit hours)</skos:definition>
-    <skos:notation>ProbationHours</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#ExclusionDiscipline">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Exclusion Discipline</skos:prefLabel>
-    <skos:definition>Exclusion Discipline</skos:definition>
-    <skos:notation>ExclusionDiscipline</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#ProbationGPA">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Probation Gpa</skos:prefLabel>
-    <skos:definition>Probation GPA</skos:definition>
-    <skos:notation>ProbationGPA</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#ExclusionAcademic">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Exclusion Academic</skos:prefLabel>
-    <skos:definition>Exclusion Academic</skos:definition>
-    <skos:notation>ExclusionAcademic</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
   </rdf:Description>
@@ -77,27 +45,27 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#SuspensionHours">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#ExclusionAcademic">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Suspension Hours</skos:prefLabel>
-    <skos:definition>Student was on academic suspension (deficiency in credit hours)</skos:definition>
-    <skos:notation>SuspensionHours</skos:notation>
+    <skos:prefLabel>Exclusion Academic</skos:prefLabel>
+    <skos:definition>Exclusion Academic</skos:definition>
+    <skos:notation>ExclusionAcademic</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#SuspensionDiscipline">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#ExclusionDiscipline">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Suspension Discipline</skos:prefLabel>
-    <skos:definition>Student was on disciplinary suspension Unknown Other.</skos:definition>
-    <skos:notation>SuspensionDiscipline</skos:notation>
+    <skos:prefLabel>Exclusion Discipline</skos:prefLabel>
+    <skos:definition>Exclusion Discipline</skos:definition>
+    <skos:notation>ExclusionDiscipline</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#GoodStanding">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#ProbationHours">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Good Standing</skos:prefLabel>
-    <skos:definition>Student was in good standing ProbationGPA=Student was on academic probation (because of low GPA)</skos:definition>
-    <skos:notation>GoodStanding</skos:notation>
+    <skos:prefLabel>Probation Hours</skos:prefLabel>
+    <skos:definition>Student was on academic probation (deficiency in credit hours)</skos:definition>
+    <skos:notation>ProbationHours</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
   </rdf:Description>
@@ -106,6 +74,38 @@
     <skos:prefLabel>Probation Discipline</skos:prefLabel>
     <skos:definition>Student was on disciplinary probation</skos:definition>
     <skos:notation>ProbationDiscipline</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#Unknown">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Unknown</skos:prefLabel>
+    <skos:definition>Unknown</skos:definition>
+    <skos:notation>Unknown</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#SuspensionHours">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Suspension Hours</skos:prefLabel>
+    <skos:definition>Student was on academic suspension (deficiency in credit hours)</skos:definition>
+    <skos:notation>SuspensionHours</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#ProbationGPA">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Probation Gpa</skos:prefLabel>
+    <skos:definition>Probation GPA</skos:definition>
+    <skos:notation>ProbationGPA</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DelinquencyCodes#SuspensionDiscipline">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Suspension Discipline</skos:prefLabel>
+    <skos:definition>Student was on disciplinary suspension Unknown Other.</skos:definition>
+    <skos:notation>SuspensionDiscipline</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DelinquencyCodes#"/>
   </rdf:Description>

@@ -5,14 +5,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DocumentProcessCodes#PRODUCTION">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Production</skos:prefLabel>
-    <skos:definition>PRODUCTION</skos:definition>
-    <skos:notation>PRODUCTION</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DocumentProcessCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DocumentProcessCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/DocumentProcessCodes#TEST">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Test</skos:prefLabel>
@@ -27,5 +19,13 @@
     <dcterms:description>This element indicates a TEST or PRODUCTION document</dcterms:description>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/DocumentProcessCodes#TEST"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/DocumentProcessCodes#PRODUCTION"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DocumentProcessCodes#PRODUCTION">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Production</skos:prefLabel>
+    <skos:definition>PRODUCTION</skos:definition>
+    <skos:notation>PRODUCTION</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DocumentProcessCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DocumentProcessCodes#"/>
   </rdf:Description>
 </rdf:RDF>

@@ -5,38 +5,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Percent">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Percent</skos:prefLabel>
-    <skos:definition>Percent of Items Correct</skos:definition>
-    <skos:notation>Percent</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Stanine">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Stanine</skos:prefLabel>
-    <skos:definition>Stanine</skos:definition>
-    <skos:notation>Stanine</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Local">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Local</skos:prefLabel>
-    <skos:definition>Locally Defined.</skos:definition>
-    <skos:notation>Local</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Equated">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Equated</skos:prefLabel>
-    <skos:definition>Equated Score (pre-test and post-test were different)</skos:definition>
-    <skos:notation>Equated</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     <dcterms:title>Test Score Methods</dcterms:title>
@@ -54,19 +22,19 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/TestScoreMethods#Equated"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/TestScoreMethods#Local"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Percentile">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Local">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Percentile</skos:prefLabel>
-    <skos:definition>Percentile</skos:definition>
-    <skos:notation>Percentile</skos:notation>
+    <skos:prefLabel>Local</skos:prefLabel>
+    <skos:definition>Locally Defined.</skos:definition>
+    <skos:notation>Local</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#NormalCurve">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Standard">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Normal Curve</skos:prefLabel>
-    <skos:definition>Normal Curve Equivalent</skos:definition>
-    <skos:notation>NormalCurve</skos:notation>
+    <skos:prefLabel>Standard</skos:prefLabel>
+    <skos:definition>Standard Score</skos:definition>
+    <skos:notation>Standard</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
   </rdf:Description>
@@ -86,22 +54,6 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Graded">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Graded</skos:prefLabel>
-    <skos:definition>Grade Equivalent or Grade Level Indicator</skos:definition>
-    <skos:notation>Graded</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Standard">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Standard</skos:prefLabel>
-    <skos:definition>Standard Score</skos:definition>
-    <skos:notation>Standard</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Adjective">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Adjective</skos:prefLabel>
@@ -110,11 +62,59 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Stanine">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Stanine</skos:prefLabel>
+    <skos:definition>Stanine</skos:definition>
+    <skos:notation>Stanine</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Equated">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Equated</skos:prefLabel>
+    <skos:definition>Equated Score (pre-test and post-test were different)</skos:definition>
+    <skos:notation>Equated</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Graded">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Graded</skos:prefLabel>
+    <skos:definition>Grade Equivalent or Grade Level Indicator</skos:definition>
+    <skos:notation>Graded</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#NormalCurve">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Normal Curve</skos:prefLabel>
+    <skos:definition>Normal Curve Equivalent</skos:definition>
+    <skos:notation>NormalCurve</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Percentile">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Percentile</skos:prefLabel>
+    <skos:definition>Percentile</skos:definition>
+    <skos:notation>Percentile</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Mastery">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Mastery</skos:prefLabel>
     <skos:definition>Mastery Score</skos:definition>
     <skos:notation>Mastery</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TestScoreMethods#Percent">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Percent</skos:prefLabel>
+    <skos:definition>Percent of Items Correct</skos:definition>
+    <skos:notation>Percent</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TestScoreMethods#"/>
   </rdf:Description>

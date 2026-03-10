@@ -5,27 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#TechnicalPreparatory">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Vocational">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Technical Preparatory</skos:prefLabel>
-    <skos:definition>Technical Preparatory</skos:definition>
-    <skos:notation>TechnicalPreparatory</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Basic">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Basic</skos:prefLabel>
-    <skos:definition>Basic</skos:definition>
-    <skos:notation>Basic</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Accelerated">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Accelerated</skos:prefLabel>
-    <skos:definition>Accelerated</skos:definition>
-    <skos:notation>Accelerated</skos:notation>
+    <skos:prefLabel>Vocational</skos:prefLabel>
+    <skos:definition>Vocational</skos:definition>
+    <skos:notation>Vocational</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
@@ -34,6 +18,54 @@
     <skos:prefLabel>Adult Basic</skos:prefLabel>
     <skos:definition>Adult Basic</skos:definition>
     <skos:notation>AdultBasic</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#CollegePreparatory">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>College Preparatory</skos:prefLabel>
+    <skos:definition>College Preparatory</skos:definition>
+    <skos:notation>CollegePreparatory</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Regents">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Regents</skos:prefLabel>
+    <skos:definition>Regents</skos:definition>
+    <skos:notation>Regents</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#DualHSUndergrad">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Dual Hs/Undergrad</skos:prefLabel>
+    <skos:definition>Dual  H S/ Undergrad</skos:definition>
+    <skos:notation>Dual HS/Undergrad</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#LowerDivision">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Lower Division</skos:prefLabel>
+    <skos:definition>Lower division</skos:definition>
+    <skos:notation>LowerDivision</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#SpecialEducation">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Special Education</skos:prefLabel>
+    <skos:definition>Special Education Technical</skos:definition>
+    <skos:notation>SpecialEducation</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Accelerated">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Accelerated</skos:prefLabel>
+    <skos:definition>Accelerated</skos:definition>
+    <skos:notation>Accelerated</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
@@ -63,43 +95,27 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/CourseLevels#UpperDivision"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/CourseLevels#Vocational"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Regents">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#NonAcademic">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Regents</skos:prefLabel>
-    <skos:definition>Regents</skos:definition>
-    <skos:notation>Regents</skos:notation>
+    <skos:prefLabel>Non Academic</skos:prefLabel>
+    <skos:definition>Non-Academic</skos:definition>
+    <skos:notation>NonAcademic</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#GraduateProfessional">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#GiftedTalented">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Graduate Professional</skos:prefLabel>
-    <skos:definition>Graduate/Professional</skos:definition>
-    <skos:notation>GraduateProfessional</skos:notation>
+    <skos:prefLabel>Gifted Talented</skos:prefLabel>
+    <skos:definition>Gifted and Talented</skos:definition>
+    <skos:notation>GiftedTalented</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#InternationalBaccalaureate">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#DualGradUpper">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>International Baccalaureate</skos:prefLabel>
-    <skos:definition>International Baccalaureate</skos:definition>
-    <skos:notation>InternationalBaccalaureate</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#LowerDivision">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Lower Division</skos:prefLabel>
-    <skos:definition>Lower division</skos:definition>
-    <skos:notation>LowerDivision</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Honors">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Honors</skos:prefLabel>
-    <skos:definition>Honors</skos:definition>
-    <skos:notation>Honors</skos:notation>
+    <skos:prefLabel>Dual Grad/Upper</skos:prefLabel>
+    <skos:definition>Dual  Grad/ Upper</skos:definition>
+    <skos:notation>Dual Grad/Upper</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
@@ -111,19 +127,35 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Dual">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Dual</skos:prefLabel>
+    <skos:definition>Dual level</skos:definition>
+    <skos:notation>Dual</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#InternationalBaccalaureate">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>International Baccalaureate</skos:prefLabel>
+    <skos:definition>International Baccalaureate</skos:definition>
+    <skos:notation>InternationalBaccalaureate</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Basic">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Basic</skos:prefLabel>
+    <skos:definition>Basic</skos:definition>
+    <skos:notation>Basic</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#UpperDivision">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Upper Division</skos:prefLabel>
     <skos:definition>Upper division</skos:definition>
     <skos:notation>UpperDivision</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#CollegePreparatory">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>College Preparatory</skos:prefLabel>
-    <skos:definition>College Preparatory</skos:definition>
-    <skos:notation>CollegePreparatory</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
@@ -135,27 +167,19 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Vocational">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Honors">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Vocational</skos:prefLabel>
-    <skos:definition>Vocational</skos:definition>
-    <skos:notation>Vocational</skos:notation>
+    <skos:prefLabel>Honors</skos:prefLabel>
+    <skos:definition>Honors</skos:definition>
+    <skos:notation>Honors</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#SpecialEducation">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#TechnicalPreparatory">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Special Education</skos:prefLabel>
-    <skos:definition>Special Education Technical</skos:definition>
-    <skos:notation>SpecialEducation</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Dual+Grad%2FUpper">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Dual Grad/Upper</skos:prefLabel>
-    <skos:definition>Dual  Grad/ Upper</skos:definition>
-    <skos:notation>Dual Grad/Upper</skos:notation>
+    <skos:prefLabel>Technical Preparatory</skos:prefLabel>
+    <skos:definition>Technical Preparatory</skos:definition>
+    <skos:notation>TechnicalPreparatory</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
@@ -167,35 +191,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#NonAcademic">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#GraduateProfessional">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Non Academic</skos:prefLabel>
-    <skos:definition>Non-Academic</skos:definition>
-    <skos:notation>NonAcademic</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Dual">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Dual</skos:prefLabel>
-    <skos:definition>Dual level</skos:definition>
-    <skos:notation>Dual</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#Dual+HS%2FUndergrad">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Dual Hs/Undergrad</skos:prefLabel>
-    <skos:definition>Dual  H S/ Undergrad</skos:definition>
-    <skos:notation>Dual HS/Undergrad</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CourseLevels#GiftedTalented">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Gifted Talented</skos:prefLabel>
-    <skos:definition>Gifted and Talented</skos:definition>
-    <skos:notation>GiftedTalented</skos:notation>
+    <skos:prefLabel>Graduate Professional</skos:prefLabel>
+    <skos:definition>Graduate/Professional</skos:definition>
+    <skos:notation>GraduateProfessional</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CourseLevels#"/>
   </rdf:Description>

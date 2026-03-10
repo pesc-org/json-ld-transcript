@@ -24,6 +24,14 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/TransmissionTypes#Replace"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/TransmissionTypes#Resubmission"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TransmissionTypes#Replace">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Replace</skos:prefLabel>
+    <skos:definition>Replace</skos:definition>
+    <skos:notation>Replace</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/TransmissionTypes#Reissue">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Reissue</skos:prefLabel>
@@ -40,14 +48,6 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TransmissionTypes#Original">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Original</skos:prefLabel>
-    <skos:definition>Original</skos:definition>
-    <skos:notation>Original</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/TransmissionTypes#MutuallyDefined">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Mutually Defined</skos:prefLabel>
@@ -56,11 +56,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/TransmissionTypes#Replace">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/TransmissionTypes#Original">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Replace</skos:prefLabel>
-    <skos:definition>Replace</skos:definition>
-    <skos:notation>Replace</skos:notation>
+    <skos:prefLabel>Original</skos:prefLabel>
+    <skos:definition>Original</skos:definition>
+    <skos:notation>Original</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/TransmissionTypes#"/>
   </rdf:Description>
