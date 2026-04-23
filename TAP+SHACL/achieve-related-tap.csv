@@ -45,14 +45,14 @@ pescConditionsMetCodes:MutuallyDefined",picklist,,,Recommended,
 386,AdditionalStudentAchievementShape,pesc:proficiencyAchieved,Proficiency Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
 384,AdditionalStudentAchievementShape,pesc:requirementAchieved,Requirement Achieved,FALSE,TRUE,IRI BNODE,,,,RAPShape,ceds:C200065,Optional,
 ,AdditionalStudentAchievementShape,rdf:type,Type,TRUE,,IRI,,pesc:AdditionalStudentAchievement,,,,,
-307,CourseAchievementShape,ceds:P000064,Course Quality Points Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
+307,CourseAchievementShape,ceds:P000064,Course Quality Points Earned,FALSE,FALSE,Literal,xsd:float,,,,,Recommended,decimal
 299,CourseAchievementShape,ceds:P000065,Has Course Repeat Code,FALSE,FALSE,IRI,,"ceds:NI000065116744
 ceds:NI000065116745
 ceds:NI000065116748
 ceds:NI000065116747
 ceds:NI000065116746
 ceds:NI000065116260",picklist,,,Recommended,
-294,CourseAchievementShape,ceds:P000200,Number of Credits Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
+294,CourseAchievementShape,ceds:P000200,Number of Credits Earned,FALSE,FALSE,Literal,xsd:float,,,,,Recommended,decimal
 316,CourseAchievementShape,ceds:P001300,Course Add Date,FALSE,FALSE,Literal,xsd:date,,,,,Optional,
 317,CourseAchievementShape,ceds:P001305,Course DropDate,FALSE,FALSE,Literal,xsd:date,,,,,,
 ,CourseAchievementShape,pesc:courseEquivalentGrade,Course Equivalent Grade,FALSE,FALSE,BNODE,,,,GradeShape,pesc:Grade,,
@@ -90,13 +90,13 @@ pescSupplementalGradeCodes:TriCourseGrade",picklist,,,Recommended,
 297,GradeShape,ceds:P001299,Has Course Academic Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:Completed
 pescGradeStatusCodes:PlanningToTake
 ceds:NI001299115324
-ceds:NI001299115877         
-ceds:NI001299115916         
-ceds:NI001299115918         
-ceds:NI001299115931         
-ceds:NI001299116290         
-ceds:NI001299116438         
-ceds:NI001299116457         
+ceds:NI001299115877
+ceds:NI001299115916
+ceds:NI001299115918
+ceds:NI001299115931
+ceds:NI001299116290
+ceds:NI001299116438
+ceds:NI001299116457
 ceds:NI001299116507
 ceds:NI001299116508
 ceds:NI001299117075

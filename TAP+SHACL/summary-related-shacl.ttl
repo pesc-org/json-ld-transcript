@@ -406,7 +406,7 @@
 
 <gpashapeCreditHoursAttempted> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "Credit Hours Attempted"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -414,7 +414,7 @@
 
 <gpashapeCreditHoursEarned> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "Credit Hours Earned"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -422,7 +422,7 @@
 
 <gpashapeCreditHoursGPA> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "Credit Hours GPA"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -430,7 +430,7 @@
 
 <gpashapeGPARangeMaximum> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "GPA Range Maximum"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -438,7 +438,7 @@
 
 <gpashapeGPARangeMinimum> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "GPA Range Minimum"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -446,7 +446,7 @@
 
 <gpashapeGradePointAverage> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "Grade Point Average"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -461,7 +461,7 @@
 
 <gpashapeTotalQualityPoints> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "Total Quality Points"@en-US ;
     sh:nodeKind sh:Literal ;

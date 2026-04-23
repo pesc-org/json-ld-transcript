@@ -460,7 +460,7 @@
     },
     "courseCreditEarned": {
       "@id": "pesc:courseCreditEarned",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "courseCreditLevel": {
       "@id": "pesc:courseCreditLevel",
@@ -472,7 +472,7 @@
     },
     "courseCreditValue": {
       "@id": "pesc:courseCreditValue",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "courseDropDate": {
       "@id": "pesc:courseDropDate",
@@ -524,7 +524,7 @@
     },
     "courseQualityPointsEarned": {
       "@id": "pesc:courseQualityPointsEarned",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "courseRepeatCode": {
       "@id": "pesc:courseRepeatCode",
@@ -560,15 +560,15 @@
     },
     "creditHoursAttempted": {
       "@id": "pesc:creditHoursAttempted",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "creditHoursEarned": {
       "@id": "pesc:creditHoursEarned",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "creditHoursGPA": {
       "@id": "pesc:creditHoursGPA",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "creditUnit": {
       "@id": "pesc:creditUnit",
@@ -652,11 +652,11 @@
     },
     "gpaRangeMaximum": {
       "@id": "pesc:gpaRangeMaximum",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "gpaRangeMinimum": {
       "@id": "pesc:gpaRangeMinimum",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "gpaSummary": {
       "@id": "pesc:gpaSummary",
@@ -664,7 +664,7 @@
     },
     "gradePointAverage": {
       "@id": "pesc:gradePointAverage",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "hasCourse": {
       "@id": "pesc:hasCourse",
@@ -1027,7 +1027,7 @@
     },
     "totalQualityPoints": {
       "@id": "pesc:totalQualityPoints",
-      "@type": "xsd:decimal"
+      "@type": "xsd:float"
     },
     "transmissionType": {
       "@id": "pesc:transmissionType",

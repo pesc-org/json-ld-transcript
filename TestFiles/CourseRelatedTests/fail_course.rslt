@@ -69,7 +69,7 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: <https://example.edu/Course/001>
 	Value Node: Literal("15.0")
 	Result Path: ceds:P000058
-	Message: Value is not Literal with datatype xsd:decimal
+	Message: Value is not Literal with datatype xsd:float
 Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#PatternConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:courseshapeCourseFiveDigitSCEDCode

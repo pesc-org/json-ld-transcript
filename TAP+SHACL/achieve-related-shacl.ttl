@@ -455,7 +455,7 @@
 
 <courseachievementshapeCourseQualityPointsEarned> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "Course Quality Points Earned"@en-US ;
     sh:nodeKind sh:Literal ;
@@ -504,7 +504,7 @@
 
 <courseachievementshapeNumberofCreditsEarned> a sh:PropertyShape ;
     rdfs:comment "decimal"@eng ;
-    sh:datatype xsd:decimal ;
+    sh:datatype xsd:float ;
     sh:maxCount 1 ;
     sh:name "Number of Credits Earned"@en-US ;
     sh:nodeKind sh:Literal ;

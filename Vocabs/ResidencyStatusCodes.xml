@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#NonResident">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#InCounty">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Non Resident</skos:prefLabel>
-    <skos:definition>Non Resident</skos:definition>
-    <skos:notation>NonResident</skos:notation>
+    <skos:prefLabel>In County</skos:prefLabel>
+    <skos:definition>In County</skos:definition>
+    <skos:notation>InCounty</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
   </rdf:Description>
@@ -21,19 +21,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#Resident">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#InDistrict">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Resident</skos:prefLabel>
-    <skos:definition>Resident</skos:definition>
-    <skos:notation>Resident</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#NotReported">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Not Reported</skos:prefLabel>
-    <skos:definition>Not Reported</skos:definition>
-    <skos:notation>NotReported</skos:notation>
+    <skos:prefLabel>In District</skos:prefLabel>
+    <skos:definition>In District</skos:definition>
+    <skos:notation>InDistrict</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
   </rdf:Description>
@@ -50,27 +42,11 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#OtherResident"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#Resident"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#InCity">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#Resident">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>In City</skos:prefLabel>
-    <skos:definition>In City</skos:definition>
-    <skos:notation>InCity</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#InDistrict">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>In District</skos:prefLabel>
-    <skos:definition>In District</skos:definition>
-    <skos:notation>InDistrict</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#InCounty">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>In County</skos:prefLabel>
-    <skos:definition>In County</skos:definition>
-    <skos:notation>InCounty</skos:notation>
+    <skos:prefLabel>Resident</skos:prefLabel>
+    <skos:definition>Resident</skos:definition>
+    <skos:notation>Resident</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
   </rdf:Description>
@@ -79,6 +55,30 @@
     <skos:prefLabel>In State</skos:prefLabel>
     <skos:definition>In State</skos:definition>
     <skos:notation>InState</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#InCity">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>In City</skos:prefLabel>
+    <skos:definition>In City</skos:definition>
+    <skos:notation>InCity</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#NotReported">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Not Reported</skos:prefLabel>
+    <skos:definition>Not Reported</skos:definition>
+    <skos:notation>NotReported</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/ResidencyStatusCodes#NonResident">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Non Resident</skos:prefLabel>
+    <skos:definition>Non Resident</skos:definition>
+    <skos:notation>NonResident</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ResidencyStatusCodes#"/>
   </rdf:Description>

@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#National">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#District">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>National</skos:prefLabel>
-    <skos:definition>National</skos:definition>
-    <skos:notation>National</skos:notation>
+    <skos:prefLabel>District</skos:prefLabel>
+    <skos:definition>District</skos:definition>
+    <skos:notation>District</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>
@@ -21,19 +21,19 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#National">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>National</skos:prefLabel>
+    <skos:definition>National</skos:definition>
+    <skos:notation>National</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#MutuallyDefined">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Mutually Defined</skos:prefLabel>
     <skos:definition>Mutually Defined</skos:definition>
     <skos:notation>MutuallyDefined</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#Regional">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Regional</skos:prefLabel>
-    <skos:definition>Regional</skos:definition>
-    <skos:notation>Regional</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>
@@ -49,11 +49,11 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#Regional"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#State"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#District">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#Regional">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>District</skos:prefLabel>
-    <skos:definition>District</skos:definition>
-    <skos:notation>District</skos:notation>
+    <skos:prefLabel>Regional</skos:prefLabel>
+    <skos:definition>Regional</skos:definition>
+    <skos:notation>Regional</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>

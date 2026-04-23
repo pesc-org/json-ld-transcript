@@ -5,43 +5,43 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#LowerDivision">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#EleventhGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Lower Division</skos:prefLabel>
-    <skos:definition>Lower Division</skos:definition>
-    <skos:notation>LowerDivision</skos:notation>
+    <skos:prefLabel>Eleventh Grade</skos:prefLabel>
+    <skos:definition>Eleventh Grade</skos:definition>
+    <skos:notation>EleventhGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#DualGraduateUndergraduate">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#SeventhGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Dual Graduate Undergraduate</skos:prefLabel>
-    <skos:definition>Dual Graduate Undergraduate</skos:definition>
-    <skos:notation>DualGraduateUndergraduate</skos:notation>
+    <skos:prefLabel>Seventh Grade</skos:prefLabel>
+    <skos:definition>Seventh Grade</skos:definition>
+    <skos:notation>SeventhGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Graduate">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Grade13">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Graduate</skos:prefLabel>
-    <skos:definition>Graduate level credit</skos:definition>
-    <skos:notation>Graduate</skos:notation>
+    <skos:prefLabel>Grade13</skos:prefLabel>
+    <skos:definition>Grade13</skos:definition>
+    <skos:notation>Grade13</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Vocational">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Undergraduate">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Vocational</skos:prefLabel>
-    <skos:definition>Vocational/technical credit</skos:definition>
-    <skos:notation>Vocational</skos:notation>
+    <skos:prefLabel>Undergraduate</skos:prefLabel>
+    <skos:definition>Undergraduate LowerDivision=Lower division credit (associated with first/second year)</skos:definition>
+    <skos:notation>Undergraduate</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Professional">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#TenthGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Professional</skos:prefLabel>
-    <skos:definition>Professional</skos:definition>
-    <skos:notation>Professional</skos:notation>
+    <skos:prefLabel>Tenth Grade</skos:prefLabel>
+    <skos:definition>Tenth Grade</skos:definition>
+    <skos:notation>TenthGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
@@ -70,27 +70,11 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/CreditLevels#UpperDivision"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/CreditLevels#Vocational"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Undergraduate">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Dual">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Undergraduate</skos:prefLabel>
-    <skos:definition>Undergraduate LowerDivision=Lower division credit (associated with first/second year)</skos:definition>
-    <skos:notation>Undergraduate</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Ungraded">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Ungraded</skos:prefLabel>
-    <skos:definition>Ungraded</skos:definition>
-    <skos:notation>Ungraded</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#EighthGrade">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Eighth Grade</skos:prefLabel>
-    <skos:definition>Eighth Grade</skos:definition>
-    <skos:notation>EighthGrade</skos:notation>
+    <skos:prefLabel>Dual</skos:prefLabel>
+    <skos:definition>Dual level (upper division and graduate, may be applicable to a bachelor's degree or graduate degree or both) GraduateProfessional=Dual level (graduate and professional- may be applicable to both) added enums below and reodered in alpha order SeventhGrade EighthGrade NinthGrade enthGrade EleventhGrade TwelfthGrade DualHighSchoolCollege DualGraduateUndergraduat Secondary</skos:definition>
+    <skos:notation>Dual</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
@@ -102,14 +86,6 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#TenthGrade">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Tenth Grade</skos:prefLabel>
-    <skos:definition>Tenth Grade</skos:definition>
-    <skos:notation>TenthGrade</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#NinthGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Ninth Grade</skos:prefLabel>
@@ -118,19 +94,19 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#EleventhGrade">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Professional">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Eleventh Grade</skos:prefLabel>
-    <skos:definition>Eleventh Grade</skos:definition>
-    <skos:notation>EleventhGrade</skos:notation>
+    <skos:prefLabel>Professional</skos:prefLabel>
+    <skos:definition>Professional</skos:definition>
+    <skos:notation>Professional</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Secondary">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Ungraded">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Secondary</skos:prefLabel>
-    <skos:definition>Secondary</skos:definition>
-    <skos:notation>Secondary</skos:notation>
+    <skos:prefLabel>Ungraded</skos:prefLabel>
+    <skos:definition>Ungraded</skos:definition>
+    <skos:notation>Ungraded</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
@@ -142,27 +118,59 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#SeventhGrade">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Seventh Grade</skos:prefLabel>
-    <skos:definition>Seventh Grade</skos:definition>
-    <skos:notation>SeventhGrade</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Dual">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Dual</skos:prefLabel>
-    <skos:definition>Dual level (upper division and graduate, may be applicable to a bachelor's degree or graduate degree or both) GraduateProfessional=Dual level (graduate and professional- may be applicable to both) added enums below and reodered in alpha order SeventhGrade EighthGrade NinthGrade enthGrade EleventhGrade TwelfthGrade DualHighSchoolCollege DualGraduateUndergraduat Secondary</skos:definition>
-    <skos:notation>Dual</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#DualHighSchoolCollege">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Dual High School College</skos:prefLabel>
     <skos:definition>Dual High School College</skos:definition>
     <skos:notation>DualHighSchoolCollege</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#GraduateProfessional">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Graduate Professional</skos:prefLabel>
+    <skos:definition>Graduate Professional</skos:definition>
+    <skos:notation>GraduateProfessional</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Graduate">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Graduate</skos:prefLabel>
+    <skos:definition>Graduate level credit</skos:definition>
+    <skos:notation>Graduate</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#LowerDivision">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Lower Division</skos:prefLabel>
+    <skos:definition>Lower Division</skos:definition>
+    <skos:notation>LowerDivision</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#DualGraduateUndergraduate">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Dual Graduate Undergraduate</skos:prefLabel>
+    <skos:definition>Dual Graduate Undergraduate</skos:definition>
+    <skos:notation>DualGraduateUndergraduate</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#EighthGrade">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Eighth Grade</skos:prefLabel>
+    <skos:definition>Eighth Grade</skos:definition>
+    <skos:notation>EighthGrade</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Vocational">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Vocational</skos:prefLabel>
+    <skos:definition>Vocational/technical credit</skos:definition>
+    <skos:notation>Vocational</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
@@ -174,19 +182,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Grade13">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#Secondary">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Grade13</skos:prefLabel>
-    <skos:definition>Grade13</skos:definition>
-    <skos:notation>Grade13</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditLevels#GraduateProfessional">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Graduate Professional</skos:prefLabel>
-    <skos:definition>Graduate Professional</skos:definition>
-    <skos:notation>GraduateProfessional</skos:notation>
+    <skos:prefLabel>Secondary</skos:prefLabel>
+    <skos:definition>Secondary</skos:definition>
+    <skos:notation>Secondary</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditLevels#"/>
   </rdf:Description>

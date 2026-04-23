@@ -5,14 +5,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/ConditionsMetCodes#Yes">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Yes</skos:prefLabel>
-    <skos:definition>Yes</skos:definition>
-    <skos:notation>Yes</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/ConditionsMetCodes#Conditional">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Conditional</skos:prefLabel>
@@ -29,6 +21,14 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/ConditionsMetCodes#No">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>No</skos:prefLabel>
+    <skos:definition>No</skos:definition>
+    <skos:notation>No</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/ConditionsMetCodes#">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     <dcterms:title>Conditions Met Codes</dcterms:title>
@@ -38,11 +38,11 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#Conditional"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#MutuallyDefined"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/ConditionsMetCodes#No">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/ConditionsMetCodes#Yes">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>No</skos:prefLabel>
-    <skos:definition>No</skos:definition>
-    <skos:notation>No</skos:notation>
+    <skos:prefLabel>Yes</skos:prefLabel>
+    <skos:definition>Yes</skos:definition>
+    <skos:notation>Yes</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/ConditionsMetCodes#"/>
   </rdf:Description>

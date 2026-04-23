@@ -64,13 +64,13 @@
 .
 
 <https://example.edu/gpa001> a pesc:GPA ;
-    pesc:creditHoursAttempted "12"^^xsd:decimal ;
-    pesc:creditHoursEarned "12"^^xsd:decimal ;
+    pesc:creditHoursAttempted "12"^^xsd:float ;
+    pesc:creditHoursEarned "12"^^xsd:float ;
     pesc:creditUnit ceds:NI000057116841 ;
-    pesc:gradePointAverage "3.75"^^xsd:decimal ;
-    pesc:totalQualityPoints "45"^^xsd:decimal ;
-    pesc:gpaRangeMinimum "0"^^xsd:decimal ;
-    pesc:gpaRangeMaximum "4"^^xsd:decimal ;
+    pesc:gradePointAverage "3.75"^^xsd:float ;
+    pesc:totalQualityPoints "45"^^xsd:float ;
+    pesc:gpaRangeMinimum "0"^^xsd:float ;
+    pesc:gpaRangeMaximum "4"^^xsd:float ;
 .
 
 <https://example.edu/honors001> a pesc:AcademicHonors ; # fail does not conform to expected shape

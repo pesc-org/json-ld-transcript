@@ -802,7 +802,7 @@
         rr:predicate ceds:P000058 ; # Course Credit Value
         rr:objectMap [ 
             rml:reference "CourseCreditValue" ;
-            rr:datatype xsd:decimal ;
+            rr:datatype xsd:float ;
         ];
     ] ;
     rr:predicateObjectMap [
@@ -1246,7 +1246,7 @@
         rr:predicate ceds:P000200 ; # (Number of Credits Earned) 
         rr:objectMap [
             rml:reference "CourseCreditValue" ;
-            rr:datatype xsd:decimal ;
+            rr:datatype xsd:float ;
         ]
     ] ;
     rr:predicateObjectMap [
@@ -1277,7 +1277,7 @@
         rr:predicate ceds:P000064 ; # (Course Quality Points Earned)
         rr:objectMap [
             rml:reference "CourseQualityPointsEarned" ;
-            rr:datatype xsd:decimal ;
+            rr:datatype xsd:float ;
         ]
     ] ;
     rr:predicateObjectMap [

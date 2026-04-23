@@ -5,6 +5,14 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AcademicProgramTypes#SecondMajor">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Second Major</skos:prefLabel>
+    <skos:definition>Second Major</skos:definition>
+    <skos:notation>SecondMajor</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AcademicProgramTypes#Focus">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Focus</skos:prefLabel>
@@ -21,11 +29,19 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AcademicProgramTypes#SecondMajor">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AcademicProgramTypes#Concentration">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Second Major</skos:prefLabel>
-    <skos:definition>Second Major</skos:definition>
-    <skos:notation>SecondMajor</skos:notation>
+    <skos:prefLabel>Concentration</skos:prefLabel>
+    <skos:definition>Concentration</skos:definition>
+    <skos:notation>Concentration</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AcademicProgramTypes#Specialization">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Specialization</skos:prefLabel>
+    <skos:definition>Specialization</skos:definition>
+    <skos:notation>Specialization</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
   </rdf:Description>
@@ -45,22 +61,6 @@
     <skos:prefLabel>Major</skos:prefLabel>
     <skos:definition>Major</skos:definition>
     <skos:notation>Major</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AcademicProgramTypes#Specialization">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Specialization</skos:prefLabel>
-    <skos:definition>Specialization</skos:definition>
-    <skos:notation>Specialization</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AcademicProgramTypes#Concentration">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Concentration</skos:prefLabel>
-    <skos:definition>Concentration</skos:definition>
-    <skos:notation>Concentration</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AcademicProgramTypes#"/>
   </rdf:Description>

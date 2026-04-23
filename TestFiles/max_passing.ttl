@@ -74,7 +74,7 @@
   # CIP 
   ceds:P000057 ceds:NI000057115402;
   # Credit units Carnegie
-  ceds:P000058 15.0;
+  ceds:P000058 "15.0"^^xsd:float;
   # credit value
   ceds:P000060 ceds:NI000060116257;
   # Grade point applicability
@@ -405,11 +405,11 @@
   # Course Add Date
   ceds:P001305 "2009-12-02"^^xsd:date;
   # Course Drop Date
-  ceds:P000200 42.0;
+  ceds:P000200 "42.0"^^xsd:float;
   # Number of Credits Earned
   ceds:P000065 ceds:NI000065116745;
   # Has Course Repeat Code
-  ceds:P000064 42.0;
+  ceds:P000064 "42.0"^^xsd:float;
   # Course Quality Points Earned
   pesc:courseGrade [
     # Course Grade
@@ -471,14 +471,14 @@
   pesc:academicSummaryLevel pescCreditLevels:Undergraduate;
   pesc:gpaSummary [
     a pesc:GPA;
-    pesc:creditHoursAttempted "12"^^xsd:decimal;
-    pesc:creditHoursEarned "12"^^xsd:decimal;
+    pesc:creditHoursAttempted "12"^^xsd:float;
+    pesc:creditHoursEarned "12"^^xsd:float;
     ceds:P000057 ceds:NI000057116841;
-    pesc:gradePointAverage "3.75"^^xsd:decimal;
-    pesc:totalQualityPoints "45"^^xsd:decimal;
-    pesc:creditHoursForGPA "12"^^xsd:decimal;
-    pesc:gpaRangeMinimum "0"^^xsd:decimal;
-    pesc:gpaRangeMaximum "4"^^xsd:decimal;
+    pesc:gradePointAverage "3.75"^^xsd:float;
+    pesc:totalQualityPoints "45"^^xsd:float;
+    pesc:creditHoursForGPA "12"^^xsd:float;
+    pesc:gpaRangeMinimum "0"^^xsd:float;
+    pesc:gpaRangeMaximum "4"^^xsd:float;
   ];
   pesc:academicHonors [
     a pesc:AcademicHonors;
@@ -494,14 +494,14 @@
   pesc:academicSummaryLevel pescCreditLevels:Undergraduate;
   pesc:gpaSummary [
     a pesc:GPA;
-    pesc:creditHoursAttempted "12"^^xsd:decimal;
-    pesc:creditHoursEarned "12"^^xsd:decimal;
+    pesc:creditHoursAttempted "12"^^xsd:float;
+    pesc:creditHoursEarned "12"^^xsd:float;
     ceds:P000057 ceds:NI000057116841;
-    pesc:gradePointAverage "3.75"^^xsd:decimal;
-    pesc:totalQualityPoints "45"^^xsd:decimal;
-    pesc:creditHoursForGPA "12"^^xsd:decimal;
-    pesc:gpaRangeMinimum "0"^^xsd:decimal;
-    pesc:gpaRangeMaximum "4"^^xsd:decimal;
+    pesc:gradePointAverage "3.75"^^xsd:float;
+    pesc:totalQualityPoints "45"^^xsd:float;
+    pesc:creditHoursForGPA "12"^^xsd:float;
+    pesc:gpaRangeMinimum "0"^^xsd:float;
+    pesc:gpaRangeMaximum "4"^^xsd:float;
   ];
   pesc:academicHonors [
     a pesc:AcademicHonors;
@@ -517,14 +517,14 @@
   pesc:academicSummaryLevel pescCreditLevels:Undergraduate;
   pesc:gpaSummary [
     a pesc:GPA;
-    pesc:creditHoursAttempted "12"^^xsd:decimal;
-    pesc:creditHoursEarned "12"^^xsd:decimal;
+    pesc:creditHoursAttempted "12"^^xsd:float;
+    pesc:creditHoursEarned "12"^^xsd:float;
     ceds:P000057 ceds:NI000057116841;
-    pesc:gradePointAverage "3.75"^^xsd:decimal;
-    pesc:totalQualityPoints "45"^^xsd:decimal;
-    pesc:creditHoursForGPA "12"^^xsd:decimal;
-    pesc:gpaRangeMinimum "0"^^xsd:decimal;
-    pesc:gpaRangeMaximum "4"^^xsd:decimal;
+    pesc:gradePointAverage "3.75"^^xsd:float;
+    pesc:totalQualityPoints "45"^^xsd:float;
+    pesc:creditHoursForGPA "12"^^xsd:float;
+    pesc:gpaRangeMinimum "0"^^xsd:float;
+    pesc:gpaRangeMaximum "4"^^xsd:float;
   ];
   pesc:academicHonors [
     a pesc:AcademicHonors;
@@ -543,14 +543,14 @@
   pesc:academicSummaryLevel pescCreditLevels:Undergraduate;
   pesc:gpaSummary [
     a pesc:GPA;
-    pesc:creditHoursAttempted "12"^^xsd:decimal;
-    pesc:creditHoursEarned "12"^^xsd:decimal;
+    pesc:creditHoursAttempted "12"^^xsd:float;
+    pesc:creditHoursEarned "12"^^xsd:float;
     ceds:P000057 ceds:NI000057116841;
-    pesc:gradePointAverage "3.75"^^xsd:decimal;
-    pesc:totalQualityPoints "45"^^xsd:decimal;
-    pesc:creditHoursForGPA "12"^^xsd:decimal;
-    pesc:gpaRangeMinimum "0"^^xsd:decimal;
-    pesc:gpaRangeMaximum "4"^^xsd:decimal;
+    pesc:gradePointAverage "3.75"^^xsd:float;
+    pesc:totalQualityPoints "45"^^xsd:float;
+    pesc:creditHoursForGPA "12"^^xsd:float;
+    pesc:gpaRangeMinimum "0"^^xsd:float;
+    pesc:gpaRangeMaximum "4"^^xsd:float;
   ];
   pesc:academicHonors [
     a pesc:AcademicHonors;
