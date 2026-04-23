@@ -5,11 +5,35 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Always">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Speaking">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Always</skos:prefLabel>
-    <skos:definition>Always</skos:definition>
-    <skos:notation>Always</skos:notation>
+    <skos:prefLabel>Speaking</skos:prefLabel>
+    <skos:definition>Speaking</skos:definition>
+    <skos:notation>Speaking</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Reading">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Reading</skos:prefLabel>
+    <skos:definition>Reading</skos:definition>
+    <skos:notation>Reading</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#SpokenAtHome">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Spoken At Home</skos:prefLabel>
+    <skos:definition>Spoken At Home</skos:definition>
+    <skos:notation>SpokenAtHome</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Native">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Native</skos:prefLabel>
+    <skos:definition>Native</skos:definition>
+    <skos:notation>Native</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
   </rdf:Description>
@@ -28,19 +52,11 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#Writing"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#WrittenCommunication"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#FirstSpokenLanguage">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Always">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>First Spoken Language</skos:prefLabel>
-    <skos:definition>First Spoken Language</skos:definition>
-    <skos:notation>FirstSpokenLanguage</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Writing">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Writing</skos:prefLabel>
-    <skos:definition>Writing</skos:definition>
-    <skos:notation>Writing</skos:notation>
+    <skos:prefLabel>Always</skos:prefLabel>
+    <skos:definition>Always</skos:definition>
+    <skos:notation>Always</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
   </rdf:Description>
@@ -60,14 +76,6 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Speaking">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Speaking</skos:prefLabel>
-    <skos:definition>Speaking</skos:definition>
-    <skos:notation>Speaking</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#WrittenCommunication">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Written Communication</skos:prefLabel>
@@ -76,27 +84,19 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Reading">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Writing">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Reading</skos:prefLabel>
-    <skos:definition>Reading</skos:definition>
-    <skos:notation>Reading</skos:notation>
+    <skos:prefLabel>Writing</skos:prefLabel>
+    <skos:definition>Writing</skos:definition>
+    <skos:notation>Writing</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#Native">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#FirstSpokenLanguage">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Native</skos:prefLabel>
-    <skos:definition>Native</skos:definition>
-    <skos:notation>Native</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageUsageCodes#SpokenAtHome">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Spoken At Home</skos:prefLabel>
-    <skos:definition>Spoken At Home</skos:definition>
-    <skos:notation>SpokenAtHome</skos:notation>
+    <skos:prefLabel>First Spoken Language</skos:prefLabel>
+    <skos:definition>First Spoken Language</skos:definition>
+    <skos:notation>FirstSpokenLanguage</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageUsageCodes#"/>
   </rdf:Description>

@@ -5,6 +5,45 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <dcterms:title>Instruction Site Codes</dcterms:title>
+    <dcterms:description>An indication of the type of location at which the course is taught.</dcterms:description>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#OnCampus"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#OffCampus"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Extension"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#StudyAbroad"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Correctional"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Millitary"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Telecommunication"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Auxiliary"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#ClinicHospital"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#DistanceLearning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#OnCampus">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>On Campus</skos:prefLabel>
+    <skos:definition>On Campus</skos:definition>
+    <skos:notation>OnCampus</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#DistanceLearning">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Distance Learning</skos:prefLabel>
+    <skos:definition>Distance Learning</skos:definition>
+    <skos:notation>DistanceLearning</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Extension">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Extension</skos:prefLabel>
+    <skos:definition>Extension</skos:definition>
+    <skos:notation>Extension</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#StudyAbroad">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Study Abroad</skos:prefLabel>
@@ -21,50 +60,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Millitary">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Telecommunication">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Millitary</skos:prefLabel>
-    <skos:definition>Millitary</skos:definition>
-    <skos:notation>Millitary</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#DistanceLearning">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Distance Learning</skos:prefLabel>
-    <skos:definition>Distance Learning</skos:definition>
-    <skos:notation>DistanceLearning</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    <dcterms:title>Instruction Site Codes</dcterms:title>
-    <dcterms:description>An indication of the type of location at which the course is taught.</dcterms:description>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#OnCampus"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#OffCampus"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Extension"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#StudyAbroad"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Correctional"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Millitary"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Telecommunication"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#Auxiliary"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#ClinicHospital"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#DistanceLearning"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#OffCampus">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Off Campus</skos:prefLabel>
-    <skos:definition>Off Campus</skos:definition>
-    <skos:notation>OffCampus</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Extension">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Extension</skos:prefLabel>
-    <skos:definition>Extension</skos:definition>
-    <skos:notation>Extension</skos:notation>
+    <skos:prefLabel>Telecommunication</skos:prefLabel>
+    <skos:definition>Telecommunication</skos:definition>
+    <skos:notation>Telecommunication</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
@@ -76,11 +76,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Telecommunication">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Millitary">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Telecommunication</skos:prefLabel>
-    <skos:definition>Telecommunication</skos:definition>
-    <skos:notation>Telecommunication</skos:notation>
+    <skos:prefLabel>Millitary</skos:prefLabel>
+    <skos:definition>Millitary</skos:definition>
+    <skos:notation>Millitary</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
@@ -92,11 +92,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#OnCampus">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#OffCampus">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>On Campus</skos:prefLabel>
-    <skos:definition>On Campus</skos:definition>
-    <skos:notation>OnCampus</skos:notation>
+    <skos:prefLabel>Off Campus</skos:prefLabel>
+    <skos:definition>Off Campus</skos:definition>
+    <skos:notation>OffCampus</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>

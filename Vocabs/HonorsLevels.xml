@@ -13,14 +13,6 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/HonorsLevels#SecondHighest"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/HonorsLevels#ThirdHighest"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/HonorsLevels#ThirdHighest">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Third Highest</skos:prefLabel>
-    <skos:definition>Third Highest</skos:definition>
-    <skos:notation>ThirdHighest</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/HonorsLevels#SecondHighest">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Second Highest</skos:prefLabel>
@@ -34,6 +26,14 @@
     <skos:prefLabel>First Highest</skos:prefLabel>
     <skos:definition>First Highest</skos:definition>
     <skos:notation>FirstHighest</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/HonorsLevels#ThirdHighest">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Third Highest</skos:prefLabel>
+    <skos:definition>Third Highest</skos:definition>
+    <skos:notation>ThirdHighest</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
   </rdf:Description>

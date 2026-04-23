@@ -13,11 +13,35 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Remedial">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#AcademicRenewal">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Remedial</skos:prefLabel>
-    <skos:definition>Remedial/developmental</skos:definition>
-    <skos:notation>Remedial</skos:notation>
+    <skos:prefLabel>Academic Renewal</skos:prefLabel>
+    <skos:definition>Academic Renewal</skos:definition>
+    <skos:notation>AcademicRenewal</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#AdvancedStanding">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Advanced Standing</skos:prefLabel>
+    <skos:definition>Advanced Standing</skos:definition>
+    <skos:notation>AdvancedStanding</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#CreditByExam">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Credit By Exam</skos:prefLabel>
+    <skos:definition>Credit granted from successful score on a standardized test of comprehension or proficiency.</skos:definition>
+    <skos:notation>CreditByExam</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#HighSchoolTransferCredit">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>High School Transfer Credit</skos:prefLabel>
+    <skos:definition>Credit from a high school course is transferred to the college.</skos:definition>
+    <skos:notation>HighSchoolTransferCredit</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>
@@ -29,11 +53,27 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Major">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Correspondence">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Major</skos:prefLabel>
-    <skos:definition>Credit associated with the student's major AcademicRenewal AdultBasic AdvancedPlacement AdvancedStanding Correspondence ContinuingEducation Exemption Equivalence InternationalBaccalaureate Military</skos:definition>
-    <skos:notation>Major</skos:notation>
+    <skos:prefLabel>Correspondence</skos:prefLabel>
+    <skos:definition>Correspondence</skos:definition>
+    <skos:notation>Correspondence</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#LifeExperience">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Life Experience</skos:prefLabel>
+    <skos:definition>Life Experience</skos:definition>
+    <skos:notation>LifeExperience</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Regular">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Regular</skos:prefLabel>
+    <skos:definition>Regular/general enrollment</skos:definition>
+    <skos:notation>Regular</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>
@@ -61,11 +101,11 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/CreditBasis#Major"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/CreditBasis#AdultBasic"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#JuniorHighSchoolCredit">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#AdvancedPlacement">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Junior High School Credit</skos:prefLabel>
-    <skos:definition>Credit from a junior high school course is counted at the high school.</skos:definition>
-    <skos:notation>JuniorHighSchoolCredit</skos:notation>
+    <skos:prefLabel>Advanced Placement</skos:prefLabel>
+    <skos:definition>Advanced Placement</skos:definition>
+    <skos:notation>AdvancedPlacement</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>
@@ -77,19 +117,51 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#HighSchoolTransferCredit">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Remedial">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>High School Transfer Credit</skos:prefLabel>
-    <skos:definition>Credit from a high school course is transferred to the college.</skos:definition>
-    <skos:notation>HighSchoolTransferCredit</skos:notation>
+    <skos:prefLabel>Remedial</skos:prefLabel>
+    <skos:definition>Remedial/developmental</skos:definition>
+    <skos:notation>Remedial</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#AdvancedPlacement">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Exemption">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Advanced Placement</skos:prefLabel>
-    <skos:definition>Advanced Placement</skos:definition>
-    <skos:notation>AdvancedPlacement</skos:notation>
+    <skos:prefLabel>Exemption</skos:prefLabel>
+    <skos:definition>Exemption</skos:definition>
+    <skos:notation>Exemption</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#InternationalBaccalaureate">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>International Baccalaureate</skos:prefLabel>
+    <skos:definition>International Baccalaureate</skos:definition>
+    <skos:notation>InternationalBaccalaureate</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Major">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Major</skos:prefLabel>
+    <skos:definition>Credit associated with the student's major AcademicRenewal AdultBasic AdvancedPlacement AdvancedStanding Correspondence ContinuingEducation Exemption Equivalence InternationalBaccalaureate Military</skos:definition>
+    <skos:notation>Major</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Military">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Military</skos:prefLabel>
+    <skos:definition>Military</skos:definition>
+    <skos:notation>Military</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#JuniorHighSchoolCredit">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Junior High School Credit</skos:prefLabel>
+    <skos:definition>Credit from a junior high school course is counted at the high school.</skos:definition>
+    <skos:notation>JuniorHighSchoolCredit</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>
@@ -106,78 +178,6 @@
     <skos:prefLabel>Continuing Education</skos:prefLabel>
     <skos:definition>Continuing Education</skos:definition>
     <skos:notation>ContinuingEducation</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#InternationalBaccalaureate">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>International Baccalaureate</skos:prefLabel>
-    <skos:definition>International Baccalaureate</skos:definition>
-    <skos:notation>InternationalBaccalaureate</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#AcademicRenewal">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Academic Renewal</skos:prefLabel>
-    <skos:definition>Academic Renewal</skos:definition>
-    <skos:notation>AcademicRenewal</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Military">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Military</skos:prefLabel>
-    <skos:definition>Military</skos:definition>
-    <skos:notation>Military</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#LifeExperience">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Life Experience</skos:prefLabel>
-    <skos:definition>Life Experience</skos:definition>
-    <skos:notation>LifeExperience</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Correspondence">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Correspondence</skos:prefLabel>
-    <skos:definition>Correspondence</skos:definition>
-    <skos:notation>Correspondence</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#AdvancedStanding">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Advanced Standing</skos:prefLabel>
-    <skos:definition>Advanced Standing</skos:definition>
-    <skos:notation>AdvancedStanding</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Regular">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Regular</skos:prefLabel>
-    <skos:definition>Regular/general enrollment</skos:definition>
-    <skos:notation>Regular</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#Exemption">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Exemption</skos:prefLabel>
-    <skos:definition>Exemption</skos:definition>
-    <skos:notation>Exemption</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditBasis#CreditByExam">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Credit By Exam</skos:prefLabel>
-    <skos:definition>Credit granted from successful score on a standardized test of comprehension or proficiency.</skos:definition>
-    <skos:notation>CreditByExam</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditBasis#"/>
   </rdf:Description>

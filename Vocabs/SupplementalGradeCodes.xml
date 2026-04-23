@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#InstructorAssignedGrade">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#BiCourseGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Instructor Assigned Grade</skos:prefLabel>
-    <skos:definition>Instructor Assigned Grade</skos:definition>
-    <skos:notation>InstructorAssignedGrade</skos:notation>
+    <skos:prefLabel>Bi Course Grade</skos:prefLabel>
+    <skos:definition>Bi Course Grade</skos:definition>
+    <skos:notation>BiCourseGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>
@@ -21,11 +21,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#TriCourseGrade">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#SubSessionGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Tri Course Grade</skos:prefLabel>
-    <skos:definition>Tri Course Grade</skos:definition>
-    <skos:notation>TriCourseGrade</skos:notation>
+    <skos:prefLabel>Sub Session Grade</skos:prefLabel>
+    <skos:definition>Sub Session Grade</skos:definition>
+    <skos:notation>SubSessionGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>
@@ -40,19 +40,11 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#SubSessionGrade"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#TriCourseGrade"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#BiCourseGrade">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#TriCourseGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Bi Course Grade</skos:prefLabel>
-    <skos:definition>Bi Course Grade</skos:definition>
-    <skos:notation>BiCourseGrade</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#SubSessionGrade">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Sub Session Grade</skos:prefLabel>
-    <skos:definition>Sub Session Grade</skos:definition>
-    <skos:notation>SubSessionGrade</skos:notation>
+    <skos:prefLabel>Tri Course Grade</skos:prefLabel>
+    <skos:definition>Tri Course Grade</skos:definition>
+    <skos:notation>TriCourseGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>
@@ -61,6 +53,14 @@
     <skos:prefLabel>Exam Grade</skos:prefLabel>
     <skos:definition>Exam Grade</skos:definition>
     <skos:notation>ExamGrade</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#InstructorAssignedGrade">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Instructor Assigned Grade</skos:prefLabel>
+    <skos:definition>Instructor Assigned Grade</skos:definition>
+    <skos:notation>InstructorAssignedGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>

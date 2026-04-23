@@ -209,8 +209,8 @@
 <PostalAddressShape> a sh:NodeShape ;
     rdfs:label "Postal Address"@en ;
     sh:closed false ;
-    sh:property <postaladdressshapeAddressLocality%252Ce.g.City>,
-        <postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode>,
+    sh:property <postaladdressshapeAddressLocality>,
+        <postaladdressshapeAddressRegion>,
         <postaladdressshapeCountryCode>,
         <postaladdressshapePostalCode>,
         <postaladdressshapeStreetAddress>,
@@ -312,22 +312,22 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<postaladdressshapeAddressLocality%252Ce.g.City> a sh:PropertyShape ;
+<postaladdressshapeAddressLocality> a sh:PropertyShape ;
     rdfs:comment "pesc:core:CommonAddressDetailsGroup"@eng ;
     sh:datatype rdf:langString ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "Address Locality, e.g. City"@en-US ;
+    sh:name "Address Locality"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceterms:addressLocality .
 
-<postaladdressshapeAddressRegion%252Ce.gStateorProvinceCode> a sh:PropertyShape ;
+<postaladdressshapeAddressRegion> a sh:PropertyShape ;
     rdfs:comment """pesc:core:DomesticAddressDetailsGroup
 pesc:core:InternationalAddressDetailsGroup"""@eng ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
-    sh:name "Address Region, e.g State or Province Code"@en-US ;
+    sh:name "Address Region"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceterms:addressRegion .
 

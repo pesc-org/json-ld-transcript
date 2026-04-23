@@ -74,7 +74,7 @@ ceds:NI001304115600
 ceds:NI001304115810
 pescCreditLevels:Grade13
 pescCreditLevels:DualGraduateUndergraduate",picklist,,,Recommended,
-293,CourseShape,ceds:P000058,Course Credit Value,FALSE,FALSE,Literal,xsd:decimal,,,,,Recommended,decimal
+293,CourseShape,ceds:P000058,Course Credit Value,FALSE,FALSE,Literal,xsd:float,,,,,Recommended,decimal
 295,CourseShape,ceds:P001298,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,picklist,,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
 300,CourseShape,ceds:P000043,Has Classification of Instructional Program Code,FALSE,FALSE,Literal,xsd:string,^\d{2}\.\d{4}$,pattern,,,Optional,
 305,CourseShape,ceds:P001517,Course Five Digit SCED Code,FALSE,FALSE,Literal,xsd:string,^[\dPKG]{5}$,pattern,,,Optional,

@@ -130,9 +130,9 @@ pescAcademicSummaryTypes:UserDefined
 pescAcademicSummaryTypes:Weighted
 pescAcademicSummaryTypes:NonWeighted
 pescAcademicSummaryTypes:Cumulative",picklist,,,,Recommended,
-267,GPAShape,pesc:creditHoursAttempted,Credit Hours Attempted,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
-268,GPAShape,pesc:creditHoursEarned,Credit Hours Earned,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
-274,GPAShape,pesc:creditHoursForGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
+267,GPAShape,pesc:creditHoursAttempted,Credit Hours Attempted,FALSE,FALSE,Literal,xsd:float,,,,,,Recommended,decimal
+268,GPAShape,pesc:creditHoursEarned,Credit Hours Earned,FALSE,FALSE,Literal,xsd:float,,,,,,Recommended,decimal
+274,GPAShape,pesc:creditHoursForGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:float,,,,,,Recommended,decimal
 271,GPAShape,ceds:P000057,Has Course Credit Units,FALSE,FALSE,IRI,,"ceds:NI000057116219
 ceds:NI000057116669
 ceds:NI000057116841 
@@ -180,13 +180,13 @@ pescDelinquencyCodes:Other",picklist,,,,Not Recommended,"It is recommended that 
 ,ProgramSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,,,Not Recommended,The format for the date is ccyy-mm-dd. This would not be the appropriate place in the schema to transmit these data.
 ,SessionSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,,,Optional,"This date would typically be the date of graduation for students who did graduate this session. If the student did not graduate, it would be the last date of known enrollment. The date format is ccyy-mm-dd. It would not typically be included on a postsecondary transcript. In rare cases, it might be included for the final session the student attended at that school."
 353,AcademicSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,,,Optional,"This date would typically be the date of graduation for students who did graduate. If the student did not graduate, it would be the last date of known attendance unless the school has a policy on withdrawal from the school. It would be unusual to find this data element on a College Transcript. The date format is ccyy-mm-dd."
-276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
-275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
+276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:float,,,,,,Recommended,decimal
+275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:float,,,,,,Recommended,decimal
 ,AwardSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Recommended,
 ,ProgramSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Optional,Would not typically be included on a College Transcript.
 ,SessionSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Recommended,This would typically be where items like Dean’s List at the end of a session are listed.
 266,AcademicSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Recommended,
-272,GPAShape,pesc:gradePointAverage,Grade Point Average,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
+272,GPAShape,pesc:gradePointAverage,Grade Point Average,FALSE,FALSE,Literal,xsd:float,,,,,,Recommended,decimal
 ,StudentShape,pesc:hasSummary,Has Summary,TRUE,TRUE,IRI BNODE,,,,,"pesc:AcademicSummary
 pesc:AwardSummary
 pesc:ProgramSummary
@@ -205,7 +205,7 @@ pescHonorsLevels:ThirdHighest",picklist,,,,Recommended,
 ,ProgramSummaryShape,pesc:source,Source,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,,Optional,
 ,SessionSummaryShape,pesc:source,Source,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,,Optional,
 ,AcademicSummaryShape,pesc:source,Source,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,,Optional,
-273,GPAShape,pesc:totalQualityPoints,Total Quality Points,FALSE,FALSE,Literal,xsd:decimal,,,,,,Recommended,decimal
+273,GPAShape,pesc:totalQualityPoints,Total Quality Points,FALSE,FALSE,Literal,xsd:float,,,,,,Recommended,decimal
 ,AwardSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:AwardSummary,,,,,,
 ,ProgramSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:ProgramSummary,,,,,,
 ,SessionSummaryShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:SessionSummary,,,,,,

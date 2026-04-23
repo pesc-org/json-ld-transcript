@@ -7,21 +7,21 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("12")
 	Result Path: pesc:creditHoursAttempted
-	Message: Value is not Literal with datatype xsd:decimal
+	Message: Value is not Literal with datatype xsd:float
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:gpashapeCreditHoursEarned
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("12", datatype=xsd:integer)
 	Result Path: pesc:creditHoursEarned
-	Message: Value is not Literal with datatype xsd:decimal
+	Message: Value is not Literal with datatype xsd:float
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:gpashapeCreditHoursGPA
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("12")
 	Result Path: pesc:creditHoursForGPA
-	Message: Value is not Literal with datatype xsd:decimal
+	Message: Value is not Literal with datatype xsd:float
 Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:gpashapeHasCourseCreditUnits
@@ -35,28 +35,28 @@ Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("4")
 	Result Path: pesc:gpaRangeMaximum
-	Message: Value is not Literal with datatype xsd:decimal
+	Message: Value is not Literal with datatype xsd:float
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:gpashapeGPARangeMinimum
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("0")
 	Result Path: pesc:gpaRangeMinimum
-	Message: Value is not Literal with datatype xsd:decimal
+	Message: Value is not Literal with datatype xsd:float
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:gpashapeGradePointAverage
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("3.75")
 	Result Path: pesc:gradePointAverage
-	Message: Value is not Literal with datatype xsd:decimal
+	Message: Value is not Literal with datatype xsd:float
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: ex:gpashapeTotalQualityPoints
 	Focus Node: <https://example.edu/gpa001>
 	Value Node: Literal("45")
 	Result Path: pesc:totalQualityPoints
-	Message: Value is not Literal with datatype xsd:decimal
+	Message: Value is not Literal with datatype xsd:float
 Validation Result in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Warning
 	Source Shape: ex:studentshapeHasSummary

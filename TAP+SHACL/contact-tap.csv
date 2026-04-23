@@ -1,8 +1,8 @@
 0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,valueClass,Rec Usage,note
 104,ContactShape,ceterms:address,Address,FALSE,TRUE,BNODE,,,,PostalAddressShape,ceterms:PostalAddress,Recommended,
 116,PostalAddressShape,ceterms:addressCountry,Country Code,TRUE,FALSE,Literal,xsd:token,,,,,Required,pesc:core:InternationalAddressDetailsGroup
-111,PostalAddressShape,ceterms:addressLocality,"Address Locality, e.g. City",TRUE,FALSE,Literal,rdf:langString,,,,,Required,pesc:core:CommonAddressDetailsGroup
-112,PostalAddressShape,ceterms:addressRegion,"Address Region, e.g State or Province Code",TRUE,FALSE,Literal,xsd:token,,,,,Required,"pesc:core:DomesticAddressDetailsGroup
+111,PostalAddressShape,ceterms:addressLocality,Address Locality,TRUE,FALSE,Literal,rdf:langString,,,,,Required,pesc:core:CommonAddressDetailsGroup
+112,PostalAddressShape,ceterms:addressRegion,Address Region,TRUE,FALSE,Literal,xsd:token,,,,,Required,"pesc:core:DomesticAddressDetailsGroup
 pesc:core:InternationalAddressDetailsGroup"
 6,ContactShape,ceterms:contactType,Contact Type,FALSE,TRUE,Literal,rdf:langString,1..80,lengthRange,,,Optional,
 115,PostalAddressShape,ceterms:postalCode,Postal Code,FALSE,FALSE,Literal,xsd:token,,,,,Required,"pesc:core:DomesticAddressDetailsGroup
