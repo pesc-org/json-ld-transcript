@@ -1,0 +1,4 @@
+
+This folder contains the data model expressed as several Dublin Core Tabular Application Profiles ([DCTAP](https://www.dublincore.org/specifications/dctap/)). Each TAP is CSV file that represents a subdomain of the information covered by the Transcript; for example one for summary-related information, one for achievement-related information, another for course-related information, and so on. These have been converted into SHACL files which, given suitable tools, both expresses the data structure and allows validation of instance data.
+
+The software used for converting the DCTAP to SHACL is [TAP2SHACL](https://codeberg.org/philbarker/TAP2SHACL).
