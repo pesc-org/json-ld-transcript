@@ -1,4 +1,4 @@
 PESC,URI
-Applicable,http://ceds.ed.gov/terms#NI000060115254
-NotApplicable,http://ceds.ed.gov/terms#NI000060116257
-Weighted,http://ceds.ed.gov/terms#NI000060117182
+Applicable,https://w3id.org/CEDStandards/terms/NI000060115254
+NotApplicable,https://w3id.org/CEDStandards/terms/NI000060116257
+Weighted,https://w3id.org/CEDStandards/terms/NI000060117182

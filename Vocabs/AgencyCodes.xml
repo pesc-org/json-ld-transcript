@@ -13,19 +13,27 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#State">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>State</skos:prefLabel>
+    <skos:definition>State</skos:definition>
+    <skos:notation>State</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#Regional">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Regional</skos:prefLabel>
+    <skos:definition>Regional</skos:definition>
+    <skos:notation>Regional</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#Migrant">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Migrant</skos:prefLabel>
     <skos:definition>Migrant</skos:definition>
     <skos:notation>Migrant</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#National">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>National</skos:prefLabel>
-    <skos:definition>National</skos:definition>
-    <skos:notation>National</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>
@@ -49,27 +57,19 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#Regional"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#State"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#Regional">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Regional</skos:prefLabel>
-    <skos:definition>Regional</skos:definition>
-    <skos:notation>Regional</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#State">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>State</skos:prefLabel>
-    <skos:definition>State</skos:definition>
-    <skos:notation>State</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#Province">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Province</skos:prefLabel>
     <skos:definition>Province</skos:definition>
     <skos:notation>Province</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#National">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>National</skos:prefLabel>
+    <skos:definition>National</skos:definition>
+    <skos:notation>National</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>

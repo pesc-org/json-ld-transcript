@@ -5,22 +5,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Casual">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Casual</skos:prefLabel>
-    <skos:definition>Casual</skos:definition>
-    <skos:notation>Casual</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Former">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Former</skos:prefLabel>
-    <skos:definition>Former</skos:definition>
-    <skos:notation>Former</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Nickname">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Nickname</skos:prefLabel>
@@ -29,19 +13,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Other">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Legal">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Other</skos:prefLabel>
-    <skos:definition>Other</skos:definition>
-    <skos:notation>Other</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#MedicalSchoolApplicationSource">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Medical School Application Source</skos:prefLabel>
-    <skos:definition>Medical School Application Source</skos:definition>
-    <skos:notation>MedicalSchoolApplicationSource</skos:notation>
+    <skos:prefLabel>Legal</skos:prefLabel>
+    <skos:definition>Legal</skos:definition>
+    <skos:notation>Legal</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
   </rdf:Description>
@@ -58,11 +34,35 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/NameCodes#Nickname"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/NameCodes#Other"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Former">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Former</skos:prefLabel>
+    <skos:definition>Former</skos:definition>
+    <skos:notation>Former</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Casual">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Casual</skos:prefLabel>
+    <skos:definition>Casual</skos:definition>
+    <skos:notation>Casual</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Formal">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Formal</skos:prefLabel>
     <skos:definition>Formal</skos:definition>
     <skos:notation>Formal</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Other">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Other</skos:prefLabel>
+    <skos:definition>Other</skos:definition>
+    <skos:notation>Other</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
   </rdf:Description>
@@ -74,11 +74,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#Legal">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/NameCodes#MedicalSchoolApplicationSource">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Legal</skos:prefLabel>
-    <skos:definition>Legal</skos:definition>
-    <skos:notation>Legal</skos:notation>
+    <skos:prefLabel>Medical School Application Source</skos:prefLabel>
+    <skos:definition>Medical School Application Source</skos:definition>
+    <skos:notation>MedicalSchoolApplicationSource</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/NameCodes#"/>
   </rdf:Description>
