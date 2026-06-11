@@ -20,30 +20,6 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#WASC-ACCJC"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#WASC-ACSCU"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#MSA">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Msa</skos:prefLabel>
-    <skos:definition>Middle States Association of Colleges and Schools, Commission on Higher Education</skos:definition>
-    <skos:notation>MSA</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#WASC-ACSCU">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Wasc-Acscu</skos:prefLabel>
-    <skos:definition>Western Association of Schools and Colleges, Accrediting Commission for Senior Colleges and Universities</skos:definition>
-    <skos:notation>WASC-ACSCU</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#NEASC-CTCI">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Neasc-Ctci</skos:prefLabel>
-    <skos:definition>New England Association of Schools and Colleges, Inc., Commission on Technical and Career Institutions</skos:definition>
-    <skos:notation>NEASC-CTCI</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#NCA-HLC">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Nca-Hlc</skos:prefLabel>
@@ -52,19 +28,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#NWCCU">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#MSA">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Nwccu</skos:prefLabel>
-    <skos:definition>Northwest Commission on Colleges and Universities</skos:definition>
-    <skos:notation>NWCCU</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#WASC-ACCJC">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Wasc-Accjc</skos:prefLabel>
-    <skos:definition>Western Association of Schools and Colleges, Accrediting Commission for Community and Junior Colleges</skos:definition>
-    <skos:notation>WASC-ACCJC</skos:notation>
+    <skos:prefLabel>Msa</skos:prefLabel>
+    <skos:definition>Middle States Association of Colleges and Schools, Commission on Higher Education</skos:definition>
+    <skos:notation>MSA</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
   </rdf:Description>
@@ -76,11 +44,35 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#NEASC-CTCI">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Neasc-Ctci</skos:prefLabel>
+    <skos:definition>New England Association of Schools and Colleges, Inc., Commission on Technical and Career Institutions</skos:definition>
+    <skos:notation>NEASC-CTCI</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#Other">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Other</skos:prefLabel>
     <skos:definition>Use AccreditationTypeName to enter Accrediting body other than listed</skos:definition>
     <skos:notation>Other</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#WASC-ACSCU">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Wasc-Acscu</skos:prefLabel>
+    <skos:definition>Western Association of Schools and Colleges, Accrediting Commission for Senior Colleges and Universities</skos:definition>
+    <skos:notation>WASC-ACSCU</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#WASC-ACCJC">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Wasc-Accjc</skos:prefLabel>
+    <skos:definition>Western Association of Schools and Colleges, Accrediting Commission for Community and Junior Colleges</skos:definition>
+    <skos:notation>WASC-ACCJC</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
   </rdf:Description>
@@ -97,6 +89,14 @@
     <skos:prefLabel>Nca-Casi</skos:prefLabel>
     <skos:definition>North Central Association of Colleges and Schools, Commission on Accreditation and School Improvement, Board of Trustees</skos:definition>
     <skos:notation>NCA-CASI</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AccreditationBodyCodes#NWCCU">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Nwccu</skos:prefLabel>
+    <skos:definition>Northwest Commission on Colleges and Universities</skos:definition>
+    <skos:notation>NWCCU</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AccreditationBodyCodes#"/>
   </rdf:Description>

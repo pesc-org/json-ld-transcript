@@ -7,7 +7,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <https://maps.pjjk/pesc/Transcript/PESCXML2RDF#> . # does not resolve
-@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceds: <https://w3id.org/CEDStandards/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix pesc: <https://pesc.org/terms/> .
 @prefix pescCourseLevels:	<https://pesc.org/vocabs/CourseLevels#> .

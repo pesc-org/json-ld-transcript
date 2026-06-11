@@ -13,11 +13,19 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#BlendedFinalGrade">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#InstructorAssignedGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Blended Final Grade</skos:prefLabel>
-    <skos:definition>Blended Final Grade</skos:definition>
-    <skos:notation>BlendedFinalGrade</skos:notation>
+    <skos:prefLabel>Instructor Assigned Grade</skos:prefLabel>
+    <skos:definition>Instructor Assigned Grade</skos:definition>
+    <skos:notation>InstructorAssignedGrade</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#TriCourseGrade">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Tri Course Grade</skos:prefLabel>
+    <skos:definition>Tri Course Grade</skos:definition>
+    <skos:notation>TriCourseGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>
@@ -40,14 +48,6 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#SubSessionGrade"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#TriCourseGrade"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#TriCourseGrade">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Tri Course Grade</skos:prefLabel>
-    <skos:definition>Tri Course Grade</skos:definition>
-    <skos:notation>TriCourseGrade</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#ExamGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Exam Grade</skos:prefLabel>
@@ -56,11 +56,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#InstructorAssignedGrade">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SupplementalGradeCodes#BlendedFinalGrade">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Instructor Assigned Grade</skos:prefLabel>
-    <skos:definition>Instructor Assigned Grade</skos:definition>
-    <skos:notation>InstructorAssignedGrade</skos:notation>
+    <skos:prefLabel>Blended Final Grade</skos:prefLabel>
+    <skos:definition>Blended Final Grade</skos:definition>
+    <skos:notation>BlendedFinalGrade</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SupplementalGradeCodes#"/>
   </rdf:Description>

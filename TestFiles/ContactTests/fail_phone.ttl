@@ -1,5 +1,5 @@
 
-@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceds: <https://w3id.org/CEDStandards/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix elm:  <http://data.europa.eu/snb/model/elm/>.

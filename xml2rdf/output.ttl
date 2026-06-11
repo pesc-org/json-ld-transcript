@@ -1,5 +1,5 @@
 @prefix : <https://maps.pjjk/pesc/Transcript/PESCXML2RDF#> .
-@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceds: <https://w3id.org/CEDStandards/terms/> .
 @prefix ceterms: <https://purl.org/ctdl/terms/> .
 @prefix ex: <https://example.edu/> .
 @prefix owl: <http://www.w3.org/2002/07/owl> .
