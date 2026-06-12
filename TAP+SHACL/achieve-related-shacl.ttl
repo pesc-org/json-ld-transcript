@@ -167,7 +167,7 @@
     sh:targetClass pesc:SessionSummary .
 
 <StudentShape> a sh:NodeShape ;
-    rdfs:label "Student"@en ;
+    rdfs:label "Person"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200275 .
 
