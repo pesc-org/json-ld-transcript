@@ -1216,7 +1216,13 @@
   ];
   rr:predicateObjectMap [
     rr:predicate pesc:courseGrade;
-    rr:objectMap [ rr:template "https://example.edu/CourseGrade/{CourseNumber}-Grade-{CourseAcademicGrade}" ];
+    rr:objectMap [
+      rr:parentTriplesMap :GradeTM;
+      rr:joinCondition [
+        rr:child ".";
+        rr:parent ".";
+      ];
+    ]
   ].
 
 # To do: 
@@ -1241,7 +1247,8 @@
   rr:subjectMap [
     # Assume only one grade per course (probably OK if each is in separate CourseAchievement, 
     # but see above where assumption only one Achievement per course)
-    rr:template "https://example.edu/CourseGrade/{CourseNumber}-Grade-{CourseAcademicGrade}";
+    rr:termType rr:BlankNode;
+    rr:template "CourseGrade_{CourseNumber}_Grade_{CourseAcademicGrade}";
     rr:class pesc:Grade;
   ];
   rr:predicateObjectMap [

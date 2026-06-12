@@ -88,6 +88,104 @@ _:CS_315K_1_2005-09-01 a ceds:C200332;
   ceds:P001315 "1";
   ceds:P600108 <https://example.edu/sites/Main%20Campus> .
 
+_:CourseGrade_301M_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_303C_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_305G_Grade_F a pesc:Grade;
+  ceds:P000053 "F";
+  ceds:P001298 "25" .
+
+_:CourseGrade_309K_Grade_F a pesc:Grade;
+  ceds:P000053 "F";
+  ceds:P001298 "25" .
+
+_:CourseGrade_310L_Grade_B a pesc:Grade;
+  ceds:P000053 "B";
+  ceds:P001298 "25" .
+
+_:CourseGrade_310_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_311_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_315K_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_316K_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_320K_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_321_Grade_B a pesc:Grade;
+  ceds:P000053 "B";
+  ceds:P001298 "25" .
+
+_:CourseGrade_327L_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_344D_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_346K_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_350L_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_357M_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25";
+  ceds:P001299 <https://pesc.org/vocabs/GradeStatusCodes#Completed> .
+
+_:CourseGrade_358_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_365N_Grade_B a pesc:Grade;
+  ceds:P000053 "B";
+  ceds:P001298 "25" .
+
+_:CourseGrade_387J_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_388C_Grade_CR a pesc:Grade;
+  ceds:P000053 "CR";
+  ceds:P001298 "501";
+  ceds:P001299 ceds:NI001299115324 .
+
+_:CourseGrade_388_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_389K_Grade_B a pesc:Grade;
+  ceds:P000053 "B";
+  ceds:P001298 "25" .
+
+_:CourseGrade_406_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
+_:CourseGrade_407_Grade_A a pesc:Grade;
+  ceds:P000053 "A";
+  ceds:P001298 "25" .
+
 _:FICE_001506 a ceds:C200252;
   ceds:P000826 "001506"^^xsd:token;
   ceds:P000827 ceds:NI000827151968 .
@@ -143,13 +241,13 @@ ex:100000000 a ceds:C200275;
   ceds:P600336 _:0 .
 
 <https://example.edu/CourseAchievement/301M> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/301M-Grade-A>;
+  pesc:courseGrade _:CourseGrade_301M_Grade_A;
   pesc:inCourse <https://example.edu/courses/301M>;
   pesc:inSession <https://example.edu/sessions/1989-01-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/303C> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/303C-Grade-A>;
+  pesc:courseGrade _:CourseGrade_303C_Grade_A;
   pesc:inCourse <https://example.edu/courses/303C>;
   pesc:inSession <https://example.edu/sessions/2001-01-2>;
   ceds:P000064 "42"^^xsd:float;
@@ -159,37 +257,37 @@ ex:100000000 a ceds:C200275;
   ceds:P001305 "2001-05-30"^^xsd:date .
 
 <https://example.edu/CourseAchievement/305G> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/305G-Grade-F>;
+  pesc:courseGrade _:CourseGrade_305G_Grade_F;
   pesc:inCourse <https://example.edu/courses/305G>;
   pesc:inSession <https://example.edu/sessions/1986-09-2>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/309K> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/309K-Grade-F>;
+  pesc:courseGrade _:CourseGrade_309K_Grade_F;
   pesc:inCourse <https://example.edu/courses/309K>;
   pesc:inSession <https://example.edu/sessions/1986-09-2>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/310> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/310-Grade-A>;
+  pesc:courseGrade _:CourseGrade_310_Grade_A;
   pesc:inCourse <https://example.edu/courses/310>;
   pesc:inSession <https://example.edu/sessions/2001-01-2>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/310L> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/310L-Grade-B>;
+  pesc:courseGrade _:CourseGrade_310L_Grade_B;
   pesc:inCourse <https://example.edu/courses/310L>;
   pesc:inSession <https://example.edu/sessions/1986-09-2>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/311> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/311-Grade-A>;
+  pesc:courseGrade _:CourseGrade_311_Grade_A;
   pesc:inCourse <https://example.edu/courses/311>;
   pesc:inSession <https://example.edu/sessions/2001-01-2>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/315K> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/315K-Grade-A>;
+  pesc:courseGrade _:CourseGrade_315K_Grade_A;
   pesc:inCourse <https://example.edu/courses/315K>;
   pesc:inSection _:CS_315K_1_2005-09-01;
   pesc:inSession <https://example.edu/sessions/1985-09-1>;
@@ -200,202 +298,104 @@ ex:100000000 a ceds:C200275;
   ceds:P001305 "2005-12-02"^^xsd:date .
 
 <https://example.edu/CourseAchievement/316K> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/316K-Grade-A>;
+  pesc:courseGrade _:CourseGrade_316K_Grade_A;
   pesc:inCourse <https://example.edu/courses/316K>;
   pesc:inSession <https://example.edu/sessions/1988-06-2>;
   ceds:P000065 ceds:NI000065116260;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/320K> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/320K-Grade-A>;
+  pesc:courseGrade _:CourseGrade_320K_Grade_A;
   pesc:inCourse <https://example.edu/courses/320K>;
   pesc:inSession <https://example.edu/sessions/1988-01-2>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/321> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/321-Grade-B>;
+  pesc:courseGrade _:CourseGrade_321_Grade_B;
   pesc:inCourse <https://example.edu/courses/321>;
   pesc:inSession <https://example.edu/sessions/2001-01-2>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/327L> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/327L-Grade-A>;
+  pesc:courseGrade _:CourseGrade_327L_Grade_A;
   pesc:inCourse <https://example.edu/courses/327L>;
   pesc:inSession <https://example.edu/sessions/1989-01-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/344D> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/344D-Grade-A>;
+  pesc:courseGrade _:CourseGrade_344D_Grade_A;
   pesc:inCourse <https://example.edu/courses/344D>;
   pesc:inSession <https://example.edu/sessions/1989-09-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/346K> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/346K-Grade-A>;
+  pesc:courseGrade _:CourseGrade_346K_Grade_A;
   pesc:inCourse <https://example.edu/courses/346K>;
   pesc:inSession <https://example.edu/sessions/1988-06-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/350L> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/350L-Grade-A>;
+  pesc:courseGrade _:CourseGrade_350L_Grade_A;
   pesc:inCourse <https://example.edu/courses/350L>;
   pesc:inSession <https://example.edu/sessions/1989-09-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/357M> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/357M-Grade-A>;
+  pesc:courseGrade _:CourseGrade_357M_Grade_A;
   pesc:inCourse <https://example.edu/courses/357M>;
   pesc:inSession <https://example.edu/sessions/1989-09-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/358> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/358-Grade-A>;
+  pesc:courseGrade _:CourseGrade_358_Grade_A;
   pesc:inCourse <https://example.edu/courses/358>;
   pesc:inSession <https://example.edu/sessions/1989-09-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/365N> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/365N-Grade-B>;
+  pesc:courseGrade _:CourseGrade_365N_Grade_B;
   pesc:inCourse <https://example.edu/courses/365N>;
   pesc:inSession <https://example.edu/sessions/2001-01-2>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/387J> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/387J-Grade-A>;
+  pesc:courseGrade _:CourseGrade_387J_Grade_A;
   pesc:inCourse <https://example.edu/courses/387J>;
   pesc:inSession <https://example.edu/sessions/2001-09-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/388> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/388-Grade-A>;
+  pesc:courseGrade _:CourseGrade_388_Grade_A;
   pesc:inCourse <https://example.edu/courses/388>;
   pesc:inSession <https://example.edu/sessions/2001-09-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/388C> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/388C-Grade-CR>;
+  pesc:courseGrade _:CourseGrade_388C_Grade_CR;
   pesc:inCourse <https://example.edu/courses/388C>;
   pesc:inSession <https://example.edu/sessions/2001-09-1>;
   ceds:P000065 ceds:NI000065116260;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/389K> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/389K-Grade-B>;
+  pesc:courseGrade _:CourseGrade_389K_Grade_B;
   pesc:inCourse <https://example.edu/courses/389K>;
   pesc:inSession <https://example.edu/sessions/2001-09-1>;
   ceds:P000200 "3"^^xsd:float .
 
 <https://example.edu/CourseAchievement/406> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/406-Grade-A>;
+  pesc:courseGrade _:CourseGrade_406_Grade_A;
   pesc:inCourse <https://example.edu/courses/406>;
   pesc:inSession <https://example.edu/sessions/1985-09-1>;
   ceds:P000065 ceds:NI000065116260;
   ceds:P000200 "4"^^xsd:float .
 
 <https://example.edu/CourseAchievement/407> a ceds:C200346;
-  pesc:courseGrade <https://example.edu/CourseGrade/407-Grade-A>;
+  pesc:courseGrade _:CourseGrade_407_Grade_A;
   pesc:inCourse <https://example.edu/courses/407>;
   pesc:inSession <https://example.edu/sessions/1986-01-1>;
   ceds:P000065 ceds:NI000065116260;
   ceds:P000200 "4"^^xsd:float .
-
-<https://example.edu/CourseGrade/301M-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/303C-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/305G-Grade-F> a pesc:Grade;
-  ceds:P000053 "F";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/309K-Grade-F> a pesc:Grade;
-  ceds:P000053 "F";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/310-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/310L-Grade-B> a pesc:Grade;
-  ceds:P000053 "B";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/311-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/315K-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/316K-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/320K-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/321-Grade-B> a pesc:Grade;
-  ceds:P000053 "B";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/327L-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/344D-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/346K-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/350L-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/357M-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25";
-  ceds:P001299 <https://pesc.org/vocabs/GradeStatusCodes#Completed> .
-
-<https://example.edu/CourseGrade/358-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/365N-Grade-B> a pesc:Grade;
-  ceds:P000053 "B";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/387J-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/388-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/388C-Grade-CR> a pesc:Grade;
-  ceds:P000053 "CR";
-  ceds:P001298 "501";
-  ceds:P001299 ceds:NI001299115324 .
-
-<https://example.edu/CourseGrade/389K-Grade-B> a pesc:Grade;
-  ceds:P000053 "B";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/406-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
-
-<https://example.edu/CourseGrade/407-Grade-A> a pesc:Grade;
-  ceds:P000053 "A";
-  ceds:P001298 "25" .
 
 ex:FL.1234 a ceds:C200239;
   ceterms:name "Miami Dade College"@en-us;
