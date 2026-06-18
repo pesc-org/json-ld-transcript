@@ -37,14 +37,14 @@ Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InCons
 	Message: Value Literal("9", datatype=xsd:integer) not in list ['Literal("I")', 'Literal("VI")', 'Literal("VII")', 'Literal("III")', 'Literal("SR")', 'Literal("VIII")', 'Literal("IV")', 'Literal("IX")', 'Literal("JR")', 'Literal("V")', 'Literal("II")', 'Literal("X")']
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:studentshapeHasOtherPersonName
+	Source Shape: ex:personshapeHasOtherPersonName
 	Focus Node: <https://people.pjjk.net/test>
 	Value Node: [ ceds:P000115 Literal("12", datatype=xsd:integer) ; ceds:P000172 Literal("12", datatype=xsd:integer) ; rdf:type ceds:WrongClass ]
 	Result Path: ceds:P600101
 	Message: Value does not have class ceds:C200377
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:studentshapeHasOtherPersonName
+	Source Shape: ex:personshapeHasOtherPersonName
 	Focus Node: <https://people.pjjk.net/test>
 	Value Node: [ ceds:P000115 Literal("12", datatype=xsd:integer) ; ceds:P000172 Literal("12", datatype=xsd:integer) ; rdf:type ceds:WrongClass ]
 	Result Path: ceds:P600101
@@ -72,7 +72,7 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 			Message: Node [ ceds:P000115 Literal("12", datatype=xsd:integer) ; ceds:P000172 Literal("12", datatype=xsd:integer) ; rdf:type ceds:WrongClass ]->rdf:type does not contain a value in the set: ['ceds:C200377']
 Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:studentshapeHasPersonName
+	Source Shape: ex:personshapeHasPersonName
 	Focus Node: <https://people.pjjk.net/test>
 	Value Node: [ ceds:P000115 Literal("Testier", datatype=xsd:token), Literal("Testy", datatype=xsd:token) ; ceds:P000121 Literal("9", datatype=xsd:integer) ; ceds:P000172 Literal("Test") ; ceds:P000184 Literal("Example") ; ceds:P000212 Literal("Dr") ; pesc:nameCode pescNameCodes:Legal ; rdf:type ceds:C200377 ]
 	Result Path: ceds:P600336

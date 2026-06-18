@@ -187,7 +187,7 @@ pescDelinquencyCodes:Other",picklist,,,,Not Recommended,"It is recommended that 
 ,SessionSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Recommended,This would typically be where items like Dean’s List at the end of a session are listed.
 266,AcademicSummaryShape,pesc:gpaSummary,GPA Summary,FALSE,FALSE,BNODE,,,,GPAShape,pesc:GPA,,Recommended,
 272,GPAShape,pesc:gradePointAverage,Grade Point Average,FALSE,FALSE,Literal,xsd:float,,,,,,Recommended,decimal
-,StudentShape,pesc:hasSummary,Has Summary,TRUE,TRUE,IRI BNODE,,,,,"pesc:AcademicSummary
+,PersonShape,pesc:hasSummary,Has Summary,TRUE,TRUE,IRI BNODE,,,,,"pesc:AcademicSummary
 pesc:AwardSummary
 pesc:ProgramSummary
 pesc:SessionSummary",Warning,Required,

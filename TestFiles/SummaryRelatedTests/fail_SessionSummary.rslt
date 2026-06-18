@@ -154,7 +154,7 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
 	Message: Value is not of Node Kind sh:BlankNodeOrIRI
 Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Warning
-	Source Shape: ex:studentshapeHasSummary
+	Source Shape: ex:personshapeHasSummary
 	Focus Node: <https://people.pjjk.net/test>
 	Result Path: pesc:hasSummary
 	Message: Less than 1 values on <https://people.pjjk.net/test>->pesc:hasSummary

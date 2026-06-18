@@ -219,7 +219,7 @@
         <noteshapeType> ;
     sh:targetClass elm:Note .
 
-<StudentShape> a sh:NodeShape ;
+<PersonShape> a sh:NodeShape ;
     rdfs:label "Person"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200275 .
@@ -321,7 +321,7 @@
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "student"@en-US ;
-    sh:node <StudentShape> ;
+    sh:node <PersonShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:student .
 

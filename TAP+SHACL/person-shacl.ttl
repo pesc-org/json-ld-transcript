@@ -118,6 +118,32 @@
     sh:severity sh:Info ;
     sh:targetClass ceds:C200252 .
 
+<PersonShape> a sh:NodeShape ;
+    rdfs:label "Person"@en ;
+    sh:closed false ;
+    sh:property <personshapeAdditionalNote>,
+        <personshapeBirthCity>,
+        <personshapeBirthCountry>,
+        <personshapeBirthDate>,
+        <personshapeBirthStateProvinceCode>,
+        <personshapeBirthYear>,
+        <personshapeBirthday>,
+        <personshapeCohortGraduationYear>,
+        <personshapeContact>,
+        <personshapeDeceasedIndicator>,
+        <personshapeGenderCode>,
+        <personshapeHasAchievement>,
+        <personshapeHasOtherPersonName>,
+        <personshapeHasPersonIdentifier>,
+        <personshapeHasPersonLanguage>,
+        <personshapeHasPersonName>,
+        <personshapeHasSummary>,
+        <personshapeHighSchoolAttended>,
+        <personshapeResidency>,
+        <personshapeStudentLevel>,
+        <personshapeType> ;
+    sh:targetClass ceds:C200275 .
+
 <PhoneShape> a sh:NodeShape ;
     rdfs:label "Phone"@en ;
     sh:closed false ;
@@ -152,32 +178,6 @@
     rdfs:label "Session Summary"@en ;
     sh:closed false ;
     sh:targetClass pesc:SessionSummary .
-
-<StudentShape> a sh:NodeShape ;
-    rdfs:label "Person"@en ;
-    sh:closed false ;
-    sh:property <studentshapeAdditionalNote>,
-        <studentshapeBirthCity>,
-        <studentshapeBirthCountry>,
-        <studentshapeBirthDate>,
-        <studentshapeBirthStateProvinceCode>,
-        <studentshapeBirthYear>,
-        <studentshapeBirthday>,
-        <studentshapeCohortGraduationYear>,
-        <studentshapeContact>,
-        <studentshapeDeceasedIndicator>,
-        <studentshapeGenderCode>,
-        <studentshapeHasAchievement>,
-        <studentshapeHasOtherPersonName>,
-        <studentshapeHasPersonIdentifier>,
-        <studentshapeHasPersonLanguage>,
-        <studentshapeHasPersonName>,
-        <studentshapeHasSummary>,
-        <studentshapeHighSchoolAttended>,
-        <studentshapeResidency>,
-        <studentshapeStudentLevel>,
-        <studentshapeType> ;
-    sh:targetClass ceds:C200275 .
 
 <SubtestShape> a sh:NodeShape ;
     rdfs:label "Subtest"@en ;
@@ -357,6 +357,159 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<personshapeAdditionalNote> a sh:PropertyShape ;
+    sh:class elm:Note ;
+    sh:name "Additional Note"@en-US ;
+    sh:node <NoteShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path elm:additionalNote .
+
+<personshapeBirthCity> a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 25 ;
+    sh:name "Birth City"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:birthCity .
+
+<personshapeBirthCountry> a sh:PropertyShape ;
+    rdfs:comment "pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now"@eng ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Birth Country"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:birthCountry .
+
+<personshapeBirthDate> a sh:PropertyShape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Birth Date"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path ceds:P000033 .
+
+<personshapeBirthStateProvinceCode> a sh:PropertyShape ;
+    rdfs:comment "pesc.appendixA Keep as string for now"@eng ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Birth State Province Code"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:birthStateProvinceCode .
+
+<personshapeBirthYear> a sh:PropertyShape ;
+    sh:datatype xsd:gYear ;
+    sh:maxCount 1 ;
+    sh:name "Birth Year"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:birthYear .
+
+<personshapeBirthday> a sh:PropertyShape ;
+    sh:datatype xsd:gMonthDay ;
+    sh:maxCount 1 ;
+    sh:name "Birthday"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:birthday .
+
+<personshapeCohortGraduationYear> a sh:PropertyShape ;
+    rdfs:comment "ccyy"@eng ;
+    sh:datatype xsd:gYear ;
+    sh:maxCount 1 ;
+    sh:name "Cohort Graduation Year"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:cohortGraduationYear .
+
+<personshapeContact> a sh:PropertyShape ;
+    sh:class ceterms:ContactPoint ;
+    sh:name "Contact"@en-US ;
+    sh:node <ContactShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path ceterms:targetContactPoint .
+
+<personshapeDeceasedIndicator> a sh:PropertyShape ;
+    rdfs:comment "true/false"@eng ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Deceased Indicator"@en-US ;
+    sh:nodeKind sh:Literal ;
+    sh:path pesc:deceasedIndicator .
+
+<personshapeGenderCode> a sh:PropertyShape ;
+    sh:in ( pescGenderCodes:Female pescGenderCodes:Male pescGenderCodes:Unreported ) ;
+    sh:maxCount 1 ;
+    sh:name "Gender Code"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:genderCode .
+
+<personshapeHasAchievement> a sh:PropertyShape ;
+    sh:name "Has Achievement"@en-US ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:or ( [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:GPA ] [ sh:class pesc:AcademicSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
+    sh:path pesc:hasAchievement .
+
+<personshapeHasOtherPersonName> a sh:PropertyShape ;
+    sh:class ceds:C200377 ;
+    sh:name "Has Other Person Name"@en-US ;
+    sh:node <PersonNameShape> ;
+    sh:nodeKind sh:BlankNode ;
+    sh:path ceds:P600101 .
+
+<personshapeHasPersonIdentifier> a sh:PropertyShape ;
+    sh:class ceds:C200291 ;
+    sh:name "hasPersonIdentifier"@en-US ;
+    sh:node <PersonIdentifierShape> ;
+    sh:nodeKind sh:BlankNode ;
+    sh:path ceds:P600049 .
+
+<personshapeHasPersonLanguage> a sh:PropertyShape ;
+    sh:class ceds:C200293 ;
+    sh:name "Has Person Language"@en-US ;
+    sh:node <LanguageShape> ;
+    sh:nodeKind sh:BlankNode ;
+    sh:path ceds:P600052 .
+
+<personshapeHasPersonName> a sh:PropertyShape ;
+    sh:class ceds:C200377 ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Has Person Name"@en-US ;
+    sh:node <PersonNameShape> ;
+    sh:nodeKind sh:BlankNode ;
+    sh:path ceds:P600336 .
+
+<personshapeHasSummary> a sh:PropertyShape ;
+    sh:name "Has Summary"@en-US ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:or ( [ sh:class pesc:AcademicSummary ] [ sh:class pesc:AwardSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:SessionSummary ] ) ;
+    sh:path pesc:hasSummary .
+
+<personshapeHighSchoolAttended> a sh:PropertyShape ;
+    sh:class ceds:C200239 ;
+    sh:name "High School Attended"@en-US ;
+    sh:node <OrganizationShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:highSchoolAttended .
+
+<personshapeResidency> a sh:PropertyShape ;
+    sh:class pesc:Residency ;
+    sh:maxCount 1 ;
+    sh:name "Residency"@en-US ;
+    sh:node <ResidencyShape> ;
+    sh:nodeKind sh:BlankNode ;
+    sh:path pesc:hasResidency .
+
+<personshapeStudentLevel> a sh:PropertyShape ;
+    sh:in ( pescStudentLevelCodes:Postsecondary pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear pescStudentLevelCodes:NonDegree pescStudentLevelCodes:Grade13 pescStudentLevelCodes:Ungraded pescStudentLevelCodes:CollegeFirstYear pescStudentLevelCodes:CollegeFirstYearAttendedBefore pescStudentLevelCodes:CollegeSophomore pescStudentLevelCodes:CollegeJunior pescStudentLevelCodes:CollegeSenior pescStudentLevelCodes:CollegeFifthYear pescStudentLevelCodes:PostBaccalaureate pescStudentLevelCodes:GraduateNonDegree pescStudentLevelCodes:GraduateFirstYear pescStudentLevelCodes:GraduateSecondYear pescStudentLevelCodes:GraduateThirdYear pescStudentLevelCodes:GraduateBeyondThirdYear pescStudentLevelCodes:Professional pescStudentLevelCodes:ProfessionalFirstYear pescStudentLevelCodes:ProfessionalSecondYear pescStudentLevelCodes:ProfessionalThirdYear pescStudentLevelCodes:ProfessionalBeyondThirdYear pescStudentLevelCodes:MastersQualifying pescStudentLevelCodes:Masters pescStudentLevelCodes:Doctoral pescStudentLevelCodes:Postdoctoral ) ;
+    sh:maxCount 1 ;
+    sh:name "Student Level"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path pesc:studentLevel .
+
+<personshapeType> a sh:PropertyShape ;
+    sh:hasValue ceds:C200275 ;
+    sh:minCount 1 ;
+    sh:name "Type"@en-US ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdf:type .
+
 <residencyshapeCountry> a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -415,159 +568,6 @@
 
 <residencyshapeType> a sh:PropertyShape ;
     sh:hasValue pesc:Residency ;
-    sh:minCount 1 ;
-    sh:name "Type"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path rdf:type .
-
-<studentshapeAdditionalNote> a sh:PropertyShape ;
-    sh:class elm:Note ;
-    sh:name "Additional Note"@en-US ;
-    sh:node <NoteShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path elm:additionalNote .
-
-<studentshapeBirthCity> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:maxLength 25 ;
-    sh:name "Birth City"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthCity .
-
-<studentshapeBirthCountry> a sh:PropertyShape ;
-    rdfs:comment "pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now"@eng ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Birth Country"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthCountry .
-
-<studentshapeBirthDate> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 ;
-    sh:name "Birth Date"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path ceds:P000033 .
-
-<studentshapeBirthStateProvinceCode> a sh:PropertyShape ;
-    rdfs:comment "pesc.appendixA Keep as string for now"@eng ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Birth State Province Code"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthStateProvinceCode .
-
-<studentshapeBirthYear> a sh:PropertyShape ;
-    sh:datatype xsd:gYear ;
-    sh:maxCount 1 ;
-    sh:name "Birth Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthYear .
-
-<studentshapeBirthday> a sh:PropertyShape ;
-    sh:datatype xsd:gMonthDay ;
-    sh:maxCount 1 ;
-    sh:name "Birthday"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:birthday .
-
-<studentshapeCohortGraduationYear> a sh:PropertyShape ;
-    rdfs:comment "ccyy"@eng ;
-    sh:datatype xsd:gYear ;
-    sh:maxCount 1 ;
-    sh:name "Cohort Graduation Year"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:cohortGraduationYear .
-
-<studentshapeContact> a sh:PropertyShape ;
-    sh:class ceterms:ContactPoint ;
-    sh:name "Contact"@en-US ;
-    sh:node <ContactShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path ceterms:targetContactPoint .
-
-<studentshapeDeceasedIndicator> a sh:PropertyShape ;
-    rdfs:comment "true/false"@eng ;
-    sh:datatype xsd:boolean ;
-    sh:maxCount 1 ;
-    sh:name "Deceased Indicator"@en-US ;
-    sh:nodeKind sh:Literal ;
-    sh:path pesc:deceasedIndicator .
-
-<studentshapeGenderCode> a sh:PropertyShape ;
-    sh:in ( pescGenderCodes:Female pescGenderCodes:Male pescGenderCodes:Unreported ) ;
-    sh:maxCount 1 ;
-    sh:name "Gender Code"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:genderCode .
-
-<studentshapeHasAchievement> a sh:PropertyShape ;
-    sh:name "Has Achievement"@en-US ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:or ( [ sh:class pesc:AdditionalStudentAchievement ] [ sh:class ceds:C200335 ] [ sh:class ceds:C200346 ] [ sh:class pesc:GPA ] [ sh:class pesc:AcademicSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:LicensureAchievement ] [ sh:class ceds:C200047 ] ) ;
-    sh:path pesc:hasAchievement .
-
-<studentshapeHasOtherPersonName> a sh:PropertyShape ;
-    sh:class ceds:C200377 ;
-    sh:name "Has Other Person Name"@en-US ;
-    sh:node <PersonNameShape> ;
-    sh:nodeKind sh:BlankNode ;
-    sh:path ceds:P600101 .
-
-<studentshapeHasPersonIdentifier> a sh:PropertyShape ;
-    sh:class ceds:C200291 ;
-    sh:name "hasPersonIdentifier"@en-US ;
-    sh:node <PersonIdentifierShape> ;
-    sh:nodeKind sh:BlankNode ;
-    sh:path ceds:P600049 .
-
-<studentshapeHasPersonLanguage> a sh:PropertyShape ;
-    sh:class ceds:C200293 ;
-    sh:name "Has Person Language"@en-US ;
-    sh:node <LanguageShape> ;
-    sh:nodeKind sh:BlankNode ;
-    sh:path ceds:P600052 .
-
-<studentshapeHasPersonName> a sh:PropertyShape ;
-    sh:class ceds:C200377 ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "Has Person Name"@en-US ;
-    sh:node <PersonNameShape> ;
-    sh:nodeKind sh:BlankNode ;
-    sh:path ceds:P600336 .
-
-<studentshapeHasSummary> a sh:PropertyShape ;
-    sh:name "Has Summary"@en-US ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:or ( [ sh:class pesc:AcademicSummary ] [ sh:class pesc:AwardSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:SessionSummary ] ) ;
-    sh:path pesc:hasSummary .
-
-<studentshapeHighSchoolAttended> a sh:PropertyShape ;
-    sh:class ceds:C200239 ;
-    sh:name "High School Attended"@en-US ;
-    sh:node <OrganizationShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:highSchoolAttended .
-
-<studentshapeResidency> a sh:PropertyShape ;
-    sh:class pesc:Residency ;
-    sh:maxCount 1 ;
-    sh:name "Residency"@en-US ;
-    sh:node <ResidencyShape> ;
-    sh:nodeKind sh:BlankNode ;
-    sh:path pesc:hasResidency .
-
-<studentshapeStudentLevel> a sh:PropertyShape ;
-    sh:in ( pescStudentLevelCodes:Postsecondary pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear pescStudentLevelCodes:NonDegree pescStudentLevelCodes:Grade13 pescStudentLevelCodes:Ungraded pescStudentLevelCodes:CollegeFirstYear pescStudentLevelCodes:CollegeFirstYearAttendedBefore pescStudentLevelCodes:CollegeSophomore pescStudentLevelCodes:CollegeJunior pescStudentLevelCodes:CollegeSenior pescStudentLevelCodes:CollegeFifthYear pescStudentLevelCodes:PostBaccalaureate pescStudentLevelCodes:GraduateNonDegree pescStudentLevelCodes:GraduateFirstYear pescStudentLevelCodes:GraduateSecondYear pescStudentLevelCodes:GraduateThirdYear pescStudentLevelCodes:GraduateBeyondThirdYear pescStudentLevelCodes:Professional pescStudentLevelCodes:ProfessionalFirstYear pescStudentLevelCodes:ProfessionalSecondYear pescStudentLevelCodes:ProfessionalThirdYear pescStudentLevelCodes:ProfessionalBeyondThirdYear pescStudentLevelCodes:MastersQualifying pescStudentLevelCodes:Masters pescStudentLevelCodes:Doctoral pescStudentLevelCodes:Postdoctoral ) ;
-    sh:maxCount 1 ;
-    sh:name "Student Level"@en-US ;
-    sh:nodeKind sh:IRI ;
-    sh:path pesc:studentLevel .
-
-<studentshapeType> a sh:PropertyShape ;
-    sh:hasValue ceds:C200275 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
