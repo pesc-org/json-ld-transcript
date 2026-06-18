@@ -3,7 +3,7 @@ Conforms: False
 Results (4):
 Validation Result in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Warning
-	Source Shape: ex:studentshapeHasSummary
+	Source Shape: ex:personshapeHasSummary
 	Focus Node: <https://people.pjjk.net/test>
 	Value Node: <https://example.edu/academicSummary001>
 	Result Path: pesc:hasSummary

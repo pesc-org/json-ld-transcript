@@ -131,6 +131,11 @@
     sh:closed false ;
     sh:targetClass ceds:C200377 .
 
+<PersonShape> a sh:NodeShape ;
+    rdfs:label "Person"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200275 .
+
 <PhoneShape> a sh:NodeShape ;
     rdfs:label "Phone"@en ;
     sh:closed false ;
@@ -170,11 +175,6 @@
     rdfs:label "Session Summary"@en ;
     sh:closed false ;
     sh:targetClass pesc:SessionSummary .
-
-<StudentShape> a sh:NodeShape ;
-    rdfs:label "Person"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200275 .
 
 <SubtestShape> a sh:NodeShape ;
     rdfs:label "Subtest"@en ;

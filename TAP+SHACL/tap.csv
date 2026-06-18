@@ -29,7 +29,7 @@ pescDocumentTypeCodes:TermGrade
 pescDocumentTypeCodes:ThirdPartyRequest",picklist,,,Required,
 26,CollegeTranscriptShape,pesc:requestTrackingID,Request Tracking ID,FALSE,FALSE,Literal,xsd:string,35,maxLength,,,Optional,
 ,CollegeTranscriptShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,ceds:C200239,Required,
-2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,ceds:C200275,Required,
+2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,PersonShape,ceds:C200275,Required,
 20,CollegeTranscriptShape,pesc:transmissionType,Transmission Type,TRUE,FALSE,IRI,,"pescTransmissionTypes:Original
 pescTransmissionTypes:Replace
 pescTransmissionTypes:Duplicate

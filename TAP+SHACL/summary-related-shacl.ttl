@@ -131,6 +131,12 @@
     sh:closed false ;
     sh:targetClass ceds:C200377 .
 
+<PersonShape> a sh:NodeShape ;
+    rdfs:label "Person"@en ;
+    sh:closed false ;
+    sh:property <personshapeHasSummary> ;
+    sh:targetClass ceds:C200275 .
+
 <PhoneShape> a sh:NodeShape ;
     rdfs:label "Phone"@en ;
     sh:closed false ;
@@ -192,12 +198,6 @@
         <sessionsummaryshapeSource>,
         <sessionsummaryshapeType> ;
     sh:targetClass pesc:SessionSummary .
-
-<StudentShape> a sh:NodeShape ;
-    rdfs:label "Person"@en ;
-    sh:closed false ;
-    sh:property <studentshapeHasSummary> ;
-    sh:targetClass ceds:C200275 .
 
 <SubtestShape> a sh:NodeShape ;
     rdfs:label "Subtest"@en ;
@@ -474,6 +474,14 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
+<personshapeHasSummary> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:name "Has Summary"@en-US ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:or ( [ sh:class pesc:AcademicSummary ] [ sh:class pesc:AwardSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:SessionSummary ] ) ;
+    sh:path pesc:hasSummary ;
+    sh:severity sh:Warning .
+
 <programsummaryshapeAcademicHonors> a sh:PropertyShape ;
     sh:class pesc:AcademicHonors ;
     sh:name "Academic Honors"@en-US ;
@@ -641,14 +649,6 @@
     sh:name "Type"@en-US ;
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
-
-<studentshapeHasSummary> a sh:PropertyShape ;
-    sh:minCount 1 ;
-    sh:name "Has Summary"@en-US ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:or ( [ sh:class pesc:AcademicSummary ] [ sh:class pesc:AwardSummary ] [ sh:class pesc:ProgramSummary ] [ sh:class pesc:SessionSummary ] ) ;
-    sh:path pesc:hasSummary ;
-    sh:severity sh:Warning .
 
 <AcademicHonorsShape> a sh:NodeShape ;
     rdfs:label "Academic Honors"@en ;
