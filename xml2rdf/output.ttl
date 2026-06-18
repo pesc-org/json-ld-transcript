@@ -211,6 +211,7 @@ _:Phone_512_4757638 a pesc:Phone;
 ex:050330001 a pesc:CollegeTranscript;
   pesc:createdDateTime "2005-02-02T10:04:29-05:00"^^xsd:dateTime;
   pesc:destination ex:FL.1234;
+  pesc:documentID "050330001";
   pesc:documentTypeCode pescDocumentTypeCodes:RequestedRecord;
   pesc:requestTrackingID "23456778009";
   pesc:source ex:TX.123456;

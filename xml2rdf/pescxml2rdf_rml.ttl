@@ -46,6 +46,11 @@
     rr:class pesc:CollegeTranscript;
   ];
   rr:predicateObjectMap [
+    rr:predicate pesc:documentID;
+    rr:objectMap [ rml:reference "TransmissionData/DocumentID" ];
+  ];
+
+  rr:predicateObjectMap [
     rr:predicate pesc:documentTypeCode;
     rr:objectMap [ rr:template "https://pesc.org/vocabs/DocumentTypeCodes#{TransmissionData/DocumentTypeCode}" ];
   ];
