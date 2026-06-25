@@ -327,6 +327,14 @@ pesc:student a rdf:Property ;
     sdo:domainIncludes pesc:CollegeTranscript ;
     sdo:rangeIncludes ceds:C200275 .
 
+pesc:supplementalGrade a rdf:Property ;
+    rdfs:label "Supplemental Grade" ;
+    rdfs:isDefinedBy pesc: ;
+    skos:notation "supplementalGrade" ;
+    sdo:domainIncludes pesc:CourseSupplementalGrade ;
+    sdo:rangeIncludes pesc:Grade .
+    
+
 pesc:totalQualityPoints a rdf:Property ;
     rdfs:label "Total Quality Points" ;
     rdfs:isDefinedBy pesc: ;

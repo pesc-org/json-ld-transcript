@@ -5,19 +5,19 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#District">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>District</skos:prefLabel>
-    <skos:definition>District</skos:definition>
-    <skos:notation>District</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#State">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>State</skos:prefLabel>
     <skos:definition>State</skos:definition>
     <skos:notation>State</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#National">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>National</skos:prefLabel>
+    <skos:definition>National</skos:definition>
+    <skos:notation>National</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>
@@ -28,6 +28,18 @@
     <skos:notation>Regional</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <dcterms:title>Agency Codes</dcterms:title>
+    <dcterms:description>A code that describes the type of agency that assigned the student's identification number</dcterms:description>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#District"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#Migrant"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#MutuallyDefined"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#National"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#Province"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#Regional"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#State"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#Migrant">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -45,18 +57,6 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    <dcterms:title>Agency Codes</dcterms:title>
-    <dcterms:description>A code that describes the type of agency that assigned the student's identification number</dcterms:description>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#District"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#Migrant"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#MutuallyDefined"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#National"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#Province"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#Regional"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/AgencyCodes#State"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#Province">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Province</skos:prefLabel>
@@ -65,11 +65,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#National">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/AgencyCodes#District">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>National</skos:prefLabel>
-    <skos:definition>National</skos:definition>
-    <skos:notation>National</skos:notation>
+    <skos:prefLabel>District</skos:prefLabel>
+    <skos:definition>District</skos:definition>
+    <skos:notation>District</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/AgencyCodes#"/>
   </rdf:Description>

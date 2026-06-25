@@ -21,11 +21,27 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#Unacceptable"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#Unknown"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#Poor">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#Excellent">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Poor</skos:prefLabel>
-    <skos:definition>Poor</skos:definition>
-    <skos:notation>Poor</skos:notation>
+    <skos:prefLabel>Excellent</skos:prefLabel>
+    <skos:definition>Excellent</skos:definition>
+    <skos:notation>Excellent</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#Good">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Good</skos:prefLabel>
+    <skos:definition>Good</skos:definition>
+    <skos:notation>Good</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#RedesignatedFluentEnglishProficient">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Redesignated Fluent English Proficient</skos:prefLabel>
+    <skos:definition>Redesignated Fluent English Proficient</skos:definition>
+    <skos:notation>RedesignatedFluentEnglishProficient</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
   </rdf:Description>
@@ -34,22 +50,6 @@
     <skos:prefLabel>Fair</skos:prefLabel>
     <skos:definition>Fair</skos:definition>
     <skos:notation>Fair</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#NonEnglishSpeaking">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Non English Speaking</skos:prefLabel>
-    <skos:definition>Non English Speaking</skos:definition>
-    <skos:notation>NonEnglishSpeaking</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#FullyEnglishProficient">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Fully English Proficient</skos:prefLabel>
-    <skos:definition>Fully English Proficient</skos:definition>
-    <skos:notation>FullyEnglishProficient</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
   </rdf:Description>
@@ -69,27 +69,35 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#Good">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#EnglishOnly">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Good</skos:prefLabel>
-    <skos:definition>Good</skos:definition>
-    <skos:notation>Good</skos:notation>
+    <skos:prefLabel>English Only</skos:prefLabel>
+    <skos:definition>English Only</skos:definition>
+    <skos:notation>EnglishOnly</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#Excellent">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#FullyEnglishProficient">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Excellent</skos:prefLabel>
-    <skos:definition>Excellent</skos:definition>
-    <skos:notation>Excellent</skos:notation>
+    <skos:prefLabel>Fully English Proficient</skos:prefLabel>
+    <skos:definition>Fully English Proficient</skos:definition>
+    <skos:notation>FullyEnglishProficient</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#RedesignatedFluentEnglishProficient">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#Poor">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Redesignated Fluent English Proficient</skos:prefLabel>
-    <skos:definition>Redesignated Fluent English Proficient</skos:definition>
-    <skos:notation>RedesignatedFluentEnglishProficient</skos:notation>
+    <skos:prefLabel>Poor</skos:prefLabel>
+    <skos:definition>Poor</skos:definition>
+    <skos:notation>Poor</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#NonEnglishSpeaking">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Non English Speaking</skos:prefLabel>
+    <skos:definition>Non English Speaking</skos:definition>
+    <skos:notation>NonEnglishSpeaking</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
   </rdf:Description>
@@ -98,14 +106,6 @@
     <skos:prefLabel>Unacceptable</skos:prefLabel>
     <skos:definition>Unacceptable</skos:definition>
     <skos:notation>Unacceptable</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/LanguageProficiencyCodes#EnglishOnly">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>English Only</skos:prefLabel>
-    <skos:definition>English Only</skos:definition>
-    <skos:notation>EnglishOnly</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/LanguageProficiencyCodes#"/>
   </rdf:Description>

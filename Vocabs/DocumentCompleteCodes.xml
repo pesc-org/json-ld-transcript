@@ -5,14 +5,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/DocumentCompleteCodes#Complete">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Complete</skos:prefLabel>
-    <skos:definition>Complete</skos:definition>
-    <skos:notation>Complete</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DocumentCompleteCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DocumentCompleteCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/DocumentCompleteCodes#">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     <dcterms:title>Document Complete Codes</dcterms:title>
@@ -26,6 +18,14 @@
     <skos:prefLabel>Partial</skos:prefLabel>
     <skos:definition>Partial</skos:definition>
     <skos:notation>Partial</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/DocumentCompleteCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DocumentCompleteCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/DocumentCompleteCodes#Complete">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Complete</skos:prefLabel>
+    <skos:definition>Complete</skos:definition>
+    <skos:notation>Complete</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/DocumentCompleteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/DocumentCompleteCodes#"/>
   </rdf:Description>

@@ -5,22 +5,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/HonorsLevels#">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    <dcterms:title>Honors Levels</dcterms:title>
-    <dcterms:description>A code value representing 1st highest honor, 2nd highest and 3rd highest.</dcterms:description>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/HonorsLevels#FirstHighest"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/HonorsLevels#SecondHighest"/>
-    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/HonorsLevels#ThirdHighest"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/HonorsLevels#FirstHighest">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>First Highest</skos:prefLabel>
-    <skos:definition>First Highest</skos:definition>
-    <skos:notation>FirstHighest</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/HonorsLevels#SecondHighest">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Second Highest</skos:prefLabel>
@@ -36,5 +20,21 @@
     <skos:notation>ThirdHighest</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/HonorsLevels#FirstHighest">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>First Highest</skos:prefLabel>
+    <skos:definition>First Highest</skos:definition>
+    <skos:notation>FirstHighest</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/HonorsLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/HonorsLevels#">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <dcterms:title>Honors Levels</dcterms:title>
+    <dcterms:description>A code value representing 1st highest honor, 2nd highest and 3rd highest.</dcterms:description>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/HonorsLevels#FirstHighest"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/HonorsLevels#SecondHighest"/>
+    <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/HonorsLevels#ThirdHighest"/>
   </rdf:Description>
 </rdf:RDF>

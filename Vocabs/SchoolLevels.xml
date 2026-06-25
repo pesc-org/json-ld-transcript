@@ -13,27 +13,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SchoolLevels#Professional">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Professional</skos:prefLabel>
-    <skos:definition>Professional</skos:definition>
-    <skos:notation>Professional</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/SchoolLevels#VocationalTechnical">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Vocational Technical</skos:prefLabel>
     <skos:definition>Vocational Technical</skos:definition>
     <skos:notation>VocationalTechnical</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SchoolLevels#BacheloriateCollege">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Bacheloriate College</skos:prefLabel>
-    <skos:definition>Bacheloriate College</skos:definition>
-    <skos:notation>BacheloriateCollege</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
   </rdf:Description>
@@ -66,6 +50,22 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SchoolLevels#Undergraduate">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Undergraduate</skos:prefLabel>
+    <skos:definition>Undergraduate</skos:definition>
+    <skos:notation>Undergraduate</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SchoolLevels#BacheloriateCollege">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Bacheloriate College</skos:prefLabel>
+    <skos:definition>Bacheloriate College</skos:definition>
+    <skos:notation>BacheloriateCollege</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/SchoolLevels#MBAAccelerated">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Mbaaccelerated</skos:prefLabel>
@@ -74,11 +74,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/SchoolLevels#Undergraduate">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/SchoolLevels#Professional">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Undergraduate</skos:prefLabel>
-    <skos:definition>Undergraduate</skos:definition>
-    <skos:notation>Undergraduate</skos:notation>
+    <skos:prefLabel>Professional</skos:prefLabel>
+    <skos:definition>Professional</skos:definition>
+    <skos:notation>Professional</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/SchoolLevels#"/>
   </rdf:Description>

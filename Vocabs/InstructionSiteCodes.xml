@@ -5,19 +5,19 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Extension">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#OnCampus">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Extension</skos:prefLabel>
-    <skos:definition>Extension</skos:definition>
-    <skos:notation>Extension</skos:notation>
+    <skos:prefLabel>On Campus</skos:prefLabel>
+    <skos:definition>On Campus</skos:definition>
+    <skos:notation>OnCampus</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Telecommunication">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#OffCampus">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Telecommunication</skos:prefLabel>
-    <skos:definition>Telecommunication</skos:definition>
-    <skos:notation>Telecommunication</skos:notation>
+    <skos:prefLabel>Off Campus</skos:prefLabel>
+    <skos:definition>Off Campus</skos:definition>
+    <skos:notation>OffCampus</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
@@ -44,22 +44,6 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Correctional">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Correctional</skos:prefLabel>
-    <skos:definition>Correctional</skos:definition>
-    <skos:notation>Correctional</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#OnCampus">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>On Campus</skos:prefLabel>
-    <skos:definition>On Campus</skos:definition>
-    <skos:notation>OnCampus</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Millitary">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Millitary</skos:prefLabel>
@@ -68,19 +52,19 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#OffCampus">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#StudyAbroad">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Off Campus</skos:prefLabel>
-    <skos:definition>Off Campus</skos:definition>
-    <skos:notation>OffCampus</skos:notation>
+    <skos:prefLabel>Study Abroad</skos:prefLabel>
+    <skos:definition>Study Abroad</skos:definition>
+    <skos:notation>StudyAbroad</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#ClinicHospital">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Correctional">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Clinic Hospital</skos:prefLabel>
-    <skos:definition>Clinic Hospital</skos:definition>
-    <skos:notation>ClinicHospital</skos:notation>
+    <skos:prefLabel>Correctional</skos:prefLabel>
+    <skos:definition>Correctional</skos:definition>
+    <skos:notation>Correctional</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
@@ -92,11 +76,27 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#StudyAbroad">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Telecommunication">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Study Abroad</skos:prefLabel>
-    <skos:definition>Study Abroad</skos:definition>
-    <skos:notation>StudyAbroad</skos:notation>
+    <skos:prefLabel>Telecommunication</skos:prefLabel>
+    <skos:definition>Telecommunication</skos:definition>
+    <skos:notation>Telecommunication</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#Extension">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Extension</skos:prefLabel>
+    <skos:definition>Extension</skos:definition>
+    <skos:notation>Extension</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/InstructionSiteCodes#ClinicHospital">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Clinic Hospital</skos:prefLabel>
+    <skos:definition>Clinic Hospital</skos:definition>
+    <skos:notation>ClinicHospital</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/InstructionSiteCodes#"/>
   </rdf:Description>

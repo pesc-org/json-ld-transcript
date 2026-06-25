@@ -5,30 +5,21 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#NoCredit">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>No Credit</skos:prefLabel>
+    <skos:definition>No Credit No Credit</skos:definition>
+    <skos:definition>No Credit</skos:definition>
+    <skos:notation>NoCredit</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#Semester">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel>Semester</skos:prefLabel>
     <skos:definition>Semester Semester</skos:definition>
     <skos:definition>Semester</skos:definition>
     <skos:notation>Semester</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#Other">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Other</skos:prefLabel>
-    <skos:definition>Other Other</skos:definition>
-    <skos:definition>Other</skos:definition>
-    <skos:notation>Other</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#Quarter">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Quarter</skos:prefLabel>
-    <skos:definition>Quarter Quarter</skos:definition>
-    <skos:definition>Quarter</skos:definition>
-    <skos:notation>Quarter</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
   </rdf:Description>
@@ -40,20 +31,12 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#Units">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#Quarter">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Units</skos:prefLabel>
-    <skos:definition>Units Units</skos:definition>
-    <skos:definition>Units</skos:definition>
-    <skos:notation>Units</skos:notation>
-    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
-    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#ContinuingEducationUnits">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Continuing Education Units</skos:prefLabel>
-    <skos:definition>Continuing Education Units</skos:definition>
-    <skos:notation>ContinuingEducationUnits</skos:notation>
+    <skos:prefLabel>Quarter</skos:prefLabel>
+    <skos:definition>Quarter Quarter</skos:definition>
+    <skos:definition>Quarter</skos:definition>
+    <skos:notation>Quarter</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
   </rdf:Description>
@@ -71,12 +54,29 @@
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/CreditUnits#Unreported"/>
     <skos:hasTopConcept rdf:resource="https://pesc.org/vocabs/CreditUnits#Other"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#NoCredit">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#Other">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>No Credit</skos:prefLabel>
-    <skos:definition>No Credit No Credit</skos:definition>
-    <skos:definition>No Credit</skos:definition>
-    <skos:notation>NoCredit</skos:notation>
+    <skos:prefLabel>Other</skos:prefLabel>
+    <skos:definition>Other Other</skos:definition>
+    <skos:definition>Other</skos:definition>
+    <skos:notation>Other</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#ClockHours">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Clock Hours</skos:prefLabel>
+    <skos:definition>Clock Hours</skos:definition>
+    <skos:notation>ClockHours</skos:notation>
+    <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
+    <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#Units">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Units</skos:prefLabel>
+    <skos:definition>Units Units</skos:definition>
+    <skos:definition>Units</skos:definition>
+    <skos:notation>Units</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
   </rdf:Description>
@@ -88,11 +88,11 @@
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#ClockHours">
+  <rdf:Description rdf:about="https://pesc.org/vocabs/CreditUnits#ContinuingEducationUnits">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel>Clock Hours</skos:prefLabel>
-    <skos:definition>Clock Hours</skos:definition>
-    <skos:notation>ClockHours</skos:notation>
+    <skos:prefLabel>Continuing Education Units</skos:prefLabel>
+    <skos:definition>Continuing Education Units</skos:definition>
+    <skos:notation>ContinuingEducationUnits</skos:notation>
     <skos:inScheme rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
     <skos:topConceptOf rdf:resource="https://pesc.org/vocabs/CreditUnits#"/>
   </rdf:Description>
