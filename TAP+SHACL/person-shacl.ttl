@@ -283,7 +283,7 @@
     sh:path ceds:P001075 .
 
 <personidentifiershapePersonIdentifier> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+    sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Person Identifier"@en-US ;
