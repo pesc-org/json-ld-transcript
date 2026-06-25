@@ -121,8 +121,8 @@
         <organizationshapeType> ;
     sh:targetClass ceds:C200239 .
 
-<PersonIdentifierShape> a sh:NodeShape ;
-    rdfs:label "Person Identifier"@en ;
+<PersonIdentificationShape> a sh:NodeShape ;
+    rdfs:label "Person Identification"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200291 .
 
@@ -210,12 +210,12 @@
     sh:closed false ;
     sh:targetClass ceterms:ContactPoint .
 
-<OrganizationIdentifierShape> a sh:NodeShape ;
-    rdfs:label "Organization Identifier"@en ;
+<OrganizationIdentificationShape> a sh:NodeShape ;
+    rdfs:label "Organization Identification"@en ;
     sh:closed false ;
-    sh:property <organizationidentifiershapeHasOrganizationIdentificationSystem>,
-        <organizationidentifiershapeOrganizationIdentifier>,
-        <organizationidentifiershapeType> ;
+    sh:property <organizationidentificationshapeHasOrganizationIdentificationSystem>,
+        <organizationidentificationshapeOrganizationIdentifier>,
+        <organizationidentificationshapeType> ;
     sh:severity sh:Info ;
     sh:targetClass ceds:C200252 .
 
@@ -248,7 +248,7 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<organizationidentifiershapeHasOrganizationIdentificationSystem> a sh:PropertyShape ;
+<organizationidentificationshapeHasOrganizationIdentificationSystem> a sh:PropertyShape ;
     sh:in ( ceds:NI000827151968 pescIdentifierTypes:OPEid pescIdentifierTypes:PSISid pescIdentifierTypes:GEOCode pescIdentifierTypes:ACT pescIdentifierTypes:MutuallyDefined ) ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -256,7 +256,7 @@
     sh:nodeKind sh:IRI ;
     sh:path ceds:P000827 .
 
-<organizationidentifiershapeOrganizationIdentifier> a sh:PropertyShape ;
+<organizationidentificationshapeOrganizationIdentifier> a sh:PropertyShape ;
     sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -264,7 +264,7 @@
     sh:nodeKind sh:Literal ;
     sh:path ceds:P000826 .
 
-<organizationidentifiershapeType> a sh:PropertyShape ;
+<organizationidentificationshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200252 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
@@ -296,7 +296,7 @@
 <organizationshapeHasOrganizationIdentification> a sh:PropertyShape ;
     sh:class ceds:C200252 ;
     sh:name "Has Organization Identification"@en-US ;
-    sh:node <OrganizationIdentifierShape> ;
+    sh:node <OrganizationIdentificationShape> ;
     sh:nodeKind sh:BlankNode ;
     sh:path ceds:P600502 .
 

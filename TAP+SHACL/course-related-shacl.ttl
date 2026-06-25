@@ -130,14 +130,14 @@
     sh:closed false ;
     sh:targetClass elm:Note .
 
-<OrganizationIdentifierShape> a sh:NodeShape ;
-    rdfs:label "Organization Identifier"@en ;
+<OrganizationIdentificationShape> a sh:NodeShape ;
+    rdfs:label "Organization Identification"@en ;
     sh:closed false ;
     sh:severity sh:Info ;
     sh:targetClass ceds:C200252 .
 
-<PersonIdentifierShape> a sh:NodeShape ;
-    rdfs:label "Person Identifier"@en ;
+<PersonIdentificationShape> a sh:NodeShape ;
+    rdfs:label "Person Identification"@en ;
     sh:closed false ;
     sh:targetClass ceds:C200291 .
 

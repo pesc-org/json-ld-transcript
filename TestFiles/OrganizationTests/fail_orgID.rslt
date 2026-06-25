@@ -14,11 +14,11 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 	Focus Node: <https://example.edu/Source#id>
 	Value Node: [ ceds:P000826 Literal("example001", datatype=xsd:string) ; ceds:P000827 pescIdentifierTypes:PSISid ; rdf:type ceds:C200252 ]
 	Result Path: ceds:P600502
-	Message: Value does not conform to Shape ex:OrganizationIdentifierShape. See details for more information.
+	Message: Value does not conform to Shape ex:OrganizationIdentificationShape. See details for more information.
 	Details:
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:organizationidentifiershapeOrganizationIdentifier
+			Source Shape: ex:organizationidentificationshapeOrganizationIdentifier
 			Focus Node: [ ceds:P000826 Literal("example001", datatype=xsd:string) ; ceds:P000827 pescIdentifierTypes:PSISid ; rdf:type ceds:C200252 ]
 			Value Node: Literal("example001", datatype=xsd:string)
 			Result Path: ceds:P000826
@@ -29,17 +29,17 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 	Focus Node: <https://example.edu/Source#id>
 	Value Node: [ ceds:P000826 Literal("00-0000000", datatype=xsd:token) ; rdf:type ceds:C20025 ]
 	Result Path: ceds:P600502
-	Message: Value does not conform to Shape ex:OrganizationIdentifierShape. See details for more information.
+	Message: Value does not conform to Shape ex:OrganizationIdentificationShape. See details for more information.
 	Details:
 		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:organizationidentifiershapeHasOrganizationIdentificationSystem
+			Source Shape: ex:organizationidentificationshapeHasOrganizationIdentificationSystem
 			Focus Node: [ ceds:P000826 Literal("00-0000000", datatype=xsd:token) ; rdf:type ceds:C20025 ]
 			Result Path: ceds:P000827
 			Message: Less than 1 values on [ ceds:P000826 Literal("00-0000000", datatype=xsd:token) ; rdf:type ceds:C20025 ]->ceds:P000827
 		Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:organizationidentifiershapeType
+			Source Shape: ex:organizationidentificationshapeType
 			Focus Node: [ ceds:P000826 Literal("00-0000000", datatype=xsd:token) ; rdf:type ceds:C20025 ]
 			Result Path: rdf:type
 			Message: Node [ ceds:P000826 Literal("00-0000000", datatype=xsd:token) ; rdf:type ceds:C20025 ]->rdf:type does not contain a value in the set: ['ceds:C200252']
@@ -49,37 +49,37 @@ Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#Node
 	Focus Node: <https://example.edu/Source#id>
 	Value Node: [ ceds:P000826 Literal("example001", datatype=xsd:string) ; rdf:type ceds:C200252 ]
 	Result Path: ceds:P600502
-	Message: Value does not conform to Shape ex:OrganizationIdentifierShape. See details for more information.
+	Message: Value does not conform to Shape ex:OrganizationIdentificationShape. See details for more information.
 	Details:
 		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:organizationidentifiershapeHasOrganizationIdentificationSystem
+			Source Shape: ex:organizationidentificationshapeHasOrganizationIdentificationSystem
 			Focus Node: [ ceds:P000826 Literal("example001", datatype=xsd:string) ; rdf:type ceds:C200252 ]
 			Result Path: ceds:P000827
 			Message: Less than 1 values on [ ceds:P000826 Literal("example001", datatype=xsd:string) ; rdf:type ceds:C200252 ]->ceds:P000827
 		Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 			Severity: sh:Violation
-			Source Shape: ex:organizationidentifiershapeOrganizationIdentifier
+			Source Shape: ex:organizationidentificationshapeOrganizationIdentifier
 			Focus Node: [ ceds:P000826 Literal("example001", datatype=xsd:string) ; rdf:type ceds:C200252 ]
 			Value Node: Literal("example001", datatype=xsd:string)
 			Result Path: ceds:P000826
 			Message: Value is not Literal with datatype xsd:token
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:organizationidentifiershapeHasOrganizationIdentificationSystem
+	Source Shape: ex:organizationidentificationshapeHasOrganizationIdentificationSystem
 	Focus Node: [ ceds:P000826 Literal("example001", datatype=xsd:string) ; rdf:type ceds:C200252 ]
 	Result Path: ceds:P000827
 	Message: Less than 1 values on [ ceds:P000826 Literal("example001", datatype=xsd:string) ; rdf:type ceds:C200252 ]->ceds:P000827
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:organizationidentifiershapeOrganizationIdentifier
+	Source Shape: ex:organizationidentificationshapeOrganizationIdentifier
 	Focus Node: [ ceds:P000826 Literal("example001", datatype=xsd:string) ; ceds:P000827 pescIdentifierTypes:PSISid ; rdf:type ceds:C200252 ]
 	Value Node: Literal("example001", datatype=xsd:string)
 	Result Path: ceds:P000826
 	Message: Value is not Literal with datatype xsd:token
 Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: ex:organizationidentifiershapeOrganizationIdentifier
+	Source Shape: ex:organizationidentificationshapeOrganizationIdentifier
 	Focus Node: [ ceds:P000826 Literal("example001", datatype=xsd:string) ; rdf:type ceds:C200252 ]
 	Value Node: Literal("example001", datatype=xsd:string)
 	Result Path: ceds:P000826
