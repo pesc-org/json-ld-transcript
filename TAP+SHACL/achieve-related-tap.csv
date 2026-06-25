@@ -104,7 +104,7 @@ ceds:NI001299117192
 ceds:NI001299117194
 ceds:NI001299117195
 ceds:NI001299117196",picklist,,,Recommended,
-,GradeShape,pesc:supplementalGrade,Supplemental Grade,FALSE,FALSE,BNODE,,,,CourseSupplementalGradeShape,pesc:CourseSupplementalGrade,,
+,CourseSupplementalGradeShape,pesc:supplementalGrade,Supplemental Grade,FALSE,FALSE,BNODE,,,,GradeShape,pesc:Grade,,
 ,GradeShape,rdf:type,Type,TRUE,TRUE,IRI,,pesc:Grade,,,,,
 ,LicensureAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,ceds:C200328,,
 ,LicensureAchievementShape,pesc:licensureAchieved,Licensure Achieved,TRUE,FALSE,IRI BNODE,,,,LicensureShape,pesc:Licensure,,
