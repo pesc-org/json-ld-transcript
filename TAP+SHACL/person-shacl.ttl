@@ -112,8 +112,8 @@
     sh:closed false ;
     sh:targetClass pesc:Licensure .
 
-<OrganizationIdentifierShape> a sh:NodeShape ;
-    rdfs:label "Organization Identifier"@en ;
+<OrganizationIdentificationShape> a sh:NodeShape ;
+    rdfs:label "Organization Identification"@en ;
     sh:closed false ;
     sh:severity sh:Info ;
     sh:targetClass ceds:C200252 .
@@ -134,7 +134,7 @@
         <personshapeGenderCode>,
         <personshapeHasAchievement>,
         <personshapeHasOtherPersonName>,
-        <personshapeHasPersonIdentifier>,
+        <personshapeHasPersonIdentification>,
         <personshapeHasPersonLanguage>,
         <personshapeHasPersonName>,
         <personshapeHasSummary>,
@@ -223,12 +223,12 @@
     sh:closed false ;
     sh:targetClass ceds:C200239 .
 
-<PersonIdentifierShape> a sh:NodeShape ;
-    rdfs:label "Person Identifier"@en ;
+<PersonIdentificationShape> a sh:NodeShape ;
+    rdfs:label "Person Identification"@en ;
     sh:closed false ;
-    sh:property <personidentifiershapeHasStudentIdentificationSystem>,
-        <personidentifiershapePersonIdentifier>,
-        <personidentifiershapeType> ;
+    sh:property <personidentificationshapeHasStudentIdentificationSystem>,
+        <personidentificationshapePersonIdentifier>,
+        <personidentificationshapeType> ;
     sh:targetClass ceds:C200291 .
 
 <ResidencyShape> a sh:NodeShape ;
@@ -274,7 +274,7 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<personidentifiershapeHasStudentIdentificationSystem> a sh:PropertyShape ;
+<personidentificationshapeHasStudentIdentificationSystem> a sh:PropertyShape ;
     sh:in ( ceds:NI001075173041 ceds:NI001075173046 ceds:NI001075173047 ceds:NI001075173048 ) ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -282,15 +282,15 @@
     sh:nodeKind sh:IRI ;
     sh:path ceds:P001075 .
 
-<personidentifiershapePersonIdentifier> a sh:PropertyShape ;
-    sh:datatype xsd:string ;
+<personidentificationshapePersonIdentifier> a sh:PropertyShape ;
+    sh:datatype xsd:token ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Person Identifier"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path ceds:P001572 .
 
-<personidentifiershapeType> a sh:PropertyShape ;
+<personidentificationshapeType> a sh:PropertyShape ;
     sh:hasValue ceds:C200291 ;
     sh:minCount 1 ;
     sh:name "Type"@en-US ;
@@ -452,10 +452,10 @@
     sh:nodeKind sh:BlankNode ;
     sh:path ceds:P600101 .
 
-<personshapeHasPersonIdentifier> a sh:PropertyShape ;
+<personshapeHasPersonIdentification> a sh:PropertyShape ;
     sh:class ceds:C200291 ;
-    sh:name "hasPersonIdentifier"@en-US ;
-    sh:node <PersonIdentifierShape> ;
+    sh:name "hasPersonIdentification"@en-US ;
+    sh:node <PersonIdentificationShape> ;
     sh:nodeKind sh:BlankNode ;
     sh:path ceds:P600049 .
 

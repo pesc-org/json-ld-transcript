@@ -203,20 +203,20 @@
     # Has Person Identifier
     a ceds:C200291;
     # a Person Identifier
-    ceds:P001572 "123456789"^^xsd:string;
+    ceds:P001572 "123456789"^^xsd:token;
     # Person Identifier
     ceds:P001075 ceds:NI001075173041;
   ], [
     a ceds:C200291;
     # a Person Identifier
-    ceds:P001572 "123456789"^^xsd:string;
+    ceds:P001572 "123456789"^^xsd:token;
     # Person Identifier
     ceds:P001075 ceds:NI001075173047;
   ], [
     # Has Student Identification System
     a ceds:C200291;
     # a Person Identifier
-    ceds:P001572 "123456789"^^xsd:string;
+    ceds:P001572 "123456789"^^xsd:token;
     # Person Identifier
     pesc:identifierAssignedBy <https://example.edu/Source#id>;
     ceds:P001075 ceds:NI001075173046;

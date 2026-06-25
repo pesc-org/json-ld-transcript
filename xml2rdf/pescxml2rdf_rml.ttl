@@ -474,7 +474,7 @@
   ];
   rr:predicateObjectMap [
     rr:predicate ceds:P600049;
-    # hasPersonIdentifier 
+    # hasPersonIdentification 
     rr:objectMap [
       # SSN
       rr:parentTriplesMap :SSNTM;
