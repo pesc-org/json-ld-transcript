@@ -535,11 +535,11 @@
     sh:path pesc:courseAcademicSupplementalGradeStatusCode .
 
 <coursesupplementalgradeshapeSupplementalGrade> a sh:PropertyShape ;
-    sh:class pesc:Grade ;
+    sh:datatype xsd:string ;
     sh:maxCount 1 ;
+    sh:maxLength 3 ;
     sh:name "Supplemental Grade"@en-US ;
-    sh:node <GradeShape> ;
-    sh:nodeKind sh:BlankNode ;
+    sh:nodeKind sh:Literal ;
     sh:path pesc:supplementalGrade .
 
 <coursesupplementalgradeshapeSupplementalGradeCode> a sh:PropertyShape ;
@@ -718,11 +718,6 @@
     sh:nodeKind sh:IRI ;
     sh:path rdf:type .
 
-<CourseShape> a sh:NodeShape ;
-    rdfs:label "Post Secondary Course"@en ;
-    sh:closed false ;
-    sh:targetClass ceds:C200328 .
-
 <GradeShape> a sh:NodeShape ;
     rdfs:label "Grade"@en ;
     sh:closed false ;
@@ -731,6 +726,11 @@
         <gradeshapeHasCourseAcademicGradeStatusCode>,
         <gradeshapeType> ;
     sh:targetClass pesc:Grade .
+
+<CourseShape> a sh:NodeShape ;
+    rdfs:label "Post Secondary Course"@en ;
+    sh:closed false ;
+    sh:targetClass ceds:C200328 .
 
 <RAPShape> a sh:NodeShape ;
     rdfs:label "Requirement, Attribute or Proficiency"@en ;
