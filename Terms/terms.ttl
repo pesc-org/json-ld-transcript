@@ -332,7 +332,7 @@ pesc:supplementalGrade a rdf:Property ;
     rdfs:isDefinedBy pesc: ;
     skos:notation "supplementalGrade" ;
     sdo:domainIncludes pesc:CourseSupplementalGrade ;
-    sdo:rangeIncludes pesc:Grade .
+    sdo:rangeIncludes xsd:string .
     
 
 pesc:totalQualityPoints a rdf:Property ;

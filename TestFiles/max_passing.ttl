@@ -434,12 +434,7 @@
     a pesc:CourseSupplementalGrade;
     pesc:courseAcademicSupplementalGradeStatusCode pescGradeStatusCodes:HonorsGrade;
     pesc:supplementalGradeCode pescSupplementalGradeCodes:BlendedFinalGrade;
-    pesc:supplementalGrade [
-      a pesc:Grade;
-      ceds:P000053 "B";
-      # Course Academic Grade
-      ceds:P001298 "code";
-    ];
+    pesc:supplementalGrade "B";  
   ].
 
 # Course academic grade scale code
